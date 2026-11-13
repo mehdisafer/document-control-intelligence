@@ -1,0 +1,64 @@
+# Release candidate 0.1.0rc1
+
+## Purpose
+
+This candidate delivers an executable synthetic purchasing workflow: PDF receipt,
+native/OCR extraction, local models, verifiable source evidence, deterministic
+controls, cumulative matching, human review, acceptance, publication and export.
+It also supplies persistent queue/recovery behavior, restoration evidence,
+container/Terraform references and an explicit acceptance matrix.
+
+The trained statistical model meets the declared final synthetic quality/coverage
+gate. The generative Qwen profile remains experimental. The release is not tagged
+as a stable deployment or published publicly while acceptance decisions remain
+open. Source and evidence changes are reviewed together in the implementation PR.
+Author-side assisted review is identified as such; it is not an independent approval.
+
+## Prepared repository metadata
+
+Description:
+
+> Evidence-linked purchasing document control with local ML, PDF/OCR, three-way matching and audited human review.
+
+Topics: `document-ai`, `data-engineering`, `mlops`, `local-first`, `fastapi`, `ocr`,
+`document-processing`, `human-in-the-loop`, `data-quality`, `python`.
+
+The available GitHub connector exposes source/issue/PR operations but no repository
+metadata or protection writer. These values are prepared, not asserted to have
+been applied. Do not use a personal workstation or another repository as a workaround.
+
+## Prepared protection policy
+
+For `main`, require a PR and the actual applicable integration, container and
+Terraform checks; prevent force pushes/deletion; require conversation resolution.
+Require an independent reviewer only when a real eligible reviewer is available.
+Never manufacture an approval or buy a plan to enable a setting without permission.
+After applying settings through an authorized administration surface, read them
+back and record what the account's available plan actually supports.
+
+## Licence and public-release checklist
+
+The maintainer must explicitly choose this project's licence. No licence has been
+inferred from third-party code or the portfolio goal. Dependencies, OCR/runtime
+components and model weights retain their own licences and notices.
+
+Before a separately authorized public release:
+
+1. Confirm the chosen project licence and intended repository visibility.
+2. Review the final source tree and Git history, issue/PR text, logs, exported
+   dossiers and artifacts for secrets or client/personal data.
+3. Confirm required checks for the delivered code revision and inspect actual
+   browser screenshots, source-linked demo exports and restore evidence.
+4. Record accepted limitations and unresolved gates in the release notes.
+5. Apply the authorized visibility change and verify anonymous repository access.
+
+No public business endpoint is created by changing repository visibility. A target
+deployment remains a separately inspected operational action.
+
+## Candidate reproduction
+
+Use the locked installation and real demo commands in the README. Preserve the
+generated `result.json`, control dossiers, exact source/model/parser hashes and
+execution logs. The evidence index distinguishes original executions from later
+publication mapping and CI results. Do not replace an adverse report with a
+successful replay or backdate a commit into original metadata.

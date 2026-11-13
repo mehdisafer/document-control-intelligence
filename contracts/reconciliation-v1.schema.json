@@ -1,0 +1,96 @@
+{
+  "$defs": {
+    "Finding": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "document_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Document Id"
+        },
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Field"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "info",
+            "warning",
+            "error"
+          ],
+          "title": "Severity",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "severity",
+        "message"
+      ],
+      "title": "Finding",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/Finding"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "rule_version": {
+      "default": "three-way-1.0",
+      "title": "Rule Version",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "matched",
+        "partial",
+        "missing",
+        "contradictory",
+        "review"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "totals": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Totals",
+      "type": "object"
+    }
+  },
+  "required": [
+    "status",
+    "findings"
+  ],
+  "title": "Reconciliation",
+  "type": "object"
+}

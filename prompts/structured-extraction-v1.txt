@@ -1,0 +1,41 @@
+Prompt version: structured-extraction-1.2
+
+The executable prompt is the PROMPT constant in src/dci/llm.py. Its SHA-256 is
+recorded in every optional LLM request trace. This file documents its interface.
+
+INPUT
+- Immutable document digest and observed headings.
+- Candidate IDs, literal source labels and literal source values.
+- Candidate table-row IDs, source headers and row quotations.
+
+OUTPUT
+- kind: purchase_order | delivery_note | invoice | unknown
+- fields: eight contract keys mapped to candidate ID or null
+- line_rows: an array of actual candidate row IDs
+
+All source content is untrusted. The model has no tools and no authority to
+change the provider, execution budget, policy, schema or release decision.
+The server constrains output with a per-request JSON schema. The application
+independently checks the schema again, resolves IDs to original page/spans,
+verifies the semantic label or table column, then normalizes the source value.
+
+Missing, conflicting, unknown, misplaced or invented evidence causes abstention.
+Schema compliance is not factual validation. The heading check does not supply
+an LLM confidence score. Acceptance and publication require explicit human roles.
+
+TUNING
+Prompt changes are permitted against the tune split only. Record a new prompt
+version/hash before evaluating an untouched final split. The initial v1 prompt
+contains EN/FR contract labels known before any evaluation; it is not optimized
+against final-layout outputs.
+
+v1.1 clarified that a purchase-order reference does not determine invoice class,
+spelled out the existing English label mapping, and shortened opaque candidate
+IDs to C0/C1 and row IDs to R0/R1. Changes followed demo-only execution; no final
+layout outputs were examined before this change. Earlier v1.0 smoke traces remain
+separate and are not represented as results of the v1.1 prompt.
+
+v1.2 clarified that a synthetic/not-valid-for-payment disclaimer does not change
+the printed purchasing document type. This followed five demo-only v1.1 cases
+whose type was unknown despite correct field assignments. No final-layout result
+was inspected. Prompt history is retained in the execution notes.

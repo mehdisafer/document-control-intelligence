@@ -1,0 +1,118 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "configuration_version": {
+      "const": "local-llm-1.0",
+      "default": "local-llm-1.0",
+      "title": "Configuration Version",
+      "type": "string"
+    },
+    "export_policy": {
+      "const": "loopback_only",
+      "default": "loopback_only",
+      "title": "Export Policy",
+      "type": "string"
+    },
+    "max_candidates": {
+      "default": 48,
+      "maximum": 96,
+      "minimum": 1,
+      "title": "Max Candidates",
+      "type": "integer"
+    },
+    "max_document_chars": {
+      "default": 8000,
+      "maximum": 24000,
+      "minimum": 100,
+      "title": "Max Document Chars",
+      "type": "integer"
+    },
+    "max_external_cost_usd": {
+      "const": 0,
+      "default": 0,
+      "title": "Max External Cost Usd",
+      "type": "integer"
+    },
+    "max_output_tokens": {
+      "default": 512,
+      "maximum": 1536,
+      "minimum": 64,
+      "title": "Max Output Tokens",
+      "type": "integer"
+    },
+    "model_id": {
+      "const": "dci-qwen3-0.6b-q4-k-m",
+      "default": "dci-qwen3-0.6b-q4-k-m",
+      "title": "Model Id",
+      "type": "string"
+    },
+    "model_path": {
+      "format": "path",
+      "title": "Model Path",
+      "type": "string"
+    },
+    "model_sha256": {
+      "const": "b0638f08417a2d3c8652760462eb5407c6e30173cf9608ad0820757a281eea0e",
+      "default": "b0638f08417a2d3c8652760462eb5407c6e30173cf9608ad0820757a281eea0e",
+      "title": "Model Sha256",
+      "type": "string"
+    },
+    "port": {
+      "default": 8081,
+      "maximum": 65535,
+      "minimum": 1024,
+      "title": "Port",
+      "type": "integer"
+    },
+    "provider": {
+      "const": "local-llama.cpp",
+      "default": "local-llama.cpp",
+      "title": "Provider",
+      "type": "string"
+    },
+    "runtime_binary": {
+      "anyOf": [
+        {
+          "format": "path",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Runtime Binary"
+    },
+    "runtime_version": {
+      "const": "b12359",
+      "default": "b12359",
+      "title": "Runtime Version",
+      "type": "string"
+    },
+    "timeout_seconds": {
+      "default": 90,
+      "exclusiveMinimum": 0,
+      "maximum": 180,
+      "title": "Timeout Seconds",
+      "type": "number"
+    },
+    "trace_dir": {
+      "anyOf": [
+        {
+          "format": "path",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Dir"
+    }
+  },
+  "required": [
+    "model_path"
+  ],
+  "title": "LlamaConfig",
+  "type": "object"
+}

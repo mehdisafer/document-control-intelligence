@@ -1,0 +1,105 @@
+name: Document control checks
+on:
+  push:
+    branches: [main, "feat/**", "fix/**"]
+    paths-ignore: ["docs/**", "README.md", "evidence/**"]
+  pull_request:
+    paths-ignore: ["docs/**", "README.md", "evidence/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: dci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  smoke-and-integration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {fetch-depth: 0, persist-credentials: false}
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with: {version: "0.13.6", python-version: "3.12.14", enable-cache: true}
+      - name: Install native parsing prerequisites
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng libseccomp2
+      - run: uv sync --frozen --group audit
+      - name: Lint and known-secret/history checks
+        run: |
+          uv run --frozen --group audit ruff check src tests scripts
+          uv run --frozen python scripts/export_schemas.py --check
+          uv run --frozen python scripts/check_secrets.py --history
+      - name: Real unit, parser, OCR and workflow integration tests
+        run: |
+          mkdir -p outputs/ci
+          set -o pipefail
+          uv run --frozen python -m unittest discover -s tests -v 2>&1 | tee outputs/ci/tests.txt
+      - name: Dependency and licence checks
+        run: |
+          uv run --frozen --group audit pip-audit --disable-pip --no-deps -r requirements.lock --format=json --output=outputs/ci/dependency-audit.json
+          uv run --frozen python scripts/check_licenses.py > outputs/ci/component-inventory.json
+      - name: API-to-export demonstration and restore
+        run: uv run --frozen dci demo --output outputs/ci/demo
+      - name: Verify demonstration semantics
+        run: uv run --frozen python scripts/verify_demo.py outputs/ci/demo/result.json
+      - name: Real browser review workflow and screenshots
+        run: uv run --frozen --group browser python scripts/browser_smoke.py --config outputs/ci/demo/runtime/config.json --credentials outputs/ci/demo/runtime/credentials.json --output outputs/ci/browser --browser-executable /usr/bin/google-chrome
+      - name: Retain original execution results without credentials or runtime databases
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: dci-checks-${{ github.sha }}
+          path: |
+            outputs/ci/tests.txt
+            outputs/ci/dependency-audit.json
+            outputs/ci/component-inventory.json
+            outputs/ci/demo/result.json
+            outputs/ci/demo/*-dossier.json
+            outputs/ci/browser/*.json
+            outputs/ci/browser/*.png
+          retention-days: 14
+
+  terraform-schema:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
+        with: {terraform_version: "1.17.2", terraform_wrapper: false}
+      - run: terraform -chdir=infra/terraform fmt -check
+      - run: terraform -chdir=infra/terraform init -backend=false -input=false -lockfile=readonly
+      - run: terraform -chdir=infra/terraform validate
+
+  container-integration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - name: Build the pinned reference image
+        run: |
+          mkdir -p outputs/container
+          chmod 777 outputs/container
+          docker build --tag dci:ci --iidfile outputs/container/image-id.txt .
+      - name: Execute document parsing, review, export and restoration inside the image
+        run: |
+          set -o pipefail
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges:true --memory 1800m --cpus 2 --tmpfs /tmp:rw,noexec,nosuid,size=268435456 -v "$PWD/outputs/container:/qualification" dci:ci demo --output /qualification/demo 2>&1 | tee outputs/container/demo.log
+          python scripts/verify_demo.py outputs/container/demo/result.json
+      - name: Validate both Compose profiles
+        env:
+          DCI_CONFIG_DIR: /tmp/dci-config
+          DCI_MODELS_DIR: /tmp/dci-models
+          DCI_LLAMA_DIR: /tmp/dci-llama
+        run: |
+          docker compose config --quiet
+          docker compose -f compose.yaml -f compose.llm.yaml config --quiet
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dci-container-${{ github.sha }}
+          path: |
+            outputs/container/image-id.txt
+            outputs/container/demo.log
+            outputs/container/demo/result.json
+          retention-days: 14

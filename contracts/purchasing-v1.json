@@ -1,0 +1,190 @@
+{
+  "contract_version": "purchasing-1.0",
+  "schema_version": "1.0",
+  "document_kinds": [
+    "purchase_order",
+    "delivery_note",
+    "invoice",
+    "unknown"
+  ],
+  "currencies": [
+    "EUR",
+    "USD",
+    "GBP",
+    "CHF"
+  ],
+  "fields": {
+    "document_id": {
+      "type": "identifier",
+      "required_for": [
+        "purchase_order",
+        "delivery_note",
+        "invoice"
+      ],
+      "maximum_length": 80
+    },
+    "purchase_order_id": {
+      "type": "identifier",
+      "required_for": [
+        "purchase_order",
+        "delivery_note",
+        "invoice"
+      ],
+      "purchase_order_policy": "equals_document_id"
+    },
+    "supplier_id": {
+      "type": "identifier",
+      "required_for": [
+        "purchase_order",
+        "delivery_note",
+        "invoice"
+      ]
+    },
+    "currency": {
+      "type": "currency_code",
+      "required_for": [
+        "purchase_order",
+        "delivery_note",
+        "invoice"
+      ],
+      "normalization": "uppercase_explicit_ISO_code_no_symbol_inference"
+    },
+    "document_date": {
+      "type": "date",
+      "required_for": [],
+      "normalization": "ISO_YYYY-MM-DD_only_unambiguous_source_dates"
+    },
+    "subtotal": {
+      "type": "decimal_string",
+      "scale": 2,
+      "required_for": [
+        "purchase_order",
+        "invoice"
+      ]
+    },
+    "tax": {
+      "type": "decimal_string",
+      "scale": 2,
+      "required_for": [
+        "purchase_order",
+        "invoice"
+      ]
+    },
+    "total": {
+      "type": "decimal_string",
+      "scale": 2,
+      "required_for": [
+        "purchase_order",
+        "invoice"
+      ]
+    }
+  },
+  "line_fields": {
+    "sku": {
+      "type": "identifier",
+      "required_for": [
+        "purchase_order",
+        "delivery_note",
+        "invoice"
+      ],
+      "unique_within_document": true
+    },
+    "quantity": {
+      "type": "decimal_string",
+      "maximum_scale": 6,
+      "exclusive_minimum": "0",
+      "required_for": [
+        "purchase_order",
+        "delivery_note",
+        "invoice"
+      ]
+    },
+    "unit_price": {
+      "type": "decimal_string",
+      "maximum_scale": 4,
+      "minimum": "0",
+      "required_for": [
+        "purchase_order",
+        "invoice"
+      ]
+    },
+    "net_amount": {
+      "type": "decimal_string",
+      "scale": 2,
+      "minimum": "0",
+      "required_for": [
+        "purchase_order",
+        "invoice"
+      ]
+    },
+    "tax_rate": {
+      "type": "decimal_percentage_string",
+      "maximum_scale": 4,
+      "minimum": "0",
+      "maximum": "100",
+      "required_for": [
+        "purchase_order",
+        "invoice"
+      ]
+    }
+  },
+  "value_provenance": {
+    "raw": "Source substring before normalization; never overwritten to force arithmetic consistency.",
+    "normalized": "Deterministically normalized decimal/identifier/date string, or explicitly corrected human value.",
+    "calculated": "Separate check_result.calculated entries; never silently promoted to extracted fields.",
+    "human_correction": "origin=human,status=corrected,justification; service retains actor,timestamp,old/new values and revision.",
+    "transformations": "Ordered named normalization steps for each field.",
+    "abstention": "Missing, unsupported or unverifiable critical fields remain null with status=abstained and a reason."
+  },
+  "evidence": {
+    "page": "one_based",
+    "text_range": "unicode_codepoint_start_inclusive_end_exclusive_into_canonical_page_text",
+    "quote": "exact_canonical_page_substring_supporting_the_field_and_value",
+    "bbox": "optional_x0_y0_x1_y1_in_PDF_points_with_top_left_origin",
+    "source_binding": "document_sha256_plus_parser_version_plus_page_number",
+    "support_validation": "performed_against_the_actual_parsed_page_before_rules",
+    "model_confidence_suffices": false
+  },
+  "normalization": {
+    "money": "explicit_locale_separator_normalization_to_decimal_string",
+    "quantity": "decimal_string_without_unnecessary_trailing_zeros",
+    "tax_rate": "percentage_20_means_20_percent_not_0.20",
+    "identifiers": "preserve_case_and_leading_zeros;trim_outer_whitespace",
+    "ambiguous_number_or_date": "abstain",
+    "calculated_total_as_source": "forbidden"
+  },
+  "classification": {
+    "unknown_is_valid_outcome": true,
+    "prompt_in_document_can_change_policy": false,
+    "provider_fallback": "forbidden_without_explicit_configuration_and_export_authorization",
+    "evaluation_split_unit": "document_family_and_layout",
+    "human_review": {
+      "endpoint": "POST /api/documents/{id}/classification-review",
+      "role": "operator",
+      "requires": [
+        "supported_kind",
+        "justification",
+        "expected_current_revision",
+        "intact_original_model_proposal"
+      ],
+      "provenance": "Immutable classification.reviewed audit; original model class and confidence retained",
+      "threshold_policy": "Only verified audited human review can replace model-score eligibility; source and business checks still apply",
+      "self_approval": "forbidden for the correcting actor",
+      "unknown_after_review": "remains abstained"
+    }
+  },
+  "retention": {
+    "mode": "retain_until_explicit_operator_policy",
+    "automatic_deletion_enabled": false,
+    "version_overwrite_allowed": false,
+    "published_result_requires_original_evidence": true,
+    "policy_note": "The local reference profile retains originals, parsed text, revisions and audit events. Timed disposal is not enabled; a deployment must choose retention periods and implement deletion/hold rules before handling real personal data."
+  },
+  "approval": {
+    "viewing_is_acceptance": false,
+    "eligibility_is_acceptance": false,
+    "publication_requires_explicit_acceptance": true,
+    "acceptance_binding": "active_document_versions_and_revisions",
+    "changes_invalidate_acceptance": true
+  }
+}
