@@ -1,0 +1,5307 @@
+{
+  "acceptance_reason": "Verified synthetic originals, exact source spans, model proposals and reconciliation over real HTTP.",
+  "accepted_at": 1794613010.2134864,
+  "accepted_by": "http_approver",
+  "audit": [
+    {
+      "action": "case.created",
+      "actor": "http_operator",
+      "at": 1794613008.8797677,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "name": "Real HTTP qualification / synthetic purchasing family"
+      },
+      "document_id": null,
+      "id": 1,
+      "revision": null
+    },
+    {
+      "action": "document.ingested",
+      "actor": "http_operator",
+      "at": 1794613008.9186568,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "document_key": "PO-BROWSER-HTTP0C5AE7E7DB62",
+        "job_id": "4fa354e6-4a50-42b4-b0cf-95ff5a3e196d",
+        "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+        "profile": "local-linear",
+        "request_id": "52086071-dc27-45a3-94ec-7aebaad9a81d",
+        "sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+        "version": 1
+      },
+      "document_id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+      "id": 2,
+      "revision": 0
+    },
+    {
+      "action": "document.ingested",
+      "actor": "http_operator",
+      "at": 1794613008.9220889,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "document_key": "DN-BROWSER-HTTP0C5AE7E7DB62",
+        "job_id": "9f64e6d8-0382-4231-8995-70fcdf27bd09",
+        "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+        "profile": "local-linear",
+        "request_id": "8a5341cf-282f-4efe-8ffd-b5e462cec1e2",
+        "sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+        "version": 1
+      },
+      "document_id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+      "id": 3,
+      "revision": 0
+    },
+    {
+      "action": "document.ingested",
+      "actor": "http_operator",
+      "at": 1794613008.924715,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "document_key": "INV-BROWSER-HTTP0C5AE7E7DB62",
+        "job_id": "3993bb71-5e42-4700-9c0a-fe4fb69fb9a3",
+        "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+        "profile": "local-linear",
+        "request_id": "acca6f68-a312-4430-81dd-486a76dfa472",
+        "sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+        "version": 1
+      },
+      "document_id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+      "id": 4,
+      "revision": 0
+    },
+    {
+      "action": "document.processed",
+      "actor": "worker",
+      "at": 1794613009.481614,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "attempt": 1,
+        "classification_proposal": {
+          "confidence": 0.9168005484991647,
+          "kind": "purchase_order",
+          "model_version": "dci-local-linear-1.1:234c94149697cbed",
+          "profile": "local-linear"
+        },
+        "decision": "eligible",
+        "elapsed_seconds": 0.44533562900005563,
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "source_version": 1
+      },
+      "document_id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+      "id": 5,
+      "revision": 0
+    },
+    {
+      "action": "document.processed",
+      "actor": "worker",
+      "at": 1794613009.8092434,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "attempt": 1,
+        "classification_proposal": {
+          "confidence": 0.9463054175440963,
+          "kind": "delivery_note",
+          "model_version": "dci-local-linear-1.1:234c94149697cbed",
+          "profile": "local-linear"
+        },
+        "decision": "eligible",
+        "elapsed_seconds": 0.3259923959999469,
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "source_version": 1
+      },
+      "document_id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+      "id": 6,
+      "revision": 0
+    },
+    {
+      "action": "document.processed",
+      "actor": "worker",
+      "at": 1794613010.0860918,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "attempt": 1,
+        "classification_proposal": {
+          "confidence": 0.9680692239723604,
+          "kind": "invoice",
+          "model_version": "dci-local-linear-1.1:234c94149697cbed",
+          "profile": "local-linear"
+        },
+        "decision": "eligible",
+        "elapsed_seconds": 0.27500588799966863,
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "source_version": 1
+      },
+      "document_id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+      "id": 7,
+      "revision": 0
+    },
+    {
+      "action": "case.accepted",
+      "actor": "http_approver",
+      "at": 1794613010.2135053,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "fingerprint": "0181cd22921df0fcc9ee2d783fa37022a933ff41cd1f3a805c61c6d3da5ca82a",
+        "reason": "Verified synthetic originals, exact source spans, model proposals and reconciliation over real HTTP.",
+        "status": "matched"
+      },
+      "document_id": null,
+      "id": 8,
+      "revision": 6
+    },
+    {
+      "action": "case.published",
+      "actor": "http_publisher",
+      "at": 1794613010.2282374,
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "details": {
+        "fingerprint": "0181cd22921df0fcc9ee2d783fa37022a933ff41cd1f3a805c61c6d3da5ca82a",
+        "publication_id": "f07f9ec1-0db2-4337-a745-432b3039b2a1"
+      },
+      "document_id": null,
+      "id": 9,
+      "revision": 6
+    }
+  ],
+  "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+  "case_name": "Real HTTP qualification / synthetic purchasing family",
+  "case_revision": 6,
+  "consumer_semantics": "upsert by case_id; do not treat revisions as new payment instructions",
+  "documents": [
+    {
+      "checks": {
+        "calculated": {
+          "line_items[0].quantity_times_price": "251.00",
+          "line_items[0].tax": "50.20",
+          "line_items[1].quantity_times_price": "56.25",
+          "line_items[1].tax": "11.25",
+          "line_net_sum": "307.25",
+          "line_tax_sum": "61.45",
+          "quantity_price_net_sum": "307.25",
+          "quantity_price_tax_sum": "61.45",
+          "subtotal_plus_tax": "368.70"
+        },
+        "decision": "eligible",
+        "findings": [],
+        "rule_version": "purchasing-rules-1.0"
+      },
+      "classification_proposal": {
+        "confidence": 0.9463054175440963,
+        "kind": "delivery_note",
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear"
+      },
+      "classification_provenance_status": "verified",
+      "classification_review": null,
+      "document_key": "DN-BROWSER-HTTP0C5AE7E7DB62",
+      "extraction": {
+        "classification_confidence": 0.9463054175440963,
+        "contract_version": "purchasing-1.0",
+        "document_sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+        "fields": {
+          "currency": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  206.07,
+                  111.23,
+                  216.07
+                ],
+                "end": 281,
+                "page": 1,
+                "quote": "Currency: EUR",
+                "start": 268
+              }
+            ],
+            "normalized": "EUR",
+            "origin": "extracted",
+            "raw": "EUR",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_iso_currency"
+            ]
+          },
+          "document_date": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  225.07,
+                  168.51,
+                  235.07
+                ],
+                "end": 307,
+                "page": 1,
+                "quote": "Document date: 2026-01-15",
+                "start": 282
+              }
+            ],
+            "normalized": "2026-01-15",
+            "origin": "extracted",
+            "raw": "2026-01-15",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "validate_iso_date"
+            ]
+          },
+          "document_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  149.07,
+                  281.27,
+                  159.07
+                ],
+                "end": 181,
+                "page": 1,
+                "quote": "Document ID: DN-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 141
+              }
+            ],
+            "normalized": "DN-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "DN-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "purchase_order_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  168.07,
+                  291.29,
+                  178.07
+                ],
+                "end": 225,
+                "page": 1,
+                "quote": "Purchase order: PO-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 182
+              }
+            ],
+            "normalized": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "subtotal": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  375.07,
+                  116.83,
+                  385.07
+                ],
+                "end": 431,
+                "page": 1,
+                "quote": "Subtotal: 307.25",
+                "start": 415
+              }
+            ],
+            "normalized": "307.25",
+            "origin": "extracted",
+            "raw": "307.25",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          },
+          "supplier_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  187.07,
+                  278.5,
+                  197.07
+                ],
+                "end": 267,
+                "page": 1,
+                "quote": "Supplier ID: SUP-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 226
+              }
+            ],
+            "normalized": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "tax": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  396.07,
+                  91.25,
+                  406.07
+                ],
+                "end": 442,
+                "page": 1,
+                "quote": "Tax: 61.45",
+                "start": 432
+              }
+            ],
+            "normalized": "61.45",
+            "origin": "extracted",
+            "raw": "61.45",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          },
+          "total": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  417.07,
+                  102.37,
+                  427.07
+                ],
+                "end": 456,
+                "page": 1,
+                "quote": "Total: 368.70",
+                "start": 443
+              }
+            ],
+            "normalized": "368.70",
+            "origin": "extracted",
+            "raw": "368.70",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          }
+        },
+        "kind": "delivery_note",
+        "line_items": [
+          {
+            "fields": {
+              "net_amount": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 380,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 345
+                  }
+                ],
+                "normalized": "251.00",
+                "origin": "extracted",
+                "raw": "251.00",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_to_fixed_2"
+                ]
+              },
+              "quantity": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 380,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 345
+                  }
+                ],
+                "normalized": "2",
+                "origin": "extracted",
+                "raw": "2",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "sku": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 380,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 345
+                  }
+                ],
+                "normalized": "PART-100",
+                "origin": "extracted",
+                "raw": "PART-100",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "trim_outer_whitespace",
+                  "uppercase_identifier"
+                ]
+              },
+              "tax_rate": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 380,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 345
+                  }
+                ],
+                "normalized": "20",
+                "origin": "extracted",
+                "raw": "20",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "unit_price": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 380,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 345
+                  }
+                ],
+                "normalized": "125.50",
+                "origin": "extracted",
+                "raw": "125.50",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_price_preserve_up_to_4_minimum_2"
+                ]
+              }
+            }
+          },
+          {
+            "fields": {
+              "net_amount": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 414,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 381
+                  }
+                ],
+                "normalized": "56.25",
+                "origin": "extracted",
+                "raw": "56.25",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_to_fixed_2"
+                ]
+              },
+              "quantity": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 414,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 381
+                  }
+                ],
+                "normalized": "3",
+                "origin": "extracted",
+                "raw": "3",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "sku": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 414,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 381
+                  }
+                ],
+                "normalized": "PART-200",
+                "origin": "extracted",
+                "raw": "PART-200",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "trim_outer_whitespace",
+                  "uppercase_identifier"
+                ]
+              },
+              "tax_rate": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 414,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 381
+                  }
+                ],
+                "normalized": "20",
+                "origin": "extracted",
+                "raw": "20",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "unit_price": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 344,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 308
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 414,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 381
+                  }
+                ],
+                "normalized": "18.75",
+                "origin": "extracted",
+                "raw": "18.75",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_price_preserve_up_to_4_minimum_2"
+                ]
+              }
+            }
+          }
+        ],
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "schema_version": "1.0",
+        "timings": {
+          "extraction_seconds": 0.006928995000180294
+        },
+        "warnings": []
+      },
+      "id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+      "parsed": {
+        "pages": [
+          {
+            "height": 841.8898,
+            "method": "native",
+            "number": 1,
+            "text": "DELIVERY NOTE\nAster Industrial Components / Helix Purchasing Lab - fictional entities\nSYNTHETIC DOCUMENT - NOT VALID FOR PAYMENT OR DELIVERY\nDocument ID: DN-BROWSER-HTTP0C5AE7E7DB62\nPurchase order: PO-BROWSER-HTTP0C5AE7E7DB62\nSupplier ID: SUP-BROWSER-HTTP0C5AE7E7DB62\nCurrency: EUR\nDocument date: 2026-01-15\nSKU | Qty | Unit price | Net | Tax %\nPART-100 | 2 | 125.50 | 251.00 | 20\nPART-200 | 3 | 18.75 | 56.25 | 20\nSubtotal: 307.25\nTax: 61.45\nTotal: 368.70\nIsolated browser qualification fixture; no real transaction.\nSynthetic fixture | classic_en | Document Control Intelligence Page 1 / 1",
+            "width": 595.2756,
+            "words": [
+              {
+                "bbox": [
+                  44.0,
+                  51.726,
+                  134.018,
+                  69.726
+                ],
+                "confidence": null,
+                "end": 8,
+                "start": 0,
+                "text": "DELIVERY"
+              },
+              {
+                "bbox": [
+                  139.022,
+                  51.726,
+                  189.026,
+                  69.726
+                ],
+                "confidence": null,
+                "end": 13,
+                "start": 9,
+                "text": "NOTE"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  76.656,
+                  62.672,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 19,
+                "start": 14,
+                "text": "Aster"
+              },
+              {
+                "bbox": [
+                  64.896,
+                  76.656,
+                  97.352,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 30,
+                "start": 20,
+                "text": "Industrial"
+              },
+              {
+                "bbox": [
+                  99.576,
+                  76.656,
+                  144.928,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 41,
+                "start": 31,
+                "text": "Components"
+              },
+              {
+                "bbox": [
+                  147.152,
+                  76.656,
+                  149.376,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 43,
+                "start": 42,
+                "text": "/"
+              },
+              {
+                "bbox": [
+                  151.6,
+                  76.656,
+                  169.376,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 49,
+                "start": 44,
+                "text": "Helix"
+              },
+              {
+                "bbox": [
+                  171.6,
+                  76.656,
+                  211.616,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 60,
+                "start": 50,
+                "text": "Purchasing"
+              },
+              {
+                "bbox": [
+                  213.84,
+                  76.656,
+                  227.184,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 64,
+                "start": 61,
+                "text": "Lab"
+              },
+              {
+                "bbox": [
+                  229.408,
+                  76.656,
+                  232.072,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 66,
+                "start": 65,
+                "text": "-"
+              },
+              {
+                "bbox": [
+                  234.296,
+                  76.656,
+                  261.416,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 76,
+                "start": 67,
+                "text": "fictional"
+              },
+              {
+                "bbox": [
+                  263.64,
+                  76.656,
+                  288.984,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 85,
+                "start": 77,
+                "text": "entities"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  119.656,
+                  89.336,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 95,
+                "start": 86,
+                "text": "SYNTHETIC"
+              },
+              {
+                "bbox": [
+                  91.56,
+                  119.656,
+                  137.776,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 104,
+                "start": 96,
+                "text": "DOCUMENT"
+              },
+              {
+                "bbox": [
+                  140.0,
+                  119.656,
+                  142.664,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 106,
+                "start": 105,
+                "text": "-"
+              },
+              {
+                "bbox": [
+                  144.888,
+                  119.656,
+                  161.776,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 110,
+                "start": 107,
+                "text": "NOT"
+              },
+              {
+                "bbox": [
+                  164.0,
+                  119.656,
+                  187.12,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 116,
+                "start": 111,
+                "text": "VALID"
+              },
+              {
+                "bbox": [
+                  189.344,
+                  119.656,
+                  206.232,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 120,
+                "start": 117,
+                "text": "FOR"
+              },
+              {
+                "bbox": [
+                  208.456,
+                  119.656,
+                  247.128,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 128,
+                "start": 121,
+                "text": "PAYMENT"
+              },
+              {
+                "bbox": [
+                  249.352,
+                  119.656,
+                  261.352,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 131,
+                "start": 129,
+                "text": "OR"
+              },
+              {
+                "bbox": [
+                  263.576,
+                  119.656,
+                  303.144,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 140,
+                "start": 132,
+                "text": "DELIVERY"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  149.07,
+                  89.57,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 149,
+                "start": 141,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  92.35,
+                  149.07,
+                  105.13,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 153,
+                "start": 150,
+                "text": "ID:"
+              },
+              {
+                "bbox": [
+                  107.91,
+                  149.07,
+                  281.27,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 181,
+                "start": 154,
+                "text": "DN-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  168.07,
+                  86.24,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 190,
+                "start": 182,
+                "text": "Purchase"
+              },
+              {
+                "bbox": [
+                  89.02,
+                  168.07,
+                  115.14,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 197,
+                "start": 191,
+                "text": "order:"
+              },
+              {
+                "bbox": [
+                  117.92,
+                  168.07,
+                  291.29,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 225,
+                "start": 198,
+                "text": "PO-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  187.07,
+                  80.68,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 234,
+                "start": 226,
+                "text": "Supplier"
+              },
+              {
+                "bbox": [
+                  83.46,
+                  187.07,
+                  96.24,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 238,
+                "start": 235,
+                "text": "ID:"
+              },
+              {
+                "bbox": [
+                  99.02,
+                  187.07,
+                  278.5,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 267,
+                "start": 239,
+                "text": "SUP-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  206.07,
+                  87.34,
+                  216.07
+                ],
+                "confidence": null,
+                "end": 277,
+                "start": 268,
+                "text": "Currency:"
+              },
+              {
+                "bbox": [
+                  90.12,
+                  206.07,
+                  111.23,
+                  216.07
+                ],
+                "confidence": null,
+                "end": 281,
+                "start": 278,
+                "text": "EUR"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  225.07,
+                  89.57,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 290,
+                "start": 282,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  92.35,
+                  225.07,
+                  114.59,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 296,
+                "start": 291,
+                "text": "date:"
+              },
+              {
+                "bbox": [
+                  117.37,
+                  225.07,
+                  168.51,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 307,
+                "start": 297,
+                "text": "2026-01-15"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  269.746,
+                  60.2,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 311,
+                "start": 308,
+                "text": "SKU"
+              },
+              {
+                "bbox": [
+                  65.6,
+                  269.746,
+                  71.0,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 313,
+                "start": 312,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  76.4,
+                  269.746,
+                  92.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 317,
+                "start": 314,
+                "text": "Qty"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  269.746,
+                  103.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 319,
+                "start": 318,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  108.8,
+                  269.746,
+                  130.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 324,
+                "start": 320,
+                "text": "Unit"
+              },
+              {
+                "bbox": [
+                  135.8,
+                  269.746,
+                  162.8,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 330,
+                "start": 325,
+                "text": "price"
+              },
+              {
+                "bbox": [
+                  168.2,
+                  269.746,
+                  173.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 332,
+                "start": 331,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  179.0,
+                  269.746,
+                  195.2,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 336,
+                "start": 333,
+                "text": "Net"
+              },
+              {
+                "bbox": [
+                  200.6,
+                  269.746,
+                  206.0,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 338,
+                "start": 337,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  211.4,
+                  269.746,
+                  227.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 342,
+                "start": 339,
+                "text": "Tax"
+              },
+              {
+                "bbox": [
+                  233.0,
+                  269.746,
+                  238.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 344,
+                "start": 343,
+                "text": "%"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  297.94,
+                  92.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 353,
+                "start": 345,
+                "text": "PART-100"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  297.94,
+                  104.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 355,
+                "start": 354,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  110.0,
+                  297.94,
+                  116.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 357,
+                "start": 356,
+                "text": "2"
+              },
+              {
+                "bbox": [
+                  122.0,
+                  297.94,
+                  128.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 359,
+                "start": 358,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  134.0,
+                  297.94,
+                  170.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 366,
+                "start": 360,
+                "text": "125.50"
+              },
+              {
+                "bbox": [
+                  176.0,
+                  297.94,
+                  182.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 368,
+                "start": 367,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  188.0,
+                  297.94,
+                  224.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 375,
+                "start": 369,
+                "text": "251.00"
+              },
+              {
+                "bbox": [
+                  230.0,
+                  297.94,
+                  236.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 377,
+                "start": 376,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  242.0,
+                  297.94,
+                  254.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 380,
+                "start": 378,
+                "text": "20"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  323.94,
+                  92.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 389,
+                "start": 381,
+                "text": "PART-200"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  323.94,
+                  104.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 391,
+                "start": 390,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  110.0,
+                  323.94,
+                  116.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 393,
+                "start": 392,
+                "text": "3"
+              },
+              {
+                "bbox": [
+                  122.0,
+                  323.94,
+                  128.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 395,
+                "start": 394,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  134.0,
+                  323.94,
+                  164.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 401,
+                "start": 396,
+                "text": "18.75"
+              },
+              {
+                "bbox": [
+                  170.0,
+                  323.94,
+                  176.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 403,
+                "start": 402,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  182.0,
+                  323.94,
+                  212.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 409,
+                "start": 404,
+                "text": "56.25"
+              },
+              {
+                "bbox": [
+                  218.0,
+                  323.94,
+                  224.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 411,
+                "start": 410,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  230.0,
+                  323.94,
+                  242.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 414,
+                "start": 412,
+                "text": "20"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  375.07,
+                  83.47,
+                  385.07
+                ],
+                "confidence": null,
+                "end": 424,
+                "start": 415,
+                "text": "Subtotal:"
+              },
+              {
+                "bbox": [
+                  86.25,
+                  375.07,
+                  116.83,
+                  385.07
+                ],
+                "confidence": null,
+                "end": 431,
+                "start": 425,
+                "text": "307.25"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  396.07,
+                  63.45,
+                  406.07
+                ],
+                "confidence": null,
+                "end": 436,
+                "start": 432,
+                "text": "Tax:"
+              },
+              {
+                "bbox": [
+                  66.23,
+                  396.07,
+                  91.25,
+                  406.07
+                ],
+                "confidence": null,
+                "end": 442,
+                "start": 437,
+                "text": "61.45"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  417.07,
+                  69.01,
+                  427.07
+                ],
+                "confidence": null,
+                "end": 449,
+                "start": 443,
+                "text": "Total:"
+              },
+              {
+                "bbox": [
+                  71.79,
+                  417.07,
+                  102.37,
+                  427.07
+                ],
+                "confidence": null,
+                "end": 456,
+                "start": 450,
+                "text": "368.70"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  457.656,
+                  72.016,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 465,
+                "start": 457,
+                "text": "Isolated"
+              },
+              {
+                "bbox": [
+                  74.24,
+                  457.656,
+                  102.688,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 473,
+                "start": 466,
+                "text": "browser"
+              },
+              {
+                "bbox": [
+                  104.912,
+                  457.656,
+                  147.152,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 487,
+                "start": 474,
+                "text": "qualification"
+              },
+              {
+                "bbox": [
+                  149.376,
+                  457.656,
+                  173.384,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 496,
+                "start": 488,
+                "text": "fixture;"
+              },
+              {
+                "bbox": [
+                  175.608,
+                  457.656,
+                  184.504,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 499,
+                "start": 497,
+                "text": "no"
+              },
+              {
+                "bbox": [
+                  186.728,
+                  457.656,
+                  200.064,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 504,
+                "start": 500,
+                "text": "real"
+              },
+              {
+                "bbox": [
+                  202.288,
+                  457.656,
+                  243.64,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 517,
+                "start": 505,
+                "text": "transaction."
+              },
+              {
+                "bbox": [
+                  42.0,
+                  809.339,
+                  70.791,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 527,
+                "start": 518,
+                "text": "Synthetic"
+              },
+              {
+                "bbox": [
+                  72.737,
+                  809.339,
+                  91.798,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 535,
+                "start": 528,
+                "text": "fixture"
+              },
+              {
+                "bbox": [
+                  93.744,
+                  809.339,
+                  95.564,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 537,
+                "start": 536,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  97.51,
+                  809.339,
+                  130.186,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 548,
+                "start": 538,
+                "text": "classic_en"
+              },
+              {
+                "bbox": [
+                  132.132,
+                  809.339,
+                  133.952,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 550,
+                "start": 549,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  135.898,
+                  809.339,
+                  167.797,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 559,
+                "start": 551,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  169.743,
+                  809.339,
+                  192.304,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 567,
+                "start": 560,
+                "text": "Control"
+              },
+              {
+                "bbox": [
+                  194.25,
+                  809.339,
+                  229.656,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 580,
+                "start": 568,
+                "text": "Intelligence"
+              },
+              {
+                "bbox": [
+                  523.363,
+                  809.339,
+                  539.708,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 585,
+                "start": 581,
+                "text": "Page"
+              },
+              {
+                "bbox": [
+                  541.654,
+                  809.339,
+                  545.546,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 587,
+                "start": 586,
+                "text": "1"
+              },
+              {
+                "bbox": [
+                  547.492,
+                  809.339,
+                  549.438,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 589,
+                "start": 588,
+                "text": "/"
+              },
+              {
+                "bbox": [
+                  551.384,
+                  809.339,
+                  555.276,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 591,
+                "start": 590,
+                "text": "1"
+              }
+            ]
+          }
+        ],
+        "parser_version": "native-ocr-1.0;pypdf=6.21.4;pdfplumber=0.11.9;pypdfium2=5.13.0;Pillow=13.0.0;tesseract 5.5.0;eng.traineddata=7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2;dpi=160;lang=eng;oem=1;psm=3",
+        "schema_version": "1.0",
+        "sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+        "timings": {
+          "native_seconds": 0.01321,
+          "ocr_seconds": 0.0,
+          "parse_seconds": 0.090066,
+          "resumed_pages": 0.0,
+          "wall_seconds": 0.315698
+        }
+      },
+      "revision": 0,
+      "sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+      "version": 1
+    },
+    {
+      "checks": {
+        "calculated": {
+          "line_items[0].quantity_times_price": "251.00",
+          "line_items[0].tax": "50.20",
+          "line_items[1].quantity_times_price": "56.25",
+          "line_items[1].tax": "11.25",
+          "line_net_sum": "307.25",
+          "line_tax_sum": "61.45",
+          "quantity_price_net_sum": "307.25",
+          "quantity_price_tax_sum": "61.45",
+          "subtotal_plus_tax": "368.70"
+        },
+        "decision": "eligible",
+        "findings": [],
+        "rule_version": "purchasing-rules-1.0"
+      },
+      "classification_proposal": {
+        "confidence": 0.9680692239723604,
+        "kind": "invoice",
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear"
+      },
+      "classification_provenance_status": "verified",
+      "classification_review": null,
+      "document_key": "INV-BROWSER-HTTP0C5AE7E7DB62",
+      "extraction": {
+        "classification_confidence": 0.9680692239723604,
+        "contract_version": "purchasing-1.0",
+        "document_sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+        "fields": {
+          "currency": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  206.07,
+                  111.23,
+                  216.07
+                ],
+                "end": 276,
+                "page": 1,
+                "quote": "Currency: EUR",
+                "start": 263
+              }
+            ],
+            "normalized": "EUR",
+            "origin": "extracted",
+            "raw": "EUR",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_iso_currency"
+            ]
+          },
+          "document_date": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  225.07,
+                  168.51,
+                  235.07
+                ],
+                "end": 302,
+                "page": 1,
+                "quote": "Document date: 2026-01-15",
+                "start": 277
+              }
+            ],
+            "normalized": "2026-01-15",
+            "origin": "extracted",
+            "raw": "2026-01-15",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "validate_iso_date"
+            ]
+          },
+          "document_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  149.07,
+                  283.5,
+                  159.07
+                ],
+                "end": 176,
+                "page": 1,
+                "quote": "Document ID: INV-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 135
+              }
+            ],
+            "normalized": "INV-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "INV-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "purchase_order_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  168.07,
+                  291.29,
+                  178.07
+                ],
+                "end": 220,
+                "page": 1,
+                "quote": "Purchase order: PO-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 177
+              }
+            ],
+            "normalized": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "subtotal": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  375.07,
+                  116.83,
+                  385.07
+                ],
+                "end": 426,
+                "page": 1,
+                "quote": "Subtotal: 307.25",
+                "start": 410
+              }
+            ],
+            "normalized": "307.25",
+            "origin": "extracted",
+            "raw": "307.25",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          },
+          "supplier_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  187.07,
+                  278.5,
+                  197.07
+                ],
+                "end": 262,
+                "page": 1,
+                "quote": "Supplier ID: SUP-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 221
+              }
+            ],
+            "normalized": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "tax": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  396.07,
+                  91.25,
+                  406.07
+                ],
+                "end": 437,
+                "page": 1,
+                "quote": "Tax: 61.45",
+                "start": 427
+              }
+            ],
+            "normalized": "61.45",
+            "origin": "extracted",
+            "raw": "61.45",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          },
+          "total": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  417.07,
+                  102.37,
+                  427.07
+                ],
+                "end": 451,
+                "page": 1,
+                "quote": "Total: 368.70",
+                "start": 438
+              }
+            ],
+            "normalized": "368.70",
+            "origin": "extracted",
+            "raw": "368.70",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          }
+        },
+        "kind": "invoice",
+        "line_items": [
+          {
+            "fields": {
+              "net_amount": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 375,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 340
+                  }
+                ],
+                "normalized": "251.00",
+                "origin": "extracted",
+                "raw": "251.00",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_to_fixed_2"
+                ]
+              },
+              "quantity": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 375,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 340
+                  }
+                ],
+                "normalized": "2",
+                "origin": "extracted",
+                "raw": "2",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "sku": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 375,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 340
+                  }
+                ],
+                "normalized": "PART-100",
+                "origin": "extracted",
+                "raw": "PART-100",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "trim_outer_whitespace",
+                  "uppercase_identifier"
+                ]
+              },
+              "tax_rate": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 375,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 340
+                  }
+                ],
+                "normalized": "20",
+                "origin": "extracted",
+                "raw": "20",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "unit_price": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 375,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 340
+                  }
+                ],
+                "normalized": "125.50",
+                "origin": "extracted",
+                "raw": "125.50",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_price_preserve_up_to_4_minimum_2"
+                ]
+              }
+            }
+          },
+          {
+            "fields": {
+              "net_amount": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 409,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 376
+                  }
+                ],
+                "normalized": "56.25",
+                "origin": "extracted",
+                "raw": "56.25",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_to_fixed_2"
+                ]
+              },
+              "quantity": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 409,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 376
+                  }
+                ],
+                "normalized": "3",
+                "origin": "extracted",
+                "raw": "3",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "sku": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 409,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 376
+                  }
+                ],
+                "normalized": "PART-200",
+                "origin": "extracted",
+                "raw": "PART-200",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "trim_outer_whitespace",
+                  "uppercase_identifier"
+                ]
+              },
+              "tax_rate": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 409,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 376
+                  }
+                ],
+                "normalized": "20",
+                "origin": "extracted",
+                "raw": "20",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "unit_price": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 339,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 303
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 409,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 376
+                  }
+                ],
+                "normalized": "18.75",
+                "origin": "extracted",
+                "raw": "18.75",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_price_preserve_up_to_4_minimum_2"
+                ]
+              }
+            }
+          }
+        ],
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "schema_version": "1.0",
+        "timings": {
+          "extraction_seconds": 0.005929373999606469
+        },
+        "warnings": []
+      },
+      "id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+      "parsed": {
+        "pages": [
+          {
+            "height": 841.8898,
+            "method": "native",
+            "number": 1,
+            "text": "INVOICE\nAster Industrial Components / Helix Purchasing Lab - fictional entities\nSYNTHETIC DOCUMENT - NOT VALID FOR PAYMENT OR DELIVERY\nDocument ID: INV-BROWSER-HTTP0C5AE7E7DB62\nPurchase order: PO-BROWSER-HTTP0C5AE7E7DB62\nSupplier ID: SUP-BROWSER-HTTP0C5AE7E7DB62\nCurrency: EUR\nDocument date: 2026-01-15\nSKU | Qty | Unit price | Net | Tax %\nPART-100 | 2 | 125.50 | 251.00 | 20\nPART-200 | 3 | 18.75 | 56.25 | 20\nSubtotal: 307.25\nTax: 61.45\nTotal: 368.70\nIsolated browser qualification fixture; no real transaction.\nSynthetic fixture | classic_en | Document Control Intelligence Page 1 / 1",
+            "width": 595.2756,
+            "words": [
+              {
+                "bbox": [
+                  44.0,
+                  51.726,
+                  118.016,
+                  69.726
+                ],
+                "confidence": null,
+                "end": 7,
+                "start": 0,
+                "text": "INVOICE"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  76.656,
+                  62.672,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 13,
+                "start": 8,
+                "text": "Aster"
+              },
+              {
+                "bbox": [
+                  64.896,
+                  76.656,
+                  97.352,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 24,
+                "start": 14,
+                "text": "Industrial"
+              },
+              {
+                "bbox": [
+                  99.576,
+                  76.656,
+                  144.928,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 35,
+                "start": 25,
+                "text": "Components"
+              },
+              {
+                "bbox": [
+                  147.152,
+                  76.656,
+                  149.376,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 37,
+                "start": 36,
+                "text": "/"
+              },
+              {
+                "bbox": [
+                  151.6,
+                  76.656,
+                  169.376,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 43,
+                "start": 38,
+                "text": "Helix"
+              },
+              {
+                "bbox": [
+                  171.6,
+                  76.656,
+                  211.616,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 54,
+                "start": 44,
+                "text": "Purchasing"
+              },
+              {
+                "bbox": [
+                  213.84,
+                  76.656,
+                  227.184,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 58,
+                "start": 55,
+                "text": "Lab"
+              },
+              {
+                "bbox": [
+                  229.408,
+                  76.656,
+                  232.072,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 60,
+                "start": 59,
+                "text": "-"
+              },
+              {
+                "bbox": [
+                  234.296,
+                  76.656,
+                  261.416,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 70,
+                "start": 61,
+                "text": "fictional"
+              },
+              {
+                "bbox": [
+                  263.64,
+                  76.656,
+                  288.984,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 79,
+                "start": 71,
+                "text": "entities"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  119.656,
+                  89.336,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 89,
+                "start": 80,
+                "text": "SYNTHETIC"
+              },
+              {
+                "bbox": [
+                  91.56,
+                  119.656,
+                  137.776,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 98,
+                "start": 90,
+                "text": "DOCUMENT"
+              },
+              {
+                "bbox": [
+                  140.0,
+                  119.656,
+                  142.664,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 100,
+                "start": 99,
+                "text": "-"
+              },
+              {
+                "bbox": [
+                  144.888,
+                  119.656,
+                  161.776,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 104,
+                "start": 101,
+                "text": "NOT"
+              },
+              {
+                "bbox": [
+                  164.0,
+                  119.656,
+                  187.12,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 110,
+                "start": 105,
+                "text": "VALID"
+              },
+              {
+                "bbox": [
+                  189.344,
+                  119.656,
+                  206.232,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 114,
+                "start": 111,
+                "text": "FOR"
+              },
+              {
+                "bbox": [
+                  208.456,
+                  119.656,
+                  247.128,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 122,
+                "start": 115,
+                "text": "PAYMENT"
+              },
+              {
+                "bbox": [
+                  249.352,
+                  119.656,
+                  261.352,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 125,
+                "start": 123,
+                "text": "OR"
+              },
+              {
+                "bbox": [
+                  263.576,
+                  119.656,
+                  303.144,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 134,
+                "start": 126,
+                "text": "DELIVERY"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  149.07,
+                  89.57,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 143,
+                "start": 135,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  92.35,
+                  149.07,
+                  105.13,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 147,
+                "start": 144,
+                "text": "ID:"
+              },
+              {
+                "bbox": [
+                  107.91,
+                  149.07,
+                  283.5,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 176,
+                "start": 148,
+                "text": "INV-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  168.07,
+                  86.24,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 185,
+                "start": 177,
+                "text": "Purchase"
+              },
+              {
+                "bbox": [
+                  89.02,
+                  168.07,
+                  115.14,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 192,
+                "start": 186,
+                "text": "order:"
+              },
+              {
+                "bbox": [
+                  117.92,
+                  168.07,
+                  291.29,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 220,
+                "start": 193,
+                "text": "PO-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  187.07,
+                  80.68,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 229,
+                "start": 221,
+                "text": "Supplier"
+              },
+              {
+                "bbox": [
+                  83.46,
+                  187.07,
+                  96.24,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 233,
+                "start": 230,
+                "text": "ID:"
+              },
+              {
+                "bbox": [
+                  99.02,
+                  187.07,
+                  278.5,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 262,
+                "start": 234,
+                "text": "SUP-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  206.07,
+                  87.34,
+                  216.07
+                ],
+                "confidence": null,
+                "end": 272,
+                "start": 263,
+                "text": "Currency:"
+              },
+              {
+                "bbox": [
+                  90.12,
+                  206.07,
+                  111.23,
+                  216.07
+                ],
+                "confidence": null,
+                "end": 276,
+                "start": 273,
+                "text": "EUR"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  225.07,
+                  89.57,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 285,
+                "start": 277,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  92.35,
+                  225.07,
+                  114.59,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 291,
+                "start": 286,
+                "text": "date:"
+              },
+              {
+                "bbox": [
+                  117.37,
+                  225.07,
+                  168.51,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 302,
+                "start": 292,
+                "text": "2026-01-15"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  269.746,
+                  60.2,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 306,
+                "start": 303,
+                "text": "SKU"
+              },
+              {
+                "bbox": [
+                  65.6,
+                  269.746,
+                  71.0,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 308,
+                "start": 307,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  76.4,
+                  269.746,
+                  92.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 312,
+                "start": 309,
+                "text": "Qty"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  269.746,
+                  103.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 314,
+                "start": 313,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  108.8,
+                  269.746,
+                  130.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 319,
+                "start": 315,
+                "text": "Unit"
+              },
+              {
+                "bbox": [
+                  135.8,
+                  269.746,
+                  162.8,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 325,
+                "start": 320,
+                "text": "price"
+              },
+              {
+                "bbox": [
+                  168.2,
+                  269.746,
+                  173.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 327,
+                "start": 326,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  179.0,
+                  269.746,
+                  195.2,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 331,
+                "start": 328,
+                "text": "Net"
+              },
+              {
+                "bbox": [
+                  200.6,
+                  269.746,
+                  206.0,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 333,
+                "start": 332,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  211.4,
+                  269.746,
+                  227.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 337,
+                "start": 334,
+                "text": "Tax"
+              },
+              {
+                "bbox": [
+                  233.0,
+                  269.746,
+                  238.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 339,
+                "start": 338,
+                "text": "%"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  297.94,
+                  92.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 348,
+                "start": 340,
+                "text": "PART-100"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  297.94,
+                  104.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 350,
+                "start": 349,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  110.0,
+                  297.94,
+                  116.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 352,
+                "start": 351,
+                "text": "2"
+              },
+              {
+                "bbox": [
+                  122.0,
+                  297.94,
+                  128.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 354,
+                "start": 353,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  134.0,
+                  297.94,
+                  170.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 361,
+                "start": 355,
+                "text": "125.50"
+              },
+              {
+                "bbox": [
+                  176.0,
+                  297.94,
+                  182.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 363,
+                "start": 362,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  188.0,
+                  297.94,
+                  224.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 370,
+                "start": 364,
+                "text": "251.00"
+              },
+              {
+                "bbox": [
+                  230.0,
+                  297.94,
+                  236.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 372,
+                "start": 371,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  242.0,
+                  297.94,
+                  254.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 375,
+                "start": 373,
+                "text": "20"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  323.94,
+                  92.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 384,
+                "start": 376,
+                "text": "PART-200"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  323.94,
+                  104.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 386,
+                "start": 385,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  110.0,
+                  323.94,
+                  116.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 388,
+                "start": 387,
+                "text": "3"
+              },
+              {
+                "bbox": [
+                  122.0,
+                  323.94,
+                  128.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 390,
+                "start": 389,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  134.0,
+                  323.94,
+                  164.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 396,
+                "start": 391,
+                "text": "18.75"
+              },
+              {
+                "bbox": [
+                  170.0,
+                  323.94,
+                  176.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 398,
+                "start": 397,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  182.0,
+                  323.94,
+                  212.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 404,
+                "start": 399,
+                "text": "56.25"
+              },
+              {
+                "bbox": [
+                  218.0,
+                  323.94,
+                  224.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 406,
+                "start": 405,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  230.0,
+                  323.94,
+                  242.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 409,
+                "start": 407,
+                "text": "20"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  375.07,
+                  83.47,
+                  385.07
+                ],
+                "confidence": null,
+                "end": 419,
+                "start": 410,
+                "text": "Subtotal:"
+              },
+              {
+                "bbox": [
+                  86.25,
+                  375.07,
+                  116.83,
+                  385.07
+                ],
+                "confidence": null,
+                "end": 426,
+                "start": 420,
+                "text": "307.25"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  396.07,
+                  63.45,
+                  406.07
+                ],
+                "confidence": null,
+                "end": 431,
+                "start": 427,
+                "text": "Tax:"
+              },
+              {
+                "bbox": [
+                  66.23,
+                  396.07,
+                  91.25,
+                  406.07
+                ],
+                "confidence": null,
+                "end": 437,
+                "start": 432,
+                "text": "61.45"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  417.07,
+                  69.01,
+                  427.07
+                ],
+                "confidence": null,
+                "end": 444,
+                "start": 438,
+                "text": "Total:"
+              },
+              {
+                "bbox": [
+                  71.79,
+                  417.07,
+                  102.37,
+                  427.07
+                ],
+                "confidence": null,
+                "end": 451,
+                "start": 445,
+                "text": "368.70"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  457.656,
+                  72.016,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 460,
+                "start": 452,
+                "text": "Isolated"
+              },
+              {
+                "bbox": [
+                  74.24,
+                  457.656,
+                  102.688,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 468,
+                "start": 461,
+                "text": "browser"
+              },
+              {
+                "bbox": [
+                  104.912,
+                  457.656,
+                  147.152,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 482,
+                "start": 469,
+                "text": "qualification"
+              },
+              {
+                "bbox": [
+                  149.376,
+                  457.656,
+                  173.384,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 491,
+                "start": 483,
+                "text": "fixture;"
+              },
+              {
+                "bbox": [
+                  175.608,
+                  457.656,
+                  184.504,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 494,
+                "start": 492,
+                "text": "no"
+              },
+              {
+                "bbox": [
+                  186.728,
+                  457.656,
+                  200.064,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 499,
+                "start": 495,
+                "text": "real"
+              },
+              {
+                "bbox": [
+                  202.288,
+                  457.656,
+                  243.64,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 512,
+                "start": 500,
+                "text": "transaction."
+              },
+              {
+                "bbox": [
+                  42.0,
+                  809.339,
+                  70.791,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 522,
+                "start": 513,
+                "text": "Synthetic"
+              },
+              {
+                "bbox": [
+                  72.737,
+                  809.339,
+                  91.798,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 530,
+                "start": 523,
+                "text": "fixture"
+              },
+              {
+                "bbox": [
+                  93.744,
+                  809.339,
+                  95.564,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 532,
+                "start": 531,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  97.51,
+                  809.339,
+                  130.186,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 543,
+                "start": 533,
+                "text": "classic_en"
+              },
+              {
+                "bbox": [
+                  132.132,
+                  809.339,
+                  133.952,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 545,
+                "start": 544,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  135.898,
+                  809.339,
+                  167.797,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 554,
+                "start": 546,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  169.743,
+                  809.339,
+                  192.304,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 562,
+                "start": 555,
+                "text": "Control"
+              },
+              {
+                "bbox": [
+                  194.25,
+                  809.339,
+                  229.656,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 575,
+                "start": 563,
+                "text": "Intelligence"
+              },
+              {
+                "bbox": [
+                  523.363,
+                  809.339,
+                  539.708,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 580,
+                "start": 576,
+                "text": "Page"
+              },
+              {
+                "bbox": [
+                  541.654,
+                  809.339,
+                  545.546,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 582,
+                "start": 581,
+                "text": "1"
+              },
+              {
+                "bbox": [
+                  547.492,
+                  809.339,
+                  549.438,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 584,
+                "start": 583,
+                "text": "/"
+              },
+              {
+                "bbox": [
+                  551.384,
+                  809.339,
+                  555.276,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 586,
+                "start": 585,
+                "text": "1"
+              }
+            ]
+          }
+        ],
+        "parser_version": "native-ocr-1.0;pypdf=6.21.4;pdfplumber=0.11.9;pypdfium2=5.13.0;Pillow=13.0.0;tesseract 5.5.0;eng.traineddata=7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2;dpi=160;lang=eng;oem=1;psm=3",
+        "schema_version": "1.0",
+        "sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+        "timings": {
+          "native_seconds": 0.012646,
+          "ocr_seconds": 0.0,
+          "parse_seconds": 0.071655,
+          "resumed_pages": 0.0,
+          "wall_seconds": 0.265562
+        }
+      },
+      "revision": 0,
+      "sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+      "version": 1
+    },
+    {
+      "checks": {
+        "calculated": {
+          "line_items[0].quantity_times_price": "251.00",
+          "line_items[0].tax": "50.20",
+          "line_items[1].quantity_times_price": "56.25",
+          "line_items[1].tax": "11.25",
+          "line_net_sum": "307.25",
+          "line_tax_sum": "61.45",
+          "quantity_price_net_sum": "307.25",
+          "quantity_price_tax_sum": "61.45",
+          "subtotal_plus_tax": "368.70"
+        },
+        "decision": "eligible",
+        "findings": [],
+        "rule_version": "purchasing-rules-1.0"
+      },
+      "classification_proposal": {
+        "confidence": 0.9168005484991647,
+        "kind": "purchase_order",
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear"
+      },
+      "classification_provenance_status": "verified",
+      "classification_review": null,
+      "document_key": "PO-BROWSER-HTTP0C5AE7E7DB62",
+      "extraction": {
+        "classification_confidence": 0.9168005484991647,
+        "contract_version": "purchasing-1.0",
+        "document_sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+        "fields": {
+          "currency": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  206.07,
+                  111.23,
+                  216.07
+                ],
+                "end": 282,
+                "page": 1,
+                "quote": "Currency: EUR",
+                "start": 269
+              }
+            ],
+            "normalized": "EUR",
+            "origin": "extracted",
+            "raw": "EUR",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_iso_currency"
+            ]
+          },
+          "document_date": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  225.07,
+                  168.51,
+                  235.07
+                ],
+                "end": 308,
+                "page": 1,
+                "quote": "Document date: 2026-01-15",
+                "start": 283
+              }
+            ],
+            "normalized": "2026-01-15",
+            "origin": "extracted",
+            "raw": "2026-01-15",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "validate_iso_date"
+            ]
+          },
+          "document_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  149.07,
+                  281.28,
+                  159.07
+                ],
+                "end": 182,
+                "page": 1,
+                "quote": "Document ID: PO-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 142
+              }
+            ],
+            "normalized": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "purchase_order_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  168.07,
+                  291.29,
+                  178.07
+                ],
+                "end": 226,
+                "page": 1,
+                "quote": "Purchase order: PO-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 183
+              }
+            ],
+            "normalized": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "PO-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "subtotal": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  375.07,
+                  116.83,
+                  385.07
+                ],
+                "end": 432,
+                "page": 1,
+                "quote": "Subtotal: 307.25",
+                "start": 416
+              }
+            ],
+            "normalized": "307.25",
+            "origin": "extracted",
+            "raw": "307.25",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          },
+          "supplier_id": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  187.07,
+                  278.5,
+                  197.07
+                ],
+                "end": 268,
+                "page": 1,
+                "quote": "Supplier ID: SUP-BROWSER-HTTP0C5AE7E7DB62",
+                "start": 227
+              }
+            ],
+            "normalized": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+            "origin": "extracted",
+            "raw": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "trim_outer_whitespace",
+              "uppercase_identifier"
+            ]
+          },
+          "tax": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  396.07,
+                  91.25,
+                  406.07
+                ],
+                "end": 443,
+                "page": 1,
+                "quote": "Tax: 61.45",
+                "start": 433
+              }
+            ],
+            "normalized": "61.45",
+            "origin": "extracted",
+            "raw": "61.45",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          },
+          "total": {
+            "evidence": [
+              {
+                "bbox": [
+                  44.0,
+                  417.07,
+                  102.37,
+                  427.07
+                ],
+                "end": 457,
+                "page": 1,
+                "quote": "Total: 368.70",
+                "start": 444
+              }
+            ],
+            "normalized": "368.70",
+            "origin": "extracted",
+            "raw": "368.70",
+            "reason": null,
+            "status": "supported",
+            "transformations": [
+              "decimal_to_fixed_2"
+            ]
+          }
+        },
+        "kind": "purchase_order",
+        "line_items": [
+          {
+            "fields": {
+              "net_amount": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 381,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 346
+                  }
+                ],
+                "normalized": "251.00",
+                "origin": "extracted",
+                "raw": "251.00",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_to_fixed_2"
+                ]
+              },
+              "quantity": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 381,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 346
+                  }
+                ],
+                "normalized": "2",
+                "origin": "extracted",
+                "raw": "2",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "sku": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 381,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 346
+                  }
+                ],
+                "normalized": "PART-100",
+                "origin": "extracted",
+                "raw": "PART-100",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "trim_outer_whitespace",
+                  "uppercase_identifier"
+                ]
+              },
+              "tax_rate": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 381,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 346
+                  }
+                ],
+                "normalized": "20",
+                "origin": "extracted",
+                "raw": "20",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "unit_price": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      297.94,
+                      254.0,
+                      307.94
+                    ],
+                    "end": 381,
+                    "page": 1,
+                    "quote": "PART-100 | 2 | 125.50 | 251.00 | 20",
+                    "start": 346
+                  }
+                ],
+                "normalized": "125.50",
+                "origin": "extracted",
+                "raw": "125.50",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_price_preserve_up_to_4_minimum_2"
+                ]
+              }
+            }
+          },
+          {
+            "fields": {
+              "net_amount": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 415,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 382
+                  }
+                ],
+                "normalized": "56.25",
+                "origin": "extracted",
+                "raw": "56.25",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_to_fixed_2"
+                ]
+              },
+              "quantity": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 415,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 382
+                  }
+                ],
+                "normalized": "3",
+                "origin": "extracted",
+                "raw": "3",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "sku": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 415,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 382
+                  }
+                ],
+                "normalized": "PART-200",
+                "origin": "extracted",
+                "raw": "PART-200",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "trim_outer_whitespace",
+                  "uppercase_identifier"
+                ]
+              },
+              "tax_rate": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 415,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 382
+                  }
+                ],
+                "normalized": "20",
+                "origin": "extracted",
+                "raw": "20",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_remove_redundant_zeros"
+                ]
+              },
+              "unit_price": {
+                "evidence": [
+                  {
+                    "bbox": [
+                      44.0,
+                      269.746,
+                      238.4,
+                      278.746
+                    ],
+                    "end": 345,
+                    "page": 1,
+                    "quote": "SKU | Qty | Unit price | Net | Tax %",
+                    "start": 309
+                  },
+                  {
+                    "bbox": [
+                      44.0,
+                      323.94,
+                      242.0,
+                      333.94
+                    ],
+                    "end": 415,
+                    "page": 1,
+                    "quote": "PART-200 | 3 | 18.75 | 56.25 | 20",
+                    "start": 382
+                  }
+                ],
+                "normalized": "18.75",
+                "origin": "extracted",
+                "raw": "18.75",
+                "reason": null,
+                "status": "supported",
+                "transformations": [
+                  "decimal_price_preserve_up_to_4_minimum_2"
+                ]
+              }
+            }
+          }
+        ],
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "schema_version": "1.0",
+        "timings": {
+          "extraction_seconds": 0.08941371799983244
+        },
+        "warnings": []
+      },
+      "id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+      "parsed": {
+        "pages": [
+          {
+            "height": 841.8898,
+            "method": "native",
+            "number": 1,
+            "text": "PURCHASE ORDER\nAster Industrial Components / Helix Purchasing Lab - fictional entities\nSYNTHETIC DOCUMENT - NOT VALID FOR PAYMENT OR DELIVERY\nDocument ID: PO-BROWSER-HTTP0C5AE7E7DB62\nPurchase order: PO-BROWSER-HTTP0C5AE7E7DB62\nSupplier ID: SUP-BROWSER-HTTP0C5AE7E7DB62\nCurrency: EUR\nDocument date: 2026-01-15\nSKU | Qty | Unit price | Net | Tax %\nPART-100 | 2 | 125.50 | 251.00 | 20\nPART-200 | 3 | 18.75 | 56.25 | 20\nSubtotal: 307.25\nTax: 61.45\nTotal: 368.70\nIsolated browser qualification fixture; no real transaction.\nSynthetic fixture | classic_en | Document Control Intelligence Page 1 / 1",
+            "width": 595.2756,
+            "words": [
+              {
+                "bbox": [
+                  44.0,
+                  51.726,
+                  144.998,
+                  69.726
+                ],
+                "confidence": null,
+                "end": 8,
+                "start": 0,
+                "text": "PURCHASE"
+              },
+              {
+                "bbox": [
+                  150.002,
+                  51.726,
+                  215.0,
+                  69.726
+                ],
+                "confidence": null,
+                "end": 14,
+                "start": 9,
+                "text": "ORDER"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  76.656,
+                  62.672,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 20,
+                "start": 15,
+                "text": "Aster"
+              },
+              {
+                "bbox": [
+                  64.896,
+                  76.656,
+                  97.352,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 31,
+                "start": 21,
+                "text": "Industrial"
+              },
+              {
+                "bbox": [
+                  99.576,
+                  76.656,
+                  144.928,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 42,
+                "start": 32,
+                "text": "Components"
+              },
+              {
+                "bbox": [
+                  147.152,
+                  76.656,
+                  149.376,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 44,
+                "start": 43,
+                "text": "/"
+              },
+              {
+                "bbox": [
+                  151.6,
+                  76.656,
+                  169.376,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 50,
+                "start": 45,
+                "text": "Helix"
+              },
+              {
+                "bbox": [
+                  171.6,
+                  76.656,
+                  211.616,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 61,
+                "start": 51,
+                "text": "Purchasing"
+              },
+              {
+                "bbox": [
+                  213.84,
+                  76.656,
+                  227.184,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 65,
+                "start": 62,
+                "text": "Lab"
+              },
+              {
+                "bbox": [
+                  229.408,
+                  76.656,
+                  232.072,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 67,
+                "start": 66,
+                "text": "-"
+              },
+              {
+                "bbox": [
+                  234.296,
+                  76.656,
+                  261.416,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 77,
+                "start": 68,
+                "text": "fictional"
+              },
+              {
+                "bbox": [
+                  263.64,
+                  76.656,
+                  288.984,
+                  84.656
+                ],
+                "confidence": null,
+                "end": 86,
+                "start": 78,
+                "text": "entities"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  119.656,
+                  89.336,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 96,
+                "start": 87,
+                "text": "SYNTHETIC"
+              },
+              {
+                "bbox": [
+                  91.56,
+                  119.656,
+                  137.776,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 105,
+                "start": 97,
+                "text": "DOCUMENT"
+              },
+              {
+                "bbox": [
+                  140.0,
+                  119.656,
+                  142.664,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 107,
+                "start": 106,
+                "text": "-"
+              },
+              {
+                "bbox": [
+                  144.888,
+                  119.656,
+                  161.776,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 111,
+                "start": 108,
+                "text": "NOT"
+              },
+              {
+                "bbox": [
+                  164.0,
+                  119.656,
+                  187.12,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 117,
+                "start": 112,
+                "text": "VALID"
+              },
+              {
+                "bbox": [
+                  189.344,
+                  119.656,
+                  206.232,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 121,
+                "start": 118,
+                "text": "FOR"
+              },
+              {
+                "bbox": [
+                  208.456,
+                  119.656,
+                  247.128,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 129,
+                "start": 122,
+                "text": "PAYMENT"
+              },
+              {
+                "bbox": [
+                  249.352,
+                  119.656,
+                  261.352,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 132,
+                "start": 130,
+                "text": "OR"
+              },
+              {
+                "bbox": [
+                  263.576,
+                  119.656,
+                  303.144,
+                  127.656
+                ],
+                "confidence": null,
+                "end": 141,
+                "start": 133,
+                "text": "DELIVERY"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  149.07,
+                  89.57,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 150,
+                "start": 142,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  92.35,
+                  149.07,
+                  105.13,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 154,
+                "start": 151,
+                "text": "ID:"
+              },
+              {
+                "bbox": [
+                  107.91,
+                  149.07,
+                  281.28,
+                  159.07
+                ],
+                "confidence": null,
+                "end": 182,
+                "start": 155,
+                "text": "PO-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  168.07,
+                  86.24,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 191,
+                "start": 183,
+                "text": "Purchase"
+              },
+              {
+                "bbox": [
+                  89.02,
+                  168.07,
+                  115.14,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 198,
+                "start": 192,
+                "text": "order:"
+              },
+              {
+                "bbox": [
+                  117.92,
+                  168.07,
+                  291.29,
+                  178.07
+                ],
+                "confidence": null,
+                "end": 226,
+                "start": 199,
+                "text": "PO-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  187.07,
+                  80.68,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 235,
+                "start": 227,
+                "text": "Supplier"
+              },
+              {
+                "bbox": [
+                  83.46,
+                  187.07,
+                  96.24,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 239,
+                "start": 236,
+                "text": "ID:"
+              },
+              {
+                "bbox": [
+                  99.02,
+                  187.07,
+                  278.5,
+                  197.07
+                ],
+                "confidence": null,
+                "end": 268,
+                "start": 240,
+                "text": "SUP-BROWSER-HTTP0C5AE7E7DB62"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  206.07,
+                  87.34,
+                  216.07
+                ],
+                "confidence": null,
+                "end": 278,
+                "start": 269,
+                "text": "Currency:"
+              },
+              {
+                "bbox": [
+                  90.12,
+                  206.07,
+                  111.23,
+                  216.07
+                ],
+                "confidence": null,
+                "end": 282,
+                "start": 279,
+                "text": "EUR"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  225.07,
+                  89.57,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 291,
+                "start": 283,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  92.35,
+                  225.07,
+                  114.59,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 297,
+                "start": 292,
+                "text": "date:"
+              },
+              {
+                "bbox": [
+                  117.37,
+                  225.07,
+                  168.51,
+                  235.07
+                ],
+                "confidence": null,
+                "end": 308,
+                "start": 298,
+                "text": "2026-01-15"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  269.746,
+                  60.2,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 312,
+                "start": 309,
+                "text": "SKU"
+              },
+              {
+                "bbox": [
+                  65.6,
+                  269.746,
+                  71.0,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 314,
+                "start": 313,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  76.4,
+                  269.746,
+                  92.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 318,
+                "start": 315,
+                "text": "Qty"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  269.746,
+                  103.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 320,
+                "start": 319,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  108.8,
+                  269.746,
+                  130.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 325,
+                "start": 321,
+                "text": "Unit"
+              },
+              {
+                "bbox": [
+                  135.8,
+                  269.746,
+                  162.8,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 331,
+                "start": 326,
+                "text": "price"
+              },
+              {
+                "bbox": [
+                  168.2,
+                  269.746,
+                  173.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 333,
+                "start": 332,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  179.0,
+                  269.746,
+                  195.2,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 337,
+                "start": 334,
+                "text": "Net"
+              },
+              {
+                "bbox": [
+                  200.6,
+                  269.746,
+                  206.0,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 339,
+                "start": 338,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  211.4,
+                  269.746,
+                  227.6,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 343,
+                "start": 340,
+                "text": "Tax"
+              },
+              {
+                "bbox": [
+                  233.0,
+                  269.746,
+                  238.4,
+                  278.746
+                ],
+                "confidence": null,
+                "end": 345,
+                "start": 344,
+                "text": "%"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  297.94,
+                  92.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 354,
+                "start": 346,
+                "text": "PART-100"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  297.94,
+                  104.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 356,
+                "start": 355,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  110.0,
+                  297.94,
+                  116.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 358,
+                "start": 357,
+                "text": "2"
+              },
+              {
+                "bbox": [
+                  122.0,
+                  297.94,
+                  128.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 360,
+                "start": 359,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  134.0,
+                  297.94,
+                  170.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 367,
+                "start": 361,
+                "text": "125.50"
+              },
+              {
+                "bbox": [
+                  176.0,
+                  297.94,
+                  182.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 369,
+                "start": 368,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  188.0,
+                  297.94,
+                  224.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 376,
+                "start": 370,
+                "text": "251.00"
+              },
+              {
+                "bbox": [
+                  230.0,
+                  297.94,
+                  236.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 378,
+                "start": 377,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  242.0,
+                  297.94,
+                  254.0,
+                  307.94
+                ],
+                "confidence": null,
+                "end": 381,
+                "start": 379,
+                "text": "20"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  323.94,
+                  92.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 390,
+                "start": 382,
+                "text": "PART-200"
+              },
+              {
+                "bbox": [
+                  98.0,
+                  323.94,
+                  104.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 392,
+                "start": 391,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  110.0,
+                  323.94,
+                  116.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 394,
+                "start": 393,
+                "text": "3"
+              },
+              {
+                "bbox": [
+                  122.0,
+                  323.94,
+                  128.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 396,
+                "start": 395,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  134.0,
+                  323.94,
+                  164.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 402,
+                "start": 397,
+                "text": "18.75"
+              },
+              {
+                "bbox": [
+                  170.0,
+                  323.94,
+                  176.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 404,
+                "start": 403,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  182.0,
+                  323.94,
+                  212.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 410,
+                "start": 405,
+                "text": "56.25"
+              },
+              {
+                "bbox": [
+                  218.0,
+                  323.94,
+                  224.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 412,
+                "start": 411,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  230.0,
+                  323.94,
+                  242.0,
+                  333.94
+                ],
+                "confidence": null,
+                "end": 415,
+                "start": 413,
+                "text": "20"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  375.07,
+                  83.47,
+                  385.07
+                ],
+                "confidence": null,
+                "end": 425,
+                "start": 416,
+                "text": "Subtotal:"
+              },
+              {
+                "bbox": [
+                  86.25,
+                  375.07,
+                  116.83,
+                  385.07
+                ],
+                "confidence": null,
+                "end": 432,
+                "start": 426,
+                "text": "307.25"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  396.07,
+                  63.45,
+                  406.07
+                ],
+                "confidence": null,
+                "end": 437,
+                "start": 433,
+                "text": "Tax:"
+              },
+              {
+                "bbox": [
+                  66.23,
+                  396.07,
+                  91.25,
+                  406.07
+                ],
+                "confidence": null,
+                "end": 443,
+                "start": 438,
+                "text": "61.45"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  417.07,
+                  69.01,
+                  427.07
+                ],
+                "confidence": null,
+                "end": 450,
+                "start": 444,
+                "text": "Total:"
+              },
+              {
+                "bbox": [
+                  71.79,
+                  417.07,
+                  102.37,
+                  427.07
+                ],
+                "confidence": null,
+                "end": 457,
+                "start": 451,
+                "text": "368.70"
+              },
+              {
+                "bbox": [
+                  44.0,
+                  457.656,
+                  72.016,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 466,
+                "start": 458,
+                "text": "Isolated"
+              },
+              {
+                "bbox": [
+                  74.24,
+                  457.656,
+                  102.688,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 474,
+                "start": 467,
+                "text": "browser"
+              },
+              {
+                "bbox": [
+                  104.912,
+                  457.656,
+                  147.152,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 488,
+                "start": 475,
+                "text": "qualification"
+              },
+              {
+                "bbox": [
+                  149.376,
+                  457.656,
+                  173.384,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 497,
+                "start": 489,
+                "text": "fixture;"
+              },
+              {
+                "bbox": [
+                  175.608,
+                  457.656,
+                  184.504,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 500,
+                "start": 498,
+                "text": "no"
+              },
+              {
+                "bbox": [
+                  186.728,
+                  457.656,
+                  200.064,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 505,
+                "start": 501,
+                "text": "real"
+              },
+              {
+                "bbox": [
+                  202.288,
+                  457.656,
+                  243.64,
+                  465.656
+                ],
+                "confidence": null,
+                "end": 518,
+                "start": 506,
+                "text": "transaction."
+              },
+              {
+                "bbox": [
+                  42.0,
+                  809.339,
+                  70.791,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 528,
+                "start": 519,
+                "text": "Synthetic"
+              },
+              {
+                "bbox": [
+                  72.737,
+                  809.339,
+                  91.798,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 536,
+                "start": 529,
+                "text": "fixture"
+              },
+              {
+                "bbox": [
+                  93.744,
+                  809.339,
+                  95.564,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 538,
+                "start": 537,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  97.51,
+                  809.339,
+                  130.186,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 549,
+                "start": 539,
+                "text": "classic_en"
+              },
+              {
+                "bbox": [
+                  132.132,
+                  809.339,
+                  133.952,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 551,
+                "start": 550,
+                "text": "|"
+              },
+              {
+                "bbox": [
+                  135.898,
+                  809.339,
+                  167.797,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 560,
+                "start": 552,
+                "text": "Document"
+              },
+              {
+                "bbox": [
+                  169.743,
+                  809.339,
+                  192.304,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 568,
+                "start": 561,
+                "text": "Control"
+              },
+              {
+                "bbox": [
+                  194.25,
+                  809.339,
+                  229.656,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 581,
+                "start": 569,
+                "text": "Intelligence"
+              },
+              {
+                "bbox": [
+                  523.363,
+                  809.339,
+                  539.708,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 586,
+                "start": 582,
+                "text": "Page"
+              },
+              {
+                "bbox": [
+                  541.654,
+                  809.339,
+                  545.546,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 588,
+                "start": 587,
+                "text": "1"
+              },
+              {
+                "bbox": [
+                  547.492,
+                  809.339,
+                  549.438,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 590,
+                "start": 589,
+                "text": "/"
+              },
+              {
+                "bbox": [
+                  551.384,
+                  809.339,
+                  555.276,
+                  816.339
+                ],
+                "confidence": null,
+                "end": 592,
+                "start": 591,
+                "text": "1"
+              }
+            ]
+          }
+        ],
+        "parser_version": "native-ocr-1.0;pypdf=6.21.4;pdfplumber=0.11.9;pypdfium2=5.13.0;Pillow=13.0.0;tesseract 5.5.0;eng.traineddata=7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2;dpi=160;lang=eng;oem=1;psm=3",
+        "schema_version": "1.0",
+        "sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+        "timings": {
+          "native_seconds": 0.013159,
+          "ocr_seconds": 0.0,
+          "parse_seconds": 0.076635,
+          "resumed_pages": 0.0,
+          "wall_seconds": 0.318208
+        }
+      },
+      "revision": 0,
+      "sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+      "version": 1
+    }
+  ],
+  "fingerprint": "0181cd22921df0fcc9ee2d783fa37022a933ff41cd1f3a805c61c6d3da5ca82a",
+  "publication_id": "f07f9ec1-0db2-4337-a745-432b3039b2a1",
+  "published_at": 1794613010.2282062,
+  "published_by": "http_publisher",
+  "reconciliation": {
+    "findings": [],
+    "rule_version": "three-way-1.0",
+    "status": "matched",
+    "totals": {
+      "PART-100.delivered": "2",
+      "PART-100.invoiced": "2",
+      "PART-100.ordered": "2",
+      "PART-100.remaining_delivery": "0",
+      "PART-100.remaining_invoice": "0",
+      "PART-200.delivered": "3",
+      "PART-200.invoiced": "3",
+      "PART-200.ordered": "3",
+      "PART-200.remaining_delivery": "0",
+      "PART-200.remaining_invoice": "0",
+      "invoice.calculated_subtotal": "307.25",
+      "invoice.calculated_tax": "61.45",
+      "invoice.subtotal": "307.25",
+      "invoice.tax": "61.45",
+      "invoice.total": "368.70",
+      "purchase_order.total": "368.70"
+    }
+  },
+  "schema_version": "control-dossier-1.0",
+  "supersedes_publication_id": null
+}

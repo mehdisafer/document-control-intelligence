@@ -40,7 +40,7 @@ The parser fails closed without its Linux isolation prerequisites. On Windows,
 use the Linux container or an explicitly provisioned WSL2 environment.
 
 ```bash
-git clone https://github.com/mehdisafer/document-control-intelligence.git
+git clone --branch feat/evidence-linked-document-control https://github.com/mehdisafer/document-control-intelligence.git
 cd document-control-intelligence
 python -m pip install 'uv==0.13.6'
 uv sync --frozen --group audit
@@ -52,6 +52,11 @@ The demo generates and parses real native/scanned PDFs, calls the real API and
 worker, records authenticated decisions, exports seven dossiers, snapshots the
 state, restores it elsewhere and compares the recovered exports. It refuses to
 overwrite an existing evidence directory.
+
+The candidate currently lives in [PR #2](https://github.com/mehdisafer/document-control-intelligence/pull/2).
+The command above selects that implementation branch explicitly while `main`
+retains the initial scope pending review. GitHub Actions was triggered, but its
+jobs failed before any runner or step started; see the [acceptance matrix](docs/ACCEPTANCE.md).
 
 | Demo case | Expected outcome |
 |---|---|
@@ -97,6 +102,18 @@ This is genuine scikit-learn training and local numeric inference using safe JSO
 weights. It is **not an LLM**. The Qwen3-0.6B/llama.cpp profile also executes locally
 and is evaluated separately, without a cloud fallback. See the
 [deployment and model provisioning guide](docs/DEPLOYMENT.md).
+
+On the frozen model, the demo exports **six** dossiers. Its injection-footer
+example causes an additional subtotal abstention and remains in review; the
+baseline exports seven. The strict seven-export demo verifier therefore fails
+for this local-linear execution, and that original result is retained. No value
+is guessed or model confidence relaxed to force the scenario through.
+
+A separate recovery exercise corrects that subtotal through the attributed
+review API, rejects self-approval, obtains a different approver's decision and
+publishes the seventh dossier. All seven exports then survive another restore.
+This proves the correction workflow; it does not change the original model score
+or turn the failed automatic demo assertion into a pass.
 
 ### Observed held-out results
 
@@ -152,10 +169,28 @@ restoration. Browser and container qualification are separate. A mock, liveness
 response or skipped test is never treated as an integration result. Original
 reports, commands, source hashes and publication links are indexed in [evidence](evidence/).
 
+On source commit `3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439`, **107 tests passed
+without skips**. A separate loopback HTTP execution passed **36 checks across
+30 requests**, with a real Uvicorn server and a separate local-model worker.
+It verified role denials, exact source spans, original PDF/ZIP bytes, idempotent
+publication and request-to-audit-to-job correlation. The final baseline and
+local-linear regression also reproduced all **72 semantic document outputs**,
+excluding timing measurements. See the [qualification record](evidence/qualification/).
+
+Reproduce the network boundary with the published frozen model and a new output
+directory:
+
+```bash
+uv run --frozen python evidence/qualification/http/qualify_http.py \
+  --repo . --model evidence/evaluation/local-linear-model.json \
+  --output outputs/http-qualification-new
+```
+
 | Qualification profile | Command | Scope |
 |---|---|---|
 | Smoke | `dci demo --output outputs/demo` | Nine real PDF/API/review scenarios, export and restore |
 | Integration | `python -m unittest discover -s tests -v` | Contracts, parser/OCR, rules, transactions and negative/recovery paths |
+| HTTP | `python evidence/qualification/http/qualify_http.py --repo . --model evidence/evaluation/local-linear-model.json --output outputs/http-qualification-new` | Loopback API, separate worker, roles, evidence, publication and trace joins |
 | Load | `python scripts/benchmark.py --cases 3 --workers 1 2 --batch-size 2 --output outputs/load.json` | Parameterized actual PDFs and worker counts with business-outcome comparison |
 
 The optional LLM evaluation is an explicit bounded command, not a costly job

@@ -48,7 +48,7 @@ bounded stage time before exit. No cancelled result can become a publication.
 | `PROCESSING_POLICY_CHANGED` | Queued digest versus current parser/model/config | Restore the pinned environment or explicitly reprocess with a recorded reason. |
 | Parser crash or timeout | Stage/checkpoint identity, error code, resource availability | Keep input and evidence; investigate in the isolated parser. Do not infer OOM from SIGKILL alone. |
 | Contradictory amounts/quantities | Source spans, arithmetic findings, cumulative reconciliation | Obtain a corrected source version or make an attributed human correction with justification. |
-| Missing evidence / classification unknown | Original and abstention reason | Keep the case in review. A model's confidence does not bypass absent proof. |
+| Missing evidence / classification unknown | Original, abstention reason and original model proposal | Keep absent values in review. An operator can explicitly review a document type with a reason; retain the proposal and use a different approver. Type review never supplies missing field evidence. |
 | `BLOB_INTEGRITY` / `EVIDENCE_CHANGED` | Original digest, backup manifest, append-only event history | Stop publication for the affected case; preserve evidence; restore a verified snapshot to a new location. |
 | Stale revision / self-approval denied | Current revisions and correction authors | Refresh the source set or have another approver perform explicit acceptance. |
 
@@ -79,7 +79,7 @@ an audit event; exhausted budgets remain blocked. Provision the same configurati
 actor identities and model artifacts, verify original hashes, and compare published
 exports before redirecting the API/workers. Keep the earlier directory for rollback.
 
-The demo executes this procedure and compares all seven published dossier exports
+The default baseline demo executes this procedure and compares all seven published dossier exports
 after restoration. `tests/test_operations.py` exercises corruption, missing files,
 existing-destination refusal, interrupted work and concurrent snapshots.
 

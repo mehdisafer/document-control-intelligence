@@ -1,0 +1,23 @@
+{
+  "after": {
+    "correct": 18,
+    "documents": 18,
+    "unknown": 0
+  },
+  "before": {
+    "correct": 9,
+    "documents": 18,
+    "unknown": 9
+  },
+  "classification_report_only": true,
+  "manifest_sha256": "5ed1937bc900635b4cfbafcdf1d5be279a57f86808dae8494932a207ab15852e",
+  "model_sha256": "54db8305fa93cb5456aa6dbf5635eab3dcc038a8f7b523a4d990989902c7d4ef",
+  "saved_model_format": "dci-local-linear-1.0",
+  "scope": "The development change emphasized the document heading. Thresholds were not lowered. These reports are not final field-quality metrics and do not evaluate the later format 1.1 artifact fitted on 72 documents.",
+  "stage": "pre-final development; distinct from the final model fitted on 72 documents",
+  "thresholds": {
+    "document": 0.8,
+    "label": 0.7
+  },
+  "training_documents": 36
+}

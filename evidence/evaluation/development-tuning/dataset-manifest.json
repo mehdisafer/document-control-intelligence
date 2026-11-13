@@ -1,0 +1,4354 @@
+{
+  "documents": [
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0000",
+      "degraded": true,
+      "document_key": "train-0000-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-01",
+        "document_id": "PO-100000",
+        "purchase_order_id": "PO-100000",
+        "subtotal": "1848.12",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "369.63",
+        "total": "2217.75"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "50.38",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "25.19"
+        },
+        {
+          "net_amount": "1285.44",
+          "quantity": "12",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "107.12"
+        },
+        {
+          "net_amount": "360.56",
+          "quantity": "4",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "90.14"
+        },
+        {
+          "net_amount": "151.74",
+          "quantity": "3",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "50.58"
+        }
+      ],
+      "family_id": "train-0000",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0000-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "6f304fa59e2d4c55b78524be0016c8cb870dee4865e7545837b47105fb141875",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0000",
+      "degraded": true,
+      "document_key": "train-0000-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-01",
+        "document_id": "DN-100000",
+        "purchase_order_id": "PO-100000",
+        "subtotal": "1848.12",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "369.63",
+        "total": "2217.75"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "50.38",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "25.19"
+        },
+        {
+          "net_amount": "1285.44",
+          "quantity": "12",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "107.12"
+        },
+        {
+          "net_amount": "360.56",
+          "quantity": "4",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "90.14"
+        },
+        {
+          "net_amount": "151.74",
+          "quantity": "3",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "50.58"
+        }
+      ],
+      "family_id": "train-0000",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0000-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "335324541da7bf37366db2577107583c96312b226bcac27823a422dc06b5e2af",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0000",
+      "degraded": true,
+      "document_key": "train-0000-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-01",
+        "document_id": "INV-100000",
+        "purchase_order_id": "PO-100000",
+        "subtotal": "1848.12",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "369.63",
+        "total": "2217.75"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "50.38",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "25.19"
+        },
+        {
+          "net_amount": "1285.44",
+          "quantity": "12",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "107.12"
+        },
+        {
+          "net_amount": "360.56",
+          "quantity": "4",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "90.14"
+        },
+        {
+          "net_amount": "151.74",
+          "quantity": "3",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "50.58"
+        }
+      ],
+      "family_id": "train-0000",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0000-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "43a5ca22b5a780f07c740f8d98882ff3799274a39f7450bc324d5dd6506d7e6b",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0001",
+      "degraded": true,
+      "document_key": "train-0001-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-02",
+        "document_id": "PO-100001",
+        "purchase_order_id": "PO-100001",
+        "subtotal": "3008.95",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "601.79",
+        "total": "3610.74"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "2348.40",
+          "quantity": "12",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "195.70"
+        },
+        {
+          "net_amount": "420.98",
+          "quantity": "2",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "210.49"
+        },
+        {
+          "net_amount": "191.87",
+          "quantity": "7",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "27.41"
+        },
+        {
+          "net_amount": "47.70",
+          "quantity": "1",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "47.70"
+        }
+      ],
+      "family_id": "train-0001",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0001-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "f72b9fdd820412216acf6ac250ef0b6b7af29f25169334847a6aa5550d1a01e2",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0001",
+      "degraded": true,
+      "document_key": "train-0001-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-02",
+        "document_id": "DN-100001",
+        "purchase_order_id": "PO-100001",
+        "subtotal": "3008.95",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "601.79",
+        "total": "3610.74"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "2348.40",
+          "quantity": "12",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "195.70"
+        },
+        {
+          "net_amount": "420.98",
+          "quantity": "2",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "210.49"
+        },
+        {
+          "net_amount": "191.87",
+          "quantity": "7",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "27.41"
+        },
+        {
+          "net_amount": "47.70",
+          "quantity": "1",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "47.70"
+        }
+      ],
+      "family_id": "train-0001",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0001-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "03eb81af20ce2c27bb8a9fe53c00ffeb6b19293c6c3eba082627df5fffc63f56",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0001",
+      "degraded": true,
+      "document_key": "train-0001-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-02",
+        "document_id": "INV-100001",
+        "purchase_order_id": "PO-100001",
+        "subtotal": "3008.95",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "601.79",
+        "total": "3610.74"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "2348.40",
+          "quantity": "12",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "195.70"
+        },
+        {
+          "net_amount": "420.98",
+          "quantity": "2",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "210.49"
+        },
+        {
+          "net_amount": "191.87",
+          "quantity": "7",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "27.41"
+        },
+        {
+          "net_amount": "47.70",
+          "quantity": "1",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "47.70"
+        }
+      ],
+      "family_id": "train-0001",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0001-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "535e3d4b19ebce2cb5e26bc1d3a6f35dd77fb371ad7990ade92585f57c868790",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0002",
+      "degraded": true,
+      "document_key": "train-0002-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-03",
+        "document_id": "PO-100002",
+        "purchase_order_id": "PO-100002",
+        "subtotal": "987.26",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "197.45",
+        "total": "1184.71"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "730.36",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "182.59"
+        },
+        {
+          "net_amount": "256.90",
+          "quantity": "10",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "25.69"
+        }
+      ],
+      "family_id": "train-0002",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0002-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "5fdce193a33139b112b5947bee078dad0c3d794421c80b96a64fb982769cb893",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0002",
+      "degraded": true,
+      "document_key": "train-0002-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-03",
+        "document_id": "DN-100002",
+        "purchase_order_id": "PO-100002",
+        "subtotal": "987.26",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "197.45",
+        "total": "1184.71"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "730.36",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "182.59"
+        },
+        {
+          "net_amount": "256.90",
+          "quantity": "10",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "25.69"
+        }
+      ],
+      "family_id": "train-0002",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0002-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "829d773602a4018a637a93076e72b6b74f402bc757ca93ca2cd898709a32e6aa",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0002",
+      "degraded": true,
+      "document_key": "train-0002-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-03",
+        "document_id": "INV-100002",
+        "purchase_order_id": "PO-100002",
+        "subtotal": "987.26",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "197.45",
+        "total": "1184.71"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "730.36",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "182.59"
+        },
+        {
+          "net_amount": "256.90",
+          "quantity": "10",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "25.69"
+        }
+      ],
+      "family_id": "train-0002",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0002-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "b89234e1acbc405dd63842af38bb2c7cb11d03b334f1f98723023a22ca2c69c2",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0003",
+      "degraded": true,
+      "document_key": "train-0003-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-04",
+        "document_id": "PO-100003",
+        "purchase_order_id": "PO-100003",
+        "subtotal": "5571.85",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "1114.36",
+        "total": "6686.21"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "919.80",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "229.95"
+        },
+        {
+          "net_amount": "2346.72",
+          "quantity": "12",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "195.56"
+        },
+        {
+          "net_amount": "624.61",
+          "quantity": "7",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "89.23"
+        },
+        {
+          "net_amount": "1680.72",
+          "quantity": "8",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "210.09"
+        }
+      ],
+      "family_id": "train-0003",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0003-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "e2c980290da67be84eadd10760a5ec667b5396f191f848c97cc3f2793ccf80b4",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0003",
+      "degraded": true,
+      "document_key": "train-0003-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-04",
+        "document_id": "DN-100003",
+        "purchase_order_id": "PO-100003",
+        "subtotal": "5571.85",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "1114.36",
+        "total": "6686.21"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "919.80",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "229.95"
+        },
+        {
+          "net_amount": "2346.72",
+          "quantity": "12",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "195.56"
+        },
+        {
+          "net_amount": "624.61",
+          "quantity": "7",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "89.23"
+        },
+        {
+          "net_amount": "1680.72",
+          "quantity": "8",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "210.09"
+        }
+      ],
+      "family_id": "train-0003",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0003-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "5bfce183922e2fa64e7068037c5177bd5dabe0238968ba61064a14e19159085c",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0003",
+      "degraded": true,
+      "document_key": "train-0003-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-04",
+        "document_id": "INV-100003",
+        "purchase_order_id": "PO-100003",
+        "subtotal": "5571.85",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "1114.36",
+        "total": "6686.21"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "919.80",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "229.95"
+        },
+        {
+          "net_amount": "2346.72",
+          "quantity": "12",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "195.56"
+        },
+        {
+          "net_amount": "624.61",
+          "quantity": "7",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "89.23"
+        },
+        {
+          "net_amount": "1680.72",
+          "quantity": "8",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "210.09"
+        }
+      ],
+      "family_id": "train-0003",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0003-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "a713e1dbd9214b05227781972b247bfb42b9eab308c084c6c4da74e2c776951f",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0004",
+      "degraded": true,
+      "document_key": "train-0004-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-05",
+        "document_id": "PO-100004",
+        "purchase_order_id": "PO-100004",
+        "subtotal": "3015.35",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "603.07",
+        "total": "3618.42"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "248.56",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "19.12"
+        },
+        {
+          "net_amount": "901.03",
+          "quantity": "13",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "69.31"
+        },
+        {
+          "net_amount": "1865.76",
+          "quantity": "12",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "155.48"
+        }
+      ],
+      "family_id": "train-0004",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0004-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "e72cbb06c94816ed156ee898e7ba4e672cb6e510d28ebe5c683ddbe38708bd5e",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0004",
+      "degraded": true,
+      "document_key": "train-0004-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-05",
+        "document_id": "DN-100004",
+        "purchase_order_id": "PO-100004",
+        "subtotal": "3015.35",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "603.07",
+        "total": "3618.42"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "248.56",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "19.12"
+        },
+        {
+          "net_amount": "901.03",
+          "quantity": "13",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "69.31"
+        },
+        {
+          "net_amount": "1865.76",
+          "quantity": "12",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "155.48"
+        }
+      ],
+      "family_id": "train-0004",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0004-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "e80356ff7ba15b5db26368e96efa3616d3e11921dc9857f2103b26f8b3e0b4bc",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0004",
+      "degraded": true,
+      "document_key": "train-0004-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-05",
+        "document_id": "INV-100004",
+        "purchase_order_id": "PO-100004",
+        "subtotal": "3015.35",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "603.07",
+        "total": "3618.42"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "248.56",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "19.12"
+        },
+        {
+          "net_amount": "901.03",
+          "quantity": "13",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "69.31"
+        },
+        {
+          "net_amount": "1865.76",
+          "quantity": "12",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "155.48"
+        }
+      ],
+      "family_id": "train-0004",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0004-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "54f208a5a36c2132d915035fdd9ce06967181ce1dad82ce30e9c89e404ca1e4c",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0005",
+      "degraded": true,
+      "document_key": "train-0005-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-06",
+        "document_id": "PO-100005",
+        "purchase_order_id": "PO-100005",
+        "subtotal": "943.64",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "188.73",
+        "total": "1132.37"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "339.70",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "67.94"
+        },
+        {
+          "net_amount": "509.16",
+          "quantity": "4",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "127.29"
+        },
+        {
+          "net_amount": "94.78",
+          "quantity": "2",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "47.39"
+        }
+      ],
+      "family_id": "train-0005",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0005-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "474d2281e0279f5cb8fb6295b98a891cf62df04e9f7d7d5fbccdd72465fdd42f",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0005",
+      "degraded": true,
+      "document_key": "train-0005-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-06",
+        "document_id": "DN-100005",
+        "purchase_order_id": "PO-100005",
+        "subtotal": "943.64",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "188.73",
+        "total": "1132.37"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "339.70",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "67.94"
+        },
+        {
+          "net_amount": "509.16",
+          "quantity": "4",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "127.29"
+        },
+        {
+          "net_amount": "94.78",
+          "quantity": "2",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "47.39"
+        }
+      ],
+      "family_id": "train-0005",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0005-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "e0fd7ea606d662926bda9ce4869db779ddde7cdb1dde106806bca74aa6d22cc5",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0005",
+      "degraded": true,
+      "document_key": "train-0005-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-06",
+        "document_id": "INV-100005",
+        "purchase_order_id": "PO-100005",
+        "subtotal": "943.64",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "188.73",
+        "total": "1132.37"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "339.70",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "67.94"
+        },
+        {
+          "net_amount": "509.16",
+          "quantity": "4",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "127.29"
+        },
+        {
+          "net_amount": "94.78",
+          "quantity": "2",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "47.39"
+        }
+      ],
+      "family_id": "train-0005",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0005-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "afe1d76e903f7b2d15b054f346abbd15b53f0a16a21eed5b1912650aab331bf3",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0006",
+      "degraded": true,
+      "document_key": "train-0006-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-07",
+        "document_id": "PO-100006",
+        "purchase_order_id": "PO-100006",
+        "subtotal": "3121.76",
+        "supplier_id": "SYN-SUP-106",
+        "tax": "624.35",
+        "total": "3746.11"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "269.26",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "134.63"
+        },
+        {
+          "net_amount": "1815.80",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "129.70"
+        },
+        {
+          "net_amount": "1036.70",
+          "quantity": "10",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "103.67"
+        }
+      ],
+      "family_id": "train-0006",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0006-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "4e1b665ab491a12756c0ec19f2820b1b92216ef584894f4efe05bf71810d5c88",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0006",
+      "degraded": true,
+      "document_key": "train-0006-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-07",
+        "document_id": "DN-100006",
+        "purchase_order_id": "PO-100006",
+        "subtotal": "3121.76",
+        "supplier_id": "SYN-SUP-106",
+        "tax": "624.35",
+        "total": "3746.11"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "269.26",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "134.63"
+        },
+        {
+          "net_amount": "1815.80",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "129.70"
+        },
+        {
+          "net_amount": "1036.70",
+          "quantity": "10",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "103.67"
+        }
+      ],
+      "family_id": "train-0006",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0006-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "2f7fecde51282d742ad9f20fb030320fd72877e45eca8c149c089db0ff7c5419",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0006",
+      "degraded": true,
+      "document_key": "train-0006-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-07",
+        "document_id": "INV-100006",
+        "purchase_order_id": "PO-100006",
+        "subtotal": "3121.76",
+        "supplier_id": "SYN-SUP-106",
+        "tax": "624.35",
+        "total": "3746.11"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "269.26",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "134.63"
+        },
+        {
+          "net_amount": "1815.80",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "129.70"
+        },
+        {
+          "net_amount": "1036.70",
+          "quantity": "10",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "103.67"
+        }
+      ],
+      "family_id": "train-0006",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0006-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "861309b0844f0781b6ae4e477bc03561c767f65143073e20b70ea82a2f10332b",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0007",
+      "degraded": true,
+      "document_key": "train-0007-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-08",
+        "document_id": "PO-100007",
+        "purchase_order_id": "PO-100007",
+        "subtotal": "2531.58",
+        "supplier_id": "SYN-SUP-107",
+        "tax": "506.32",
+        "total": "3037.90"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "2010.48",
+          "quantity": "12",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "167.54"
+        },
+        {
+          "net_amount": "521.10",
+          "quantity": "9",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "57.90"
+        }
+      ],
+      "family_id": "train-0007",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0007-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "025e201978f474e3715d6e208b2313fe33a3e9b1a68255fb87e31855677e0dc3",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0007",
+      "degraded": true,
+      "document_key": "train-0007-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-08",
+        "document_id": "DN-100007",
+        "purchase_order_id": "PO-100007",
+        "subtotal": "2531.58",
+        "supplier_id": "SYN-SUP-107",
+        "tax": "506.32",
+        "total": "3037.90"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "2010.48",
+          "quantity": "12",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "167.54"
+        },
+        {
+          "net_amount": "521.10",
+          "quantity": "9",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "57.90"
+        }
+      ],
+      "family_id": "train-0007",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0007-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "3b8d631700f553a5acb99e483d6bc3029c5a19a205ceac625fe3aafdea6c3d0a",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0007",
+      "degraded": true,
+      "document_key": "train-0007-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-08",
+        "document_id": "INV-100007",
+        "purchase_order_id": "PO-100007",
+        "subtotal": "2531.58",
+        "supplier_id": "SYN-SUP-107",
+        "tax": "506.32",
+        "total": "3037.90"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "2010.48",
+          "quantity": "12",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "167.54"
+        },
+        {
+          "net_amount": "521.10",
+          "quantity": "9",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "57.90"
+        }
+      ],
+      "family_id": "train-0007",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0007-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "c8fc3b7b9ffb810199e7a3413bd075f16729798dd2992ccf0246c387bed9c14c",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0008",
+      "degraded": true,
+      "document_key": "train-0008-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-09",
+        "document_id": "PO-100008",
+        "purchase_order_id": "PO-100008",
+        "subtotal": "2865.73",
+        "supplier_id": "SYN-SUP-108",
+        "tax": "573.15",
+        "total": "3438.88"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "395.78",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "197.89"
+        },
+        {
+          "net_amount": "1114.95",
+          "quantity": "5",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "222.99"
+        },
+        {
+          "net_amount": "1355.00",
+          "quantity": "10",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "135.50"
+        }
+      ],
+      "family_id": "train-0008",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0008-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "efe73a027ffd719689e641b97d247da698e15a19f1421c91a34b2ccb9e64d319",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0008",
+      "degraded": true,
+      "document_key": "train-0008-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-09",
+        "document_id": "DN-100008",
+        "purchase_order_id": "PO-100008",
+        "subtotal": "2865.73",
+        "supplier_id": "SYN-SUP-108",
+        "tax": "573.15",
+        "total": "3438.88"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "395.78",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "197.89"
+        },
+        {
+          "net_amount": "1114.95",
+          "quantity": "5",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "222.99"
+        },
+        {
+          "net_amount": "1355.00",
+          "quantity": "10",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "135.50"
+        }
+      ],
+      "family_id": "train-0008",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0008-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "d9888658aaaeb9140b44a715cd889e55c2ee968b89770d02d6d57ebef899ba7c",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0008",
+      "degraded": true,
+      "document_key": "train-0008-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-09",
+        "document_id": "INV-100008",
+        "purchase_order_id": "PO-100008",
+        "subtotal": "2865.73",
+        "supplier_id": "SYN-SUP-108",
+        "tax": "573.15",
+        "total": "3438.88"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "395.78",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "197.89"
+        },
+        {
+          "net_amount": "1114.95",
+          "quantity": "5",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "222.99"
+        },
+        {
+          "net_amount": "1355.00",
+          "quantity": "10",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "135.50"
+        }
+      ],
+      "family_id": "train-0008",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0008-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "1ac7a4b8e8f2d426b3a1a4d50821c9a512dc2e8f8429df443e5c5cb42829c1a2",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0009",
+      "degraded": true,
+      "document_key": "train-0009-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-10",
+        "document_id": "PO-100009",
+        "purchase_order_id": "PO-100009",
+        "subtotal": "1026.68",
+        "supplier_id": "SYN-SUP-109",
+        "tax": "205.34",
+        "total": "1232.02"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "159.16",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "39.79"
+        },
+        {
+          "net_amount": "233.68",
+          "quantity": "1",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "233.68"
+        },
+        {
+          "net_amount": "447.28",
+          "quantity": "4",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "111.82"
+        },
+        {
+          "net_amount": "186.56",
+          "quantity": "2",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "93.28"
+        }
+      ],
+      "family_id": "train-0009",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0009-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "f32453a621d1d9e2ce3416a84f4dba2f4ad7d4d852f2e7d46eee6dc585701e01",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0009",
+      "degraded": true,
+      "document_key": "train-0009-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-10",
+        "document_id": "DN-100009",
+        "purchase_order_id": "PO-100009",
+        "subtotal": "1026.68",
+        "supplier_id": "SYN-SUP-109",
+        "tax": "205.34",
+        "total": "1232.02"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "159.16",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "39.79"
+        },
+        {
+          "net_amount": "233.68",
+          "quantity": "1",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "233.68"
+        },
+        {
+          "net_amount": "447.28",
+          "quantity": "4",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "111.82"
+        },
+        {
+          "net_amount": "186.56",
+          "quantity": "2",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "93.28"
+        }
+      ],
+      "family_id": "train-0009",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0009-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "b3ce1111f40d3e43256ef1edb639602d2b205f2755861e3126862a33e40e327a",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0009",
+      "degraded": true,
+      "document_key": "train-0009-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-01-10",
+        "document_id": "INV-100009",
+        "purchase_order_id": "PO-100009",
+        "subtotal": "1026.68",
+        "supplier_id": "SYN-SUP-109",
+        "tax": "205.34",
+        "total": "1232.02"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "159.16",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "39.79"
+        },
+        {
+          "net_amount": "233.68",
+          "quantity": "1",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "233.68"
+        },
+        {
+          "net_amount": "447.28",
+          "quantity": "4",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "111.82"
+        },
+        {
+          "net_amount": "186.56",
+          "quantity": "2",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "93.28"
+        }
+      ],
+      "family_id": "train-0009",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0009-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "56c56695781443feb1b3c7874227d43cd6b50d00610cd1135933f5c5222b7897",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0010",
+      "degraded": true,
+      "document_key": "train-0010-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-11",
+        "document_id": "PO-100010",
+        "purchase_order_id": "PO-100010",
+        "subtotal": "2558.96",
+        "supplier_id": "SYN-SUP-110",
+        "tax": "511.79",
+        "total": "3070.75"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "756.56",
+          "quantity": "7",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "108.08"
+        },
+        {
+          "net_amount": "1802.40",
+          "quantity": "8",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "225.30"
+        }
+      ],
+      "family_id": "train-0010",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0010-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "678f6e33b97e1ec35078d95f00edbc6b8bb76463229e28a07f1a69947f4ecd67",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0010",
+      "degraded": true,
+      "document_key": "train-0010-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-11",
+        "document_id": "DN-100010",
+        "purchase_order_id": "PO-100010",
+        "subtotal": "2558.96",
+        "supplier_id": "SYN-SUP-110",
+        "tax": "511.79",
+        "total": "3070.75"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "756.56",
+          "quantity": "7",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "108.08"
+        },
+        {
+          "net_amount": "1802.40",
+          "quantity": "8",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "225.30"
+        }
+      ],
+      "family_id": "train-0010",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0010-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "e9fdad795ac08c0125004c24942f32e7ab84667de7044d9ba9874611db080dce",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0010",
+      "degraded": true,
+      "document_key": "train-0010-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-11",
+        "document_id": "INV-100010",
+        "purchase_order_id": "PO-100010",
+        "subtotal": "2558.96",
+        "supplier_id": "SYN-SUP-110",
+        "tax": "511.79",
+        "total": "3070.75"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "756.56",
+          "quantity": "7",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "108.08"
+        },
+        {
+          "net_amount": "1802.40",
+          "quantity": "8",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "225.30"
+        }
+      ],
+      "family_id": "train-0010",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/train/train-0010-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "cf512a2ad063c62c4a0ab78817fedc2d96dab63d3dc61f01c692a59d69fdacc0",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0011",
+      "degraded": true,
+      "document_key": "train-0011-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-12",
+        "document_id": "PO-100011",
+        "purchase_order_id": "PO-100011",
+        "subtotal": "2078.08",
+        "supplier_id": "SYN-SUP-111",
+        "tax": "415.62",
+        "total": "2493.70"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "414.90",
+          "quantity": "3",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "138.30"
+        },
+        {
+          "net_amount": "513.90",
+          "quantity": "6",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "85.65"
+        },
+        {
+          "net_amount": "1149.28",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "104.48"
+        }
+      ],
+      "family_id": "train-0011",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0011-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "2243a371ba6daed2ce50815180d312dcc0d87df1eb2f4ef374042c5418f2d493",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0011",
+      "degraded": true,
+      "document_key": "train-0011-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-12",
+        "document_id": "DN-100011",
+        "purchase_order_id": "PO-100011",
+        "subtotal": "2078.08",
+        "supplier_id": "SYN-SUP-111",
+        "tax": "415.62",
+        "total": "2493.70"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "414.90",
+          "quantity": "3",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "138.30"
+        },
+        {
+          "net_amount": "513.90",
+          "quantity": "6",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "85.65"
+        },
+        {
+          "net_amount": "1149.28",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "104.48"
+        }
+      ],
+      "family_id": "train-0011",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0011-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "eaa92300535829af29fc78c35b4a558bee2ccb494cb83ade21e8c4630098a3b3",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "train-0011",
+      "degraded": true,
+      "document_key": "train-0011-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-12",
+        "document_id": "INV-100011",
+        "purchase_order_id": "PO-100011",
+        "subtotal": "2078.08",
+        "supplier_id": "SYN-SUP-111",
+        "tax": "415.62",
+        "total": "2493.70"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "414.90",
+          "quantity": "3",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "138.30"
+        },
+        {
+          "net_amount": "513.90",
+          "quantity": "6",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "85.65"
+        },
+        {
+          "net_amount": "1149.28",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "104.48"
+        }
+      ],
+      "family_id": "train-0011",
+      "language": "fr",
+      "layout": "stacked_fr",
+      "path": "documents/train/train-0011-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "0c71f15ee6819185a8386fce6dfcfaaca64dfaebadbbf316473d040ea200ae91",
+      "split": "train",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0000",
+      "degraded": true,
+      "document_key": "tune-0000-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-02-01",
+        "document_id": "PO-200000",
+        "purchase_order_id": "PO-200000",
+        "subtotal": "5551.96",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "1110.39",
+        "total": "6662.35"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "3440.10",
+          "quantity": "15",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "229.34"
+        },
+        {
+          "net_amount": "433.20",
+          "quantity": "2",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "216.60"
+        },
+        {
+          "net_amount": "803.77",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "73.07"
+        },
+        {
+          "net_amount": "874.89",
+          "quantity": "9",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "97.21"
+        }
+      ],
+      "family_id": "tune-0000",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0000-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "1998c7ef260e03eae68ca6c9e115b8815eeacfb6388ff1174d75dddc72400ebc",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0000",
+      "degraded": true,
+      "document_key": "tune-0000-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-02-01",
+        "document_id": "DN-200000",
+        "purchase_order_id": "PO-200000",
+        "subtotal": "5551.96",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "1110.39",
+        "total": "6662.35"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "3440.10",
+          "quantity": "15",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "229.34"
+        },
+        {
+          "net_amount": "433.20",
+          "quantity": "2",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "216.60"
+        },
+        {
+          "net_amount": "803.77",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "73.07"
+        },
+        {
+          "net_amount": "874.89",
+          "quantity": "9",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "97.21"
+        }
+      ],
+      "family_id": "tune-0000",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0000-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "bef6971370e1c876fb7bc63ce6d728242b057780c84b7b360642dd180a088da3",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0000",
+      "degraded": true,
+      "document_key": "tune-0000-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-02-01",
+        "document_id": "INV-200000",
+        "purchase_order_id": "PO-200000",
+        "subtotal": "5551.96",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "1110.39",
+        "total": "6662.35"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "3440.10",
+          "quantity": "15",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "229.34"
+        },
+        {
+          "net_amount": "433.20",
+          "quantity": "2",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "216.60"
+        },
+        {
+          "net_amount": "803.77",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "73.07"
+        },
+        {
+          "net_amount": "874.89",
+          "quantity": "9",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "97.21"
+        }
+      ],
+      "family_id": "tune-0000",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0000-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "734bd8e8e10b6715574822f76620e26231ee6f6a030599748b459f19f209f945",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0001",
+      "degraded": true,
+      "document_key": "tune-0001-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-02",
+        "document_id": "PO-200001",
+        "purchase_order_id": "PO-200001",
+        "subtotal": "27480.89",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "5496.18",
+        "total": "32977.07"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "505.41",
+          "quantity": "3",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "168.47"
+        },
+        {
+          "net_amount": "738.15",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "105.45"
+        },
+        {
+          "net_amount": "3400.65",
+          "quantity": "15",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "226.71"
+        },
+        {
+          "net_amount": "2394.00",
+          "quantity": "12",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "199.50"
+        },
+        {
+          "net_amount": "493.04",
+          "quantity": "4",
+          "sku": "PART-104",
+          "tax_rate": "20",
+          "unit_price": "123.26"
+        },
+        {
+          "net_amount": "494.48",
+          "quantity": "14",
+          "sku": "PART-105",
+          "tax_rate": "20",
+          "unit_price": "35.32"
+        },
+        {
+          "net_amount": "110.04",
+          "quantity": "4",
+          "sku": "PART-106",
+          "tax_rate": "20",
+          "unit_price": "27.51"
+        },
+        {
+          "net_amount": "1564.68",
+          "quantity": "13",
+          "sku": "PART-107",
+          "tax_rate": "20",
+          "unit_price": "120.36"
+        },
+        {
+          "net_amount": "733.11",
+          "quantity": "7",
+          "sku": "PART-108",
+          "tax_rate": "20",
+          "unit_price": "104.73"
+        },
+        {
+          "net_amount": "172.26",
+          "quantity": "2",
+          "sku": "PART-109",
+          "tax_rate": "20",
+          "unit_price": "86.13"
+        },
+        {
+          "net_amount": "3042.75",
+          "quantity": "15",
+          "sku": "PART-110",
+          "tax_rate": "20",
+          "unit_price": "202.85"
+        },
+        {
+          "net_amount": "1801.65",
+          "quantity": "15",
+          "sku": "PART-111",
+          "tax_rate": "20",
+          "unit_price": "120.11"
+        },
+        {
+          "net_amount": "927.08",
+          "quantity": "4",
+          "sku": "PART-112",
+          "tax_rate": "20",
+          "unit_price": "231.77"
+        },
+        {
+          "net_amount": "1173.12",
+          "quantity": "8",
+          "sku": "PART-113",
+          "tax_rate": "20",
+          "unit_price": "146.64"
+        },
+        {
+          "net_amount": "3414.60",
+          "quantity": "15",
+          "sku": "PART-114",
+          "tax_rate": "20",
+          "unit_price": "227.64"
+        },
+        {
+          "net_amount": "510.48",
+          "quantity": "8",
+          "sku": "PART-115",
+          "tax_rate": "20",
+          "unit_price": "63.81"
+        },
+        {
+          "net_amount": "313.75",
+          "quantity": "5",
+          "sku": "PART-116",
+          "tax_rate": "20",
+          "unit_price": "62.75"
+        },
+        {
+          "net_amount": "803.76",
+          "quantity": "4",
+          "sku": "PART-117",
+          "tax_rate": "20",
+          "unit_price": "200.94"
+        },
+        {
+          "net_amount": "927.81",
+          "quantity": "9",
+          "sku": "PART-118",
+          "tax_rate": "20",
+          "unit_price": "103.09"
+        },
+        {
+          "net_amount": "2502.60",
+          "quantity": "12",
+          "sku": "PART-119",
+          "tax_rate": "20",
+          "unit_price": "208.55"
+        },
+        {
+          "net_amount": "1457.47",
+          "quantity": "7",
+          "sku": "PART-120",
+          "tax_rate": "20",
+          "unit_price": "208.21"
+        }
+      ],
+      "family_id": "tune-0001",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0001-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "multipage",
+      "sha256": "499de5a44170661cf153ef3e7c83cdda9c39ebc67e53ef4ba0e0bb276aca6906",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0001",
+      "degraded": true,
+      "document_key": "tune-0001-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-02",
+        "document_id": "DN-200001",
+        "purchase_order_id": "PO-200001",
+        "subtotal": "27480.89",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "5496.18",
+        "total": "32977.07"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "505.41",
+          "quantity": "3",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "168.47"
+        },
+        {
+          "net_amount": "738.15",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "105.45"
+        },
+        {
+          "net_amount": "3400.65",
+          "quantity": "15",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "226.71"
+        },
+        {
+          "net_amount": "2394.00",
+          "quantity": "12",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "199.50"
+        },
+        {
+          "net_amount": "493.04",
+          "quantity": "4",
+          "sku": "PART-104",
+          "tax_rate": "20",
+          "unit_price": "123.26"
+        },
+        {
+          "net_amount": "494.48",
+          "quantity": "14",
+          "sku": "PART-105",
+          "tax_rate": "20",
+          "unit_price": "35.32"
+        },
+        {
+          "net_amount": "110.04",
+          "quantity": "4",
+          "sku": "PART-106",
+          "tax_rate": "20",
+          "unit_price": "27.51"
+        },
+        {
+          "net_amount": "1564.68",
+          "quantity": "13",
+          "sku": "PART-107",
+          "tax_rate": "20",
+          "unit_price": "120.36"
+        },
+        {
+          "net_amount": "733.11",
+          "quantity": "7",
+          "sku": "PART-108",
+          "tax_rate": "20",
+          "unit_price": "104.73"
+        },
+        {
+          "net_amount": "172.26",
+          "quantity": "2",
+          "sku": "PART-109",
+          "tax_rate": "20",
+          "unit_price": "86.13"
+        },
+        {
+          "net_amount": "3042.75",
+          "quantity": "15",
+          "sku": "PART-110",
+          "tax_rate": "20",
+          "unit_price": "202.85"
+        },
+        {
+          "net_amount": "1801.65",
+          "quantity": "15",
+          "sku": "PART-111",
+          "tax_rate": "20",
+          "unit_price": "120.11"
+        },
+        {
+          "net_amount": "927.08",
+          "quantity": "4",
+          "sku": "PART-112",
+          "tax_rate": "20",
+          "unit_price": "231.77"
+        },
+        {
+          "net_amount": "1173.12",
+          "quantity": "8",
+          "sku": "PART-113",
+          "tax_rate": "20",
+          "unit_price": "146.64"
+        },
+        {
+          "net_amount": "3414.60",
+          "quantity": "15",
+          "sku": "PART-114",
+          "tax_rate": "20",
+          "unit_price": "227.64"
+        },
+        {
+          "net_amount": "510.48",
+          "quantity": "8",
+          "sku": "PART-115",
+          "tax_rate": "20",
+          "unit_price": "63.81"
+        },
+        {
+          "net_amount": "313.75",
+          "quantity": "5",
+          "sku": "PART-116",
+          "tax_rate": "20",
+          "unit_price": "62.75"
+        },
+        {
+          "net_amount": "803.76",
+          "quantity": "4",
+          "sku": "PART-117",
+          "tax_rate": "20",
+          "unit_price": "200.94"
+        },
+        {
+          "net_amount": "927.81",
+          "quantity": "9",
+          "sku": "PART-118",
+          "tax_rate": "20",
+          "unit_price": "103.09"
+        },
+        {
+          "net_amount": "2502.60",
+          "quantity": "12",
+          "sku": "PART-119",
+          "tax_rate": "20",
+          "unit_price": "208.55"
+        },
+        {
+          "net_amount": "1457.47",
+          "quantity": "7",
+          "sku": "PART-120",
+          "tax_rate": "20",
+          "unit_price": "208.21"
+        }
+      ],
+      "family_id": "tune-0001",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0001-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "multipage",
+      "sha256": "5114c47ef601893877c61e5443c0973193b37eaf851f828d73f217f068e495c0",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0001",
+      "degraded": true,
+      "document_key": "tune-0001-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-02",
+        "document_id": "INV-200001",
+        "purchase_order_id": "PO-200001",
+        "subtotal": "27480.89",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "5496.18",
+        "total": "32977.07"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "505.41",
+          "quantity": "3",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "168.47"
+        },
+        {
+          "net_amount": "738.15",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "105.45"
+        },
+        {
+          "net_amount": "3400.65",
+          "quantity": "15",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "226.71"
+        },
+        {
+          "net_amount": "2394.00",
+          "quantity": "12",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "199.50"
+        },
+        {
+          "net_amount": "493.04",
+          "quantity": "4",
+          "sku": "PART-104",
+          "tax_rate": "20",
+          "unit_price": "123.26"
+        },
+        {
+          "net_amount": "494.48",
+          "quantity": "14",
+          "sku": "PART-105",
+          "tax_rate": "20",
+          "unit_price": "35.32"
+        },
+        {
+          "net_amount": "110.04",
+          "quantity": "4",
+          "sku": "PART-106",
+          "tax_rate": "20",
+          "unit_price": "27.51"
+        },
+        {
+          "net_amount": "1564.68",
+          "quantity": "13",
+          "sku": "PART-107",
+          "tax_rate": "20",
+          "unit_price": "120.36"
+        },
+        {
+          "net_amount": "733.11",
+          "quantity": "7",
+          "sku": "PART-108",
+          "tax_rate": "20",
+          "unit_price": "104.73"
+        },
+        {
+          "net_amount": "172.26",
+          "quantity": "2",
+          "sku": "PART-109",
+          "tax_rate": "20",
+          "unit_price": "86.13"
+        },
+        {
+          "net_amount": "3042.75",
+          "quantity": "15",
+          "sku": "PART-110",
+          "tax_rate": "20",
+          "unit_price": "202.85"
+        },
+        {
+          "net_amount": "1801.65",
+          "quantity": "15",
+          "sku": "PART-111",
+          "tax_rate": "20",
+          "unit_price": "120.11"
+        },
+        {
+          "net_amount": "927.08",
+          "quantity": "4",
+          "sku": "PART-112",
+          "tax_rate": "20",
+          "unit_price": "231.77"
+        },
+        {
+          "net_amount": "1173.12",
+          "quantity": "8",
+          "sku": "PART-113",
+          "tax_rate": "20",
+          "unit_price": "146.64"
+        },
+        {
+          "net_amount": "3414.60",
+          "quantity": "15",
+          "sku": "PART-114",
+          "tax_rate": "20",
+          "unit_price": "227.64"
+        },
+        {
+          "net_amount": "510.48",
+          "quantity": "8",
+          "sku": "PART-115",
+          "tax_rate": "20",
+          "unit_price": "63.81"
+        },
+        {
+          "net_amount": "313.75",
+          "quantity": "5",
+          "sku": "PART-116",
+          "tax_rate": "20",
+          "unit_price": "62.75"
+        },
+        {
+          "net_amount": "803.76",
+          "quantity": "4",
+          "sku": "PART-117",
+          "tax_rate": "20",
+          "unit_price": "200.94"
+        },
+        {
+          "net_amount": "927.81",
+          "quantity": "9",
+          "sku": "PART-118",
+          "tax_rate": "20",
+          "unit_price": "103.09"
+        },
+        {
+          "net_amount": "2502.60",
+          "quantity": "12",
+          "sku": "PART-119",
+          "tax_rate": "20",
+          "unit_price": "208.55"
+        },
+        {
+          "net_amount": "1457.47",
+          "quantity": "7",
+          "sku": "PART-120",
+          "tax_rate": "20",
+          "unit_price": "208.21"
+        }
+      ],
+      "family_id": "tune-0001",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0001-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "multipage",
+      "sha256": "9d2ab45086a1de76f75e96d07e7da5b1b61f2486782ef87c7c64479e13983948",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0002",
+      "degraded": true,
+      "document_key": "tune-0002-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-03",
+        "document_id": "PO-200002",
+        "purchase_order_id": "PO-200002",
+        "subtotal": "1459.28",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "291.86",
+        "total": "1751.14"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "533.16",
+          "quantity": "6",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "88.86"
+        },
+        {
+          "net_amount": "551.88",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "183.96"
+        },
+        {
+          "net_amount": "374.24",
+          "quantity": "8",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "46.78"
+        }
+      ],
+      "family_id": "tune-0002",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0002-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "degraded_scan",
+      "sha256": "f33ed1adfc00d6e3f60dff1c1f166e4e2b0849f6438cd042b7684ff299f13f24",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0002",
+      "degraded": true,
+      "document_key": "tune-0002-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-03",
+        "document_id": "DN-200002",
+        "purchase_order_id": "PO-200002",
+        "subtotal": "1459.28",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "291.86",
+        "total": "1751.14"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "533.16",
+          "quantity": "6",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "88.86"
+        },
+        {
+          "net_amount": "551.88",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "183.96"
+        },
+        {
+          "net_amount": "374.24",
+          "quantity": "8",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "46.78"
+        }
+      ],
+      "family_id": "tune-0002",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0002-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "degraded_scan",
+      "sha256": "fa8e01e973d14e97482c97b5028e9601308d93038831825caf6d2061b3949266",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0002",
+      "degraded": true,
+      "document_key": "tune-0002-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-03",
+        "document_id": "INV-200002",
+        "purchase_order_id": "PO-200002",
+        "subtotal": "1459.28",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "291.86",
+        "total": "1751.14"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "533.16",
+          "quantity": "6",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "88.86"
+        },
+        {
+          "net_amount": "551.88",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "183.96"
+        },
+        {
+          "net_amount": "374.24",
+          "quantity": "8",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "46.78"
+        }
+      ],
+      "family_id": "tune-0002",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0002-invoice-v1.pdf",
+      "scan": true,
+      "scenario": "degraded_scan",
+      "sha256": "0418d31f6b8ce3b6577e777f4f4682c416204aa041dfe7cec3c6458620b563aa",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0003",
+      "degraded": true,
+      "document_key": "tune-0003-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-02-04",
+        "document_id": "PO-200003",
+        "purchase_order_id": "PO-200003",
+        "subtotal": "1408.68",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "281.74",
+        "total": "1690.42"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "740.88",
+          "quantity": "14",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "52.92"
+        },
+        {
+          "net_amount": "667.80",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "222.60"
+        }
+      ],
+      "family_id": "tune-0003",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0003-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "missing_total",
+      "sha256": "b63e0369e59407f62e687e6489a2c0a91930dacfd485197c59bf0bb01acbd286",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0003",
+      "degraded": true,
+      "document_key": "tune-0003-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-02-04",
+        "document_id": "DN-200003",
+        "purchase_order_id": "PO-200003",
+        "subtotal": "1408.68",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "281.74",
+        "total": "1690.42"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "740.88",
+          "quantity": "14",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "52.92"
+        },
+        {
+          "net_amount": "667.80",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "222.60"
+        }
+      ],
+      "family_id": "tune-0003",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0003-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "missing_total",
+      "sha256": "e71ad84b2cd0a737fbe666e7b2b6ca32d98fae88de068275e2901d914b244e15",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0003",
+      "degraded": true,
+      "document_key": "tune-0003-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-02-04",
+        "document_id": "INV-200003",
+        "purchase_order_id": "PO-200003",
+        "subtotal": "1408.68",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "281.74",
+        "total": null
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "740.88",
+          "quantity": "14",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "52.92"
+        },
+        {
+          "net_amount": "667.80",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "222.60"
+        }
+      ],
+      "family_id": "tune-0003",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0003-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "missing_total",
+      "sha256": "2fd6ee339fcd4cb308641a80c39411bde96a2972751d1a852f832e29ffca26b4",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0004",
+      "degraded": true,
+      "document_key": "tune-0004-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-05",
+        "document_id": "PO-200004",
+        "purchase_order_id": "PO-200004",
+        "subtotal": "4606.75",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "921.35",
+        "total": "5528.10"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "3119.74",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "239.98"
+        },
+        {
+          "net_amount": "1487.01",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "212.43"
+        }
+      ],
+      "family_id": "tune-0004",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0004-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "conflicting_total",
+      "sha256": "aba404748c3210b76b36e6f521e586400352b33efdd083f298a7a69045b846f2",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0004",
+      "degraded": true,
+      "document_key": "tune-0004-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-05",
+        "document_id": "DN-200004",
+        "purchase_order_id": "PO-200004",
+        "subtotal": "4606.75",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "921.35",
+        "total": "5528.10"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "3119.74",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "239.98"
+        },
+        {
+          "net_amount": "1487.01",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "212.43"
+        }
+      ],
+      "family_id": "tune-0004",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0004-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "conflicting_total",
+      "sha256": "3aa380b3f1c43e787fc1c1e0a9c6e6bdaf1430eb7a04b013f238df4625620ebf",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [
+        "total"
+      ],
+      "case_key": "tune-0004",
+      "degraded": true,
+      "document_key": "tune-0004-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-05",
+        "document_id": "INV-200004",
+        "purchase_order_id": "PO-200004",
+        "subtotal": "4606.75",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "921.35",
+        "total": "5528.10"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "3119.74",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "239.98"
+        },
+        {
+          "net_amount": "1487.01",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "212.43"
+        }
+      ],
+      "family_id": "tune-0004",
+      "language": "en",
+      "layout": "banded_en",
+      "path": "documents/tune/tune-0004-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "conflicting_total",
+      "sha256": "f6550b45c466e53dcf918046310b0b56497b0c3d1e070ab3ad5b7e5bfa5f55a2",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0005",
+      "degraded": true,
+      "document_key": "tune-0005-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-06",
+        "document_id": "PO-200005",
+        "purchase_order_id": "PO-200005",
+        "subtotal": "2697.98",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "539.60",
+        "total": "3237.58"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "994.28",
+          "quantity": "7",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "142.04"
+        },
+        {
+          "net_amount": "1703.70",
+          "quantity": "10",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "170.37"
+        }
+      ],
+      "family_id": "tune-0005",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0005-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "deec2fd12ae9eafefb17de2631e48164a396632a9d3dbadf193f865694479851",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0005",
+      "degraded": true,
+      "document_key": "tune-0005-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-06",
+        "document_id": "DN-200005",
+        "purchase_order_id": "PO-200005",
+        "subtotal": "2697.98",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "539.60",
+        "total": "3237.58"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "994.28",
+          "quantity": "7",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "142.04"
+        },
+        {
+          "net_amount": "1703.70",
+          "quantity": "10",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "170.37"
+        }
+      ],
+      "family_id": "tune-0005",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0005-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "ec981eacdfe0874a6d6bb6dad6a62dbe839a78d14f753a34f927a8771ee9e0a2",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "tune-0005",
+      "degraded": true,
+      "document_key": "tune-0005-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-02-06",
+        "document_id": "INV-200005",
+        "purchase_order_id": "PO-200005",
+        "subtotal": "2697.98",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "539.60",
+        "total": "3237.58"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "994.28",
+          "quantity": "7",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "142.04"
+        },
+        {
+          "net_amount": "1703.70",
+          "quantity": "10",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "170.37"
+        }
+      ],
+      "family_id": "tune-0005",
+      "language": "fr",
+      "layout": "compact_fr",
+      "path": "documents/tune/tune-0005-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "664afe8be8e970ed5db34043b8114707a7f0adcd94847d58d7fed988336964b6",
+      "split": "tune",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0000",
+      "degraded": true,
+      "document_key": "test-0000-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-03-01",
+        "document_id": "PO-300000",
+        "purchase_order_id": "PO-300000",
+        "subtotal": "4004.32",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "800.87",
+        "total": "4805.19"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "991.40",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "198.28"
+        },
+        {
+          "net_amount": "290.64",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "20.76"
+        },
+        {
+          "net_amount": "599.83",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "54.53"
+        },
+        {
+          "net_amount": "2122.45",
+          "quantity": "11",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "192.95"
+        }
+      ],
+      "family_id": "test-0000",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0000-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "6e0d7405d89d05585e92a788f8edcf5e769909b8bfcfcf5cdaa1144096506e25",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0000",
+      "degraded": true,
+      "document_key": "test-0000-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-03-01",
+        "document_id": "DN-300000",
+        "purchase_order_id": "PO-300000",
+        "subtotal": "4004.32",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "800.87",
+        "total": "4805.19"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "991.40",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "198.28"
+        },
+        {
+          "net_amount": "290.64",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "20.76"
+        },
+        {
+          "net_amount": "599.83",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "54.53"
+        },
+        {
+          "net_amount": "2122.45",
+          "quantity": "11",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "192.95"
+        }
+      ],
+      "family_id": "test-0000",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0000-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "c739836629155dba7b6950e5f06dd01326a189080dba3936df1581e47b8ff8a5",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0000",
+      "degraded": true,
+      "document_key": "test-0000-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-03-01",
+        "document_id": "INV-300000",
+        "purchase_order_id": "PO-300000",
+        "subtotal": "4004.32",
+        "supplier_id": "SYN-SUP-100",
+        "tax": "800.87",
+        "total": "4805.19"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "991.40",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "198.28"
+        },
+        {
+          "net_amount": "290.64",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "20.76"
+        },
+        {
+          "net_amount": "599.83",
+          "quantity": "11",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "54.53"
+        },
+        {
+          "net_amount": "2122.45",
+          "quantity": "11",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "192.95"
+        }
+      ],
+      "family_id": "test-0000",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0000-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "normal",
+      "sha256": "742988da3ba06ed7aa9390cd4e10d1db3ae43394557801bbc48fc03f0b38dec0",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0001",
+      "degraded": true,
+      "document_key": "test-0001-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-02",
+        "document_id": "PO-300001",
+        "purchase_order_id": "PO-300001",
+        "subtotal": "20437.26",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "4087.45",
+        "total": "24524.71"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1357.59",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "104.43"
+        },
+        {
+          "net_amount": "2951.39",
+          "quantity": "13",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "227.03"
+        },
+        {
+          "net_amount": "321.30",
+          "quantity": "6",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "53.55"
+        },
+        {
+          "net_amount": "797.30",
+          "quantity": "5",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "159.46"
+        },
+        {
+          "net_amount": "497.01",
+          "quantity": "3",
+          "sku": "PART-104",
+          "tax_rate": "20",
+          "unit_price": "165.67"
+        },
+        {
+          "net_amount": "103.30",
+          "quantity": "1",
+          "sku": "PART-105",
+          "tax_rate": "20",
+          "unit_price": "103.30"
+        },
+        {
+          "net_amount": "679.86",
+          "quantity": "9",
+          "sku": "PART-106",
+          "tax_rate": "20",
+          "unit_price": "75.54"
+        },
+        {
+          "net_amount": "466.74",
+          "quantity": "9",
+          "sku": "PART-107",
+          "tax_rate": "20",
+          "unit_price": "51.86"
+        },
+        {
+          "net_amount": "3106.46",
+          "quantity": "14",
+          "sku": "PART-108",
+          "tax_rate": "20",
+          "unit_price": "221.89"
+        },
+        {
+          "net_amount": "1131.85",
+          "quantity": "5",
+          "sku": "PART-109",
+          "tax_rate": "20",
+          "unit_price": "226.37"
+        },
+        {
+          "net_amount": "1948.86",
+          "quantity": "9",
+          "sku": "PART-110",
+          "tax_rate": "20",
+          "unit_price": "216.54"
+        },
+        {
+          "net_amount": "268.32",
+          "quantity": "4",
+          "sku": "PART-111",
+          "tax_rate": "20",
+          "unit_price": "67.08"
+        },
+        {
+          "net_amount": "419.58",
+          "quantity": "6",
+          "sku": "PART-112",
+          "tax_rate": "20",
+          "unit_price": "69.93"
+        },
+        {
+          "net_amount": "1717.02",
+          "quantity": "9",
+          "sku": "PART-113",
+          "tax_rate": "20",
+          "unit_price": "190.78"
+        },
+        {
+          "net_amount": "257.70",
+          "quantity": "15",
+          "sku": "PART-114",
+          "tax_rate": "20",
+          "unit_price": "17.18"
+        },
+        {
+          "net_amount": "1232.10",
+          "quantity": "10",
+          "sku": "PART-115",
+          "tax_rate": "20",
+          "unit_price": "123.21"
+        },
+        {
+          "net_amount": "187.04",
+          "quantity": "8",
+          "sku": "PART-116",
+          "tax_rate": "20",
+          "unit_price": "23.38"
+        },
+        {
+          "net_amount": "271.88",
+          "quantity": "2",
+          "sku": "PART-117",
+          "tax_rate": "20",
+          "unit_price": "135.94"
+        },
+        {
+          "net_amount": "1766.40",
+          "quantity": "15",
+          "sku": "PART-118",
+          "tax_rate": "20",
+          "unit_price": "117.76"
+        },
+        {
+          "net_amount": "143.92",
+          "quantity": "4",
+          "sku": "PART-119",
+          "tax_rate": "20",
+          "unit_price": "35.98"
+        },
+        {
+          "net_amount": "811.64",
+          "quantity": "4",
+          "sku": "PART-120",
+          "tax_rate": "20",
+          "unit_price": "202.91"
+        }
+      ],
+      "family_id": "test-0001",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0001-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "multipage",
+      "sha256": "db50aba73b62de3db9adc1056734176d2d50de49133914c5226127a958985619",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0001",
+      "degraded": true,
+      "document_key": "test-0001-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-02",
+        "document_id": "DN-300001",
+        "purchase_order_id": "PO-300001",
+        "subtotal": "20437.26",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "4087.45",
+        "total": "24524.71"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1357.59",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "104.43"
+        },
+        {
+          "net_amount": "2951.39",
+          "quantity": "13",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "227.03"
+        },
+        {
+          "net_amount": "321.30",
+          "quantity": "6",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "53.55"
+        },
+        {
+          "net_amount": "797.30",
+          "quantity": "5",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "159.46"
+        },
+        {
+          "net_amount": "497.01",
+          "quantity": "3",
+          "sku": "PART-104",
+          "tax_rate": "20",
+          "unit_price": "165.67"
+        },
+        {
+          "net_amount": "103.30",
+          "quantity": "1",
+          "sku": "PART-105",
+          "tax_rate": "20",
+          "unit_price": "103.30"
+        },
+        {
+          "net_amount": "679.86",
+          "quantity": "9",
+          "sku": "PART-106",
+          "tax_rate": "20",
+          "unit_price": "75.54"
+        },
+        {
+          "net_amount": "466.74",
+          "quantity": "9",
+          "sku": "PART-107",
+          "tax_rate": "20",
+          "unit_price": "51.86"
+        },
+        {
+          "net_amount": "3106.46",
+          "quantity": "14",
+          "sku": "PART-108",
+          "tax_rate": "20",
+          "unit_price": "221.89"
+        },
+        {
+          "net_amount": "1131.85",
+          "quantity": "5",
+          "sku": "PART-109",
+          "tax_rate": "20",
+          "unit_price": "226.37"
+        },
+        {
+          "net_amount": "1948.86",
+          "quantity": "9",
+          "sku": "PART-110",
+          "tax_rate": "20",
+          "unit_price": "216.54"
+        },
+        {
+          "net_amount": "268.32",
+          "quantity": "4",
+          "sku": "PART-111",
+          "tax_rate": "20",
+          "unit_price": "67.08"
+        },
+        {
+          "net_amount": "419.58",
+          "quantity": "6",
+          "sku": "PART-112",
+          "tax_rate": "20",
+          "unit_price": "69.93"
+        },
+        {
+          "net_amount": "1717.02",
+          "quantity": "9",
+          "sku": "PART-113",
+          "tax_rate": "20",
+          "unit_price": "190.78"
+        },
+        {
+          "net_amount": "257.70",
+          "quantity": "15",
+          "sku": "PART-114",
+          "tax_rate": "20",
+          "unit_price": "17.18"
+        },
+        {
+          "net_amount": "1232.10",
+          "quantity": "10",
+          "sku": "PART-115",
+          "tax_rate": "20",
+          "unit_price": "123.21"
+        },
+        {
+          "net_amount": "187.04",
+          "quantity": "8",
+          "sku": "PART-116",
+          "tax_rate": "20",
+          "unit_price": "23.38"
+        },
+        {
+          "net_amount": "271.88",
+          "quantity": "2",
+          "sku": "PART-117",
+          "tax_rate": "20",
+          "unit_price": "135.94"
+        },
+        {
+          "net_amount": "1766.40",
+          "quantity": "15",
+          "sku": "PART-118",
+          "tax_rate": "20",
+          "unit_price": "117.76"
+        },
+        {
+          "net_amount": "143.92",
+          "quantity": "4",
+          "sku": "PART-119",
+          "tax_rate": "20",
+          "unit_price": "35.98"
+        },
+        {
+          "net_amount": "811.64",
+          "quantity": "4",
+          "sku": "PART-120",
+          "tax_rate": "20",
+          "unit_price": "202.91"
+        }
+      ],
+      "family_id": "test-0001",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0001-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "multipage",
+      "sha256": "8abc46f477ca526646eab242dfc49ff8a64435f5002725fbfe8129d04b61ef33",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0001",
+      "degraded": true,
+      "document_key": "test-0001-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-02",
+        "document_id": "INV-300001",
+        "purchase_order_id": "PO-300001",
+        "subtotal": "20437.26",
+        "supplier_id": "SYN-SUP-101",
+        "tax": "4087.45",
+        "total": "24524.71"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1357.59",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "104.43"
+        },
+        {
+          "net_amount": "2951.39",
+          "quantity": "13",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "227.03"
+        },
+        {
+          "net_amount": "321.30",
+          "quantity": "6",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "53.55"
+        },
+        {
+          "net_amount": "797.30",
+          "quantity": "5",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "159.46"
+        },
+        {
+          "net_amount": "497.01",
+          "quantity": "3",
+          "sku": "PART-104",
+          "tax_rate": "20",
+          "unit_price": "165.67"
+        },
+        {
+          "net_amount": "103.30",
+          "quantity": "1",
+          "sku": "PART-105",
+          "tax_rate": "20",
+          "unit_price": "103.30"
+        },
+        {
+          "net_amount": "679.86",
+          "quantity": "9",
+          "sku": "PART-106",
+          "tax_rate": "20",
+          "unit_price": "75.54"
+        },
+        {
+          "net_amount": "466.74",
+          "quantity": "9",
+          "sku": "PART-107",
+          "tax_rate": "20",
+          "unit_price": "51.86"
+        },
+        {
+          "net_amount": "3106.46",
+          "quantity": "14",
+          "sku": "PART-108",
+          "tax_rate": "20",
+          "unit_price": "221.89"
+        },
+        {
+          "net_amount": "1131.85",
+          "quantity": "5",
+          "sku": "PART-109",
+          "tax_rate": "20",
+          "unit_price": "226.37"
+        },
+        {
+          "net_amount": "1948.86",
+          "quantity": "9",
+          "sku": "PART-110",
+          "tax_rate": "20",
+          "unit_price": "216.54"
+        },
+        {
+          "net_amount": "268.32",
+          "quantity": "4",
+          "sku": "PART-111",
+          "tax_rate": "20",
+          "unit_price": "67.08"
+        },
+        {
+          "net_amount": "419.58",
+          "quantity": "6",
+          "sku": "PART-112",
+          "tax_rate": "20",
+          "unit_price": "69.93"
+        },
+        {
+          "net_amount": "1717.02",
+          "quantity": "9",
+          "sku": "PART-113",
+          "tax_rate": "20",
+          "unit_price": "190.78"
+        },
+        {
+          "net_amount": "257.70",
+          "quantity": "15",
+          "sku": "PART-114",
+          "tax_rate": "20",
+          "unit_price": "17.18"
+        },
+        {
+          "net_amount": "1232.10",
+          "quantity": "10",
+          "sku": "PART-115",
+          "tax_rate": "20",
+          "unit_price": "123.21"
+        },
+        {
+          "net_amount": "187.04",
+          "quantity": "8",
+          "sku": "PART-116",
+          "tax_rate": "20",
+          "unit_price": "23.38"
+        },
+        {
+          "net_amount": "271.88",
+          "quantity": "2",
+          "sku": "PART-117",
+          "tax_rate": "20",
+          "unit_price": "135.94"
+        },
+        {
+          "net_amount": "1766.40",
+          "quantity": "15",
+          "sku": "PART-118",
+          "tax_rate": "20",
+          "unit_price": "117.76"
+        },
+        {
+          "net_amount": "143.92",
+          "quantity": "4",
+          "sku": "PART-119",
+          "tax_rate": "20",
+          "unit_price": "35.98"
+        },
+        {
+          "net_amount": "811.64",
+          "quantity": "4",
+          "sku": "PART-120",
+          "tax_rate": "20",
+          "unit_price": "202.91"
+        }
+      ],
+      "family_id": "test-0001",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0001-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "multipage",
+      "sha256": "58a5be6640dbdf3e75dc729ffa323ee56bd9b2bd71dd788848d7f4365aa4eb53",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0002",
+      "degraded": true,
+      "document_key": "test-0002-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-03",
+        "document_id": "PO-300002",
+        "purchase_order_id": "PO-300002",
+        "subtotal": "907.86",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "181.58",
+        "total": "1089.44"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "352.48",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "176.24"
+        },
+        {
+          "net_amount": "555.38",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "39.67"
+        }
+      ],
+      "family_id": "test-0002",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0002-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "degraded_scan",
+      "sha256": "0544195242bd80c1f3cc529fb7bf21245872b11e2fb0e10f3e5fc9425bd7eecf",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0002",
+      "degraded": true,
+      "document_key": "test-0002-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-03",
+        "document_id": "DN-300002",
+        "purchase_order_id": "PO-300002",
+        "subtotal": "907.86",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "181.58",
+        "total": "1089.44"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "352.48",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "176.24"
+        },
+        {
+          "net_amount": "555.38",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "39.67"
+        }
+      ],
+      "family_id": "test-0002",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0002-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "degraded_scan",
+      "sha256": "adc69debe16338e7c35c8eddf9341854d18fabfba8512bed64577c8ef0093182",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0002",
+      "degraded": true,
+      "document_key": "test-0002-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-03",
+        "document_id": "INV-300002",
+        "purchase_order_id": "PO-300002",
+        "subtotal": "907.86",
+        "supplier_id": "SYN-SUP-102",
+        "tax": "181.58",
+        "total": "1089.44"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "352.48",
+          "quantity": "2",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "176.24"
+        },
+        {
+          "net_amount": "555.38",
+          "quantity": "14",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "39.67"
+        }
+      ],
+      "family_id": "test-0002",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0002-invoice-v1.pdf",
+      "scan": true,
+      "scenario": "degraded_scan",
+      "sha256": "32188ab2b1f12e424e77c9452c043e519a188cbe8a8995ab371776cbbfd0daa4",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0003",
+      "degraded": true,
+      "document_key": "test-0003-purchase_order",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-03-04",
+        "document_id": "PO-300003",
+        "purchase_order_id": "PO-300003",
+        "subtotal": "3344.89",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "668.98",
+        "total": "4013.87"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "756.60",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "58.20"
+        },
+        {
+          "net_amount": "699.54",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "233.18"
+        },
+        {
+          "net_amount": "1577.20",
+          "quantity": "8",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "197.15"
+        },
+        {
+          "net_amount": "311.55",
+          "quantity": "3",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "103.85"
+        }
+      ],
+      "family_id": "test-0003",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0003-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "missing_total",
+      "sha256": "27e5953c55066369cf06bc94fa421674cbcef65ef77298d904020bf6ccb8a4d3",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0003",
+      "degraded": true,
+      "document_key": "test-0003-delivery_note",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-03-04",
+        "document_id": "DN-300003",
+        "purchase_order_id": "PO-300003",
+        "subtotal": "3344.89",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "668.98",
+        "total": "4013.87"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "756.60",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "58.20"
+        },
+        {
+          "net_amount": "699.54",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "233.18"
+        },
+        {
+          "net_amount": "1577.20",
+          "quantity": "8",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "197.15"
+        },
+        {
+          "net_amount": "311.55",
+          "quantity": "3",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "103.85"
+        }
+      ],
+      "family_id": "test-0003",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0003-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "missing_total",
+      "sha256": "588ca437521437ecf2004b665a5e2266d19a3da9978943cf3b3cc90f64129abf",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0003",
+      "degraded": true,
+      "document_key": "test-0003-invoice",
+      "expected_fields": {
+        "currency": "USD",
+        "document_date": "2026-03-04",
+        "document_id": "INV-300003",
+        "purchase_order_id": "PO-300003",
+        "subtotal": "3344.89",
+        "supplier_id": "SYN-SUP-103",
+        "tax": "668.98",
+        "total": null
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "756.60",
+          "quantity": "13",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "58.20"
+        },
+        {
+          "net_amount": "699.54",
+          "quantity": "3",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "233.18"
+        },
+        {
+          "net_amount": "1577.20",
+          "quantity": "8",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "197.15"
+        },
+        {
+          "net_amount": "311.55",
+          "quantity": "3",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "103.85"
+        }
+      ],
+      "family_id": "test-0003",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0003-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "missing_total",
+      "sha256": "c7a9dc85529710da93fb041229f7afbb9d6d2ea9d88cf00e4e067fb380d31619",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0004",
+      "degraded": true,
+      "document_key": "test-0004-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-05",
+        "document_id": "PO-300004",
+        "purchase_order_id": "PO-300004",
+        "subtotal": "7608.92",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "1521.79",
+        "total": "9130.71"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "3020.64",
+          "quantity": "14",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "215.76"
+        },
+        {
+          "net_amount": "604.80",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "86.40"
+        },
+        {
+          "net_amount": "2905.65",
+          "quantity": "15",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "193.71"
+        },
+        {
+          "net_amount": "1077.83",
+          "quantity": "13",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "82.91"
+        }
+      ],
+      "family_id": "test-0004",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0004-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "conflicting_total",
+      "sha256": "b1ed1f6457575287cb2f154cf2d88072a19c66294bc3cd4563e2bc539313acb1",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0004",
+      "degraded": true,
+      "document_key": "test-0004-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-05",
+        "document_id": "DN-300004",
+        "purchase_order_id": "PO-300004",
+        "subtotal": "7608.92",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "1521.79",
+        "total": "9130.71"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "3020.64",
+          "quantity": "14",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "215.76"
+        },
+        {
+          "net_amount": "604.80",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "86.40"
+        },
+        {
+          "net_amount": "2905.65",
+          "quantity": "15",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "193.71"
+        },
+        {
+          "net_amount": "1077.83",
+          "quantity": "13",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "82.91"
+        }
+      ],
+      "family_id": "test-0004",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0004-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "conflicting_total",
+      "sha256": "84e08884852ccc0ca809ea0f54c5d7774b22196dbae06a80afbdefa9c38f0bb8",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [
+        "total"
+      ],
+      "case_key": "test-0004",
+      "degraded": true,
+      "document_key": "test-0004-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-05",
+        "document_id": "INV-300004",
+        "purchase_order_id": "PO-300004",
+        "subtotal": "7608.92",
+        "supplier_id": "SYN-SUP-104",
+        "tax": "1521.79",
+        "total": "9130.71"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "3020.64",
+          "quantity": "14",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "215.76"
+        },
+        {
+          "net_amount": "604.80",
+          "quantity": "7",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "86.40"
+        },
+        {
+          "net_amount": "2905.65",
+          "quantity": "15",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "193.71"
+        },
+        {
+          "net_amount": "1077.83",
+          "quantity": "13",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "82.91"
+        }
+      ],
+      "family_id": "test-0004",
+      "language": "en",
+      "layout": "sidebar_en",
+      "path": "documents/test/test-0004-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "conflicting_total",
+      "sha256": "cc152439689fbd1115310227efdd6c78cc9bf655388a56bfef5427ee3acdcd9b",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0005",
+      "degraded": true,
+      "document_key": "test-0005-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-06",
+        "document_id": "PO-300005",
+        "purchase_order_id": "PO-300005",
+        "subtotal": "7030.30",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "1406.06",
+        "total": "8436.36"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "738.70",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "147.74"
+        },
+        {
+          "net_amount": "2529.45",
+          "quantity": "11",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "229.95"
+        },
+        {
+          "net_amount": "963.30",
+          "quantity": "6",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "160.55"
+        },
+        {
+          "net_amount": "2798.85",
+          "quantity": "15",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "186.59"
+        }
+      ],
+      "family_id": "test-0005",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0005-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "90f0b55b8ee00cd4f487585b7b42bc96cc41eabaf32ed5699147b4ee0134c77f",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0005",
+      "degraded": true,
+      "document_key": "test-0005-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-06",
+        "document_id": "DN-300005",
+        "purchase_order_id": "PO-300005",
+        "subtotal": "7030.30",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "1406.06",
+        "total": "8436.36"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "738.70",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "147.74"
+        },
+        {
+          "net_amount": "2529.45",
+          "quantity": "11",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "229.95"
+        },
+        {
+          "net_amount": "963.30",
+          "quantity": "6",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "160.55"
+        },
+        {
+          "net_amount": "2798.85",
+          "quantity": "15",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "186.59"
+        }
+      ],
+      "family_id": "test-0005",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0005-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "e9b9a447af1445086e80b7fee30d7d79480667a57e26d053679fcf048e1c7b96",
+      "split": "test",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "test-0005",
+      "degraded": true,
+      "document_key": "test-0005-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-03-06",
+        "document_id": "INV-300005",
+        "purchase_order_id": "PO-300005",
+        "subtotal": "7030.30",
+        "supplier_id": "SYN-SUP-105",
+        "tax": "1406.06",
+        "total": "8436.36"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "738.70",
+          "quantity": "5",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "147.74"
+        },
+        {
+          "net_amount": "2529.45",
+          "quantity": "11",
+          "sku": "PART-101",
+          "tax_rate": "20",
+          "unit_price": "229.95"
+        },
+        {
+          "net_amount": "963.30",
+          "quantity": "6",
+          "sku": "PART-102",
+          "tax_rate": "20",
+          "unit_price": "160.55"
+        },
+        {
+          "net_amount": "2798.85",
+          "quantity": "15",
+          "sku": "PART-103",
+          "tax_rate": "20",
+          "unit_price": "186.59"
+        }
+      ],
+      "family_id": "test-0005",
+      "language": "fr",
+      "layout": "ledger_fr",
+      "path": "documents/test/test-0005-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "87b60e5733ac136728287df45c37d52482ca3532d77b2fa6230de89b5595b116",
+      "split": "test",
+      "version": 1
+    }
+  ],
+  "generator_version": "synthetic-purchasing-1.0",
+  "per_split": 6,
+  "rights": "Entirely synthetic. No source/customer documents, logos or personal data. Repository license decision is separate.",
+  "schema_version": "1.0",
+  "seed": 42,
+  "split_policy": "Family IDs and layout IDs are disjoint between train, tune and test. Frozen seed and manifest hashes must accompany evaluation.",
+  "templates": {
+    "test": [
+      "sidebar_en",
+      "ledger_fr"
+    ],
+    "train": [
+      "classic_en",
+      "stacked_fr"
+    ],
+    "tune": [
+      "banded_en",
+      "compact_fr"
+    ]
+  }
+}

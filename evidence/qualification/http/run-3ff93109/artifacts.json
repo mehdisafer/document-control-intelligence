@@ -1,0 +1,18 @@
+{
+  "audit.json": "b4df2c4046d8d8d6b47625f67c7107d295e89a367c5b69a11f5b7cd7de591afa",
+  "case-published.json": "725a922142bf8cc177078ef3c80f1ceac20ff76b6145c0c91ebf322e8e1edaf5",
+  "case-queued.json": "f870d81efd1b7a77a80136ac91c13961b2f7a2f00a95f8d4a9b321ecd99e7d0c",
+  "case-ready.json": "c87f40042bdc10ddb9d8b993e234e3e9950ebf8da5a2e985f195db21a5d574c7",
+  "control-dossier.zip": "677587a3c4339d87745e374ab3f3a222dfe19f7579e59eed968d18b08a9b0b9b",
+  "documents/0f63b7f5-1573-4bf4-8be5-2585952afb47.json": "d12aa5869135db25fe62340855815c9c8ea9cebfbc7192c53bbff1c2264c9fd6",
+  "documents/4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e.json": "8a5516b3519068f9c8d72d5e6846b83d4bffdb2f9031261bc168497afa8db23d",
+  "documents/709ec08b-1855-42a1-9bfa-634672fb19ba.json": "f4751b656cf3cd626202da3b5994765ea1f04b8ddd9a92ee7d3cfa284183f211",
+  "export.json": "bcee311027cc4efc31a088f808c54aafc956cc582a89e7a6021bab8b82b401c1",
+  "fixture.json": "a90244a5aa76a9d80c05618908c07f0d98c35ff6ca5449c1c8b65d6d08922d30",
+  "input-pdfs/delivery_note.pdf": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+  "input-pdfs/invoice.pdf": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+  "input-pdfs/purchase_order.pdf": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+  "report.json": "4bf7c76b8b01959580be4e051ab596b36890229980fc1f495ce9b26e51ba7956",
+  "server.log": "e9fb5e31176d16a79ba1942cc74a32c4c557036f9150b62f310950416f7ad7de",
+  "worker.log": "e4e0450b96fc507d22828e6783d2d762f9e9af0964dd0c90a45ae1035322f988"
+}

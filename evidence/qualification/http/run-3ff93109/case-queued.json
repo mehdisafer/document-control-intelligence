@@ -1,0 +1,90 @@
+{
+  "id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+  "name": "Real HTTP qualification / synthetic purchasing family",
+  "created_at": 1794613008.8797357,
+  "revision": 3,
+  "accepted_fingerprint": null,
+  "accepted_by": null,
+  "accepted_at": null,
+  "acceptance_reason": null,
+  "published_fingerprint": null,
+  "documents": [
+    {
+      "id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "document_key": "DN-BROWSER-HTTP0C5AE7E7DB62",
+      "version": 1,
+      "sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+      "filename": "delivery_note.pdf",
+      "size": 2635,
+      "created_at": 1794613008.920981,
+      "profile": "local-linear",
+      "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+      "status": "queued",
+      "revision": 0,
+      "error_code": null
+    },
+    {
+      "id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "document_key": "INV-BROWSER-HTTP0C5AE7E7DB62",
+      "version": 1,
+      "sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+      "filename": "invoice.pdf",
+      "size": 2632,
+      "created_at": 1794613008.9237227,
+      "profile": "local-linear",
+      "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+      "status": "queued",
+      "revision": 0,
+      "error_code": null
+    },
+    {
+      "id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+      "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "document_key": "PO-BROWSER-HTTP0C5AE7E7DB62",
+      "version": 1,
+      "sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+      "filename": "purchase_order.pdf",
+      "size": 2641,
+      "created_at": 1794613008.8860667,
+      "profile": "local-linear",
+      "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+      "status": "queued",
+      "revision": 0,
+      "error_code": null
+    }
+  ],
+  "reconciliation": {
+    "rule_version": "three-way-1.0",
+    "status": "missing",
+    "findings": [
+      {
+        "code": "missing_document",
+        "severity": "warning",
+        "message": "The case has no active purchase order.",
+        "field": null,
+        "document_id": null
+      },
+      {
+        "code": "missing_document",
+        "severity": "warning",
+        "message": "The case has no active delivery note.",
+        "field": null,
+        "document_id": null
+      },
+      {
+        "code": "missing_document",
+        "severity": "warning",
+        "message": "The case has no active invoice.",
+        "field": null,
+        "document_id": null
+      }
+    ],
+    "totals": {}
+  },
+  "eligible_for_acceptance": false,
+  "fingerprint": "aa987e03d8b421326457cb46be68831c2cf5dd196b080b578722a2a1e06f7cc3",
+  "accepted": false,
+  "published": false
+}

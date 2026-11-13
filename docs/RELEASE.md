@@ -11,8 +11,18 @@ container/Terraform references and an explicit acceptance matrix.
 The trained statistical model meets the declared final synthetic quality/coverage
 gate. The generative Qwen profile remains experimental. The release is not tagged
 as a stable deployment or published publicly while acceptance decisions remain
-open. Source and evidence changes are reviewed together in the implementation PR.
+open. Source and evidence changes are reviewed together in
+[PR #2](https://github.com/mehdisafer/document-control-intelligence/pull/2).
 Author-side assisted review is identified as such; it is not an independent approval.
+
+The implementation source is commit
+[`3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439`](https://github.com/mehdisafer/document-control-intelligence/commit/3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439).
+The following evidence/documentation commit in the same PR does not alter runtime
+code, contracts, tests, lockfiles or infrastructure. Its [publication map](../evidence/publication-map.json)
+checks those bytes against the executed source and preserves the identity of
+earlier runs. The [qualification record](../evidence/qualification/) contains
+107 passing tests, the failed raw-linear demo assertion, separate human recovery,
+72-output semantic regression, small load execution and real HTTP proof.
 
 ## Prepared repository metadata
 
@@ -25,7 +35,8 @@ Topics: `document-ai`, `data-engineering`, `mlops`, `local-first`, `fastapi`, `o
 
 The available GitHub connector exposes source/issue/PR operations but no repository
 metadata or protection writer. These values are prepared, not asserted to have
-been applied. Do not use a personal workstation or another repository as a workaround.
+been applied. The isolated-browser fallback is not authenticated to this private
+repository. Do not use a personal workstation or another repository as a workaround.
 
 ## Prepared protection policy
 

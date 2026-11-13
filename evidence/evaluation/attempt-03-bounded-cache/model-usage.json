@@ -1,0 +1,15 @@
+{
+  "compute_cost_usd": null,
+  "external_api_cost_usd": 0,
+  "proposal_kind_distribution": {
+    "invoice": 5,
+    "purchase_order": 1,
+    "unknown": 30
+  },
+  "successful_response_count": 36,
+  "usage": {
+    "completion_tokens": 4700,
+    "prompt_tokens": 37808,
+    "total_tokens": 42508
+  }
+}

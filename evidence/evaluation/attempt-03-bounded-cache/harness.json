@@ -1,0 +1,63 @@
+{
+  "command": [
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.runtime/llama/bin/llama-b12359/llama-server",
+    "--model",
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.runtime/models/Qwen3-0.6B-Q4_K_M.gguf",
+    "--alias",
+    "dci-qwen3-0.6b-q4-k-m",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "52265",
+    "--threads",
+    "4",
+    "--ctx-size",
+    "8192",
+    "--parallel",
+    "1",
+    "--reasoning",
+    "off",
+    "--no-webui",
+    "--cache-ram",
+    "0",
+    "--no-cache-prompt",
+    "--ctx-checkpoints",
+    "0",
+    "--batch-size",
+    "512",
+    "--ubatch-size",
+    "128"
+  ],
+  "evaluation_summary": "evaluation/summary.json",
+  "harness_sha256": "ea8fc84bba19b23dc851960751a2a09e4254d3faa8c96167a097857b3dcbabb0",
+  "limits": {
+    "address_space_bytes": 4294967296,
+    "cpu_hard_seconds": 1805,
+    "cpu_soft_seconds": 1800,
+    "wall_seconds": 900
+  },
+  "model_sha256": "b0638f08417a2d3c8652760462eb5407c6e30173cf9608ad0820757a281eea0e",
+  "network_binding": "127.0.0.1",
+  "observed_profiles": {
+    "local-llm": {
+      "documents": 36,
+      "eligible_coverage": 0.0,
+      "eligible_critical_quality": null,
+      "failures": 0,
+      "policy_gate_met": false
+    }
+  },
+  "observed_server_cpu_seconds": 1294.76,
+  "observed_server_peak_hwm_kib": 1587868,
+  "observed_server_peak_rss_kib": 1587868,
+  "resource_correction": "Disable prompt/idle cache and context checkpoints; reduce batching. Model, prompt, seed, context and inference threads are unchanged from prior failed attempts.",
+  "resource_profile": "local-llm-bounded-1.0",
+  "resource_sample_count": 803,
+  "runtime_binary_sha256": "cf07a7d6b6d2c61064105cc0a81360cb5830aacd3d1a949b80eaea3a96fa409f",
+  "runtime_version_output": "version: 1.0.0-dev (build 12359, commit b1b770d90)\nbuilt with GNU 11.4.0 for Linux x86_64",
+  "server_exit_code": 0,
+  "server_peak_rss_kib": 1587332,
+  "server_process_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              1800                 1805                 seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    0                    bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            1024                 1024                 files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         4294967296           4294967296           bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "server_startup_seconds": 3.635171,
+  "wall_seconds": 412.285676
+}

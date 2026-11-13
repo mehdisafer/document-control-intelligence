@@ -1,0 +1,539 @@
+{
+  "all_recorded_source_files_match_executed_commit": true,
+  "created_at_utc": "2026-11-13T23:41:17.979944+00:00",
+  "current_runtime_contract_test_and_infrastructure_files": [
+    {
+      "current_sha256": "8551365f14d2b88746ed6a5e10d8346f10c02a0e3a1db75f08540a8913bfb5ba",
+      "execution_sha256": "8551365f14d2b88746ed6a5e10d8346f10c02a0e3a1db75f08540a8913bfb5ba",
+      "matches": true,
+      "path": ".github/dependabot.yml",
+      "source_commit_sha256": "8551365f14d2b88746ed6a5e10d8346f10c02a0e3a1db75f08540a8913bfb5ba"
+    },
+    {
+      "current_sha256": "bc0c2c9f0d65b9e17ef7913a11129fa35f914150c14579bb6c75c105eed69b08",
+      "execution_sha256": "bc0c2c9f0d65b9e17ef7913a11129fa35f914150c14579bb6c75c105eed69b08",
+      "matches": true,
+      "path": ".github/workflows/ci.yml",
+      "source_commit_sha256": "bc0c2c9f0d65b9e17ef7913a11129fa35f914150c14579bb6c75c105eed69b08"
+    },
+    {
+      "current_sha256": "f65e4e2e3b851b95c7e3cf54676ce07ef7ea856be51f9d004b100b213841dfae",
+      "execution_sha256": "f65e4e2e3b851b95c7e3cf54676ce07ef7ea856be51f9d004b100b213841dfae",
+      "matches": true,
+      "path": "Dockerfile",
+      "source_commit_sha256": "f65e4e2e3b851b95c7e3cf54676ce07ef7ea856be51f9d004b100b213841dfae"
+    },
+    {
+      "current_sha256": "c89d4ab13e7948917d350216946a065779d5fb2cdbb52a0940d43d0c76318e58",
+      "execution_sha256": "c89d4ab13e7948917d350216946a065779d5fb2cdbb52a0940d43d0c76318e58",
+      "matches": true,
+      "path": "compose.llm.yaml",
+      "source_commit_sha256": "c89d4ab13e7948917d350216946a065779d5fb2cdbb52a0940d43d0c76318e58"
+    },
+    {
+      "current_sha256": "c22d0c9ca2a08e2660376e8c5dfc8a0a765cf35e825696a45997855d23f8bc81",
+      "execution_sha256": "c22d0c9ca2a08e2660376e8c5dfc8a0a765cf35e825696a45997855d23f8bc81",
+      "matches": true,
+      "path": "compose.yaml",
+      "source_commit_sha256": "c22d0c9ca2a08e2660376e8c5dfc8a0a765cf35e825696a45997855d23f8bc81"
+    },
+    {
+      "current_sha256": "4330dd088abbc5037be480bc3eee0a6da6efaba4339956f4e9d556bd80a287da",
+      "execution_sha256": "4330dd088abbc5037be480bc3eee0a6da6efaba4339956f4e9d556bd80a287da",
+      "matches": true,
+      "path": "contracts/README.md",
+      "source_commit_sha256": "4330dd088abbc5037be480bc3eee0a6da6efaba4339956f4e9d556bd80a287da"
+    },
+    {
+      "current_sha256": "62bdea67adba17cfeae38adcdad2697a227ca9ddb30f4f06351ef11efcf43d68",
+      "execution_sha256": "62bdea67adba17cfeae38adcdad2697a227ca9ddb30f4f06351ef11efcf43d68",
+      "matches": true,
+      "path": "contracts/configuration-v1.schema.json",
+      "source_commit_sha256": "62bdea67adba17cfeae38adcdad2697a227ca9ddb30f4f06351ef11efcf43d68"
+    },
+    {
+      "current_sha256": "1cfb2d1541eb5b0fd52febd8b72ef211e0133f1080f0188577066b04d9a07bc1",
+      "execution_sha256": "1cfb2d1541eb5b0fd52febd8b72ef211e0133f1080f0188577066b04d9a07bc1",
+      "matches": true,
+      "path": "contracts/document-checks-v1.schema.json",
+      "source_commit_sha256": "1cfb2d1541eb5b0fd52febd8b72ef211e0133f1080f0188577066b04d9a07bc1"
+    },
+    {
+      "current_sha256": "c34a384bf64c7c35b70fb78867c49947a9551ded7e739d57cf9d67cb8a502033",
+      "execution_sha256": "c34a384bf64c7c35b70fb78867c49947a9551ded7e739d57cf9d67cb8a502033",
+      "matches": true,
+      "path": "contracts/extraction-v1.schema.json",
+      "source_commit_sha256": "c34a384bf64c7c35b70fb78867c49947a9551ded7e739d57cf9d67cb8a502033"
+    },
+    {
+      "current_sha256": "6f4a1460e29e6ae216955f9899a32539f68830b46b5b97b4870bd9e037bbb561",
+      "execution_sha256": "6f4a1460e29e6ae216955f9899a32539f68830b46b5b97b4870bd9e037bbb561",
+      "matches": true,
+      "path": "contracts/local-llm-configuration-v1.schema.json",
+      "source_commit_sha256": "6f4a1460e29e6ae216955f9899a32539f68830b46b5b97b4870bd9e037bbb561"
+    },
+    {
+      "current_sha256": "e01021bb722c2281c1e057bce50f1b6fdd00075678221b02fce1778b21127571",
+      "execution_sha256": "e01021bb722c2281c1e057bce50f1b6fdd00075678221b02fce1778b21127571",
+      "matches": true,
+      "path": "contracts/parsed-document-v1.schema.json",
+      "source_commit_sha256": "e01021bb722c2281c1e057bce50f1b6fdd00075678221b02fce1778b21127571"
+    },
+    {
+      "current_sha256": "a3d9228dacca39e0518800596bd3dcdd8a747bb2ddff2e9ad0bd9d727c4c2810",
+      "execution_sha256": "a3d9228dacca39e0518800596bd3dcdd8a747bb2ddff2e9ad0bd9d727c4c2810",
+      "matches": true,
+      "path": "contracts/purchasing-v1.json",
+      "source_commit_sha256": "a3d9228dacca39e0518800596bd3dcdd8a747bb2ddff2e9ad0bd9d727c4c2810"
+    },
+    {
+      "current_sha256": "44a405e848d0ddee7922e570bb65bb21884ebb648e395edcec8531efaabd3ee6",
+      "execution_sha256": "44a405e848d0ddee7922e570bb65bb21884ebb648e395edcec8531efaabd3ee6",
+      "matches": true,
+      "path": "contracts/reconciliation-v1.schema.json",
+      "source_commit_sha256": "44a405e848d0ddee7922e570bb65bb21884ebb648e395edcec8531efaabd3ee6"
+    },
+    {
+      "current_sha256": "2ea489860abf31b056f79e38e65f8b32d090ab2b8ee036496910b0b3d5cf927b",
+      "execution_sha256": "2ea489860abf31b056f79e38e65f8b32d090ab2b8ee036496910b0b3d5cf927b",
+      "matches": true,
+      "path": "contracts/rules-v1.json",
+      "source_commit_sha256": "2ea489860abf31b056f79e38e65f8b32d090ab2b8ee036496910b0b3d5cf927b"
+    },
+    {
+      "current_sha256": "726aa43d04786d4b84be0b0f2a3e8db45080ecbbd3a031bc1261fb6dc4dfb804",
+      "execution_sha256": "726aa43d04786d4b84be0b0f2a3e8db45080ecbbd3a031bc1261fb6dc4dfb804",
+      "matches": true,
+      "path": "infra/alerts.yaml",
+      "source_commit_sha256": "726aa43d04786d4b84be0b0f2a3e8db45080ecbbd3a031bc1261fb6dc4dfb804"
+    },
+    {
+      "current_sha256": "62ab6e72c811cff56b4f9892c4e54105529e13a6cf05362b3e1e6c2ec14767f4",
+      "execution_sha256": "62ab6e72c811cff56b4f9892c4e54105529e13a6cf05362b3e1e6c2ec14767f4",
+      "matches": true,
+      "path": "infra/terraform/.terraform.lock.hcl",
+      "source_commit_sha256": "62ab6e72c811cff56b4f9892c4e54105529e13a6cf05362b3e1e6c2ec14767f4"
+    },
+    {
+      "current_sha256": "01a66bb405b7354de0cdce146b1bfe973da1a7a7729936b25c015fbfa1f291d6",
+      "execution_sha256": "01a66bb405b7354de0cdce146b1bfe973da1a7a7729936b25c015fbfa1f291d6",
+      "matches": true,
+      "path": "infra/terraform/main.tf",
+      "source_commit_sha256": "01a66bb405b7354de0cdce146b1bfe973da1a7a7729936b25c015fbfa1f291d6"
+    },
+    {
+      "current_sha256": "72fa9c0d6f4e36f0bca6e815ee897b2b00c0567b7dc1e4de3d6f1c9cd1bb1fb1",
+      "execution_sha256": "72fa9c0d6f4e36f0bca6e815ee897b2b00c0567b7dc1e4de3d6f1c9cd1bb1fb1",
+      "matches": true,
+      "path": "prompts/structured-extraction-v1.txt",
+      "source_commit_sha256": "72fa9c0d6f4e36f0bca6e815ee897b2b00c0567b7dc1e4de3d6f1c9cd1bb1fb1"
+    },
+    {
+      "current_sha256": "777ee8c0711458fa7602e8f99ce86c591f39799ab908cefac503387cd7286e89",
+      "execution_sha256": "777ee8c0711458fa7602e8f99ce86c591f39799ab908cefac503387cd7286e89",
+      "matches": true,
+      "path": "pyproject.toml",
+      "source_commit_sha256": "777ee8c0711458fa7602e8f99ce86c591f39799ab908cefac503387cd7286e89"
+    },
+    {
+      "current_sha256": "ba565c29c848593955ca08c9a980409e762b5658da67558dfa767f9ec6539be1",
+      "execution_sha256": "ba565c29c848593955ca08c9a980409e762b5658da67558dfa767f9ec6539be1",
+      "matches": true,
+      "path": "requirements.lock",
+      "source_commit_sha256": "ba565c29c848593955ca08c9a980409e762b5658da67558dfa767f9ec6539be1"
+    },
+    {
+      "current_sha256": "60ddcd35815098040cf6783fd8a546d3fca309d2926893d2f16f08af63332a73",
+      "execution_sha256": "60ddcd35815098040cf6783fd8a546d3fca309d2926893d2f16f08af63332a73",
+      "matches": true,
+      "path": "scripts/benchmark.py",
+      "source_commit_sha256": "60ddcd35815098040cf6783fd8a546d3fca309d2926893d2f16f08af63332a73"
+    },
+    {
+      "current_sha256": "6ff6797092ce2885c23cd6e630c618612d2e95cb909a90eda00fb72936fcc521",
+      "execution_sha256": "6ff6797092ce2885c23cd6e630c618612d2e95cb909a90eda00fb72936fcc521",
+      "matches": true,
+      "path": "scripts/browser_smoke.py",
+      "source_commit_sha256": "6ff6797092ce2885c23cd6e630c618612d2e95cb909a90eda00fb72936fcc521"
+    },
+    {
+      "current_sha256": "86252346a0ad657f6afdba91bb3d5b236e8d11197d720c4be46cf8fcac18206d",
+      "execution_sha256": "86252346a0ad657f6afdba91bb3d5b236e8d11197d720c4be46cf8fcac18206d",
+      "matches": true,
+      "path": "scripts/check_licenses.py",
+      "source_commit_sha256": "86252346a0ad657f6afdba91bb3d5b236e8d11197d720c4be46cf8fcac18206d"
+    },
+    {
+      "current_sha256": "d9f0068bc3a82c94e25df83955f90a8df666988ce526784be5b26662c8bc4404",
+      "execution_sha256": "d9f0068bc3a82c94e25df83955f90a8df666988ce526784be5b26662c8bc4404",
+      "matches": true,
+      "path": "scripts/check_secrets.py",
+      "source_commit_sha256": "d9f0068bc3a82c94e25df83955f90a8df666988ce526784be5b26662c8bc4404"
+    },
+    {
+      "current_sha256": "bc8e29e6eb9eee64e8b2248096549d7ec099abff61f35100c535175fe1b6c458",
+      "execution_sha256": "bc8e29e6eb9eee64e8b2248096549d7ec099abff61f35100c535175fe1b6c458",
+      "matches": true,
+      "path": "scripts/export_schemas.py",
+      "source_commit_sha256": "bc8e29e6eb9eee64e8b2248096549d7ec099abff61f35100c535175fe1b6c458"
+    },
+    {
+      "current_sha256": "0630cf73245306418d5247dab0964fb7a68ee9a0e3316517c27d21be69c764e4",
+      "execution_sha256": "0630cf73245306418d5247dab0964fb7a68ee9a0e3316517c27d21be69c764e4",
+      "matches": true,
+      "path": "scripts/prepare_container.py",
+      "source_commit_sha256": "0630cf73245306418d5247dab0964fb7a68ee9a0e3316517c27d21be69c764e4"
+    },
+    {
+      "current_sha256": "42b980ebc0e4045f0b3e93812f016b19022c03db66866995decccacf299017fd",
+      "execution_sha256": "42b980ebc0e4045f0b3e93812f016b19022c03db66866995decccacf299017fd",
+      "matches": true,
+      "path": "scripts/provision_llm.py",
+      "source_commit_sha256": "42b980ebc0e4045f0b3e93812f016b19022c03db66866995decccacf299017fd"
+    },
+    {
+      "current_sha256": "ea8fc84bba19b23dc851960751a2a09e4254d3faa8c96167a097857b3dcbabb0",
+      "execution_sha256": "ea8fc84bba19b23dc851960751a2a09e4254d3faa8c96167a097857b3dcbabb0",
+      "matches": true,
+      "path": "scripts/run_llm_evaluation.py",
+      "source_commit_sha256": "ea8fc84bba19b23dc851960751a2a09e4254d3faa8c96167a097857b3dcbabb0"
+    },
+    {
+      "current_sha256": "4df63642cd837609a6d7d8bf9f5dfa8e05f1b72e34c05b55b7ff4848fc08d8bf",
+      "execution_sha256": "4df63642cd837609a6d7d8bf9f5dfa8e05f1b72e34c05b55b7ff4848fc08d8bf",
+      "matches": true,
+      "path": "scripts/verify_demo.py",
+      "source_commit_sha256": "4df63642cd837609a6d7d8bf9f5dfa8e05f1b72e34c05b55b7ff4848fc08d8bf"
+    },
+    {
+      "current_sha256": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246",
+      "execution_sha256": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246",
+      "matches": true,
+      "path": "src/dci/__init__.py",
+      "source_commit_sha256": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246"
+    },
+    {
+      "current_sha256": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079",
+      "execution_sha256": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079",
+      "matches": true,
+      "path": "src/dci/_parse_child.py",
+      "source_commit_sha256": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079"
+    },
+    {
+      "current_sha256": "2ac84431d4e27aa0695594dc2a234c0b748c05cd347c7a65a55d7f65ea0759b4",
+      "execution_sha256": "2ac84431d4e27aa0695594dc2a234c0b748c05cd347c7a65a55d7f65ea0759b4",
+      "matches": true,
+      "path": "src/dci/api.py",
+      "source_commit_sha256": "2ac84431d4e27aa0695594dc2a234c0b748c05cd347c7a65a55d7f65ea0759b4"
+    },
+    {
+      "current_sha256": "3c0053ef9c5372d6f0ab3e48c55aeae09507db917dd45c29b87a127cae41541a",
+      "execution_sha256": "3c0053ef9c5372d6f0ab3e48c55aeae09507db917dd45c29b87a127cae41541a",
+      "matches": true,
+      "path": "src/dci/auth.py",
+      "source_commit_sha256": "3c0053ef9c5372d6f0ab3e48c55aeae09507db917dd45c29b87a127cae41541a"
+    },
+    {
+      "current_sha256": "22b8b72cc53030fdbad3d7c0180f8dba6d8a4d8dc05bdf89042efaa6d5b188ff",
+      "execution_sha256": "22b8b72cc53030fdbad3d7c0180f8dba6d8a4d8dc05bdf89042efaa6d5b188ff",
+      "matches": true,
+      "path": "src/dci/cli.py",
+      "source_commit_sha256": "22b8b72cc53030fdbad3d7c0180f8dba6d8a4d8dc05bdf89042efaa6d5b188ff"
+    },
+    {
+      "current_sha256": "4f67f63a90db8e79768af2a1a96a13dd59fcc4d05a31d1e580b6a644a081604d",
+      "execution_sha256": "4f67f63a90db8e79768af2a1a96a13dd59fcc4d05a31d1e580b6a644a081604d",
+      "matches": true,
+      "path": "src/dci/config.py",
+      "source_commit_sha256": "4f67f63a90db8e79768af2a1a96a13dd59fcc4d05a31d1e580b6a644a081604d"
+    },
+    {
+      "current_sha256": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44",
+      "execution_sha256": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44",
+      "matches": true,
+      "path": "src/dci/corpus.py",
+      "source_commit_sha256": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44"
+    },
+    {
+      "current_sha256": "e459cfb0d2fa47a6e6c932ff57c46a8f8f5aceb380a19bbfc072151ade1f1881",
+      "execution_sha256": "e459cfb0d2fa47a6e6c932ff57c46a8f8f5aceb380a19bbfc072151ade1f1881",
+      "matches": true,
+      "path": "src/dci/demo.py",
+      "source_commit_sha256": "e459cfb0d2fa47a6e6c932ff57c46a8f8f5aceb380a19bbfc072151ade1f1881"
+    },
+    {
+      "current_sha256": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad",
+      "execution_sha256": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad",
+      "matches": true,
+      "path": "src/dci/evaluation.py",
+      "source_commit_sha256": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad"
+    },
+    {
+      "current_sha256": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3",
+      "execution_sha256": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3",
+      "matches": true,
+      "path": "src/dci/extraction.py",
+      "source_commit_sha256": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3"
+    },
+    {
+      "current_sha256": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a",
+      "execution_sha256": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a",
+      "matches": true,
+      "path": "src/dci/llm.py",
+      "source_commit_sha256": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a"
+    },
+    {
+      "current_sha256": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33",
+      "execution_sha256": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33",
+      "matches": true,
+      "path": "src/dci/local_model.py",
+      "source_commit_sha256": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33"
+    },
+    {
+      "current_sha256": "2acf468ea83ad88f5c190ce22541bad8bcfa84a85d821d55e2f005de5b79d34a",
+      "execution_sha256": "2acf468ea83ad88f5c190ce22541bad8bcfa84a85d821d55e2f005de5b79d34a",
+      "matches": true,
+      "path": "src/dci/migrations/001_initial.sql",
+      "source_commit_sha256": "2acf468ea83ad88f5c190ce22541bad8bcfa84a85d821d55e2f005de5b79d34a"
+    },
+    {
+      "current_sha256": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8",
+      "execution_sha256": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8",
+      "matches": true,
+      "path": "src/dci/models.py",
+      "source_commit_sha256": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8"
+    },
+    {
+      "current_sha256": "4a46779442d8dd87763350242779e0991a26383e11b53e45e06e8773f186da57",
+      "execution_sha256": "4a46779442d8dd87763350242779e0991a26383e11b53e45e06e8773f186da57",
+      "matches": true,
+      "path": "src/dci/operations.py",
+      "source_commit_sha256": "4a46779442d8dd87763350242779e0991a26383e11b53e45e06e8773f186da57"
+    },
+    {
+      "current_sha256": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53",
+      "execution_sha256": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53",
+      "matches": true,
+      "path": "src/dci/parsing.py",
+      "source_commit_sha256": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53"
+    },
+    {
+      "current_sha256": "5ddfeb27658a27931d45800be25e30535ad56d4efb4cc057a3083eb73ed194ef",
+      "execution_sha256": "5ddfeb27658a27931d45800be25e30535ad56d4efb4cc057a3083eb73ed194ef",
+      "matches": true,
+      "path": "src/dci/rules.py",
+      "source_commit_sha256": "5ddfeb27658a27931d45800be25e30535ad56d4efb4cc057a3083eb73ed194ef"
+    },
+    {
+      "current_sha256": "1ebb991650535a8acfff68ce7125706721aa4eee8cf6ecc49a024145b888a81b",
+      "execution_sha256": "1ebb991650535a8acfff68ce7125706721aa4eee8cf6ecc49a024145b888a81b",
+      "matches": true,
+      "path": "src/dci/static/app.js",
+      "source_commit_sha256": "1ebb991650535a8acfff68ce7125706721aa4eee8cf6ecc49a024145b888a81b"
+    },
+    {
+      "current_sha256": "9c10e55d63d7262dea535eaf071b6a92d4526bbd2c5e821d64fbada73a620da6",
+      "execution_sha256": "9c10e55d63d7262dea535eaf071b6a92d4526bbd2c5e821d64fbada73a620da6",
+      "matches": true,
+      "path": "src/dci/static/favicon.svg",
+      "source_commit_sha256": "9c10e55d63d7262dea535eaf071b6a92d4526bbd2c5e821d64fbada73a620da6"
+    },
+    {
+      "current_sha256": "ddc8a5acf9d68a10c5e1978e694788bde8fdca361d4573b147c8826dd854399b",
+      "execution_sha256": "ddc8a5acf9d68a10c5e1978e694788bde8fdca361d4573b147c8826dd854399b",
+      "matches": true,
+      "path": "src/dci/static/index.html",
+      "source_commit_sha256": "ddc8a5acf9d68a10c5e1978e694788bde8fdca361d4573b147c8826dd854399b"
+    },
+    {
+      "current_sha256": "ee6a9232f6623e93f029c7ffe089f952c59fa59465d2ffdefcea8960eb92c8d8",
+      "execution_sha256": "ee6a9232f6623e93f029c7ffe089f952c59fa59465d2ffdefcea8960eb92c8d8",
+      "matches": true,
+      "path": "src/dci/static/style.css",
+      "source_commit_sha256": "ee6a9232f6623e93f029c7ffe089f952c59fa59465d2ffdefcea8960eb92c8d8"
+    },
+    {
+      "current_sha256": "eabfdfe7cbc41e6f4d79a9fb2288e9e93af9e71ef4ba88ae81f8533acc01c76f",
+      "execution_sha256": "eabfdfe7cbc41e6f4d79a9fb2288e9e93af9e71ef4ba88ae81f8533acc01c76f",
+      "matches": true,
+      "path": "src/dci/store.py",
+      "source_commit_sha256": "eabfdfe7cbc41e6f4d79a9fb2288e9e93af9e71ef4ba88ae81f8533acc01c76f"
+    },
+    {
+      "current_sha256": "d90c0737df650dc72515cbc0a21d23c362c059f151f1cdcfff977885e1c0f1d0",
+      "execution_sha256": "d90c0737df650dc72515cbc0a21d23c362c059f151f1cdcfff977885e1c0f1d0",
+      "matches": true,
+      "path": "src/dci/worker.py",
+      "source_commit_sha256": "d90c0737df650dc72515cbc0a21d23c362c059f151f1cdcfff977885e1c0f1d0"
+    },
+    {
+      "current_sha256": "acec6c2c2effe6491bdf1d0a13afb267e80ccdcd32258df00d35fe84c97059a5",
+      "execution_sha256": "acec6c2c2effe6491bdf1d0a13afb267e80ccdcd32258df00d35fe84c97059a5",
+      "matches": true,
+      "path": "tests/test_classification_review.py",
+      "source_commit_sha256": "acec6c2c2effe6491bdf1d0a13afb267e80ccdcd32258df00d35fe84c97059a5"
+    },
+    {
+      "current_sha256": "90c1b758668e18528f21301463568ed38851ab2f757d77ebf87d570b1c16e235",
+      "execution_sha256": "90c1b758668e18528f21301463568ed38851ab2f757d77ebf87d570b1c16e235",
+      "matches": true,
+      "path": "tests/test_corpus.py",
+      "source_commit_sha256": "90c1b758668e18528f21301463568ed38851ab2f757d77ebf87d570b1c16e235"
+    },
+    {
+      "current_sha256": "3e9770d5e640a4a004d4472751bb5b971651e15d3f2be0e088727bc84a2b0e97",
+      "execution_sha256": "3e9770d5e640a4a004d4472751bb5b971651e15d3f2be0e088727bc84a2b0e97",
+      "matches": true,
+      "path": "tests/test_evaluation.py",
+      "source_commit_sha256": "3e9770d5e640a4a004d4472751bb5b971651e15d3f2be0e088727bc84a2b0e97"
+    },
+    {
+      "current_sha256": "8acba8b4b118454cb9465190d00b95ec42fb84cf3e2c85a97e7edea5b36517ed",
+      "execution_sha256": "8acba8b4b118454cb9465190d00b95ec42fb84cf3e2c85a97e7edea5b36517ed",
+      "matches": true,
+      "path": "tests/test_extraction.py",
+      "source_commit_sha256": "8acba8b4b118454cb9465190d00b95ec42fb84cf3e2c85a97e7edea5b36517ed"
+    },
+    {
+      "current_sha256": "074d472192a518ab826545736bc493f2707fd27586d2cd03cb7fd276f96f95c0",
+      "execution_sha256": "074d472192a518ab826545736bc493f2707fd27586d2cd03cb7fd276f96f95c0",
+      "matches": true,
+      "path": "tests/test_local_model.py",
+      "source_commit_sha256": "074d472192a518ab826545736bc493f2707fd27586d2cd03cb7fd276f96f95c0"
+    },
+    {
+      "current_sha256": "62d5057424c940f3832219890e91d277a3556971b40d6fbd8a452719b6168ca0",
+      "execution_sha256": "62d5057424c940f3832219890e91d277a3556971b40d6fbd8a452719b6168ca0",
+      "matches": true,
+      "path": "tests/test_operations.py",
+      "source_commit_sha256": "62d5057424c940f3832219890e91d277a3556971b40d6fbd8a452719b6168ca0"
+    },
+    {
+      "current_sha256": "d689daa3bfbf471863c52c9a6a7b3cbc1cb8989443d7edce842e61e29d64eb0a",
+      "execution_sha256": "d689daa3bfbf471863c52c9a6a7b3cbc1cb8989443d7edce842e61e29d64eb0a",
+      "matches": true,
+      "path": "tests/test_parsing.py",
+      "source_commit_sha256": "d689daa3bfbf471863c52c9a6a7b3cbc1cb8989443d7edce842e61e29d64eb0a"
+    },
+    {
+      "current_sha256": "686b7e0cc8f340a3c11ce50d867f41aa3d01f595fb12b72100d3886793315ef7",
+      "execution_sha256": "686b7e0cc8f340a3c11ce50d867f41aa3d01f595fb12b72100d3886793315ef7",
+      "matches": true,
+      "path": "tests/test_retry_budget.py",
+      "source_commit_sha256": "686b7e0cc8f340a3c11ce50d867f41aa3d01f595fb12b72100d3886793315ef7"
+    },
+    {
+      "current_sha256": "f84437c509bcd0bdf8d47531cd1a74772ba44dfd88ff999b45897b641f7bec5b",
+      "execution_sha256": "f84437c509bcd0bdf8d47531cd1a74772ba44dfd88ff999b45897b641f7bec5b",
+      "matches": true,
+      "path": "tests/test_rules.py",
+      "source_commit_sha256": "f84437c509bcd0bdf8d47531cd1a74772ba44dfd88ff999b45897b641f7bec5b"
+    },
+    {
+      "current_sha256": "5d2efb6bf98c54cfa0dbe819cde9463b0e08c188c6458ca7d870a6f415b37238",
+      "execution_sha256": "5d2efb6bf98c54cfa0dbe819cde9463b0e08c188c6458ca7d870a6f415b37238",
+      "matches": true,
+      "path": "tests/test_workflow.py",
+      "source_commit_sha256": "5d2efb6bf98c54cfa0dbe819cde9463b0e08c188c6458ca7d870a6f415b37238"
+    },
+    {
+      "current_sha256": "a51ddb0d6691d0137c28bab7a98e952ff9684475f6eb76e66a5862b3d874d3dc",
+      "execution_sha256": "a51ddb0d6691d0137c28bab7a98e952ff9684475f6eb76e66a5862b3d874d3dc",
+      "matches": true,
+      "path": "uv.lock",
+      "source_commit_sha256": "a51ddb0d6691d0137c28bab7a98e952ff9684475f6eb76e66a5862b3d874d3dc"
+    }
+  ],
+  "derivation": "Post-execution comparison of retained execution hashes, frozen Git content and the candidate working tree. Original reports are unchanged.",
+  "early_evaluation_component_mapping": [
+    {
+      "matches_source_commit": true,
+      "original_sha256": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246",
+      "repository_path": "src/dci/__init__.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/__init__.py",
+      "source_commit_sha256": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8",
+      "repository_path": "src/dci/models.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/models.py",
+      "source_commit_sha256": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53",
+      "repository_path": "src/dci/parsing.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/parsing.py",
+      "source_commit_sha256": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079",
+      "repository_path": "src/dci/_parse_child.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/_parse_child.py",
+      "source_commit_sha256": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3",
+      "repository_path": "src/dci/extraction.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/extraction.py",
+      "source_commit_sha256": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33",
+      "repository_path": "src/dci/local_model.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/local_model.py",
+      "source_commit_sha256": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a",
+      "repository_path": "src/dci/llm.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/llm.py",
+      "source_commit_sha256": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a"
+    },
+    {
+      "matches_source_commit": false,
+      "original_sha256": "79c4ec6eaee3780edfd466570ecea442a577eb262640c4dc58682b35c818a281",
+      "repository_path": "src/dci/rules.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/rules.py",
+      "source_commit_sha256": "5ddfeb27658a27931d45800be25e30535ad56d4efb4cc057a3083eb73ed194ef"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad",
+      "repository_path": "src/dci/evaluation.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/evaluation.py",
+      "source_commit_sha256": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad"
+    },
+    {
+      "matches_source_commit": true,
+      "original_sha256": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44",
+      "repository_path": "src/dci/corpus.py",
+      "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/corpus.py",
+      "source_commit_sha256": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44"
+    }
+  ],
+  "early_evaluation_difference": "The original rules.py predates the explicit attributed classification-review context. Its original bytes are retained. A later fresh 72-output baseline/local-linear regression on the implementation commit matched all semantic outputs excluding timings and elapsed_seconds. This is not a claim that the entire early working tree equaled the later commit.",
+  "implementation_commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "implementation_tree": "6bb71328f4e9bb91393773a6c747af94cfb560c1",
+  "limitations": [
+    "Early null/bootstrap Git identities are preserved, not backdated.",
+    "Hashes establish byte agreement only.",
+    "The raw local-linear demo seven-export assertion remains failed; supplemental attributed recovery is a separate execution.",
+    "No browser, container, Terraform validation or target deployment success is inferred."
+  ],
+  "pull_request": "https://github.com/mehdisafer/document-control-intelligence/pull/2",
+  "record_identity": {
+    "early_runs": "evidence/evaluation/index.json",
+    "final_http": "evidence/qualification/http/run-3ff93109/report.json",
+    "final_qualification": "evidence/qualification/source-before.json",
+    "final_qualification_after": "evidence/qualification/source-after.json",
+    "regression": "evidence/qualification/regression-comparison.json"
+  },
+  "repository": "mehdisafer/document-control-intelligence",
+  "schema_version": "source-publication-map-1.0"
+}

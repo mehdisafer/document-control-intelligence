@@ -1,0 +1,10 @@
+{
+  "applies_to": "Full untouched final split; subset and incomplete runs cannot satisfy the benchmark gate.",
+  "citation_validity_min": 1.0,
+  "eligible_coverage_min": 0.5,
+  "eligible_critical_quality_min": 1.0,
+  "false_eligible_documents_max": 0,
+  "rationale": "No incorrect critical values may be proposed as eligible; at least half of the bounded synthetic benchmark should avoid field repair. Human approval is still mandatory. These are development targets, not service certification.",
+  "semantic_evidence_validity_min": 1.0,
+  "version": "synthetic-heldout-1.0"
+}

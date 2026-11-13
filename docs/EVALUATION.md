@@ -89,7 +89,49 @@ remain visible; none is silently converted into acceptance.
 Parsing is performed once per document and reused across profiles. The latency
 reported for each profile adds its extraction time to that observed parse time;
 it is not an independent cold parsing run for every profile. Stage-level timings
-are available in the raw reports. These values depend on this shared CPU host.
+are available in the raw reports. The table retains the original
+`attempt-01-default-cache` execution times. The later source-commit regression
+has different timings and identical semantics; it does not overwrite that
+historical measurement. These values depend on this shared CPU host.
+
+## Application qualification on the published source
+
+Source commit `3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439` passed 107 unit/integration
+tests with no skips. A new execution of both final baseline/local-linear profiles
+reproduced all 72 semantic document outputs: classification probabilities, field
+values and status, citations, rows, findings, calculations and aggregate quality.
+Only `timings` and `elapsed_seconds` are excluded from the comparison. The model,
+input manifest and application source remained unchanged. Original commands,
+before/after hashes and reports are in [qualification](../evidence/qualification/).
+
+The frozen local-linear application demo has a separate observed limit: an
+unrelated URL in the malicious-instruction footer is classified as another
+subtotal label. Source/normalization checks abstain on the conflicting candidates.
+The actual injection case remains in review; six dossiers publish and all six
+exports survive restoration. The baseline publishes seven. The unchanged strict
+demo verifier expected seven and failed on the local-linear injection case; its
+original report is retained. This is additional conservative review, not a false
+acceptance or evidence of external instruction execution. No final model was
+retuned or value silently repaired in response to this result.
+
+A separate recovery exercise restored the unchanged local-linear state and used
+the review API to correct `subtotal` from its source quotation
+`Subtotal: 1,255.00` to normalized `1255`. The audit retains the old abstention,
+both candidate citations, the correction actor, reason, source version and new
+revision. Self-approval returns `403 SELF_APPROVAL`; a distinct approver accepts
+and a publisher explicitly publishes. The repaired state contains seven
+publications, and all seven exported payloads compare equal after another restore.
+No parser or model request was made during this repair. These scripted actor
+actions qualify the review workflow, not improved model accuracy or independent
+human approval. The original failed assertion and aggregate result remain intact.
+
+A second supplemental run exercised real HTTP/1.1 over loopback TCP with a Uvicorn
+process and a separate worker. Its 36 checks across 30 requests verified a fresh
+three-document local-linear case, exact normalized fields and source spans,
+unauthorized action denials, unchanged original/ZIP bytes, idempotent publication
+and all three upload-request/audit/job joins. Wall time was 2.110694 s, including
+1.218856 s for the separate worker. This sequential case establishes the network
+and process boundary; it is not a concurrent HTTP benchmark or a browser test.
 
 ## Generative profile and adverse executions
 
@@ -152,6 +194,29 @@ stage timings, retries, publications and observed resources are retained.
 The original load attempt could not enumerate child PIDs: its child-RSS zeros
 mean **unmeasured**. The revised instrumentation uses known worker PIDs and
 per-process resource accounting; the original artifact is not rewritten.
+
+The final load execution used the same nine PDFs, 15 pages and three OCR pages
+for each worker count, with the baseline profile and a batch size of two:
+
+| Observed metric | One worker | Two workers |
+|---|---:|---:|
+| Processing wall time, including spawn | 4.319768 s | 2.296395 s |
+| Throughput | 2.083445 documents/s | 3.919187 documents/s |
+| Processing p95 | 1.243155 s | 1.195962 s |
+| End-to-end p95 | 4.147932 s | 2.244896 s |
+| Completed jobs | 9/9 | 9/9 |
+| Eligible documents | 8/9 | 8/9 |
+| Published cases | 2/3 | 2/3 |
+| False eligible results / duplicate publications / worker errors | 0 / 0 / 0 | 0 / 0 / 0 |
+
+Both runs have identical business signatures: two matched cases and one review
+case. The largest worker-reported peak RSS was 80,441,344 bytes; the largest
+reaped parser-child peak was 73,412,608 bytes. These are separate per-process
+observations, not a total RAM estimate. Process-tree enumeration is incomplete,
+sampled RSS can double-count shared pages, and cgroup metrics are unavailable.
+Stage timings are recorded; exclusive memory per parsing/OCR/model stage is not.
+This short workload supports the observed invariant comparison, not a capacity
+commitment or long-running reliability claim.
 
 External inference/API fees are zero for these local runs. Host rental,
 electricity, development time and deployment cost are not metered. No throughput

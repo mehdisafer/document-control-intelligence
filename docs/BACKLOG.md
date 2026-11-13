@@ -2,13 +2,13 @@
 
 ## P0 — Close candidate evidence and release decisions
 
-- Preserve the completed bounded local-LLM operational replay and both earlier
-  failures. Keep generative classification unqualified unless its independent
-  quality/coverage gate is met on a new untouched holdout.
+- Keep generative classification unqualified unless its independent
+  quality/coverage gate is met on a new untouched holdout. The completed bounded
+  replay and both earlier failed executions are preserved in evidence.
 - Execute and inspect real browser, container and Terraform CI results, including
   actual screenshots. Resolve concrete failures before marking those checks passed.
-- Reconcile the final source hashes, integration logs, demo exports, restore and
-  load evidence with the delivered commit and reviewed PR.
+- Resolve the GitHub Actions rejection before runner allocation. The actual cause
+  is not available through the connector; do not infer a billing or code failure.
 - Agree the intended deployment host and inspect a concrete deployment plan before
   rollout. Do not turn the private reference into a public service implicitly.
 - Obtain an explicit project-licence choice. Apply prepared repository metadata
@@ -17,6 +17,11 @@
 
 ## P1 — Extend useful purchasing coverage
 
+- Resolve the frozen local-linear label model's injection-footer confusion using
+  a separately designed training/tuning set and a new holdout. It currently treats
+  an unrelated URL-footer line as a second subtotal candidate and safely abstains.
+  The original six-export demo, its failed seven-export assertion and a separate
+  attributed human repair yielding seven restored exports are retained.
 - Add a new independent holdout with unseen field labels, table geometry and scan
   acquisition before improving classification or extraction further.
 - Replace the first contract's pipe-delimited table assumption with independently
@@ -41,3 +46,11 @@
 
 These items are visible scope limits. They are not hidden behind a generic
 "production-ready" label or represented by unexecuted integrations.
+
+## Completed candidate evidence
+
+The [evidence index](../evidence/) links source hashes, 107 passing tests, original
+demo failures and successes, restoration, 72 identical semantic regression
+outputs, one/two-worker load and real HTTP/separate-worker execution. These
+records are scoped to the published source and do not close the deployment,
+browser, container, Terraform or release-administration gates above.
