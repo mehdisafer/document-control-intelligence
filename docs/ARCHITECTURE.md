@@ -142,6 +142,21 @@ unique `(case_id, fingerprint)` prevents duplicate publication. The exported JSO
 contains original references, normalized fields, checks, reconciliation and audit;
 the ZIP additionally contains actual source PDFs and a content manifest.
 
+ZIP export limits the combined **uncompressed member bytes** to 50 MiB: the
+UTF-8 dossier JSON, every original PDF and the manifest JSON share one counter.
+JSON encoding and original copying are incremental; an over-budget request
+returns `413 EXPORT_BUDGET`, and a changed original returns
+`503 BLOB_INTEGRITY`. This is not an RSS or final compressed ZIP-size limit; the
+application has already loaded the dossier and the archive has framing overhead.
+
+The UI binds asynchronous results to the actor session and current selection.
+Late metadata, original-PDF and audit responses cannot replace a newer view.
+Case refreshes also invalidate a pending document fetch when its revision or
+processing status advances. The field-correction control requires a selected current field;
+decision dialogs retain the IDs and revisions reviewed when opened. Cancelling
+a dialog prevents a late response from changing the current UI, but cannot undo
+a mutation already sent. Server-side role and revision checks remain authoritative.
+
 ## Boundaries of the reference
 
 Supported inputs are PDF only, including scans embedded in PDF. The schema covers

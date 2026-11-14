@@ -1,0 +1,382 @@
+[
+  {
+    "exists": true,
+    "source": "CONTRIBUTING.md",
+    "target": "LICENSE"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "LICENSE"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/ACCEPTANCE.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/DEPLOYMENT.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/EVALUATION.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/ARCHITECTURE.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "contracts/"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/DEPLOYMENT.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/OPERATIONS.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/ACCEPTANCE.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/SOURCES.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "evidence/"
+  },
+  {
+    "exists": false,
+    "source": "README.md",
+    "target": "evidence/publication/"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "evidence/qualification/"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/BACKLOG.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/RELEASE.md"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "LICENSE"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "NOTICE"
+  },
+  {
+    "exists": true,
+    "source": "README.md",
+    "target": "docs/SOURCES.md"
+  },
+  {
+    "exists": true,
+    "source": "docs/ACCEPTANCE.md",
+    "target": "../LICENSE"
+  },
+  {
+    "exists": true,
+    "source": "docs/ACCEPTANCE.md",
+    "target": "../NOTICE"
+  },
+  {
+    "exists": true,
+    "source": "docs/ACCEPTANCE.md",
+    "target": "../evidence/platform/github-actions-blocked.json"
+  },
+  {
+    "exists": true,
+    "source": "docs/ACCEPTANCE.md",
+    "target": "../evidence/qualification/"
+  },
+  {
+    "exists": true,
+    "source": "docs/BACKLOG.md",
+    "target": "../evidence/"
+  },
+  {
+    "exists": true,
+    "source": "docs/EVALUATION.md",
+    "target": "../evidence/qualification/"
+  },
+  {
+    "exists": true,
+    "source": "docs/RELEASE.md",
+    "target": "../evidence/publication-map.json"
+  },
+  {
+    "exists": true,
+    "source": "docs/RELEASE.md",
+    "target": "../evidence/qualification/"
+  },
+  {
+    "exists": true,
+    "source": "docs/RELEASE.md",
+    "target": "../LICENSE"
+  },
+  {
+    "exists": true,
+    "source": "docs/RELEASE.md",
+    "target": "../NOTICE"
+  },
+  {
+    "exists": true,
+    "source": "docs/SOURCES.md",
+    "target": "../LICENSE"
+  },
+  {
+    "exists": true,
+    "source": "docs/SOURCES.md",
+    "target": "../NOTICE"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "../docs/EVALUATION.md"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "../docs/ACCEPTANCE.md"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "publication-map.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "qualification/"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "qualification/http/run-3ff93109/report.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "evaluation/"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "platform/dependency-audit.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "platform/component-inventory.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "platform/apache-2.0-packaging.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "platform/github-actions-blocked.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "platform/browser-runtime-blocked.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "platform/terraform-validate-blocked.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "qualification/README.md"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "evaluation/index.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "qualification/index.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/README.md",
+    "target": "qualification/http/run-3ff93109/artifacts.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/evaluation/README.md",
+    "target": "development-tuning/provenance.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/evaluation/README.md",
+    "target": "summary.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/evaluation/README.md",
+    "target": "attempt-03-bounded-cache/harness.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/evaluation/README.md",
+    "target": "repeatability-two-original-attempts.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/evaluation/README.md",
+    "target": "index.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/evaluation/README.md",
+    "target": "raw-executions.tar.gz"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "../publication-map.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "unittest.log"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "qualification-summary.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "demo-baseline/result.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "verify-demo-baseline.log"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "demo-local-linear/result.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "verify-demo-local-linear.log"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "manual-recovery-report.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "manual-recovery-command.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "regression-comparison.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "evaluation-regression/summary.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "regression-raw-results.tar.gz"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "benchmark-1-2.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "benchmark.log"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "http/run-3ff93109/report.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "http/run-3ff93109/server.log"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "http/run-3ff93109/worker.log"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "predeclared-plan.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "http/run-3ff93109/control-dossier.zip"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "../../docs/EVALUATION.md"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "../evaluation/README.md"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "index.json"
+  },
+  {
+    "exists": true,
+    "source": "evidence/qualification/README.md",
+    "target": "http/run-3ff93109/artifacts.json"
+  }
+]

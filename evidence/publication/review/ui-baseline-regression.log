@@ -1,0 +1,51 @@
+✖ correction stays disabled until a current ready field is selected (6.343248ms)
+✖ late original PDF cannot replace the newly selected document (8.723417ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 150.483644
+
+✖ failing tests:
+
+test at tests/test_ui_state.mjs:137:1
+✖ correction stays disabled until a current ready field is selected (6.343248ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/6956bc82bcf5/document-control-intelligence/tests/test_ui_state.mjs:139:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/test_ui_state.mjs:155:1
+✖ late original PDF cannot replace the newly selected document (8.723417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'blob:unit-2'
+  - 'blob:unit-1'
+               ^
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/6956bc82bcf5/document-control-intelligence/tests/test_ui_state.mjs:165:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'blob:unit-2',
+    expected: 'blob:unit-1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

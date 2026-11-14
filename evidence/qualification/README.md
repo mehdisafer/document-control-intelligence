@@ -1,4 +1,4 @@
-# Qualification of the published source
+# Historical qualification of source 3ff93109
 
 These executions use implementation commit
 `3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439`. The command ledger, original logs,
@@ -10,6 +10,11 @@ The later Apache-2.0 change updates package metadata and Docker's licence-file
 inputs. These original reports are not executions of that later commit. The HTTP
 harness checks `pyproject.toml` as part of its frozen source; its reproduction
 therefore uses a detached checkout below, preserving the original guard.
+
+The later UI/export fixes in `8839be77` have a separate
+[public-source qualification](../publication/). The 107-test, demo, model, load
+and HTTP records in this directory remain executions of `3ff93109`; the new
+112-test suite does not relabel them as runs of a newer commit.
 
 ## Observed results
 
@@ -38,7 +43,7 @@ instruction changes a policy, invokes a tool or sends content externally.
 
 The supplemental exercise restores that state and corrects the subtotal through
 the existing review API. It records the exact source quotation
-`Subtotal: 1,255.00`, normalized value `1255`, the original abstention and both
+`Subtotal: 1,255.00`, normalized value `1255.00`, the original abstention and both
 citations, actor, justification, source version 1 and incremented revision.
 Even an actor holding both operator and approver roles receives
 `403 SELF_APPROVAL`. A different actor accepts the corrected revision before

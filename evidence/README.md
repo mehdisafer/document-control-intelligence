@@ -25,7 +25,8 @@ agreement, not an independent audit or certification.
 | Record | What it establishes |
 |---|---|
 | [Publication map](publication-map.json) | At evidence commit `8dbe831`, the recorded runtime/configuration/test bytes match executed source `3ff93109`; earlier snapshots retain their actual identities |
-| [Final source qualification](qualification/) | 107 tests, original baseline/linear demos, restoration, supplemental human repair, 72-output regression and one/two-worker load |
+| [Public-source qualification](publication/) | On fixed source `8839be77`: 112 Python tests, 23 JavaScript state/unit tests, complete ZIP-budget and asynchronous UI regressions, dependency and disclosure review; not browser-rendering evidence |
+| [Historical source qualification](qualification/) | On source `3ff93109`: 107 tests, original baseline/linear demos, restoration, supplemental human repair, 72-output regression and one/two-worker load |
 | [Real HTTP report](qualification/http/run-3ff93109/report.json) | 36 checks across 30 loopback requests, separate model worker, role denials, source/ZIP equality, publication idempotency and trace joins |
 | [Frozen model evaluation](evaluation/) | Disjoint synthetic splits, trained safe-JSON model, all three Qwen attempts, raw responses, source snapshots and original denominators |
 | [Dependency audit](platform/dependency-audit.json) and [component inventory](platform/component-inventory.json) | Point-in-time checks of 32 installed Python runtime packages; not a native-image or legal certification |
@@ -43,9 +44,11 @@ original failure or improve the recorded model score.
 
 Apache-2.0 adoption on 2026-11-14 subsequently updates package licence metadata
 and Docker licence-file inputs. That change does not rewrite this publication map,
-the exact-source HTTP harness or any original execution result. The application
-code and dependency lock remain unchanged. See [qualification reproduction](qualification/README.md)
-for replay against the original source commit.
+the exact-source HTTP harness or any original execution result. That licensing
+commit leaves application code and the dependency lock unchanged. The subsequent
+UI/export fixes have their own [publication qualification](publication/); they do
+not inherit or rewrite the old HTTP/model reports. See
+[qualification reproduction](qualification/README.md) for the original source.
 
 [Evaluation index](evaluation/index.json) and [qualification index](qualification/index.json)
 record copied-file and archive-member SHA-256 values. The HTTP run has its own

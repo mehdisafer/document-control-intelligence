@@ -116,7 +116,7 @@ retuned or value silently repaired in response to this result.
 
 A separate recovery exercise restored the unchanged local-linear state and used
 the review API to correct `subtotal` from its source quotation
-`Subtotal: 1,255.00` to normalized `1255`. The audit retains the old abstention,
+`Subtotal: 1,255.00` to normalized `1255.00`. The audit retains the old abstention,
 both candidate citations, the correction actor, reason, source version and new
 revision. Self-approval returns `403 SELF_APPROVAL`; a distinct approver accepts
 and a publisher explicitly publishes. The repaired state contains seven

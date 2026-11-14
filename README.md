@@ -12,11 +12,12 @@ original alongside anomalies and evidence. Corrections are attributed and versio
 Acceptance and publication are separate actions. The control dossier is exported
 from persisted application state, with its originals and audit.
 
-**Release candidate `0.1.0rc1`.** The project uses the [Apache License 2.0](LICENSE),
-explicitly selected by the maintainer on 2026-11-14. The repository remains private
-and the complete P04 acceptance issue remains open. This is a working synthetic
-purchasing reference, not a production certification or a claim of broad
-supplier-document accuracy.
+**Release candidate `0.1.0rc1`, licensed under [Apache 2.0](LICENSE).** This is an
+executable synthetic purchasing reference. The complete
+[acceptance scope](https://github.com/mehdisafer/document-control-intelligence/issues/1)
+remains open: browser rendering, container execution, Terraform validation and
+target deployment have separate unresolved gates. The candidate does not claim
+production certification or broad supplier-document accuracy.
 
 ## Implemented capabilities
 
@@ -41,7 +42,7 @@ The parser fails closed without its Linux isolation prerequisites. On Windows,
 use the Linux container or an explicitly provisioned WSL2 environment.
 
 ```bash
-git clone --branch feat/evidence-linked-document-control https://github.com/mehdisafer/document-control-intelligence.git
+git clone https://github.com/mehdisafer/document-control-intelligence.git
 cd document-control-intelligence
 python -m pip install 'uv==0.13.6'
 uv sync --frozen --group audit
@@ -54,10 +55,11 @@ worker, records authenticated decisions, exports seven dossiers, snapshots the
 state, restores it elsewhere and compares the recovered exports. It refuses to
 overwrite an existing evidence directory.
 
-The candidate currently lives in [PR #2](https://github.com/mehdisafer/document-control-intelligence/pull/2).
-The command above selects that implementation branch explicitly while `main`
-retains the initial scope pending review. GitHub Actions was triggered, but its
-jobs failed before any runner or step started; see the [acceptance matrix](docs/ACCEPTANCE.md).
+The implementation, review and source history are recorded in
+[PR #2](https://github.com/mehdisafer/document-control-intelligence/pull/2).
+GitHub Actions was triggered, but the observed jobs failed before any runner or
+step started. Local execution evidence and the unresolved CI checks are separated
+in the [acceptance matrix](docs/ACCEPTANCE.md).
 
 | Demo case | Expected outcome |
 |---|---|
@@ -158,6 +160,7 @@ cloud account, change billing or publish a business service.
 ```bash
 uv run --group audit ruff check src tests scripts
 uv run python -m unittest discover -s tests -v
+node --test tests/test_ui_state.mjs
 uv run python scripts/check_secrets.py --history
 uv run --group audit pip-audit --disable-pip --no-deps -r requirements.lock
 uv run python scripts/check_licenses.py
@@ -169,6 +172,14 @@ edge cases, stale versions, duplicate submission/publication, lease recovery and
 restoration. Browser and container qualification are separate. A mock, liveness
 response or skipped test is never treated as an integration result. Original
 reports, commands, source hashes and publication links are indexed in [evidence](evidence/).
+
+The current application source, `8839be77ad24492702bcb2f53c4e74fffd7a78dd`, passed
+**112 Python tests without skips** and **23 JavaScript state/unit tests without
+skips**. The latter run the real UI script with a mocked DOM and deferred fetches;
+they do not validate browser rendering. They were executed with Node 24.22.1,
+which is needed only for JavaScript tests. The new checks cover stale document,
+PDF, audit and actor responses, fixed mutation targets, and the complete ZIP
+member byte budget. See the [public-source qualification](evidence/publication/).
 
 On source commit `3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439`, **107 tests passed
 without skips**. A separate loopback HTTP execution passed **36 checks across
@@ -220,8 +231,9 @@ authenticity remain human-review limitations.
 
 Model quality, browser execution, container execution, Terraform validation and a
 real target deployment have separate acceptance statuses. See the
-[limitations and backlog](docs/BACKLOG.md). Repository administration and any
-public release remain separate maintainer decisions.
+[limitations and backlog](docs/BACKLOG.md). Public source publication was
+authorized on 2026-11-14; its administrative status and the remaining service
+qualification gates are recorded separately in the [release notes](docs/RELEASE.md).
 
 ## Licence
 

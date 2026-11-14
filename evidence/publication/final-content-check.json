@@ -1,0 +1,10 @@
+{
+  "executed_source": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+  "application_contract_tests_lock_infra_license_files_matching": 64,
+  "changed_runtime_files": [],
+  "unchanged_historical_evidence_files": 126,
+  "local_markdown_links_checked": 94,
+  "missing_local_markdown_links": [],
+  "copied_execution_artifacts_matching": 16,
+  "ci_only_delta": "Remove pull_request paths-ignore so required checks report for documentation-only PRs; no job changes from executed source."
+}

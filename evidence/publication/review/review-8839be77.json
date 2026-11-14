@@ -1,0 +1,194 @@
+{
+  "created_at_utc": "2026-11-14T13:55:34.529994+00:00",
+  "decision": "No disclosure blocker identified within the recorded scope. Current publication narratives and their evidence links require the final documentation delta review.",
+  "disclosure_blockers_found": [],
+  "intentional_model_artifacts": [
+    {
+      "bytes": 266904,
+      "classification": "Intentional bounded JSON statistical-model coefficients and provenance; no executable serialization or bundled GGUF runtime",
+      "path": "evidence/evaluation/local-linear-model.json",
+      "sha256": "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1"
+    },
+    {
+      "bytes": 214933,
+      "classification": "Intentional bounded JSON statistical-model coefficients and provenance; no executable serialization or bundled GGUF runtime",
+      "path": "evidence/evaluation/development-tuning/local-linear-model-format-1.0.json",
+      "sha256": "54db8305fa93cb5456aa6dbf5635eab3dcc038a8f7b523a4d990989902c7d4ef"
+    }
+  ],
+  "limitations": [
+    "Known credential signatures and contextual literal candidates cannot prove the absence of all secrets or personal data.",
+    "PDF native text/metadata and byte provenance were inspected; image-only contents were not newly OCRed or visually inspected.",
+    "Synthetic markers, source generator and retained JSON references establish internal consistency, not independent document authenticity.",
+    "Reachable history is all local refs restored at the recorded SHAs; unreachable objects, remote-only refs, GitHub issues/PR text and hosted logs are outside this local scan.",
+    "Ignored runtime/output/dependency directories are excluded from candidate publication scope; repository metadata identifies exactly the files included.",
+    "Archive traversal, special entries, checksums and internal references were checked in memory; model inference, browser, container and deployment tests were not run.",
+    "Current Markdown link existence is checked; external URLs and fragment anchors are not validated.",
+    "Public/qualification wording requires the separately recorded human-assisted narrative review and final-head mapping."
+  ],
+  "narrative_review": {
+    "files_reviewed": [
+      "README.md",
+      "docs/ACCEPTANCE.md",
+      "docs/RELEASE.md",
+      "docs/BACKLOG.md",
+      "docs/SOURCES.md",
+      "docs/EVALUATION.md",
+      "evidence/README.md",
+      "evidence/qualification/README.md",
+      "evidence/evaluation/README.md"
+    ],
+    "final_documentation_delta_outside_this_snapshot": true,
+    "historical_reports_preserved": true,
+    "positive_findings": [
+      "Synthetic benchmark and limited generator-derived sample are stated explicitly.",
+      "Original107-test and HTTP results retain3ff93109 attribution.",
+      "Raw-linear six-export failure and separate human repair remain distinct.",
+      "Qwen3/36 classification and zero eligible coverage remain disclosed.",
+      "Browser/container/Terraform/target deployment are not represented as successfully qualified.",
+      "Published trained JSON artifacts are intentional; large GGUF/model-runtime binaries are excluded."
+    ],
+    "publication_edits_required": [
+      "Replace current-state private-repository/authorization-pending wording with the actual authorized publication status after observation.",
+      "Distinguish public source-candidate availability from unexecuted browser/container/Terraform/target deployment gates.",
+      "Record the8839be77 API/UI fixes and their new qualification separately from frozen3ff93109 reports; do not imply all application code still equals the historical licence-only delta.",
+      "Complete the new README evidence/publication/ link and verify the final documentation/evidence delta before commit."
+    ]
+  },
+  "observations": {
+    "all_pdf_catalog_inspections_without_encryption_or_active_catalog_entries": true,
+    "archives": {
+      "all_tar_names_sizes_and_hashes_match_published_inventories": true,
+      "all_zip_crc_checks_completed": true,
+      "all_zip_manifest_member_sets_and_original_hashes_match": true,
+      "extracted_to_disk": false,
+      "tar_count": 2,
+      "tar_members": 517,
+      "unsafe_or_duplicate_archive_entries": 0,
+      "zip_count": 14,
+      "zip_members": 70,
+      "zip_original_pdf_occurrences": 42
+    },
+    "blocked_runtime_or_secret_filenames": 0,
+    "clean_snapshot_local_markdown_links": {
+      "checked": 74,
+      "missing": 0
+    },
+    "email_review": "Only the already public maintainer GitHub noreply address was matched in commit metadata; no credential value is included in this report.",
+    "known_credential_signature_hits": 0,
+    "opaque_binary_contents_not_inspected": 0,
+    "pdfs": {
+      "hash_referenced_in_retained_json": 60,
+      "metadata_synthetic_marked": 60,
+      "native_text_synthetic_marked": 57,
+      "unique_pdfs": 60
+    },
+    "runtime_database_or_executable_magic_hits": 0,
+    "sensitive_literal_candidates": 0,
+    "supplemental_local_markdown_links": {
+      "checked_local_references": 76,
+      "missing": [
+        {
+          "exists": false,
+          "source": "README.md",
+          "target": "evidence/publication/"
+        }
+      ]
+    }
+  },
+  "peer_review": {
+    "api_export_budget": "No blocker found in shared uncompressed byte accounting, JSON/PDF compatibility or typed overflow/integrity handling.",
+    "browser_rendering_validated": false,
+    "files": [
+      {
+        "path": "src/dci/api.py",
+        "sha256": "c2afa044f6750bf3ad3591dc67151ba6e4551ff9c1c5ca9389d72804914175f4"
+      },
+      {
+        "path": "tests/test_export_budget.py",
+        "sha256": "f73adcf625c2b1cfd032343805369d14a1677c28751da7ae4887a3b7808c5fba"
+      },
+      {
+        "path": "src/dci/static/app.js",
+        "sha256": "6aa75dc54e242cc94d4bd22fed3cf8900d9794b5714e6f7b3c24bf29a9d66d9d"
+      },
+      {
+        "path": "tests/test_ui_state.mjs",
+        "sha256": "c2bf78c8ab5b680db7a466a56f8077ebcd95df6aa62f95d8bb335c57bef6d5f4"
+      }
+    ],
+    "tests_executed_by_this_reviewer": false,
+    "ui_state": "A pending metadata response could outlive a same-case revision/status advance. The final pendingDocumentSummary comparison and replacement generation close the identified ordering; two focused Node cases cover it."
+  },
+  "repository": "mehdisafer/document-control-intelligence",
+  "review_type": "Read-only assisted technical review; no independent human approval or security certification",
+  "schema_version": "prepublication-disclosure-review-1.0",
+  "scope": {
+    "candidate_and_refs_unchanged_during_clean_scan": true,
+    "clean_candidate_file_count": 208,
+    "clean_candidate_inventory": "8839be77-scan/candidate-inventory.json",
+    "clean_head_scan": "8839be77-scan/scan-report.json",
+    "extended_signature_scan": "8839be77-complete-scan/scan-report.json",
+    "git_blob_inventory": "8839be77-scan/git-blob-inventory.json",
+    "reachable_commit_count": 5,
+    "reachable_commits": [
+      "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+      "cf7d1b024da8a3b26ad9bd4144e26ecff9192b1c",
+      "8dbe831a243e66aad18c601086a8e62b3c496322",
+      "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+      "88ab43eeb7d27112cfc75aa450fb1f21a268f732"
+    ],
+    "refs": [
+      "8839be77ad24492702bcb2f53c4e74fffd7a78dd refs/heads/feat/evidence-linked-document-control",
+      "88ab43eeb7d27112cfc75aa450fb1f21a268f732 refs/heads/main"
+    ],
+    "scope_exclusions": [
+      "Ignored local runtime/output/dependency directories",
+      "Unreachable Git objects and any remote-only refs absent from the restored local refs",
+      "GitHub issue/PR text, hosted Actions logs and settings; these require the separate connector review",
+      "No new browser, model, container, target-host or application test execution"
+    ],
+    "shallow_repository": false,
+    "supplemental_worktree_delta": [
+      " M CONTRIBUTING.md",
+      " M README.md",
+      " M docs/ARCHITECTURE.md"
+    ],
+    "unique_git_blobs": 213
+  },
+  "source_commit": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+  "synthetic_data_context": {
+    "generator": "src/dci/corpus.py fixes fictional entities, synthetic PDF title/author/subject, explicit not-valid-for-payment text and seeded fictional identifiers.",
+    "image_only_limit": "Three PDFs are image-only. Their metadata and retained hash provenance were inspected; no new OCR or visual inspection was performed.",
+    "native_pdf_evidence": "57 of60 unique retained PDFs have a synthetic/fictional native-text marker; all60 have synthetic metadata and hashes referenced by retained JSON.",
+    "no_real_supplier_generalization_inferred": true,
+    "supplier_identifier_dispositions": [
+      {
+        "classification": "Unique SUP-BROWSER synthetic HTTP fixture namespace",
+        "source": "evidence/qualification/http/run-3ff93109/fixture.json",
+        "value_sha256": "3ee8ff3bbbb3cf7d7df587b8c25aa600859f9038c97e0f415238977f72628258"
+      },
+      {
+        "classification": "Unique SUP-BROWSER synthetic browser-fixture namespace",
+        "source": "evidence/platform/browser-fixture-verification.json",
+        "value_sha256": "15046cfa1ae4e66028f3ebe62dae23499caf3dcece80a7ae99a8922bd0e0bd3f"
+      },
+      {
+        "classification": "C2 is an LLM candidate selector, not a supplier identity",
+        "source": "evidence/evaluation/raw-executions.tar.gz model-traces proposal fields",
+        "value_sha256": "9685eb765661ea3b95f31e1bb3c3b5501d0c2acdf353feeaa4d8fe32f95f77fb"
+      },
+      {
+        "classification": "C1 is an LLM candidate selector, not a supplier identity",
+        "source": "evidence/evaluation/raw-executions.tar.gz model-traces proposal fields",
+        "value_sha256": "ab861dc170dc2e43224e45278d3d31a675b9ebc34c9b0f48c066ca1eeaed8ee6"
+      }
+    ]
+  },
+  "tooling": {
+    "extension_runner_sha256": "9d5167b1dba3ed62f20142b98432b5a990a454f9cdc75d66224997127cc3708d",
+    "pypdf": "6.21.4",
+    "python": "3.12.14",
+    "scanner_sha256": "600356b900bb90e3d4382af872b2a0abb576598dd22841f85a79d019227327dd"
+  }
+}

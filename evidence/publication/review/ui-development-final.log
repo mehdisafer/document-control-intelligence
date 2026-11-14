@@ -1,0 +1,31 @@
+✔ correction stays disabled until a current ready field is selected (14.445354ms)
+✔ late original PDF cannot replace the newly selected document (4.387175ms)
+✔ obsolete document metadata cannot trigger another original fetch (2.78734ms)
+✔ obsolete document and PDF errors do not overwrite current feedback (6.46653ms)
+✔ switching documents immediately clears the source and field selection (2.351235ms)
+✔ late case metadata and audit cannot replace the selected case (21.371896ms)
+✔ obsolete case audit errors are ignored and current audit failures are visible (2.013988ms)
+✔ switching cases invalidates a pending PDF and resets correction controls (1.562369ms)
+✔ a legitimate refreshed revision reloads fields and its original (2.427919ms)
+✔ case revision change fences metadata that is still pending and reloads once (2.590254ms)
+✔ case status change fences metadata that is still pending and reloads once (2.117683ms)
+✔ a superseded selected document cannot finish its pending original fetch (2.717625ms)
+✔ an old list refresh does not navigate away from a subsequent explicit selection (2.776754ms)
+✔ changing actor invalidates metadata, original, list and login responses (3.100551ms)
+✔ field dialog retains its original document, revision and field target (3.79818ms)
+✔ type dialog does not silently use a newer revision (2.890205ms)
+✔ accept dialog keeps the case and revision reviewed when it opened (2.02248ms)
+✔ publish dialog keeps the case and revision reviewed when it opened (1.712024ms)
+✔ upload dialog is bound to the selected case and cannot submit after actor switch (1.909841ms)
+✔ old dialog completion cannot close a newer dialog or replace its error (7.078661ms)
+✔ cancelled creation cannot navigate to its late successful result (2.046346ms)
+✔ cancelled correction success does not reload beneath a newer review dialog (2.553979ms)
+✔ a current successful correction reloads its document and completes the dialog (3.440462ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 215.325922

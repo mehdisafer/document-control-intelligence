@@ -10,10 +10,11 @@
 - Resolve the GitHub Actions rejection before runner allocation. The actual cause
   is not available through the connector; do not infer a billing or code failure.
 - Agree the intended deployment host and inspect a concrete deployment plan before
-  rollout. Do not turn the private reference into a public service implicitly.
+  rollout. Public source publication does not deploy a public business service.
 - Apply prepared repository metadata and available protections with administration
-  access; any public release remains a separate authorized action. The maintainer
-  selected Apache-2.0 on 2026-11-14 and that project-licence gate is resolved.
+  access, execute the already-authorized public visibility change and verify
+  anonymous access. The maintainer selected Apache-2.0 and then authorized public
+  source publication on 2026-11-14; both decisions are resolved.
 
 ## P1 — Extend useful purchasing coverage
 
@@ -49,8 +50,14 @@ These items are visible scope limits. They are not hidden behind a generic
 
 ## Completed candidate evidence
 
-The [evidence index](../evidence/) links source hashes, 107 passing tests, original
-demo failures and successes, restoration, 72 identical semantic regression
-outputs, one/two-worker load and real HTTP/separate-worker execution. These
-records are scoped to the published source and do not close the deployment,
-browser, container, Terraform or release-administration gates above.
+The [evidence index](../evidence/) links exact source hashes, original demo
+failures and successes, restoration, 72 identical semantic regression outputs,
+one/two-worker load and real HTTP/separate-worker execution. Historical results
+remain attributed to their original source. Fixed source `8839be77` separately
+passes 112 Python and 23 JavaScript state/unit tests, both without skips.
+
+The public-source review fixed stale document/PDF/audit responses, actor changes,
+pending metadata made obsolete by a newer revision/status, and dialog mutation
+targets. It also includes UTF-8 dossier and manifest JSON in the ZIP's combined
+50 MiB uncompressed-member budget. These focused fixes do not close the real
+browser, container, Terraform or target-deployment gates above.

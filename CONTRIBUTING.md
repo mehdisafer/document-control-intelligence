@@ -9,6 +9,9 @@ Install with `uv sync --frozen --group audit`. Run Ruff and the relevant real te
 then the complete integration suite when a shared boundary changes. The demo and
 load commands are in the README. Browser, container, model and target-deployment
 checks have separate prerequisites and evidence; do not substitute one for another.
+Run `node --test tests/test_ui_state.mjs` with Node 24 for review-state changes.
+This dependency-free DOM/fetch harness checks asynchronous state and mutation
+targets; real browser execution remains a separate workflow.
 
 Shared Pydantic contracts live in `src/dci/models.py`; emitted schemas live in
 `contracts/`. Parser, extraction, rules and persistence remain separate modules.

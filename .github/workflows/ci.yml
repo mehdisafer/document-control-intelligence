@@ -3,8 +3,8 @@ on:
   push:
     branches: [main, "feat/**", "fix/**"]
     paths-ignore: ["docs/**", "README.md", "evidence/**"]
-  pull_request:
-    paths-ignore: ["docs/**", "README.md", "evidence/**"]
+  # Required PR checks must also report on documentation-only changes.
+  pull_request: {}
   workflow_dispatch:
 permissions:
   contents: read

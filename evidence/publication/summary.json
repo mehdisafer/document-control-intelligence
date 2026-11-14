@@ -1,0 +1,30 @@
+{
+  "schema_version": "public-source-summary-1.0",
+  "source_commit": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+  "source_tree": "9ed8c7a1d8e9755f72ec4f061b500e125a9498b2",
+  "original_report_sha256": "1d4e2d8765887c18b306308d869dcd7ff655ef52ab8424551f229ed46d7812e5",
+  "derivation": "Read unchanged original command outputs. Node emitted Unicode informational counters, not the TAP markers expected by the original runner.",
+  "unittest": {
+    "tests": 112,
+    "reported_seconds": 34.791,
+    "result_line": "OK",
+    "skipped": 0
+  },
+  "javascript_state_unit": {
+    "tests": 23,
+    "pass": 23,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "reported_duration_ms": 152.342997
+  },
+  "all_recorded_commands_succeeded": true,
+  "tracked_source_unchanged": true,
+  "dependency_packages": 32,
+  "known_vulnerabilities": 0,
+  "browser_rendering_executed": false,
+  "container_executed": false,
+  "terraform_validation_executed": false,
+  "target_deployment_executed": false
+}
