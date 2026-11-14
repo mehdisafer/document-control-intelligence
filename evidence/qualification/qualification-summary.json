@@ -1,0 +1,450 @@
+{
+  "created_at": "2026-11-13T23:30:04.769062+00:00",
+  "default_rules_regression": {
+    "comparison": "Every per-document output except timings and elapsed_seconds; includes kind, probabilities, field status/value/evidence, rows, business findings/calculations and scores",
+    "created_at": "2026-11-13T23:30:04.646248+00:00",
+    "current_directory": "outputs/evidence-final/evaluation-regression",
+    "defaults_unchanged_on_all_72_executed_outputs": true,
+    "original_directory": "tmp/final-evaluation-all-profiles/evaluation"
+  },
+  "demos": {
+    "baseline": {
+      "case_outcomes": [
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "accepted"
+        },
+        {
+          "eligible": false,
+          "findings": [
+            {
+              "code": "overbilling_order",
+              "document_id": null,
+              "field": "quantity",
+              "message": "SKU PART-100: invoiced 12 exceeds ordered 10.",
+              "severity": "error"
+            },
+            {
+              "code": "overbilling_delivery",
+              "document_id": null,
+              "field": "quantity",
+              "message": "SKU PART-100: invoiced 12 exceeds delivered 10.",
+              "severity": "error"
+            }
+          ],
+          "reconciliation": "contradictory",
+          "scenario": "contradictory"
+        },
+        {
+          "eligible": false,
+          "findings": [
+            {
+              "code": "missing_required_field",
+              "document_id": "INV-DEMO-003",
+              "field": "total",
+              "message": "A critical field is missing or abstained.",
+              "severity": "warning"
+            }
+          ],
+          "reconciliation": "review",
+          "scenario": "abstention"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "correction"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "injection"
+        },
+        {
+          "eligible": true,
+          "findings": [
+            {
+              "code": "legitimate_partial",
+              "document_id": null,
+              "field": null,
+              "message": "Invoiced quantities do not exceed delivered quantities; the order remains partially fulfilled or billed.",
+              "severity": "info"
+            }
+          ],
+          "reconciliation": "partial",
+          "scenario": "partial"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "versioned"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "scanned"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "duplicate"
+        }
+      ],
+      "cases": 9,
+      "database_integrity": "ok",
+      "elapsed_seconds": 9.602467669999896,
+      "jobs": {
+        "done": 28
+      },
+      "published_cases": 7,
+      "restored_export_count": 7,
+      "restored_exports_equal": true,
+      "strict_verifier_exit_code": 0
+    },
+    "local-linear": {
+      "case_outcomes": [
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "accepted"
+        },
+        {
+          "eligible": false,
+          "findings": [
+            {
+              "code": "overbilling_order",
+              "document_id": null,
+              "field": "quantity",
+              "message": "SKU PART-100: invoiced 12 exceeds ordered 10.",
+              "severity": "error"
+            },
+            {
+              "code": "overbilling_delivery",
+              "document_id": null,
+              "field": "quantity",
+              "message": "SKU PART-100: invoiced 12 exceeds delivered 10.",
+              "severity": "error"
+            }
+          ],
+          "reconciliation": "contradictory",
+          "scenario": "contradictory"
+        },
+        {
+          "eligible": false,
+          "findings": [
+            {
+              "code": "missing_required_field",
+              "document_id": "INV-DEMO-003",
+              "field": "total",
+              "message": "A critical field is missing or abstained.",
+              "severity": "warning"
+            }
+          ],
+          "reconciliation": "review",
+          "scenario": "abstention"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "correction"
+        },
+        {
+          "eligible": false,
+          "findings": [
+            {
+              "code": "missing_required_field",
+              "document_id": "INV-DEMO-005",
+              "field": "subtotal",
+              "message": "A critical field is missing or abstained.",
+              "severity": "warning"
+            }
+          ],
+          "reconciliation": "review",
+          "scenario": "injection"
+        },
+        {
+          "eligible": true,
+          "findings": [
+            {
+              "code": "legitimate_partial",
+              "document_id": null,
+              "field": null,
+              "message": "Invoiced quantities do not exceed delivered quantities; the order remains partially fulfilled or billed.",
+              "severity": "info"
+            }
+          ],
+          "reconciliation": "partial",
+          "scenario": "partial"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "versioned"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "scanned"
+        },
+        {
+          "eligible": true,
+          "findings": [],
+          "reconciliation": "matched",
+          "scenario": "duplicate"
+        }
+      ],
+      "cases": 9,
+      "database_integrity": "ok",
+      "elapsed_seconds": 9.248352147999867,
+      "jobs": {
+        "done": 28
+      },
+      "published_cases": 6,
+      "restored_export_count": 6,
+      "restored_exports_equal": true,
+      "strict_verifier_exit_code": 1
+    }
+  },
+  "frozen_inputs_unchanged": true,
+  "load": {
+    "business_semantics_equal_across_worker_counts": true,
+    "hardware": {
+      "affinity_cpu_count": 9,
+      "cgroup": {
+        "cpu.max": null,
+        "memory.current": null,
+        "memory.max": null,
+        "memory.peak": null
+      },
+      "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+      "gpu_used": false,
+      "logical_cpu_count": 9,
+      "mem_total_kib": 10206472,
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "python": "3.12.14"
+    },
+    "profiles": [
+      {
+        "case_reconciliation_counts": {
+          "matched": 2,
+          "review": 1
+        },
+        "checks": {
+          "all_jobs_done": true,
+          "database_integrity": true,
+          "no_false_acceptance": true,
+          "no_worker_errors": true,
+          "publication_idempotency": true
+        },
+        "db_integrity": "ok",
+        "duplicate_publications": 0,
+        "eligible_documents": 8,
+        "false_acceptances": 0,
+        "job_counts": {
+          "done": 9
+        },
+        "latency_seconds": {
+          "end_to_end": {
+            "count": 9,
+            "max": 4.255807,
+            "p50": 3.175322,
+            "p95": 4.147932
+          },
+          "processing": {
+            "count": 9,
+            "max": 1.828177,
+            "p50": 0.269612,
+            "p95": 1.243155
+          },
+          "queue_approx": {
+            "count": 9,
+            "max": 3.985735,
+            "p50": 2.905013,
+            "p95": 3.877887
+          }
+        },
+        "processing_wall_seconds_including_spawn": 4.319768,
+        "publications": 2,
+        "resources": {
+          "method": "Visible Linux procfs RSS sampled over parent/known workers/available descendants; null means unavailable. Per-worker ru_maxrss reports own peak and largest reaped child peak separately. Summed RSS double-counts shared pages, is not unique physical RAM, and can omit inaccessible descendants.",
+          "parent_peak_rss_bytes": 55767040,
+          "peak_known_descendant_count": 1,
+          "process_tree_enumeration_available": false,
+          "sample_period_seconds": 0.05,
+          "sampled_descendant_peak_summed_rss_bytes": 35938304,
+          "sampled_visible_tree_peak_summed_rss_bytes": 91705344,
+          "samples": 85,
+          "worker_reported_largest_reaped_child_peak_rss_bytes": {
+            "1280": 73412608
+          },
+          "worker_reported_peak_rss_bytes": {
+            "1280": 80441344
+          }
+        },
+        "stage_latency_seconds": {
+          "extraction": {
+            "count": 9,
+            "max": 0.004863,
+            "p50": 0.000839,
+            "p95": 0.004153
+          },
+          "native": {
+            "count": 9,
+            "max": 0.035365,
+            "p50": 0.013269,
+            "p95": 0.034399
+          },
+          "ocr": {
+            "count": 9,
+            "max": 1.539529,
+            "p50": 0.0,
+            "p95": 0.923717
+          },
+          "parse_wall": {
+            "count": 9,
+            "max": 1.820869,
+            "p50": 0.265389,
+            "p95": 1.219061
+          }
+        },
+        "throughput_documents_per_second": 2.083445,
+        "worker_pids_observed": [
+          1280
+        ],
+        "workers_requested": 1
+      },
+      {
+        "case_reconciliation_counts": {
+          "matched": 2,
+          "review": 1
+        },
+        "checks": {
+          "all_jobs_done": true,
+          "database_integrity": true,
+          "no_false_acceptance": true,
+          "no_worker_errors": true,
+          "publication_idempotency": true
+        },
+        "db_integrity": "ok",
+        "duplicate_publications": 0,
+        "eligible_documents": 8,
+        "false_acceptances": 0,
+        "job_counts": {
+          "done": 9
+        },
+        "latency_seconds": {
+          "end_to_end": {
+            "count": 9,
+            "max": 2.247426,
+            "p50": 1.379111,
+            "p95": 2.244896
+          },
+          "processing": {
+            "count": 9,
+            "max": 1.780345,
+            "p50": 0.318193,
+            "p95": 1.195962
+          },
+          "queue_approx": {
+            "count": 9,
+            "max": 1.968622,
+            "p50": 0.740084,
+            "p95": 1.860376
+          }
+        },
+        "processing_wall_seconds_including_spawn": 2.296395,
+        "publications": 2,
+        "resources": {
+          "method": "Visible Linux procfs RSS sampled over parent/known workers/available descendants; null means unavailable. Per-worker ru_maxrss reports own peak and largest reaped child peak separately. Summed RSS double-counts shared pages, is not unique physical RAM, and can omit inaccessible descendants.",
+          "parent_peak_rss_bytes": 57729024,
+          "peak_known_descendant_count": 2,
+          "process_tree_enumeration_available": false,
+          "sample_period_seconds": 0.05,
+          "sampled_descendant_peak_summed_rss_bytes": 71548928,
+          "sampled_visible_tree_peak_summed_rss_bytes": 129277952,
+          "samples": 45,
+          "worker_reported_largest_reaped_child_peak_rss_bytes": {
+            "1306": 73408512,
+            "1309": 48410624
+          },
+          "worker_reported_peak_rss_bytes": {
+            "1306": 80441344,
+            "1309": 80441344
+          }
+        },
+        "stage_latency_seconds": {
+          "extraction": {
+            "count": 9,
+            "max": 0.004759,
+            "p50": 0.000814,
+            "p95": 0.00473
+          },
+          "native": {
+            "count": 9,
+            "max": 0.03155,
+            "p50": 0.015777,
+            "p95": 0.031396
+          },
+          "ocr": {
+            "count": 9,
+            "max": 1.516696,
+            "p50": 0.0,
+            "p95": 0.910018
+          },
+          "parse_wall": {
+            "count": 9,
+            "max": 1.773213,
+            "p50": 0.267661,
+            "p95": 1.190163
+          }
+        },
+        "throughput_documents_per_second": 3.919187,
+        "worker_pids_observed": [
+          1306,
+          1309
+        ],
+        "workers_requested": 2
+      }
+    ],
+    "qualified_for_declared_smoke_budgets": true
+  },
+  "observed_failure": "Frozen local-linear demo abstains on the injection invoice subtotal because a footer line is also proposed as subtotal; 6 exports, required 7. No automatic fallback or model tuning was used.",
+  "overall_requested_local_qualification_met": false,
+  "resource_limits": [
+    "No cgroup memory/CPU counters were accessible; reported null.",
+    "Visible sampled RSS omits inaccessible descendants and can double-count shared pages.",
+    "Worker own and largest reaped-child peak RSS are reported separately; per-stage exclusive RSS is not measured.",
+    "Stage timings are measured, including actual native parsing, OCR and extraction.",
+    "Browser/container/Terraform/target deployment were not executed by this qualification."
+  ],
+  "source_commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "source_files_unchanged": true,
+  "unit_integration": {
+    "groups": {
+      "test_classification_review": 7,
+      "test_corpus": 2,
+      "test_evaluation": 4,
+      "test_extraction": 17,
+      "test_local_model": 6,
+      "test_operations": 8,
+      "test_parsing": 10,
+      "test_retry_budget": 1,
+      "test_rules": 34,
+      "test_workflow": 18
+    },
+    "reported_seconds": 29.452,
+    "result": "OK",
+    "skips_reported": false,
+    "tests": 107
+  }
+}

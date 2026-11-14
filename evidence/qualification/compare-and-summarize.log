@@ -1,0 +1,48 @@
+{
+  "tests": {
+    "tests": 107,
+    "reported_seconds": 29.452,
+    "result": "OK",
+    "skips_reported": false,
+    "groups": {
+      "test_classification_review": 7,
+      "test_corpus": 2,
+      "test_evaluation": 4,
+      "test_extraction": 17,
+      "test_local_model": 6,
+      "test_operations": 8,
+      "test_parsing": 10,
+      "test_retry_budget": 1,
+      "test_rules": 34,
+      "test_workflow": 18
+    }
+  },
+  "demos": {
+    "baseline": {
+      "cases": 9,
+      "elapsed_seconds": 9.602467669999896,
+      "jobs": {
+        "done": 28
+      },
+      "published_cases": 7,
+      "restored_export_count": 7,
+      "restored_exports_equal": true,
+      "database_integrity": "ok",
+      "strict_verifier_exit_code": 0
+    },
+    "local-linear": {
+      "cases": 9,
+      "elapsed_seconds": 9.248352147999867,
+      "jobs": {
+        "done": 28
+      },
+      "published_cases": 6,
+      "restored_export_count": 6,
+      "restored_exports_equal": true,
+      "database_integrity": "ok",
+      "strict_verifier_exit_code": 1
+    }
+  },
+  "regression_equal": true,
+  "overall_requested_local_qualification_met": false
+}

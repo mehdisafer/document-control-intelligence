@@ -1,0 +1,253 @@
+{
+  "schema_version": "github-actions-execution-observation-1.0",
+  "repository": "mehdisafer/document-control-intelligence",
+  "source_commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "pull_request": "https://github.com/mehdisafer/document-control-intelligence/pull/2",
+  "runs": [
+    {
+      "id": 43527025131,
+      "event": "push",
+      "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527025131"
+    },
+    {
+      "id": 43527082481,
+      "event": "pull_request",
+      "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481"
+    }
+  ],
+  "observation": "All three PR jobs ended in failure before runner allocation, with zero executed steps. No application, browser, container or Terraform check ran on GitHub.",
+  "root_cause": "Not exposed by the available connector. Annotation endpoints are unsupported; log retrieval returned BlobNotFound. The isolated browser has no signed-in GitHub session.",
+  "actions_taken": "No billing, visibility, runner-security or account setting was changed; no repeated rerun was requested.",
+  "required_prerequisite": "An authorized GitHub Actions runner/account configuration able to allocate a runner, plus access to the job annotation explaining the pre-run failure.",
+  "jobs": {
+    "total_count": 3,
+    "jobs": [
+      {
+        "id": 132235393030,
+        "run_id": 43527082481,
+        "workflow_name": "Document control checks",
+        "head_branch": "feat/evidence-linked-document-control",
+        "run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43527082481",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVtqaUc8AAAAeydf4Bg",
+        "head_sha": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+        "url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/jobs/132235393030",
+        "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481/job/132235393030",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-11-13T23:26:07Z",
+        "started_at": "2026-11-13T23:26:07Z",
+        "completed_at": "2026-11-13T23:26:09Z",
+        "name": "terraform-schema",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235393030",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 0,
+        "runner_name": "",
+        "runner_group_id": 0,
+        "runner_group_name": ""
+      },
+      {
+        "id": 132235393227,
+        "run_id": 43527082481,
+        "workflow_name": "Document control checks",
+        "head_branch": "feat/evidence-linked-document-control",
+        "run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43527082481",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVtqaUc8AAAAeydf4yw",
+        "head_sha": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+        "url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/jobs/132235393227",
+        "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481/job/132235393227",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-11-13T23:26:07Z",
+        "started_at": "2026-11-13T23:26:07Z",
+        "completed_at": "2026-11-13T23:26:09Z",
+        "name": "container-integration",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235393227",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 0,
+        "runner_name": "",
+        "runner_group_id": 0,
+        "runner_group_name": ""
+      },
+      {
+        "id": 132235393271,
+        "run_id": 43527082481,
+        "workflow_name": "Document control checks",
+        "head_branch": "feat/evidence-linked-document-control",
+        "run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43527082481",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVtqaUc8AAAAeydf49w",
+        "head_sha": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+        "url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/jobs/132235393271",
+        "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481/job/132235393271",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-11-13T23:26:07Z",
+        "started_at": "2026-11-13T23:26:07Z",
+        "completed_at": "2026-11-13T23:26:09Z",
+        "name": "smoke-and-integration",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235393271",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 0,
+        "runner_name": "",
+        "runner_group_id": 0,
+        "runner_group_name": ""
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": 132235393271,
+      "name": "smoke-and-integration",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-13T23:26:07Z",
+      "completed_at": "2026-11-13T23:26:09Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481/job/132235393271",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 1,
+        "annotations_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235393271/annotations"
+      }
+    },
+    {
+      "id": 132235393227,
+      "name": "container-integration",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-13T23:26:07Z",
+      "completed_at": "2026-11-13T23:26:09Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481/job/132235393227",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 1,
+        "annotations_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235393227/annotations"
+      }
+    },
+    {
+      "id": 132235393030,
+      "name": "terraform-schema",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-13T23:26:07Z",
+      "completed_at": "2026-11-13T23:26:09Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481/job/132235393030",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 1,
+        "annotations_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235393030/annotations"
+      }
+    },
+    {
+      "id": 132235202369,
+      "name": "container-integration",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-13T23:25:38Z",
+      "completed_at": "2026-11-13T23:25:42Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527025131/job/132235202369",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 1,
+        "annotations_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235202369/annotations"
+      }
+    },
+    {
+      "id": 132235202311,
+      "name": "smoke-and-integration",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-13T23:25:38Z",
+      "completed_at": "2026-11-13T23:25:42Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527025131/job/132235202311",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 1,
+        "annotations_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235202311/annotations"
+      }
+    },
+    {
+      "id": 132235202050,
+      "name": "terraform-schema",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-13T23:25:38Z",
+      "completed_at": "2026-11-13T23:25:42Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527025131/job/132235202050",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 1,
+        "annotations_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235202050/annotations"
+      }
+    },
+    {
+      "id": 132235190105,
+      "name": ".github/dependabot.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-13T23:25:37Z",
+      "completed_at": "2026-11-13T23:25:37Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/runs/132235190105",
+      "output": {
+        "title": "Dependabot config file validation",
+        "summary": "All changes look good",
+        "text": null,
+        "annotations_count": 0,
+        "annotations_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132235190105/annotations"
+      }
+    }
+  ],
+  "annotation_lookup": [
+    {
+      "job_id": 132235393271,
+      "annotations": {
+        "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)",
+        "error_code": "INVALID_ARGUMENT"
+      }
+    },
+    {
+      "job_id": 132235393227,
+      "annotations": {
+        "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)",
+        "error_code": "INVALID_ARGUMENT"
+      }
+    },
+    {
+      "job_id": 132235393030,
+      "annotations": {
+        "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)",
+        "error_code": "INVALID_ARGUMENT"
+      }
+    }
+  ],
+  "browser_observation": {
+    "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481",
+    "title": "Page not found · GitHub · GitHub",
+    "signed_in": false,
+    "visible_sign_in_link": true,
+    "credentials_requested": false
+  },
+  "validation_claim": false
+}

@@ -1,0 +1,236 @@
+{
+  "$defs": {
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "bbox": {
+          "anyOf": [
+            {
+              "maxItems": 4,
+              "minItems": 4,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bbox"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "page",
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "ExtractedField": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "normalized": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalized"
+        },
+        "origin": {
+          "default": "extracted",
+          "enum": [
+            "extracted",
+            "human"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "raw": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "status": {
+          "default": "abstained",
+          "enum": [
+            "supported",
+            "abstained",
+            "corrected"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "transformations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Transformations",
+          "type": "array"
+        }
+      },
+      "title": "ExtractedField",
+      "type": "object"
+    },
+    "LineItem": {
+      "additionalProperties": false,
+      "properties": {
+        "fields": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ExtractedField"
+          },
+          "title": "Fields",
+          "type": "object"
+        }
+      },
+      "required": [
+        "fields"
+      ],
+      "title": "LineItem",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "classification_confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Classification Confidence",
+      "type": "number"
+    },
+    "contract_version": {
+      "default": "purchasing-1.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "document_sha256": {
+      "title": "Document Sha256",
+      "type": "string"
+    },
+    "fields": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ExtractedField"
+      },
+      "title": "Fields",
+      "type": "object"
+    },
+    "kind": {
+      "enum": [
+        "purchase_order",
+        "delivery_note",
+        "invoice",
+        "unknown"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "line_items": {
+      "items": {
+        "$ref": "#/$defs/LineItem"
+      },
+      "title": "Line Items",
+      "type": "array"
+    },
+    "model_version": {
+      "title": "Model Version",
+      "type": "string"
+    },
+    "profile": {
+      "title": "Profile",
+      "type": "string"
+    },
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "timings": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Timings",
+      "type": "object"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "document_sha256",
+    "kind",
+    "classification_confidence",
+    "profile",
+    "model_version",
+    "fields"
+  ],
+  "title": "Extraction",
+  "type": "object"
+}

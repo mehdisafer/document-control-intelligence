@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "document-control-intelligence"
+version = "0.1.0rc1"
+description = "Evidence-linked purchasing document control with local inference and explicit human review"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi==0.141.1",
+  "uvicorn==0.52.1",
+  "pydantic==2.13.4",
+  "pypdf==6.21.4",
+  "pdfplumber==0.11.9",
+  "pypdfium2==5.13.0",
+  "Pillow==13.0.0",
+  "reportlab==4.4.9",
+  "scikit-learn==1.8.0",
+  "httpx==0.28.1",
+]
+
+[project.scripts]
+dci = "dci.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dci = ["static/*", "migrations/*.sql"]
+
+[dependency-groups]
+browser = ["playwright==1.62.0"]
+audit = ["pip-audit==2.10.0", "pip-licenses==5.5.0", "ruff==0.15.1"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

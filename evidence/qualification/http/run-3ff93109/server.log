@@ -1,0 +1,68 @@
+INFO:     Started server process [31]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:52483 (Press CTRL+C to quit)
+{"trace_id": "0778fc09-1352-4932-9d7b-2157330664ac", "method": "GET", "status": 200, "duration_seconds": 0.001289}
+INFO:     127.0.0.1:48390 - "GET /healthz HTTP/1.1" 200 OK
+{"trace_id": "8da43fc6-e94b-47a3-8f02-a1c9275d3458", "method": "GET", "status": 401, "duration_seconds": 0.000588}
+INFO:     127.0.0.1:48392 - "GET /api/cases HTTP/1.1" 401 Unauthorized
+{"trace_id": "39bf5d14-c8c8-4d0f-8fbb-fc22cd2d3ddd", "method": "GET", "status": 200, "duration_seconds": 0.000547}
+INFO:     127.0.0.1:48400 - "GET /api/me HTTP/1.1" 200 OK
+{"trace_id": "4db4d149-efeb-4be9-bb9f-6ffa4485e37a", "method": "GET", "status": 200, "duration_seconds": 0.000395}
+INFO:     127.0.0.1:48416 - "GET /api/me HTTP/1.1" 200 OK
+{"trace_id": "c9223869-5ff8-4fe0-a633-37acebff61d4", "method": "GET", "status": 200, "duration_seconds": 0.000342}
+INFO:     127.0.0.1:48428 - "GET /api/me HTTP/1.1" 200 OK
+{"trace_id": "d914a929-865a-43ba-b70f-967cc020cfe2", "method": "GET", "status": 200, "duration_seconds": 0.000362}
+INFO:     127.0.0.1:48438 - "GET /api/me HTTP/1.1" 200 OK
+{"trace_id": "030368a1-f1d4-4d23-86cf-f2ec39162f8a", "method": "POST", "status": 201, "duration_seconds": 0.002904}
+INFO:     127.0.0.1:48446 - "POST /api/cases HTTP/1.1" 201 Created
+{"trace_id": "1d1b55a0-5ff1-4967-8170-dfb73053a759", "method": "POST", "status": 403, "duration_seconds": 0.000632}
+INFO:     127.0.0.1:48462 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=PO-BROWSER-HTTP0C5AE7E7DB62&filename=purchase_order.pdf HTTP/1.1" 403 Forbidden
+{"trace_id": "d7284874-7ca2-4d51-a37d-c1120e7c390c", "method": "GET", "status": 200, "duration_seconds": 0.000991}
+INFO:     127.0.0.1:48468 - "GET /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e HTTP/1.1" 200 OK
+{"trace_id": "52086071-dc27-45a3-94ec-7aebaad9a81d", "method": "POST", "status": 202, "duration_seconds": 0.033761}
+INFO:     127.0.0.1:48472 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=PO-BROWSER-HTTP0C5AE7E7DB62&filename=purchase_order.pdf HTTP/1.1" 202 Accepted
+{"trace_id": "8a5341cf-282f-4efe-8ffd-b5e462cec1e2", "method": "POST", "status": 202, "duration_seconds": 0.002261}
+INFO:     127.0.0.1:48488 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=DN-BROWSER-HTTP0C5AE7E7DB62&filename=delivery_note.pdf HTTP/1.1" 202 Accepted
+{"trace_id": "acca6f68-a312-4430-81dd-486a76dfa472", "method": "POST", "status": 202, "duration_seconds": 0.001865}
+INFO:     127.0.0.1:48500 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=INV-BROWSER-HTTP0C5AE7E7DB62&filename=invoice.pdf HTTP/1.1" 202 Accepted
+{"trace_id": "46b9480d-1323-4821-be4f-e9df5d706fee", "method": "GET", "status": 200, "duration_seconds": 0.000995}
+INFO:     127.0.0.1:48504 - "GET /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e HTTP/1.1" 200 OK
+{"trace_id": "7974f849-8343-41cc-ad7c-b7caba1b8f4a", "method": "GET", "status": 409, "duration_seconds": 0.000888}
+INFO:     127.0.0.1:48520 - "GET /api/documents/0f63b7f5-1573-4bf4-8be5-2585952afb47/original HTTP/1.1" 409 Conflict
+{"trace_id": "919359d6-cb6c-4567-86f8-860a2559db3a", "method": "GET", "status": 200, "duration_seconds": 0.004216}
+INFO:     127.0.0.1:48534 - "GET /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e HTTP/1.1" 200 OK
+{"trace_id": "91bebf25-72b5-4a44-b78e-b9db5aef9d73", "method": "GET", "status": 200, "duration_seconds": 0.002975}
+INFO:     127.0.0.1:48546 - "GET /api/documents/0f63b7f5-1573-4bf4-8be5-2585952afb47 HTTP/1.1" 200 OK
+{"trace_id": "3301c51a-e229-43f7-9cb4-ed32bda16ec6", "method": "GET", "status": 200, "duration_seconds": 0.00328}
+INFO:     127.0.0.1:48554 - "GET /api/documents/0f63b7f5-1573-4bf4-8be5-2585952afb47/original HTTP/1.1" 200 OK
+{"trace_id": "4baab074-a6a5-4b28-b0af-7749e85b03cd", "method": "GET", "status": 200, "duration_seconds": 0.004223}
+INFO:     127.0.0.1:48560 - "GET /api/documents/4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e HTTP/1.1" 200 OK
+{"trace_id": "30233cc8-c5d1-4091-9073-b4817d0b9c51", "method": "GET", "status": 200, "duration_seconds": 0.001718}
+INFO:     127.0.0.1:48574 - "GET /api/documents/4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e/original HTTP/1.1" 200 OK
+{"trace_id": "c85e702f-e827-4cd1-9e1e-bc181ee8ccde", "method": "GET", "status": 200, "duration_seconds": 0.021611}
+INFO:     127.0.0.1:48578 - "GET /api/documents/709ec08b-1855-42a1-9bfa-634672fb19ba HTTP/1.1" 200 OK
+{"trace_id": "01eec342-0846-4fff-9587-5daef3300c48", "method": "GET", "status": 200, "duration_seconds": 0.001818}
+INFO:     127.0.0.1:48580 - "GET /api/documents/709ec08b-1855-42a1-9bfa-634672fb19ba/original HTTP/1.1" 200 OK
+{"trace_id": "6093e34c-e3c2-4458-bf53-a12e746c1f63", "method": "POST", "status": 403, "duration_seconds": 0.000822}
+INFO:     127.0.0.1:48596 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/accept HTTP/1.1" 403 Forbidden
+{"trace_id": "e860b3fd-a0a4-4e99-9637-7229db401fcf", "method": "POST", "status": 200, "duration_seconds": 0.013125}
+INFO:     127.0.0.1:48604 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/accept HTTP/1.1" 200 OK
+{"trace_id": "4817c952-22a9-48af-92dc-c5f61d9e0566", "method": "POST", "status": 403, "duration_seconds": 0.001103}
+INFO:     127.0.0.1:48614 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/publish HTTP/1.1" 403 Forbidden
+{"trace_id": "71be1239-1c65-4697-8125-d44b83033a0d", "method": "POST", "status": 200, "duration_seconds": 0.009517}
+INFO:     127.0.0.1:48622 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/publish HTTP/1.1" 200 OK
+{"trace_id": "6a8fb249-30db-4669-849f-a179f20adf89", "method": "POST", "status": 200, "duration_seconds": 0.007432}
+INFO:     127.0.0.1:48634 - "POST /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/publish HTTP/1.1" 200 OK
+{"trace_id": "e144b5a1-cfc1-4b6c-8fe9-1d52585b8325", "method": "GET", "status": 200, "duration_seconds": 0.002622}
+INFO:     127.0.0.1:48638 - "GET /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e HTTP/1.1" 200 OK
+{"trace_id": "6334e70b-1fb9-4c02-914c-2a6f19674d22", "method": "GET", "status": 200, "duration_seconds": 0.001078}
+INFO:     127.0.0.1:48654 - "GET /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/audit HTTP/1.1" 200 OK
+{"trace_id": "616d2e05-57ca-4f71-aae9-d44372e29b16", "method": "GET", "status": 200, "duration_seconds": 0.008093}
+INFO:     127.0.0.1:48666 - "GET /api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/export.zip HTTP/1.1" 200 OK
+{"trace_id": "63088462-493f-4caa-a170-49b2fefe63f6", "method": "GET", "status": 200, "duration_seconds": 0.001261}
+INFO:     127.0.0.1:48674 - "GET /api/ready HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31]

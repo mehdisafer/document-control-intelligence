@@ -1,0 +1,11 @@
+{
+  "compute_cost_usd": null,
+  "external_api_cost_usd": 0,
+  "scope": "Usage of completed responses only; interrupted requests may have unreported tokens.",
+  "successful_response_count": 19,
+  "usage": {
+    "completion_tokens": 2464,
+    "prompt_tokens": 19616,
+    "total_tokens": 22080
+  }
+}

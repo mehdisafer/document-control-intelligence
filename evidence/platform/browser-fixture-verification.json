@@ -1,0 +1,46 @@
+{
+  "scope": "Fresh browser fixture backend verification; no browser started",
+  "started_at_unix": 1794611932.6397097,
+  "status": "passed",
+  "fixture": {
+    "namespace": "VERIFIED13NOV",
+    "generator_version": "synthetic-purchasing-1.0",
+    "layout": "classic_en",
+    "supplier_id": "SUP-BROWSER-VERIFIED13NOV",
+    "purchase_order_id": "PO-BROWSER-VERIFIED13NOV",
+    "documents": [
+      {
+        "path": "purchase_order.pdf",
+        "kind": "purchase_order",
+        "document_key": "PO-BROWSER-VERIFIED13NOV",
+        "document_id": "PO-BROWSER-VERIFIED13NOV",
+        "sha256": "d55e5be2f3884f6eb091428ad5fe0ee6f7c195a6acb37ae88dde7180d8ce6a23"
+      },
+      {
+        "path": "delivery_note.pdf",
+        "kind": "delivery_note",
+        "document_key": "DN-BROWSER-VERIFIED13NOV",
+        "document_id": "DN-BROWSER-VERIFIED13NOV",
+        "sha256": "ddae5fee86e039ad857097ed56cb0388e75ae94b7c8751eecd2b24191c74706d"
+      },
+      {
+        "path": "invoice.pdf",
+        "kind": "invoice",
+        "document_key": "INV-BROWSER-VERIFIED13NOV",
+        "document_id": "INV-BROWSER-VERIFIED13NOV",
+        "sha256": "a8943365f47a8ff8fe39c8dcfb443989af64caaf1f8f9a21b5235b5dc9c6d478"
+      }
+    ]
+  },
+  "document_count": 3,
+  "reconciliation": "matched",
+  "eligible": true,
+  "publication_created": true,
+  "input_and_export_hashes_match": true,
+  "deterministic_replay": true,
+  "existing_published_invoice_identities_preserved": 7,
+  "published_identity_count_after": 8,
+  "browser_started": false,
+  "private_cloned_state_removed": true,
+  "finished_at_unix": 1794611934.4015603
+}

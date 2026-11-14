@@ -1,0 +1,846 @@
+{
+  "schema_version": "real-http-qualification-1.0",
+  "status": "passed",
+  "started_at_utc": "2026-11-13T23:36:48.331300+00:00",
+  "started_at_unix": 1794613008.3313136,
+  "scope": "Real HTTP/1.1 over loopback TCP to a Uvicorn child process; separate worker subprocess; local-linear inference",
+  "browser_executed": false,
+  "training_executed": false,
+  "external_provider_used": false,
+  "checks": [
+    {
+      "name": "runtime_sources_equal_frozen_commit",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "pinned_model_digest",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "project_imports_from_checked_repository",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "real_loopback_uvicorn_ready",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "authenticated_operator",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "authenticated_reader",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "authenticated_approver",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "authenticated_publisher",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "reader_upload_denied_without_state_change",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "uploads_are_persisted_for_separate_worker",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "separate_worker_executes_all_three_local_model_jobs",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "three_document_case_matches",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "purchase_order_normalized_fields",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "purchase_order_model_proposal_verified",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "purchase_order_all_exact_source_spans",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "purchase_order_original_bytes_preserved",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "delivery_note_normalized_fields",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "delivery_note_model_proposal_verified",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "delivery_note_all_exact_source_spans",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "delivery_note_original_bytes_preserved",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "invoice_normalized_fields",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "invoice_model_proposal_verified",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "invoice_all_exact_source_spans",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "invoice_original_bytes_preserved",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "approver_explicitly_accepts_current_revision",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "repeated_publication_is_idempotent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "reader_observes_published_revision",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "purchase_order_request_audit_worker_join",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "delivery_note_request_audit_worker_join",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "invoice_request_audit_worker_join",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "audit_attributes_decisions_and_single_publication",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "reader_zip_contains_bound_originals",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "reader_zip_preserves_proposals_and_audit",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "queue_drained_and_one_publication",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "request_ids_are_unique_and_server_generated",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "source_and_model_unchanged_after_execution",
+      "status": "passed",
+      "detail": null
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/healthz",
+      "actor_role": null,
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "0778fc09-1352-4932-9d7b-2157330664ac",
+      "content_type": "application/json",
+      "response_bytes": 39,
+      "response_sha256": "d502cad67845a448d3665235ef09ea0a9a89b297340d7edc25b02203f31f2397",
+      "elapsed_seconds": 0.014244
+    },
+    {
+      "method": "GET",
+      "path": "/api/cases",
+      "actor_role": null,
+      "status": 401,
+      "expected_status": 401,
+      "x_request_id": "8da43fc6-e94b-47a3-8f02-a1c9275d3458",
+      "content_type": "application/json",
+      "response_bytes": 39,
+      "response_sha256": "3811aafcf69d175df1be5d4534445b02cf4d491534dc5f178beec0ecf2266dcd",
+      "elapsed_seconds": 0.001258
+    },
+    {
+      "method": "GET",
+      "path": "/api/me",
+      "actor_role": "operator",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "39bf5d14-c8c8-4d0f-8fbb-fc22cd2d3ddd",
+      "content_type": "application/json",
+      "response_bytes": 45,
+      "response_sha256": "7c8274d80ee23326d1ea017821de0d77e3d9ea44ade6cc3e5d24aa91cd45966f",
+      "elapsed_seconds": 0.001034
+    },
+    {
+      "method": "GET",
+      "path": "/api/me",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "4db4d149-efeb-4be9-bb9f-6ffa4485e37a",
+      "content_type": "application/json",
+      "response_bytes": 41,
+      "response_sha256": "203390d7a44a43b1cd06b67547429882a1945b257ee7b0d32dff897df9ddcfb2",
+      "elapsed_seconds": 0.000902
+    },
+    {
+      "method": "GET",
+      "path": "/api/me",
+      "actor_role": "approver",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "c9223869-5ff8-4fe0-a633-37acebff61d4",
+      "content_type": "application/json",
+      "response_bytes": 45,
+      "response_sha256": "7cc5a2fcbd627fa691277366b7b488f74b703cd599b920d0ec54b33c82393ed1",
+      "elapsed_seconds": 0.000795
+    },
+    {
+      "method": "GET",
+      "path": "/api/me",
+      "actor_role": "publisher",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "d914a929-865a-43ba-b70f-967cc020cfe2",
+      "content_type": "application/json",
+      "response_bytes": 47,
+      "response_sha256": "e1f164a688347e3c1a0956d8e370e42a8e88a2acf2c1c47148d3d070f74651f1",
+      "elapsed_seconds": 0.000776
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases",
+      "actor_role": "operator",
+      "status": 201,
+      "expected_status": 201,
+      "x_request_id": "030368a1-f1d4-4d23-86cf-f2ec39162f8a",
+      "content_type": "application/json",
+      "response_bytes": 918,
+      "response_sha256": "9bb2702087a911f374acc5cbd5186e9091b39bb49e4ec9def254e11584f8f4bc",
+      "elapsed_seconds": 0.003416
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=PO-BROWSER-HTTP0C5AE7E7DB62&filename=purchase_order.pdf",
+      "actor_role": "reader",
+      "status": 403,
+      "expected_status": 403,
+      "x_request_id": "1d1b55a0-5ff1-4967-8170-dfb73053a759",
+      "content_type": "application/json",
+      "response_bytes": 42,
+      "response_sha256": "b2d0034c3d964ee6aaede59e36e8574874ad2b8dbf5b0c45496dbfce9e3ebf52",
+      "elapsed_seconds": 0.00116
+    },
+    {
+      "method": "GET",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "d7284874-7ca2-4d51-a37d-c1120e7c390c",
+      "content_type": "application/json",
+      "response_bytes": 918,
+      "response_sha256": "9bb2702087a911f374acc5cbd5186e9091b39bb49e4ec9def254e11584f8f4bc",
+      "elapsed_seconds": 0.001511
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=PO-BROWSER-HTTP0C5AE7E7DB62&filename=purchase_order.pdf",
+      "actor_role": "operator",
+      "status": 202,
+      "expected_status": 202,
+      "x_request_id": "52086071-dc27-45a3-94ec-7aebaad9a81d",
+      "content_type": "application/json",
+      "response_bytes": 132,
+      "response_sha256": "4ce4494dfb1502e2d9b09eba978fcca300d1c0bc41d384d534ccf91a750bc914",
+      "elapsed_seconds": 0.034747
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=DN-BROWSER-HTTP0C5AE7E7DB62&filename=delivery_note.pdf",
+      "actor_role": "operator",
+      "status": 202,
+      "expected_status": 202,
+      "x_request_id": "8a5341cf-282f-4efe-8ffd-b5e462cec1e2",
+      "content_type": "application/json",
+      "response_bytes": 132,
+      "response_sha256": "b5ca3dd3e140ebdb59f34248fb19014189518c40706f820c03f5ec3b065a1ccb",
+      "elapsed_seconds": 0.002989
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/documents?document_key=INV-BROWSER-HTTP0C5AE7E7DB62&filename=invoice.pdf",
+      "actor_role": "operator",
+      "status": 202,
+      "expected_status": 202,
+      "x_request_id": "acca6f68-a312-4430-81dd-486a76dfa472",
+      "content_type": "application/json",
+      "response_bytes": 132,
+      "response_sha256": "bd2d7267d99d709b3359b91035f6c291f5e9f7a5b9a4362fed4215b90b2a82c7",
+      "elapsed_seconds": 0.002449
+    },
+    {
+      "method": "GET",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "46b9480d-1323-4821-be4f-e9df5d706fee",
+      "content_type": "application/json",
+      "response_bytes": 2292,
+      "response_sha256": "f8d74b57adf3a5b6f839e4ef3cd71734b7c68706a2a99a252442c66d2abab978",
+      "elapsed_seconds": 0.001545
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/0f63b7f5-1573-4bf4-8be5-2585952afb47/original",
+      "actor_role": "reader",
+      "status": 409,
+      "expected_status": 409,
+      "x_request_id": "7974f849-8343-41cc-ad7c-b7caba1b8f4a",
+      "content_type": "application/json",
+      "response_bytes": 95,
+      "response_sha256": "e11463d74c073ebd7dd250d7985b393ec9785fd9f8f588c1aadcbd3b771057a0",
+      "elapsed_seconds": 0.001441
+    },
+    {
+      "method": "GET",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "919359d6-cb6c-4567-86f8-860a2559db3a",
+      "content_type": "application/json",
+      "response_bytes": 2357,
+      "response_sha256": "d27abe753ad2f027f02bfa335e9ffef2442b7f13bfe1ee76dfdf86fc4873db1e",
+      "elapsed_seconds": 0.00562
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/0f63b7f5-1573-4bf4-8be5-2585952afb47",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "91bebf25-72b5-4a44-b78e-b9db5aef9d73",
+      "content_type": "application/json",
+      "response_bytes": 17815,
+      "response_sha256": "f276863aa17da45cad3e8301725c13742f54f062090a94ac344c3ee27fa6b3f8",
+      "elapsed_seconds": 0.003791
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/0f63b7f5-1573-4bf4-8be5-2585952afb47/original",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "3301c51a-e229-43f7-9cb4-ed32bda16ec6",
+      "content_type": "application/pdf",
+      "response_bytes": 2641,
+      "response_sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+      "elapsed_seconds": 0.004422
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "4baab074-a6a5-4b28-b0af-7749e85b03cd",
+      "content_type": "application/json",
+      "response_bytes": 17808,
+      "response_sha256": "000c15b9e0a9ae3e645694307158edbd7fdf430e49cadef4ef4970c69178306d",
+      "elapsed_seconds": 0.005247
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e/original",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "30233cc8-c5d1-4091-9073-b4817d0b9c51",
+      "content_type": "application/pdf",
+      "response_bytes": 2635,
+      "response_sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+      "elapsed_seconds": 0.002744
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/709ec08b-1855-42a1-9bfa-634672fb19ba",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "c85e702f-e827-4cd1-9e1e-bc181ee8ccde",
+      "content_type": "application/json",
+      "response_bytes": 17697,
+      "response_sha256": "1bbff6f0fef7cc05451d371f3b47443442dd38126bc03548480fd0183d1a67ef",
+      "elapsed_seconds": 0.02268
+    },
+    {
+      "method": "GET",
+      "path": "/api/documents/709ec08b-1855-42a1-9bfa-634672fb19ba/original",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "01eec342-0846-4fff-9587-5daef3300c48",
+      "content_type": "application/pdf",
+      "response_bytes": 2632,
+      "response_sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+      "elapsed_seconds": 0.002971
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/accept",
+      "actor_role": "operator",
+      "status": 403,
+      "expected_status": 403,
+      "x_request_id": "6093e34c-e3c2-4458-bf53-a12e746c1f63",
+      "content_type": "application/json",
+      "response_bytes": 42,
+      "response_sha256": "73b45837dd616bd439c3ca40f6b1c11a697b5fcc2147576d1577777a69a91ef4",
+      "elapsed_seconds": 0.001564
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/accept",
+      "actor_role": "approver",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "e860b3fd-a0a4-4e99-9637-7229db401fcf",
+      "content_type": "application/json",
+      "response_bytes": 2541,
+      "response_sha256": "23a4a7d7b6fc0c0fb1173031d21be3ed38918cac62467b45c6d9d1ea4153af21",
+      "elapsed_seconds": 0.015889
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/publish",
+      "actor_role": "approver",
+      "status": 403,
+      "expected_status": 403,
+      "x_request_id": "4817c952-22a9-48af-92dc-c5f61d9e0566",
+      "content_type": "application/json",
+      "response_bytes": 43,
+      "response_sha256": "ae563acb65cabe71315a4fe69d0c824e601850e450346a52bce5da8a7293055b",
+      "elapsed_seconds": 0.00196
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/publish",
+      "actor_role": "publisher",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "71be1239-1c65-4697-8125-d44b83033a0d",
+      "content_type": "application/json",
+      "response_bytes": 144,
+      "response_sha256": "17ce1fc3fff89333aa0bac5c7e5f6730c044cbe5457c523ecd6994c8b4e1bc0e",
+      "elapsed_seconds": 0.010158
+    },
+    {
+      "method": "POST",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/publish",
+      "actor_role": "publisher",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "6a8fb249-30db-4669-849f-a179f20adf89",
+      "content_type": "application/json",
+      "response_bytes": 143,
+      "response_sha256": "4115450683b460b32857cfaf33a5f281ec0249c6e97a53213b3e6f8fbcadbf3f",
+      "elapsed_seconds": 0.008023
+    },
+    {
+      "method": "GET",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "e144b5a1-cfc1-4b6c-8fe9-1d52585b8325",
+      "content_type": "application/json",
+      "response_bytes": 2602,
+      "response_sha256": "5a6877ee066654e56970c4f3743dfe3713e9271dda245ab80acbff8646486ada",
+      "elapsed_seconds": 0.003169
+    },
+    {
+      "method": "GET",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/audit",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "6334e70b-1fb9-4c02-914c-2a6f19674d22",
+      "content_type": "application/json",
+      "response_bytes": 4226,
+      "response_sha256": "5c4102dd895c16ef591aade3c053011a71213e78aae357ecbdf2fd238c5e4ea4",
+      "elapsed_seconds": 0.001659
+    },
+    {
+      "method": "GET",
+      "path": "/api/cases/c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e/export.zip",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "616d2e05-57ca-4f71-aae9-d44372e29b16",
+      "content_type": "application/zip",
+      "response_bytes": 19794,
+      "response_sha256": "677587a3c4339d87745e374ab3f3a222dfe19f7579e59eed968d18b08a9b0b9b",
+      "elapsed_seconds": 0.008719
+    },
+    {
+      "method": "GET",
+      "path": "/api/ready",
+      "actor_role": "reader",
+      "status": 200,
+      "expected_status": 200,
+      "x_request_id": "63088462-493f-4caa-a170-49b2fefe63f6",
+      "content_type": "application/json",
+      "response_bytes": 239,
+      "response_sha256": "50cbfcead9fa0a817e37b79da19b36e737451daf81cd70b029b7e5ac2db2f905",
+      "elapsed_seconds": 0.002141
+    }
+  ],
+  "cleanup": {
+    "server_stopped": true,
+    "server_exit_code": -15,
+    "private_credentials_and_live_database_removed": true
+  },
+  "source_commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "workspace_head": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "harness_sha256": "ff7fc1ae2e7af2c413e7b4f957ca50a3d92b563ebc5b54b95099cefd44f0c3d7",
+  "model_sha256": "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1",
+  "model_path": "tmp/final-linear-model.json",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "project_import_path": "/workspace/scratch/6956bc82bcf5/document-control-intelligence/src/dci/__init__.py",
+    "cpu_affinity_count": 9,
+    "packages": {
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.1",
+      "pydantic": "2.13.4",
+      "numpy": "2.5.4",
+      "scikit-learn": "1.8.0",
+      "pypdf": "6.21.4",
+      "pdfplumber": "0.11.9",
+      "pypdfium2": "5.13.0",
+      "reportlab": "4.4.9"
+    },
+    "parser_runtime": "native-ocr-1.0;pypdf=6.21.4;pdfplumber=0.11.9;pypdfium2=5.13.0;Pillow=13.0.0;tesseract 5.5.0;eng.traineddata=7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2;dpi=160;lang=eng;oem=1;psm=3",
+    "http_client": "stdlib http.client.HTTPConnection; does not discover proxy variables"
+  },
+  "source_files_sha256": {
+    "pyproject.toml": "777ee8c0711458fa7602e8f99ce86c591f39799ab908cefac503387cd7286e89",
+    "requirements.lock": "ba565c29c848593955ca08c9a980409e762b5658da67558dfa767f9ec6539be1",
+    "scripts/benchmark.py": "60ddcd35815098040cf6783fd8a546d3fca309d2926893d2f16f08af63332a73",
+    "scripts/browser_smoke.py": "6ff6797092ce2885c23cd6e630c618612d2e95cb909a90eda00fb72936fcc521",
+    "scripts/check_licenses.py": "86252346a0ad657f6afdba91bb3d5b236e8d11197d720c4be46cf8fcac18206d",
+    "scripts/check_secrets.py": "d9f0068bc3a82c94e25df83955f90a8df666988ce526784be5b26662c8bc4404",
+    "scripts/export_schemas.py": "bc8e29e6eb9eee64e8b2248096549d7ec099abff61f35100c535175fe1b6c458",
+    "scripts/prepare_container.py": "0630cf73245306418d5247dab0964fb7a68ee9a0e3316517c27d21be69c764e4",
+    "scripts/provision_llm.py": "42b980ebc0e4045f0b3e93812f016b19022c03db66866995decccacf299017fd",
+    "scripts/run_llm_evaluation.py": "ea8fc84bba19b23dc851960751a2a09e4254d3faa8c96167a097857b3dcbabb0",
+    "scripts/verify_demo.py": "4df63642cd837609a6d7d8bf9f5dfa8e05f1b72e34c05b55b7ff4848fc08d8bf",
+    "src/dci/__init__.py": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246",
+    "src/dci/_parse_child.py": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079",
+    "src/dci/api.py": "2ac84431d4e27aa0695594dc2a234c0b748c05cd347c7a65a55d7f65ea0759b4",
+    "src/dci/auth.py": "3c0053ef9c5372d6f0ab3e48c55aeae09507db917dd45c29b87a127cae41541a",
+    "src/dci/cli.py": "22b8b72cc53030fdbad3d7c0180f8dba6d8a4d8dc05bdf89042efaa6d5b188ff",
+    "src/dci/config.py": "4f67f63a90db8e79768af2a1a96a13dd59fcc4d05a31d1e580b6a644a081604d",
+    "src/dci/corpus.py": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44",
+    "src/dci/demo.py": "e459cfb0d2fa47a6e6c932ff57c46a8f8f5aceb380a19bbfc072151ade1f1881",
+    "src/dci/evaluation.py": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad",
+    "src/dci/extraction.py": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3",
+    "src/dci/llm.py": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a",
+    "src/dci/local_model.py": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33",
+    "src/dci/migrations/001_initial.sql": "2acf468ea83ad88f5c190ce22541bad8bcfa84a85d821d55e2f005de5b79d34a",
+    "src/dci/models.py": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8",
+    "src/dci/operations.py": "4a46779442d8dd87763350242779e0991a26383e11b53e45e06e8773f186da57",
+    "src/dci/parsing.py": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53",
+    "src/dci/rules.py": "5ddfeb27658a27931d45800be25e30535ad56d4efb4cc057a3083eb73ed194ef",
+    "src/dci/static/app.js": "1ebb991650535a8acfff68ce7125706721aa4eee8cf6ecc49a024145b888a81b",
+    "src/dci/static/favicon.svg": "9c10e55d63d7262dea535eaf071b6a92d4526bbd2c5e821d64fbada73a620da6",
+    "src/dci/static/index.html": "ddc8a5acf9d68a10c5e1978e694788bde8fdca361d4573b147c8826dd854399b",
+    "src/dci/static/style.css": "ee6a9232f6623e93f029c7ffe089f952c59fa59465d2ffdefcea8960eb92c8d8",
+    "src/dci/store.py": "eabfdfe7cbc41e6f4d79a9fb2288e9e93af9e71ef4ba88ae81f8533acc01c76f",
+    "src/dci/worker.py": "d90c0737df650dc72515cbc0a21d23c362c059f151f1cdcfff977885e1c0f1d0",
+    "tests/test_classification_review.py": "acec6c2c2effe6491bdf1d0a13afb267e80ccdcd32258df00d35fe84c97059a5",
+    "tests/test_corpus.py": "90c1b758668e18528f21301463568ed38851ab2f757d77ebf87d570b1c16e235",
+    "tests/test_evaluation.py": "3e9770d5e640a4a004d4472751bb5b971651e15d3f2be0e088727bc84a2b0e97",
+    "tests/test_extraction.py": "8acba8b4b118454cb9465190d00b95ec42fb84cf3e2c85a97e7edea5b36517ed",
+    "tests/test_local_model.py": "074d472192a518ab826545736bc493f2707fd27586d2cd03cb7fd276f96f95c0",
+    "tests/test_operations.py": "62d5057424c940f3832219890e91d277a3556971b40d6fbd8a452719b6168ca0",
+    "tests/test_parsing.py": "d689daa3bfbf471863c52c9a6a7b3cbc1cb8989443d7edce842e61e29d64eb0a",
+    "tests/test_retry_budget.py": "686b7e0cc8f340a3c11ce50d867f41aa3d01f595fb12b72100d3886793315ef7",
+    "tests/test_rules.py": "f84437c509bcd0bdf8d47531cd1a74772ba44dfd88ff999b45897b641f7bec5b",
+    "tests/test_workflow.py": "5d2efb6bf98c54cfa0dbe819cde9463b0e08c188c6458ca7d870a6f415b37238",
+    "uv.lock": "a51ddb0d6691d0137c28bab7a98e952ff9684475f6eb76e66a5862b3d874d3dc"
+  },
+  "limits": {
+    "profile": "local-linear",
+    "max_bytes": 262144,
+    "max_pages": 3,
+    "parser_seconds": 30,
+    "parser_memory_mb": 768,
+    "max_case_documents": 3,
+    "max_document_versions": 2,
+    "max_case_bytes": 1048576,
+    "max_pending": 3,
+    "max_workers": 1,
+    "max_attempts": 1,
+    "lease_seconds": 60,
+    "retry_seconds": 0,
+    "retention_days": 90,
+    "batch_size": 3,
+    "http_timeout_seconds": 10,
+    "http_response_max_bytes": 12000000,
+    "worker_timeout_seconds": 90,
+    "startup_timeout_seconds": 10,
+    "uvicorn_host": "127.0.0.1",
+    "uvicorn_limit_concurrency": 32,
+    "uvicorn_limit_max_requests": 10000,
+    "uvicorn_timeout_keep_alive_seconds": 5
+  },
+  "processing_policy": {
+    "profile": "local-linear",
+    "model_path": "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1",
+    "llm_config_file": null,
+    "max_bytes": 262144,
+    "max_pages": 3,
+    "parser_seconds": 30,
+    "parser_memory_mb": 768,
+    "max_case_documents": 3,
+    "max_document_versions": 2,
+    "max_case_bytes": 1048576,
+    "max_attempts": 1,
+    "lease_seconds": 60,
+    "retry_seconds": 0,
+    "application_version": "0.1.0rc1",
+    "parser_runtime": "native-ocr-1.0;pypdf=6.21.4;pdfplumber=0.11.9;pypdfium2=5.13.0;Pillow=13.0.0;tesseract 5.5.0;eng.traineddata=7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2;dpi=160;lang=eng;oem=1;psm=3"
+  },
+  "processing_policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+  "fixture": {
+    "namespace": "HTTP0C5AE7E7DB62",
+    "generator_version": "synthetic-purchasing-1.0",
+    "layout": "classic_en",
+    "supplier_id": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+    "purchase_order_id": "PO-BROWSER-HTTP0C5AE7E7DB62",
+    "documents": [
+      {
+        "path": "purchase_order.pdf",
+        "kind": "purchase_order",
+        "document_key": "PO-BROWSER-HTTP0C5AE7E7DB62",
+        "document_id": "PO-BROWSER-HTTP0C5AE7E7DB62",
+        "sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403"
+      },
+      {
+        "path": "delivery_note.pdf",
+        "kind": "delivery_note",
+        "document_key": "DN-BROWSER-HTTP0C5AE7E7DB62",
+        "document_id": "DN-BROWSER-HTTP0C5AE7E7DB62",
+        "sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8"
+      },
+      {
+        "path": "invoice.pdf",
+        "kind": "invoice",
+        "document_key": "INV-BROWSER-HTTP0C5AE7E7DB62",
+        "document_id": "INV-BROWSER-HTTP0C5AE7E7DB62",
+        "sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2"
+      }
+    ]
+  },
+  "transport": {
+    "scheme": "http",
+    "host": "127.0.0.1",
+    "port": 52483,
+    "client_pid": 2,
+    "network": "loopback only",
+    "server_pid": 31,
+    "worker_pid": 35
+  },
+  "child_environment_overrides": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONPATH": "/workspace/scratch/6956bc82bcf5/document-control-intelligence/src",
+    "LC_ALL": "C.UTF-8",
+    "NO_PROXY": "127.0.0.1,localhost"
+  },
+  "server_command": [
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+    "-m",
+    "dci.cli",
+    "serve",
+    "--config",
+    "<ephemeral-private-config>",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "52483"
+  ],
+  "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+  "worker_command": [
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+    "-m",
+    "dci.cli",
+    "worker",
+    "--config",
+    "<ephemeral-private-config>",
+    "--once"
+  ],
+  "worker": {
+    "exit_code": 0,
+    "elapsed_seconds": 1.218856,
+    "same_interpreter_as_server": true,
+    "separate_process": true,
+    "events": [
+      {
+        "attempt": 1,
+        "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+        "decision": "eligible",
+        "document_id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+        "elapsed_seconds": 0.445336,
+        "job_id": "4fa354e6-4a50-42b4-b0cf-95ff5a3e196d",
+        "ocr_pages": 0,
+        "outcome": "done",
+        "pages": 1,
+        "profile": "local-linear"
+      },
+      {
+        "attempt": 1,
+        "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+        "decision": "eligible",
+        "document_id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+        "elapsed_seconds": 0.325992,
+        "job_id": "9f64e6d8-0382-4231-8995-70fcdf27bd09",
+        "ocr_pages": 0,
+        "outcome": "done",
+        "pages": 1,
+        "profile": "local-linear"
+      },
+      {
+        "attempt": 1,
+        "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+        "decision": "eligible",
+        "document_id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+        "elapsed_seconds": 0.275006,
+        "job_id": "3993bb71-5e42-4700-9c0a-fe4fb69fb9a3",
+        "ocr_pages": 0,
+        "outcome": "done",
+        "pages": 1,
+        "profile": "local-linear"
+      }
+    ]
+  },
+  "publication": {
+    "first": {
+      "id": "f07f9ec1-0db2-4337-a745-432b3039b2a1",
+      "fingerprint": "0181cd22921df0fcc9ee2d783fa37022a933ff41cd1f3a805c61c6d3da5ca82a",
+      "duplicate": false
+    },
+    "second": {
+      "id": "f07f9ec1-0db2-4337-a745-432b3039b2a1",
+      "fingerprint": "0181cd22921df0fcc9ee2d783fa37022a933ff41cd1f3a805c61c6d3da5ca82a",
+      "duplicate": true
+    }
+  },
+  "audit_joins": [
+    {
+      "document_id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+      "upload_request_id": "52086071-dc27-45a3-94ec-7aebaad9a81d",
+      "job_id": "4fa354e6-4a50-42b4-b0cf-95ff5a3e196d",
+      "ingestion_audit_id": 2,
+      "processing_audit_id": 5,
+      "verified": true
+    },
+    {
+      "document_id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+      "upload_request_id": "8a5341cf-282f-4efe-8ffd-b5e462cec1e2",
+      "job_id": "9f64e6d8-0382-4231-8995-70fcdf27bd09",
+      "ingestion_audit_id": 3,
+      "processing_audit_id": 6,
+      "verified": true
+    },
+    {
+      "document_id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+      "upload_request_id": "acca6f68-a312-4430-81dd-486a76dfa472",
+      "job_id": "3993bb71-5e42-4700-9c0a-fe4fb69fb9a3",
+      "ingestion_audit_id": 4,
+      "processing_audit_id": 7,
+      "verified": true
+    }
+  ],
+  "final_metrics": {
+    "database": "reachable",
+    "queue": {
+      "jobs": {
+        "done": 3
+      },
+      "oldest_queued_seconds": 0,
+      "completed_count": 3,
+      "processing_seconds_sum": 1.0463339129996712,
+      "publications": 1
+    },
+    "profile": "local-linear",
+    "worker_readiness": "inspect queue age and worker logs"
+  },
+  "finished_at_utc": "2026-11-13T23:36:50.441992+00:00",
+  "elapsed_seconds": 2.110694,
+  "credentials_in_evidence": false,
+  "credential_scan": "passed"
+}

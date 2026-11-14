@@ -1,0 +1,25 @@
+{
+  "git_commit": null,
+  "source_files": {
+    "src/dci/__init__.py": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246",
+    "src/dci/_parse_child.py": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079",
+    "src/dci/api.py": "031c3a008398021db61e95f94da0e716b4f7a8a843f00697666062a991b66da1",
+    "src/dci/auth.py": "3c0053ef9c5372d6f0ab3e48c55aeae09507db917dd45c29b87a127cae41541a",
+    "src/dci/cli.py": "22b8b72cc53030fdbad3d7c0180f8dba6d8a4d8dc05bdf89042efaa6d5b188ff",
+    "src/dci/config.py": "4f67f63a90db8e79768af2a1a96a13dd59fcc4d05a31d1e580b6a644a081604d",
+    "src/dci/corpus.py": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44",
+    "src/dci/demo.py": "e459cfb0d2fa47a6e6c932ff57c46a8f8f5aceb380a19bbfc072151ade1f1881",
+    "src/dci/evaluation.py": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad",
+    "src/dci/extraction.py": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3",
+    "src/dci/llm.py": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a",
+    "src/dci/local_model.py": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33",
+    "src/dci/models.py": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8",
+    "src/dci/operations.py": "4a46779442d8dd87763350242779e0991a26383e11b53e45e06e8773f186da57",
+    "src/dci/parsing.py": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53",
+    "src/dci/rules.py": "79c4ec6eaee3780edfd466570ecea442a577eb262640c4dc58682b35c818a281",
+    "src/dci/store.py": "a070022a27f1fbe057f579b672890bd07d41961a0f9f0b3f82bff7df8ac153fd",
+    "src/dci/worker.py": "d90c0737df650dc72515cbc0a21d23c362c059f151f1cdcfff977885e1c0f1d0"
+  },
+  "source_sha256": "39c2e9f044a9bb82d0b0fcebae985fcc28281bbd07f1242ff9d11d3d98a157c8",
+  "working_tree_dirty": true
+}

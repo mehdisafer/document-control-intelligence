@@ -1,0 +1,15 @@
+START unittest 2026-11-13T23:27:49.092177+00:00
+END unittest exit=0 seconds=30.666282
+START demo-baseline 2026-11-13T23:28:19.758860+00:00
+END demo-baseline exit=0 seconds=9.957686
+START verify-demo-baseline 2026-11-13T23:28:29.717107+00:00
+END verify-demo-baseline exit=0 seconds=0.031973
+START demo-local-linear 2026-11-13T23:28:29.749296+00:00
+END demo-local-linear exit=0 seconds=9.641934
+START verify-demo-local-linear 2026-11-13T23:28:39.391605+00:00
+END verify-demo-local-linear exit=1 seconds=0.032095
+START benchmark 2026-11-13T23:28:39.423905+00:00
+END benchmark exit=0 seconds=7.281682
+START evaluation-regression 2026-11-13T23:28:46.705959+00:00
+END evaluation-regression exit=0 seconds=12.007204
+{"finished_at": "2026-11-13T23:28:58.722116+00:00", "source_files_unchanged": true, "source_files_changed": [], "frozen_inputs_unchanged": true, "all_command_exit_codes_zero": false, "original_commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439"}

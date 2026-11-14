@@ -1,0 +1,411 @@
+{
+  "derivation": "Baseline and local-linear metrics are copied from attempt01. Local-LLM metrics are copied from the complete bounded operational run attempt03. Original summaries are preserved byte-for-byte beside this view.",
+  "interpretation": [
+    "Eligibility is before mandatory human approval, not automatic publication.",
+    "The local-linear profile meets the predeclared synthetic benchmark gate; no real-supplier generalization is asserted.",
+    "The bounded Qwen profile executed all 36 inputs but fails the quality/coverage gate and remains experimental.",
+    "Zero false eligibility with zero eligible documents is not evidence of accepted-document quality; that ratio is null.",
+    "Resource and latency measurements were made in a shared isolated execution environment."
+  ],
+  "kind": "derived_three_profile_comparison",
+  "manifest_sha256": "94161d71e2f704a7ea32ee01e07d46bd2538437c26ac972348bd4817211229fa",
+  "model_or_prompt_tuning_after_final_started": false,
+  "model_training_documents": 72,
+  "model_training_fields": 576,
+  "profiles": {
+    "baseline": {
+      "citation_validity": 1.0,
+      "classification_accuracy": 0.555556,
+      "classification_by_class": {
+        "delivery_note": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "support": 12
+        },
+        "invoice": {
+          "precision": 1.0,
+          "recall": 0.666667,
+          "support": 12
+        },
+        "purchase_order": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "support": 12
+        }
+      },
+      "classification_confusion": {
+        "delivery_note": {
+          "delivery_note": 6,
+          "invoice": 0,
+          "purchase_order": 0,
+          "unknown": 6
+        },
+        "invoice": {
+          "delivery_note": 0,
+          "invoice": 8,
+          "purchase_order": 0,
+          "unknown": 4
+        },
+        "purchase_order": {
+          "delivery_note": 0,
+          "invoice": 0,
+          "purchase_order": 6,
+          "unknown": 6
+        }
+      },
+      "classification_macro_precision": 1.0,
+      "classification_macro_recall": 0.555556,
+      "critical_document_exact_match": 0.444444,
+      "critical_field_abstention_rate": 0.017593,
+      "denominators": {
+        "citation_total": 2448,
+        "citation_valid": 2448,
+        "correct_required_abstentions": 4,
+        "critical_fields_abstained": 19,
+        "critical_fields_total": 1080,
+        "fields_correct": 1353,
+        "fields_total": 1368,
+        "present_fields_correct": 1349,
+        "present_fields_total": 1364,
+        "required_abstentions": 4,
+        "semantically_supported_fields": 1349,
+        "supported_fields_total": 1349
+      },
+      "documents": 36,
+      "duplicate_line_rows": 0,
+      "eligibility_meaning": "Eligible candidates still require explicit human approval; this is not an observed automatic publication rate.",
+      "eligible_coverage": 0.444444,
+      "eligible_critical_quality": 1.0,
+      "eligible_documents": 16,
+      "failures": 0,
+      "false_eligible_documents": 0,
+      "false_eligible_rate_all_documents": 0.0,
+      "false_eligible_rate_among_eligible": 0.0,
+      "full_final_split": true,
+      "latency_seconds": {
+        "max": 1.316988,
+        "median": 0.320577,
+        "p95_nearest_rank": 1.236044
+      },
+      "normalized_field_accuracy_including_required_abstention": 0.989035,
+      "normalized_present_field_accuracy": 0.989003,
+      "policy": {
+        "applies_to": "Full untouched final split; subset and incomplete runs cannot satisfy the benchmark gate.",
+        "citation_validity_min": 1.0,
+        "eligible_coverage_min": 0.5,
+        "eligible_critical_quality_min": 1.0,
+        "false_eligible_documents_max": 0,
+        "rationale": "No incorrect critical values may be proposed as eligible; at least half of the bounded synthetic benchmark should avoid field repair. Human approval is still mandatory. These are development targets, not service certification.",
+        "semantic_evidence_validity_min": 1.0,
+        "version": "synthetic-heldout-1.0"
+      },
+      "policy_gate_met": false,
+      "required_abstention_accuracy": 1.0,
+      "response_variability": {
+        "documents_with_multiple_semantic_outputs": 0,
+        "evaluated_documents": 36,
+        "measured": false,
+        "repeats": 1
+      },
+      "review_rate": 0.555556,
+      "semantic_evidence_validity": 1.0,
+      "stage_latency_seconds": {
+        "extraction_seconds": {
+          "mean": 0.001895,
+          "p95_nearest_rank": 0.00554
+        },
+        "native_seconds": {
+          "mean": 0.017511,
+          "p95_nearest_rank": 0.035207
+        },
+        "ocr_seconds": {
+          "mean": 0.039922,
+          "p95_nearest_rank": 0.648712
+        },
+        "parse_seconds": {
+          "mean": 0.123707,
+          "p95_nearest_rank": 0.7431
+        },
+        "wall_seconds": {
+          "mean": 0.389042,
+          "p95_nearest_rank": 1.230486
+        }
+      },
+      "unexpected_line_rows": 3
+    },
+    "local-linear": {
+      "citation_validity": 1.0,
+      "classification_accuracy": 0.944444,
+      "classification_by_class": {
+        "delivery_note": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 12
+        },
+        "invoice": {
+          "precision": 1.0,
+          "recall": 0.833333,
+          "support": 12
+        },
+        "purchase_order": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 12
+        }
+      },
+      "classification_confusion": {
+        "delivery_note": {
+          "delivery_note": 12,
+          "invoice": 0,
+          "purchase_order": 0,
+          "unknown": 0
+        },
+        "invoice": {
+          "delivery_note": 0,
+          "invoice": 10,
+          "purchase_order": 0,
+          "unknown": 2
+        },
+        "purchase_order": {
+          "delivery_note": 0,
+          "invoice": 0,
+          "purchase_order": 12,
+          "unknown": 0
+        }
+      },
+      "classification_macro_precision": 1.0,
+      "classification_macro_recall": 0.944444,
+      "critical_document_exact_match": 0.833333,
+      "critical_field_abstention_rate": 0.017593,
+      "denominators": {
+        "citation_total": 2448,
+        "citation_valid": 2448,
+        "correct_required_abstentions": 4,
+        "critical_fields_abstained": 19,
+        "critical_fields_total": 1080,
+        "fields_correct": 1353,
+        "fields_total": 1368,
+        "present_fields_correct": 1349,
+        "present_fields_total": 1364,
+        "required_abstentions": 4,
+        "semantically_supported_fields": 1349,
+        "supported_fields_total": 1349
+      },
+      "documents": 36,
+      "duplicate_line_rows": 0,
+      "eligibility_meaning": "Eligible candidates still require explicit human approval; this is not an observed automatic publication rate.",
+      "eligible_coverage": 0.833333,
+      "eligible_critical_quality": 1.0,
+      "eligible_documents": 30,
+      "failures": 0,
+      "false_eligible_documents": 0,
+      "false_eligible_rate_all_documents": 0.0,
+      "false_eligible_rate_among_eligible": 0.0,
+      "full_final_split": true,
+      "latency_seconds": {
+        "max": 1.301356,
+        "median": 0.327209,
+        "p95_nearest_rank": 1.244984
+      },
+      "normalized_field_accuracy_including_required_abstention": 0.989035,
+      "normalized_present_field_accuracy": 0.989003,
+      "policy": {
+        "applies_to": "Full untouched final split; subset and incomplete runs cannot satisfy the benchmark gate.",
+        "citation_validity_min": 1.0,
+        "eligible_coverage_min": 0.5,
+        "eligible_critical_quality_min": 1.0,
+        "false_eligible_documents_max": 0,
+        "rationale": "No incorrect critical values may be proposed as eligible; at least half of the bounded synthetic benchmark should avoid field repair. Human approval is still mandatory. These are development targets, not service certification.",
+        "semantic_evidence_validity_min": 1.0,
+        "version": "synthetic-heldout-1.0"
+      },
+      "policy_gate_met": true,
+      "required_abstention_accuracy": 1.0,
+      "response_variability": {
+        "documents_with_multiple_semantic_outputs": 0,
+        "evaluated_documents": 36,
+        "measured": false,
+        "repeats": 1
+      },
+      "review_rate": 0.166667,
+      "semantic_evidence_validity": 1.0,
+      "stage_latency_seconds": {
+        "extraction_seconds": {
+          "mean": 0.008159,
+          "p95_nearest_rank": 0.013004
+        },
+        "native_seconds": {
+          "mean": 0.017511,
+          "p95_nearest_rank": 0.035207
+        },
+        "ocr_seconds": {
+          "mean": 0.039922,
+          "p95_nearest_rank": 0.648712
+        },
+        "parse_seconds": {
+          "mean": 0.123707,
+          "p95_nearest_rank": 0.7431
+        },
+        "wall_seconds": {
+          "mean": 0.389042,
+          "p95_nearest_rank": 1.230486
+        }
+      },
+      "unexpected_line_rows": 3
+    },
+    "local-llm": {
+      "citation_validity": 1.0,
+      "classification_accuracy": 0.083333,
+      "classification_by_class": {
+        "delivery_note": {
+          "precision": null,
+          "recall": 0.0,
+          "support": 12
+        },
+        "invoice": {
+          "precision": 1.0,
+          "recall": 0.25,
+          "support": 12
+        },
+        "purchase_order": {
+          "precision": null,
+          "recall": 0.0,
+          "support": 12
+        }
+      },
+      "classification_confusion": {
+        "delivery_note": {
+          "delivery_note": 0,
+          "invoice": 0,
+          "purchase_order": 0,
+          "unknown": 12
+        },
+        "invoice": {
+          "delivery_note": 0,
+          "invoice": 3,
+          "purchase_order": 0,
+          "unknown": 9
+        },
+        "purchase_order": {
+          "delivery_note": 0,
+          "invoice": 0,
+          "purchase_order": 0,
+          "unknown": 12
+        }
+      },
+      "classification_macro_precision": 0.333333,
+      "classification_macro_recall": 0.083333,
+      "critical_document_exact_match": 0.0,
+      "critical_field_abstention_rate": 0.07037,
+      "denominators": {
+        "citation_total": 2412,
+        "citation_valid": 2412,
+        "correct_required_abstentions": 4,
+        "critical_fields_abstained": 76,
+        "critical_fields_total": 1080,
+        "fields_correct": 1294,
+        "fields_total": 1368,
+        "present_fields_correct": 1290,
+        "present_fields_total": 1364,
+        "required_abstentions": 4,
+        "semantically_supported_fields": 1290,
+        "supported_fields_total": 1290
+      },
+      "documents": 36,
+      "duplicate_line_rows": 0,
+      "eligibility_meaning": "Eligible candidates still require explicit human approval; this is not an observed automatic publication rate.",
+      "eligible_coverage": 0.0,
+      "eligible_critical_quality": null,
+      "eligible_documents": 0,
+      "failures": 0,
+      "false_eligible_documents": 0,
+      "false_eligible_rate_all_documents": 0.0,
+      "false_eligible_rate_among_eligible": null,
+      "full_final_split": true,
+      "latency_seconds": {
+        "max": 86.681461,
+        "median": 6.030141,
+        "p95_nearest_rank": 41.744098
+      },
+      "normalized_field_accuracy_including_required_abstention": 0.945906,
+      "normalized_present_field_accuracy": 0.945748,
+      "policy": {
+        "applies_to": "Full untouched final split; subset and incomplete runs cannot satisfy the benchmark gate.",
+        "citation_validity_min": 1.0,
+        "eligible_coverage_min": 0.5,
+        "eligible_critical_quality_min": 1.0,
+        "false_eligible_documents_max": 0,
+        "rationale": "No incorrect critical values may be proposed as eligible; at least half of the bounded synthetic benchmark should avoid field repair. Human approval is still mandatory. These are development targets, not service certification.",
+        "semantic_evidence_validity_min": 1.0,
+        "version": "synthetic-heldout-1.0"
+      },
+      "policy_gate_met": false,
+      "required_abstention_accuracy": 1.0,
+      "response_variability": {
+        "documents_with_multiple_semantic_outputs": 0,
+        "evaluated_documents": 36,
+        "measured": false,
+        "repeats": 1
+      },
+      "review_rate": 1.0,
+      "semantic_evidence_validity": 1.0,
+      "stage_latency_seconds": {
+        "extraction_seconds": {
+          "mean": 10.974486,
+          "p95_nearest_rank": 41.371225
+        },
+        "llm_request_seconds": {
+          "mean": 10.970236,
+          "p95_nearest_rank": 41.369474
+        },
+        "native_seconds": {
+          "mean": 0.017933,
+          "p95_nearest_rank": 0.038671
+        },
+        "ocr_seconds": {
+          "mean": 0.035605,
+          "p95_nearest_rank": 0.563733
+        },
+        "parse_seconds": {
+          "mean": 0.119569,
+          "p95_nearest_rank": 0.617629
+        },
+        "wall_seconds": {
+          "mean": 0.362214,
+          "p95_nearest_rank": 0.817368
+        }
+      },
+      "unexpected_line_rows": 3
+    }
+  },
+  "provenance": {
+    "component_snapshot": "source-snapshot/component-provenance.json",
+    "note": "Original git_commit/dirty values are retained. Later audited-human-classification rules/store/API changes are not claimed as original benchmark sources.",
+    "original_git_claims_preserved": true
+  },
+  "reliability_incidents": [
+    {
+      "attempt": "attempt-01-default-cache",
+      "cause": "Unexplained SIGKILL; no kernel or cgroup cause evidence available.",
+      "server_exit": -9,
+      "successful_responses": 12,
+      "unavailable_attempts": 24
+    },
+    {
+      "attempt": "attempt-02-default-cache",
+      "cause": "Unexplained SIGKILL with observed memory growth; not a controlled stop and not a proved OOM.",
+      "observed_peak_rss_kib": 3635604,
+      "server_exit": -9,
+      "successful_responses": 19,
+      "unavailable_attempts": 17
+    }
+  ],
+  "resource_profile_change": "Disable runtime cache/checkpoints and reduce batching after two process deaths. Same model, prompt, seed, context, threads, dataset and thresholds. This was an operational correction, not accuracy tuning.",
+  "schema_version": "1.0",
+  "source_metric_selection": {
+    "baseline": "attempt-01-default-cache/summary.json#/profiles/baseline",
+    "local-linear": "attempt-01-default-cache/summary.json#/profiles/local-linear",
+    "local-llm": "attempt-03-bounded-cache/summary.json#/profiles/local-llm"
+  },
+  "test_documents": 36
+}

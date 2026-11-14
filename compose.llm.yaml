@@ -1,0 +1,37 @@
+# Optional override: share a network namespace with an offline local model server.
+# Provision the exact reviewed runtime and GGUF before startup; no auto-downloads.
+services:
+  worker:
+    network_mode: service:llm
+    volumes:
+      - ${DCI_LLAMA_DIR}:/llama:ro
+    depends_on:
+      llm:
+        condition: service_healthy
+  llm:
+    image: dci:0.1.0rc1
+    entrypoint: ["/llama/llama-server"]
+    command: ["--model", "/models/Qwen3-0.6B-Q4_K_M.gguf", "--alias", "dci-qwen3-0.6b-q4-k-m", "--host", "127.0.0.1", "--port", "8081", "--threads", "4", "--ctx-size", "8192", "--parallel", "1", "--reasoning", "off", "--no-webui", "--cache-ram", "0", "--no-cache-prompt", "--ctx-checkpoints", "0", "--batch-size", "512", "--ubatch-size", "128"]
+    environment: {LD_LIBRARY_PATH: /llama, HF_HUB_OFFLINE: "1"}
+    network_mode: none
+    volumes:
+      - ${DCI_MODELS_DIR}:/models:ro
+      - ${DCI_LLAMA_DIR:?Set DCI_LLAMA_DIR to the verified b12359 binary directory}:/llama:ro
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=67108864"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 2048m
+    cpus: 4
+    pids_limit: 128
+    init: true
+    restart: unless-stopped
+    stop_grace_period: 30s
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health',timeout=2).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}

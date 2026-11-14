@@ -1,0 +1,17 @@
+groups:
+  - name: dci-actionable
+    rules:
+      - alert: DCIPersistentBacklog
+        expr: dci_queue_oldest_seconds > 300
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: DCI processing queue has aged beyond five minutes
+          action: Check worker logs, parser budgets and available memory before adding workers.
+      - alert: DCIJobsNeedReview
+        expr: dci_jobs{status="failed"} > 0
+        for: 1m
+        labels: {severity: warning}
+        annotations:
+          summary: DCI jobs ended without an extractable result
+          action: Inspect error_code; repair runtime or request a corrected document, then use an attributed manual retry.

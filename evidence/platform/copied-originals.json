@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "byte_preserved_originals": [
+    {
+      "source": ".runtime/dependency-audit.json",
+      "destination": "evidence/platform/dependency-audit.json",
+      "sha256": "fc8391404383fcd7468b56fc5a0810ae3c76ad07f444871cd4041de9be4ffc5f",
+      "size": 1847
+    },
+    {
+      "source": ".runtime/dependency-audit.log",
+      "destination": "evidence/platform/dependency-audit.log",
+      "sha256": "79d30422388543b2563e1dde76bb7e7857d7ef0c6fdf05c8c71598633ca07e1e",
+      "size": 265
+    },
+    {
+      "source": ".runtime/component-inventory.json",
+      "destination": "evidence/platform/component-inventory.json",
+      "sha256": "63c16f2fc542d3c9c7ce449ebf4737e2135fc0354f6802df03e9063aace73f77",
+      "size": 13349
+    },
+    {
+      "source": ".runtime/terraform/validate.json",
+      "destination": "evidence/platform/terraform-validate-blocked.json",
+      "sha256": "f27b6442005bc9760be4a591c7fc6985b84bd1c43fb9d64f21b238ed115d515c",
+      "size": 1191
+    },
+    {
+      "source": ".runtime/terraform/init.log",
+      "destination": "evidence/platform/terraform-init.log",
+      "sha256": "2574a960635028605767a563fb5aebd8fe2b3ca417bf78051bea4fdf4f11ff1e",
+      "size": 1204
+    },
+    {
+      "source": "tmp/browser-proof/blocked-run/report.json",
+      "destination": "evidence/platform/browser-runtime-blocked.json",
+      "sha256": "d4bb46be6524b2ea73dc5e370c4ec1a3e6eb1a27851f9efb825341057b7021d5",
+      "size": 5983
+    },
+    {
+      "source": "tmp/browser-proof/fixture-verification-v11/report.json",
+      "destination": "evidence/platform/browser-fixture-verification.json",
+      "sha256": "5eb7c1aade15eea60c7b695d19a0c87716c379a193564147303fdaac3c968cb2",
+      "size": 1603
+    },
+    {
+      "source": ".runtime/benchmark-smoke-1-2.json",
+      "destination": "evidence/platform/original-load-instrumentation-incomplete.json",
+      "sha256": "9f174a098f608bc2c80d605da2f7a257ef78cf44cc3f9a2a06fbf0a98b2bc10d",
+      "size": 56714
+    }
+  ]
+}

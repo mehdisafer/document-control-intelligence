@@ -1,0 +1,24 @@
+{
+  "model_version": "dci-local-linear-1.1",
+  "model_sha256": "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1",
+  "artifact_bytes": 266904,
+  "training_documents": 72,
+  "training_fields": 576,
+  "training_inputs_sha256": "ea42c389bafe3cb5cbedaac34828d3ba62c5c07d55b471a80265349e27b4ab10",
+  "metrics": {
+    "document": {
+      "samples": 72,
+      "features": 2275,
+      "training_accuracy": 1.0,
+      "safe_runtime_max_probability_delta": 1.1102230246251565e-15
+    },
+    "field": {
+      "samples": 576,
+      "features": 270,
+      "training_accuracy": 1.0,
+      "safe_runtime_max_probability_delta": 0.0
+    }
+  },
+  "elapsed_seconds": 22.826417199999923,
+  "final_evaluation": "not_run"
+}

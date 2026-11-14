@@ -1,0 +1,169 @@
+{
+  "all_command_exit_codes_zero": false,
+  "commands": [
+    {
+      "argv": [
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+      "elapsed_seconds": 30.666282,
+      "environment_overrides": {
+        "PYTHONPATH": "src"
+      },
+      "exit_code": 0,
+      "finished_at": "2026-11-13T23:28:19.758499+00:00",
+      "log": "unittest.log",
+      "log_sha256": "dd365beecbce72c305bb99948688b536239c114ead00efe4ff6e05094e32c09b",
+      "stage": "unittest",
+      "started_at": "2026-11-13T23:27:49.092177+00:00",
+      "timeout_seconds": 240
+    },
+    {
+      "argv": [
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+        "-m",
+        "dci.cli",
+        "demo",
+        "--output",
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/demo-baseline",
+        "--profile",
+        "baseline"
+      ],
+      "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+      "elapsed_seconds": 9.957686,
+      "environment_overrides": {
+        "PYTHONPATH": "src"
+      },
+      "exit_code": 0,
+      "finished_at": "2026-11-13T23:28:29.716523+00:00",
+      "log": "demo-baseline.log",
+      "log_sha256": "1d0fcc4b01d6070c478208a24d56d4385bec6b7071c6404ceb2abc548787d88b",
+      "stage": "demo-baseline",
+      "started_at": "2026-11-13T23:28:19.758860+00:00",
+      "timeout_seconds": 120
+    },
+    {
+      "argv": [
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+        "scripts/verify_demo.py",
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/demo-baseline/result.json"
+      ],
+      "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+      "elapsed_seconds": 0.031973,
+      "environment_overrides": {
+        "PYTHONPATH": "src"
+      },
+      "exit_code": 0,
+      "finished_at": "2026-11-13T23:28:29.749119+00:00",
+      "log": "verify-demo-baseline.log",
+      "log_sha256": "a51d3f7ebd65d1359759341d55e83df2afbeabc568fe100ce19cacec3be7e740",
+      "stage": "verify-demo-baseline",
+      "started_at": "2026-11-13T23:28:29.717107+00:00",
+      "timeout_seconds": 30
+    },
+    {
+      "argv": [
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+        "-m",
+        "dci.cli",
+        "demo",
+        "--output",
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/demo-local-linear",
+        "--profile",
+        "local-linear",
+        "--model-path",
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/tmp/final-linear-model.json"
+      ],
+      "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+      "elapsed_seconds": 9.641934,
+      "environment_overrides": {
+        "PYTHONPATH": "src"
+      },
+      "exit_code": 0,
+      "finished_at": "2026-11-13T23:28:39.391275+00:00",
+      "log": "demo-local-linear.log",
+      "log_sha256": "c39aa2db8700959d845b048af18fd3fa7dab1a5d9125a2325c5e30235bc1670c",
+      "stage": "demo-local-linear",
+      "started_at": "2026-11-13T23:28:29.749296+00:00",
+      "timeout_seconds": 120
+    },
+    {
+      "argv": [
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+        "scripts/verify_demo.py",
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/demo-local-linear/result.json"
+      ],
+      "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+      "elapsed_seconds": 0.032095,
+      "environment_overrides": {
+        "PYTHONPATH": "src"
+      },
+      "exit_code": 1,
+      "finished_at": "2026-11-13T23:28:39.423722+00:00",
+      "log": "verify-demo-local-linear.log",
+      "log_sha256": "a4352a766d92e7a5ee526ded16156525a36d23deab6e898a5662c5e5b6f03325",
+      "stage": "verify-demo-local-linear",
+      "started_at": "2026-11-13T23:28:39.391605+00:00",
+      "timeout_seconds": 30
+    },
+    {
+      "argv": [
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+        "scripts/benchmark.py",
+        "--cases",
+        "3",
+        "--workers",
+        "1",
+        "2",
+        "--batch-size",
+        "2",
+        "--timeout-seconds",
+        "120",
+        "--output",
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/benchmark-1-2.json"
+      ],
+      "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+      "elapsed_seconds": 7.281682,
+      "environment_overrides": {
+        "PYTHONPATH": "src"
+      },
+      "exit_code": 0,
+      "finished_at": "2026-11-13T23:28:46.705599+00:00",
+      "log": "benchmark.log",
+      "log_sha256": "a794a3a6d510e6b4ce586de0b235af68cb1c2e86b6d7ab7226fc3cf4feba49df",
+      "stage": "benchmark",
+      "started_at": "2026-11-13T23:28:39.423905+00:00",
+      "timeout_seconds": 240
+    },
+    {
+      "argv": [
+        "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+        "-c",
+        "from pathlib import Path; import json; from dci.evaluation import evaluate_manifest; summary = evaluate_manifest(Path('tmp/final-corpus-seed42/manifest.json'), Path('outputs/evidence-final/evaluation-regression'), profiles=('baseline','local-linear'), model_path=Path('tmp/final-linear-model.json')); print(json.dumps(summary, sort_keys=True, indent=2))"
+      ],
+      "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+      "elapsed_seconds": 12.007204,
+      "environment_overrides": {
+        "PYTHONPATH": "src"
+      },
+      "exit_code": 0,
+      "finished_at": "2026-11-13T23:28:58.713150+00:00",
+      "log": "evaluation-regression.log",
+      "log_sha256": "5f25a73bb3506ea8c7d26280c90aca01e0f725cff311df4fd4b72203325e6b36",
+      "stage": "evaluation-regression",
+      "started_at": "2026-11-13T23:28:46.705959+00:00",
+      "timeout_seconds": 240
+    }
+  ],
+  "finished_at": "2026-11-13T23:28:58.722116+00:00",
+  "frozen_inputs_unchanged": true,
+  "original_commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "source_files_changed": [],
+  "source_files_unchanged": true
+}

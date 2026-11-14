@@ -1,0 +1,114 @@
+{
+  "attempt_summary_paths": [
+    "tmp/final-evaluation-all-profiles/evaluation/summary.json",
+    "tmp/final-evaluation-llm-retry/evaluation/summary.json"
+  ],
+  "documents_with_semantic_change": 0,
+  "documents_with_two_successful_responses": 12,
+  "failures_by_attempt": [
+    24,
+    17
+  ],
+  "model_profile": "original cache defaults, unchanged model/prompt/seed/context/threads",
+  "per_document": [
+    {
+      "changed": false,
+      "document_sha256": "14947348affabfddd16ed617a6a4e162f84920096d09021bd57a9350c90d4963",
+      "semantic_hashes": [
+        "eb9d17d011564f2236fc9cda6a70d7535b8df42df37dba955a92b3cd7522b072",
+        "eb9d17d011564f2236fc9cda6a70d7535b8df42df37dba955a92b3cd7522b072"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "229f3be039ae05a7124df03ce584057e98645b4635cee5f2a0b9833b74d836ea",
+      "semantic_hashes": [
+        "0e5e91788285524f6c7698f96e63dc6d4ea010f96c3ddaa243758d7ea9c06772",
+        "0e5e91788285524f6c7698f96e63dc6d4ea010f96c3ddaa243758d7ea9c06772"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "4bf9f6fd1b982e42c4ea6a46412adeb5fd2668121c5136ae99f8cffdcd77e667",
+      "semantic_hashes": [
+        "6be661177c8f780fd97b832d6e0bb166a1f2428c380df4f64475748e8f00ee91",
+        "6be661177c8f780fd97b832d6e0bb166a1f2428c380df4f64475748e8f00ee91"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "5118ee153b40c488707a73d3813d6a7dcecb0a74ac991507da9036871673b879",
+      "semantic_hashes": [
+        "446f1488ac7c6548bad18905bda848f6991bf6efe942b0fd7e642c094e68119e",
+        "446f1488ac7c6548bad18905bda848f6991bf6efe942b0fd7e642c094e68119e"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "6378158d6169dd94d7ffb18034f0abc15997eb6640fefa8301b3bae8243fdf99",
+      "semantic_hashes": [
+        "678ed028f8d1e516df31c849d3e95862b239dfda6897b86a533421166efc021e",
+        "678ed028f8d1e516df31c849d3e95862b239dfda6897b86a533421166efc021e"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "6f69f0608320fbbc4d87d99eb078ce69b3f99c88af83c0fea58886f1bc73a9ea",
+      "semantic_hashes": [
+        "0e5e91788285524f6c7698f96e63dc6d4ea010f96c3ddaa243758d7ea9c06772",
+        "0e5e91788285524f6c7698f96e63dc6d4ea010f96c3ddaa243758d7ea9c06772"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "7274f20eb36557003813da7e48c066d21c5c8147ba5133472eacfd8cbab3755e",
+      "semantic_hashes": [
+        "2f4374e0e22e781865031c57c0d537cb18715258bbad246d6d822d6d72be919d",
+        "2f4374e0e22e781865031c57c0d537cb18715258bbad246d6d822d6d72be919d"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "a58d3f227b027600b8f2ea93040ae4ac3d4330cb2752174a41b815b0dacef957",
+      "semantic_hashes": [
+        "bdd59036b8d0d8d85a53ffedd6d8ad0eaa7f85941fb8a1fd1791be08a7d2c2a0",
+        "bdd59036b8d0d8d85a53ffedd6d8ad0eaa7f85941fb8a1fd1791be08a7d2c2a0"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "a6e615ccd03c9dadf4899c3adcae10c36fafa9664718e2fe0c6cba4df75485b1",
+      "semantic_hashes": [
+        "678ed028f8d1e516df31c849d3e95862b239dfda6897b86a533421166efc021e",
+        "678ed028f8d1e516df31c849d3e95862b239dfda6897b86a533421166efc021e"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "ae6196121f9504f9e594c22fc0360fe75e1513ca350d799ce4d265a5b74ab2c4",
+      "semantic_hashes": [
+        "1fa051c7af6c7f17d82105fc7036c06da8b6d6d438e0d5c2e1ae906d6c6446f0",
+        "1fa051c7af6c7f17d82105fc7036c06da8b6d6d438e0d5c2e1ae906d6c6446f0"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "e1d29b01646279df661f36252615fe1d0f23b8c72e942be9cacbcd52c5d31560",
+      "semantic_hashes": [
+        "25b4846fb56b93ba2b6873d7a18d33efb9c89f132f7e03883e11b2e571fb7f08",
+        "25b4846fb56b93ba2b6873d7a18d33efb9c89f132f7e03883e11b2e571fb7f08"
+      ]
+    },
+    {
+      "changed": false,
+      "document_sha256": "e8e64e5a4b919a951454035c35b4c15a552dd267025d7606e73a93052126b3bd",
+      "semantic_hashes": [
+        "1e310e6c5b5332723b1f2a712dd43e8406fb039b0cb114f02242362b7964001a",
+        "1e310e6c5b5332723b1f2a712dd43e8406fb039b0cb114f02242362b7964001a"
+      ]
+    }
+  ],
+  "repetitions": 2,
+  "schema_version": "1.0",
+  "scope_note": "Only overlapping successful responses are compared. This is a small, success-conditioned repeatability sample, not a reliability pass or a full repeated benchmark. Both process failures remain recorded separately."
+}

@@ -1,0 +1,30 @@
+{
+  "namespace": "HTTP0C5AE7E7DB62",
+  "generator_version": "synthetic-purchasing-1.0",
+  "layout": "classic_en",
+  "supplier_id": "SUP-BROWSER-HTTP0C5AE7E7DB62",
+  "purchase_order_id": "PO-BROWSER-HTTP0C5AE7E7DB62",
+  "documents": [
+    {
+      "path": "purchase_order.pdf",
+      "kind": "purchase_order",
+      "document_key": "PO-BROWSER-HTTP0C5AE7E7DB62",
+      "document_id": "PO-BROWSER-HTTP0C5AE7E7DB62",
+      "sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403"
+    },
+    {
+      "path": "delivery_note.pdf",
+      "kind": "delivery_note",
+      "document_key": "DN-BROWSER-HTTP0C5AE7E7DB62",
+      "document_id": "DN-BROWSER-HTTP0C5AE7E7DB62",
+      "sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8"
+    },
+    {
+      "path": "invoice.pdf",
+      "kind": "invoice",
+      "document_key": "INV-BROWSER-HTTP0C5AE7E7DB62",
+      "document_id": "INV-BROWSER-HTTP0C5AE7E7DB62",
+      "sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2"
+    }
+  ]
+}

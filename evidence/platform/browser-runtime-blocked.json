@@ -1,0 +1,46 @@
+{
+  "schema_version": "browser-smoke-1.0",
+  "status": "blocked",
+  "started_at_unix": 1794610961.702279,
+  "execution": "fresh isolated headless browser; cloned application state; real HTTP server",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "viewport": {
+    "desktop": {
+      "width": 1365,
+      "height": 1000
+    },
+    "mobile": {
+      "width": 390,
+      "height": 1000
+    }
+  },
+  "checks": [
+    {
+      "name": "real_browser_execution",
+      "status": "blocked",
+      "detail": "No UI interaction or screenshot was executed."
+    }
+  ],
+  "issues": [],
+  "screenshots": [],
+  "console_errors": [],
+  "page_errors": [],
+  "unexpected_outbound_requests": [],
+  "credentials_in_report": false,
+  "source_files_sha256": {
+    "src/dci/static/app.js": "938eacbf2e45f90f434de9bc0a0f1387b4ffe01af9e373d5971f13b24f456a47",
+    "src/dci/static/index.html": "b67155abd33edea627176dd6b51845be490378fe135a090146a51576606f9aa4",
+    "src/dci/static/style.css": "b5553a94cb213452f1c1eeda09826480cdb92b7e4ae5fa5865247d87565a99ba"
+  },
+  "playwright_version": "1.62.0",
+  "http_server": "started_and_reachable",
+  "blocker": {
+    "stage": "browser_launch",
+    "type": "TargetClosedError",
+    "message": "BrowserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-N4WQhG --remote-debugging-pipe --no-startup-window\n<launched> pid=39\n[pid=39][err] /usr/bin/chromium: 9: [: 5222305792: unexpected operator\n[pid=39][err] [39:39:1114/000242.589082:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)\n[pid=39][err] [1114/000242.589277:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)\nCall log:\n  - <launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-N4WQhG --remote-debugging-pipe --no-startup-window\n  - <launched> pid=39\n  - [pid=39][err] /usr/bin/chromium: 9: [: 5222305792: unexpected operator\n  - [pid=39][err] [39:39:1114/000242.589082:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)\n  - [pid=39][err] [1114/000242.589277:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)\n  - [pid=39] <gracefully close start>\n  - [pid=39] <kill>\n  - [pid=39] <will force kill>\n  - [pid=39] <process did exit: exitCode=null, signal=SIGABRT>\n  - [pid=39] starting temporary directories cleanup\n  - [pid=39] finished temporary directories cleanup\n  - [pid=39] <gracefully close end>\n"
+  },
+  "server_stopped": true,
+  "browser_closed": false,
+  "finished_at_unix": 1794610962.7757444
+}

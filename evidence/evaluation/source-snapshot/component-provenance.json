@@ -1,0 +1,62 @@
+[
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/__init__.py",
+    "sha256": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/__init__.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/models.py",
+    "sha256": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/models.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/parsing.py",
+    "sha256": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/parsing.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/_parse_child.py",
+    "sha256": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/_parse_child.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/extraction.py",
+    "sha256": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/extraction.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/local_model.py",
+    "sha256": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/local_model.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/llm.py",
+    "sha256": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/llm.py"
+  },
+  {
+    "current_repository_matches": false,
+    "repository_path": "src/dci/rules.py",
+    "sha256": "79c4ec6eaee3780edfd466570ecea442a577eb262640c4dc58682b35c818a281",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/rules.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/evaluation.py",
+    "sha256": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/evaluation.py"
+  },
+  {
+    "current_repository_matches": true,
+    "repository_path": "src/dci/corpus.py",
+    "sha256": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44",
+    "snapshot_path": "evidence/evaluation/source-snapshot/src/dci/corpus.py"
+  }
+]

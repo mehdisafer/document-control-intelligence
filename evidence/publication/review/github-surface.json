@@ -1,0 +1,603 @@
+{
+  "schema_version": "github-publication-surface-review-1.0",
+  "recorded_at_utc": "2026-11-14T13:53:54.089Z",
+  "repository": "mehdisafer/document-control-intelligence",
+  "scope": "Read-only Actions run/job/artifact/log and issue/PR discussion disclosure review for this repository only. Issue/PR bodies, source history and packaged evidence are covered by the parent agent's separate reviews.",
+  "github_mutations_performed": false,
+  "source_fix_commit": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+  "run_collection": {
+    "endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs?per_page=100&page=1",
+    "total_count": 7,
+    "returned_count": 7,
+    "all_returned_runs_inspected": true,
+    "initial_queued_run_ids": [
+      43601886497
+    ],
+    "final_observation": "All seven runs are completed/failure."
+  },
+  "counts": {
+    "runs": 7,
+    "run_attempts": 7,
+    "jobs": 21,
+    "executed_steps": 0,
+    "jobs_with_runner_id_zero": 21,
+    "artifacts": 0,
+    "job_log_fetch_attempts": 21,
+    "job_logs_returned": 0,
+    "job_log_404_blob_not_found": 21,
+    "issue_1_comments": 0,
+    "pr_2_conversation_comments": 0,
+    "pr_2_reviews": 2,
+    "pr_2_inline_comments": 0,
+    "pr_2_review_threads": 0
+  },
+  "runs": [
+    {
+      "id": 43601886497,
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43601886497",
+      "head_sha": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "created_at": "2026-11-14T13:51:52Z",
+      "updated_at": "2026-11-14T13:51:56Z",
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43601886497/jobs?filter=all&per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132468198366,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T13:51:52Z",
+          "completed_at": "2026-11-14T13:51:55Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132468198521,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T13:51:53Z",
+          "completed_at": "2026-11-14T13:51:55Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132468198649,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T13:51:53Z",
+          "completed_at": "2026-11-14T13:51:56Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        }
+      ],
+      "artifacts_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43601886497/artifacts?per_page=100&page=1",
+      "artifacts_total_count": 0,
+      "artifacts": []
+    },
+    {
+      "id": 43601877789,
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43601877789",
+      "head_sha": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "created_at": "2026-11-14T13:51:46Z",
+      "updated_at": "2026-11-14T13:51:50Z",
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43601877789/jobs?filter=all&per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132468172289,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T13:51:46Z",
+          "completed_at": "2026-11-14T13:51:49Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132468172478,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T13:51:46Z",
+          "completed_at": "2026-11-14T13:51:48Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132468172559,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T13:51:46Z",
+          "completed_at": "2026-11-14T13:51:50Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        }
+      ],
+      "artifacts_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43601877789/artifacts?per_page=100&page=1",
+      "artifacts_total_count": 0,
+      "artifacts": []
+    },
+    {
+      "id": 43593182781,
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43593182781",
+      "head_sha": "cf7d1b024da8a3b26ad9bd4144e26ecff9192b1c",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "created_at": "2026-11-14T12:06:37Z",
+      "updated_at": "2026-11-14T12:06:42Z",
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43593182781/jobs?filter=all&per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132442056447,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T12:06:38Z",
+          "completed_at": "2026-11-14T12:06:41Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132442056610,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T12:06:38Z",
+          "completed_at": "2026-11-14T12:06:41Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132442056666,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T12:06:38Z",
+          "completed_at": "2026-11-14T12:06:42Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        }
+      ],
+      "artifacts_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43593182781/artifacts?per_page=100&page=1",
+      "artifacts_total_count": 0,
+      "artifacts": []
+    },
+    {
+      "id": 43593179390,
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43593179390",
+      "head_sha": "cf7d1b024da8a3b26ad9bd4144e26ecff9192b1c",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "created_at": "2026-11-14T12:06:35Z",
+      "updated_at": "2026-11-14T12:06:39Z",
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43593179390/jobs?filter=all&per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132442045974,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T12:06:35Z",
+          "completed_at": "2026-11-14T12:06:38Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132442046201,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T12:06:36Z",
+          "completed_at": "2026-11-14T12:06:38Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132442046225,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-14T12:06:36Z",
+          "completed_at": "2026-11-14T12:06:38Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        }
+      ],
+      "artifacts_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43593179390/artifacts?per_page=100&page=1",
+      "artifacts_total_count": 0,
+      "artifacts": []
+    },
+    {
+      "id": 43529263240,
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43529263240",
+      "head_sha": "8dbe831a243e66aad18c601086a8e62b3c496322",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "created_at": "2026-11-13T23:43:47Z",
+      "updated_at": "2026-11-13T23:43:52Z",
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43529263240/jobs?filter=all&per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132242600070,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:43:48Z",
+          "completed_at": "2026-11-13T23:43:51Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132242600303,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:43:48Z",
+          "completed_at": "2026-11-13T23:43:50Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132242600404,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:43:48Z",
+          "completed_at": "2026-11-13T23:43:51Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        }
+      ],
+      "artifacts_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43529263240/artifacts?per_page=100&page=1",
+      "artifacts_total_count": 0,
+      "artifacts": []
+    },
+    {
+      "id": 43527082481,
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481",
+      "head_sha": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "created_at": "2026-11-13T23:26:06Z",
+      "updated_at": "2026-11-13T23:26:10Z",
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43527082481/jobs?filter=all&per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132235393030,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:26:07Z",
+          "completed_at": "2026-11-13T23:26:09Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132235393227,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:26:07Z",
+          "completed_at": "2026-11-13T23:26:09Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132235393271,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:26:07Z",
+          "completed_at": "2026-11-13T23:26:09Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        }
+      ],
+      "artifacts_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43527082481/artifacts?per_page=100&page=1",
+      "artifacts_total_count": 0,
+      "artifacts": []
+    },
+    {
+      "id": 43527025131,
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527025131",
+      "head_sha": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "created_at": "2026-11-13T23:25:38Z",
+      "updated_at": "2026-11-13T23:25:42Z",
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43527025131/jobs?filter=all&per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132235202050,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:25:38Z",
+          "completed_at": "2026-11-13T23:25:42Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132235202311,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:25:38Z",
+          "completed_at": "2026-11-13T23:25:42Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        },
+        {
+          "id": 132235202369,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "started_at": "2026-11-13T23:25:38Z",
+          "completed_at": "2026-11-13T23:25:42Z",
+          "steps": [],
+          "logs": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          }
+        }
+      ],
+      "artifacts_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43527025131/artifacts?per_page=100&page=1",
+      "artifacts_total_count": 0,
+      "artifacts": []
+    }
+  ],
+  "discussions": {
+    "issue_1_comments": {
+      "url": "https://github.com/mehdisafer/document-control-intelligence/issues/1",
+      "method": "fetch_issue_comments (all pages)",
+      "comments": []
+    },
+    "pr_2_conversation_comments": {
+      "url": "https://github.com/mehdisafer/document-control-intelligence/pull/2",
+      "method": "fetch_issue_comments (all pages)",
+      "comments": []
+    },
+    "pr_2_reviews": {
+      "method": "list_pull_request_reviews",
+      "reviews": [
+        {
+          "id": "PRR_kwDOVtqaUc8AAAABX6W91g",
+          "state": "COMMENTED",
+          "submitted_at": "2026-11-13T23:45:48Z",
+          "body": "## Author-side assisted review of 8dbe831a243e66aad18c601086a8e62b3c496322\n\nThis is an explicitly attributed author-side review with AI assistance. It is a COMMENT, not an independent approval or a statement that the full project is accepted.\n\nI reviewed the delivered workflow and its evidence across source verification/normalization, financial reconciliation, version and lease fencing, attributed corrections, approval/publication boundaries, restoration and local-model policy. The final evidence commit changes documentation and proof artifacts only; the executed application remains source commit `3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439`.\n\n### Evidence checked\n\n- The recorded 63 runtime/contract/test/infrastructure source hashes match the executed commit. All 72 fresh baseline/local-linear semantic outputs match the earlier evaluation, excluding timing fields.\n- The original suite records 107 successful tests and no skips. The real HTTP report records 36 checks across 30 requests to a Uvicorn process with a separate model worker, including all three request/audit/job joins.\n- Baseline publishes/restores seven dossiers; raw local linear publishes/restores six. The failing seven-export assertion and original false aggregate are still present. A separate attributed subtotal correction, self-approval denial and different approver yield seven restored exports without model or parser calls.\n- Both TARs' 517 members match their recorded inventories, hashes and original bytes. All 14 ZIPs passed member/CRC checks, and all 42 exported PDFs match their original synthetic inputs. Known-secret/history checks reported no findings; this is scoped verification, not security certification.\n- Dependency auditing found zero known vulnerabilities among 32 Python runtime packages at execution time. Third-party inventory does not select or certify this project's own licence.\n\n### Findings that remain open\n\n1. Frozen local-linear footer confusion causes an extra review. Preserve the current adverse result; use a new training/tuning design and untouched holdout before claiming improvement.\n2. Bounded Qwen completes requests but fails classification/coverage quality: 3/36 correct and 0/36 eligible. Keep the profile experimental; no eligible-quality percentage can be claimed when the denominator is zero.\n3. Current-head Actions run [43529263240](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43529263240) has three failed jobs with no runner and no steps. The rejection cause is not exposed. Browser rendering, container execution and Terraform schema validation therefore remain unqualified.\n4. Intended-host deployment, repository administration, the explicit project-licence choice and any public release are separate unresolved gates. No account/billing/security/visibility setting was changed.\n\nThe scoped application and local execution evidence are reviewable. Keep this PR in draft and issue #1 open until the unresolved acceptance decisions and execution prerequisites are addressed. No merge or stable-release recommendation is made by this review.\n",
+          "author_login": "mehdisafer"
+        },
+        {
+          "id": "PRR_kwDOVtqaUc8AAAABX-wDeQ",
+          "state": "COMMENTED",
+          "submitted_at": "2026-11-14T12:07:33Z",
+          "body": "## Author-side assisted review — Apache-2.0 adoption\n\nReviewed commit `cf7d1b024da8a3b26ad9bd4144e26ecff9192b1c` following the maintainer's explicit licence choice on 2026-11-14. This COMMENT addresses the licensing delta; it is not independent approval of the full candidate.\n\n- The published LICENSE matches the official Apache-2.0 text byte-for-byte; NOTICE attributes the original project to Mehdi Safer and preserves separate upstream rights.\n- The wheel and source distribution include identical LICENSE/NOTICE bytes, with `License-Expression: Apache-2.0`. The observed build backend is the pinned setuptools80.9.0. `uv lock --check --offline` succeeds and dependency requirements are unchanged.\n- Docker's packaging inputs include both files before project installation. This is an inspected build-recipe change; a container build is not claimed.\n- All 23 application-package files and every historical result, source snapshot, model and execution harness retain their original Git objects. The full published tree comparison shows only the intended 13 new/changed files.\n- Current documentation, issue and PR resolve the licence-choice gate. The exact-source HTTP harness is unchanged; documentation now replays its frozen source in a detached worktree so packaging metadata does not weaken its guard.\n\nThe repository remains private. The other execution, administration and deployment gates remain open. Original 107-test/HTTP/model reports keep their original source attribution.",
+          "author_login": "mehdisafer"
+        }
+      ]
+    },
+    "pr_2_inline_comments": {
+      "endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/pulls/2/comments?per_page=100&page=1",
+      "comments": []
+    },
+    "pr_2_review_threads": {
+      "method": "list_pull_request_review_threads",
+      "review_threads": []
+    }
+  },
+  "disclosure_review": {
+    "retrieved_payloads_pattern_scanned": 41,
+    "credential_patterns": [
+      "private key PEM headers",
+      "GitHub tokens",
+      "AWS access-key IDs",
+      "sk-provider keys",
+      "Slack tokens",
+      "JWTs",
+      "literal bearer credentials"
+    ],
+    "credential_pattern_findings": [],
+    "content_review": "Both available review bodies discuss synthetic-project implementation, qualification evidence, source hashes, licensing and unresolved gates. No credentials, customer records or unrelated client data were observed. Maintainer attribution and repository/GitHub identifiers are intentional project metadata.",
+    "artifact_content_review": "No run artifacts are available (each artifacts endpoint reports total_count=0); no artifact archives exist to inspect.",
+    "job_log_content_review": "All 21 attempted job-log downloads return HTTP 404 with BlobNotFound. No job-log content was available for disclosure review.",
+    "limitations": "Scoped content review and known-credential-pattern scan, not certification of all possible secret formats. Future comments/runs/artifacts require a new observation."
+  },
+  "ci_interpretation": {
+    "observed": "Every job has runner_id=0, an empty runner_name and steps=[]. The requested CI application/browser/container/Terraform steps did not execute in these runs.",
+    "failure_cause": "unknown",
+    "reason": "Retrieved run/job fields and unavailable logs do not expose a cause; no billing, quota, policy or application-defect explanation is inferred.",
+    "independent_review": "Both existing PR reviews are author-side COMMENTED submissions, not independent approval."
+  }
+}
+

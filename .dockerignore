@@ -1,0 +1,12 @@
+.git
+.venv
+.runtime
+.data
+outputs
+tmp
+evidence
+auth.json
+credentials.json
+*.db*
+.env
+__pycache__

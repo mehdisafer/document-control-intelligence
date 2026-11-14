@@ -1,0 +1,4 @@
+{"declared_before_execution": {"no_failed_or_unprocessed_jobs": true, "false_acceptances": 0, "duplicate_publications": 0, "database_integrity": "ok", "business_semantics_equal_across_worker_counts": true, "latency_and_throughput": "report_only_no_scalability_or_production_SLO_claim", "profile_timeout_seconds": 120, "hard_deadline_additional_seconds": 60, "source_unchanged_during_execution": true, "retries": "configured_bounded_policy; counted_as_observed_attempts"}}
+Running 1 worker(s), 9 real PDF documents.
+Running 2 worker(s), 9 real PDF documents.
+{"output": "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/benchmark-1-2.json", "qualified_for_declared_smoke_budgets": true}

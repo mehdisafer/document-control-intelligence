@@ -1,0 +1,299 @@
+{
+  "archive_inventory_checks": [
+    {
+      "archive": "evidence/evaluation/raw-executions.tar.gz",
+      "exact_names_hashes_and_sizes_match": true,
+      "index": "evidence/evaluation/index.json",
+      "member_count": 406
+    },
+    {
+      "archive": "evidence/qualification/regression-raw-results.tar.gz",
+      "exact_names_hashes_and_sizes_match": true,
+      "index": "evidence/qualification/index.json",
+      "member_count": 111
+    }
+  ],
+  "archives": [
+    {
+      "bytes": 19681,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-baseline/injection-dossier.zip",
+      "read_completed": true,
+      "sha256": "b088b443ca9273f776186ccad8db5815880fb102219e6f493e6da0fc84ce9068",
+      "uncompressed_bytes": 139489
+    },
+    {
+      "bytes": 18668,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-baseline/duplicate-dossier.zip",
+      "read_completed": true,
+      "sha256": "e41323a995d5fa5ffd68876bdb60b084be5bf4e7c47e2924a4ee1cac0d3a6dca",
+      "uncompressed_bytes": 132462
+    },
+    {
+      "bytes": 18969,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-local-linear/versioned-dossier.zip",
+      "read_completed": true,
+      "sha256": "685654bc87fddd0059d87d6be15afb3b4919f712c31325c2deeb6d9238130b28",
+      "uncompressed_bytes": 134366
+    },
+    {
+      "bytes": 19032,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-baseline/correction-dossier.zip",
+      "read_completed": true,
+      "sha256": "13a7d11228127d9e1018cad70e7aa529bc255a865134477b2f75ad0444b1c6b2",
+      "uncompressed_bytes": 134341
+    },
+    {
+      "bytes": 18844,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-baseline/versioned-dossier.zip",
+      "read_completed": true,
+      "sha256": "5a6dfb244c19de814108d27ccc48826eb44a7a84a8ef5eeb6d2cec1984554e1c",
+      "uncompressed_bytes": 133831
+    },
+    {
+      "bytes": 19794,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/http/run-3ff93109/control-dossier.zip",
+      "read_completed": true,
+      "sha256": "677587a3c4339d87745e374ab3f3a222dfe19f7579e59eed968d18b08a9b0b9b",
+      "uncompressed_bytes": 157104
+    },
+    {
+      "bytes": 18718,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-local-linear/accepted-dossier.zip",
+      "read_completed": true,
+      "sha256": "e18cd7311ace58272548ece5c52d0261b40b7abd2966c3478ac28d8f233c96dc",
+      "uncompressed_bytes": 132876
+    },
+    {
+      "bytes": 70093,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-baseline/scanned-dossier.zip",
+      "read_completed": true,
+      "sha256": "6a623dfcddf7d2f05287a8803253b131e68e8f6a5b5e25f714765f6b01be66bd",
+      "uncompressed_bytes": 232952
+    },
+    {
+      "bytes": 18852,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-local-linear/partial-dossier.zip",
+      "read_completed": true,
+      "sha256": "2eb38e9507aafa64e93521ed7a7a8d3dccc574eca9ef411b3761665c2b8527ce",
+      "uncompressed_bytes": 132680
+    },
+    {
+      "bytes": 18644,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-baseline/accepted-dossier.zip",
+      "read_completed": true,
+      "sha256": "bb48737f73658f55ecdc9583e6f6e3915b72e184a6a7edde71f0abe494859236",
+      "uncompressed_bytes": 132447
+    },
+    {
+      "bytes": 18756,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-baseline/partial-dossier.zip",
+      "read_completed": true,
+      "sha256": "043f661d4e21bbcbef7d64cc4ad3f80700712dabfd8d4ac18b7766fd08156309",
+      "uncompressed_bytes": 132255
+    },
+    {
+      "bytes": 70175,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-local-linear/scanned-dossier.zip",
+      "read_completed": true,
+      "sha256": "f995b68c63f5fbdd6538a0f8629d715c57c9e50fc8b13e2d9cd0906b53564104",
+      "uncompressed_bytes": 233379
+    },
+    {
+      "bytes": 19117,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-local-linear/correction-dossier.zip",
+      "read_completed": true,
+      "sha256": "a2b9189a6829f9710d71f1d0976941257cb3412b06737bac60f50af5740e11dd",
+      "uncompressed_bytes": 134770
+    },
+    {
+      "bytes": 261483,
+      "kind": "tar",
+      "member_count": 111,
+      "path": "evidence/qualification/regression-raw-results.tar.gz",
+      "read_completed": true,
+      "sha256": "ebed25ac9fb4d644a152805877ad8f918f2508c97e6d5ee347b1f39327042415",
+      "uncompressed_bytes": 4873214
+    },
+    {
+      "bytes": 910153,
+      "kind": "tar",
+      "member_count": 406,
+      "path": "evidence/evaluation/raw-executions.tar.gz",
+      "read_completed": true,
+      "sha256": "6e0d417bc4244fd42486815ec3bcee34f147e8637567edf484482a67358e8817",
+      "uncompressed_bytes": 11670979
+    },
+    {
+      "bytes": 18760,
+      "crc_checked": true,
+      "dossier_manifest_and_pdf_hashes_match": true,
+      "kind": "zip",
+      "member_count": 5,
+      "original_pdf_count": 3,
+      "path": "evidence/qualification/demo-local-linear/duplicate-dossier.zip",
+      "read_completed": true,
+      "sha256": "fb1b9afa59fcbbb09d52ea98a045867384021bd53f0fa60e7e875be0fbd8ea6a",
+      "uncompressed_bytes": 132898
+    }
+  ],
+  "candidate_changed_during_scan": [],
+  "candidate_files": 208,
+  "completed_at_utc": "2026-11-14T13:52:40.131960+00:00",
+  "counts": {
+    "text_representations": 811,
+    "unique_content_bytes": 23528907,
+    "unique_contents": 767
+  },
+  "email_candidates": [
+    {
+      "classification": "github_noreply_or_reserved_example",
+      "sources": [
+        "git-commit/3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+        "git-commit/8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+        "git-commit/88ab43eeb7d27112cfc75aa450fb1f21a268f732",
+        "git-commit/8dbe831a243e66aad18c601086a8e62b3c496322",
+        "git-commit/cf7d1b024da8a3b26ad9bd4144e26ecff9192b1c"
+      ],
+      "value_sha256": "e9feac89c7ba6006bb3b3efd731797544d2b8206922bab55b6954f02168d3125"
+    }
+  ],
+  "git_refs_changed_during_scan": false,
+  "head_at_end": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+  "head_at_start": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+  "initial_worktree_status": [],
+  "limitations": [
+    "Known credential signatures and contextual literal candidates cannot prove the absence of all secrets or personal data.",
+    "PDF native text/metadata and byte provenance were inspected; image-only contents were not newly OCRed or visually inspected.",
+    "Synthetic markers, source generator and retained JSON references establish internal consistency, not independent document authenticity.",
+    "Reachable history is all local refs restored at the recorded SHAs; unreachable objects, remote-only refs, GitHub issues/PR text and hosted logs are outside this local scan.",
+    "Ignored runtime/output/dependency directories are excluded from candidate publication scope; repository metadata identifies exactly the files included.",
+    "Archive traversal, special entries, checksums and internal references were checked in memory; model inference, browser, container and deployment tests were not run.",
+    "Current Markdown link existence is checked; external URLs and fragment anchors are not validated.",
+    "Public/qualification wording requires the separately recorded human-assisted narrative review and final-head mapping."
+  ],
+  "limits": {
+    "max_archive_depth": 3,
+    "max_archive_member_bytes": 33554432,
+    "max_archive_uncompressed_bytes": 134217728
+  },
+  "markdown_links": {
+    "checked_local_references": 74,
+    "missing": []
+  },
+  "other_findings": [],
+  "pdf_summary": {
+    "hash_referenced_in_retained_json": 60,
+    "metadata_synthetic_marked": 60,
+    "native_text_synthetic_marked": 57,
+    "unique_pdfs": 60
+  },
+  "reachable_commits": [
+    "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+    "cf7d1b024da8a3b26ad9bd4144e26ecff9192b1c",
+    "8dbe831a243e66aad18c601086a8e62b3c496322",
+    "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+    "88ab43eeb7d27112cfc75aa450fb1f21a268f732"
+  ],
+  "refs_at_end": [
+    "8839be77ad24492702bcb2f53c4e74fffd7a78dd refs/heads/feat/evidence-linked-document-control",
+    "88ab43eeb7d27112cfc75aa450fb1f21a268f732 refs/heads/main"
+  ],
+  "refs_at_start": [
+    "8839be77ad24492702bcb2f53c4e74fffd7a78dd refs/heads/feat/evidence-linked-document-control",
+    "88ab43eeb7d27112cfc75aa450fb1f21a268f732 refs/heads/main"
+  ],
+  "repository": "mehdisafer/document-control-intelligence",
+  "repository_path": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+  "scan_rules": {
+    "aws_access_key": "\\b(?:AKIA|ASIA)[A-Z0-9]{16}\\b",
+    "credential_in_url": "(?:https?|postgres(?:ql)?|mysql|mongodb(?:\\+srv)?)://[^\\s/:@]+:[^\\s/@]{8,}@",
+    "github_fine_grained_token": "\\bgithub_pat_[A-Za-z0-9_]{40,}\\b",
+    "github_token": "\\bgh[pousr]_[A-Za-z0-9]{30,}\\b",
+    "google_api_key": "\\bAIza[0-9A-Za-z_-]{35}\\b",
+    "jwt_candidate": "\\beyJ[A-Za-z0-9_-]{12,}\\.eyJ[A-Za-z0-9_-]{12,}\\.[A-Za-z0-9_-]{16,}\\b",
+    "literal_bearer": "Bearer\\s+([A-Za-z0-9_\\-\\.]{24,})",
+    "openai_key": "\\bsk-(?:proj-)?[A-Za-z0-9_-]{40,}\\b",
+    "private_key": "-----BEGIN (?:RSA |DSA |EC |OPENSSH |ENCRYPTED )?PRIVATE KEY-----",
+    "slack_token": "\\bxox[baprs]-[0-9A-Za-z-]{20,}\\b"
+  },
+  "schema_version": "prepublication-disclosure-scan-1.0",
+  "secret_signature_hits": [],
+  "shallow_repository": false,
+  "started_at_utc": "2026-11-14T13:52:35.717353+00:00",
+  "supplier_identifiers": {
+    "all_observed_prefixed_SYN_SUP": false,
+    "unexpected_value_sha256": [
+      "3ee8ff3bbbb3cf7d7df587b8c25aa600859f9038c97e0f415238977f72628258",
+      "15046cfa1ae4e66028f3ebe62dae23499caf3dcece80a7ae99a8922bd0e0bd3f",
+      "9685eb765661ea3b95f31e1bb3c3b5501d0c2acdf353feeaa4d8fe32f95f77fb",
+      "ab861dc170dc2e43224e45278d3d31a675b9ebc34c9b0f48c066ca1eeaed8ee6"
+    ],
+    "unique_values": 29
+  },
+  "unique_git_blobs": 213
+}

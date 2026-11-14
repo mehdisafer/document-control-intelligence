@@ -1,0 +1,1749 @@
+{
+  "acceptance_budgets": {
+    "business_semantics_equal_across_worker_counts": true,
+    "database_integrity": "ok",
+    "duplicate_publications": 0,
+    "false_acceptances": 0,
+    "hard_deadline_additional_seconds": 60,
+    "latency_and_throughput": "report_only_no_scalability_or_production_SLO_claim",
+    "no_failed_or_unprocessed_jobs": true,
+    "profile_timeout_seconds": 120,
+    "retries": "configured_bounded_policy; counted_as_observed_attempts"
+  },
+  "business_semantics_equal_across_worker_counts": true,
+  "command": [
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+    "scripts/benchmark.py",
+    "--cases",
+    "3",
+    "--workers",
+    "1",
+    "2",
+    "--batch-size",
+    "2",
+    "--timeout-seconds",
+    "120",
+    "--output",
+    ".runtime/benchmark-smoke-1-2.json"
+  ],
+  "dependencies": {
+    "Pillow": "13.0.0",
+    "fastapi": "0.141.1",
+    "pdfplumber": "0.11.9",
+    "pydantic": "2.13.4",
+    "pypdf": "6.21.4",
+    "pypdfium2": "5.13.0",
+    "reportlab": "4.4.9"
+  },
+  "external_api_requests": 0,
+  "finished_at": "2026-11-13T23:01:21.486946+00:00",
+  "hardware": {
+    "affinity_cpu_count": 9,
+    "cgroup": {
+      "cpu.max": null,
+      "memory.current": null,
+      "memory.max": null,
+      "memory.peak": null
+    },
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "gpu_used": false,
+    "logical_cpu_count": 9,
+    "mem_total_kib": 10206472,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14"
+  },
+  "infrastructure_or_energy_cost": "not_measured",
+  "input_manifest": {
+    "documents": [
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0000",
+        "degraded": true,
+        "document_key": "train-0000-purchase_order",
+        "expected_fields": {
+          "currency": "USD",
+          "document_date": "2026-01-01",
+          "document_id": "PO-100000",
+          "purchase_order_id": "PO-100000",
+          "subtotal": "1820.50",
+          "supplier_id": "SYN-SUP-100",
+          "tax": "364.10",
+          "total": "2184.60"
+        },
+        "expected_kind": "purchase_order",
+        "expected_lines": [
+          {
+            "net_amount": "25.50",
+            "quantity": "1",
+            "sku": "LOAD-000",
+            "tax_rate": "20",
+            "unit_price": "25.50"
+          },
+          {
+            "net_amount": "53.00",
+            "quantity": "2",
+            "sku": "LOAD-001",
+            "tax_rate": "20",
+            "unit_price": "26.50"
+          },
+          {
+            "net_amount": "82.50",
+            "quantity": "3",
+            "sku": "LOAD-002",
+            "tax_rate": "20",
+            "unit_price": "27.50"
+          },
+          {
+            "net_amount": "114.00",
+            "quantity": "4",
+            "sku": "LOAD-003",
+            "tax_rate": "20",
+            "unit_price": "28.50"
+          },
+          {
+            "net_amount": "29.50",
+            "quantity": "1",
+            "sku": "LOAD-004",
+            "tax_rate": "20",
+            "unit_price": "29.50"
+          },
+          {
+            "net_amount": "61.00",
+            "quantity": "2",
+            "sku": "LOAD-005",
+            "tax_rate": "20",
+            "unit_price": "30.50"
+          },
+          {
+            "net_amount": "94.50",
+            "quantity": "3",
+            "sku": "LOAD-006",
+            "tax_rate": "20",
+            "unit_price": "31.50"
+          },
+          {
+            "net_amount": "130.00",
+            "quantity": "4",
+            "sku": "LOAD-007",
+            "tax_rate": "20",
+            "unit_price": "32.50"
+          },
+          {
+            "net_amount": "33.50",
+            "quantity": "1",
+            "sku": "LOAD-008",
+            "tax_rate": "20",
+            "unit_price": "33.50"
+          },
+          {
+            "net_amount": "69.00",
+            "quantity": "2",
+            "sku": "LOAD-009",
+            "tax_rate": "20",
+            "unit_price": "34.50"
+          },
+          {
+            "net_amount": "106.50",
+            "quantity": "3",
+            "sku": "LOAD-010",
+            "tax_rate": "20",
+            "unit_price": "35.50"
+          },
+          {
+            "net_amount": "146.00",
+            "quantity": "4",
+            "sku": "LOAD-011",
+            "tax_rate": "20",
+            "unit_price": "36.50"
+          },
+          {
+            "net_amount": "37.50",
+            "quantity": "1",
+            "sku": "LOAD-012",
+            "tax_rate": "20",
+            "unit_price": "37.50"
+          },
+          {
+            "net_amount": "77.00",
+            "quantity": "2",
+            "sku": "LOAD-013",
+            "tax_rate": "20",
+            "unit_price": "38.50"
+          },
+          {
+            "net_amount": "118.50",
+            "quantity": "3",
+            "sku": "LOAD-014",
+            "tax_rate": "20",
+            "unit_price": "39.50"
+          },
+          {
+            "net_amount": "162.00",
+            "quantity": "4",
+            "sku": "LOAD-015",
+            "tax_rate": "20",
+            "unit_price": "40.50"
+          },
+          {
+            "net_amount": "41.50",
+            "quantity": "1",
+            "sku": "LOAD-016",
+            "tax_rate": "20",
+            "unit_price": "41.50"
+          },
+          {
+            "net_amount": "85.00",
+            "quantity": "2",
+            "sku": "LOAD-017",
+            "tax_rate": "20",
+            "unit_price": "42.50"
+          },
+          {
+            "net_amount": "130.50",
+            "quantity": "3",
+            "sku": "LOAD-018",
+            "tax_rate": "20",
+            "unit_price": "43.50"
+          },
+          {
+            "net_amount": "178.00",
+            "quantity": "4",
+            "sku": "LOAD-019",
+            "tax_rate": "20",
+            "unit_price": "44.50"
+          },
+          {
+            "net_amount": "45.50",
+            "quantity": "1",
+            "sku": "LOAD-020",
+            "tax_rate": "20",
+            "unit_price": "45.50"
+          }
+        ],
+        "family_id": "train-0000",
+        "language": "en",
+        "layout": "classic_en",
+        "path": "documents/train/train-0000-purchase_order-v1.pdf",
+        "scan": false,
+        "scenario": "load_multipage",
+        "sha256": "a9ce0a99a59aa0c9d3fefb79492ac7f5eff54501eb183b6820c04476cdd794c1",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0000",
+        "degraded": true,
+        "document_key": "train-0000-delivery_note",
+        "expected_fields": {
+          "currency": "USD",
+          "document_date": "2026-01-01",
+          "document_id": "DN-100000",
+          "purchase_order_id": "PO-100000",
+          "subtotal": "1820.50",
+          "supplier_id": "SYN-SUP-100",
+          "tax": "364.10",
+          "total": "2184.60"
+        },
+        "expected_kind": "delivery_note",
+        "expected_lines": [
+          {
+            "net_amount": "25.50",
+            "quantity": "1",
+            "sku": "LOAD-000",
+            "tax_rate": "20",
+            "unit_price": "25.50"
+          },
+          {
+            "net_amount": "53.00",
+            "quantity": "2",
+            "sku": "LOAD-001",
+            "tax_rate": "20",
+            "unit_price": "26.50"
+          },
+          {
+            "net_amount": "82.50",
+            "quantity": "3",
+            "sku": "LOAD-002",
+            "tax_rate": "20",
+            "unit_price": "27.50"
+          },
+          {
+            "net_amount": "114.00",
+            "quantity": "4",
+            "sku": "LOAD-003",
+            "tax_rate": "20",
+            "unit_price": "28.50"
+          },
+          {
+            "net_amount": "29.50",
+            "quantity": "1",
+            "sku": "LOAD-004",
+            "tax_rate": "20",
+            "unit_price": "29.50"
+          },
+          {
+            "net_amount": "61.00",
+            "quantity": "2",
+            "sku": "LOAD-005",
+            "tax_rate": "20",
+            "unit_price": "30.50"
+          },
+          {
+            "net_amount": "94.50",
+            "quantity": "3",
+            "sku": "LOAD-006",
+            "tax_rate": "20",
+            "unit_price": "31.50"
+          },
+          {
+            "net_amount": "130.00",
+            "quantity": "4",
+            "sku": "LOAD-007",
+            "tax_rate": "20",
+            "unit_price": "32.50"
+          },
+          {
+            "net_amount": "33.50",
+            "quantity": "1",
+            "sku": "LOAD-008",
+            "tax_rate": "20",
+            "unit_price": "33.50"
+          },
+          {
+            "net_amount": "69.00",
+            "quantity": "2",
+            "sku": "LOAD-009",
+            "tax_rate": "20",
+            "unit_price": "34.50"
+          },
+          {
+            "net_amount": "106.50",
+            "quantity": "3",
+            "sku": "LOAD-010",
+            "tax_rate": "20",
+            "unit_price": "35.50"
+          },
+          {
+            "net_amount": "146.00",
+            "quantity": "4",
+            "sku": "LOAD-011",
+            "tax_rate": "20",
+            "unit_price": "36.50"
+          },
+          {
+            "net_amount": "37.50",
+            "quantity": "1",
+            "sku": "LOAD-012",
+            "tax_rate": "20",
+            "unit_price": "37.50"
+          },
+          {
+            "net_amount": "77.00",
+            "quantity": "2",
+            "sku": "LOAD-013",
+            "tax_rate": "20",
+            "unit_price": "38.50"
+          },
+          {
+            "net_amount": "118.50",
+            "quantity": "3",
+            "sku": "LOAD-014",
+            "tax_rate": "20",
+            "unit_price": "39.50"
+          },
+          {
+            "net_amount": "162.00",
+            "quantity": "4",
+            "sku": "LOAD-015",
+            "tax_rate": "20",
+            "unit_price": "40.50"
+          },
+          {
+            "net_amount": "41.50",
+            "quantity": "1",
+            "sku": "LOAD-016",
+            "tax_rate": "20",
+            "unit_price": "41.50"
+          },
+          {
+            "net_amount": "85.00",
+            "quantity": "2",
+            "sku": "LOAD-017",
+            "tax_rate": "20",
+            "unit_price": "42.50"
+          },
+          {
+            "net_amount": "130.50",
+            "quantity": "3",
+            "sku": "LOAD-018",
+            "tax_rate": "20",
+            "unit_price": "43.50"
+          },
+          {
+            "net_amount": "178.00",
+            "quantity": "4",
+            "sku": "LOAD-019",
+            "tax_rate": "20",
+            "unit_price": "44.50"
+          },
+          {
+            "net_amount": "45.50",
+            "quantity": "1",
+            "sku": "LOAD-020",
+            "tax_rate": "20",
+            "unit_price": "45.50"
+          }
+        ],
+        "family_id": "train-0000",
+        "language": "en",
+        "layout": "classic_en",
+        "path": "documents/train/train-0000-delivery_note-v1.pdf",
+        "scan": false,
+        "scenario": "load_multipage",
+        "sha256": "aaf7910702b1cb94e1a1ab9b8d182e01c6dc366c1900d7d5e1023663cbcda58d",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0000",
+        "degraded": true,
+        "document_key": "train-0000-invoice",
+        "expected_fields": {
+          "currency": "USD",
+          "document_date": "2026-01-01",
+          "document_id": "INV-100000",
+          "purchase_order_id": "PO-100000",
+          "subtotal": "1820.50",
+          "supplier_id": "SYN-SUP-100",
+          "tax": "364.10",
+          "total": "2184.60"
+        },
+        "expected_kind": "invoice",
+        "expected_lines": [
+          {
+            "net_amount": "25.50",
+            "quantity": "1",
+            "sku": "LOAD-000",
+            "tax_rate": "20",
+            "unit_price": "25.50"
+          },
+          {
+            "net_amount": "53.00",
+            "quantity": "2",
+            "sku": "LOAD-001",
+            "tax_rate": "20",
+            "unit_price": "26.50"
+          },
+          {
+            "net_amount": "82.50",
+            "quantity": "3",
+            "sku": "LOAD-002",
+            "tax_rate": "20",
+            "unit_price": "27.50"
+          },
+          {
+            "net_amount": "114.00",
+            "quantity": "4",
+            "sku": "LOAD-003",
+            "tax_rate": "20",
+            "unit_price": "28.50"
+          },
+          {
+            "net_amount": "29.50",
+            "quantity": "1",
+            "sku": "LOAD-004",
+            "tax_rate": "20",
+            "unit_price": "29.50"
+          },
+          {
+            "net_amount": "61.00",
+            "quantity": "2",
+            "sku": "LOAD-005",
+            "tax_rate": "20",
+            "unit_price": "30.50"
+          },
+          {
+            "net_amount": "94.50",
+            "quantity": "3",
+            "sku": "LOAD-006",
+            "tax_rate": "20",
+            "unit_price": "31.50"
+          },
+          {
+            "net_amount": "130.00",
+            "quantity": "4",
+            "sku": "LOAD-007",
+            "tax_rate": "20",
+            "unit_price": "32.50"
+          },
+          {
+            "net_amount": "33.50",
+            "quantity": "1",
+            "sku": "LOAD-008",
+            "tax_rate": "20",
+            "unit_price": "33.50"
+          },
+          {
+            "net_amount": "69.00",
+            "quantity": "2",
+            "sku": "LOAD-009",
+            "tax_rate": "20",
+            "unit_price": "34.50"
+          },
+          {
+            "net_amount": "106.50",
+            "quantity": "3",
+            "sku": "LOAD-010",
+            "tax_rate": "20",
+            "unit_price": "35.50"
+          },
+          {
+            "net_amount": "146.00",
+            "quantity": "4",
+            "sku": "LOAD-011",
+            "tax_rate": "20",
+            "unit_price": "36.50"
+          },
+          {
+            "net_amount": "37.50",
+            "quantity": "1",
+            "sku": "LOAD-012",
+            "tax_rate": "20",
+            "unit_price": "37.50"
+          },
+          {
+            "net_amount": "77.00",
+            "quantity": "2",
+            "sku": "LOAD-013",
+            "tax_rate": "20",
+            "unit_price": "38.50"
+          },
+          {
+            "net_amount": "118.50",
+            "quantity": "3",
+            "sku": "LOAD-014",
+            "tax_rate": "20",
+            "unit_price": "39.50"
+          },
+          {
+            "net_amount": "162.00",
+            "quantity": "4",
+            "sku": "LOAD-015",
+            "tax_rate": "20",
+            "unit_price": "40.50"
+          },
+          {
+            "net_amount": "41.50",
+            "quantity": "1",
+            "sku": "LOAD-016",
+            "tax_rate": "20",
+            "unit_price": "41.50"
+          },
+          {
+            "net_amount": "85.00",
+            "quantity": "2",
+            "sku": "LOAD-017",
+            "tax_rate": "20",
+            "unit_price": "42.50"
+          },
+          {
+            "net_amount": "130.50",
+            "quantity": "3",
+            "sku": "LOAD-018",
+            "tax_rate": "20",
+            "unit_price": "43.50"
+          },
+          {
+            "net_amount": "178.00",
+            "quantity": "4",
+            "sku": "LOAD-019",
+            "tax_rate": "20",
+            "unit_price": "44.50"
+          },
+          {
+            "net_amount": "45.50",
+            "quantity": "1",
+            "sku": "LOAD-020",
+            "tax_rate": "20",
+            "unit_price": "45.50"
+          }
+        ],
+        "family_id": "train-0000",
+        "language": "en",
+        "layout": "classic_en",
+        "path": "documents/train/train-0000-invoice-v1.pdf",
+        "scan": true,
+        "scenario": "load_multipage_scan",
+        "sha256": "9e374c06944821b3c930b4670d63aee356ad18ccb20735597ed32342054b611a",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0001",
+        "degraded": true,
+        "document_key": "train-0001-purchase_order",
+        "expected_fields": {
+          "currency": "EUR",
+          "document_date": "2026-01-02",
+          "document_id": "PO-100001",
+          "purchase_order_id": "PO-100001",
+          "subtotal": "1350.24",
+          "supplier_id": "SYN-SUP-101",
+          "tax": "270.05",
+          "total": "1620.29"
+        },
+        "expected_kind": "purchase_order",
+        "expected_lines": [
+          {
+            "net_amount": "728.16",
+            "quantity": "6",
+            "sku": "PART-100",
+            "tax_rate": "20",
+            "unit_price": "121.36"
+          },
+          {
+            "net_amount": "622.08",
+            "quantity": "6",
+            "sku": "PART-101",
+            "tax_rate": "20",
+            "unit_price": "103.68"
+          }
+        ],
+        "family_id": "train-0001",
+        "language": "fr",
+        "layout": "stacked_fr",
+        "path": "documents/train/train-0001-purchase_order-v1.pdf",
+        "scan": false,
+        "scenario": "normal",
+        "sha256": "fb6a57e3e2eed0a6c406fb40635ff738285b3b4ade7db7df3109aff31172d065",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0001",
+        "degraded": true,
+        "document_key": "train-0001-delivery_note",
+        "expected_fields": {
+          "currency": "EUR",
+          "document_date": "2026-01-02",
+          "document_id": "DN-100001",
+          "purchase_order_id": "PO-100001",
+          "subtotal": "1350.24",
+          "supplier_id": "SYN-SUP-101",
+          "tax": "270.05",
+          "total": "1620.29"
+        },
+        "expected_kind": "delivery_note",
+        "expected_lines": [
+          {
+            "net_amount": "728.16",
+            "quantity": "6",
+            "sku": "PART-100",
+            "tax_rate": "20",
+            "unit_price": "121.36"
+          },
+          {
+            "net_amount": "622.08",
+            "quantity": "6",
+            "sku": "PART-101",
+            "tax_rate": "20",
+            "unit_price": "103.68"
+          }
+        ],
+        "family_id": "train-0001",
+        "language": "fr",
+        "layout": "stacked_fr",
+        "path": "documents/train/train-0001-delivery_note-v1.pdf",
+        "scan": false,
+        "scenario": "normal",
+        "sha256": "b55d56bdc64cfe473d8982589fc281cb383e3bedb2ba0254888b58d2cf931bbe",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0001",
+        "degraded": true,
+        "document_key": "train-0001-invoice",
+        "expected_fields": {
+          "currency": "EUR",
+          "document_date": "2026-01-02",
+          "document_id": "INV-100001",
+          "purchase_order_id": "PO-100001",
+          "subtotal": "1350.24",
+          "supplier_id": "SYN-SUP-101",
+          "tax": "270.05",
+          "total": "1620.29"
+        },
+        "expected_kind": "invoice",
+        "expected_lines": [
+          {
+            "net_amount": "728.16",
+            "quantity": "6",
+            "sku": "PART-100",
+            "tax_rate": "20",
+            "unit_price": "121.36"
+          },
+          {
+            "net_amount": "622.08",
+            "quantity": "6",
+            "sku": "PART-101",
+            "tax_rate": "20",
+            "unit_price": "103.68"
+          }
+        ],
+        "family_id": "train-0001",
+        "language": "fr",
+        "layout": "stacked_fr",
+        "path": "documents/train/train-0001-invoice-v1.pdf",
+        "scan": false,
+        "scenario": "normal",
+        "sha256": "bed768ad48dc985a4fe728956f7593c9c2b63e1bb57c0392ec78aa4e05557604",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0002",
+        "degraded": true,
+        "document_key": "train-0002-purchase_order",
+        "expected_fields": {
+          "currency": "EUR",
+          "document_date": "2026-01-03",
+          "document_id": "PO-100002",
+          "purchase_order_id": "PO-100002",
+          "subtotal": "1009.38",
+          "supplier_id": "SYN-SUP-102",
+          "tax": "201.88",
+          "total": "1211.26"
+        },
+        "expected_kind": "purchase_order",
+        "expected_lines": [
+          {
+            "net_amount": "338.79",
+            "quantity": "3",
+            "sku": "PART-100",
+            "tax_rate": "20",
+            "unit_price": "112.93"
+          },
+          {
+            "net_amount": "304.95",
+            "quantity": "5",
+            "sku": "PART-101",
+            "tax_rate": "20",
+            "unit_price": "60.99"
+          },
+          {
+            "net_amount": "365.64",
+            "quantity": "3",
+            "sku": "PART-102",
+            "tax_rate": "20",
+            "unit_price": "121.88"
+          }
+        ],
+        "family_id": "train-0002",
+        "language": "en",
+        "layout": "classic_en",
+        "path": "documents/train/train-0002-purchase_order-v1.pdf",
+        "scan": false,
+        "scenario": "normal",
+        "sha256": "5742d659b93c46f02a1a8515b3e8ea4a60614c28ccdc222b808bcfbb84c3c8c9",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0002",
+        "degraded": true,
+        "document_key": "train-0002-delivery_note",
+        "expected_fields": {
+          "currency": "EUR",
+          "document_date": "2026-01-03",
+          "document_id": "DN-100002",
+          "purchase_order_id": "PO-100002",
+          "subtotal": "1009.38",
+          "supplier_id": "SYN-SUP-102",
+          "tax": "201.88",
+          "total": "1211.26"
+        },
+        "expected_kind": "delivery_note",
+        "expected_lines": [
+          {
+            "net_amount": "338.79",
+            "quantity": "3",
+            "sku": "PART-100",
+            "tax_rate": "20",
+            "unit_price": "112.93"
+          },
+          {
+            "net_amount": "304.95",
+            "quantity": "5",
+            "sku": "PART-101",
+            "tax_rate": "20",
+            "unit_price": "60.99"
+          },
+          {
+            "net_amount": "365.64",
+            "quantity": "3",
+            "sku": "PART-102",
+            "tax_rate": "20",
+            "unit_price": "121.88"
+          }
+        ],
+        "family_id": "train-0002",
+        "language": "en",
+        "layout": "classic_en",
+        "path": "documents/train/train-0002-delivery_note-v1.pdf",
+        "scan": false,
+        "scenario": "normal",
+        "sha256": "cbfe7efec6240ae0b1121607c6da06dae76217ab90b5cf159c5c5d7bd4b3d64c",
+        "split": "train",
+        "version": 1
+      },
+      {
+        "ambiguous_fields": [],
+        "case_key": "train-0002",
+        "degraded": true,
+        "document_key": "train-0002-invoice",
+        "expected_fields": {
+          "currency": "EUR",
+          "document_date": "2026-01-03",
+          "document_id": "INV-100002",
+          "purchase_order_id": "PO-100002",
+          "subtotal": "1009.38",
+          "supplier_id": "SYN-SUP-102",
+          "tax": "201.88",
+          "total": "1211.26"
+        },
+        "expected_kind": "invoice",
+        "expected_lines": [
+          {
+            "net_amount": "338.79",
+            "quantity": "3",
+            "sku": "PART-100",
+            "tax_rate": "20",
+            "unit_price": "112.93"
+          },
+          {
+            "net_amount": "304.95",
+            "quantity": "5",
+            "sku": "PART-101",
+            "tax_rate": "20",
+            "unit_price": "60.99"
+          },
+          {
+            "net_amount": "365.64",
+            "quantity": "3",
+            "sku": "PART-102",
+            "tax_rate": "20",
+            "unit_price": "121.88"
+          }
+        ],
+        "family_id": "train-0002",
+        "language": "en",
+        "layout": "classic_en",
+        "path": "documents/train/train-0002-invoice-v1.pdf",
+        "scan": false,
+        "scenario": "normal",
+        "sha256": "1dc94be6b90d0ce42944c21214e628597e7bbfddf7c10fa7fdea554da7cde605",
+        "split": "train",
+        "version": 1
+      }
+    ],
+    "generator_version": "synthetic-purchasing-1.0",
+    "seed": 744,
+    "selection": "training_families_only; first family expanded to21lines/3pages; optional real invoice rasterization"
+  },
+  "observed_external_api_cost_usd": "0.00",
+  "parser_runtime": "native-ocr-1.0;pypdf=6.21.4;pdfplumber=0.11.9;pypdfium2=5.13.0;Pillow=13.0.0;tesseract 5.5.0;eng.traineddata=7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2;dpi=160;lang=eng;oem=1;psm=3",
+  "profiles": [
+    {
+      "admission_seconds": 0.009402,
+      "batch_size": 2,
+      "business_semantic_sha256": "ca7d63ae6fd91f4dcd7799405d076ccabda6a503f52d312389b579406e197c59",
+      "case_reconciliation_counts": {
+        "matched": 2,
+        "review": 1
+      },
+      "checks": {
+        "all_jobs_done": true,
+        "database_integrity": true,
+        "no_false_acceptance": true,
+        "no_worker_errors": true,
+        "publication_idempotency": true
+      },
+      "db_integrity": "ok",
+      "documents": [
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0000-purchase_order",
+          "end_to_end_seconds": 0.5898702144622803,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.007656511000050159
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 3,
+          "parse_timings": {
+            "native_seconds": 0.036418,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.095217,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.316059
+          },
+          "processing_seconds": 0.3884112319999531,
+          "queue_wait_seconds_approx": 0.19791221618652344,
+          "sha256": "a9ce0a99a59aa0c9d3fefb79492ac7f5eff54501eb183b6820c04476cdd794c1",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0000-delivery_note",
+          "end_to_end_seconds": 1.0316581726074219,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.003216281000050003
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 3,
+          "parse_timings": {
+            "native_seconds": 0.03197,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.083675,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.425349
+          },
+          "processing_seconds": 0.44102092600019205,
+          "queue_wait_seconds_approx": 0.5894570350646973,
+          "sha256": "aaf7910702b1cb94e1a1ab9b8d182e01c6dc366c1900d7d5e1023663cbcda58d",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "review",
+          "document_key": "train-0000-invoice",
+          "end_to_end_seconds": 3.1202316284179688,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0014528030001201842
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": false,
+          "ocr_pages": 3,
+          "pages": 3,
+          "parse_timings": {
+            "native_seconds": 0.002343,
+            "ocr_seconds": 1.813992,
+            "parse_seconds": 1.871746,
+            "resumed_pages": 0.0,
+            "wall_seconds": 2.079497
+          },
+          "processing_seconds": 2.0876871390000815,
+          "queue_wait_seconds_approx": 1.0314428806304932,
+          "sha256": "9e374c06944821b3c930b4670d63aee356ad18ccb20735597ed32342054b611a",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0001-purchase_order",
+          "end_to_end_seconds": 3.3890137672424316,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.001460784000073545
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.012233,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.053822,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265661
+          },
+          "processing_seconds": 0.2699935830000868,
+          "queue_wait_seconds_approx": 3.118238925933838,
+          "sha256": "fb6a57e3e2eed0a6c406fb40635ff738285b3b4ade7db7df3109aff31172d065",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0001-delivery_note",
+          "end_to_end_seconds": 3.6588261127471924,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0006569269999090466
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.012225,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.07133,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265891
+          },
+          "processing_seconds": 0.269225145000064,
+          "queue_wait_seconds_approx": 3.3887839317321777,
+          "sha256": "b55d56bdc64cfe473d8982589fc281cb383e3bedb2ba0254888b58d2cf931bbe",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0001-invoice",
+          "end_to_end_seconds": 3.9299087524414062,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0007215939999696275
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.01249,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.053967,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.267083
+          },
+          "processing_seconds": 0.27070428499996524,
+          "queue_wait_seconds_approx": 3.6584346294403076,
+          "sha256": "bed768ad48dc985a4fe728956f7593c9c2b63e1bb57c0392ec78aa4e05557604",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0002-purchase_order",
+          "end_to_end_seconds": 4.1996376514434814,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0008062210001753556
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.012579,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.057204,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265684
+          },
+          "processing_seconds": 0.2697373740002149,
+          "queue_wait_seconds_approx": 3.9290688037872314,
+          "sha256": "5742d659b93c46f02a1a8515b3e8ea4a60614c28ccdc222b808bcfbb84c3c8c9",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0002-delivery_note",
+          "end_to_end_seconds": 4.469701051712036,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0008408129999679659
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.012389,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.060235,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265413
+          },
+          "processing_seconds": 0.2695876089999274,
+          "queue_wait_seconds_approx": 4.1992270946502686,
+          "sha256": "cbfe7efec6240ae0b1121607c6da06dae76217ab90b5cf159c5c5d7bd4b3d64c",
+          "status": "ready",
+          "worker_pid": 11
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0002-invoice",
+          "end_to_end_seconds": 4.739759206771851,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0009199220000937203
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.013258,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.057371,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265491
+          },
+          "processing_seconds": 0.26969282200002453,
+          "queue_wait_seconds_approx": 4.469268798828125,
+          "sha256": "1dc94be6b90d0ce42944c21214e628597e7bbfddf7c10fa7fdea554da7cde605",
+          "status": "ready",
+          "worker_pid": 11
+        }
+      ],
+      "duplicate_publications": 0,
+      "eligible_documents": 8,
+      "expected_publications": 2,
+      "false_acceptances": 0,
+      "job_counts": {
+        "done": 9
+      },
+      "latency_seconds": {
+        "end_to_end": {
+          "count": 9,
+          "max": 4.739759,
+          "p50": 3.658826,
+          "p95": 4.631736
+        },
+        "processing": {
+          "count": 9,
+          "max": 2.087687,
+          "p50": 0.269994,
+          "p95": 1.429021
+        },
+        "queue_approx": {
+          "count": 9,
+          "max": 4.469269,
+          "p50": 3.388784,
+          "p95": 4.361252
+        }
+      },
+      "processing_wall_seconds_including_spawn": 4.774619,
+      "publications": 2,
+      "resources": {
+        "descendant_peak_summed_rss_bytes": 0,
+        "method": "Linux procfs RSS sampled over parent, spawn workers, parser/OCR descendants and resource tracker; summed RSS double-counts shared pages; not unique physical RAM",
+        "parent_peak_rss_bytes": 55513088,
+        "peak_descendant_count": 0,
+        "sample_period_seconds": 0.05,
+        "samples": 92,
+        "tree_peak_summed_rss_bytes": 55513088
+      },
+      "throughput_documents_per_second": 1.884967,
+      "worker_errors": [],
+      "worker_pids_observed": [
+        11
+      ],
+      "worker_results": [
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610874.2665324,
+          "case_id": "d98f25a8-4c81-4d9f-8dc8-ea2f2a24512c",
+          "decision": "eligible",
+          "document_id": "bb33cf4f-3d60-4114-b66f-2d2a5e71a409",
+          "elapsed_seconds": 0.388411,
+          "job_id": "9fba44b3-f412-4fe5-85dc-89d3c2d4f926",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 3,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610874.658885,
+          "case_id": "d98f25a8-4c81-4d9f-8dc8-ea2f2a24512c",
+          "decision": "eligible",
+          "document_id": "65f768d7-0e33-4936-bc75-f59ae7226d5d",
+          "elapsed_seconds": 0.441021,
+          "job_id": "6011d948-ce2c-4ec3-933d-52d54882f450",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 3,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610875.1017284,
+          "case_id": "d98f25a8-4c81-4d9f-8dc8-ea2f2a24512c",
+          "decision": "review",
+          "document_id": "459134e7-57f4-404d-bb4a-2a249e400cc5",
+          "elapsed_seconds": 2.087687,
+          "job_id": "732e99a0-fa6a-4e49-9716-beb6c3b4bb91",
+          "ocr_pages": 3,
+          "outcome": "done",
+          "pages": 3,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610877.1908658,
+          "case_id": "d7273f66-4e75-4e28-95de-159b5406740b",
+          "decision": "eligible",
+          "document_id": "f78592da-0627-444f-864a-33fcb60b0ce9",
+          "elapsed_seconds": 0.269994,
+          "job_id": "bb43cd1f-bf28-48d5-845a-83d555eea683",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610877.4620929,
+          "case_id": "d7273f66-4e75-4e28-95de-159b5406740b",
+          "decision": "eligible",
+          "document_id": "4cc4ed55-7d2a-43a8-84aa-d72b29659bb8",
+          "elapsed_seconds": 0.269225,
+          "job_id": "71613580-8cc9-4b20-ae2f-8c01e86e86f6",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610877.7323816,
+          "case_id": "d7273f66-4e75-4e28-95de-159b5406740b",
+          "decision": "eligible",
+          "document_id": "46e5c715-678c-4a9a-8ea3-d418d0183d0c",
+          "elapsed_seconds": 0.270704,
+          "job_id": "8d4a52cc-f020-42f4-b686-83f36aa76290",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610878.0041585,
+          "case_id": "905ccce4-7fdb-40c9-b10d-e59da18a3d41",
+          "decision": "eligible",
+          "document_id": "b4a56798-233d-4b86-9abd-03d25b57807c",
+          "elapsed_seconds": 0.269737,
+          "job_id": "96649839-4d01-4681-a565-f0f77b2cd1f1",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610878.2749655,
+          "case_id": "905ccce4-7fdb-40c9-b10d-e59da18a3d41",
+          "decision": "eligible",
+          "document_id": "a3cfb2b7-829a-4f47-96a5-079ea0dfbd94",
+          "elapsed_seconds": 0.269588,
+          "job_id": "0fdff1f7-4ee5-4912-8a3f-0a15481d71af",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 11
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610878.5457137,
+          "case_id": "905ccce4-7fdb-40c9-b10d-e59da18a3d41",
+          "decision": "eligible",
+          "document_id": "9c555a1a-f841-4ae1-84b3-b72a0063e311",
+          "elapsed_seconds": 0.269693,
+          "job_id": "3cbe9b4c-7475-405f-8347-8cee5ab6966b",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 11
+        }
+      ],
+      "workers_requested": 1
+    },
+    {
+      "admission_seconds": 0.007841,
+      "batch_size": 2,
+      "business_semantic_sha256": "ca7d63ae6fd91f4dcd7799405d076ccabda6a503f52d312389b579406e197c59",
+      "case_reconciliation_counts": {
+        "matched": 2,
+        "review": 1
+      },
+      "checks": {
+        "all_jobs_done": true,
+        "database_integrity": true,
+        "no_false_acceptance": true,
+        "no_worker_errors": true,
+        "publication_idempotency": true
+      },
+      "db_integrity": "ok",
+      "documents": [
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0000-purchase_order",
+          "end_to_end_seconds": 0.5548925399780273,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.006977519999963988
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 3,
+          "parse_timings": {
+            "native_seconds": 0.032892,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.079889,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.26707
+          },
+          "processing_seconds": 0.32412232500018945,
+          "queue_wait_seconds_approx": 0.2273705005645752,
+          "sha256": "a9ce0a99a59aa0c9d3fefb79492ac7f5eff54501eb183b6820c04476cdd794c1",
+          "status": "ready",
+          "worker_pid": 37
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0000-delivery_note",
+          "end_to_end_seconds": 0.5586495399475098,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.004815393000171753
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 3,
+          "parse_timings": {
+            "native_seconds": 0.032587,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.08299,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.26594
+          },
+          "processing_seconds": 0.316684837999901,
+          "queue_wait_seconds_approx": 0.23832130432128906,
+          "sha256": "aaf7910702b1cb94e1a1ab9b8d182e01c6dc366c1900d7d5e1023663cbcda58d",
+          "status": "ready",
+          "worker_pid": 40
+        },
+        {
+          "attempts": 1,
+          "decision": "review",
+          "document_key": "train-0000-invoice",
+          "end_to_end_seconds": 2.385161876678467,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.001518562999990536
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": false,
+          "ocr_pages": 3,
+          "pages": 3,
+          "parse_timings": {
+            "native_seconds": 0.002406,
+            "ocr_seconds": 1.532656,
+            "parse_seconds": 1.587038,
+            "resumed_pages": 0.0,
+            "wall_seconds": 1.821994
+          },
+          "processing_seconds": 1.8298420850001094,
+          "queue_wait_seconds_approx": 0.5538620948791504,
+          "sha256": "9e374c06944821b3c930b4670d63aee356ad18ccb20735597ed32342054b611a",
+          "status": "ready",
+          "worker_pid": 37
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0001-purchase_order",
+          "end_to_end_seconds": 0.8274056911468506,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0012900480001007963
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.011925,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.054576,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265236
+          },
+          "processing_seconds": 0.2695124599999872,
+          "queue_wait_seconds_approx": 0.5569140911102295,
+          "sha256": "fb6a57e3e2eed0a6c406fb40635ff738285b3b4ade7db7df3109aff31172d065",
+          "status": "ready",
+          "worker_pid": 40
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0001-delivery_note",
+          "end_to_end_seconds": 1.0963783264160156,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0006389699999544973
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.011768,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.053601,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265192
+          },
+          "processing_seconds": 0.2685501099999783,
+          "queue_wait_seconds_approx": 0.8270590305328369,
+          "sha256": "b55d56bdc64cfe473d8982589fc281cb383e3bedb2ba0254888b58d2cf931bbe",
+          "status": "ready",
+          "worker_pid": 40
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0001-invoice",
+          "end_to_end_seconds": 1.365738868713379,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0007297360000393383
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.014401,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.072696,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265237
+          },
+          "processing_seconds": 0.26899347700009457,
+          "queue_wait_seconds_approx": 1.095900297164917,
+          "sha256": "bed768ad48dc985a4fe728956f7593c9c2b63e1bb57c0392ec78aa4e05557604",
+          "status": "ready",
+          "worker_pid": 40
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0002-purchase_order",
+          "end_to_end_seconds": 1.6352412700653076,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0008072429998264852
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.012995,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.060899,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265422
+          },
+          "processing_seconds": 0.2694786800000202,
+          "queue_wait_seconds_approx": 1.3648216724395752,
+          "sha256": "5742d659b93c46f02a1a8515b3e8ea4a60614c28ccdc222b808bcfbb84c3c8c9",
+          "status": "ready",
+          "worker_pid": 40
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0002-delivery_note",
+          "end_to_end_seconds": 1.9048583507537842,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0007824459999028477
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.012873,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.055347,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.265271
+          },
+          "processing_seconds": 0.2691047220000655,
+          "queue_wait_seconds_approx": 1.6349661350250244,
+          "sha256": "cbfe7efec6240ae0b1121607c6da06dae76217ab90b5cf159c5c5d7bd4b3d64c",
+          "status": "ready",
+          "worker_pid": 40
+        },
+        {
+          "attempts": 1,
+          "decision": "eligible",
+          "document_key": "train-0002-invoice",
+          "end_to_end_seconds": 2.194035768508911,
+          "error_code": null,
+          "extraction_timings": {
+            "extraction_seconds": 0.0043936730000950774
+          },
+          "job_status": "done",
+          "normalized_critical_and_line_values_correct": true,
+          "ocr_pages": 0,
+          "pages": 1,
+          "parse_timings": {
+            "native_seconds": 0.01322,
+            "ocr_seconds": 0.0,
+            "parse_seconds": 0.056251,
+            "resumed_pages": 0.0,
+            "wall_seconds": 0.266589
+          },
+          "processing_seconds": 0.28742208699986804,
+          "queue_wait_seconds_approx": 1.904494047164917,
+          "sha256": "1dc94be6b90d0ce42944c21214e628597e7bbfddf7c10fa7fdea554da7cde605",
+          "status": "ready",
+          "worker_pid": 40
+        }
+      ],
+      "duplicate_publications": 0,
+      "eligible_documents": 8,
+      "expected_publications": 2,
+      "false_acceptances": 0,
+      "job_counts": {
+        "done": 9
+      },
+      "latency_seconds": {
+        "end_to_end": {
+          "count": 9,
+          "max": 2.385162,
+          "p50": 1.365739,
+          "p95": 2.308711
+        },
+        "processing": {
+          "count": 9,
+          "max": 1.829842,
+          "p50": 0.269512,
+          "p95": 1.227554
+        },
+        "queue_approx": {
+          "count": 9,
+          "max": 1.904494,
+          "p50": 0.827059,
+          "p95": 1.796683
+        }
+      },
+      "processing_wall_seconds_including_spawn": 2.4576,
+      "publications": 2,
+      "resources": {
+        "descendant_peak_summed_rss_bytes": 0,
+        "method": "Linux procfs RSS sampled over parent, spawn workers, parser/OCR descendants and resource tracker; summed RSS double-counts shared pages; not unique physical RAM",
+        "parent_peak_rss_bytes": 57348096,
+        "peak_descendant_count": 0,
+        "sample_period_seconds": 0.05,
+        "samples": 48,
+        "tree_peak_summed_rss_bytes": 57348096
+      },
+      "throughput_documents_per_second": 3.662109,
+      "worker_errors": [],
+      "worker_pids_observed": [
+        37,
+        40
+      ],
+      "worker_results": [
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610879.1585968,
+          "case_id": "0f2c6a4b-a715-44e1-8b31-9eb5853ed298",
+          "decision": "eligible",
+          "document_id": "5042cc62-2bb1-4c7e-9165-9482c463e71e",
+          "elapsed_seconds": 0.324122,
+          "job_id": "d6332852-728c-48ab-b3e7-5ab78be12a60",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 3,
+          "profile": "baseline",
+          "worker_pid": 37
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610879.486738,
+          "case_id": "0f2c6a4b-a715-44e1-8b31-9eb5853ed298",
+          "decision": "review",
+          "document_id": "12462e19-af59-4fa8-9bb2-8910bce01641",
+          "elapsed_seconds": 1.829842,
+          "job_id": "8e1731f6-7361-4859-8ed6-e5ee3417bb9d",
+          "ocr_pages": 3,
+          "outcome": "done",
+          "pages": 3,
+          "profile": "baseline",
+          "worker_pid": 37
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610879.1702683,
+          "case_id": "0f2c6a4b-a715-44e1-8b31-9eb5853ed298",
+          "decision": "eligible",
+          "document_id": "a26bed76-bdf6-4b06-a899-8ce9e8be15bc",
+          "elapsed_seconds": 0.316685,
+          "job_id": "f58eb525-9a7f-41c9-bc16-b8571c27d3f3",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 3,
+          "profile": "baseline",
+          "worker_pid": 40
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610879.4910145,
+          "case_id": "78f2ec10-48de-416d-889e-8065f0e3cfc3",
+          "decision": "eligible",
+          "document_id": "d5c0511e-a4ed-4189-96f3-c89f28a5b2af",
+          "elapsed_seconds": 0.269512,
+          "job_id": "322e3423-9355-4656-b1ae-01249d2c5c43",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 40
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610879.7617826,
+          "case_id": "78f2ec10-48de-416d-889e-8065f0e3cfc3",
+          "decision": "eligible",
+          "document_id": "7090327c-1d9f-4f04-a4e8-9618ac0c743b",
+          "elapsed_seconds": 0.26855,
+          "job_id": "04d33a50-6bf8-429f-b41d-d62e0c6184f5",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 40
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610880.0313473,
+          "case_id": "78f2ec10-48de-416d-889e-8065f0e3cfc3",
+          "decision": "eligible",
+          "document_id": "1211cd8b-eb89-4090-a77c-dc84499b1f99",
+          "elapsed_seconds": 0.268993,
+          "job_id": "74f9aa89-277c-463d-be18-a965c6923af8",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 40
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610880.301522,
+          "case_id": "b9cb4090-8e37-4d87-8980-b441d07d4d1f",
+          "decision": "eligible",
+          "document_id": "3b96cfcc-4fbb-4440-a39b-03a811796e84",
+          "elapsed_seconds": 0.269479,
+          "job_id": "7ec72fd7-e11b-4e4e-97bd-c90b62e4ecc4",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 40
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610880.5722482,
+          "case_id": "b9cb4090-8e37-4d87-8980-b441d07d4d1f",
+          "decision": "eligible",
+          "document_id": "3736d38d-478c-48d8-b89b-a886bfbad799",
+          "elapsed_seconds": 0.269105,
+          "job_id": "5cc6cef8-9e32-4ece-af61-5989bb901920",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 40
+        },
+        {
+          "attempt": 1,
+          "before_claim_at": 1794610880.842398,
+          "case_id": "b9cb4090-8e37-4d87-8980-b441d07d4d1f",
+          "decision": "eligible",
+          "document_id": "bb967094-be38-4762-91a1-35938a5a165d",
+          "elapsed_seconds": 0.287422,
+          "job_id": "2a4aee36-1ac4-4c12-b76c-4c7b8f5c9f4f",
+          "ocr_pages": 0,
+          "outcome": "done",
+          "pages": 1,
+          "profile": "baseline",
+          "worker_pid": 40
+        }
+      ],
+      "workers_requested": 2
+    }
+  ],
+  "qualified_for_declared_smoke_budgets": true,
+  "schema_version": "load-evidence-1.0",
+  "scope": "Store admission and actual spawned baseline worker processes; synthetic inputs; single host",
+  "source": {
+    "git_commit": null,
+    "source_files": {
+      "contracts/purchasing-v1.json": "b177044d3f013bf6fb8760eac2430cbe82ffa7f09ce3ff9ed1efd4cc8983701f",
+      "contracts/rules-v1.json": "2ea489860abf31b056f79e38e65f8b32d090ab2b8ee036496910b0b3d5cf927b",
+      "scripts/benchmark.py": "83a64e6988276489d63bc05da3067665a816e03e07c6ebdc349c4a9af55afb66",
+      "src/dci/__init__.py": "e06b8be2bc4a07fe9dbfd88a50359d844c08eb8334a1910f932a1eff5f606246",
+      "src/dci/_parse_child.py": "11a91d9b0d00d38a95eefd541b39a0bd417ca0a6a97861966aedda1f7703f079",
+      "src/dci/api.py": "031c3a008398021db61e95f94da0e716b4f7a8a843f00697666062a991b66da1",
+      "src/dci/auth.py": "3c0053ef9c5372d6f0ab3e48c55aeae09507db917dd45c29b87a127cae41541a",
+      "src/dci/cli.py": "22b8b72cc53030fdbad3d7c0180f8dba6d8a4d8dc05bdf89042efaa6d5b188ff",
+      "src/dci/config.py": "4f67f63a90db8e79768af2a1a96a13dd59fcc4d05a31d1e580b6a644a081604d",
+      "src/dci/corpus.py": "28bb472c101784182083daf23cb8eca4294c80a864203640fe0b032c16658f44",
+      "src/dci/demo.py": "e459cfb0d2fa47a6e6c932ff57c46a8f8f5aceb380a19bbfc072151ade1f1881",
+      "src/dci/evaluation.py": "6cfc50bc8028c494a9ef3fe8335a974e13c5084a99d75141c40d9d2c6ab7a7ad",
+      "src/dci/extraction.py": "36bceb708337f3b926a087a1ed04c25eec1d1d6020ac8c0d7ea4d18c373f3ff3",
+      "src/dci/llm.py": "9a65542d611e04e32bf294ab054d4d78b7e690bb4c2ba864874489f58e8d663a",
+      "src/dci/local_model.py": "2e7aa3ac4263dd993c0accc43694e386c0856b83ea02237d749dd7504de27c33",
+      "src/dci/migrations/001_initial.sql": "2acf468ea83ad88f5c190ce22541bad8bcfa84a85d821d55e2f005de5b79d34a",
+      "src/dci/models.py": "591b8cecc5772bfca87c23de56277ffcd1bab234b56f767ce674f326088484f8",
+      "src/dci/operations.py": "4a46779442d8dd87763350242779e0991a26383e11b53e45e06e8773f186da57",
+      "src/dci/parsing.py": "3a347870b52f8003793bed6b9012dad8f9c9ffb33dd43889b0c421ce72be1c53",
+      "src/dci/rules.py": "79c4ec6eaee3780edfd466570ecea442a577eb262640c4dc58682b35c818a281",
+      "src/dci/store.py": "a070022a27f1fbe057f579b672890bd07d41961a0f9f0b3f82bff7df8ac153fd",
+      "src/dci/worker.py": "d90c0737df650dc72515cbc0a21d23c362c059f151f1cdcfff977885e1c0f1d0"
+    },
+    "source_tree_sha256": "247bb5560a3ee02ba6f7ef031213f233262715659b4d8b3285fab955d2d2a220",
+    "working_tree_dirty": true
+  },
+  "started_at": "2026-11-13T23:01:13.784988+00:00"
+}

@@ -1,0 +1,1067 @@
+{
+  "cases": [
+    {
+      "case_key": "demo-accepted",
+      "scenario": "accepted"
+    },
+    {
+      "case_key": "demo-contradictory",
+      "scenario": "contradictory"
+    },
+    {
+      "case_key": "demo-abstention",
+      "scenario": "abstention"
+    },
+    {
+      "case_key": "demo-correction",
+      "scenario": "correction"
+    },
+    {
+      "case_key": "demo-injection",
+      "scenario": "injection"
+    },
+    {
+      "case_key": "demo-partial",
+      "scenario": "partial"
+    },
+    {
+      "case_key": "demo-versioned",
+      "scenario": "versioned"
+    },
+    {
+      "case_key": "demo-scanned",
+      "scenario": "scanned"
+    },
+    {
+      "case_key": "demo-duplicate",
+      "scenario": "duplicate"
+    }
+  ],
+  "documents": [
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-accepted",
+      "degraded": false,
+      "document_key": "demo-accepted-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-001",
+        "purchase_order_id": "PO-DEMO-001",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-accepted",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-accepted-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "accepted",
+      "sha256": "22395e812c4b070e7e63f6448e812e63fa49c51cbc484f8cfb6f00e4094ca341",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-accepted",
+      "degraded": false,
+      "document_key": "demo-accepted-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-001",
+        "purchase_order_id": "PO-DEMO-001",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-accepted",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-accepted-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "accepted",
+      "sha256": "3375b12c8e054749dae67971c8157148147be1430ad99a0dd8f576f2ba5f9a97",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-accepted",
+      "degraded": false,
+      "document_key": "demo-accepted-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-001",
+        "purchase_order_id": "PO-DEMO-001",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-accepted",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-accepted-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "accepted",
+      "sha256": "0be49cfb90927a9d448161179ce7e6833529f66a7c936ae80d2a5a0162a35af2",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-contradictory",
+      "degraded": false,
+      "document_key": "demo-contradictory-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-002",
+        "purchase_order_id": "PO-DEMO-002",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-contradictory",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-contradictory-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "contradictory",
+      "sha256": "d21a824b8cb22ccc8b314d57199194e7ae0903eb9c1dac43ccfbf6af50b24555",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-contradictory",
+      "degraded": false,
+      "document_key": "demo-contradictory-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-002",
+        "purchase_order_id": "PO-DEMO-002",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-contradictory",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-contradictory-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "contradictory",
+      "sha256": "bbf69f4c33d4e88670565873cd96fc39f023a20b2e1d87717f0ee773f7a70b22",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-contradictory",
+      "degraded": false,
+      "document_key": "demo-contradictory-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-002",
+        "purchase_order_id": "PO-DEMO-002",
+        "subtotal": "1506.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "301.20",
+        "total": "1807.20"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1506.00",
+          "quantity": "12",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-contradictory",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-contradictory-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "contradictory",
+      "sha256": "01d0c0052c4f2c359954635895fba3b0ffe165af81cec696359e6c731433fa66",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-abstention",
+      "degraded": false,
+      "document_key": "demo-abstention-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-003",
+        "purchase_order_id": "PO-DEMO-003",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-abstention",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-abstention-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "abstention",
+      "sha256": "f1e31fe3a1bb9e7cfa03066aea71dc39d8c0e83fdca160de83ae327560038f84",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-abstention",
+      "degraded": false,
+      "document_key": "demo-abstention-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-003",
+        "purchase_order_id": "PO-DEMO-003",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-abstention",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-abstention-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "abstention",
+      "sha256": "2de0675236a1058d1827cda1ef89eb0f2c9915f85da87afb7e20b87b78806986",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-abstention",
+      "degraded": false,
+      "document_key": "demo-abstention-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-003",
+        "purchase_order_id": "PO-DEMO-003",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": null
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-abstention",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-abstention-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "abstention",
+      "sha256": "846f61965389fbd38e90be181d0f36ae8d8767845c6fd0a7340a5bdc7cff382d",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-correction",
+      "degraded": false,
+      "document_key": "demo-correction-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-004",
+        "purchase_order_id": "PO-DEMO-004",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-correction",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-correction-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "correction",
+      "sha256": "b0c9e51655ec1e6f71c69648e0a6ab7c3be2a84c6ea1fe402b8104797ef18a0b",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-correction",
+      "degraded": false,
+      "document_key": "demo-correction-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-004",
+        "purchase_order_id": "PO-DEMO-004",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-correction",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-correction-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "correction",
+      "sha256": "759b41b4ab04386c95abfd33b75c12bb5b9c1579db12478ca689a72068848027",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-correction",
+      "correction": {
+        "field": "total",
+        "reason": "The source total is inconsistent with its subtotal and tax; the operator records a deliberate correction after review.",
+        "value": "1506.00"
+      },
+      "degraded": false,
+      "document_key": "demo-correction-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-004",
+        "purchase_order_id": "PO-DEMO-004",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1507.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-correction",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-correction-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "correction",
+      "sha256": "2aba751f6b0652a67fa9e8b0480e5bd536d0478661bed793fa04f15d22002b54",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-injection",
+      "degraded": false,
+      "document_key": "demo-injection-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-005",
+        "purchase_order_id": "PO-DEMO-005",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-injection",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-injection-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "548bbb60287b448bb3060d5ece57bee8c32f0c7660a49aae751ef8ff2024d364",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-injection",
+      "degraded": false,
+      "document_key": "demo-injection-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-005",
+        "purchase_order_id": "PO-DEMO-005",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-injection",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-injection-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "97098a1021e66b390103b26f2c557b4d374c2ed6cb2483ece1749a21c872465e",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-injection",
+      "degraded": false,
+      "document_key": "demo-injection-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-005",
+        "purchase_order_id": "PO-DEMO-005",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-injection",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-injection-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "injection",
+      "sha256": "a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-partial",
+      "degraded": false,
+      "document_key": "demo-partial-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-006",
+        "purchase_order_id": "PO-DEMO-006",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-partial",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-partial-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "partial",
+      "sha256": "8e64f8f277e7caa8e2954dac70bc08c969b1b37b351f59ba12ab50d1bb8272fa",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-partial",
+      "degraded": false,
+      "document_key": "demo-partial-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-006",
+        "purchase_order_id": "PO-DEMO-006",
+        "subtotal": "753.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "150.60",
+        "total": "903.60"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "753.00",
+          "quantity": "6",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-partial",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-partial-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "partial",
+      "sha256": "2f0b07f48d67187b46a6df54b1d7d2f187c5828e7483be204034f1e3d2334f7f",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-partial",
+      "degraded": false,
+      "document_key": "demo-partial-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-006",
+        "purchase_order_id": "PO-DEMO-006",
+        "subtotal": "502.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "100.40",
+        "total": "602.40"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "502.00",
+          "quantity": "4",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-partial",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-partial-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "partial",
+      "sha256": "1fe34541f813d43714c623e724c9a14cb9e27c7c6bb4b2806f2e3c5c7ccc2636",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-versioned",
+      "degraded": false,
+      "document_key": "demo-versioned-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-007",
+        "purchase_order_id": "PO-DEMO-007",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-versioned",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-versioned-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "versioned",
+      "sha256": "de08b771680fe53c7ce35a2b099b993c95f00bba0a3ff99f226690de8f41897a",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-versioned",
+      "degraded": false,
+      "document_key": "demo-versioned-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-007",
+        "purchase_order_id": "PO-DEMO-007",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-versioned",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-versioned-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "versioned",
+      "sha256": "6d391ef4fc6f48300572b8f8dfe487571dac66d8225158785319038491b8ed6c",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-versioned",
+      "degraded": false,
+      "document_key": "demo-versioned-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-007",
+        "purchase_order_id": "PO-DEMO-007",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1507.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-versioned",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-versioned-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "versioned",
+      "sha256": "a4cb6eb488de4fedbfafee66c0b3aa39067101a65417e83dd3d917658288a623",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-versioned",
+      "degraded": false,
+      "document_key": "demo-versioned-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-007",
+        "purchase_order_id": "PO-DEMO-007",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-versioned",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-versioned-invoice-v2.pdf",
+      "scan": false,
+      "scenario": "versioned",
+      "sha256": "2862ba5b61556224a0020b0a9c827705d5edd8e54ad2b53fa70440938312a97e",
+      "split": "demo",
+      "version": 2
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-scanned",
+      "degraded": false,
+      "document_key": "demo-scanned-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-008",
+        "purchase_order_id": "PO-DEMO-008",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-scanned",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-scanned-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "scanned",
+      "sha256": "d03729678aa03966bdabd7e1a1bd2465c7dc41578edcb5b218cca56b1b26d7f1",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-scanned",
+      "degraded": false,
+      "document_key": "demo-scanned-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-008",
+        "purchase_order_id": "PO-DEMO-008",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-scanned",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-scanned-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "scanned",
+      "sha256": "7f016c719450dfcb9a51b426181445c7cfba813efbdfcd5adfb2453481980231",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-scanned",
+      "degraded": false,
+      "document_key": "demo-scanned-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-008",
+        "purchase_order_id": "PO-DEMO-008",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-scanned",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-scanned-invoice-v1.pdf",
+      "scan": true,
+      "scenario": "scanned",
+      "sha256": "747f2f9a8a185cc78ebbef8df92658ffe11d82c0b600462eaf657c10e81516b1",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-duplicate",
+      "degraded": false,
+      "document_key": "demo-duplicate-purchase_order",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "PO-DEMO-009",
+        "purchase_order_id": "PO-DEMO-009",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "purchase_order",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-duplicate",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-duplicate-purchase_order-v1.pdf",
+      "scan": false,
+      "scenario": "duplicate",
+      "sha256": "b4346f4dec56f9fef6023a3991f582a8ca049dab6eb48a2888e617b8f0d658d7",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-duplicate",
+      "degraded": false,
+      "document_key": "demo-duplicate-delivery_note",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "DN-DEMO-009",
+        "purchase_order_id": "PO-DEMO-009",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "delivery_note",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-duplicate",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-duplicate-delivery_note-v1.pdf",
+      "scan": false,
+      "scenario": "duplicate",
+      "sha256": "5aaa90209b76ca56845c979b6fe909ea376ecf1a4248c8f0c99dcad9e5af4856",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-duplicate",
+      "degraded": false,
+      "document_key": "demo-duplicate-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-009",
+        "purchase_order_id": "PO-DEMO-009",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-duplicate",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-duplicate-invoice-v1.pdf",
+      "scan": false,
+      "scenario": "duplicate",
+      "sha256": "7bb8cdcde4ff5ccf3e356475398cb37c8e3b6728a93a8a70a8d42a1760149978",
+      "split": "demo",
+      "version": 1
+    },
+    {
+      "ambiguous_fields": [],
+      "case_key": "demo-duplicate",
+      "degraded": false,
+      "document_key": "demo-duplicate-invoice",
+      "expected_fields": {
+        "currency": "EUR",
+        "document_date": "2026-01-15",
+        "document_id": "INV-DEMO-009",
+        "purchase_order_id": "PO-DEMO-009",
+        "subtotal": "1255.00",
+        "supplier_id": "SYN-SUP-001",
+        "tax": "251.00",
+        "total": "1506.00"
+      },
+      "expected_kind": "invoice",
+      "expected_lines": [
+        {
+          "net_amount": "1255.00",
+          "quantity": "10",
+          "sku": "PART-100",
+          "tax_rate": "20",
+          "unit_price": "125.50"
+        }
+      ],
+      "family_id": "demo-duplicate",
+      "language": "en",
+      "layout": "classic_en",
+      "path": "documents/demo/demo-duplicate-invoice-resubmitted.pdf",
+      "resubmission": true,
+      "scan": false,
+      "scenario": "duplicate",
+      "sha256": "7bb8cdcde4ff5ccf3e356475398cb37c8e3b6728a93a8a70a8d42a1760149978",
+      "split": "demo",
+      "version": 1
+    }
+  ],
+  "generator_version": "synthetic-purchasing-1.0",
+  "rights": "Entirely synthetic; generated specifically for this repository.",
+  "schema_version": "1.0",
+  "seed": 42
+}

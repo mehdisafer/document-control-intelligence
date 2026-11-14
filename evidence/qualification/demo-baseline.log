@@ -1,0 +1,295 @@
+/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+{"trace_id": "9f13b96c-c759-4371-8097-3f96b4cde04c", "method": "POST", "status": 201, "duration_seconds": 0.005571}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "749585c6-2438-4a87-af57-b65c857c457b", "method": "POST", "status": 201, "duration_seconds": 0.003492}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "9a781395-a60c-4b4d-be0d-af3c227faa55", "method": "POST", "status": 201, "duration_seconds": 0.003425}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "7d6e27c4-2e81-4204-90ff-5599af432524", "method": "POST", "status": 201, "duration_seconds": 0.004218}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "80febe4e-2e38-4619-9893-767e13e96cb9", "method": "POST", "status": 201, "duration_seconds": 0.003655}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "04c33fef-7c38-40bc-901e-c952ac1c1aa7", "method": "POST", "status": 201, "duration_seconds": 0.003646}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "7d955e3d-446c-49c6-910f-95afc5e24771", "method": "POST", "status": 201, "duration_seconds": 0.005252}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "48049c2f-1535-49a4-833d-1b7236f1e631", "method": "POST", "status": 201, "duration_seconds": 0.003084}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "30c8def2-6fc9-41f5-9eb8-fdb16921d4ef", "method": "POST", "status": 201, "duration_seconds": 0.005551}
+HTTP Request: POST http://testserver/api/cases "HTTP/1.1 201 Created"
+{"trace_id": "eb57da5b-b0f2-41b8-b8ea-1f15c1472eed", "method": "POST", "status": 202, "duration_seconds": 0.042086}
+HTTP Request: POST http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/documents?document_key=demo-accepted-purchase_order&filename=demo-accepted-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "8c00e360-3244-49f7-b811-f9c0d1e60310", "method": "POST", "status": 202, "duration_seconds": 0.005971}
+HTTP Request: POST http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/documents?document_key=demo-accepted-delivery_note&filename=demo-accepted-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "458ac41a-bd47-4cdb-b22a-66b0cfc2f4fc", "method": "POST", "status": 202, "duration_seconds": 0.004705}
+HTTP Request: POST http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/documents?document_key=demo-accepted-invoice&filename=demo-accepted-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "38f1f7f9-cad9-4fe6-8c5b-6d842a802df9", "method": "POST", "status": 202, "duration_seconds": 0.004813}
+HTTP Request: POST http://testserver/api/cases/6b146b3c-69c4-4068-94cd-19d319d59072/documents?document_key=demo-contradictory-purchase_order&filename=demo-contradictory-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "c7ecc540-2946-4c71-ae4d-aaffe2b935d7", "method": "POST", "status": 202, "duration_seconds": 0.004513}
+HTTP Request: POST http://testserver/api/cases/6b146b3c-69c4-4068-94cd-19d319d59072/documents?document_key=demo-contradictory-delivery_note&filename=demo-contradictory-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "cdaeddff-619e-4e0a-b08b-aef020162cbd", "method": "POST", "status": 202, "duration_seconds": 0.004604}
+HTTP Request: POST http://testserver/api/cases/6b146b3c-69c4-4068-94cd-19d319d59072/documents?document_key=demo-contradictory-invoice&filename=demo-contradictory-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "f7ac8193-e516-4492-a095-2da616eba9e9", "method": "POST", "status": 202, "duration_seconds": 0.005789}
+HTTP Request: POST http://testserver/api/cases/68b0f77c-90a8-4618-9585-520d645ea649/documents?document_key=demo-abstention-purchase_order&filename=demo-abstention-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "45c8c3a2-bfad-4fc2-8691-49b67904a627", "method": "POST", "status": 202, "duration_seconds": 0.003446}
+HTTP Request: POST http://testserver/api/cases/68b0f77c-90a8-4618-9585-520d645ea649/documents?document_key=demo-abstention-delivery_note&filename=demo-abstention-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "a8b7f934-829b-408e-88dd-90d5f8841270", "method": "POST", "status": 202, "duration_seconds": 0.004441}
+HTTP Request: POST http://testserver/api/cases/68b0f77c-90a8-4618-9585-520d645ea649/documents?document_key=demo-abstention-invoice&filename=demo-abstention-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "fb0eb954-b3ca-49b1-a08b-f2e168ec33d8", "method": "POST", "status": 202, "duration_seconds": 0.004313}
+HTTP Request: POST http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/documents?document_key=demo-correction-purchase_order&filename=demo-correction-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "91d876d4-6c63-4cbc-bbff-301a28f2f317", "method": "POST", "status": 202, "duration_seconds": 0.004905}
+HTTP Request: POST http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/documents?document_key=demo-correction-delivery_note&filename=demo-correction-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "fab7d0a4-59c4-4a2a-b3c2-f46034ff1bdf", "method": "POST", "status": 202, "duration_seconds": 0.004584}
+HTTP Request: POST http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/documents?document_key=demo-correction-invoice&filename=demo-correction-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "c7131aaa-e8a5-403b-82c6-3a7dec7faab9", "method": "POST", "status": 202, "duration_seconds": 0.004958}
+HTTP Request: POST http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/documents?document_key=demo-injection-purchase_order&filename=demo-injection-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "8037a9c8-8af8-4b15-b140-e0c167cc67d1", "method": "POST", "status": 202, "duration_seconds": 0.006515}
+HTTP Request: POST http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/documents?document_key=demo-injection-delivery_note&filename=demo-injection-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "feea41c1-a53d-4c2d-a681-9bf339a80107", "method": "POST", "status": 202, "duration_seconds": 0.010036}
+HTTP Request: POST http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/documents?document_key=demo-injection-invoice&filename=demo-injection-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "3c13222e-ff54-4afd-bf72-31a2ff85507a", "method": "POST", "status": 202, "duration_seconds": 0.004908}
+HTTP Request: POST http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/documents?document_key=demo-partial-purchase_order&filename=demo-partial-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "853db4cf-5cab-44c7-8a28-c148e0b055d5", "method": "POST", "status": 202, "duration_seconds": 0.005171}
+HTTP Request: POST http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/documents?document_key=demo-partial-delivery_note&filename=demo-partial-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "36ff44a1-e43b-4e3e-afec-2f0395e98c82", "method": "POST", "status": 202, "duration_seconds": 0.005071}
+HTTP Request: POST http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/documents?document_key=demo-partial-invoice&filename=demo-partial-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "f60942f5-b919-4965-a838-2897d267c6ce", "method": "POST", "status": 202, "duration_seconds": 0.004638}
+HTTP Request: POST http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/documents?document_key=demo-versioned-purchase_order&filename=demo-versioned-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"attempt": 1, "case_id": "b2765be7-9298-4918-8edd-10823c63d64f", "decision": "eligible", "document_id": "7af694fe-8a52-436e-a3dd-7dda34bd6e4d", "elapsed_seconds": 0.27253, "job_id": "0f130eda-dc82-4532-8773-4b4a17d8f04e", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "b2765be7-9298-4918-8edd-10823c63d64f", "decision": "eligible", "document_id": "1d9224f1-d4ec-4eb3-9cfd-b3efafe588c5", "elapsed_seconds": 0.32075, "job_id": "f9ced0a6-75ab-4a76-b50b-873e3e0792fd", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "b2765be7-9298-4918-8edd-10823c63d64f", "decision": "eligible", "document_id": "8ba843b6-f3bd-4bbe-ba7b-7751f8ec22e0", "elapsed_seconds": 0.269996, "job_id": "844f99e4-fc26-427d-949c-c7fb1fe9766d", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "6b146b3c-69c4-4068-94cd-19d319d59072", "decision": "eligible", "document_id": "bb7aa7d7-cb91-45cf-8bfa-067c18cd10be", "elapsed_seconds": 0.26994, "job_id": "1c44787b-c5fd-4c2f-949e-02ac22733299", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "6b146b3c-69c4-4068-94cd-19d319d59072", "decision": "eligible", "document_id": "325fe935-14b1-4146-ad24-8b00c93e4631", "elapsed_seconds": 0.270859, "job_id": "4f92e578-7095-4bc6-b410-8669455e53f4", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "6b146b3c-69c4-4068-94cd-19d319d59072", "decision": "eligible", "document_id": "cdf3df46-32a8-4a7d-8f86-5c9fad4b935c", "elapsed_seconds": 0.274971, "job_id": "9e2687d0-76ea-4e05-8bf2-f1528e87c11d", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "68b0f77c-90a8-4618-9585-520d645ea649", "decision": "eligible", "document_id": "f759f311-c9f3-4102-9df6-a8a864aeefeb", "elapsed_seconds": 0.272463, "job_id": "6fd2d291-7f37-4fdc-8cf0-95e3bb08eb79", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "68b0f77c-90a8-4618-9585-520d645ea649", "decision": "eligible", "document_id": "6e4be56d-600a-418f-8c83-55d2f41141b5", "elapsed_seconds": 0.271902, "job_id": "89e1dd07-3695-4e96-bf98-f4de4a4f6718", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "68b0f77c-90a8-4618-9585-520d645ea649", "decision": "review", "document_id": "241ffb66-de7b-4b8f-be99-cda4fe7cd2fb", "elapsed_seconds": 0.270488, "job_id": "384784bd-86b9-4101-be87-fa685d27ccff", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "12230e1a-f1e8-420b-9807-822a965a088a", "decision": "eligible", "document_id": "5faee9a4-9d79-4b12-beff-4b1d15b63fd0", "elapsed_seconds": 0.269949, "job_id": "aff21022-45f5-40a1-ab62-2f38830b1f8f", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "12230e1a-f1e8-420b-9807-822a965a088a", "decision": "eligible", "document_id": "4f3a0873-79a9-4613-a9cf-acac53950bdd", "elapsed_seconds": 0.270055, "job_id": "f2e3d5b7-2222-4312-8751-be608958c0c9", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "12230e1a-f1e8-420b-9807-822a965a088a", "decision": "rejected", "document_id": "e20f51ca-c956-4c23-ae93-be4890247135", "elapsed_seconds": 0.269523, "job_id": "c96380cf-fd4e-43b3-9d87-7732a2f27cdb", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "f5a53031-5fae-47d9-8d84-b776f7356fdf", "decision": "eligible", "document_id": "136545c5-4dc1-47e0-beba-e76d02a6c5be", "elapsed_seconds": 0.269851, "job_id": "518b2fdc-b1b6-4418-ac80-82ebcf096b5c", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "f5a53031-5fae-47d9-8d84-b776f7356fdf", "decision": "eligible", "document_id": "085e114b-9560-415f-843a-68cec7c4e1ce", "elapsed_seconds": 0.26975, "job_id": "3aa93a12-3e3a-4e16-b30b-174ef6a6d6bc", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "f5a53031-5fae-47d9-8d84-b776f7356fdf", "decision": "eligible", "document_id": "c59674b9-5dfe-4dce-885d-6c2e4758c81c", "elapsed_seconds": 0.270555, "job_id": "db09a98f-f786-40d2-9978-1c707aedc280", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "8987dac7-7f43-4875-a2a6-c37bd93702d6", "decision": "eligible", "document_id": "5671c40b-be02-4148-a0f1-23c98ac805df", "elapsed_seconds": 0.395626, "job_id": "8ff5a0d7-954a-433e-b269-da7003669f2f", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "8987dac7-7f43-4875-a2a6-c37bd93702d6", "decision": "eligible", "document_id": "671f30ee-ada8-47fa-9296-e1e4a19bb84f", "elapsed_seconds": 0.271883, "job_id": "6ce7505c-7ca2-4891-b9fc-a96d32b5dec9", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "8987dac7-7f43-4875-a2a6-c37bd93702d6", "decision": "eligible", "document_id": "9507332a-7780-49c8-8b7b-d247e1d36000", "elapsed_seconds": 0.269684, "job_id": "428104aa-dc9d-4423-89d3-8e41ef15d320", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "33508919-0895-4b39-908a-22c49bbda9ca", "decision": "eligible", "document_id": "5e6345c1-57d6-45d1-9206-65c98748effa", "elapsed_seconds": 0.269651, "job_id": "455b8e30-4b9d-4012-a5ce-25a45e9f92b5", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"trace_id": "ca56fe33-5f43-4811-bf49-2f1d37da8244", "method": "POST", "status": 202, "duration_seconds": 0.006129}
+HTTP Request: POST http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/documents?document_key=demo-versioned-delivery_note&filename=demo-versioned-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"attempt": 1, "case_id": "33508919-0895-4b39-908a-22c49bbda9ca", "decision": "eligible", "document_id": "dd9c17f4-c1d2-4e6d-a98d-dfd8083ffcfe", "elapsed_seconds": 0.270353, "job_id": "cc9cf436-d080-4ffe-a535-b26e441c1ec4", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"trace_id": "ed0bcf75-a84f-4e77-9b70-1d4583ca2d89", "method": "POST", "status": 202, "duration_seconds": 0.005611}
+HTTP Request: POST http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/documents?document_key=demo-versioned-invoice&filename=demo-versioned-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"attempt": 1, "case_id": "33508919-0895-4b39-908a-22c49bbda9ca", "decision": "rejected", "document_id": "e3259d5a-3219-4640-9269-c3bcd25edeb9", "elapsed_seconds": 0.269964, "job_id": "30e7b64c-b010-479f-a6ae-a07f93d80471", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"trace_id": "5266493c-4f0e-4b9d-b89c-4bfc40957ee1", "method": "POST", "status": 202, "duration_seconds": 0.004939}
+HTTP Request: POST http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/documents?document_key=demo-versioned-invoice&filename=demo-versioned-invoice-v2.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "838b36d3-a80a-4e6b-8002-d6c744eb2fcd", "method": "POST", "status": 202, "duration_seconds": 0.004656}
+HTTP Request: POST http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/documents?document_key=demo-scanned-purchase_order&filename=demo-scanned-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "a726287b-96b1-46db-ae6c-ed6c964fea74", "method": "POST", "status": 202, "duration_seconds": 0.004856}
+HTTP Request: POST http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/documents?document_key=demo-scanned-delivery_note&filename=demo-scanned-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "98370cc3-83ff-4a69-b982-81babb3aa2be", "method": "POST", "status": 202, "duration_seconds": 0.005292}
+HTTP Request: POST http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/documents?document_key=demo-scanned-invoice&filename=demo-scanned-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "4a5753ab-d73d-47eb-bfff-68b8bb1e0944", "method": "POST", "status": 202, "duration_seconds": 0.005242}
+HTTP Request: POST http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/documents?document_key=demo-duplicate-purchase_order&filename=demo-duplicate-purchase_order-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "98830af0-86c9-49b0-92e6-e311e4d5b1c7", "method": "POST", "status": 202, "duration_seconds": 0.005717}
+HTTP Request: POST http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/documents?document_key=demo-duplicate-delivery_note&filename=demo-duplicate-delivery_note-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "64dd8949-8c13-4191-9b8a-d00b149a219e", "method": "POST", "status": 202, "duration_seconds": 0.00397}
+HTTP Request: POST http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/documents?document_key=demo-duplicate-invoice&filename=demo-duplicate-invoice-v1.pdf "HTTP/1.1 202 Accepted"
+{"trace_id": "34210151-9fe6-434d-87f7-2f6086ed576e", "method": "POST", "status": 202, "duration_seconds": 0.002126}
+HTTP Request: POST http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/documents?document_key=demo-duplicate-invoice&filename=demo-duplicate-invoice-resubmitted.pdf "HTTP/1.1 202 Accepted"
+{"attempt": 1, "case_id": "33508919-0895-4b39-908a-22c49bbda9ca", "decision": "eligible", "document_id": "ae1e3824-9f84-4a99-aec8-c1801de9a7db", "elapsed_seconds": 0.282446, "job_id": "6c149d80-78f9-4c14-9125-c68ee2293b16", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "5defac19-0e24-4613-9b79-f9a08e8660bc", "decision": "eligible", "document_id": "e27de191-aeac-46c9-a71c-228e5bd61ebc", "elapsed_seconds": 0.270455, "job_id": "d2d8a3eb-c43a-4963-94f0-aed15b0e7bfb", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "5defac19-0e24-4613-9b79-f9a08e8660bc", "decision": "eligible", "document_id": "bd3ad8b2-cbe3-4ad8-8a80-e505e9350fa3", "elapsed_seconds": 0.270622, "job_id": "67c87b86-ce70-4a02-8c30-b0aae931e0e9", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "5defac19-0e24-4613-9b79-f9a08e8660bc", "decision": "eligible", "document_id": "b9c15301-1988-429d-9414-8a0a3bad7d14", "elapsed_seconds": 0.771852, "job_id": "45456ab8-d92e-41f9-9c04-4efa66f1a8e8", "ocr_pages": 1, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "e529bcd8-7ce7-4294-bb98-1885c51d5623", "decision": "eligible", "document_id": "339e3abc-e299-4a9f-bbd8-5081e0956805", "elapsed_seconds": 0.270579, "job_id": "a0ac7656-7c75-4261-a085-084d6fb73dd2", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "e529bcd8-7ce7-4294-bb98-1885c51d5623", "decision": "eligible", "document_id": "cf8d26b8-d2c7-4a2d-8999-c2fc0c867458", "elapsed_seconds": 0.271668, "job_id": "c82af61f-fc75-47cf-9ded-ea24d7eec2e1", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"attempt": 1, "case_id": "e529bcd8-7ce7-4294-bb98-1885c51d5623", "decision": "eligible", "document_id": "8873f263-24cc-4a88-9f10-112e1c71ba14", "elapsed_seconds": 0.320905, "job_id": "2962efc2-0d9a-418b-9cb6-ad143997acd7", "ocr_pages": 0, "outcome": "done", "pages": 1, "profile": "baseline"}
+{"trace_id": "583cf15c-7fa3-4bc5-bd05-706d4e077eb7", "method": "GET", "status": 200, "duration_seconds": 0.004319}
+HTTP Request: GET http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f "HTTP/1.1 200 OK"
+{"trace_id": "55691a3f-8335-40a0-89a4-6dec177d9bc0", "method": "GET", "status": 200, "duration_seconds": 0.003592}
+HTTP Request: GET http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f "HTTP/1.1 200 OK"
+{"trace_id": "fd9b48a9-a5be-4fe8-991b-30ebf96213c6", "method": "POST", "status": 200, "duration_seconds": 0.015208}
+HTTP Request: POST http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/accept "HTTP/1.1 200 OK"
+{"trace_id": "6525ca97-25b4-4e05-9f3a-f5b2898a779c", "method": "POST", "status": 200, "duration_seconds": 0.012167}
+HTTP Request: POST http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/publish "HTTP/1.1 200 OK"
+{"trace_id": "5ca900b2-4559-45ea-982d-82450c036423", "method": "POST", "status": 200, "duration_seconds": 0.007266}
+HTTP Request: POST http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/publish "HTTP/1.1 200 OK"
+{"trace_id": "38569216-9820-47ae-aed3-930658993525", "method": "GET", "status": 200, "duration_seconds": 0.006916}
+HTTP Request: GET http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/export "HTTP/1.1 200 OK"
+{"trace_id": "cc0c5275-bd24-4ce1-8a6f-4614ef213aba", "method": "GET", "status": 200, "duration_seconds": 0.008384}
+HTTP Request: GET http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/export.zip "HTTP/1.1 200 OK"
+{"trace_id": "4b323c41-8cf1-4c31-a547-40cc77142934", "method": "GET", "status": 200, "duration_seconds": 0.001916}
+HTTP Request: GET http://testserver/api/cases/b2765be7-9298-4918-8edd-10823c63d64f/audit "HTTP/1.1 200 OK"
+{"trace_id": "01556afd-03c9-4a7f-a673-51c6c8c0ce0a", "method": "GET", "status": 200, "duration_seconds": 0.003228}
+HTTP Request: GET http://testserver/api/cases/6b146b3c-69c4-4068-94cd-19d319d59072 "HTTP/1.1 200 OK"
+{"trace_id": "cde01bf5-ce32-4643-aaeb-bf489df13363", "method": "GET", "status": 200, "duration_seconds": 0.003049}
+HTTP Request: GET http://testserver/api/cases/6b146b3c-69c4-4068-94cd-19d319d59072 "HTTP/1.1 200 OK"
+{"trace_id": "9d46a418-8819-4170-bd8f-1c25079da486", "method": "GET", "status": 200, "duration_seconds": 0.00191}
+HTTP Request: GET http://testserver/api/cases/6b146b3c-69c4-4068-94cd-19d319d59072/audit "HTTP/1.1 200 OK"
+{"trace_id": "2bd8e7b1-47f2-4db7-b679-64ba56cc9a43", "method": "GET", "status": 200, "duration_seconds": 0.003073}
+HTTP Request: GET http://testserver/api/cases/68b0f77c-90a8-4618-9585-520d645ea649 "HTTP/1.1 200 OK"
+{"trace_id": "e71aa67f-56e3-45cf-acc7-5d0581282206", "method": "GET", "status": 200, "duration_seconds": 0.003073}
+HTTP Request: GET http://testserver/api/cases/68b0f77c-90a8-4618-9585-520d645ea649 "HTTP/1.1 200 OK"
+{"trace_id": "b0c0796c-9ae7-4ba6-9510-ecdd050fbd3b", "method": "GET", "status": 200, "duration_seconds": 0.001562}
+HTTP Request: GET http://testserver/api/cases/68b0f77c-90a8-4618-9585-520d645ea649/audit "HTTP/1.1 200 OK"
+{"trace_id": "f396c2d1-5d3b-4b36-b77a-d8ddbac7fa52", "method": "GET", "status": 200, "duration_seconds": 0.003387}
+HTTP Request: GET http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a "HTTP/1.1 200 OK"
+{"trace_id": "6d8a32a6-9fb2-41b3-bb12-42f63dc9c8b4", "method": "GET", "status": 200, "duration_seconds": 0.003307}
+HTTP Request: GET http://testserver/api/documents/e20f51ca-c956-4c23-ae93-be4890247135 "HTTP/1.1 200 OK"
+{"trace_id": "de56e34b-601a-4b2b-9f0c-6c4412d5326a", "method": "POST", "status": 200, "duration_seconds": 0.006952}
+HTTP Request: POST http://testserver/api/documents/e20f51ca-c956-4c23-ae93-be4890247135/corrections "HTTP/1.1 200 OK"
+{"trace_id": "4a00a483-bde8-4cd0-910f-523a8e146743", "method": "GET", "status": 200, "duration_seconds": 0.003696}
+HTTP Request: GET http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a "HTTP/1.1 200 OK"
+{"trace_id": "9e5a8c1a-0646-4949-81db-01b8d1dcd23d", "method": "POST", "status": 200, "duration_seconds": 0.010854}
+HTTP Request: POST http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/accept "HTTP/1.1 200 OK"
+{"trace_id": "78907a14-4689-4b0b-892e-8fbf8a02cf12", "method": "POST", "status": 200, "duration_seconds": 0.010959}
+HTTP Request: POST http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/publish "HTTP/1.1 200 OK"
+{"trace_id": "4c50fa8a-b6d1-45f6-aa20-c6feb5af666b", "method": "POST", "status": 200, "duration_seconds": 0.007683}
+HTTP Request: POST http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/publish "HTTP/1.1 200 OK"
+{"trace_id": "99a0cb6c-d1d1-4a5e-8d86-33a1d5918ab5", "method": "GET", "status": 200, "duration_seconds": 0.007147}
+HTTP Request: GET http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/export "HTTP/1.1 200 OK"
+{"trace_id": "8493d84e-c2ca-4b03-bc9d-967d9cc3f9c3", "method": "GET", "status": 200, "duration_seconds": 0.007762}
+HTTP Request: GET http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/export.zip "HTTP/1.1 200 OK"
+{"trace_id": "ef85c649-2708-408a-85e6-8faa98f3d14b", "method": "GET", "status": 200, "duration_seconds": 0.001699}
+HTTP Request: GET http://testserver/api/cases/12230e1a-f1e8-420b-9807-822a965a088a/audit "HTTP/1.1 200 OK"
+{"trace_id": "93179296-f9cc-49c1-8851-3f857b83005b", "method": "GET", "status": 200, "duration_seconds": 0.003039}
+HTTP Request: GET http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf "HTTP/1.1 200 OK"
+{"trace_id": "ec05682d-cdc2-4c75-802b-dc866252ead3", "method": "GET", "status": 200, "duration_seconds": 0.003219}
+HTTP Request: GET http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf "HTTP/1.1 200 OK"
+{"trace_id": "f86ee567-cc71-475c-9bfe-47c8b628ab8d", "method": "POST", "status": 200, "duration_seconds": 0.011366}
+HTTP Request: POST http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/accept "HTTP/1.1 200 OK"
+{"trace_id": "60cd5b1b-5df6-4f3e-beac-007a26513984", "method": "POST", "status": 200, "duration_seconds": 0.011313}
+HTTP Request: POST http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/publish "HTTP/1.1 200 OK"
+{"trace_id": "4907a1e5-6143-4aff-bf64-91de203f79fd", "method": "POST", "status": 200, "duration_seconds": 0.007112}
+HTTP Request: POST http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/publish "HTTP/1.1 200 OK"
+{"trace_id": "6aa4c7c3-50fe-4d59-a938-69f0e2c9acf6", "method": "GET", "status": 200, "duration_seconds": 0.008379}
+HTTP Request: GET http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/export "HTTP/1.1 200 OK"
+{"trace_id": "9b76c2a8-257f-450a-bee7-c1ed1eaf2b61", "method": "GET", "status": 200, "duration_seconds": 0.008964}
+HTTP Request: GET http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/export.zip "HTTP/1.1 200 OK"
+{"trace_id": "d4492b25-ebb4-48ac-b998-41733fa677bb", "method": "GET", "status": 200, "duration_seconds": 0.001689}
+HTTP Request: GET http://testserver/api/cases/f5a53031-5fae-47d9-8d84-b776f7356fdf/audit "HTTP/1.1 200 OK"
+{"trace_id": "9ed4a8d3-dee8-4288-b6e7-2d926c13214a", "method": "GET", "status": 200, "duration_seconds": 0.003111}
+HTTP Request: GET http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6 "HTTP/1.1 200 OK"
+{"trace_id": "c991f333-2488-48ce-a825-88643b61a6c8", "method": "GET", "status": 200, "duration_seconds": 0.003113}
+HTTP Request: GET http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6 "HTTP/1.1 200 OK"
+{"trace_id": "fca9b2e6-bb0f-4c15-a32b-c5291b259f08", "method": "POST", "status": 200, "duration_seconds": 0.011023}
+HTTP Request: POST http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/accept "HTTP/1.1 200 OK"
+{"trace_id": "560aa545-0818-4b4e-8d68-9ae596372293", "method": "POST", "status": 200, "duration_seconds": 0.011248}
+HTTP Request: POST http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/publish "HTTP/1.1 200 OK"
+{"trace_id": "e67a9afb-ef7b-4b9b-a5f0-30e1121fef5a", "method": "POST", "status": 200, "duration_seconds": 0.006853}
+HTTP Request: POST http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/publish "HTTP/1.1 200 OK"
+{"trace_id": "61168c2f-c82f-488e-8d96-ab8804d735c7", "method": "GET", "status": 200, "duration_seconds": 0.008036}
+HTTP Request: GET http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/export "HTTP/1.1 200 OK"
+{"trace_id": "f25295d6-550d-43d9-a9af-d597e918796b", "method": "GET", "status": 200, "duration_seconds": 0.008626}
+HTTP Request: GET http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/export.zip "HTTP/1.1 200 OK"
+{"trace_id": "c4f5f4b6-6a9f-4993-a3f4-e1d86e0224db", "method": "GET", "status": 200, "duration_seconds": 0.001671}
+HTTP Request: GET http://testserver/api/cases/8987dac7-7f43-4875-a2a6-c37bd93702d6/audit "HTTP/1.1 200 OK"
+{"trace_id": "cfb60f64-c696-4f18-b260-1275de302784", "method": "GET", "status": 200, "duration_seconds": 0.003034}
+HTTP Request: GET http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca "HTTP/1.1 200 OK"
+{"trace_id": "ca5f9597-afbd-4f68-a066-b186ae0815ad", "method": "GET", "status": 200, "duration_seconds": 0.003478}
+HTTP Request: GET http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca "HTTP/1.1 200 OK"
+{"trace_id": "ea3b262e-2890-49f4-9ac8-959a2286bc9f", "method": "POST", "status": 200, "duration_seconds": 0.010897}
+HTTP Request: POST http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/accept "HTTP/1.1 200 OK"
+{"trace_id": "a4336fec-76f3-432a-b1fc-a40057b7da68", "method": "POST", "status": 200, "duration_seconds": 0.012007}
+HTTP Request: POST http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/publish "HTTP/1.1 200 OK"
+{"trace_id": "b9a36b62-c916-4a53-99b6-7d981298d35e", "method": "POST", "status": 200, "duration_seconds": 0.009357}
+HTTP Request: POST http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/publish "HTTP/1.1 200 OK"
+{"trace_id": "840e0c4a-e7fe-493d-a564-c724962a2e52", "method": "GET", "status": 200, "duration_seconds": 0.007797}
+HTTP Request: GET http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/export "HTTP/1.1 200 OK"
+{"trace_id": "6c8517fa-0f0f-4f68-a845-452d76a137a8", "method": "GET", "status": 200, "duration_seconds": 0.00803}
+HTTP Request: GET http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/export.zip "HTTP/1.1 200 OK"
+{"trace_id": "f3899633-f674-4bde-b8d1-cd16d3201b11", "method": "GET", "status": 200, "duration_seconds": 0.001792}
+HTTP Request: GET http://testserver/api/cases/33508919-0895-4b39-908a-22c49bbda9ca/audit "HTTP/1.1 200 OK"
+{"trace_id": "4974abf7-c72b-41f4-ab98-41acd59e9dc1", "method": "GET", "status": 200, "duration_seconds": 0.0033}
+HTTP Request: GET http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc "HTTP/1.1 200 OK"
+{"trace_id": "ca9f3a27-c531-42dd-9685-8f604ec73164", "method": "GET", "status": 200, "duration_seconds": 0.026622}
+HTTP Request: GET http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc "HTTP/1.1 200 OK"
+{"trace_id": "6d3f7f68-77d8-44d2-8d0f-c8e731ed1107", "method": "POST", "status": 200, "duration_seconds": 0.01788}
+HTTP Request: POST http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/accept "HTTP/1.1 200 OK"
+{"trace_id": "f14f72f2-b2d1-40e3-8d22-60f253699dec", "method": "POST", "status": 200, "duration_seconds": 0.013568}
+HTTP Request: POST http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/publish "HTTP/1.1 200 OK"
+{"trace_id": "5d653a49-0c99-437c-886e-2a7b2b5f36e6", "method": "POST", "status": 200, "duration_seconds": 0.008318}
+HTTP Request: POST http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/publish "HTTP/1.1 200 OK"
+{"trace_id": "0932af07-885e-49f0-b34a-d5cc7d0e7aea", "method": "GET", "status": 200, "duration_seconds": 0.007551}
+HTTP Request: GET http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/export "HTTP/1.1 200 OK"
+{"trace_id": "299f7a28-33bd-42d6-90cb-2f270e3fa91e", "method": "GET", "status": 200, "duration_seconds": 0.012725}
+HTTP Request: GET http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/export.zip "HTTP/1.1 200 OK"
+{"trace_id": "44712e30-10b9-4472-b0af-663341967033", "method": "GET", "status": 200, "duration_seconds": 0.001577}
+HTTP Request: GET http://testserver/api/cases/5defac19-0e24-4613-9b79-f9a08e8660bc/audit "HTTP/1.1 200 OK"
+{"trace_id": "88a64e0c-e798-4763-8aca-55fc1837ac39", "method": "GET", "status": 200, "duration_seconds": 0.002929}
+HTTP Request: GET http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623 "HTTP/1.1 200 OK"
+{"trace_id": "434c4fa7-5e77-498e-ab81-9ab190e5f475", "method": "GET", "status": 200, "duration_seconds": 0.004712}
+HTTP Request: GET http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623 "HTTP/1.1 200 OK"
+{"trace_id": "47e8253f-eddd-4761-8a34-664c12861003", "method": "POST", "status": 200, "duration_seconds": 0.011303}
+HTTP Request: POST http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/accept "HTTP/1.1 200 OK"
+{"trace_id": "6640259f-04c5-41d2-8f06-57464fcf9829", "method": "POST", "status": 200, "duration_seconds": 0.010757}
+HTTP Request: POST http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/publish "HTTP/1.1 200 OK"
+{"trace_id": "5f9cd48e-707a-4894-a3f5-bb92d2713019", "method": "POST", "status": 200, "duration_seconds": 0.006876}
+HTTP Request: POST http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/publish "HTTP/1.1 200 OK"
+{"trace_id": "cf438b41-6dec-4469-8b32-9c7a3a90b301", "method": "GET", "status": 200, "duration_seconds": 0.007938}
+HTTP Request: GET http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/export "HTTP/1.1 200 OK"
+{"trace_id": "aee8a457-d86e-4535-8c11-13d7f48dc278", "method": "GET", "status": 200, "duration_seconds": 0.00874}
+HTTP Request: GET http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/export.zip "HTTP/1.1 200 OK"
+{"trace_id": "26f4fa4b-c49a-4425-9923-5f815c9e552e", "method": "GET", "status": 200, "duration_seconds": 0.001761}
+HTTP Request: GET http://testserver/api/cases/e529bcd8-7ce7-4294-bb98-1885c51d5623/audit "HTTP/1.1 200 OK"
+{
+  "evidence": "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/demo-baseline/result.json",
+  "profile": "baseline",
+  "cases": [
+    {
+      "scenario": "accepted",
+      "eligible": true,
+      "reconciliation": "matched",
+      "published": true
+    },
+    {
+      "scenario": "contradictory",
+      "eligible": false,
+      "reconciliation": "contradictory",
+      "published": false
+    },
+    {
+      "scenario": "abstention",
+      "eligible": false,
+      "reconciliation": "review",
+      "published": false
+    },
+    {
+      "scenario": "correction",
+      "eligible": true,
+      "reconciliation": "matched",
+      "published": true
+    },
+    {
+      "scenario": "injection",
+      "eligible": true,
+      "reconciliation": "matched",
+      "published": true
+    },
+    {
+      "scenario": "partial",
+      "eligible": true,
+      "reconciliation": "partial",
+      "published": true
+    },
+    {
+      "scenario": "versioned",
+      "eligible": true,
+      "reconciliation": "matched",
+      "published": true
+    },
+    {
+      "scenario": "scanned",
+      "eligible": true,
+      "reconciliation": "matched",
+      "published": true
+    },
+    {
+      "scenario": "duplicate",
+      "eligible": true,
+      "reconciliation": "matched",
+      "published": true
+    }
+  ],
+  "elapsed_seconds": 9.602467669999896
+}

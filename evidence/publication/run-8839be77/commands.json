@@ -1,0 +1,200 @@
+[
+  {
+    "name": "python-version",
+    "argv": [
+      "uv",
+      "run",
+      "--frozen",
+      "python",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:51:57.392148+00:00",
+    "finished_at": "2026-11-14T13:51:57.407524+00:00",
+    "wall_seconds": 0.015215,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "4c3569f5da09975434dd9fd9a91fadbc4367a91d8f3c3fab59e9241ab9ee4bd8"
+  },
+  {
+    "name": "node-version",
+    "argv": [
+      "node",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:51:57.407710+00:00",
+    "finished_at": "2026-11-14T13:51:57.413415+00:00",
+    "wall_seconds": 0.005585,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "249baf635bb43877fcb9422efa1a4904b702d0ddf14d3949b7cd0950d5229c81"
+  },
+  {
+    "name": "locked-dependencies",
+    "argv": [
+      "uv",
+      "lock",
+      "--check",
+      "--offline"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:51:57.413734+00:00",
+    "finished_at": "2026-11-14T13:51:57.427936+00:00",
+    "wall_seconds": 0.014065,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "d2c25efc40e9890c04bf6db74da29a65b8e17d0881f0417cbcbfafeb25e9cb8d"
+  },
+  {
+    "name": "ruff",
+    "argv": [
+      "uv",
+      "run",
+      "--frozen",
+      "--group",
+      "audit",
+      "ruff",
+      "check",
+      "src",
+      "tests",
+      "scripts"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:51:57.428150+00:00",
+    "finished_at": "2026-11-14T13:51:57.463116+00:00",
+    "wall_seconds": 0.034822,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  {
+    "name": "schemas",
+    "argv": [
+      "uv",
+      "run",
+      "--frozen",
+      "python",
+      "scripts/export_schemas.py",
+      "--check"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:51:57.463626+00:00",
+    "finished_at": "2026-11-14T13:51:57.795878+00:00",
+    "wall_seconds": 0.332052,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "45bf4b0a66ec27799319cc3cadab3c82968a47168f7ac819d263a013b463ed3d"
+  },
+  {
+    "name": "javascript-syntax",
+    "argv": [
+      "node",
+      "--check",
+      "src/dci/static/app.js"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:51:57.796133+00:00",
+    "finished_at": "2026-11-14T13:51:57.893716+00:00",
+    "wall_seconds": 0.097423,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "unittest",
+    "argv": [
+      "uv",
+      "run",
+      "--frozen",
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:51:57.894032+00:00",
+    "finished_at": "2026-11-14T13:52:34.638153+00:00",
+    "wall_seconds": 36.743694,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "47be0cbc0935f4b566bdb420dca8b16ed4a1e7b0c3b1c88055dc1313680d7e5c"
+  },
+  {
+    "name": "ui-state",
+    "argv": [
+      "node",
+      "--test",
+      "tests/test_ui_state.mjs"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:52:34.638442+00:00",
+    "finished_at": "2026-11-14T13:52:34.859954+00:00",
+    "wall_seconds": 0.221324,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "10e4a6934b17ee454fdf2b062ca189e654a26b3a789e18b305d9933828b6bed6"
+  },
+  {
+    "name": "known-secrets-history",
+    "argv": [
+      "uv",
+      "run",
+      "--frozen",
+      "python",
+      "scripts/check_secrets.py",
+      "--history"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:52:34.860252+00:00",
+    "finished_at": "2026-11-14T13:52:35.499017+00:00",
+    "wall_seconds": 0.637965,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "3e200d63fbcd7cfc23ca89a6b783418ec1aacbd918333ba74b5c767ab1c3608e"
+  },
+  {
+    "name": "dependency-audit",
+    "argv": [
+      "uv",
+      "run",
+      "--frozen",
+      "--group",
+      "audit",
+      "pip-audit",
+      "--disable-pip",
+      "--no-deps",
+      "-r",
+      "requirements.lock",
+      "--format=json",
+      "--output=/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/publication-work/run-8839be77/dependency-audit.json"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:52:35.499562+00:00",
+    "finished_at": "2026-11-14T13:52:48.373833+00:00",
+    "wall_seconds": 12.874008,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "79d30422388543b2563e1dde76bb7e7857d7ef0c6fdf05c8c71598633ca07e1e"
+  },
+  {
+    "name": "component-inventory",
+    "argv": [
+      "uv",
+      "run",
+      "--frozen",
+      "python",
+      "scripts/check_licenses.py"
+    ],
+    "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+    "started_at": "2026-11-14T13:52:48.374179+00:00",
+    "finished_at": "2026-11-14T13:52:48.482107+00:00",
+    "wall_seconds": 0.107754,
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "63c16f2fc542d3c9c7ce449ebf4737e2135fc0354f6802df03e9063aace73f77"
+  }
+]

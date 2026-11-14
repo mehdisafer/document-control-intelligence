@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.venv/bin/python",
+    "outputs/evidence-final/manual_recovery.py"
+  ],
+  "cwd": "/workspace/scratch/6956bc82bcf5/document-control-intelligence",
+  "environment_overrides": {
+    "PYTHONPATH": "src"
+  },
+  "started_at": "2026-11-13T23:32:34.673829+00:00",
+  "script_sha256": "7ed8dbe174f364644a38fd5b388660cc66fdcde2854ade25df9f3f76b6e082c3",
+  "read_only_inputs_sha256": {
+    "outputs/evidence-final/demo-local-linear/result.json": "b7b5fe09113409f4d460458b6d52a59357978da48bc82acd74d28b261927d9df",
+    "outputs/evidence-final/verify-demo-local-linear.log": "a4352a766d92e7a5ee526ded16156525a36d23deab6e898a5662c5e5b6f03325",
+    "tmp/final-linear-model.json": "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1"
+  },
+  "declared_scope": "One explicit source-based field repair, separate approval, idempotent publication and restoration; zero parser/model requests"
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "path": "documents/tune/tune-0000-purchase_order-v1.pdf",
+    "kind": "purchase_order",
+    "expected": "purchase_order",
+    "confidence": 0.8741484117550959
+  },
+  {
+    "path": "documents/tune/tune-0000-delivery_note-v1.pdf",
+    "kind": "delivery_note",
+    "expected": "delivery_note",
+    "confidence": 0.8652972490352303
+  },
+  {
+    "path": "documents/tune/tune-0000-invoice-v1.pdf",
+    "kind": "invoice",
+    "expected": "invoice",
+    "confidence": 0.9337510384525782
+  },
+  {
+    "path": "documents/tune/tune-0001-purchase_order-v1.pdf",
+    "kind": "purchase_order",
+    "expected": "purchase_order",
+    "confidence": 0.909592001903882
+  },
+  {
+    "path": "documents/tune/tune-0001-delivery_note-v1.pdf",
+    "kind": "delivery_note",
+    "expected": "delivery_note",
+    "confidence": 0.9365281316080738
+  },
+  {
+    "path": "documents/tune/tune-0001-invoice-v1.pdf",
+    "kind": "invoice",
+    "expected": "invoice",
+    "confidence": 0.915084262760334
+  },
+  {
+    "path": "documents/tune/tune-0002-purchase_order-v1.pdf",
+    "kind": "purchase_order",
+    "expected": "purchase_order",
+    "confidence": 0.8698087626030843
+  },
+  {
+    "path": "documents/tune/tune-0002-delivery_note-v1.pdf",
+    "kind": "delivery_note",
+    "expected": "delivery_note",
+    "confidence": 0.8670011494057622
+  },
+  {
+    "path": "documents/tune/tune-0002-invoice-v1.pdf",
+    "kind": "invoice",
+    "expected": "invoice",
+    "confidence": 0.9351625685224092
+  },
+  {
+    "path": "documents/tune/tune-0003-purchase_order-v1.pdf",
+    "kind": "purchase_order",
+    "expected": "purchase_order",
+    "confidence": 0.9167448927773245
+  },
+  {
+    "path": "documents/tune/tune-0003-delivery_note-v1.pdf",
+    "kind": "delivery_note",
+    "expected": "delivery_note",
+    "confidence": 0.9465028948717684
+  },
+  {
+    "path": "documents/tune/tune-0003-invoice-v1.pdf",
+    "kind": "invoice",
+    "expected": "invoice",
+    "confidence": 0.9329656235851033
+  },
+  {
+    "path": "documents/tune/tune-0004-purchase_order-v1.pdf",
+    "kind": "purchase_order",
+    "expected": "purchase_order",
+    "confidence": 0.8752065019462341
+  },
+  {
+    "path": "documents/tune/tune-0004-delivery_note-v1.pdf",
+    "kind": "delivery_note",
+    "expected": "delivery_note",
+    "confidence": 0.8704936245393536
+  },
+  {
+    "path": "documents/tune/tune-0004-invoice-v1.pdf",
+    "kind": "invoice",
+    "expected": "invoice",
+    "confidence": 0.9343039329031226
+  },
+  {
+    "path": "documents/tune/tune-0005-purchase_order-v1.pdf",
+    "kind": "purchase_order",
+    "expected": "purchase_order",
+    "confidence": 0.9160993699933951
+  },
+  {
+    "path": "documents/tune/tune-0005-delivery_note-v1.pdf",
+    "kind": "delivery_note",
+    "expected": "delivery_note",
+    "confidence": 0.9425829211800038
+  },
+  {
+    "path": "documents/tune/tune-0005-invoice-v1.pdf",
+    "kind": "invoice",
+    "expected": "invoice",
+    "confidence": 0.9339264534055997
+  }
+]

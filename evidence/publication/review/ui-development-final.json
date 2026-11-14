@@ -1,0 +1,80 @@
+{
+  "schema_version": "ui-state-unit-evidence-1.0",
+  "scope": "Real app.js executed in node:vm with a small fake DOM and deferred fetch; JavaScript state/unit regression only.",
+  "browser_executed": false,
+  "new_dependencies": [],
+  "node_version": "v24.22.1",
+  "baseline": {
+    "commit": "cf7d1b024da8a3b26ad9bd4144e26ecff9192b1c",
+    "path": "src/dci/static/app.js",
+    "github_blob_sha": "dc2f6c2ad50ba0ffcf2325a901778261dfc952cc",
+    "sha256": "1ebb991650535a8acfff68ce7125706721aa4eee8cf6ecc49a024145b888a81b",
+    "bytes": 15414
+  },
+  "modified_files_sha256": {
+    "src/dci/static/app.js": "6aa75dc54e242cc94d4bd22fed3cf8900d9794b5714e6f7b3c24bf29a9d66d9d",
+    "tests/test_ui_state.mjs": "c2bf78c8ab5b680db7a466a56f8077ebcd95df6aa62f95d8bb335c57bef6d5f4"
+  },
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "src/dci/static/app.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "--test-name-pattern=correction stays disabled|late original PDF",
+        "tests/test_ui_state.mjs"
+      ],
+      "environment_overrides": {
+        "DCI_UI_SOURCE": "outputs/ui-state-review/app.cf7d1b.js"
+      },
+      "exit_code": 1,
+      "expected_result": "The two regression checks fail on the exact preserved original script.",
+      "log": "outputs/ui-state-review/baseline-regression.log",
+      "log_sha256": "fbaf3fae9dc3e3c83dcc2c185573a86a0712cf90fdbd977f6fe4e83241311bb7"
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/test_ui_state.mjs"
+      ],
+      "exit_code": 0,
+      "log": "outputs/ui-state-review/fixed-regression-final.log",
+      "log_sha256": "bf341a12d165fbd179ed37d6d3ff1ce175fd4701c56f6f9673bb1ecdf79fc9df"
+    }
+  ],
+  "fixed_tests": {
+    "total": 23,
+    "passed": 23,
+    "failed": 0,
+    "skipped": 0,
+    "reported_duration_ms": 215.325922
+  },
+  "baseline_checks": {
+    "total": 2,
+    "passed": 0,
+    "failed_as_expected": 2
+  },
+  "limitations": [
+    "No browser rendering, native modal/focus behavior, PDF viewer, accessibility or real HTTP transport was tested.",
+    "Outstanding fetches are invalidated for display but are not cancelled at the network layer.",
+    "Cancelling a dialog cannot undo a mutation already sent; its stale completion no longer changes the current UI."
+  ],
+  "peer_review": {
+    "finding": "A delayed metadata response could outlive a case summary revision/status advance.",
+    "resolution": "Remember pending document revision/status; a changed current case summary starts one replacement request and fences the old response.",
+    "regression_cases": [
+      "pending revision advance",
+      "pending processing-to-ready advance"
+    ],
+    "no_reload_on_unchanged_summary_asserted": true
+  },
+  "prior_development_evidence": "verification.json and fixed-regression.log retain the earlier 21-case run before the peer finding."
+}

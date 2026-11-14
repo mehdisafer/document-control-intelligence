@@ -1,0 +1,2590 @@
+{
+  "schema_version": "demo-evidence-1.0",
+  "profile": "local-linear",
+  "synthetic": true,
+  "transport": "FastAPI ASGI TestClient; real parser/OCR/model/storage",
+  "elapsed_seconds": 9.248352147999867,
+  "hardware": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "peak_parent_rss_kib": 82920
+  },
+  "manifest_sha256": "848e7dc025f6dc12117a2d4d97beb555790ea781a195de8bd560f80fe97ba08c",
+  "settings": {
+    "profile": "local-linear",
+    "model_path": "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1",
+    "llm_config_file": null,
+    "max_bytes": 10485760,
+    "max_pages": 20,
+    "parser_seconds": 45,
+    "parser_memory_mb": 768,
+    "max_case_documents": 64,
+    "max_document_versions": 20,
+    "max_case_bytes": 104857600,
+    "max_attempts": 3,
+    "lease_seconds": 240,
+    "retry_seconds": 2,
+    "application_version": "0.1.0rc1",
+    "parser_runtime": "native-ocr-1.0;pypdf=6.21.4;pdfplumber=0.11.9;pypdfium2=5.13.0;Pillow=13.0.0;tesseract 5.5.0;eng.traineddata=7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2;dpi=160;lang=eng;oem=1;psm=3"
+  },
+  "jobs": [
+    {
+      "job_id": "53a6c787-b7d9-41ef-8b47-96b88f48dd4b",
+      "document_id": "b3818696-9f7c-4ebd-a049-b0e1cc098d72",
+      "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.303955,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "a2b77f4d-3b41-4846-865d-d20291f9cc5d",
+      "document_id": "ebe11cff-cd08-4874-9aab-11decf42ad37",
+      "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275831,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "0f1506a4-97fd-4071-91b0-1d21f074f2ac",
+      "document_id": "10e38556-ad4f-4a24-92cf-d727d353b3e7",
+      "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.274518,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "cd69f262-454e-4df2-acc4-7b0090804fbd",
+      "document_id": "100c0105-73e7-4626-8935-4ff2f43e0647",
+      "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.224297,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "0d9c2a81-b6c9-4f8d-bbe0-573724e7afe9",
+      "document_id": "96702516-3b72-4930-9057-154c5198cca0",
+      "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275455,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "4c6a2fbe-5463-45b2-b614-5e4949af4b00",
+      "document_id": "faa973b6-3d66-4750-b9e8-4bde37aa2304",
+      "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275263,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "04a62531-231d-49da-a966-2a6c1ccaa4f6",
+      "document_id": "fc840842-82bd-402a-981b-fc034fdda662",
+      "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275269,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "1b799ca4-ce25-4b31-8f5a-8a9c4486d03d",
+      "document_id": "bf97c7ae-fc5b-4b28-b9b9-d2e04f12a27a",
+      "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.224885,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "0c0dd49e-e684-4d09-9227-e3f03635e8fe",
+      "document_id": "9497024e-5410-428f-9367-d3656aaadf7d",
+      "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "review",
+      "elapsed_seconds": 0.293093,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "6b226324-d289-482b-a7af-fad655b7ce42",
+      "document_id": "40a695d0-d269-4a6a-adf9-2b5a01d68f4a",
+      "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.225099,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "303e42cb-e83e-43a1-b011-445622637676",
+      "document_id": "7f3503a5-268f-4e7e-a170-c5b345e63581",
+      "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.27486,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "77adbf96-e745-4bb5-8bea-650a8d7a7d57",
+      "document_id": "878eaebb-abca-4a51-a0f0-06da31b43c4f",
+      "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "rejected",
+      "elapsed_seconds": 0.225611,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "88afca60-6a64-4ec6-bb49-b8bf2805b4e9",
+      "document_id": "4054bcc8-dff3-4272-b90c-79aae7441458",
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.274758,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "b1406c30-08a9-4006-9277-af60d9a12496",
+      "document_id": "ed5eb25f-ed33-42cd-8943-c906c328dd9c",
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.225141,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "4bfb533c-93fc-452e-9995-a1fe9b099491",
+      "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "review",
+      "elapsed_seconds": 0.276027,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "5f5f4b6c-1e2f-4f85-a502-bee9def4e295",
+      "document_id": "f9b680b5-36c3-4abd-9dd6-97d8fb7af555",
+      "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275873,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "1a0b1267-5fac-48be-a4d9-1dfb2447e8b3",
+      "document_id": "b645b549-9632-453c-80b8-3062d7fcb1b0",
+      "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.279311,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "84e7cd2c-f168-44ab-a782-2e88fbfb20ad",
+      "document_id": "db2b0d6e-11c2-4aba-bd1a-929763b28779",
+      "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.276549,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "6a6f9577-77b4-4f46-938f-53e4e29b7bf0",
+      "document_id": "3509bdb3-8f84-4516-82a4-fa8daa6d9566",
+      "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.2778,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "826318a3-938f-497e-a9f8-ece078193473",
+      "document_id": "f473ec21-e663-4e0d-bb05-933bc9ee7736",
+      "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275558,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "a5854cfb-7ae5-431c-b929-dcae54967cb3",
+      "document_id": "22e79898-3337-4767-a327-a77cd22b47f7",
+      "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "rejected",
+      "elapsed_seconds": 0.2772,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "6f7d3554-7626-42f8-8a37-9696e75e14f1",
+      "document_id": "35080f2e-3fc0-4f10-b272-8896446013ff",
+      "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.276049,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "1e893789-2b90-4827-ac14-9850ebb7a0c4",
+      "document_id": "d8246253-cfef-456b-9a57-2d78d4ccb1ad",
+      "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275135,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "a19e9814-2573-4cf5-b2ce-72e52caedf3e",
+      "document_id": "7ad7ae0b-59d1-4a7d-a87d-92ca2401f1fd",
+      "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.276539,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "3bed268a-9e08-4956-a767-3619d06c8b28",
+      "document_id": "646bc83c-bb48-402c-98e0-bdfa7bc53f29",
+      "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.776888,
+      "pages": 1,
+      "ocr_pages": 1
+    },
+    {
+      "job_id": "b3b92c47-131f-4d55-86e5-96bc43984123",
+      "document_id": "f978de13-ec9e-4e78-a41b-e49299d3adff",
+      "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.276294,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "6d09f9cd-6c45-45e9-a314-df24fe4f20f6",
+      "document_id": "18888163-fced-49b4-850f-4b2564b00852",
+      "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.276135,
+      "pages": 1,
+      "ocr_pages": 0
+    },
+    {
+      "job_id": "c70d923e-bda1-4556-92c5-2ca1105986a1",
+      "document_id": "4e8c1736-7c8d-4df1-aa17-216a8ab62bfe",
+      "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+      "attempt": 1,
+      "profile": "local-linear",
+      "outcome": "done",
+      "decision": "eligible",
+      "elapsed_seconds": 0.275787,
+      "pages": 1,
+      "ocr_pages": 0
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+      "scenario": "accepted",
+      "uploads": [
+        {
+          "document_id": "b3818696-9f7c-4ebd-a049-b0e1cc098d72",
+          "job_id": "53a6c787-b7d9-41ef-8b47-96b88f48dd4b",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-accepted-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "ebe11cff-cd08-4874-9aab-11decf42ad37",
+          "job_id": "a2b77f4d-3b41-4846-865d-d20291f9cc5d",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-accepted-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "10e38556-ad4f-4a24-92cf-d727d353b3e7",
+          "job_id": "0f1506a4-97fd-4071-91b0-1d21f074f2ac",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-accepted-invoice-v1.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "eligible": true,
+      "publication": {
+        "id": "69f098a9-c7c1-4229-92fe-c0efaf30971a",
+        "fingerprint": "ecd3669550c9200cf67c50c82f17e7e755e3d1c41dd24995ea2392d6e53895a2",
+        "duplicate": false
+      },
+      "idempotent_publication": true,
+      "export_sha256": "e18cd7311ace58272548ece5c52d0261b40b7abd2966c3478ac28d8f233c96dc",
+      "audit": [
+        {
+          "id": 1,
+          "at": 1794612510.1688502,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 accepted"
+          }
+        },
+        {
+          "id": 10,
+          "at": 1794612510.2650912,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": "b3818696-9f7c-4ebd-a049-b0e1cc098d72",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-accepted-purchase_order",
+            "job_id": "53a6c787-b7d9-41ef-8b47-96b88f48dd4b",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "d6afa8fb-5b8b-4d03-b30b-ee54602ffbc3",
+            "sha256": "22395e812c4b070e7e63f6448e812e63fa49c51cbc484f8cfb6f00e4094ca341",
+            "version": 1
+          }
+        },
+        {
+          "id": 11,
+          "at": 1794612510.2745605,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": "ebe11cff-cd08-4874-9aab-11decf42ad37",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-accepted-delivery_note",
+            "job_id": "a2b77f4d-3b41-4846-865d-d20291f9cc5d",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "2f40e9d8-36bc-4122-ae63-65f711abed87",
+            "sha256": "3375b12c8e054749dae67971c8157148147be1430ad99a0dd8f576f2ba5f9a97",
+            "version": 1
+          }
+        },
+        {
+          "id": 12,
+          "at": 1794612510.2823937,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": "10e38556-ad4f-4a24-92cf-d727d353b3e7",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-accepted-invoice",
+            "job_id": "0f1506a4-97fd-4071-91b0-1d21f074f2ac",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "cbef916c-79ec-40c9-b847-976326f7f36b",
+            "sha256": "0be49cfb90927a9d448161179ce7e6833529f66a7c936ae80d2a5a0162a35af2",
+            "version": 1
+          }
+        },
+        {
+          "id": 29,
+          "at": 1794612510.718128,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": "b3818696-9f7c-4ebd-a049-b0e1cc098d72",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9353027277672326,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.30395482600033574,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 30,
+          "at": 1794612510.9992917,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": "ebe11cff-cd08-4874-9aab-11decf42ad37",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9386515545453574,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.2758311109996612,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 31,
+          "at": 1794612511.2780006,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": "10e38556-ad4f-4a24-92cf-d727d353b3e7",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9632435692210947,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.2745183989995894,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 66,
+          "at": 1794612518.6542778,
+          "actor": "demo-approver",
+          "action": "case.accepted",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "ecd3669550c9200cf67c50c82f17e7e755e3d1c41dd24995ea2392d6e53895a2",
+            "reason": "Synthetic demonstration: source evidence and current reconciliation reviewed explicitly.",
+            "status": "matched"
+          }
+        },
+        {
+          "id": 67,
+          "at": 1794612518.6675491,
+          "actor": "demo-publisher",
+          "action": "case.published",
+          "case_id": "dffb1720-e20b-4fa5-88bd-173738d43099",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "ecd3669550c9200cf67c50c82f17e7e755e3d1c41dd24995ea2392d6e53895a2",
+            "publication_id": "69f098a9-c7c1-4229-92fe-c0efaf30971a"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+      "scenario": "contradictory",
+      "uploads": [
+        {
+          "document_id": "100c0105-73e7-4626-8935-4ff2f43e0647",
+          "job_id": "cd69f262-454e-4df2-acc4-7b0090804fbd",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-contradictory-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "96702516-3b72-4930-9057-154c5198cca0",
+          "job_id": "0d9c2a81-b6c9-4f8d-bbe0-573724e7afe9",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-contradictory-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "faa973b6-3d66-4750-b9e8-4bde37aa2304",
+          "job_id": "4c6a2fbe-5463-45b2-b614-5e4949af4b00",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-contradictory-invoice-v1.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "contradictory",
+        "findings": [
+          {
+            "code": "overbilling_order",
+            "severity": "error",
+            "message": "SKU PART-100: invoiced 12 exceeds ordered 10.",
+            "field": "quantity",
+            "document_id": null
+          },
+          {
+            "code": "overbilling_delivery",
+            "severity": "error",
+            "message": "SKU PART-100: invoiced 12 exceeds delivered 10.",
+            "field": "quantity",
+            "document_id": null
+          }
+        ],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "12",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "-2",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1807.20",
+          "invoice.subtotal": "1506.00",
+          "invoice.tax": "301.20",
+          "invoice.calculated_subtotal": "1506.00",
+          "invoice.calculated_tax": "301.20"
+        }
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "contradictory",
+        "findings": [
+          {
+            "code": "overbilling_order",
+            "severity": "error",
+            "message": "SKU PART-100: invoiced 12 exceeds ordered 10.",
+            "field": "quantity",
+            "document_id": null
+          },
+          {
+            "code": "overbilling_delivery",
+            "severity": "error",
+            "message": "SKU PART-100: invoiced 12 exceeds delivered 10.",
+            "field": "quantity",
+            "document_id": null
+          }
+        ],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "12",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "-2",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1807.20",
+          "invoice.subtotal": "1506.00",
+          "invoice.tax": "301.20",
+          "invoice.calculated_subtotal": "1506.00",
+          "invoice.calculated_tax": "301.20"
+        }
+      },
+      "eligible": false,
+      "audit": [
+        {
+          "id": 2,
+          "at": 1794612510.176487,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 contradictory"
+          }
+        },
+        {
+          "id": 13,
+          "at": 1794612510.2909212,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+          "document_id": "100c0105-73e7-4626-8935-4ff2f43e0647",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-contradictory-purchase_order",
+            "job_id": "cd69f262-454e-4df2-acc4-7b0090804fbd",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "b3dba649-5a98-4358-ab1b-33493dac6e68",
+            "sha256": "d21a824b8cb22ccc8b314d57199194e7ae0903eb9c1dac43ccfbf6af50b24555",
+            "version": 1
+          }
+        },
+        {
+          "id": 14,
+          "at": 1794612510.2989266,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+          "document_id": "96702516-3b72-4930-9057-154c5198cca0",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-contradictory-delivery_note",
+            "job_id": "0d9c2a81-b6c9-4f8d-bbe0-573724e7afe9",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "577c66a8-1c2c-4603-820c-a9f708fd5f6b",
+            "sha256": "bbf69f4c33d4e88670565873cd96fc39f023a20b2e1d87717f0ee773f7a70b22",
+            "version": 1
+          }
+        },
+        {
+          "id": 15,
+          "at": 1794612510.305911,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+          "document_id": "faa973b6-3d66-4750-b9e8-4bde37aa2304",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-contradictory-invoice",
+            "job_id": "4c6a2fbe-5463-45b2-b614-5e4949af4b00",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "e41bb08a-7fb1-4ee1-bd28-b74dbf967371",
+            "sha256": "01d0c0052c4f2c359954635895fba3b0ffe165af81cec696359e6c731433fa66",
+            "version": 1
+          }
+        },
+        {
+          "id": 32,
+          "at": 1794612511.5061426,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+          "document_id": "100c0105-73e7-4626-8935-4ff2f43e0647",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9348559292469775,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.22429691699971954,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 33,
+          "at": 1794612511.7858284,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+          "document_id": "96702516-3b72-4930-9057-154c5198cca0",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9385690722193294,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.27545531700025094,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 34,
+          "at": 1794612512.065256,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "f2afc5ab-2fc8-4cc9-b543-e6d287f06b0d",
+          "document_id": "faa973b6-3d66-4750-b9e8-4bde37aa2304",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9625700279055754,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.275263282999731,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+      "scenario": "abstention",
+      "uploads": [
+        {
+          "document_id": "fc840842-82bd-402a-981b-fc034fdda662",
+          "job_id": "04a62531-231d-49da-a966-2a6c1ccaa4f6",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-abstention-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "bf97c7ae-fc5b-4b28-b9b9-d2e04f12a27a",
+          "job_id": "1b799ca4-ce25-4b31-8f5a-8a9c4486d03d",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-abstention-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "9497024e-5410-428f-9367-d3656aaadf7d",
+          "job_id": "0c0dd49e-e684-4d09-9227-e3f03635e8fe",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-abstention-invoice-v1.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "review",
+        "findings": [
+          {
+            "code": "missing_required_field",
+            "severity": "warning",
+            "message": "A critical field is missing or abstained.",
+            "field": "total",
+            "document_id": "INV-DEMO-003"
+          }
+        ],
+        "totals": {}
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "review",
+        "findings": [
+          {
+            "code": "missing_required_field",
+            "severity": "warning",
+            "message": "A critical field is missing or abstained.",
+            "field": "total",
+            "document_id": "INV-DEMO-003"
+          }
+        ],
+        "totals": {}
+      },
+      "eligible": false,
+      "audit": [
+        {
+          "id": 3,
+          "at": 1794612510.1833842,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 abstention"
+          }
+        },
+        {
+          "id": 16,
+          "at": 1794612510.3136287,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+          "document_id": "fc840842-82bd-402a-981b-fc034fdda662",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-abstention-purchase_order",
+            "job_id": "04a62531-231d-49da-a966-2a6c1ccaa4f6",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "9d087a72-34ad-4e66-9cf8-a6fb026f1633",
+            "sha256": "f1e31fe3a1bb9e7cfa03066aea71dc39d8c0e83fdca160de83ae327560038f84",
+            "version": 1
+          }
+        },
+        {
+          "id": 17,
+          "at": 1794612510.3218024,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+          "document_id": "bf97c7ae-fc5b-4b28-b9b9-d2e04f12a27a",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-abstention-delivery_note",
+            "job_id": "1b799ca4-ce25-4b31-8f5a-8a9c4486d03d",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "c93d106e-8b31-4e6e-82d0-3fb2f947cbfb",
+            "sha256": "2de0675236a1058d1827cda1ef89eb0f2c9915f85da87afb7e20b87b78806986",
+            "version": 1
+          }
+        },
+        {
+          "id": 18,
+          "at": 1794612510.329298,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+          "document_id": "9497024e-5410-428f-9367-d3656aaadf7d",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-abstention-invoice",
+            "job_id": "0c0dd49e-e684-4d09-9227-e3f03635e8fe",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "853ccdd4-93be-4e37-8e3e-44277b3cc1df",
+            "sha256": "846f61965389fbd38e90be181d0f36ae8d8767845c6fd0a7340a5bdc7cff382d",
+            "version": 1
+          }
+        },
+        {
+          "id": 35,
+          "at": 1794612512.3445659,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+          "document_id": "fc840842-82bd-402a-981b-fc034fdda662",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9329634458033005,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.275268786000197,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 36,
+          "at": 1794612512.5734782,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+          "document_id": "bf97c7ae-fc5b-4b28-b9b9-d2e04f12a27a",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9361962785934799,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.22488541099983195,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 37,
+          "at": 1794612512.8710842,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "558eb7c1-c9fa-4aa2-a443-ed74950b58b6",
+          "document_id": "9497024e-5410-428f-9367-d3656aaadf7d",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9650339704258362,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "review",
+            "elapsed_seconds": 0.29309271000010995,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+      "scenario": "correction",
+      "uploads": [
+        {
+          "document_id": "40a695d0-d269-4a6a-adf9-2b5a01d68f4a",
+          "job_id": "6b226324-d289-482b-a7af-fad655b7ce42",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-correction-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "7f3503a5-268f-4e7e-a170-c5b345e63581",
+          "job_id": "303e42cb-e83e-43a1-b011-445622637676",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-correction-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "878eaebb-abca-4a51-a0f0-06da31b43c4f",
+          "job_id": "77adbf96-e745-4bb5-8bea-650a8d7a7d57",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-correction-invoice-v1.pdf"
+        }
+      ],
+      "correction": {
+        "document_id": "878eaebb-abca-4a51-a0f0-06da31b43c4f",
+        "field": "total",
+        "value": "1506.00",
+        "reason": "The source total is inconsistent with its subtotal and tax; the operator records a deliberate correction after review."
+      },
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "contradictory",
+        "findings": [
+          {
+            "code": "total_mismatch",
+            "severity": "error",
+            "message": "The total differs from subtotal plus tax beyond 0.01.",
+            "field": "total",
+            "document_id": "INV-DEMO-004"
+          }
+        ],
+        "totals": {}
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "eligible": true,
+      "publication": {
+        "id": "906875da-97ec-485f-9d3d-91e7e21d4d01",
+        "fingerprint": "a53c323b2e2cded20e5941d4d40e1fe30218668dad8945585603a66ec4bd403a",
+        "duplicate": false
+      },
+      "idempotent_publication": true,
+      "export_sha256": "a2b9189a6829f9710d71f1d0976941257cb3412b06737bac60f50af5740e11dd",
+      "audit": [
+        {
+          "id": 4,
+          "at": 1794612510.1894553,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 correction"
+          }
+        },
+        {
+          "id": 19,
+          "at": 1794612510.3370106,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": "40a695d0-d269-4a6a-adf9-2b5a01d68f4a",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-correction-purchase_order",
+            "job_id": "6b226324-d289-482b-a7af-fad655b7ce42",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "d0d9ba2e-5c75-4f76-a8f6-7157e662084f",
+            "sha256": "b0c9e51655ec1e6f71c69648e0a6ab7c3be2a84c6ea1fe402b8104797ef18a0b",
+            "version": 1
+          }
+        },
+        {
+          "id": 20,
+          "at": 1794612510.3442993,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": "7f3503a5-268f-4e7e-a170-c5b345e63581",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-correction-delivery_note",
+            "job_id": "303e42cb-e83e-43a1-b011-445622637676",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "f9c24c62-f9bf-44b7-a506-8cedaffee8d0",
+            "sha256": "759b41b4ab04386c95abfd33b75c12bb5b9c1579db12478ca689a72068848027",
+            "version": 1
+          }
+        },
+        {
+          "id": 21,
+          "at": 1794612510.351882,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": "878eaebb-abca-4a51-a0f0-06da31b43c4f",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-correction-invoice",
+            "job_id": "77adbf96-e745-4bb5-8bea-650a8d7a7d57",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "290e789d-6fda-449c-b6a6-260836ce4447",
+            "sha256": "2aba751f6b0652a67fa9e8b0480e5bd536d0478661bed793fa04f15d22002b54",
+            "version": 1
+          }
+        },
+        {
+          "id": 38,
+          "at": 1794612513.1005998,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": "40a695d0-d269-4a6a-adf9-2b5a01d68f4a",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9279869154520253,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.22509921299979396,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 39,
+          "at": 1794612513.37917,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": "7f3503a5-268f-4e7e-a170-c5b345e63581",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.933751174422306,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.2748599230003492,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 40,
+          "at": 1794612513.6084285,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": "878eaebb-abca-4a51-a0f0-06da31b43c4f",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9597811253783873,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "rejected",
+            "elapsed_seconds": 0.22561073999986547,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 68,
+          "at": 1794612518.7566698,
+          "actor": "demo-operator",
+          "action": "field.corrected",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": "878eaebb-abca-4a51-a0f0-06da31b43c4f",
+          "revision": 1,
+          "details": {
+            "field": "total",
+            "justification": "The source total is inconsistent with its subtotal and tax; the operator records a deliberate correction after review.",
+            "new": {
+              "evidence": [
+                {
+                  "bbox": [
+                    44.0,
+                    391.07,
+                    110.71,
+                    401.07
+                  ],
+                  "end": 376,
+                  "page": 1,
+                  "quote": "Total: 1,507.00",
+                  "start": 361
+                }
+              ],
+              "normalized": "1506.00",
+              "origin": "human",
+              "raw": "1506.00",
+              "reason": "The source total is inconsistent with its subtotal and tax; the operator records a deliberate correction after review.",
+              "status": "corrected",
+              "transformations": [
+                "decimal_to_fixed_2"
+              ]
+            },
+            "old": {
+              "evidence": [
+                {
+                  "bbox": [
+                    44.0,
+                    391.07,
+                    110.71,
+                    401.07
+                  ],
+                  "end": 376,
+                  "page": 1,
+                  "quote": "Total: 1,507.00",
+                  "start": 361
+                }
+              ],
+              "normalized": "1507.00",
+              "origin": "extracted",
+              "raw": "1,507.00",
+              "reason": null,
+              "status": "supported",
+              "transformations": [
+                "normalize_decimal_and_grouping_separators",
+                "decimal_to_fixed_2"
+              ]
+            },
+            "source_version": 1
+          }
+        },
+        {
+          "id": 69,
+          "at": 1794612518.775628,
+          "actor": "demo-approver",
+          "action": "case.accepted",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": null,
+          "revision": 7,
+          "details": {
+            "fingerprint": "a53c323b2e2cded20e5941d4d40e1fe30218668dad8945585603a66ec4bd403a",
+            "reason": "Synthetic demonstration: source evidence and current reconciliation reviewed explicitly.",
+            "status": "matched"
+          }
+        },
+        {
+          "id": 70,
+          "at": 1794612518.789407,
+          "actor": "demo-publisher",
+          "action": "case.published",
+          "case_id": "33e75ab1-30a9-461a-847b-e2946b93edbf",
+          "document_id": null,
+          "revision": 7,
+          "details": {
+            "fingerprint": "a53c323b2e2cded20e5941d4d40e1fe30218668dad8945585603a66ec4bd403a",
+            "publication_id": "906875da-97ec-485f-9d3d-91e7e21d4d01"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "scenario": "injection",
+      "uploads": [
+        {
+          "document_id": "4054bcc8-dff3-4272-b90c-79aae7441458",
+          "job_id": "88afca60-6a64-4ec6-bb49-b8bf2805b4e9",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-injection-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "ed5eb25f-ed33-42cd-8943-c906c328dd9c",
+          "job_id": "b1406c30-08a9-4006-9277-af60d9a12496",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-injection-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+          "job_id": "4bfb533c-93fc-452e-9995-a1fe9b099491",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-injection-invoice-v1.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "review",
+        "findings": [
+          {
+            "code": "missing_required_field",
+            "severity": "warning",
+            "message": "A critical field is missing or abstained.",
+            "field": "subtotal",
+            "document_id": "INV-DEMO-005"
+          }
+        ],
+        "totals": {}
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "review",
+        "findings": [
+          {
+            "code": "missing_required_field",
+            "severity": "warning",
+            "message": "A critical field is missing or abstained.",
+            "field": "subtotal",
+            "document_id": "INV-DEMO-005"
+          }
+        ],
+        "totals": {}
+      },
+      "eligible": false,
+      "audit": [
+        {
+          "id": 5,
+          "at": 1794612510.1967943,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 injection"
+          }
+        },
+        {
+          "id": 22,
+          "at": 1794612510.3590128,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+          "document_id": "4054bcc8-dff3-4272-b90c-79aae7441458",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-injection-purchase_order",
+            "job_id": "88afca60-6a64-4ec6-bb49-b8bf2805b4e9",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "f670756c-0092-4429-8e1f-610164b61cf0",
+            "sha256": "548bbb60287b448bb3060d5ece57bee8c32f0c7660a49aae751ef8ff2024d364",
+            "version": 1
+          }
+        },
+        {
+          "id": 23,
+          "at": 1794612510.3660536,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+          "document_id": "ed5eb25f-ed33-42cd-8943-c906c328dd9c",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-injection-delivery_note",
+            "job_id": "b1406c30-08a9-4006-9277-af60d9a12496",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "a5b3cf1e-a7e2-4054-935c-dc58891c4686",
+            "sha256": "97098a1021e66b390103b26f2c557b4d374c2ed6cb2483ece1749a21c872465e",
+            "version": 1
+          }
+        },
+        {
+          "id": 24,
+          "at": 1794612510.3738468,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+          "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-injection-invoice",
+            "job_id": "4bfb533c-93fc-452e-9995-a1fe9b099491",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "ca4cec0b-ce2b-4ead-9041-5a65dc6d1aff",
+            "sha256": "a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7",
+            "version": 1
+          }
+        },
+        {
+          "id": 41,
+          "at": 1794612513.8872771,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+          "document_id": "4054bcc8-dff3-4272-b90c-79aae7441458",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.93104349673162,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.2747583990003477,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 42,
+          "at": 1794612514.1163101,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+          "document_id": "ed5eb25f-ed33-42cd-8943-c906c328dd9c",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.934825639508026,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.22514077499999985,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 43,
+          "at": 1794612514.396952,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+          "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9631072582827476,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "review",
+            "elapsed_seconds": 0.27602677400000175,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+      "scenario": "partial",
+      "uploads": [
+        {
+          "document_id": "f9b680b5-36c3-4abd-9dd6-97d8fb7af555",
+          "job_id": "5f5f4b6c-1e2f-4f85-a502-bee9def4e295",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-partial-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "b645b549-9632-453c-80b8-3062d7fcb1b0",
+          "job_id": "1a0b1267-5fac-48be-a4d9-1dfb2447e8b3",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-partial-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "db2b0d6e-11c2-4aba-bd1a-929763b28779",
+          "job_id": "84e7cd2c-f168-44ab-a782-2e88fbfb20ad",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-partial-invoice-v1.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "partial",
+        "findings": [
+          {
+            "code": "legitimate_partial",
+            "severity": "info",
+            "message": "Invoiced quantities do not exceed delivered quantities; the order remains partially fulfilled or billed.",
+            "field": null,
+            "document_id": null
+          }
+        ],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "6",
+          "PART-100.invoiced": "4",
+          "PART-100.remaining_delivery": "4",
+          "PART-100.remaining_invoice": "2",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "602.40",
+          "invoice.subtotal": "502.00",
+          "invoice.tax": "100.40",
+          "invoice.calculated_subtotal": "502.00",
+          "invoice.calculated_tax": "100.40"
+        }
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "partial",
+        "findings": [
+          {
+            "code": "legitimate_partial",
+            "severity": "info",
+            "message": "Invoiced quantities do not exceed delivered quantities; the order remains partially fulfilled or billed.",
+            "field": null,
+            "document_id": null
+          }
+        ],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "6",
+          "PART-100.invoiced": "4",
+          "PART-100.remaining_delivery": "4",
+          "PART-100.remaining_invoice": "2",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "602.40",
+          "invoice.subtotal": "502.00",
+          "invoice.tax": "100.40",
+          "invoice.calculated_subtotal": "502.00",
+          "invoice.calculated_tax": "100.40"
+        }
+      },
+      "eligible": true,
+      "publication": {
+        "id": "7b38b13f-3c57-460f-be68-5b27584b95be",
+        "fingerprint": "261a01e9be7218cff40095d205a64459dd04477abf88defe6136c562f6d4ecdb",
+        "duplicate": false
+      },
+      "idempotent_publication": true,
+      "export_sha256": "2eb38e9507aafa64e93521ed7a7a8d3dccc574eca9ef411b3761665c2b8527ce",
+      "audit": [
+        {
+          "id": 6,
+          "at": 1794612510.203221,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 partial"
+          }
+        },
+        {
+          "id": 25,
+          "at": 1794612510.3816645,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": "f9b680b5-36c3-4abd-9dd6-97d8fb7af555",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-partial-purchase_order",
+            "job_id": "5f5f4b6c-1e2f-4f85-a502-bee9def4e295",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "0b7a5079-39d2-458a-8c9d-7617c002245d",
+            "sha256": "8e64f8f277e7caa8e2954dac70bc08c969b1b37b351f59ba12ab50d1bb8272fa",
+            "version": 1
+          }
+        },
+        {
+          "id": 26,
+          "at": 1794612510.3897448,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": "b645b549-9632-453c-80b8-3062d7fcb1b0",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-partial-delivery_note",
+            "job_id": "1a0b1267-5fac-48be-a4d9-1dfb2447e8b3",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "0dca3317-d1dd-4bfb-ac6f-62faf7af0cc3",
+            "sha256": "2f0b07f48d67187b46a6df54b1d7d2f187c5828e7483be204034f1e3d2334f7f",
+            "version": 1
+          }
+        },
+        {
+          "id": 27,
+          "at": 1794612510.398033,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": "db2b0d6e-11c2-4aba-bd1a-929763b28779",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-partial-invoice",
+            "job_id": "84e7cd2c-f168-44ab-a782-2e88fbfb20ad",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "2f111eb6-666c-4a9d-9753-7309b10eee47",
+            "sha256": "1fe34541f813d43714c623e724c9a14cb9e27c7c6bb4b2806f2e3c5c7ccc2636",
+            "version": 1
+          }
+        },
+        {
+          "id": 44,
+          "at": 1794612514.677358,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": "f9b680b5-36c3-4abd-9dd6-97d8fb7af555",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9309527141902483,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.2758733589998883,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 45,
+          "at": 1794612514.9607482,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": "b645b549-9632-453c-80b8-3062d7fcb1b0",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9379638090111513,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.27931129699982193,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 46,
+          "at": 1794612515.242715,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": "db2b0d6e-11c2-4aba-bd1a-929763b28779",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9628593154663995,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.2765487840001697,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 71,
+          "at": 1794612518.8758664,
+          "actor": "demo-approver",
+          "action": "case.accepted",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "261a01e9be7218cff40095d205a64459dd04477abf88defe6136c562f6d4ecdb",
+            "reason": "Synthetic demonstration: source evidence and current reconciliation reviewed explicitly.",
+            "status": "partial"
+          }
+        },
+        {
+          "id": 72,
+          "at": 1794612518.889469,
+          "actor": "demo-publisher",
+          "action": "case.published",
+          "case_id": "4ef4f74c-4073-4d65-ac84-9f427247b994",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "261a01e9be7218cff40095d205a64459dd04477abf88defe6136c562f6d4ecdb",
+            "publication_id": "7b38b13f-3c57-460f-be68-5b27584b95be"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+      "scenario": "versioned",
+      "uploads": [
+        {
+          "document_id": "3509bdb3-8f84-4516-82a4-fa8daa6d9566",
+          "job_id": "6a6f9577-77b4-4f46-938f-53e4e29b7bf0",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-versioned-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "f473ec21-e663-4e0d-bb05-933bc9ee7736",
+          "job_id": "826318a3-938f-497e-a9f8-ece078193473",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-versioned-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "22e79898-3337-4767-a327-a77cd22b47f7",
+          "job_id": "a5854cfb-7ae5-431c-b929-dcae54967cb3",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-versioned-invoice-v1.pdf"
+        },
+        {
+          "document_id": "35080f2e-3fc0-4f10-b272-8896446013ff",
+          "job_id": "6f7d3554-7626-42f8-8a37-9696e75e14f1",
+          "version": 2,
+          "duplicate": false,
+          "source": "documents/demo/demo-versioned-invoice-v2.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "eligible": true,
+      "publication": {
+        "id": "68ec2485-7459-4575-a0a7-228c2c6eda3d",
+        "fingerprint": "62d7292b723a4328e2ec019b700d829665ed8d4ea42678f7437f897bf059c1f6",
+        "duplicate": false
+      },
+      "idempotent_publication": true,
+      "export_sha256": "685654bc87fddd0059d87d6be15afb3b4919f712c31325c2deeb6d9238130b28",
+      "audit": [
+        {
+          "id": 7,
+          "at": 1794612510.2107768,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 versioned"
+          }
+        },
+        {
+          "id": 28,
+          "at": 1794612510.4064085,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "3509bdb3-8f84-4516-82a4-fa8daa6d9566",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-versioned-purchase_order",
+            "job_id": "6a6f9577-77b4-4f46-938f-53e4e29b7bf0",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "b7b969dd-291f-4358-be3e-545c0829cf2f",
+            "sha256": "de08b771680fe53c7ce35a2b099b993c95f00bba0a3ff99f226690de8f41897a",
+            "version": 1
+          }
+        },
+        {
+          "id": 47,
+          "at": 1794612515.5251796,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "3509bdb3-8f84-4516-82a4-fa8daa6d9566",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9317952652574449,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.27779955200003315,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 48,
+          "at": 1794612515.533764,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "f473ec21-e663-4e0d-bb05-933bc9ee7736",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-versioned-delivery_note",
+            "job_id": "826318a3-938f-497e-a9f8-ece078193473",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "317436a6-6adf-44a7-91d7-8effa143ac66",
+            "sha256": "6d391ef4fc6f48300572b8f8dfe487571dac66d8225158785319038491b8ed6c",
+            "version": 1
+          }
+        },
+        {
+          "id": 49,
+          "at": 1794612515.8149595,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "f473ec21-e663-4e0d-bb05-933bc9ee7736",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9354378534259502,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.275558361000094,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 50,
+          "at": 1794612515.8227103,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "22e79898-3337-4767-a327-a77cd22b47f7",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-versioned-invoice",
+            "job_id": "a5854cfb-7ae5-431c-b929-dcae54967cb3",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "ee927d93-ea8a-4c8e-825a-13a2e2bc3b3b",
+            "sha256": "a4cb6eb488de4fedbfafee66c0b3aa39067101a65417e83dd3d917658288a623",
+            "version": 1
+          }
+        },
+        {
+          "id": 51,
+          "at": 1794612516.106,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "22e79898-3337-4767-a327-a77cd22b47f7",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9623200597331976,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "rejected",
+            "elapsed_seconds": 0.27719961100001456,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 52,
+          "at": 1794612516.1137292,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "35080f2e-3fc0-4f10-b272-8896446013ff",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-versioned-invoice",
+            "job_id": "6f7d3554-7626-42f8-8a37-9696e75e14f1",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "fc426985-0444-414d-be2f-882a0357e0c8",
+            "sha256": "2862ba5b61556224a0020b0a9c827705d5edd8e54ad2b53fa70440938312a97e",
+            "version": 2
+          }
+        },
+        {
+          "id": 59,
+          "at": 1794612516.4506173,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": "35080f2e-3fc0-4f10-b272-8896446013ff",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9719070773893536,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.276049133000015,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 2
+          }
+        },
+        {
+          "id": 73,
+          "at": 1794612518.9924755,
+          "actor": "demo-approver",
+          "action": "case.accepted",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": null,
+          "revision": 8,
+          "details": {
+            "fingerprint": "62d7292b723a4328e2ec019b700d829665ed8d4ea42678f7437f897bf059c1f6",
+            "reason": "Synthetic demonstration: source evidence and current reconciliation reviewed explicitly.",
+            "status": "matched"
+          }
+        },
+        {
+          "id": 74,
+          "at": 1794612519.006889,
+          "actor": "demo-publisher",
+          "action": "case.published",
+          "case_id": "b24fd5d3-5118-40e4-a8a9-2e133b8b07f4",
+          "document_id": null,
+          "revision": 8,
+          "details": {
+            "fingerprint": "62d7292b723a4328e2ec019b700d829665ed8d4ea42678f7437f897bf059c1f6",
+            "publication_id": "68ec2485-7459-4575-a0a7-228c2c6eda3d"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+      "scenario": "scanned",
+      "uploads": [
+        {
+          "document_id": "d8246253-cfef-456b-9a57-2d78d4ccb1ad",
+          "job_id": "1e893789-2b90-4827-ac14-9850ebb7a0c4",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-scanned-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "7ad7ae0b-59d1-4a7d-a87d-92ca2401f1fd",
+          "job_id": "a19e9814-2573-4cf5-b2ce-72e52caedf3e",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-scanned-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "646bc83c-bb48-402c-98e0-bdfa7bc53f29",
+          "job_id": "3bed268a-9e08-4956-a767-3619d06c8b28",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-scanned-invoice-v1.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "eligible": true,
+      "publication": {
+        "id": "f3d99f8d-8ccc-4e39-a284-e8778f4feba3",
+        "fingerprint": "7b269c3a33b07bae7056ce905e0fa16c5b93583fe354b34a60f30a953099f529",
+        "duplicate": false
+      },
+      "idempotent_publication": true,
+      "export_sha256": "f995b68c63f5fbdd6538a0f8629d715c57c9e50fc8b13e2d9cd0906b53564104",
+      "audit": [
+        {
+          "id": 8,
+          "at": 1794612510.2167714,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 scanned"
+          }
+        },
+        {
+          "id": 53,
+          "at": 1794612516.1224582,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": "d8246253-cfef-456b-9a57-2d78d4ccb1ad",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-scanned-purchase_order",
+            "job_id": "1e893789-2b90-4827-ac14-9850ebb7a0c4",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "f203eac5-e2fe-4c76-abd1-0d5926be1575",
+            "sha256": "d03729678aa03966bdabd7e1a1bd2465c7dc41578edcb5b218cca56b1b26d7f1",
+            "version": 1
+          }
+        },
+        {
+          "id": 54,
+          "at": 1794612516.1298301,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": "7ad7ae0b-59d1-4a7d-a87d-92ca2401f1fd",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-scanned-delivery_note",
+            "job_id": "a19e9814-2573-4cf5-b2ce-72e52caedf3e",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "4db25563-92b3-4d85-99fa-b1702b24bbf2",
+            "sha256": "7f016c719450dfcb9a51b426181445c7cfba813efbdfcd5adfb2453481980231",
+            "version": 1
+          }
+        },
+        {
+          "id": 55,
+          "at": 1794612516.1383586,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": "646bc83c-bb48-402c-98e0-bdfa7bc53f29",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-scanned-invoice",
+            "job_id": "3bed268a-9e08-4956-a767-3619d06c8b28",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "9b33877d-22c2-4a36-8b38-0c196ea266af",
+            "sha256": "747f2f9a8a185cc78ebbef8df92658ffe11d82c0b600462eaf657c10e81516b1",
+            "version": 1
+          }
+        },
+        {
+          "id": 60,
+          "at": 1794612516.729787,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": "d8246253-cfef-456b-9a57-2d78d4ccb1ad",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9278788033542467,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.275134805000107,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 61,
+          "at": 1794612517.010147,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": "7ad7ae0b-59d1-4a7d-a87d-92ca2401f1fd",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9330040023608074,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.27653858199983006,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 62,
+          "at": 1794612517.7911353,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": "646bc83c-bb48-402c-98e0-bdfa7bc53f29",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9587691146050832,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.7768882459999986,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 75,
+          "at": 1794612519.0998216,
+          "actor": "demo-approver",
+          "action": "case.accepted",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "7b269c3a33b07bae7056ce905e0fa16c5b93583fe354b34a60f30a953099f529",
+            "reason": "Synthetic demonstration: source evidence and current reconciliation reviewed explicitly.",
+            "status": "matched"
+          }
+        },
+        {
+          "id": 76,
+          "at": 1794612519.116225,
+          "actor": "demo-publisher",
+          "action": "case.published",
+          "case_id": "23d4ca27-294d-40f6-8238-eb648d688882",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "7b269c3a33b07bae7056ce905e0fa16c5b93583fe354b34a60f30a953099f529",
+            "publication_id": "f3d99f8d-8ccc-4e39-a284-e8778f4feba3"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+      "scenario": "duplicate",
+      "uploads": [
+        {
+          "document_id": "f978de13-ec9e-4e78-a41b-e49299d3adff",
+          "job_id": "b3b92c47-131f-4d55-86e5-96bc43984123",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-duplicate-purchase_order-v1.pdf"
+        },
+        {
+          "document_id": "18888163-fced-49b4-850f-4b2564b00852",
+          "job_id": "6d09f9cd-6c45-45e9-a314-df24fe4f20f6",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-duplicate-delivery_note-v1.pdf"
+        },
+        {
+          "document_id": "4e8c1736-7c8d-4df1-aa17-216a8ab62bfe",
+          "job_id": "c70d923e-bda1-4556-92c5-2ca1105986a1",
+          "version": 1,
+          "duplicate": false,
+          "source": "documents/demo/demo-duplicate-invoice-v1.pdf"
+        },
+        {
+          "document_id": "4e8c1736-7c8d-4df1-aa17-216a8ab62bfe",
+          "duplicate": true,
+          "source": "documents/demo/demo-duplicate-invoice-resubmitted.pdf"
+        }
+      ],
+      "initial_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "final_reconciliation": {
+        "rule_version": "three-way-1.0",
+        "status": "matched",
+        "findings": [],
+        "totals": {
+          "PART-100.ordered": "10",
+          "PART-100.delivered": "10",
+          "PART-100.invoiced": "10",
+          "PART-100.remaining_delivery": "0",
+          "PART-100.remaining_invoice": "0",
+          "purchase_order.total": "1506.00",
+          "invoice.total": "1506.00",
+          "invoice.subtotal": "1255.00",
+          "invoice.tax": "251.00",
+          "invoice.calculated_subtotal": "1255.00",
+          "invoice.calculated_tax": "251.00"
+        }
+      },
+      "eligible": true,
+      "publication": {
+        "id": "915591a5-ea5e-494c-a90e-c37221b8fe9b",
+        "fingerprint": "a25fe60bb378cacb3c8295853836fda2a59c255bfed885dbdded595b8bdce6bb",
+        "duplicate": false
+      },
+      "idempotent_publication": true,
+      "export_sha256": "fb1b9afa59fcbbb09d52ea98a045867384021bd53f0fa60e7e875be0fbd8ea6a",
+      "audit": [
+        {
+          "id": 9,
+          "at": 1794612510.2239132,
+          "actor": "demo-operator",
+          "action": "case.created",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": null,
+          "revision": null,
+          "details": {
+            "name": "Aster Procurement \u00b7 duplicate"
+          }
+        },
+        {
+          "id": 56,
+          "at": 1794612516.1469545,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": "f978de13-ec9e-4e78-a41b-e49299d3adff",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-duplicate-purchase_order",
+            "job_id": "b3b92c47-131f-4d55-86e5-96bc43984123",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "ff1f8fe7-5523-41d4-8642-cfa91ba9d7d7",
+            "sha256": "b4346f4dec56f9fef6023a3991f582a8ca049dab6eb48a2888e617b8f0d658d7",
+            "version": 1
+          }
+        },
+        {
+          "id": 57,
+          "at": 1794612516.1554742,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": "18888163-fced-49b4-850f-4b2564b00852",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-duplicate-delivery_note",
+            "job_id": "6d09f9cd-6c45-45e9-a314-df24fe4f20f6",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "d1011bdc-56a8-4ff9-bddd-d2ec3baab8a5",
+            "sha256": "5aaa90209b76ca56845c979b6fe909ea376ecf1a4248c8f0c99dcad9e5af4856",
+            "version": 1
+          }
+        },
+        {
+          "id": 58,
+          "at": 1794612516.1638975,
+          "actor": "demo-operator",
+          "action": "document.ingested",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": "4e8c1736-7c8d-4df1-aa17-216a8ab62bfe",
+          "revision": 0,
+          "details": {
+            "document_key": "demo-duplicate-invoice",
+            "job_id": "c70d923e-bda1-4556-92c5-2ca1105986a1",
+            "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+            "profile": "local-linear",
+            "request_id": "af2f5a11-3dd2-4971-a853-1aed1a9b0342",
+            "sha256": "7bb8cdcde4ff5ccf3e356475398cb37c8e3b6728a93a8a70a8d42a1760149978",
+            "version": 1
+          }
+        },
+        {
+          "id": 63,
+          "at": 1794612518.0710878,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": "f978de13-ec9e-4e78-a41b-e49299d3adff",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9314125195698523,
+              "kind": "purchase_order",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.2762936350000018,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 64,
+          "at": 1794612518.3513794,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": "18888163-fced-49b4-850f-4b2564b00852",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9346109565149329,
+              "kind": "delivery_note",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.27613473600013094,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 65,
+          "at": 1794612518.6311746,
+          "actor": "worker",
+          "action": "document.processed",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": "4e8c1736-7c8d-4df1-aa17-216a8ab62bfe",
+          "revision": 0,
+          "details": {
+            "attempt": 1,
+            "classification_proposal": {
+              "confidence": 0.9616668260937464,
+              "kind": "invoice",
+              "model_version": "dci-local-linear-1.1:234c94149697cbed",
+              "profile": "local-linear"
+            },
+            "decision": "eligible",
+            "elapsed_seconds": 0.27578735499992035,
+            "model_version": "dci-local-linear-1.1:234c94149697cbed",
+            "profile": "local-linear",
+            "source_version": 1
+          }
+        },
+        {
+          "id": 77,
+          "at": 1794612519.1803193,
+          "actor": "demo-approver",
+          "action": "case.accepted",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "a25fe60bb378cacb3c8295853836fda2a59c255bfed885dbdded595b8bdce6bb",
+            "reason": "Synthetic demonstration: source evidence and current reconciliation reviewed explicitly.",
+            "status": "matched"
+          }
+        },
+        {
+          "id": 78,
+          "at": 1794612519.1926823,
+          "actor": "demo-publisher",
+          "action": "case.published",
+          "case_id": "a3e333a6-056a-476f-adc2-2a7691871f12",
+          "document_id": null,
+          "revision": 6,
+          "details": {
+            "fingerprint": "a25fe60bb378cacb3c8295853836fda2a59c255bfed885dbdded595b8bdce6bb",
+            "publication_id": "915591a5-ea5e-494c-a90e-c37221b8fe9b"
+          }
+        }
+      ]
+    }
+  ],
+  "restore": {
+    "manifest": {
+      "schema_version": "backup-1.0",
+      "created_at": 1794612519.2453604,
+      "files": {
+        "blobs/7f/7f016c719450dfcb9a51b426181445c7cfba813efbdfcd5adfb2453481980231.pdf": "7f016c719450dfcb9a51b426181445c7cfba813efbdfcd5adfb2453481980231",
+        "blobs/74/747f2f9a8a185cc78ebbef8df92658ffe11d82c0b600462eaf657c10e81516b1.pdf": "747f2f9a8a185cc78ebbef8df92658ffe11d82c0b600462eaf657c10e81516b1",
+        "blobs/d0/d03729678aa03966bdabd7e1a1bd2465c7dc41578edcb5b218cca56b1b26d7f1.pdf": "d03729678aa03966bdabd7e1a1bd2465c7dc41578edcb5b218cca56b1b26d7f1",
+        "blobs/75/759b41b4ab04386c95abfd33b75c12bb5b9c1579db12478ca689a72068848027.pdf": "759b41b4ab04386c95abfd33b75c12bb5b9c1579db12478ca689a72068848027",
+        "blobs/2a/2aba751f6b0652a67fa9e8b0480e5bd536d0478661bed793fa04f15d22002b54.pdf": "2aba751f6b0652a67fa9e8b0480e5bd536d0478661bed793fa04f15d22002b54",
+        "blobs/b0/b0c9e51655ec1e6f71c69648e0a6ab7c3be2a84c6ea1fe402b8104797ef18a0b.pdf": "b0c9e51655ec1e6f71c69648e0a6ab7c3be2a84c6ea1fe402b8104797ef18a0b",
+        "blobs/2f/2f0b07f48d67187b46a6df54b1d7d2f187c5828e7483be204034f1e3d2334f7f.pdf": "2f0b07f48d67187b46a6df54b1d7d2f187c5828e7483be204034f1e3d2334f7f",
+        "blobs/1f/1fe34541f813d43714c623e724c9a14cb9e27c7c6bb4b2806f2e3c5c7ccc2636.pdf": "1fe34541f813d43714c623e724c9a14cb9e27c7c6bb4b2806f2e3c5c7ccc2636",
+        "blobs/8e/8e64f8f277e7caa8e2954dac70bc08c969b1b37b351f59ba12ab50d1bb8272fa.pdf": "8e64f8f277e7caa8e2954dac70bc08c969b1b37b351f59ba12ab50d1bb8272fa",
+        "blobs/2d/2de0675236a1058d1827cda1ef89eb0f2c9915f85da87afb7e20b87b78806986.pdf": "2de0675236a1058d1827cda1ef89eb0f2c9915f85da87afb7e20b87b78806986",
+        "blobs/84/846f61965389fbd38e90be181d0f36ae8d8767845c6fd0a7340a5bdc7cff382d.pdf": "846f61965389fbd38e90be181d0f36ae8d8767845c6fd0a7340a5bdc7cff382d",
+        "blobs/f1/f1e31fe3a1bb9e7cfa03066aea71dc39d8c0e83fdca160de83ae327560038f84.pdf": "f1e31fe3a1bb9e7cfa03066aea71dc39d8c0e83fdca160de83ae327560038f84",
+        "blobs/5a/5aaa90209b76ca56845c979b6fe909ea376ecf1a4248c8f0c99dcad9e5af4856.pdf": "5aaa90209b76ca56845c979b6fe909ea376ecf1a4248c8f0c99dcad9e5af4856",
+        "blobs/7b/7bb8cdcde4ff5ccf3e356475398cb37c8e3b6728a93a8a70a8d42a1760149978.pdf": "7bb8cdcde4ff5ccf3e356475398cb37c8e3b6728a93a8a70a8d42a1760149978",
+        "blobs/b4/b4346f4dec56f9fef6023a3991f582a8ca049dab6eb48a2888e617b8f0d658d7.pdf": "b4346f4dec56f9fef6023a3991f582a8ca049dab6eb48a2888e617b8f0d658d7",
+        "blobs/6d/6d391ef4fc6f48300572b8f8dfe487571dac66d8225158785319038491b8ed6c.pdf": "6d391ef4fc6f48300572b8f8dfe487571dac66d8225158785319038491b8ed6c",
+        "blobs/28/2862ba5b61556224a0020b0a9c827705d5edd8e54ad2b53fa70440938312a97e.pdf": "2862ba5b61556224a0020b0a9c827705d5edd8e54ad2b53fa70440938312a97e",
+        "blobs/a4/a4cb6eb488de4fedbfafee66c0b3aa39067101a65417e83dd3d917658288a623.pdf": "a4cb6eb488de4fedbfafee66c0b3aa39067101a65417e83dd3d917658288a623",
+        "blobs/de/de08b771680fe53c7ce35a2b099b993c95f00bba0a3ff99f226690de8f41897a.pdf": "de08b771680fe53c7ce35a2b099b993c95f00bba0a3ff99f226690de8f41897a",
+        "blobs/97/97098a1021e66b390103b26f2c557b4d374c2ed6cb2483ece1749a21c872465e.pdf": "97098a1021e66b390103b26f2c557b4d374c2ed6cb2483ece1749a21c872465e",
+        "blobs/a3/a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7.pdf": "a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7",
+        "blobs/54/548bbb60287b448bb3060d5ece57bee8c32f0c7660a49aae751ef8ff2024d364.pdf": "548bbb60287b448bb3060d5ece57bee8c32f0c7660a49aae751ef8ff2024d364",
+        "blobs/33/3375b12c8e054749dae67971c8157148147be1430ad99a0dd8f576f2ba5f9a97.pdf": "3375b12c8e054749dae67971c8157148147be1430ad99a0dd8f576f2ba5f9a97",
+        "blobs/0b/0be49cfb90927a9d448161179ce7e6833529f66a7c936ae80d2a5a0162a35af2.pdf": "0be49cfb90927a9d448161179ce7e6833529f66a7c936ae80d2a5a0162a35af2",
+        "blobs/22/22395e812c4b070e7e63f6448e812e63fa49c51cbc484f8cfb6f00e4094ca341.pdf": "22395e812c4b070e7e63f6448e812e63fa49c51cbc484f8cfb6f00e4094ca341",
+        "blobs/bb/bbf69f4c33d4e88670565873cd96fc39f023a20b2e1d87717f0ee773f7a70b22.pdf": "bbf69f4c33d4e88670565873cd96fc39f023a20b2e1d87717f0ee773f7a70b22",
+        "blobs/01/01d0c0052c4f2c359954635895fba3b0ffe165af81cec696359e6c731433fa66.pdf": "01d0c0052c4f2c359954635895fba3b0ffe165af81cec696359e6c731433fa66",
+        "blobs/d2/d21a824b8cb22ccc8b314d57199194e7ae0903eb9c1dac43ccfbf6af50b24555.pdf": "d21a824b8cb22ccc8b314d57199194e7ae0903eb9c1dac43ccfbf6af50b24555",
+        "control.db": "7ee182eabc56bc5b9c2f60c009e89f84c7130390682aeeea1b9b45669b8c0f0b"
+      },
+      "secrets_included": false,
+      "model_artifacts_included": false,
+      "restore_policy": "new destination only; interrupted jobs requeued; actor/model provisioning required"
+    },
+    "result": {
+      "restored_files": 29,
+      "interrupted_jobs_requeued": 0,
+      "target": "/workspace/scratch/6956bc82bcf5/document-control-intelligence/outputs/evidence-final/demo-local-linear/restored",
+      "secrets_restored": false,
+      "models_restored": false
+    },
+    "export_equality": {
+      "accepted": true,
+      "correction": true,
+      "partial": true,
+      "versioned": true,
+      "scanned": true,
+      "duplicate": true
+    },
+    "database_integrity": "ok"
+  },
+  "external_inference_requests": 0,
+  "external_api_cost_usd": 0,
+  "cost_note": "No paid API used. Host electricity/cloud-runner cost was not metered."
+}

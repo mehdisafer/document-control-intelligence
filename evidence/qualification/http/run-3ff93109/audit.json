@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "at": 1794613008.8797677,
+    "actor": "http_operator",
+    "action": "case.created",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": null,
+    "revision": null,
+    "details": {
+      "name": "Real HTTP qualification / synthetic purchasing family"
+    }
+  },
+  {
+    "id": 2,
+    "at": 1794613008.9186568,
+    "actor": "http_operator",
+    "action": "document.ingested",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+    "revision": 0,
+    "details": {
+      "document_key": "PO-BROWSER-HTTP0C5AE7E7DB62",
+      "job_id": "4fa354e6-4a50-42b4-b0cf-95ff5a3e196d",
+      "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+      "profile": "local-linear",
+      "request_id": "52086071-dc27-45a3-94ec-7aebaad9a81d",
+      "sha256": "44613f1bb6e5acf8420445d9e62bd3ab8151ee24cff137dc07c3b70419ddb403",
+      "version": 1
+    }
+  },
+  {
+    "id": 3,
+    "at": 1794613008.9220889,
+    "actor": "http_operator",
+    "action": "document.ingested",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+    "revision": 0,
+    "details": {
+      "document_key": "DN-BROWSER-HTTP0C5AE7E7DB62",
+      "job_id": "9f64e6d8-0382-4231-8995-70fcdf27bd09",
+      "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+      "profile": "local-linear",
+      "request_id": "8a5341cf-282f-4efe-8ffd-b5e462cec1e2",
+      "sha256": "890bdcfb6424c456e99ed58619587f1d8abaa346bfef9a08a5e97573db94fff8",
+      "version": 1
+    }
+  },
+  {
+    "id": 4,
+    "at": 1794613008.924715,
+    "actor": "http_operator",
+    "action": "document.ingested",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+    "revision": 0,
+    "details": {
+      "document_key": "INV-BROWSER-HTTP0C5AE7E7DB62",
+      "job_id": "3993bb71-5e42-4700-9c0a-fe4fb69fb9a3",
+      "policy_digest": "05abbf24cc2e91ce49850503aafd3d8e08a2b7c4a2a65158b13b91cad8161688",
+      "profile": "local-linear",
+      "request_id": "acca6f68-a312-4430-81dd-486a76dfa472",
+      "sha256": "34a37e9bc48281616e5650e15caf6953fb5ad54f95c14e05695e647ff107f1d2",
+      "version": 1
+    }
+  },
+  {
+    "id": 5,
+    "at": 1794613009.481614,
+    "actor": "worker",
+    "action": "document.processed",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": "0f63b7f5-1573-4bf4-8be5-2585952afb47",
+    "revision": 0,
+    "details": {
+      "attempt": 1,
+      "classification_proposal": {
+        "confidence": 0.9168005484991647,
+        "kind": "purchase_order",
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear"
+      },
+      "decision": "eligible",
+      "elapsed_seconds": 0.44533562900005563,
+      "model_version": "dci-local-linear-1.1:234c94149697cbed",
+      "profile": "local-linear",
+      "source_version": 1
+    }
+  },
+  {
+    "id": 6,
+    "at": 1794613009.8092434,
+    "actor": "worker",
+    "action": "document.processed",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": "4cc3c982-ff5d-4a31-b075-8e1cc8dd9f2e",
+    "revision": 0,
+    "details": {
+      "attempt": 1,
+      "classification_proposal": {
+        "confidence": 0.9463054175440963,
+        "kind": "delivery_note",
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear"
+      },
+      "decision": "eligible",
+      "elapsed_seconds": 0.3259923959999469,
+      "model_version": "dci-local-linear-1.1:234c94149697cbed",
+      "profile": "local-linear",
+      "source_version": 1
+    }
+  },
+  {
+    "id": 7,
+    "at": 1794613010.0860918,
+    "actor": "worker",
+    "action": "document.processed",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": "709ec08b-1855-42a1-9bfa-634672fb19ba",
+    "revision": 0,
+    "details": {
+      "attempt": 1,
+      "classification_proposal": {
+        "confidence": 0.9680692239723604,
+        "kind": "invoice",
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear"
+      },
+      "decision": "eligible",
+      "elapsed_seconds": 0.27500588799966863,
+      "model_version": "dci-local-linear-1.1:234c94149697cbed",
+      "profile": "local-linear",
+      "source_version": 1
+    }
+  },
+  {
+    "id": 8,
+    "at": 1794613010.2135053,
+    "actor": "http_approver",
+    "action": "case.accepted",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": null,
+    "revision": 6,
+    "details": {
+      "fingerprint": "0181cd22921df0fcc9ee2d783fa37022a933ff41cd1f3a805c61c6d3da5ca82a",
+      "reason": "Verified synthetic originals, exact source spans, model proposals and reconciliation over real HTTP.",
+      "status": "matched"
+    }
+  },
+  {
+    "id": 9,
+    "at": 1794613010.2282374,
+    "actor": "http_publisher",
+    "action": "case.published",
+    "case_id": "c5d8c6f9-a1eb-49df-8705-6fe5a347fa3e",
+    "document_id": null,
+    "revision": 6,
+    "details": {
+      "fingerprint": "0181cd22921df0fcc9ee2d783fa37022a933ff41cd1f3a805c61c6d3da5ca82a",
+      "publication_id": "f07f9ec1-0db2-4337-a745-432b3039b2a1"
+    }
+  }
+]

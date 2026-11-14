@@ -1,0 +1,41 @@
+{
+  "commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "created_at": "2026-11-13T23:27:49.090851+00:00",
+  "environment_overrides": {
+    "PYTHONPATH": "src"
+  },
+  "frozen_inputs_sha256": {
+    "tmp/final-corpus-seed42/manifest.json": "94161d71e2f704a7ea32ee01e07d46bd2538437c26ac972348bd4817211229fa",
+    "tmp/final-linear-model.json": "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1"
+  },
+  "limits": [
+    "Synthetic PDFs and a single host",
+    "Latency and throughput report-only",
+    "TestClient and Store load are not a network HTTP concurrency benchmark",
+    "Browser, container, Terraform and real deployment are not qualified by this run",
+    "Absent resource measurements are null, never zero"
+  ],
+  "regression": "Frozen baseline/local-linear final split; no training, tuning, threshold change or LLM rerun",
+  "required": {
+    "benchmark_documents_per_count": 9,
+    "benchmark_duplicate_publications": 0,
+    "benchmark_false_acceptances": 0,
+    "benchmark_worker_counts": [
+      1,
+      2
+    ],
+    "demo_cases_each": 9,
+    "demo_exports_restored_each": 7,
+    "source_files_unchanged": true,
+    "unit_integration_exit_code": 0
+  },
+  "runtime": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null
+    }
+  }
+}

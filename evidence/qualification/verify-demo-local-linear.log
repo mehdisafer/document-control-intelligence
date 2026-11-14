@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/6956bc82bcf5/document-control-intelligence/scripts/verify_demo.py", line 34, in <module>
+    main()
+  File "/workspace/scratch/6956bc82bcf5/document-control-intelligence/scripts/verify_demo.py", line 18, in main
+    assert cases[name]["eligible"] and cases[name]["idempotent_publication"], name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: injection

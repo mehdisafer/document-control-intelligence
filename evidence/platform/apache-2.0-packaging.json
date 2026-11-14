@@ -1,0 +1,66 @@
+{
+  "artifacts": [
+    {
+      "bytes": 88415,
+      "license_bytes_equal": true,
+      "license_expression": "Apache-2.0",
+      "license_files": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "path": "tmp/license-dist/document_control_intelligence-0.1.0rc1-py3-none-any.whl",
+      "sha256": "8a0b03313259473f7234aa6e8c3fd990df7d330bd87228c3898082aa158bb913",
+      "type": "wheel"
+    },
+    {
+      "bytes": 83257,
+      "license_bytes_equal": true,
+      "license_files": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "path": "tmp/license-dist/document_control_intelligence-0.1.0rc1.tar.gz",
+      "sha256": "c5848a11e051e1a6ac7317e11dd5dc6f0fc2ea4529f3bf21bf42187e18c1ec4a",
+      "type": "sdist"
+    }
+  ],
+  "base_commit": "8dbe831a243e66aad18c601086a8e62b3c496322",
+  "build_backend_observed": "setuptools (80.9.0)",
+  "checks": {
+    "current_document_links_resolve": true,
+    "docker_license_copy_before_project_install": true,
+    "spdx_metadata": "Apache-2.0",
+    "wheel_and_sdist_license_bytes_equal": true
+  },
+  "commands": [
+    {
+      "command": "uv lock --check --offline",
+      "exit_code": 0
+    },
+    {
+      "command": "uv build --no-sources --out-dir tmp/license-dist",
+      "exit_code": 0
+    }
+  ],
+  "copyright_holder": "Mehdi Safer",
+  "dependency_lock_unchanged": true,
+  "dependency_requirements_unchanged": true,
+  "dockerfile_sha256": "3d1a5ea39b4c87dec1dd11c14d52523943f21e55385de33243a7f20a9c52cfb5",
+  "license_expression": "Apache-2.0",
+  "limitations": [
+    "The local verification materialized the complete src/dci package and packaging inputs from the base commit, plus the licensed changes; it was not a full checkout of all historical evidence.",
+    "Build outputs were inspected locally and are not release assets.",
+    "No browser, container, Terraform or application qualification was rerun.",
+    "Historical source/evaluation/HTTP reports and their original hashes are unchanged.",
+    "The frozen HTTP replay command was reviewed; no new HTTP execution is claimed."
+  ],
+  "maintainer_decision_date": "2026-11-14",
+  "notice_sha256": "6267c8fb5165ff355d995e84dde51a077ee833901dc08e1dc9a801968b0da458",
+  "official_license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "pyproject_sha256": "8d21cbf12f35e0c01e037e78c633a4cf74b15c9706bcbfa7f5ef9f0fd2a4fd79",
+  "schema_version": "project-license-packaging-1.0",
+  "scope": "Local wheel/sdist licence metadata and exact licence/notice bytes only. Not a container build or application requalification.",
+  "source_package_files_unchanged": 23,
+  "verified_at_utc": "2026-11-14T12:05:23.239296+00:00"
+}

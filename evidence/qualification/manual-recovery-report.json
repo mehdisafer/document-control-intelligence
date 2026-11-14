@@ -1,0 +1,610 @@
+{
+  "accepted_by": "demo-approver",
+  "backup_manifest": {
+    "created_at": 1794612754.8099134,
+    "files": {
+      "blobs/01/01d0c0052c4f2c359954635895fba3b0ffe165af81cec696359e6c731433fa66.pdf": "01d0c0052c4f2c359954635895fba3b0ffe165af81cec696359e6c731433fa66",
+      "blobs/0b/0be49cfb90927a9d448161179ce7e6833529f66a7c936ae80d2a5a0162a35af2.pdf": "0be49cfb90927a9d448161179ce7e6833529f66a7c936ae80d2a5a0162a35af2",
+      "blobs/1f/1fe34541f813d43714c623e724c9a14cb9e27c7c6bb4b2806f2e3c5c7ccc2636.pdf": "1fe34541f813d43714c623e724c9a14cb9e27c7c6bb4b2806f2e3c5c7ccc2636",
+      "blobs/22/22395e812c4b070e7e63f6448e812e63fa49c51cbc484f8cfb6f00e4094ca341.pdf": "22395e812c4b070e7e63f6448e812e63fa49c51cbc484f8cfb6f00e4094ca341",
+      "blobs/28/2862ba5b61556224a0020b0a9c827705d5edd8e54ad2b53fa70440938312a97e.pdf": "2862ba5b61556224a0020b0a9c827705d5edd8e54ad2b53fa70440938312a97e",
+      "blobs/2a/2aba751f6b0652a67fa9e8b0480e5bd536d0478661bed793fa04f15d22002b54.pdf": "2aba751f6b0652a67fa9e8b0480e5bd536d0478661bed793fa04f15d22002b54",
+      "blobs/2d/2de0675236a1058d1827cda1ef89eb0f2c9915f85da87afb7e20b87b78806986.pdf": "2de0675236a1058d1827cda1ef89eb0f2c9915f85da87afb7e20b87b78806986",
+      "blobs/2f/2f0b07f48d67187b46a6df54b1d7d2f187c5828e7483be204034f1e3d2334f7f.pdf": "2f0b07f48d67187b46a6df54b1d7d2f187c5828e7483be204034f1e3d2334f7f",
+      "blobs/33/3375b12c8e054749dae67971c8157148147be1430ad99a0dd8f576f2ba5f9a97.pdf": "3375b12c8e054749dae67971c8157148147be1430ad99a0dd8f576f2ba5f9a97",
+      "blobs/54/548bbb60287b448bb3060d5ece57bee8c32f0c7660a49aae751ef8ff2024d364.pdf": "548bbb60287b448bb3060d5ece57bee8c32f0c7660a49aae751ef8ff2024d364",
+      "blobs/5a/5aaa90209b76ca56845c979b6fe909ea376ecf1a4248c8f0c99dcad9e5af4856.pdf": "5aaa90209b76ca56845c979b6fe909ea376ecf1a4248c8f0c99dcad9e5af4856",
+      "blobs/6d/6d391ef4fc6f48300572b8f8dfe487571dac66d8225158785319038491b8ed6c.pdf": "6d391ef4fc6f48300572b8f8dfe487571dac66d8225158785319038491b8ed6c",
+      "blobs/74/747f2f9a8a185cc78ebbef8df92658ffe11d82c0b600462eaf657c10e81516b1.pdf": "747f2f9a8a185cc78ebbef8df92658ffe11d82c0b600462eaf657c10e81516b1",
+      "blobs/75/759b41b4ab04386c95abfd33b75c12bb5b9c1579db12478ca689a72068848027.pdf": "759b41b4ab04386c95abfd33b75c12bb5b9c1579db12478ca689a72068848027",
+      "blobs/7b/7bb8cdcde4ff5ccf3e356475398cb37c8e3b6728a93a8a70a8d42a1760149978.pdf": "7bb8cdcde4ff5ccf3e356475398cb37c8e3b6728a93a8a70a8d42a1760149978",
+      "blobs/7f/7f016c719450dfcb9a51b426181445c7cfba813efbdfcd5adfb2453481980231.pdf": "7f016c719450dfcb9a51b426181445c7cfba813efbdfcd5adfb2453481980231",
+      "blobs/84/846f61965389fbd38e90be181d0f36ae8d8767845c6fd0a7340a5bdc7cff382d.pdf": "846f61965389fbd38e90be181d0f36ae8d8767845c6fd0a7340a5bdc7cff382d",
+      "blobs/8e/8e64f8f277e7caa8e2954dac70bc08c969b1b37b351f59ba12ab50d1bb8272fa.pdf": "8e64f8f277e7caa8e2954dac70bc08c969b1b37b351f59ba12ab50d1bb8272fa",
+      "blobs/97/97098a1021e66b390103b26f2c557b4d374c2ed6cb2483ece1749a21c872465e.pdf": "97098a1021e66b390103b26f2c557b4d374c2ed6cb2483ece1749a21c872465e",
+      "blobs/a3/a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7.pdf": "a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7",
+      "blobs/a4/a4cb6eb488de4fedbfafee66c0b3aa39067101a65417e83dd3d917658288a623.pdf": "a4cb6eb488de4fedbfafee66c0b3aa39067101a65417e83dd3d917658288a623",
+      "blobs/b0/b0c9e51655ec1e6f71c69648e0a6ab7c3be2a84c6ea1fe402b8104797ef18a0b.pdf": "b0c9e51655ec1e6f71c69648e0a6ab7c3be2a84c6ea1fe402b8104797ef18a0b",
+      "blobs/b4/b4346f4dec56f9fef6023a3991f582a8ca049dab6eb48a2888e617b8f0d658d7.pdf": "b4346f4dec56f9fef6023a3991f582a8ca049dab6eb48a2888e617b8f0d658d7",
+      "blobs/bb/bbf69f4c33d4e88670565873cd96fc39f023a20b2e1d87717f0ee773f7a70b22.pdf": "bbf69f4c33d4e88670565873cd96fc39f023a20b2e1d87717f0ee773f7a70b22",
+      "blobs/d0/d03729678aa03966bdabd7e1a1bd2465c7dc41578edcb5b218cca56b1b26d7f1.pdf": "d03729678aa03966bdabd7e1a1bd2465c7dc41578edcb5b218cca56b1b26d7f1",
+      "blobs/d2/d21a824b8cb22ccc8b314d57199194e7ae0903eb9c1dac43ccfbf6af50b24555.pdf": "d21a824b8cb22ccc8b314d57199194e7ae0903eb9c1dac43ccfbf6af50b24555",
+      "blobs/de/de08b771680fe53c7ce35a2b099b993c95f00bba0a3ff99f226690de8f41897a.pdf": "de08b771680fe53c7ce35a2b099b993c95f00bba0a3ff99f226690de8f41897a",
+      "blobs/f1/f1e31fe3a1bb9e7cfa03066aea71dc39d8c0e83fdca160de83ae327560038f84.pdf": "f1e31fe3a1bb9e7cfa03066aea71dc39d8c0e83fdca160de83ae327560038f84",
+      "control.db": "84a53a5840118ccb3f154122900f6d924a661b0244eb0751b9d41771b45973d6"
+    },
+    "model_artifacts_included": false,
+    "restore_policy": "new destination only; interrupted jobs requeued; actor/model provisioning required",
+    "schema_version": "backup-1.0",
+    "secrets_included": false
+  },
+  "case_audit": [
+    {
+      "action": "case.created",
+      "actor": "demo-operator",
+      "at": 1794612510.1967943,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "name": "Aster Procurement \u00b7 injection"
+      },
+      "document_id": null,
+      "id": 5,
+      "revision": null
+    },
+    {
+      "action": "document.ingested",
+      "actor": "demo-operator",
+      "at": 1794612510.3590128,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "document_key": "demo-injection-purchase_order",
+        "job_id": "88afca60-6a64-4ec6-bb49-b8bf2805b4e9",
+        "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+        "profile": "local-linear",
+        "request_id": "f670756c-0092-4429-8e1f-610164b61cf0",
+        "sha256": "548bbb60287b448bb3060d5ece57bee8c32f0c7660a49aae751ef8ff2024d364",
+        "version": 1
+      },
+      "document_id": "4054bcc8-dff3-4272-b90c-79aae7441458",
+      "id": 22,
+      "revision": 0
+    },
+    {
+      "action": "document.ingested",
+      "actor": "demo-operator",
+      "at": 1794612510.3660536,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "document_key": "demo-injection-delivery_note",
+        "job_id": "b1406c30-08a9-4006-9277-af60d9a12496",
+        "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+        "profile": "local-linear",
+        "request_id": "a5b3cf1e-a7e2-4054-935c-dc58891c4686",
+        "sha256": "97098a1021e66b390103b26f2c557b4d374c2ed6cb2483ece1749a21c872465e",
+        "version": 1
+      },
+      "document_id": "ed5eb25f-ed33-42cd-8943-c906c328dd9c",
+      "id": 23,
+      "revision": 0
+    },
+    {
+      "action": "document.ingested",
+      "actor": "demo-operator",
+      "at": 1794612510.3738468,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "document_key": "demo-injection-invoice",
+        "job_id": "4bfb533c-93fc-452e-9995-a1fe9b099491",
+        "policy_digest": "c9bb3104ca43612a7e30dbc03d69492130ae81ece72eab9c4f6456dae0cdd030",
+        "profile": "local-linear",
+        "request_id": "ca4cec0b-ce2b-4ead-9041-5a65dc6d1aff",
+        "sha256": "a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7",
+        "version": 1
+      },
+      "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+      "id": 24,
+      "revision": 0
+    },
+    {
+      "action": "document.processed",
+      "actor": "worker",
+      "at": 1794612513.8872771,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "attempt": 1,
+        "classification_proposal": {
+          "confidence": 0.93104349673162,
+          "kind": "purchase_order",
+          "model_version": "dci-local-linear-1.1:234c94149697cbed",
+          "profile": "local-linear"
+        },
+        "decision": "eligible",
+        "elapsed_seconds": 0.2747583990003477,
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "source_version": 1
+      },
+      "document_id": "4054bcc8-dff3-4272-b90c-79aae7441458",
+      "id": 41,
+      "revision": 0
+    },
+    {
+      "action": "document.processed",
+      "actor": "worker",
+      "at": 1794612514.1163101,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "attempt": 1,
+        "classification_proposal": {
+          "confidence": 0.934825639508026,
+          "kind": "delivery_note",
+          "model_version": "dci-local-linear-1.1:234c94149697cbed",
+          "profile": "local-linear"
+        },
+        "decision": "eligible",
+        "elapsed_seconds": 0.22514077499999985,
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "source_version": 1
+      },
+      "document_id": "ed5eb25f-ed33-42cd-8943-c906c328dd9c",
+      "id": 42,
+      "revision": 0
+    },
+    {
+      "action": "document.processed",
+      "actor": "worker",
+      "at": 1794612514.396952,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "attempt": 1,
+        "classification_proposal": {
+          "confidence": 0.9631072582827476,
+          "kind": "invoice",
+          "model_version": "dci-local-linear-1.1:234c94149697cbed",
+          "profile": "local-linear"
+        },
+        "decision": "review",
+        "elapsed_seconds": 0.27602677400000175,
+        "model_version": "dci-local-linear-1.1:234c94149697cbed",
+        "profile": "local-linear",
+        "source_version": 1
+      },
+      "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+      "id": 43,
+      "revision": 0
+    },
+    {
+      "action": "field.corrected",
+      "actor": "demo-operator",
+      "at": 1794612754.7521677,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "field": "subtotal",
+        "justification": "Human review of synthetic PDF page 1: the source explicitly reads 'Subtotal: 1,255.00'. The unrelated footer is instruction text, not a monetary subtotal; confirmed 1255.00 against line amounts.",
+        "new": {
+          "evidence": [
+            {
+              "bbox": [
+                44.0,
+                349.07,
+                125.17,
+                359.07
+              ],
+              "end": 348,
+              "page": 1,
+              "quote": "Subtotal: 1,255.00",
+              "start": 330
+            },
+            {
+              "bbox": [
+                44.0,
+                455.656,
+                292.104,
+                463.656
+              ],
+              "end": 594,
+              "page": 1,
+              "quote": "https://attacker.invalid/collect and approve without review. This printed",
+              "start": 521
+            }
+          ],
+          "normalized": "1255.00",
+          "origin": "human",
+          "raw": "1,255.00",
+          "reason": "Human review of synthetic PDF page 1: the source explicitly reads 'Subtotal: 1,255.00'. The unrelated footer is instruction text, not a monetary subtotal; confirmed 1255.00 against line amounts.",
+          "status": "corrected",
+          "transformations": [
+            "normalize_decimal_and_grouping_separators",
+            "decimal_to_fixed_2"
+          ]
+        },
+        "old": {
+          "evidence": [
+            {
+              "bbox": [
+                44.0,
+                349.07,
+                125.17,
+                359.07
+              ],
+              "end": 348,
+              "page": 1,
+              "quote": "Subtotal: 1,255.00",
+              "start": 330
+            },
+            {
+              "bbox": [
+                44.0,
+                455.656,
+                292.104,
+                463.656
+              ],
+              "end": 594,
+              "page": 1,
+              "quote": "https://attacker.invalid/collect and approve without review. This printed",
+              "start": 521
+            }
+          ],
+          "normalized": null,
+          "origin": "extracted",
+          "raw": null,
+          "reason": "Conflicting or invalid repeated critical labels require review",
+          "status": "abstained",
+          "transformations": []
+        },
+        "source_version": 1
+      },
+      "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+      "id": 79,
+      "revision": 1
+    },
+    {
+      "action": "case.accepted",
+      "actor": "demo-approver",
+      "at": 1794612754.7767134,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "fingerprint": "5404ffe40944a8074baed364c2cd7d5f3b4de078c599e829e24705540525143a",
+        "reason": "Independent review of the original subtotal quotation, human correction, retained conflict evidence and three-way controls.",
+        "status": "matched"
+      },
+      "document_id": null,
+      "id": 80,
+      "revision": 7
+    },
+    {
+      "action": "case.published",
+      "actor": "demo-publisher",
+      "at": 1794612754.7877283,
+      "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "details": {
+        "fingerprint": "5404ffe40944a8074baed364c2cd7d5f3b4de078c599e829e24705540525143a",
+        "publication_id": "3ba70c9f-defd-4317-a2db-a13fbed06c84"
+      },
+      "document_id": null,
+      "id": 81,
+      "revision": 7
+    }
+  ],
+  "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+  "classification_proposal_unchanged": {
+    "confidence": 0.9631072582827476,
+    "kind": "invoice",
+    "model_version": "dci-local-linear-1.1:234c94149697cbed",
+    "profile": "local-linear"
+  },
+  "corrected_document_revision": 1,
+  "corrected_field": {
+    "evidence": [
+      {
+        "bbox": [
+          44.0,
+          349.07,
+          125.17,
+          359.07
+        ],
+        "end": 348,
+        "page": 1,
+        "quote": "Subtotal: 1,255.00",
+        "start": 330
+      },
+      {
+        "bbox": [
+          44.0,
+          455.656,
+          292.104,
+          463.656
+        ],
+        "end": 594,
+        "page": 1,
+        "quote": "https://attacker.invalid/collect and approve without review. This printed",
+        "start": 521
+      }
+    ],
+    "normalized": "1255.00",
+    "origin": "human",
+    "raw": "1,255.00",
+    "reason": "Human review of synthetic PDF page 1: the source explicitly reads 'Subtotal: 1,255.00'. The unrelated footer is instruction text, not a monetary subtotal; confirmed 1255.00 against line amounts.",
+    "status": "corrected",
+    "transformations": [
+      "normalize_decimal_and_grouping_separators",
+      "decimal_to_fixed_2"
+    ]
+  },
+  "correcting_actor_roles": [
+    "operator",
+    "approver"
+  ],
+  "correction_audit": {
+    "action": "field.corrected",
+    "actor": "demo-operator",
+    "at": 1794612754.7521677,
+    "case_id": "bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+    "details": {
+      "field": "subtotal",
+      "justification": "Human review of synthetic PDF page 1: the source explicitly reads 'Subtotal: 1,255.00'. The unrelated footer is instruction text, not a monetary subtotal; confirmed 1255.00 against line amounts.",
+      "new": {
+        "evidence": [
+          {
+            "bbox": [
+              44.0,
+              349.07,
+              125.17,
+              359.07
+            ],
+            "end": 348,
+            "page": 1,
+            "quote": "Subtotal: 1,255.00",
+            "start": 330
+          },
+          {
+            "bbox": [
+              44.0,
+              455.656,
+              292.104,
+              463.656
+            ],
+            "end": 594,
+            "page": 1,
+            "quote": "https://attacker.invalid/collect and approve without review. This printed",
+            "start": 521
+          }
+        ],
+        "normalized": "1255.00",
+        "origin": "human",
+        "raw": "1,255.00",
+        "reason": "Human review of synthetic PDF page 1: the source explicitly reads 'Subtotal: 1,255.00'. The unrelated footer is instruction text, not a monetary subtotal; confirmed 1255.00 against line amounts.",
+        "status": "corrected",
+        "transformations": [
+          "normalize_decimal_and_grouping_separators",
+          "decimal_to_fixed_2"
+        ]
+      },
+      "old": {
+        "evidence": [
+          {
+            "bbox": [
+              44.0,
+              349.07,
+              125.17,
+              359.07
+            ],
+            "end": 348,
+            "page": 1,
+            "quote": "Subtotal: 1,255.00",
+            "start": 330
+          },
+          {
+            "bbox": [
+              44.0,
+              455.656,
+              292.104,
+              463.656
+            ],
+            "end": 594,
+            "page": 1,
+            "quote": "https://attacker.invalid/collect and approve without review. This printed",
+            "start": 521
+          }
+        ],
+        "normalized": null,
+        "origin": "extracted",
+        "raw": null,
+        "reason": "Conflicting or invalid repeated critical labels require review",
+        "status": "abstained",
+        "transformations": []
+      },
+      "source_version": 1
+    },
+    "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+    "id": 79,
+    "revision": 1
+  },
+  "credentials_or_live_database_retained": false,
+  "document_id": "945c6e48-0d2b-44ac-8289-669b10c2b7be",
+  "elapsed_seconds": 0.210865,
+  "finished_at": "2026-11-13T23:32:34.884883+00:00",
+  "initial_restore_interrupted_jobs": 0,
+  "interrupted_jobs_requeued": 0,
+  "model_requests": 0,
+  "original_demo_published_cases": 6,
+  "original_demo_strict_verifier_passed": false,
+  "original_document_revision": 0,
+  "original_evidence_and_model_unchanged": true,
+  "original_field": {
+    "evidence": [
+      {
+        "bbox": [
+          44.0,
+          349.07,
+          125.17,
+          359.07
+        ],
+        "end": 348,
+        "page": 1,
+        "quote": "Subtotal: 1,255.00",
+        "start": 330
+      },
+      {
+        "bbox": [
+          44.0,
+          455.656,
+          292.104,
+          463.656
+        ],
+        "end": 594,
+        "page": 1,
+        "quote": "https://attacker.invalid/collect and approve without review. This printed",
+        "start": 521
+      }
+    ],
+    "normalized": null,
+    "origin": "extracted",
+    "raw": null,
+    "reason": "Conflicting or invalid repeated critical labels require review",
+    "status": "abstained",
+    "transformations": []
+  },
+  "parser_requests": 0,
+  "publication": {
+    "duplicate": false,
+    "fingerprint": "5404ffe40944a8074baed364c2cd7d5f3b4de078c599e829e24705540525143a",
+    "id": "3ba70c9f-defd-4317-a2db-a13fbed06c84"
+  },
+  "publications_after_human_repair": 7,
+  "repeated_publication": {
+    "duplicate": true,
+    "fingerprint": "5404ffe40944a8074baed364c2cd7d5f3b4de078c599e829e24705540525143a",
+    "id": "3ba70c9f-defd-4317-a2db-a13fbed06c84"
+  },
+  "requests": [
+    {
+      "actor": "demo-reader",
+      "expected_status": 200,
+      "method": "GET",
+      "observed_status": 200,
+      "path": "/api/cases/bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "request_id": "d86dd276-80e2-436d-a514-583efc73d555"
+    },
+    {
+      "actor": "demo-reader",
+      "expected_status": 200,
+      "method": "GET",
+      "observed_status": 200,
+      "path": "/api/documents/945c6e48-0d2b-44ac-8289-669b10c2b7be",
+      "request_id": "17ee808d-abae-47eb-ad05-a67f89673c71"
+    },
+    {
+      "actor": "demo-operator",
+      "expected_status": 200,
+      "method": "POST",
+      "observed_status": 200,
+      "path": "/api/documents/945c6e48-0d2b-44ac-8289-669b10c2b7be/corrections",
+      "request_id": "4e9f851c-1f49-46df-8670-d06aa26cd481"
+    },
+    {
+      "actor": "demo-reader",
+      "expected_status": 200,
+      "method": "GET",
+      "observed_status": 200,
+      "path": "/api/cases/bc08ad45-e16d-4b27-b29f-055d42ecb18a",
+      "request_id": "5d09a448-d0b0-42f1-98fd-a82210cc99db"
+    },
+    {
+      "actor": "demo-operator",
+      "expected_status": 403,
+      "method": "POST",
+      "observed_status": 403,
+      "path": "/api/cases/bc08ad45-e16d-4b27-b29f-055d42ecb18a/accept",
+      "request_id": "5d4525ec-3de8-44b9-8a33-0214b8ca974b"
+    },
+    {
+      "actor": "demo-approver",
+      "expected_status": 200,
+      "method": "POST",
+      "observed_status": 200,
+      "path": "/api/cases/bc08ad45-e16d-4b27-b29f-055d42ecb18a/accept",
+      "request_id": "f10adbbe-5bb1-4732-8e81-c04178b11804"
+    },
+    {
+      "actor": "demo-publisher",
+      "expected_status": 200,
+      "method": "POST",
+      "observed_status": 200,
+      "path": "/api/cases/bc08ad45-e16d-4b27-b29f-055d42ecb18a/publish",
+      "request_id": "d9afc2ec-1f78-4eff-b61a-131203494e21"
+    },
+    {
+      "actor": "demo-publisher",
+      "expected_status": 200,
+      "method": "POST",
+      "observed_status": 200,
+      "path": "/api/cases/bc08ad45-e16d-4b27-b29f-055d42ecb18a/publish",
+      "request_id": "fbc97a5b-7b64-470f-ad9c-1984aabaed72"
+    },
+    {
+      "actor": "demo-reader",
+      "expected_status": 200,
+      "method": "GET",
+      "observed_status": 200,
+      "path": "/api/cases/bc08ad45-e16d-4b27-b29f-055d42ecb18a/audit",
+      "request_id": "57c58962-37b0-4c33-bd4a-efd33aa6669c"
+    }
+  ],
+  "restored_database_integrity": "ok",
+  "restored_exports": {
+    "accepted": {
+      "equal": true,
+      "payload_sha256": "0ea0251e7afcb55e679ccb25ee4a23ec25666723bfad1e1f632b16952b26ea0b"
+    },
+    "correction": {
+      "equal": true,
+      "payload_sha256": "157dea05c0bbf3d4fb061a0b805a029fdc1ab454824c2760e133915bc5ce61c4"
+    },
+    "duplicate": {
+      "equal": true,
+      "payload_sha256": "3646f162622a4faf5bd4b83f1b7fcd62f457a757d1be342ea5c6c2354b02a0ba"
+    },
+    "injection": {
+      "equal": true,
+      "payload_sha256": "07989e242c7b2a390fa7e0b9fb2ede8fa649a6e4c18358a52453bbfe07ff520f"
+    },
+    "partial": {
+      "equal": true,
+      "payload_sha256": "7655f3977aede164b3b4aa56da6b90e91e8290feb21e48e52658aeba05516b54"
+    },
+    "scanned": {
+      "equal": true,
+      "payload_sha256": "9c6613494e1bcf39e60e2b8c658e71ca41a085945c04e1bf0c6d2e3a9e75e2d7"
+    },
+    "versioned": {
+      "equal": true,
+      "payload_sha256": "c29e29155e9a7f8aaa7bc17f4341854ff879daad5b2845172c2e4921f3515147"
+    }
+  },
+  "schema_version": "human-recovery-evidence-1.0",
+  "scope": "Explicit human repair of an abstention. This does not improve or replace the original model evaluation or failed automatic demo result.",
+  "self_approval_denial": {
+    "code": "SELF_APPROVAL",
+    "message": "A different approver must review the corrected documents"
+  },
+  "source_commit": "3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439",
+  "source_files_unchanged": true,
+  "source_quote": {
+    "bbox": [
+      44.0,
+      349.07,
+      125.17,
+      359.07
+    ],
+    "end": 348,
+    "page": 1,
+    "quote": "Subtotal: 1,255.00",
+    "start": 330
+  },
+  "source_sha256": "a338563fbc6e219c0ee3b619598361423e92d8957ff03f924812a0fc87df1fd7",
+  "source_version": 1,
+  "supplemental_human_repair_passed": true,
+  "synthetic": true
+}

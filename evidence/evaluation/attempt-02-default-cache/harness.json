@@ -1,0 +1,45 @@
+{
+  "command": [
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.runtime/llama/bin/llama-b12359/llama-server",
+    "--model",
+    "/workspace/scratch/6956bc82bcf5/document-control-intelligence/.runtime/models/Qwen3-0.6B-Q4_K_M.gguf",
+    "--alias",
+    "dci-qwen3-0.6b-q4-k-m",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "47271",
+    "--threads",
+    "4",
+    "--ctx-size",
+    "8192",
+    "--parallel",
+    "1",
+    "--reasoning",
+    "off",
+    "--no-webui"
+  ],
+  "evaluation_summary": "evaluation/summary.json",
+  "model_sha256": "b0638f08417a2d3c8652760462eb5407c6e30173cf9608ad0820757a281eea0e",
+  "network_binding": "127.0.0.1",
+  "observed_profiles": {
+    "local-llm": {
+      "documents": 36,
+      "eligible_coverage": 0.0,
+      "eligible_critical_quality": null,
+      "failures": 17,
+      "policy_gate_met": false
+    }
+  },
+  "observed_server_cpu_seconds": 603.78,
+  "observed_server_peak_hwm_kib": 3647828,
+  "observed_server_peak_rss_kib": 3635604,
+  "resource_sample_count": 352,
+  "runtime_binary_sha256": "cf07a7d6b6d2c61064105cc0a81360cb5830aacd3d1a949b80eaea3a96fa409f",
+  "runtime_version_output": "version: 1.0.0-dev (build 12359, commit b1b770d90)\nbuilt with GNU 11.4.0 for Linux x86_64",
+  "server_exit_code": -9,
+  "server_peak_rss_kib": null,
+  "server_process_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            16384                16384                files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         unlimited            unlimited            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "server_startup_seconds": 2.041004,
+  "wall_seconds": 182.792772
+}
