@@ -20,6 +20,10 @@ from .config import Settings
 from .store import Store, StoreError
 
 
+EXPORT_UNCOMPRESSED_BUDGET = 50 * 1024 * 1024
+_EXPORT_CHUNK_SIZE = 64 * 1024
+
+
 class Body(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -210,20 +214,44 @@ def create_app(settings: Settings | None = None):
     def export_zip(case_id: str, _identity=Depends(actor)):
         payload = store.export(case_id)
         buffer = io.BytesIO()
-        # Both retained case bytes and ZIP materialization have explicit byte budgets.
-        if sum(store.blob_path(d["sha256"]).stat().st_size for d in payload["documents"]) > 50*1024*1024:
-            raise StoreError("EXPORT_BUDGET", "Use JSON export for dossiers above the ZIP byte budget", 413)
+        limit, used = EXPORT_UNCOMPRESSED_BUDGET, 0
+
+        def budget_error():
+            return StoreError("EXPORT_BUDGET", "Use JSON export for dossiers above the ZIP uncompressed byte budget", 413)
+
+        def write_chunk(target, content):
+            nonlocal used
+            if used + len(content) > limit:
+                raise budget_error()
+            target.write(content)
+            used += len(content)
+
+        def write_json(archive, name, value, *, ensure_ascii=True):
+            encoder = json.JSONEncoder(indent=2, ensure_ascii=ensure_ascii)
+            with archive.open(name, "w") as target:
+                for text in encoder.iterencode(value):
+                    for offset in range(0, len(text), _EXPORT_CHUNK_SIZE):
+                        write_chunk(target, text[offset:offset + _EXPORT_CHUNK_SIZE].encode("utf-8"))
+
+        # Count actual uncompressed member bytes, including both JSON members.
+        # This is not an RSS or final ZIP-size limit: the payload is already loaded,
+        # and ZIP framing/compression has overhead. Encode the dossier incrementally.
+        if sum(store.blob_path(d["sha256"]).stat().st_size for d in payload["documents"]) > limit:
+            raise budget_error()
         with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED) as archive:
-            archive.writestr("control-dossier.json", json.dumps(payload, indent=2, ensure_ascii=False))
+            write_json(archive, "control-dossier.json", payload, ensure_ascii=False)
             manifest = {}
             for doc in payload["documents"]:
-                content = store.blob_path(doc["sha256"]).read_bytes()
-                if hashlib.sha256(content).hexdigest() != doc["sha256"]:
-                    raise StoreError("BLOB_INTEGRITY", "Export original failed integrity verification", 503)
                 name = f"originals/{doc['id']}.pdf"
-                archive.writestr(name, content)
+                digest = hashlib.sha256()
+                with store.blob_path(doc["sha256"]).open("rb") as source, archive.open(name, "w") as target:
+                    while content := source.read(_EXPORT_CHUNK_SIZE):
+                        write_chunk(target, content)
+                        digest.update(content)
+                if digest.hexdigest() != doc["sha256"]:
+                    raise StoreError("BLOB_INTEGRITY", "Export original failed integrity verification", 503)
                 manifest[name] = doc["sha256"]
-            archive.writestr("manifest.json", json.dumps(manifest, indent=2))
+            write_json(archive, "manifest.json", manifest)
         return Response(buffer.getvalue(), media_type="application/zip", headers={
             "Content-Disposition": f'attachment; filename="control-dossier-{case_id}.zip"'})
 

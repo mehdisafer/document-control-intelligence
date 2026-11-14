@@ -33,6 +33,11 @@ jobs:
           mkdir -p outputs/ci
           set -o pipefail
           uv run --frozen python -m unittest discover -s tests -v 2>&1 | tee outputs/ci/tests.txt
+      - name: JavaScript state/unit regressions (no browser rendering)
+        run: |
+          set -o pipefail
+          node --version | tee outputs/ci/node-version.txt
+          node --test tests/test_ui_state.mjs 2>&1 | tee outputs/ci/ui-state-tests.txt
       - name: Dependency and licence checks
         run: |
           uv run --frozen --group audit pip-audit --disable-pip --no-deps -r requirements.lock --format=json --output=outputs/ci/dependency-audit.json
@@ -50,6 +55,8 @@ jobs:
           name: dci-checks-${{ github.sha }}
           path: |
             outputs/ci/tests.txt
+            outputs/ci/node-version.txt
+            outputs/ci/ui-state-tests.txt
             outputs/ci/dependency-audit.json
             outputs/ci/component-inventory.json
             outputs/ci/demo/result.json
