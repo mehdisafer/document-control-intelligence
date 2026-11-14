@@ -14,7 +14,7 @@ dependencies = [
   "uvicorn==0.52.1",
   "pydantic==2.13.4",
   "pypdf==6.21.4",
-  "pdfplumber==0.11.9",
+  "pdfplumber==0.11.10",
   "pypdfium2==5.13.0",
   "Pillow==13.0.0",
   "reportlab==4.4.9",
