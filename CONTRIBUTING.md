@@ -25,3 +25,10 @@ checks and remaining limitations. Assisted author review must not be represented
 as an independent human approval. Documentation-only updates do not justify
 repeating expensive model/charge jobs, but references and acceptance claims must
 remain consistent with the actual delivered source and evidence.
+
+## Licence
+
+Contributions to the original project are submitted under the [Apache License,
+Version 2.0](LICENSE). Preserve project attribution and the separate notices for
+any third-party components. Historical execution artifacts must remain unchanged
+when licensing or packaging metadata is updated.

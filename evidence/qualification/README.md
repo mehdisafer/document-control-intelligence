@@ -6,6 +6,11 @@ before/after source hashes and input digests are retained. Later documentation
 and evidence packaging do not alter the executed application. See the
 [publication map](../publication-map.json) for the byte comparison.
 
+The later Apache-2.0 change updates package metadata and Docker's licence-file
+inputs. These original reports are not executions of that later commit. The HTTP
+harness checks `pyproject.toml` as part of its frozen source; its reproduction
+therefore uses a detached checkout below, preserving the original guard.
+
 ## Observed results
 
 | Execution | Observed result | Original evidence |
@@ -77,10 +82,25 @@ uv run --frozen dci demo --profile local-linear \
   --output outputs/reproduction-linear
 uv run --frozen python scripts/benchmark.py --cases 3 --workers 1 2 \
   --batch-size 2 --output outputs/reproduction-load.json
-uv run --frozen python evidence/qualification/http/qualify_http.py \
-  --repo . --model evidence/evaluation/local-linear-model.json \
-  --output outputs/reproduction-http
 ```
+
+Replay the original HTTP qualification from the repository root, using the
+executed source and the retained harness/model from the licensed checkout:
+
+```bash
+mkdir -p outputs
+git worktree add --detach outputs/http-source-3ff93109 3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439
+env -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH \
+  uv run --frozen --project outputs/http-source-3ff93109 --python 3.12.14 python \
+  "$PWD/evidence/qualification/http/qualify_http.py" \
+  --repo "$PWD/outputs/http-source-3ff93109" \
+  --model "$PWD/evidence/evaluation/local-linear-model.json" \
+  --output "$PWD/outputs/reproduction-http"
+```
+
+A normal full Git clone must contain the original commit. Both worktree and
+output paths must be new; choose different names for another replay. The new run
+records its own source identity and does not overwrite the published proof.
 
 Running the strict demo verifier against the raw linear result is expected to
 reproduce the retained six-versus-seven assertion. Use the UI or review API and

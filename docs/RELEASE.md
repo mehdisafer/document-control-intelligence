@@ -17,8 +17,8 @@ Author-side assisted review is identified as such; it is not an independent appr
 
 The implementation source is commit
 [`3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439`](https://github.com/mehdisafer/document-control-intelligence/commit/3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439).
-The following evidence/documentation commit in the same PR does not alter runtime
-code, contracts, tests, lockfiles or infrastructure. Its [publication map](../evidence/publication-map.json)
+The following evidence/documentation commit, `8dbe831a243e66aad18c601086a8e62b3c496322`,
+does not alter runtime code, contracts, tests, lockfiles or infrastructure. Its [publication map](../evidence/publication-map.json)
 checks those bytes against the executed source and preserves the identity of
 earlier runs. The [qualification record](../evidence/qualification/) contains
 107 passing tests, the failed raw-linear demo assertion, separate human recovery,
@@ -47,15 +47,28 @@ Never manufacture an approval or buy a plan to enable a setting without permissi
 After applying settings through an authorized administration surface, read them
 back and record what the account's available plan actually supports.
 
-## Licence and public-release checklist
+## Apache-2.0 adoption
 
-The maintainer must explicitly choose this project's licence. No licence has been
-inferred from third-party code or the portfolio goal. Dependencies, OCR/runtime
-components and model weights retain their own licences and notices.
+The maintainer explicitly selected Apache-2.0 on 2026-11-14. [LICENSE](../LICENSE)
+contains the official unmodified text and [NOTICE](../NOTICE) records
+`Copyright 2026 Mehdi Safer`. The package declares the SPDX expression and includes
+both files; the Docker build copies them before installing the project.
+Dependencies, OCR/runtime components and model weights retain their own notices.
+
+This later licensing change updates `pyproject.toml` and Docker's packaging inputs.
+It does not change application code, dependencies, model coefficients, thresholds
+or historical execution artifacts. The original 107-test and HTTP reports remain
+attributed to `3ff93109`; their hashes are not rewritten as results of this change.
+The exact-source HTTP harness is replayed using the detached original checkout
+described in the README. Container execution and the other open gates remain
+unqualified by a licensing change.
+
+## Public-release checklist
 
 Before a separately authorized public release:
 
-1. Confirm the chosen project licence and intended repository visibility.
+1. Verify the Apache-2.0 licence/notice distribution and obtain authorization for
+   the intended repository visibility.
 2. Review the final source tree and Git history, issue/PR text, logs, exported
    dossiers and artifacts for secrets or client/personal data.
 3. Confirm required checks for the delivered code revision and inspect actual

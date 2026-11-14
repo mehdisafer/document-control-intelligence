@@ -12,10 +12,11 @@ original alongside anomalies and evidence. Corrections are attributed and versio
 Acceptance and publication are separate actions. The control dossier is exported
 from persisted application state, with its originals and audit.
 
-**Release candidate `0.1.0rc1`.** The repository is private, its project licence
-awaits the maintainer's explicit choice, and the complete P04 acceptance issue
-remains open. This is a working synthetic purchasing reference, not a production
-certification or a claim of broad supplier-document accuracy.
+**Release candidate `0.1.0rc1`.** The project uses the [Apache License 2.0](LICENSE),
+explicitly selected by the maintainer on 2026-11-14. The repository remains private
+and the complete P04 acceptance issue remains open. This is a working synthetic
+purchasing reference, not a production certification or a claim of broad
+supplier-document accuracy.
 
 ## Implemented capabilities
 
@@ -177,20 +178,32 @@ publication and request-to-audit-to-job correlation. The final baseline and
 local-linear regression also reproduced all **72 semantic document outputs**,
 excluding timing measurements. See the [qualification record](evidence/qualification/).
 
-Reproduce the network boundary with the published frozen model and a new output
-directory:
+### Replay the original HTTP qualification
+
+The retained HTTP harness checks the exact original source, including
+`pyproject.toml`. The later Apache-2.0 packaging metadata intentionally changes
+that file. Use a detached checkout of the executed source and supply the retained
+harness/model from this checkout. Run from the repository root with new paths:
 
 ```bash
-uv run --frozen python evidence/qualification/http/qualify_http.py \
-  --repo . --model evidence/evaluation/local-linear-model.json \
-  --output outputs/http-qualification-new
+mkdir -p outputs
+git worktree add --detach outputs/http-source-3ff93109 3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439
+env -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH \
+  uv run --frozen --project outputs/http-source-3ff93109 --python 3.12.14 python \
+  "$PWD/evidence/qualification/http/qualify_http.py" \
+  --repo "$PWD/outputs/http-source-3ff93109" \
+  --model "$PWD/evidence/evaluation/local-linear-model.json" \
+  --output "$PWD/outputs/http-qualification-new"
 ```
+
+This requires a normal Git clone containing the executed commit. The source
+guard and original reports remain unchanged; the replay records its own result.
 
 | Qualification profile | Command | Scope |
 |---|---|---|
 | Smoke | `dci demo --output outputs/demo` | Nine real PDF/API/review scenarios, export and restore |
 | Integration | `python -m unittest discover -s tests -v` | Contracts, parser/OCR, rules, transactions and negative/recovery paths |
-| HTTP | `python evidence/qualification/http/qualify_http.py --repo . --model evidence/evaluation/local-linear-model.json --output outputs/http-qualification-new` | Loopback API, separate worker, roles, evidence, publication and trace joins |
+| HTTP | [Frozen-source replay](#replay-the-original-http-qualification) | Loopback API, separate worker, roles, evidence, publication and trace joins |
 | Load | `python scripts/benchmark.py --cases 3 --workers 1 2 --batch-size 2 --output outputs/load.json` | Parameterized actual PDFs and worker counts with business-outcome comparison |
 
 The optional LLM evaluation is an explicit bounded command, not a costly job
@@ -207,6 +220,13 @@ authenticity remain human-review limitations.
 
 Model quality, browser execution, container execution, Terraform validation and a
 real target deployment have separate acceptance statuses. See the
-[limitations and backlog](docs/BACKLOG.md). Project licence, repository administration
-and public release remain explicit maintainer decisions. Third-party components
-keep their own licences.
+[limitations and backlog](docs/BACKLOG.md). Repository administration and any
+public release remain separate maintainer decisions.
+
+## Licence
+
+Copyright 2026 Mehdi Safer. Original project code, documentation and synthetic
+assets are licensed under the [Apache License, Version 2.0](LICENSE).
+See [NOTICE](NOTICE) for project attribution. Third-party dependencies, OCR/runtime
+components and model weights retain their own licences and notices, documented
+in the [upstream inventory](docs/SOURCES.md).

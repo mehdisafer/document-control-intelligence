@@ -22,7 +22,8 @@ reviewable candidate; it is not a production-readiness claim.
 | Container | Pinned base, locked application, persistent volume, external secrets, quotas | CI is published and triggered | Jobs fail before runner allocation; image build and actual in-container demo remain unexecuted |
 | Terraform | Docker network, retained volume and bounded containers | Local formatting and provider initialization succeed | Provider schema loading fails at its process handshake; the retained diagnostic does not identify the cause. CI receives no runner; validation and target apply remain unverified |
 | Dependencies/licences | Locked graph, known-vulnerability audit, component inventory | Local audit finds zero known vulnerabilities among 32 runtime packages; inventory has no unreviewed family | Point-in-time tool result; native packages and own-project licence are separate |
-| Public release | Release notes and repository settings prepared | Private repository and author-side review only | Explicit licence/visibility decisions and administration access remain required |
+| Project licence | Apache-2.0 text, attribution and package metadata | Explicitly selected by the maintainer on 2026-11-14 | Third-party components retain their separate notices |
+| Public release | Release notes and repository settings prepared | Private repository and author-side review only | Explicit visibility decision and administration access remain required |
 
 The evidence index supplies final execution identifiers, commands, timestamps,
 source hashes, original logs and CI links. A workflow definition, running service,
@@ -37,13 +38,14 @@ mock, skipped test or missing error message never counts as a passed integration
    results, adverse runs and the separate human-repair evidence are retained.
 3. Review the actual deployment plan and exercise the service on the intended
    authorized host. Local tests and CI containers do not constitute a target rollout.
-4. Obtain the maintainer's explicit project-licence choice; configure repository
-   description, topics and available protections through an authorized admin surface.
+4. Configure repository description, topics and available protections through
+   an authorized admin surface. The project-licence choice is resolved: Apache-2.0.
 5. Before any separately authorized public visibility change, review source,
    history, issue/PR text, logs and artifacts, then verify anonymous repository access.
 
-No paid feature, public service, visibility change, licence selection or
-independent human approval is inferred from this implementation work.
+Apache-2.0 was explicitly approved by the maintainer on 2026-11-14; see
+[LICENSE](../LICENSE) and [NOTICE](../NOTICE). No paid feature, public service,
+visibility change or independent human approval is inferred from this work.
 
 ## Observed CI blocker
 

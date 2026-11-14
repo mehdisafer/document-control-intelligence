@@ -3,7 +3,7 @@ ARG PYTHON_IMAGE=python:3.12.14-slim-bookworm@sha256:392307d22300de8b5986851a12d
 FROM ${PYTHON_IMAGE} AS build
 WORKDIR /app
 RUN pip install --no-cache-dir uv==0.13.6
-COPY pyproject.toml uv.lock ./
+COPY pyproject.toml uv.lock LICENSE NOTICE ./
 RUN uv sync --frozen --no-dev --no-install-project --no-editable
 COPY src ./src
 RUN uv sync --frozen --no-dev --no-editable

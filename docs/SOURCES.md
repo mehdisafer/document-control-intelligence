@@ -110,5 +110,10 @@ from upstream descriptions; see the repository's original run evidence.
 
 The corpus generator creates fictional procurement documents and ground truth.
 No employer/client data or documents are inputs. No code or datasets are imported
-from another portfolio repository. The project's own licence remains a separate
-maintainer decision; third-party component licences do not select it implicitly.
+from another portfolio repository. The maintainer explicitly selected
+[Apache-2.0](../LICENSE) for the original project on 2026-11-14.
+[NOTICE](../NOTICE) records project attribution. Third-party component licences
+and notices remain separate and are not replaced by the project's licence.
+
+The licence text comes from the [official Apache License 2.0 text](https://www.apache.org/licenses/LICENSE-2.0.txt).
+Application guidance was checked against the [Apache licensing FAQ](https://www.apache.org/foundation/license-faq.html#Apply-My-Software).

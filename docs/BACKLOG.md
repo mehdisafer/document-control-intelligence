@@ -11,9 +11,9 @@
   is not available through the connector; do not infer a billing or code failure.
 - Agree the intended deployment host and inspect a concrete deployment plan before
   rollout. Do not turn the private reference into a public service implicitly.
-- Obtain an explicit project-licence choice. Apply prepared repository metadata
-  and available protections with administration access; any public release remains
-  a separate authorized action.
+- Apply prepared repository metadata and available protections with administration
+  access; any public release remains a separate authorized action. The maintainer
+  selected Apache-2.0 on 2026-11-14 and that project-licence gate is resolved.
 
 ## P1 — Extend useful purchasing coverage
 
