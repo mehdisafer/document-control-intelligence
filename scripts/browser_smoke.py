@@ -267,7 +267,7 @@ def run(args) -> tuple[dict, int]:
               and dimensions["width"] > 100 and dimensions["height"] > 100
               and page.locator("#preview-placeholder").is_hidden(), json.dumps(dimensions))
         preview_png = request(port, f"/api/documents/{doc['id']}/preview/1", credentials["operator"], binary=True)
-        check(report, "authenticated_preview_is_png", preview_png.startswith(b"\\x89PNG\\r\\n\\x1a\\n")
+        check(report, "authenticated_preview_is_png", preview_png.startswith(bytes.fromhex("89504e470d0a1a0a"))
               and len(preview_png) > 128)
         check(report, "preview_controls_show_page_identity", "Page 1 of" in page.locator("#preview-position").inner_text())
         check(report, "operator_cannot_accept_or_publish", page.locator("#accept-case").is_disabled() and page.locator("#publish-case").is_disabled())
