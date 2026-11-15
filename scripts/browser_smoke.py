@@ -257,7 +257,19 @@ def run(args) -> tuple[dict, int]:
         page.locator("#evidence").wait_for(state="visible")
         check(report, "scalar_evidence_matches_original", source_field["evidence"][0]["quote"] in page.locator("#evidence-quote").inner_text())
         check(report, "original_pdf_is_served", request(port, f"/api/documents/{doc['id']}/original", credentials["operator"], binary=True).startswith(b"%PDF-"))
-        check(report, "original_pdf_frame_loaded", (page.locator("#original-frame").get_attribute("src") or "").startswith("blob:"))
+        # A blob URL alone is insufficient: the original-page raster must decode
+        # into a genuinely visible image before accepting visual qualification.
+        original_image = page.locator("#original-frame")
+        expect(original_image).to_have_attribute("src", re.compile(r"^blob:"))
+        expect(original_image).to_have_js_property("complete", True)
+        dimensions = original_image.evaluate("(image) => ({width:image.naturalWidth,height:image.naturalHeight})")
+        check(report, "original_page_raster_visible", original_image.is_visible()
+              and dimensions["width"] > 100 and dimensions["height"] > 100
+              and page.locator("#preview-placeholder").is_hidden(), json.dumps(dimensions))
+        preview_png = request(port, f"/api/documents/{doc['id']}/preview/1", credentials["operator"], binary=True)
+        check(report, "authenticated_preview_is_png", preview_png.startswith(b"\\x89PNG\\r\\n\\x1a\\n")
+              and len(preview_png) > 128)
+        check(report, "preview_controls_show_page_identity", "Page 1 of" in page.locator("#preview-position").inner_text())
         check(report, "operator_cannot_accept_or_publish", page.locator("#accept-case").is_disabled() and page.locator("#publish-case").is_disabled())
         phase["name"] = "correction_modal"
         page.locator("#correct-field").click()
