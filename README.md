@@ -6,21 +6,21 @@ This Linux reference processes synthetic purchase orders, delivery notes and inv
 
 ## Delivery status — 15 November 2026
 
-**The local reference has passed its complete hosted qualification**, not only the initial smoke suite. Current qualified runtime revision:
+**The local reference has executed hosted synthetic/browser/container/schema checks on the exact qualified source**, not only a minimal smoke suite. A visibly rendered original page is now part of the browser gate. Current qualified runtime revision:
 
-`c451deba5f790a0b0207b6f3dd1931f597e04cc7`
+`948d82ba90af3f3049b48e7846eea56ad3a45dcf`
 
 | Gate | Executed observation |
 |---|---|
-| Full Python suite | 122 tests, including real parsing/OCR and concurrent SQLite startup regressions |
-| JavaScript state suite | 23 state/regression tests; separate from browser rendering |
-| Actual browser workflow | Synthetic PDFs uploaded through the UI; distinct roles, acceptance, publication and downloaded export verified |
-| Rendered desktop/mobile | Real captures, 390 px mobile viewport, no observed document-level overflow or unexpected JavaScript errors |
+| Full Python suite | 126 tests, including real parsing/OCR, two-page isolated preview and concurrent SQLite startup regressions |
+| JavaScript state suite | 25 state/regression tests; separate from browser rendering |
+| Actual browser workflow | 35 checks; synthetic PDF upload, decoded raster page, distinct roles, acceptance, publication and downloaded export verified |
+| Rendered desktop/mobile | Actual PNG original page (953 × 1348 pixels), readable in genuine desktop/mobile screenshots; 390 px mobile viewport without horizontal overflow or unexpected JavaScript errors |
 | Reference image | Built and ran document processing, review/export and restoration inside the actual image |
 | Compose / Terraform | Both Compose profiles validated; Terraform formatting/provider-schema validation executed without cloud apply |
 | Security/dependencies | Lint, schema drift, known-secret/history checks, dependency and component-licence controls executed |
 
-[Current acceptance](docs/ACCEPTANCE.md) · [Full CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
+[Current acceptance](docs/ACCEPTANCE.md) · [GitHub Actions qualification of rendered original pages](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43770874796) · [Earlier CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
 
 The project remains a **reference candidate (`0.1.0rc1`)**. The local-linear automatic seven-case delivery criterion is not met without an attributed human repair, and the larger Qwen profile has not met its accuracy gate. A successful controlled workflow does not erase those negative model results or establish production-target acceptance.
 
@@ -77,4 +77,4 @@ Historical failed attempts remain in CI and evidence. The new acceptance record 
 
 Original project code is under [Apache-2.0](LICENSE); [NOTICE](NOTICE) preserves relevant attribution and limitations. Third-party components retain their own terms. No client documents or client infrastructure were used.
 
-The reference's application, OCR, browser, container and Terraform-schema gates are now executed. Remaining acceptance concerns are model-profile quality, the automatic local-linear target, a named production deployment and its operator acceptance, and maintainer-controlled visibility/protections. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.
+The reference's application, OCR, real rendered-page browser, container and Terraform-schema gates are now executed on the preview-fix source. Remaining acceptance concerns are model-profile quality, the automatic local-linear target, a named production deployment and its operator acceptance, and maintainer-controlled branch protections. GitHub public visibility, About metadata and the Apache-2.0 source prerelease are verified; the original 0.1.0rc1 tag does not include the newer preview code. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.
