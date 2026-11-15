@@ -20,7 +20,9 @@ flowchart TD
   Pages --> Extract["Baseline / local linear / local Qwen"]
   Extract --> Verify["Independent citation and decimal checks"]
   Verify --> DB
-  DB --> Review["Original + fields + findings"]
+  DB --> Review["Rasterized original + fields + findings"]
+  CAS --> Preview["Isolated, bounded PDFium page raster"]
+  Preview --> Review
   Review --> Approval["Explicit acceptance of current revisions"]
   Approval --> Publish["Idempotent publication and dossier export"]
 ```
@@ -74,6 +76,38 @@ PDF parsers are not document-authenticity verifiers. Pure-native invisible/white
 text, sophisticated visual deception, layout semantics outside the contract and
 forged supplier documents still require human review. A digest verifies content
 agreement; it does not establish authenticity or certification.
+
+## Authenticated original-page rendering
+
+The review UI retains the original PDF download as SHA-256-addressed immutable
+bytes. Instead of relying on a browser's native PDF plugin inside a sandboxed
+iframe, `GET /api/documents/{id}/preview/{page}` returns an authenticated
+PNG raster of exactly one inspected page. It does not change the document
+extraction, source citation or acceptance policy.
+
+Rasterization starts a separate Linux PDFium process **after** applying the
+same seccomp policy as the parser. The process revalidates the original SHA-256
+and disallowed PDF actions/encryption, enforces the configured document/page
+limits, restricts CPU and virtual memory, denies network syscalls and has a
+12-second maximum preview deadline. Pixels are capped at 2.5 million, PNG
+at 5 MiB, and the API limits preview work to two concurrent child jobs per API
+process (rejecting additional work with `429 PREVIEW_BUSY`). The parent
+verifies the child result, PNG dimensions and raster SHA-256. No raw PDF engine
+is loaded into the API process and no third-party rendering service is called.
+
+The browser fetches the PNG with its existing bearer token, uses a temporary
+`blob:` URL, and displays the image with page controls. Navigating to an
+evidence quote loads that source page, while PDF downloads remain the exact
+original bytes. Switching documents or identities revokes object URLs and
+fences late responses by session, document selection and revision. A failed
+preview is explicitly shown as unavailable rather than fabricated as evidence.
+
+Actual Chromium tests now assert image decode with nonzero natural width and
+height, verify the authenticated PNG signature and preserve genuine desktop
+and mobile screenshots. This is visual display evidence, **not** proof of
+authenticity or independent human approval. The earlier native iframe produced
+a broken icon and remains recorded in [issue #11](https://github.com/mehdisafer/document-control-intelligence/issues/11)
+and older CI artifacts.
 
 ## Extraction and model routing
 
@@ -150,7 +184,7 @@ returns `413 EXPORT_BUDGET`, and a changed original returns
 application has already loaded the dossier and the archive has framing overhead.
 
 The UI binds asynchronous results to the actor session and current selection.
-Late metadata, original-PDF and audit responses cannot replace a newer view.
+Late metadata, original-PDF, page-raster and audit responses cannot replace a newer view.
 Case refreshes also invalidate a pending document fetch when its revision or
 processing status advances. The field-correction control requires a selected current field;
 decision dialogs retain the IDs and revisions reviewed when opened. Cancelling
