@@ -84,7 +84,7 @@ function harness() {
       requests.push(request);
       // In-memory preview bytes are deterministic in this state-only test harness.
       // Page 2 is left pending so stale navigation can be tested explicitly.
-      if(/^\\/api\\/documents\\/[^/]+\\/preview\\/1$/.test(path)) request.respond("PNG-" + path);
+      if(path.startsWith("/api/documents/") && path.endsWith("/preview/1")) request.respond("PNG-" + path);
     }),
     setInterval: () => 1, setTimeout: () => 1, console,
   });
