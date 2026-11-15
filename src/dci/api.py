@@ -9,6 +9,7 @@ import time
 from typing import Literal
 import uuid
 import zipfile
+import threading
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse, Response
@@ -18,6 +19,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from .auth import Auth
 from .config import Settings
 from .store import Store, StoreError
+from .preview import PreviewError, render_preview_page
 
 
 EXPORT_UNCOMPRESSED_BUDGET = 50 * 1024 * 1024
@@ -64,6 +66,9 @@ def create_app(settings: Settings | None = None):
     app = FastAPI(title="Document Control Intelligence", version="0.1.0rc1", docs_url=None, redoc_url=None,
                   openapi_url=None)
     app.state.store = store
+    # Permit at most two simultaneously sandboxed page renderers per API process.
+    preview_slots = threading.BoundedSemaphore(2)
+    app.state.preview_slots = preview_slots
     log = logging.getLogger("dci.api")
 
     def actor(authorization: str | None = Header(default=None)):
@@ -175,6 +180,39 @@ def create_app(settings: Settings | None = None):
             raise StoreError("BLOB_INTEGRITY", "Original failed integrity verification", 503)
         return FileResponse(path, media_type="application/pdf", filename=f"{document_id}.pdf",
                             content_disposition_type="inline")
+
+    @app.get("/api/documents/{document_id}/preview")
+    def preview(document_id: str, page: int = 1, _identity=Depends(actor)):
+        """Render a selected original page in an isolated bounded process.
+
+        No untrusted PDF engine executes inside the API process. The rendered
+        PNG is served only to authenticated viewers; originals remain separately
+        downloadable, with their content SHA-256 unchanged.
+        """
+        doc = store.document(document_id)
+        parsed = doc["parsed"]
+        if parsed is None:
+            raise StoreError("NOT_INSPECTED", "Original preview is available only after parser inspection")
+        if page < 1 or page > len(parsed["pages"]) or page > settings.max_pages:
+            raise StoreError("INVALID_PAGE", "Page is outside the inspected document", 422)
+        if not preview_slots.acquire(blocking=False):
+            raise StoreError("PREVIEW_BUSY", "Concurrent preview budget reached; retry shortly", 429)
+        try:
+            try:
+                png = render_preview_page(
+                    store.blob_path(doc["sha256"]), doc["sha256"], page,
+                    max_bytes=settings.max_bytes, max_pages=settings.max_pages,
+                    memory_mb=settings.parser_memory_mb, timeout_seconds=18,
+                )
+            except PreviewError as exc:
+                raise StoreError(exc.code, str(exc), exc.status) from exc
+        finally:
+            preview_slots.release()
+        return Response(png, media_type="image/png", headers={
+            "Content-Disposition": "inline",
+            "X-Preview-Page": str(page),
+            "X-Original-SHA256": doc["sha256"],
+        })
 
     @app.post("/api/documents/{document_id}/corrections")
     def correction(document_id: str, body: CorrectionRequest, identity=Depends(role("operator"))):
