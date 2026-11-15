@@ -1,95 +1,74 @@
 # Acceptance matrix
 
-This matrix separates implementation, execution and acceptance. The complete
-[P04 scope issue](https://github.com/mehdisafer/document-control-intelligence/issues/1)
-remains open until its unresolved criteria are handled. `0.1.0rc1` identifies a
-reviewable candidate; it is not a production-readiness claim.
+Updated 15 November 2026. This record distinguishes implementation, actual execution and acceptance. **The synthetic local reference is qualified through its full hosted parser/OCR, browser, image and Terraform-schema profiles. The entire P04 scope is not unconditionally accepted.** The local-linear automatic seven-export target, larger-model quality and intended production deployment remain separate gates.
 
-| Area | Implemented | Observed qualification | Remaining boundary |
-|---|---|---|---|
-| Unit/integration suite | Contracts, workflow, parsing/OCR, rules, model policy, recovery and complete ZIP-budget tests | 112 tests passed with no skips on source `8839be77`; the original 107-test run on `3ff93109` is retained | This local suite does not qualify deployment or browser rendering |
-| Native PDF and OCR | Isolated parser, actual PDFium/Tesseract, source coordinates | Native/scanned demo and parser integrations execute | Bounded purchasing layouts; pure-native hidden-text authenticity is unqualified |
-| Parser isolation | Linux seccomp, process budgets, page checkpoints | Active/encrypted/corrupt inputs, network denial, timeout and crash/recovery tests | Host/container layers have separate evidence |
-| Statistical local model | Real training and safe JSON numeric inference | 30/36 eligible with 30/30 critical quality and zero false eligible on the final synthetic set | Small generator-derived sample; no supplier-general accuracy claim |
-| Generative local model | Pinned Qwen/llama.cpp, typed selection, local-only router | Bounded replay: 36/36 actual requests, clean exit, 1.51 GiB peak RSS; prior failures retained | 3/36 correct classifications, 0/36 eligible; quality gate is not met |
-| Deterministic rules | Financial checks, identifiers, cumulative partial matching | Unit and real workflow negative cases execute | Credit notes, returns, freight, FX and ambiguous repeated SKUs need another contract |
-| Human decision | Attributed corrections, type review, role checks, revision-bound acceptance | Separate correction/acceptance actors and blocked self-approval exercised; supplemental subtotal repair publishes the seventh linear dossier | Scripted actor roles verify the workflow, not independent human approval; enterprise identity federation is outside the reference |
-| Publication/export | Transactional idempotency, cross-case duplicate guard, original ZIP/JSON | Baseline: seven dossiers; unchanged local-linear demo: six; separate attributed repair: seven | The original strict seven-export assertion remains failed; consumers upsert superseding publications |
-| Recovery | Leases, bounded retries, cancellation, backup/restore | Interrupted worker; seven baseline and six raw linear exports restored unchanged; separate repaired state restores all seven | Deployment-specific recovery objectives remain targets |
-| Real HTTP boundary | Loopback API and separate worker, authenticated role actions and trace identifiers | 36 checks across 30 requests; three local-linear jobs; PDF/ZIP byte equality, denials, idempotency and all three request/audit/job joins | One sequential synthetic case; browser interaction and concurrent HTTP capacity are not measured |
-| Worker load | Bounded queues, aging, global concurrency and batch loops | Nine PDFs per run; one/two workers at 2.08/3.92 documents/s with identical business outcomes | Small single-host Store-admission workload; no HTTP or distributed capacity claim |
-| Browser | Complete operator/reader/approver/publisher interface and smoke harness | Local server starts; browser runtime is blocked by AF_UNIX restrictions; fresh browser fixture backend is exercised | CI receives no runner; real UI execution and screenshots remain unverified |
-| UI state consistency | Session/selection guards, pending revision/status invalidation, captured dialog targets and disabled stale corrections | 23 JavaScript state/unit checks passed without skips on `8839be77` | Mocked DOM/fetch; rendering, PDF viewer and native focus/modal behavior remain unverified |
-| Container | Pinned base, locked application, persistent volume, external secrets, quotas | CI is published and triggered | Jobs fail before runner allocation; image build and actual in-container demo remain unexecuted |
-| Terraform | Docker network, retained volume and bounded containers | Local formatting and provider initialization succeed | Provider schema loading fails at its process handshake; the retained diagnostic does not identify the cause. CI receives no runner; validation and target apply remain unverified |
-| Dependencies/licences | Locked graph, known-vulnerability audit, component inventory | Local audit finds zero known vulnerabilities among 32 runtime packages; inventory has no unreviewed family | Point-in-time tool result; native packages and own-project licence are separate |
-| Project licence | Apache-2.0 text, attribution and package metadata | Explicitly selected by the maintainer on 2026-11-14 | Third-party components retain their separate notices |
-| Public source publication | Apache-2.0 candidate integrated via PR #2; source/history and artifact review; prepared maintainer guide and prerelease body | Authorized on 2026-11-14; 2026-11-15 connector observation still reports private; maintainer owns UI steps | Apply/read back visibility, metadata and protections using [PUBLISHING.md](PUBLISHING.md), then verify anonymous access; overall P04 acceptance remains open |
+Application version `0.1.0rc1` remains a reference candidate; no stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
 
-The evidence index supplies final execution identifiers, commands, timestamps,
-source hashes, original logs and CI links. A workflow definition, running service,
-mock, skipped test or missing error message never counts as a passed integration.
+## Latest complete hosted execution
 
-## Remaining qualification and administration gates
+Qualified runtime: `c451deba5f790a0b0207b6f3dd1931f597e04cc7`.
+CircleCI pipeline: `42d7852d-0e54-4243-a467-fc1d1c58dfe8`.
+[Workflow](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807).
 
-1. Run browser, container and Terraform checks on an isolated environment with
-   their actual prerequisites, then inspect outcomes and screenshots.
-2. Explicitly accept the documented reference scope and additional linear-model
-   review case, or improve model coverage using a new holdout. All original model
-   results, adverse runs and the separate human-repair evidence are retained.
-3. Review the actual deployment plan and exercise the service on the intended
-   authorized host. Local tests and CI containers do not constitute a target rollout.
-4. The maintainer configures repository description, topics and protections in
-   GitHub's UI using the [prepared settings](PUBLISHING.md). Apache-2.0 is already
-   recognized; no agent browser authentication is required.
-5. Complete the already-authorized public source publication: the scoped source,
-   history, issue/PR, log and artifact reviews are retained. The maintainer applies
-   public visibility and verifies anonymous repository access. The 2026-11-15
-   handoff adds a review of new Dependabot PRs without merging their upgrades.
+All three jobs completed successfully: `smoke-and-integration`, `container-integration`, and `terraform-schema`. This was the complete existing workflow, not the smaller `.circleci/config.yml` starter suite. The output was downloaded and inspected.
 
-Apache-2.0 was explicitly approved by the maintainer on 2026-11-14; see
-[LICENSE](../LICENSE) and [NOTICE](../NOTICE). The subsequent public-source
-instruction resolves the visibility decision. It does not authorize a paid
-feature, public business service or target rollout, and no independent human
-approval is invented. Public source-candidate publication and full operational
-qualification are separate outcomes.
+| Gate | Actual observation | Boundary |
+|---|---|---|
+| Python unit/integration suite | 122 tests passed in 38.653 seconds, including real parser/OCR and new SQLite startup regressions | Tested Linux reference and synthetic fixtures |
+| JavaScript state regressions | 23 passed; zero failures, skipped or cancelled tests | Separate from rendering |
+| Browser workflow | 33 checks passed in Chrome 153.0.8010.52 | Fresh isolated browser and cloned synthetic state |
+| Browser business result | Three original PDFs uploaded via forms; distinct roles; acceptance, publication and downloaded ZIP/original digest verification | Not independent human review or arbitrary supplier PDFs |
+| Browser UI | Actual desktop/mobile captures; 390 px viewport without document overflow; no page errors or unexpected external requests | Bounded observed screens; not general accessibility certification |
+| Actual image | Built pinned reference and ran document demo, export and restoration inside the image | No claim about an untested deployment target |
+| Compose and Terraform | Both Compose profiles validated; Terraform format, backend-disabled init and provider-schema validation passed | No cloud or host-target apply |
+| Security/dependencies | Lint, schema drift, known-secret/history scan, dependency and licence/component controls executed | Point-in-time tools, not a proof of absence of every vulnerability |
 
-## Observed CI blocker
+Server/browser shutdown and removal of private cloned test state were checked. Runtime credentials and databases were not included in the uploaded evidence paths. PC-Mehdi was used under task-specific authorization to control CircleCI and retain artifacts; application execution occurred on isolated CI workers.
 
-Source commit `3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439` triggered
-[push run 43527025131](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527025131)
-and [PR run 43527082481](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43527082481).
-All three PR jobs have `runner_id: 0`, an empty runner name and `steps: []`.
-They ended in failure before running the application. Dependabot's configuration
-validation succeeded; it does not replace any integration gate.
+## Evidence integrity
 
-The connector cannot retrieve the job-annotation endpoint, and log retrieval
-returns `BlobNotFound`. The underlying account/runner rejection reason is
-**unknown**; no billing-limit explanation is asserted. The maintainer owns
-inspection of the displayed GitHub failure annotation and any required account
-configuration. Agent browser access is outside this handoff. No billing or
-security setting was changed. The original observation is retained in
-[github-actions-blocked.json](../evidence/platform/github-actions-blocked.json).
+SHA-256 values computed from original downloaded artifacts:
 
-The same condition is observed on fixed source `8839be77`, including
-[PR run 43601886497](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43601886497):
-all three jobs again have no runner or steps. The fresh
-[public-source record](../evidence/publication/) separates the successful local
-checks from this unresolved GitHub execution boundary.
+| Artifact under `dci-checks-c451deba5f790a0b0207b6f3dd1931f597e04cc7/` | SHA-256 |
+|---|---|
+| `tests.txt` | `013eee3756ad572f3e309979234f0a9b840a6fea4e3e87bb11a1f92af61bc9b7` |
+| `ui-state-tests.txt` | `a8e93e1eb195bcf7efcb218a43e6ec64f434d4dad2113cc8827cd3c55f0baa80` |
+| `browser/report.json` | `2218c844bbefd08d92a8f919917e6fdcbf0514de23783ffd7efa08f1000c30cd` |
 
-On 2026-11-15, one connector rerun of
-[main run 43602643545](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545)
-completed as attempt 2 with the same three failures before runner allocation.
-All three new jobs again have `runner_id: 0` and `steps: []`, logs return
-`404 BlobNotFound`, and the run reports zero artifacts. The
-[current CI record](../evidence/publication/handoff-2026-11-15/ci-current.json)
-separates both attempts and the unrelated successful Dependabot update workflows.
-The latest [smoke/integration job](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245932)
-is the maintainer's diagnostic entry point. No application test was executed by
-this rerun, and the cause remains unconfirmed.
+The full run also retains actual browser images, deterministic demo/export receipts, image identity and container logs. CircleCI retention is finite. Historical evidence under [evidence/](../evidence/) remains versioned with its own source and runtime; this summary does not fabricate replacement execution outputs.
 
-The [local qualification](../evidence/qualification/) retains its original
-`overall_requested_local_qualification_met: false`: the raw local-linear demo
-did not meet its seven-export expectation. The later successful human repair and
-real HTTP run have their own reports and do not overwrite that result.
+## Corrections established by the full run
 
+Concurrent SQLite initialization exposed a genuine lock race. Migration now retries only bounded SQLite BUSY/LOCKED contention, closes and rolls back failed attempts, validates WAL, and does not retry unrelated I/O/schema errors. Ten additional tests cover repeated simultaneous threads, independent processes, real exclusive locks, deadline expiry, rollback, unsupported WAL and future-schema protection. SQLite remains a single-host WAL design, not a network-filesystem or distributed database.
+
+The browser harness no longer relies on Chromium retaining a POST response body after the original-PDF frame is released. The actual form mutation is followed by authenticated readback bound to the unique case and uploaded PDF digests. Locator-based polling works with the restrictive Content Security Policy. Application CSP was not relaxed to make tests pass.
+
+Original failed CI attempts remain failures. Earlier GitHub Actions jobs stopped before runner allocation; their account-level cause was not established. Successful CircleCI execution closes the application's execution gaps, not the unrelated GitHub account diagnostic. The original [GitHub blocked-run record](../evidence/platform/github-actions-blocked.json) remains historical evidence.
+
+## Other established controls and their limits
+
+Immutable PDF blobs, page evidence, financial and cross-document rules, revision-bound corrections, independent acceptance, transactional publication, cross-case duplicate-invoice protection, cancellation, lease fencing, bounded retries and backup/restore remain implemented and exercised. New versions invalidate prior acceptance. Export consumers upsert superseding publications; the export is not a payment instruction.
+
+Historical real HTTP tests measured 36 checks across 30 requests with original PDF/ZIP equality, denial/idempotency checks and trace joins. Historical bounded worker profiles used nine PDFs per run with one/two workers at 2.08/3.92 documents per second. These are attributed historical observations, not new hosted capacity measurements or a distributed-scale guarantee.
+
+Parser authenticity for arbitrary pure-native hidden text, unsupported purchasing layouts, credit notes, returns, freight, foreign exchange and ambiguous repeated SKU contracts is not established by the current fixture set. Enterprise identity federation and deployment-specific recovery objectives remain target concerns.
+
+## Model acceptance remains distinct
+
+| Model/profile | Recorded evidence | Acceptance decision |
+|---|---|---|
+| Deterministic reference | Seven demo dossiers and corresponding restoration | Qualified within the documented reference scope |
+| Local statistical model | Frozen synthetic corpus, 34/36 classification, 30/36 eligible and 30/30 eligible critical quality; zero false eligible in that set | Small generator-derived population; not general supplier accuracy |
+| Raw local-linear demonstration | Six automatic exports against an original target of seven | Original strict seven-export gate **not met** |
+| Attributed human repair | Seventh dossier published after documented subtotal correction and separate approval; restored state consistent | Human-assisted workflow evidence, not automatic-model acceptance |
+| Larger Qwen/llama.cpp profile | 36 real requests, 3/36 correct classifications, 0/36 eligible; original resource/response records retained | Quality gate **not met** |
+
+The original `overall_requested_local_qualification_met: false` is preserved in [qualification evidence](../evidence/qualification/). Neither a human-repaired run nor the new complete deterministic/browser run changes that recorded outcome. Improvement requires an explicit new evaluation, preserving the original frozen results; acceptance of a narrower model scope is a maintainer decision, not an implicit change made by CI.
+
+## Remaining gates and publication
+
+1. Resolve the automatic local-linear target and generative-model quality criteria, or explicitly approve a narrower reference scope while retaining all negative results.
+2. Select and authorize the actual deployment target, inspect the plan, exercise its service/restore/monitoring and obtain operator acceptance. Hosted CI containers are not a production rollout.
+3. Apply and read back public visibility, repository metadata and appropriate protections through [PUBLISHING.md](PUBLISHING.md). Source publication was previously authorized; it does not authorize a paid feature or public business service. No visibility change is inferred from a passing build.
+
+The maintainer-selected project licence is [Apache-2.0](../LICENSE), with [NOTICE](../NOTICE); third-party software retains its own terms. Licence selection is no longer pending. Public source publication, local reference qualification, model-quality acceptance and production operation are four separate decisions.
