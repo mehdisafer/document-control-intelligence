@@ -2,6 +2,7 @@
 const $ = id => document.getElementById(id);
 let token = sessionStorage.getItem("dci-token") || "";
 let actor = null, currentCase = null, currentDocument = null, selectedField = null, originalUrl = null;
+let previewUrl = null, previewGeneration = 0, requestedPreviewPage = null, displayedPreviewPage = null;
 let sessionGeneration = 0, refreshGeneration = 0, caseGeneration = 0, documentGeneration = 0, dialogGeneration = 0;
 let selectedCaseId = null, selectedDocumentId = null;
 let pendingDocumentSummary = null;
@@ -11,6 +12,9 @@ function clearDocument() {
   documentGeneration++; selectedDocumentId = null; currentDocument = null; selectedField = null; pendingDocumentSummary = null;
   $("review").hidden = true; $("evidence").hidden = true;
   $("correct-field").disabled = true; $("correct-kind").disabled = true;
+  previewGeneration++;
+  if(previewUrl) URL.revokeObjectURL(previewUrl);
+  previewUrl=null; requestedPreviewPage=null; displayedPreviewPage=null; $("original-frame").hidden=true;
   if(originalUrl) URL.revokeObjectURL(originalUrl);
   originalUrl = null; $("original-frame").removeAttribute("src"); $("original-download").removeAttribute("href");
   $("original-message").textContent = "";
@@ -137,10 +141,43 @@ async function loadDocument(id) {
     $("original-frame").src=page?`${originalUrl}#page=${page}`:originalUrl;
     $("original-download").href=originalUrl;
     $("original-message").textContent=`${d.parsed.pages.length} page(s) · ${d.parsed.pages.map(p=>`p${p.number}: ${p.method}`).join(" · ")}`;
+    void showPreviewPage(page || 1);
   }
   else { $("original-message").textContent="Preview becomes available after document inspection."; }
   } catch(e) { if(active()) notice(e.message, true); }
 }
+async function showPreviewPage(number) {
+  // Do not blank a readable page or issue a duplicate request on another field click.
+  if(displayedPreviewPage===number && !$("original-frame").hidden) return;
+  if(requestedPreviewPage===number) return;
+  requestedPreviewPage=number;
+  const session=sessionGeneration, id=selectedDocumentId, revision=currentDocument?.revision;
+  const generation=++previewGeneration;
+  const valid=()=>session===sessionGeneration && generation===previewGeneration &&
+    id===selectedDocumentId && revision===currentDocument?.revision;
+  $("original-frame").hidden=true;
+  if(!currentDocument?.parsed?.pages.some(page=>page.number===number)) {
+    $("original-message").textContent="The selected page is outside the inspected document.";
+    return;
+  }
+  $("original-message").textContent="Rendering the verified original page...";
+  try {
+    const image=await api("/api/documents/"+id+"/preview?page="+number,{binary:true});
+    if(!valid()) return;
+    const url=URL.createObjectURL(image);
+    if(previewUrl) URL.revokeObjectURL(previewUrl);
+    requestedPreviewPage=null; displayedPreviewPage=number;
+    previewUrl=url; $("original-frame").src=url; $("original-frame").hidden=false;
+    $("original-message").textContent="Verified raster preview: page "+number+" / "+
+      currentDocument.parsed.pages.length+". Original PDF available for download.";
+  } catch(e) {
+    if(!valid()) return;
+    requestedPreviewPage=null; displayedPreviewPage=null;
+    $("original-frame").hidden=true;
+    $("original-message").textContent="Page preview unavailable; download the verified PDF instead.";
+  }
+}
+
 function fieldRow(body,key,field) { const row=node("tr"), source=currentDocument; row.append(node("td",title(key.split(".").at(-1))),node("td",field.normalized??"—")); const td=node("td");td.append(node("span",title(field.status),`field-state ${field.status}`));row.append(td);row.tabIndex=0;row.onclick=()=>{if(currentDocument===source)selectField(key,field,row);};row.onkeydown=e=>{if(e.key==="Enter")row.onclick();};body.append(row); }
 function selectField(key,field,row) {
   if(!currentDocument) return;
@@ -148,7 +185,7 @@ function selectField(key,field,row) {
   const evidence=field.evidence.at(-1);$("evidence-meta").textContent=evidence?`Page ${evidence.page} · Text ${evidence.start}–${evidence.end}${evidence.bbox?" · Box "+evidence.bbox.map(n=>n.toFixed(1)).join(", ")+" pt":""}`:"No supported source span. This field requires review.";
   $("evidence-quote").replaceChildren();
   for(const citation of field.evidence) { const page=currentDocument.parsed.pages.find(p=>p.number===citation.page);const before=page.text.slice(Math.max(0,citation.start-45),citation.start),after=page.text.slice(citation.end,citation.end+45);$("evidence-quote").append(document.createTextNode(`Page ${citation.page} · source ${citation.start}–${citation.end}\n`),document.createTextNode(before),node("mark",citation.quote),document.createTextNode(after+"\n\n")); }
-  if(evidence && originalUrl)$("original-frame").src=`${originalUrl}#page=${evidence.page}`;
+  if(evidence && originalUrl) void showPreviewPage(evidence.page);
   $("evidence-transforms").textContent=`Raw: ${field.raw??"absent"}. ${field.transformations.join(" → ")||"No transformation"}.${field.origin==="human"?" Human correction; the original quoted value is retained for audit.":""}${field.reason?" "+field.reason:""}`;
   $("correct-field").disabled=!canCorrectDocument();
 }

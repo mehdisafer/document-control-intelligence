@@ -1,0 +1,35 @@
+version: 2.1
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/python:3.12
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dci-uv-v1-{{ checksum "uv.lock" }}
+      - run:
+          name: Install locked Python environment
+          command: |
+            python -m pip install --disable-pip-version-check uv==0.13.6
+            uv sync --frozen --group audit
+      - save_cache:
+          key: dci-uv-v1-{{ checksum "uv.lock" }}
+          paths:
+            - .venv
+            - ~/.cache/uv
+      - run:
+          name: Lint
+          command: uv run --frozen --group audit ruff check src tests scripts
+      - run:
+          name: Diagnose focused unit tests
+          command: circleci testsuite doctor "python-core-smoke"
+      - run:
+          name: Focused unit tests
+          command: circleci testsuite run "python-core-smoke"
+      - store_test_results:
+          path: test-results
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test

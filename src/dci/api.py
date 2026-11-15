@@ -9,6 +9,7 @@ import time
 from typing import Literal
 import uuid
 import zipfile
+import threading
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse, Response
@@ -64,6 +65,9 @@ def create_app(settings: Settings | None = None):
     app = FastAPI(title="Document Control Intelligence", version="0.1.0rc1", docs_url=None, redoc_url=None,
                   openapi_url=None)
     app.state.store = store
+    # Bound aggregate native renderer pressure per API process, not only per child.
+    preview_slots = threading.BoundedSemaphore(2)
+    app.state.preview_slots = preview_slots
     log = logging.getLogger("dci.api")
 
     def actor(authorization: str | None = Header(default=None)):
@@ -175,6 +179,38 @@ def create_app(settings: Settings | None = None):
             raise StoreError("BLOB_INTEGRITY", "Original failed integrity verification", 503)
         return FileResponse(path, media_type="application/pdf", filename=f"{document_id}.pdf",
                             content_disposition_type="inline")
+
+    @app.get("/api/documents/{document_id}/preview")
+    def preview(document_id: str, page: int = 1, _identity=Depends(actor)):
+        """Return one authenticated, verified non-executable PDF-page raster."""
+        from .parsing import ParseError
+        from .preview import render_preview
+
+        doc=store.document(document_id)
+        parsed=doc.get("parsed")
+        if parsed is None:
+            raise StoreError("NOT_INSPECTED","Preview requires completed parser inspection")
+        if not 1<=page<=min(len(parsed["pages"]),settings.max_pages):
+            raise HTTPException(422,"Requested original page does not exist")
+        if not preview_slots.acquire(blocking=False):
+            raise StoreError("PREVIEW_BUSY", "Concurrent page-preview budget reached; retry shortly", 429)
+        try:
+            try:
+                png=render_preview(store.blob_path(doc["sha256"]),expected_sha256=doc["sha256"],
+                    page=page,max_bytes=settings.max_bytes,max_pages=settings.max_pages,
+                    timeout_seconds=min(18,settings.parser_seconds),memory_mb=settings.parser_memory_mb)
+            except ParseError as exc:
+                # Original contents have already been inspected. An identity
+                # mismatch now means server-side corruption, never invalid user input.
+                unavailable={"memory_budget","time_budget","sandbox_unavailable",
+                             "identity_mismatch","corrupt_pdf","active_content",
+                             "encrypted_pdf","preview_failed"}
+                status=503 if exc.code in unavailable else 422
+                raise HTTPException(status,f"Verified original preview unavailable ({exc.code})") from None
+        finally:
+            preview_slots.release()
+        return Response(png,media_type="image/png",headers={
+            "X-Document-Page":str(page),"X-Content-Type-Options":"nosniff"})
 
     @app.post("/api/documents/{document_id}/corrections")
     def correction(document_id: str, body: CorrectionRequest, identity=Depends(role("operator"))):

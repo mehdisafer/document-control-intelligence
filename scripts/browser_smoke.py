@@ -3,6 +3,7 @@
 
 Install the optional Playwright test dependency and its Chromium binary first.
 The application server, browser and requests run inside this one process tree.
+Strict application CSP remains in force; locator assertions avoid eval-based polling.
 The supplied demo state is cloned before any UI mutation. Tokens are never
 printed, included in traces, or stored in screenshots/report JSON.
 
@@ -142,7 +143,7 @@ def run(args) -> tuple[dict, int]:
     exit_code = 2
     try:
         report["playwright_version"] = importlib.metadata.version("playwright")
-        from playwright.sync_api import sync_playwright
+        from playwright.sync_api import expect, sync_playwright
         config = clone_state(args.config.resolve(), output)
         settings = json.loads(config.read_text())
         if settings.get("batch_size", 4) < 3:
@@ -206,7 +207,7 @@ def run(args) -> tuple[dict, int]:
         phase["name"] = "invalid_login"
         page.locator("#token").fill("intentionally-invalid-ui-test-token")
         page.locator("#login-form button").click()
-        page.wait_for_function("!document.getElementById('notice').hidden")
+        page.locator("#notice").wait_for(state="visible")
         check(report, "invalid_token_is_rejected", page.locator("#login-panel").is_visible() and not page.locator("#workspace").is_visible(), page.locator("#notice").inner_text())
 
         def login(role: str):
@@ -220,7 +221,7 @@ def run(args) -> tuple[dict, int]:
             with page.expect_response(lambda response: re.fullmatch(r"/api/cases/[^/]+/audit", urlparse(response.url).path) is not None and response.status == 200):
                 page.locator("#login-form button").click()
             page.locator("#workspace").wait_for(state="visible")
-            page.wait_for_function("document.querySelectorAll('#case-list .case-row').length > 0")
+            page.locator("#case-list .case-row").first.wait_for(state="visible")
             check(report, "authenticated_" + role, role in page.locator("#actor-roles").inner_text())
 
         def select_case(case: dict):
@@ -229,7 +230,7 @@ def run(args) -> tuple[dict, int]:
             with page.expect_response(lambda response: response.url.endswith(f"/api/cases/{case['id']}") and response.status == 200):
                 with page.expect_response(lambda response: response.url.endswith(f"/api/cases/{case['id']}/audit") and response.status == 200):
                     row.click()
-            page.wait_for_function("expected => document.getElementById('case-name').textContent === expected", arg=case["name"])
+            expect(page.locator("#case-name")).to_have_text(case["name"])
 
         def source_document(case: dict):
             full = request(port, f"/api/cases/{case['id']}", credentials["operator"])
@@ -238,7 +239,7 @@ def run(args) -> tuple[dict, int]:
                 with page.expect_response(lambda response: response.url.endswith(f"/api/documents/{document['id']}/original") and response.status == 200):
                     page.locator("#document-list .doc-row").filter(has_text=document["filename"]).click()
             page.locator("#field-rows tr").first.wait_for(state="visible")
-            page.wait_for_function("(document.getElementById('original-frame').getAttribute('src') || '').startsWith('blob:')")
+            expect(page.locator("#original-frame")).to_have_attribute("src", re.compile(r"^blob:"))
             return request(port, f"/api/documents/{document['id']}", credentials["operator"])
 
         login("operator")
@@ -256,7 +257,32 @@ def run(args) -> tuple[dict, int]:
         page.locator("#evidence").wait_for(state="visible")
         check(report, "scalar_evidence_matches_original", source_field["evidence"][0]["quote"] in page.locator("#evidence-quote").inner_text())
         check(report, "original_pdf_is_served", request(port, f"/api/documents/{doc['id']}/original", credentials["operator"], binary=True).startswith(b"%PDF-"))
-        check(report, "original_pdf_frame_loaded", (page.locator("#original-frame").get_attribute("src") or "").startswith("blob:"))
+        page.locator("#original-frame").wait_for(state="visible",timeout=15000)
+        page.wait_for_function("""() => {
+            const img=document.getElementById('original-frame');
+            return img && img.complete && img.naturalWidth>=400 && img.naturalHeight>=500;
+        }""",timeout=15000)
+        pixels=page.locator("#original-frame").evaluate("""img => {
+            const c=document.createElement('canvas');c.width=64;c.height=64;
+            const ctx=c.getContext('2d',{willReadFrequently:true});
+            ctx.drawImage(img,0,0,c.width,c.height);
+            const bytes=ctx.getImageData(0,0,c.width,c.height).data;
+            let ink=0,contrast=0;
+            for(let i=0;i<bytes.length;i+=4){
+              const mean=(bytes[i]+bytes[i+1]+bytes[i+2])/3;
+              if(mean<215)ink++;
+              contrast+=Math.abs(bytes[i]-255)+Math.abs(bytes[i+1]-255)+Math.abs(bytes[i+2]-255);
+            }
+            return {ink,contrast,width:img.naturalWidth,height:img.naturalHeight};
+        }""")
+        check(report, "original_pdf_page_raster_visible",
+              pixels["ink"]>=10 and pixels["contrast"]>=10000,
+              "Actual raster image dimensions and nonblank pixels (not only a PDF URL)")
+        png=request(port,f"/api/documents/{doc['id']}/preview?page=1",
+                    credentials["operator"],binary=True)
+        check(report,"verified_preview_endpoint_serves_png",
+              png.startswith(b"\x89PNG\r\n\x1a\n"))
+
         check(report, "operator_cannot_accept_or_publish", page.locator("#accept-case").is_disabled() and page.locator("#publish-case").is_disabled())
         phase["name"] = "correction_modal"
         page.locator("#correct-field").click()
@@ -280,6 +306,9 @@ def run(args) -> tuple[dict, int]:
                   "A table column heading alone does not prove the quantity; show the row quotation too.")
         scalar_row.click()
         page.locator("#review").scroll_into_view_if_needed()
+        page.locator("#original-frame").wait_for(state="visible", timeout=15000)
+        page.wait_for_function("() => { const img=document.getElementById(\u0027original-frame\u0027); return img && img.complete && img.naturalWidth>=400 && img.naturalHeight>=500; }", timeout=15000)
+        check(report, "visible_original_at_desktop_capture", page.locator("#original-frame").is_visible())
         page.screenshot(path=str(output / "desktop-review.png"), full_page=True)
         report["screenshots"].append("desktop-review.png")
 
@@ -295,6 +324,9 @@ def run(args) -> tuple[dict, int]:
         check(report, "reader_controls_disabled", all(page.locator(selector).is_disabled() for selector in ["#new-case", "#upload-document", "#correct-field", "#correct-kind", "#accept-case", "#publish-case"]))
         page.set_viewport_size({"width": 390, "height": 1000})
         page.locator("#review").scroll_into_view_if_needed()
+        page.locator("#original-frame").wait_for(state="visible", timeout=15000)
+        page.wait_for_function("() => { const img=document.getElementById(\u0027original-frame\u0027); return img && img.complete && img.naturalWidth>=400 && img.naturalHeight>=500; }", timeout=15000)
+        check(report, "visible_original_at_mobile_capture", page.locator("#original-frame").is_visible())
         page.screenshot(path=str(output / "mobile-review.png"), full_page=True)
         report["screenshots"].append("mobile-review.png")
         dimensions = page.evaluate("({viewport:innerWidth, document:document.documentElement.scrollWidth, body:document.body.scrollWidth})")
@@ -309,21 +341,29 @@ def run(args) -> tuple[dict, int]:
         page.locator("#dialog-name").fill(attack_name)
         page.locator("#dialog-submit").click()
         page.locator("#dialog").wait_for(state="hidden")
-        page.wait_for_function("expected => document.getElementById('case-name').textContent === expected", arg=attack_name)
+        expect(page.locator("#case-name")).to_have_text(attack_name)
         check(report, "untrusted_case_name_is_literal_text", page.locator("#case-name").inner_text() == attack_name and page.locator("#case-name img").count() == 0 and page.evaluate("window.__dciXssExecuted === undefined"))
 
         # Full browser-driven upload/accept/publish against a new cloned-state
         # dossier. Fresh real PDFs have new supplier/order/invoice identities;
         # the original demo's global duplicate-invoice guard remains enabled.
         phase["name"] = "new_browser_workflow"
-        workflow_name = "Browser smoke / real document workflow"
+        workflow_name = "Browser smoke / real document workflow / " + report["fixture"]["namespace"]
         page.locator("#new-case").click()
         page.locator("#dialog-name").fill(workflow_name)
         with page.expect_response(lambda response: response.request.method == "POST" and urlparse(response.url).path == "/api/cases" and response.status == 201) as created:
             page.locator("#dialog-submit").click()
-        workflow = created.value.json()
         page.locator("#dialog").wait_for(state="hidden")
-        page.wait_for_function("expected => document.getElementById('case-name').textContent === expected", arg=workflow_name)
+        expect(page.locator("#case-name")).to_have_text(workflow_name)
+        # Chromium may evict a CDP response body when the prior PDF iframe is
+        # released. Verify the actual UI write through an authenticated GET;
+        # never replace the form submission with a test-side POST.
+        matches = [case for case in request(port, "/api/cases", credentials["operator"])
+                   if case["name"] == workflow_name]
+        if len(matches) != 1:
+            raise SmokeFailure("Browser case creation did not persist exactly one uniquely named case")
+        workflow = matches[0]
+        check(report, "browser_case_creation_persisted", created.value.status == 201 and bool(workflow["id"]))
         fixture_dir = output / "input-pdfs"
         for index, fixture in enumerate(report["fixture"]["documents"]):
             page.locator("#upload-document").click()
@@ -331,9 +371,17 @@ def run(args) -> tuple[dict, int]:
             page.locator("#dialog-file").set_input_files(fixture_dir / fixture["path"])
             with page.expect_response(lambda response: response.request.method == "POST" and urlparse(response.url).path == f"/api/cases/{workflow['id']}/documents" and response.status == 202) as uploaded:
                 page.locator("#dialog-submit").click()
-            fixture["uploaded_document_id"] = uploaded.value.json()["document_id"]
             page.locator("#dialog").wait_for(state="hidden")
-            page.wait_for_function("count => document.querySelectorAll('#document-list .doc-row').length === count", arg=index + 1)
+            expect(page.locator("#document-list .doc-row")).to_have_count(index + 1)
+            observed = request(port, f"/api/cases/{workflow['id']}", credentials["operator"])
+            documents = [document for document in observed["documents"]
+                         if document["document_key"] == fixture["document_key"]
+                         and document["sha256"] == fixture["sha256"]]
+            if len(documents) != 1:
+                raise SmokeFailure("Browser upload readback differs from the selected original PDF")
+            fixture["uploaded_document_id"] = documents[0]["id"]
+            check(report, "browser_upload_original_persisted", uploaded.value.status == 202,
+                  fixture["document_key"] + ": " + fixture["sha256"])
         worker = subprocess.run([str(executable), "worker", "--config", str(config), "--once"], cwd=root, capture_output=True, text=True, timeout=120)
         (output / "worker.log").write_text(worker.stdout + worker.stderr)
         if worker.returncode:
@@ -351,7 +399,7 @@ def run(args) -> tuple[dict, int]:
             page.locator("#dialog-reason").fill("Isolated browser smoke: reviewed synthetic originals and current evidence.")
             page.locator("#dialog-submit").click()
             page.locator("#dialog").wait_for(state="hidden")
-            page.wait_for_function("document.getElementById('case-status').textContent === 'accepted'")
+            expect(page.locator("#case-status")).to_have_text("accepted")
         login("publisher")
         select_case(workflow)
         check(report, "publisher_can_publish_accepted_revision", page.locator("#publish-case").is_enabled() and page.locator("#accept-case").is_disabled())
@@ -359,7 +407,7 @@ def run(args) -> tuple[dict, int]:
             page.locator("#publish-case").click()
             page.locator("#dialog-submit").click()
             page.locator("#dialog").wait_for(state="hidden")
-            page.wait_for_function("document.getElementById('case-status').textContent === 'published'")
+            expect(page.locator("#case-status")).to_have_text("published")
         page.locator("#export-case").wait_for(state="visible")
         if page.locator("#export-case").is_enabled():
             with page.expect_download() as captured:

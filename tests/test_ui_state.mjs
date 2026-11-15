@@ -457,3 +457,20 @@ test("a current successful correction reloads its document and completes the dia
   assert.equal(h.get("correct-field").disabled, true);
   assert.equal(h.urls.at(-1).blob, "PDF-after-correction");
 });
+
+test("preview request is deduplicated and a displayed page stays visible while reviewing fields", async () => {
+  const h = harness(); h.seedCase(dossier());
+  await loadReadyDocument(h);
+  const preview=h.pending("/api/documents/A/preview?page=1");
+  h.selectFirstField();
+  assert.equal(h.requests.filter(request => request.path === "/api/documents/A/preview?page=1").length, 1);
+  preview.respond("PNG-rendered-page-A");
+  await tick(); await tick();
+  assert.equal(h.get("original-frame").hidden, false);
+  assert.equal(h.urls.at(-1).blob, "PNG-rendered-page-A");
+  const expectedUrl=h.get("original-frame").src;
+  h.selectFirstField();
+  assert.equal(h.get("original-frame").src, expectedUrl);
+  assert.equal(h.get("original-frame").hidden, false);
+  assert.equal(h.requests.filter(request => request.path === "/api/documents/A/preview?page=1").length, 1);
+});
