@@ -20,6 +20,35 @@ Open `http://127.0.0.1:8000`. Tokens are in the private credential file written 
 `init`, not the console. For the seeded UI, use the runtime configuration produced
 by `dci demo` instead. Do not expose a development listener beyond loopback.
 
+## Authenticated original-page preview
+
+The review page displays a bounded **PNG raster** rather than delegating untrusted
+PDF files to a browser's native PDF plugin. A logged-in operator/reader may request
+`GET /api/documents/{document_id}/preview/{page_number}` only after the original
+has passed parser inspection. The original-download endpoint remains unchanged.
+
+The API verifies the stored PDF SHA-256 and delegates each request to a separate
+short-lived Linux PDFium child. That process applies the same Linux seccomp
+network-denial policy as document parsing **before** importing the PDF engine.
+It rejects scripts, active/embedded content and encrypted documents; it enforces
+the source byte/page budget, a preview wall-clock budget of at most **12 seconds**,
+a 768 MiB address-space cap (or lower configured parser limit), **2.5 million
+rendered pixels** and **5 MiB per PNG**. The API admits at most two concurrent
+preview workers per process and returns `429 PREVIEW_BUSY` instead of creating
+unbounded parser work. HTTP responses have `Cache-Control: no-store` and
+require the same bearer authentication used by the rest of the review UI.
+
+The browser requests each page separately, revokes superseded object URLs, and
+rejects late results following actor or document changes. Page navigation
+uses the original page number; all extracted citations still refer to the
+unmodified PDF source. If rasterization fails, the UI shows an explicit error and
+offers the original download. No cloud rendering or remote model API is used.
+
+[Real hosted visual qualification](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43770874796)
+executed genuine desktop/mobile Chrome checks and retained screenshots proving
+a **953 × 1348** pixel page was decoded and displayed. These bounds are for a
+single-host reference, not a measured production throughput or SLA.
+
 ## Trained local model
 
 ```bash
