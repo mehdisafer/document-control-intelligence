@@ -2,7 +2,7 @@
 const $ = id => document.getElementById(id);
 let token = sessionStorage.getItem("dci-token") || "";
 let actor = null, currentCase = null, currentDocument = null, selectedField = null, originalUrl = null;
-let previewUrl = null, previewGeneration = 0;
+let previewUrl = null, previewGeneration = 0, requestedPreviewPage = null, displayedPreviewPage = null;
 let sessionGeneration = 0, refreshGeneration = 0, caseGeneration = 0, documentGeneration = 0, dialogGeneration = 0;
 let selectedCaseId = null, selectedDocumentId = null;
 let pendingDocumentSummary = null;
@@ -14,7 +14,7 @@ function clearDocument() {
   $("correct-field").disabled = true; $("correct-kind").disabled = true;
   previewGeneration++;
   if(previewUrl) URL.revokeObjectURL(previewUrl);
-  previewUrl=null; $("original-frame").hidden=true;
+  previewUrl=null; requestedPreviewPage=null; displayedPreviewPage=null; $("original-frame").hidden=true;
   if(originalUrl) URL.revokeObjectURL(originalUrl);
   originalUrl = null; $("original-frame").removeAttribute("src"); $("original-download").removeAttribute("href");
   $("original-message").textContent = "";
@@ -147,6 +147,10 @@ async function loadDocument(id) {
   } catch(e) { if(active()) notice(e.message, true); }
 }
 async function showPreviewPage(number) {
+  // Do not blank a readable page or issue a duplicate request on another field click.
+  if(displayedPreviewPage===number && !$("original-frame").hidden) return;
+  if(requestedPreviewPage===number) return;
+  requestedPreviewPage=number;
   const session=sessionGeneration, id=selectedDocumentId, revision=currentDocument?.revision;
   const generation=++previewGeneration;
   const valid=()=>session===sessionGeneration && generation===previewGeneration &&
@@ -162,11 +166,13 @@ async function showPreviewPage(number) {
     if(!valid()) return;
     const url=URL.createObjectURL(image);
     if(previewUrl) URL.revokeObjectURL(previewUrl);
+    requestedPreviewPage=null; displayedPreviewPage=number;
     previewUrl=url; $("original-frame").src=url; $("original-frame").hidden=false;
     $("original-message").textContent="Verified raster preview: page "+number+" / "+
       currentDocument.parsed.pages.length+". Original PDF available for download.";
   } catch(e) {
     if(!valid()) return;
+    requestedPreviewPage=null; displayedPreviewPage=null;
     $("original-frame").hidden=true;
     $("original-message").textContent="Page preview unavailable; download the verified PDF instead.";
   }
