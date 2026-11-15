@@ -316,14 +316,22 @@ def run(args) -> tuple[dict, int]:
         # dossier. Fresh real PDFs have new supplier/order/invoice identities;
         # the original demo's global duplicate-invoice guard remains enabled.
         phase["name"] = "new_browser_workflow"
-        workflow_name = "Browser smoke / real document workflow"
+        workflow_name = "Browser smoke / real document workflow / " + report["fixture"]["namespace"]
         page.locator("#new-case").click()
         page.locator("#dialog-name").fill(workflow_name)
         with page.expect_response(lambda response: response.request.method == "POST" and urlparse(response.url).path == "/api/cases" and response.status == 201) as created:
             page.locator("#dialog-submit").click()
-        workflow = created.value.json()
         page.locator("#dialog").wait_for(state="hidden")
         page.wait_for_function("expected => document.getElementById('case-name').textContent === expected", arg=workflow_name)
+        # Chromium may evict a CDP response body when the prior PDF iframe is
+        # released. Verify the actual UI write through an authenticated GET;
+        # never replace the form submission with a test-side POST.
+        matches = [case for case in request(port, "/api/cases", credentials["operator"])
+                   if case["name"] == workflow_name]
+        if len(matches) != 1:
+            raise SmokeFailure("Browser case creation did not persist exactly one uniquely named case")
+        workflow = matches[0]
+        check(report, "browser_case_creation_persisted", created.value.status == 201 and bool(workflow["id"]))
         fixture_dir = output / "input-pdfs"
         for index, fixture in enumerate(report["fixture"]["documents"]):
             page.locator("#upload-document").click()
@@ -331,9 +339,17 @@ def run(args) -> tuple[dict, int]:
             page.locator("#dialog-file").set_input_files(fixture_dir / fixture["path"])
             with page.expect_response(lambda response: response.request.method == "POST" and urlparse(response.url).path == f"/api/cases/{workflow['id']}/documents" and response.status == 202) as uploaded:
                 page.locator("#dialog-submit").click()
-            fixture["uploaded_document_id"] = uploaded.value.json()["document_id"]
             page.locator("#dialog").wait_for(state="hidden")
             page.wait_for_function("count => document.querySelectorAll('#document-list .doc-row').length === count", arg=index + 1)
+            observed = request(port, f"/api/cases/{workflow['id']}", credentials["operator"])
+            documents = [document for document in observed["documents"]
+                         if document["document_key"] == fixture["document_key"]
+                         and document["sha256"] == fixture["sha256"]]
+            if len(documents) != 1:
+                raise SmokeFailure("Browser upload readback differs from the selected original PDF")
+            fixture["uploaded_document_id"] = documents[0]["id"]
+            check(report, "browser_upload_original_persisted", uploaded.value.status == 202,
+                  fixture["document_key"] + ": " + fixture["sha256"])
         worker = subprocess.run([str(executable), "worker", "--config", str(config), "--once"], cwd=root, capture_output=True, text=True, timeout=120)
         (output / "worker.log").write_text(worker.stdout + worker.stderr)
         if worker.returncode:
