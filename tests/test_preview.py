@@ -68,10 +68,10 @@ class PreviewRenderingTests(unittest.TestCase):
         for page in (0, -1, 3):
             with self.subTest(page=page), self.assertRaises(PreviewError) as raised:
                 self.preview(page=page)
-            self.assertEqual(raised.exception.code, "PAGE_OUT_OF_RANGE")
+            self.assertEqual(raised.exception.code, "page_out_of_range")
         with self.assertRaises(PreviewError) as raised:
             self.preview(max_bytes=100)
-        self.assertEqual(raised.exception.code, "SIZE_BUDGET")
+        self.assertEqual(raised.exception.code, "size_budget")
         with self.assertRaises(PreviewError) as raised:
             self.preview(sha="0" * 64)
         self.assertEqual(raised.exception.code, "identity_mismatch")
