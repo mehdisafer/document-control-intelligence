@@ -10,7 +10,17 @@ Publishing the repository and a source prerelease is separate from qualifying a
 business service deployment. Browser, container, Terraform and intended-host
 gates remain tracked in [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1).
 
-## Observed starting state — 2026-11-15
+## Current release-scope note — 15 November 2026
+
+The earlier private/unlicensed/no-runner snapshot below is retained as
+**historical**. The GitHub API now reports this repository **public**, with
+Apache-2.0 and a published source prerelease `v0.1.0rc1`. The default branch
+is still distinct from the ongoing original-preview corrective PR. Branch
+protection and a new version tag are separate owner-side release controls.
+The tested visual raster fix at `32fb196bcc496b31071d87d02453dd6936b98ccf` has its
+[source-bound record](ORIGINAL_PAGE_PREVIEW.md); the old tag is immutable.
+
+## Observed starting state — 2026-11-15 (historical)
 
 | Item | Observed state |
 |---|---|

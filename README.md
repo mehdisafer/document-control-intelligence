@@ -6,21 +6,19 @@ This Linux reference processes synthetic purchase orders, delivery notes and inv
 
 ## Delivery status — 15 November 2026
 
-**The local reference has passed its complete hosted qualification**, not only the initial smoke suite. Current qualified runtime revision:
-
-`c451deba5f790a0b0207b6f3dd1931f597e04cc7`
+**The full isolated local reference and visual original-page preview have been exercised in hosted CI.** The latest executable preview revision reviewed is `32fb196bcc496b31071d87d02453dd6936b98ccf`; this does not claim a deployment on an external production host.
 
 | Gate | Executed observation |
 |---|---|
-| Full Python suite | 122 tests, including real parsing/OCR and concurrent SQLite startup regressions |
-| JavaScript state suite | 23 state/regression tests; separate from browser rendering |
+| Full Python suite | 128 passed on the latest preview revision, including real parsing/OCR, PDF raster limits and SQLite concurrency |
+| JavaScript state suite | 24 passed, including stale-page suppression and same-page preview deduplication |
 | Actual browser workflow | Synthetic PDFs uploaded through the UI; distinct roles, acceptance, publication and downloaded export verified |
-| Rendered desktop/mobile | Real captures, 390 px mobile viewport, no observed document-level overflow or unexpected JavaScript errors |
+| Rendered desktop/mobile | Real Chrome captures show a readable rasterized original PDF beside evidence; 36 browser checks including decoded pixels and screenshot-time visibility |
 | Reference image | Built and ran document processing, review/export and restoration inside the actual image |
 | Compose / Terraform | Both Compose profiles validated; Terraform formatting/provider-schema validation executed without cloud apply |
 | Security/dependencies | Lint, schema drift, known-secret/history checks, dependency and component-licence controls executed |
 
-[Current acceptance](docs/ACCEPTANCE.md) · [Full CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
+[Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Full CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
 
 The project remains a **reference candidate (`0.1.0rc1`)**. The local-linear automatic seven-case delivery criterion is not met without an attributed human repair, and the larger Qwen profile has not met its accuracy gate. A successful controlled workflow does not erase those negative model results or establish production-target acceptance.
 
