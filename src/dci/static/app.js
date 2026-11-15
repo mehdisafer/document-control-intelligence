@@ -1,7 +1,8 @@
 "use strict";
 const $ = id => document.getElementById(id);
 let token = sessionStorage.getItem("dci-token") || "";
-let actor = null, currentCase = null, currentDocument = null, selectedField = null, originalUrl = null;
+let actor = null, currentCase = null, currentDocument = null, selectedField = null, originalUrl = null, previewUrl = null;
+let previewGeneration = 0, previewPage = 1, previewCount = 0;
 let sessionGeneration = 0, refreshGeneration = 0, caseGeneration = 0, documentGeneration = 0, dialogGeneration = 0;
 let selectedCaseId = null, selectedDocumentId = null;
 let pendingDocumentSummary = null;
@@ -12,7 +13,12 @@ function clearDocument() {
   $("review").hidden = true; $("evidence").hidden = true;
   $("correct-field").disabled = true; $("correct-kind").disabled = true;
   if(originalUrl) URL.revokeObjectURL(originalUrl);
-  originalUrl = null; $("original-frame").removeAttribute("src"); $("original-download").removeAttribute("href");
+  originalUrl = null; $("original-download").removeAttribute("href");
+  previewGeneration++; if(previewUrl) URL.revokeObjectURL(previewUrl);
+  previewUrl = null; previewPage = 1; previewCount = 0;
+  $("original-frame").removeAttribute("src"); $("original-frame").hidden = true;
+  $("preview-controls").hidden = true; $("preview-placeholder").hidden = false;
+  $("preview-placeholder").textContent = "Select a processed document to display its verified source page.";
   $("original-message").textContent = "";
 }
 function clearCase() {
@@ -133,14 +139,60 @@ async function loadDocument(id) {
     const blob=await api(`/api/documents/${id}/original`,{binary:true});
     if(!active()) return;
     originalUrl=URL.createObjectURL(blob);
-    const page = selectedField?.field.evidence.at(-1)?.page;
-    $("original-frame").src=page?`${originalUrl}#page=${page}`:originalUrl;
     $("original-download").href=originalUrl;
-    $("original-message").textContent=`${d.parsed.pages.length} page(s) · ${d.parsed.pages.map(p=>`p${p.number}: ${p.method}`).join(" · ")}`;
+    $("original-message").textContent=`${d.parsed.pages.length} page(s) · ${d.parsed.pages.map(p=>`p${p.number}: ${p.method}`).join(" · ")} · Original SHA-256 verified before rasterization`;
+    await showPreview(1);
   }
   else { $("original-message").textContent="Preview becomes available after document inspection."; }
   } catch(e) { if(active()) notice(e.message, true); }
 }
+async function showPreview(number) {
+  const doc = currentDocument;
+  if(!doc?.parsed?.pages?.length) return;
+  if(!Number.isInteger(number) || number < 1 || number > doc.parsed.pages.length) return;
+  const session = sessionGeneration, requestDoc = documentGeneration, caseId = selectedCaseId;
+  const request = ++previewGeneration, id = doc.id;
+  const active = () => session === sessionGeneration && request === previewGeneration &&
+    requestDoc === documentGeneration && caseId === selectedCaseId &&
+    selectedDocumentId === id && currentDocument === doc;
+  previewPage = number; previewCount = doc.parsed.pages.length;
+  $("preview-controls").hidden = false;
+  $("preview-position").textContent = `Page ${number} of ${previewCount}`;
+  $("preview-prev").disabled = number <= 1;
+  $("preview-next").disabled = number >= previewCount;
+  $("preview-placeholder").textContent = `Rendering original page ${number}…`;
+  $("preview-placeholder").hidden = false;
+  try {
+    const image = await api(`/api/documents/${id}/preview/${number}`, {binary:true});
+    if(!active()) return;
+    if(image?.type && image.type !== "image/png") throw Error("Preview response is not PNG.");
+    const url = URL.createObjectURL(image);
+    if(previewUrl) URL.revokeObjectURL(previewUrl);
+    previewUrl = url;
+    const target = $("original-frame");
+    target.onload = () => {
+      if(!active() || previewUrl !== url) return;
+      if(!target.naturalWidth || !target.naturalHeight) {
+        target.hidden = true; $("preview-placeholder").hidden = false;
+        $("preview-placeholder").textContent = "Unable to decode preview; download the verified original.";
+        return;
+      }
+      target.hidden = false; $("preview-placeholder").hidden = true;
+    };
+    target.onerror = () => {
+      if(!active() || previewUrl !== url) return;
+      target.hidden = true; $("preview-placeholder").hidden = false;
+      $("preview-placeholder").textContent = "Unable to display preview; download the verified original.";
+    };
+    target.src = url; target.hidden = false;
+  } catch(e) {
+    if(!active()) return;
+    $("original-frame").hidden = true; $("preview-placeholder").hidden = false;
+    $("preview-placeholder").textContent = `Preview unavailable: ${e.message}. Download the original for inspection.`;
+  }
+}
+$("preview-prev").onclick = () => { if(previewPage > 1) void showPreview(previewPage-1); };
+$("preview-next").onclick = () => { if(previewPage < previewCount) void showPreview(previewPage+1); };
 function fieldRow(body,key,field) { const row=node("tr"), source=currentDocument; row.append(node("td",title(key.split(".").at(-1))),node("td",field.normalized??"—")); const td=node("td");td.append(node("span",title(field.status),`field-state ${field.status}`));row.append(td);row.tabIndex=0;row.onclick=()=>{if(currentDocument===source)selectField(key,field,row);};row.onkeydown=e=>{if(e.key==="Enter")row.onclick();};body.append(row); }
 function selectField(key,field,row) {
   if(!currentDocument) return;
@@ -148,7 +200,7 @@ function selectField(key,field,row) {
   const evidence=field.evidence.at(-1);$("evidence-meta").textContent=evidence?`Page ${evidence.page} · Text ${evidence.start}–${evidence.end}${evidence.bbox?" · Box "+evidence.bbox.map(n=>n.toFixed(1)).join(", ")+" pt":""}`:"No supported source span. This field requires review.";
   $("evidence-quote").replaceChildren();
   for(const citation of field.evidence) { const page=currentDocument.parsed.pages.find(p=>p.number===citation.page);const before=page.text.slice(Math.max(0,citation.start-45),citation.start),after=page.text.slice(citation.end,citation.end+45);$("evidence-quote").append(document.createTextNode(`Page ${citation.page} · source ${citation.start}–${citation.end}\n`),document.createTextNode(before),node("mark",citation.quote),document.createTextNode(after+"\n\n")); }
-  if(evidence && originalUrl)$("original-frame").src=`${originalUrl}#page=${evidence.page}`;
+  if(evidence && originalUrl && (previewPage !== evidence.page || !previewUrl)) void showPreview(evidence.page);
   $("evidence-transforms").textContent=`Raw: ${field.raw??"absent"}. ${field.transformations.join(" → ")||"No transformation"}.${field.origin==="human"?" Human correction; the original quoted value is retained for audit.":""}${field.reason?" "+field.reason:""}`;
   $("correct-field").disabled=!canCorrectDocument();
 }
