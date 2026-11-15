@@ -45,9 +45,10 @@ accessibility conformance, production capacity or all browser/operating-system
 combinations. Prior failed screenshots and reports remain available and are not
 relabeled as passes.
 
-The immutable tag `v0.1.0rc1` remains attached to its original source. This
-corrective PR needs an exact-head merge and post-merge verification before the
-latest preview can be treated as the default-branch delivery. Full P04
+The immutable tag `v0.1.0rc1` remains attached to its original source. PR #10
+was merged at `24cad9d17b400fca01ae901d97082ebbd45bc59c` and [the subsequent main workflow](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+completed all three jobs successfully. Source code and tests were unchanged by
+the merge; the original visual screenshot bytes were inspected on the tested PR. Full P04
 acceptance still excludes the local-generative model's failed accuracy gates,
 automatic linear-model acceptance without human correction and deployment to
 an externally authorised operating environment. See

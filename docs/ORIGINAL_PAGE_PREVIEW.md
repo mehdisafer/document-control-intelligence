@@ -67,11 +67,15 @@ a cloned isolated synthetic state and the real API/worker. It retains the
 `dci-checks-*` artifact. CI artifacts have finite retention; the source
 commit and browser assertion names remain permanently in this repo.
 
-After merge, repeat the full workflow at the *merged source*, verify the
-actual screenshot files and original downloadable PDF, and update
-[acceptance](ACCEPTANCE.md) and [issue #11](https://github.com/mehdisafer/document-control-intelligence/issues/11)
-with the observed commit. Do not infer the new main's acceptance merely from a
-passing feature PR.
+The corrective PR #10 merged into `main` at `24cad9d17b400fca01ae901d97082ebbd45bc59c`.
+[Post-merge GitHub Actions run 43774277074](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+then passed `smoke-and-integration`, `container-integration` and
+`terraform-schema` on the merged revision. The original PR screenshots were
+separately downloaded and visually inspected; the post-merge status is a
+record of the configured tests, not a claim of an independent human approval.
+The [acceptance ledger](ACCEPTANCE.md) and
+[issue #11](https://github.com/mehdisafer/document-control-intelligence/issues/11)
+record these separately scoped observations.
 
 The broader local model, supplier-general accuracy, deployment, backup
 objectives and release-maintenance gates remain in [acceptance](ACCEPTANCE.md)

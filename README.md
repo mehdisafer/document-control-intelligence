@@ -6,7 +6,7 @@ This Linux reference processes synthetic purchase orders, delivery notes and inv
 
 ## Delivery status — 15 November 2026
 
-**The full isolated local reference and visual original-page preview have been exercised in hosted CI.** The latest executable preview revision reviewed is `32fb196bcc496b31071d87d02453dd6936b98ccf`; this does not claim a deployment on an external production host.
+**The isolated reference and visible original-page preview are qualified on the merged source.** Executable preview revision `32fb196bcc496b31071d87d02453dd6936b98ccf` is included in `main` merge `24cad9d17b400fca01ae901d97082ebbd45bc59c`, whose full GitHub Actions workflow also passed. This is not a production-host deployment.
 
 | Gate | Executed observation |
 |---|---|

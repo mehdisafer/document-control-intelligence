@@ -14,8 +14,8 @@ gates remain tracked in [issue #1](https://github.com/mehdisafer/document-contro
 
 The earlier private/unlicensed/no-runner snapshot below is retained as
 **historical**. The GitHub API now reports this repository **public**, with
-Apache-2.0 and a published source prerelease `v0.1.0rc1`. The default branch
-is still distinct from the ongoing original-preview corrective PR. Branch
+Apache-2.0 and a published source prerelease `v0.1.0rc1`. The original-preview correction has been merged into `main` through PR #10
+at `24cad9d17b400fca01ae901d97082ebbd45bc59c` and its post-merge three-job workflow succeeded. Branch
 protection and a new version tag are separate owner-side release controls.
 The tested visual raster fix at `32fb196bcc496b31071d87d02453dd6936b98ccf` has its
 [source-bound record](ORIGINAL_PAGE_PREVIEW.md); the old tag is immutable.
