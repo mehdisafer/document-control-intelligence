@@ -265,6 +265,29 @@ class WorkflowIntegrationTests(unittest.TestCase):
         self.assertEqual(invoice["version"], 2)
         self.assertEqual(invoice["id"], uploaded.json()["document_id"])
 
+    def test_original_preview_is_authenticated_valid_png_and_page_bound(self):
+        from PIL import Image
+        _, documents = self.new_case("accepted")
+        document_id = documents[-1][1]
+        route = f"/api/documents/{document_id}/preview?page=1"
+        self.assertEqual(self.client.get(route).status_code, 401)
+        response = self.client.get(route, headers=self.headers("reader"))
+        self.assertEqual(response.status_code, 200, response.text[:250])
+        self.assertEqual(response.headers["content-type"], "image/png")
+        self.assertTrue(response.content.startswith(b"\x89PNG\r\n\x1a\n"))
+        image = Image.open(io.BytesIO(response.content))
+        image.load()
+        self.assertGreaterEqual(image.width, 400)
+        self.assertGreaterEqual(image.height, 500)
+        self.assertGreater(len(set(image.resize((32, 32)).convert("RGB").getdata())), 2)
+        rejected = self.client.get(f"/api/documents/{document_id}/preview?page=999",
+                                   headers=self.headers("reader"))
+        self.assertEqual(rejected.status_code, 422)
+        original = self.client.get(f"/api/documents/{document_id}/original",
+                                   headers=self.headers("reader"))
+        self.assertEqual(original.status_code, 200)
+        self.assertTrue(original.content.startswith(b"%PDF-"))
+
     def test_redelivery_deduplicates_and_cross_case_invoice_publication_is_blocked(self):
         case_id, docs = self.new_case()
         record, document_id = docs[-1]

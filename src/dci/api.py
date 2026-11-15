@@ -176,6 +176,28 @@ def create_app(settings: Settings | None = None):
         return FileResponse(path, media_type="application/pdf", filename=f"{document_id}.pdf",
                             content_disposition_type="inline")
 
+    @app.get("/api/documents/{document_id}/preview")
+    def preview(document_id: str, page: int = 1, _identity=Depends(actor)):
+        """Return one authenticated, verified non-executable PDF-page raster."""
+        from .parsing import ParseError
+        from .preview import render_preview
+
+        doc=store.document(document_id)
+        parsed=doc.get("parsed")
+        if parsed is None:
+            raise StoreError("NOT_INSPECTED","Preview requires completed parser inspection")
+        if not 1<=page<=min(len(parsed["pages"]),settings.max_pages):
+            raise HTTPException(422,"Requested original page does not exist")
+        try:
+            png=render_preview(store.blob_path(doc["sha256"]),expected_sha256=doc["sha256"],
+                page=page,max_bytes=settings.max_bytes,max_pages=settings.max_pages,
+                timeout_seconds=settings.parser_seconds,memory_mb=settings.parser_memory_mb)
+        except ParseError as exc:
+            status=503 if exc.code in {"memory_budget","time_budget","sandbox_unavailable"} else 422
+            raise HTTPException(status,f"Verified original preview unavailable ({exc.code})") from None
+        return Response(png,media_type="image/png",headers={
+            "X-Document-Page":str(page),"X-Content-Type-Options":"nosniff"})
+
     @app.post("/api/documents/{document_id}/corrections")
     def correction(document_id: str, body: CorrectionRequest, identity=Depends(role("operator"))):
         return store.correct(document_id, body.field, body.value, body.reason, identity.name, body.expected_revision)

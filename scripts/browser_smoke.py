@@ -257,7 +257,32 @@ def run(args) -> tuple[dict, int]:
         page.locator("#evidence").wait_for(state="visible")
         check(report, "scalar_evidence_matches_original", source_field["evidence"][0]["quote"] in page.locator("#evidence-quote").inner_text())
         check(report, "original_pdf_is_served", request(port, f"/api/documents/{doc['id']}/original", credentials["operator"], binary=True).startswith(b"%PDF-"))
-        check(report, "original_pdf_frame_loaded", (page.locator("#original-frame").get_attribute("src") or "").startswith("blob:"))
+        page.locator("#original-frame").wait_for(state="visible",timeout=15000)
+        page.wait_for_function("""() => {
+            const img=document.getElementById('original-frame');
+            return img && img.complete && img.naturalWidth>=400 && img.naturalHeight>=500;
+        }""",timeout=15000)
+        pixels=page.locator("#original-frame").evaluate("""img => {
+            const c=document.createElement('canvas');c.width=64;c.height=64;
+            const ctx=c.getContext('2d',{willReadFrequently:true});
+            ctx.drawImage(img,0,0,c.width,c.height);
+            const bytes=ctx.getImageData(0,0,c.width,c.height).data;
+            let ink=0,contrast=0;
+            for(let i=0;i<bytes.length;i+=4){
+              const mean=(bytes[i]+bytes[i+1]+bytes[i+2])/3;
+              if(mean<215)ink++;
+              contrast+=Math.abs(bytes[i]-255)+Math.abs(bytes[i+1]-255)+Math.abs(bytes[i+2]-255);
+            }
+            return {ink,contrast,width:img.naturalWidth,height:img.naturalHeight};
+        }""")
+        check(report, "original_pdf_page_raster_visible",
+              pixels["ink"]>=10 and pixels["contrast"]>=10000,
+              "Actual raster image dimensions and nonblank pixels (not only a PDF URL)")
+        png=request(port,f"/api/documents/{doc['id']}/preview?page=1",
+                    credentials["operator"],binary=True)
+        check(report,"verified_preview_endpoint_serves_png",
+              png.startswith(b"\x89PNG\r\n\x1a\n"))
+
         check(report, "operator_cannot_accept_or_publish", page.locator("#accept-case").is_disabled() and page.locator("#publish-case").is_disabled())
         phase["name"] = "correction_modal"
         page.locator("#correct-field").click()
