@@ -27,7 +27,7 @@ PREVIEW_TIMEOUT_SECONDS = 12
 class PreviewError(Exception):
     def __init__(self, code: str, message: str):
         super().__init__(message)
-        self.code = code
+        self.code = code.lower()
 
 
 def render_preview(
