@@ -5,6 +5,7 @@ import io
 import json
 import logging
 from pathlib import Path
+import threading
 import time
 from typing import Literal
 import uuid
@@ -17,6 +18,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from .auth import Auth
 from .config import Settings
+from .preview import PreviewError, render_preview
 from .store import Store, StoreError
 
 
@@ -65,6 +67,8 @@ def create_app(settings: Settings | None = None):
                   openapi_url=None)
     app.state.store = store
     log = logging.getLogger("dci.api")
+    # Bound per-process preview concurrency; all PDF engines run in child processes.
+    preview_slots = threading.BoundedSemaphore(2)
 
     def actor(authorization: str | None = Header(default=None)):
         if not authorization or not authorization.startswith("Bearer "):
@@ -175,6 +179,33 @@ def create_app(settings: Settings | None = None):
             raise StoreError("BLOB_INTEGRITY", "Original failed integrity verification", 503)
         return FileResponse(path, media_type="application/pdf", filename=f"{document_id}.pdf",
                             content_disposition_type="inline")
+
+    @app.get("/api/documents/{document_id}/preview/{page_number}")
+    def original_preview(document_id: str, page_number: int, _identity=Depends(actor)):
+        doc = store.document(document_id)
+        if doc["parsed"] is None:
+            raise StoreError("NOT_INSPECTED", "Preview is available only after parser inspection")
+        if not 1 <= page_number <= len(doc["parsed"]["pages"]):
+            raise StoreError("PAGE_OUT_OF_RANGE", "Requested page does not exist", 422)
+        if not preview_slots.acquire(blocking=False):
+            raise StoreError("PREVIEW_BUSY", "Preview capacity is busy; retry later", 429)
+        try:
+            try:
+                content = render_preview(
+                    store.blob_path(doc["sha256"]), sha256=doc["sha256"],
+                    page_number=page_number, max_pages=settings.max_pages,
+                    max_bytes=settings.max_bytes,
+                    timeout_seconds=min(12, settings.parser_seconds),
+                    memory_mb=min(768, settings.parser_memory_mb),
+                )
+            except PreviewError as exc:
+                raise StoreError(exc.code.upper(), str(exc), 503) from exc
+        finally:
+            preview_slots.release()
+        return Response(content, media_type="image/png", headers={
+            "X-Original-SHA256": doc["sha256"],
+            "X-Preview-Page": str(page_number),
+        })
 
     @app.post("/api/documents/{document_id}/corrections")
     def correction(document_id: str, body: CorrectionRequest, identity=Depends(role("operator"))):
