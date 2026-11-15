@@ -1,7 +1,8 @@
 "use strict";
 const $ = id => document.getElementById(id);
 let token = sessionStorage.getItem("dci-token") || "";
-let actor = null, currentCase = null, currentDocument = null, selectedField = null, originalUrl = null;
+let actor = null, currentCase = null, currentDocument = null, selectedField = null, originalUrl = null, previewUrl = null;
+let previewGeneration = 0, renderedPage = null, requestedPage = null;
 let sessionGeneration = 0, refreshGeneration = 0, caseGeneration = 0, documentGeneration = 0, dialogGeneration = 0;
 let selectedCaseId = null, selectedDocumentId = null;
 let pendingDocumentSummary = null;
@@ -11,8 +12,15 @@ function clearDocument() {
   documentGeneration++; selectedDocumentId = null; currentDocument = null; selectedField = null; pendingDocumentSummary = null;
   $("review").hidden = true; $("evidence").hidden = true;
   $("correct-field").disabled = true; $("correct-kind").disabled = true;
+  previewGeneration++; renderedPage = null; requestedPage = null;
+  const image = $("original-frame");
+  image.onload = null; image.onerror = null; image.hidden = true; image.removeAttribute("src");
+  if(previewUrl) URL.revokeObjectURL(previewUrl);
   if(originalUrl) URL.revokeObjectURL(originalUrl);
-  originalUrl = null; $("original-frame").removeAttribute("src"); $("original-download").removeAttribute("href");
+  previewUrl = null; originalUrl = null; $("original-download").removeAttribute("href");
+  $("preview-previous").disabled = true; $("preview-next").disabled = true;
+  $("preview-index").textContent = "Page —";
+  $("original-preview-status").textContent = "";
   $("original-message").textContent = "";
 }
 function clearCase() {
@@ -107,6 +115,63 @@ async function loadCase(id, reset = true) {
   }
   } catch(e) { if(active()) notice(e.message, true); }
 }
+// Every original page is rasterized in a separately sandboxed Linux process.
+// The browser does not run a PDF plugin or receive PDF content as a preview.
+async function loadPreview(id, page) {
+  if(!currentDocument?.parsed || currentDocument.id !== id) return;
+  const count = currentDocument.parsed.pages.length;
+  if(!Number.isInteger(page) || page < 1 || page > count) return;
+  const image = $("original-frame");
+  if((renderedPage === page && image.complete && image.naturalWidth > 0) || requestedPage === page) return;
+  const generation = ++previewGeneration, session = sessionGeneration, caseId = selectedCaseId, documentId = selectedDocumentId;
+  const active = () => session === sessionGeneration && generation === previewGeneration
+    && caseId === selectedCaseId && documentId === selectedDocumentId && currentDocument?.id === id;
+  requestedPage = page;
+  $("preview-previous").disabled = true; $("preview-next").disabled = true;
+  $("original-preview-status").textContent = "Rendering original page " + page + " in an isolated process…";
+  try {
+    const raster = await api("/api/documents/" + id + "/preview?page=" + page, {binary:true});
+    if(!active()) return;
+    if(raster?.type !== "image/png" || !Number.isFinite(raster.size) || raster.size > 8 * 1024 * 1024)
+      throw new Error("The page renderer returned an invalid bounded PNG.");
+    const url = URL.createObjectURL(raster);
+    const previous = previewUrl;
+    previewUrl = url; image.hidden = true;
+    image.onload = () => {
+      if(!active()) return;
+      if(image.naturalWidth < 100 || image.naturalHeight < 100) {
+        image.onerror?.();
+        return;
+      }
+      image.hidden = false; renderedPage = page; requestedPage = null;
+      image.alt = "Original PDF, page " + page + " of " + count + ", rasterized without active content";
+      $("preview-index").textContent = "Page " + page + " / " + count;
+      $("preview-previous").disabled = page === 1;
+      $("preview-next").disabled = page === count;
+      $("original-preview-status").textContent = "Rendered original page " + page + " of " + count + "; download retains the exact original PDF.";
+    };
+    image.onerror = () => {
+      if(!active()) return;
+      image.hidden = true; requestedPage = null;
+      $("preview-previous").disabled = true; $("preview-next").disabled = true;
+      $("original-preview-status").textContent = "Page rendering failed. The authenticated original download remains available.";
+    };
+    image.src = url;
+    if(previous) URL.revokeObjectURL(previous);
+  } catch(e) {
+    if(!active()) return;
+    requestedPage = null; image.hidden = true; image.removeAttribute("src");
+    $("preview-previous").disabled = true; $("preview-next").disabled = true;
+    $("original-preview-status").textContent = "Preview unavailable: " + e.message + ". Use the original download.";
+  }
+}
+$("preview-previous").onclick = () => {
+  if(currentDocument?.parsed) void loadPreview(currentDocument.id, (renderedPage ?? 1) - 1);
+};
+$("preview-next").onclick = () => {
+  if(currentDocument?.parsed) void loadPreview(currentDocument.id, (renderedPage ?? 0) + 1);
+};
+
 async function loadDocument(id) {
   const summary=currentCase?.documents.find(d=>d.id===id);
   if(!token || !actor || !summary) return;
@@ -133,10 +198,10 @@ async function loadDocument(id) {
     const blob=await api(`/api/documents/${id}/original`,{binary:true});
     if(!active()) return;
     originalUrl=URL.createObjectURL(blob);
-    const page = selectedField?.field.evidence.at(-1)?.page;
-    $("original-frame").src=page?`${originalUrl}#page=${page}`:originalUrl;
+    const page = selectedField?.field.evidence.at(-1)?.page || 1;
     $("original-download").href=originalUrl;
     $("original-message").textContent=`${d.parsed.pages.length} page(s) · ${d.parsed.pages.map(p=>`p${p.number}: ${p.method}`).join(" · ")}`;
+    void loadPreview(id, page);
   }
   else { $("original-message").textContent="Preview becomes available after document inspection."; }
   } catch(e) { if(active()) notice(e.message, true); }
@@ -148,7 +213,7 @@ function selectField(key,field,row) {
   const evidence=field.evidence.at(-1);$("evidence-meta").textContent=evidence?`Page ${evidence.page} · Text ${evidence.start}–${evidence.end}${evidence.bbox?" · Box "+evidence.bbox.map(n=>n.toFixed(1)).join(", ")+" pt":""}`:"No supported source span. This field requires review.";
   $("evidence-quote").replaceChildren();
   for(const citation of field.evidence) { const page=currentDocument.parsed.pages.find(p=>p.number===citation.page);const before=page.text.slice(Math.max(0,citation.start-45),citation.start),after=page.text.slice(citation.end,citation.end+45);$("evidence-quote").append(document.createTextNode(`Page ${citation.page} · source ${citation.start}–${citation.end}\n`),document.createTextNode(before),node("mark",citation.quote),document.createTextNode(after+"\n\n")); }
-  if(evidence && originalUrl)$("original-frame").src=`${originalUrl}#page=${evidence.page}`;
+  if(evidence && currentDocument.parsed) void loadPreview(currentDocument.id, evidence.page);
   $("evidence-transforms").textContent=`Raw: ${field.raw??"absent"}. ${field.transformations.join(" → ")||"No transformation"}.${field.origin==="human"?" Human correction; the original quoted value is retained for audit.":""}${field.reason?" "+field.reason:""}`;
   $("correct-field").disabled=!canCorrectDocument();
 }

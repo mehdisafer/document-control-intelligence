@@ -132,6 +132,14 @@ async function loadReadyDocument(h, value = documentValue()) {
   h.pending(`/api/documents/${value.id}`).respond(value); await tick();
   if(value.parsed) h.pending(`/api/documents/${value.id}/original`).respond(`PDF-${value.id}-${value.revision}`);
   await work;
+  if(value.parsed) {
+    await tick();
+    h.pending("/api/documents/" + value.id + "/preview?page=1").respond({type:"image/png",size:800});
+    await tick();
+    const img = h.get("original-frame");
+    img.complete = true; img.naturalWidth = 1000; img.naturalHeight = 1300;
+    img.onload?.();
+  }
 }
 
 test("correction stays disabled until a current ready field is selected", async () => {
@@ -163,7 +171,8 @@ test("late original PDF cannot replace the newly selected document", async () =>
   assert.equal(h.state().documentId, "B");
   assert.match(h.get("field-rows").textContent, /B/);
   assert.equal(h.get("original-frame").src, currentUrl);
-  assert.deepEqual(h.urls.map(item => item.blob), ["PDF-B-0"]);
+  assert.equal(h.urls[0].blob, "PDF-B-0");
+  assert.equal(h.urls[1].blob.type, "image/png");
 });
 
 test("obsolete document metadata cannot trigger another original fetch", async () => {
@@ -273,7 +282,7 @@ test("a legitimate refreshed revision reloads fields and its original", async ()
   assert.equal(h.state().revision, 1);
   assert.equal(h.state().selected, null);
   assert.equal(h.get("correct-field").disabled, true);
-  assert.equal(h.urls.at(-1).blob, "PDF-new-revision");
+  assert.ok(h.urls.some(item => item.blob === "PDF-new-revision"));
 });
 
 for(const change of ["revision", "status"]) {
@@ -296,7 +305,7 @@ for(const change of ["revision", "status"]) {
       ? { status: "processing", parsed: null, extraction: null } : {}));
     await oldWork;
     assert.equal(h.state().revision, latestRevision);
-    assert.equal(h.urls.at(-1).blob, "PDF-current-state");
+    assert.ok(h.urls.some(item => item.blob === "PDF-current-state"));
     assert.equal(h.requests.filter(request => request.path === "/api/documents/A/original").length, 1);
     const unchanged = h.run("loadCase('C', false)");
     await finishCase(h, latestCase); await unchanged;
@@ -455,5 +464,50 @@ test("a current successful correction reloads its document and completes the dia
   assert.equal(h.state().revision, 1);
   assert.equal(h.state().selected, null);
   assert.equal(h.get("correct-field").disabled, true);
-  assert.equal(h.urls.at(-1).blob, "PDF-after-correction");
+  assert.ok(h.urls.some(item => item.blob === "PDF-after-correction"));
+});
+
+
+test("a late raster response cannot overwrite the newly selected document", async () => {
+  const h = harness(); h.seedCase(dossier());
+  const first = h.run("loadDocument('A')");
+  h.pending("/api/documents/A").respond(documentValue("A")); await tick();
+  h.pending("/api/documents/A/original").respond("PDF-A-original");
+  await first; await tick();
+  const staleRaster = h.pending("/api/documents/A/preview?page=1");
+  await loadReadyDocument(h, documentValue("B"));
+  const currentUrl = h.get("original-frame").src;
+  staleRaster.respond({type:"image/png", size:700}); await tick();
+  assert.equal(h.state().documentId, "B");
+  assert.equal(h.get("original-frame").src, currentUrl);
+  assert.equal(h.get("preview-index").textContent, "Page 1 / 1");
+  assert.ok(h.urls.every(x => x.blob.size !== 700));
+});
+
+test("original PDF download and decoded preview blobs are both released on identity change", async () => {
+  const h = harness(); h.seedCase(dossier());
+  await loadReadyDocument(h, documentValue("A"));
+  const pdf = h.get("original-download").href, preview = h.get("original-frame").src;
+  assert.ok(pdf.startsWith("blob:") && preview.startsWith("blob:") && pdf !== preview);
+  h.get("switch-actor").click();
+  assert.ok(h.revoked.includes(pdf) && h.revoked.includes(preview));
+  assert.equal(h.get("original-frame").src, undefined);
+  assert.equal(h.get("original-download").href, undefined);
+});
+
+test("raster navigation is bounded to the parsed page count", async () => {
+  const h = harness(); h.seedCase(dossier());
+  const value = documentValue("A");
+  value.parsed.pages.push({number:2,text:"Additional inspected page",method:"native"});
+  await loadReadyDocument(h, value);
+  assert.equal(h.get("preview-index").textContent, "Page 1 / 2");
+  assert.equal(h.get("preview-previous").disabled, true);
+  assert.equal(h.get("preview-next").disabled, false);
+  h.get("preview-next").click();
+  h.pending("/api/documents/A/preview?page=2").respond({type:"image/png",size:1000});
+  await tick();
+  const image = h.get("original-frame");
+  image.complete = true; image.naturalWidth = 1000; image.naturalHeight = 1300; image.onload?.();
+  assert.equal(h.get("preview-index").textContent, "Page 2 / 2");
+  assert.equal(h.get("preview-next").disabled, true);
 });

@@ -235,11 +235,32 @@ def run(args) -> tuple[dict, int]:
         def source_document(case: dict):
             full = request(port, f"/api/cases/{case['id']}", credentials["operator"])
             document = next((d for d in full["documents"] if "invoice" in d["filename"].lower()), full["documents"][0])
-            with page.expect_response(lambda response: response.url.endswith(f"/api/documents/{document['id']}") and response.status == 200):
-                with page.expect_response(lambda response: response.url.endswith(f"/api/documents/{document['id']}/original") and response.status == 200):
-                    page.locator("#document-list .doc-row").filter(has_text=document["filename"]).click()
+            with page.expect_response(lambda response: urlparse(response.url).path == f"/api/documents/{document['id']}/preview" and response.status == 200):
+                with page.expect_response(lambda response: response.url.endswith(f"/api/documents/{document['id']}") and response.status == 200):
+                    with page.expect_response(lambda response: response.url.endswith(f"/api/documents/{document['id']}/original") and response.status == 200):
+                        page.locator("#document-list .doc-row").filter(has_text=document["filename"]).click()
             page.locator("#field-rows tr").first.wait_for(state="visible")
-            expect(page.locator("#original-frame")).to_have_attribute("src", re.compile(r"^blob:"))
+            image = page.locator("#original-frame")
+            expect(image).to_have_attribute("src", re.compile(r"^blob:"))
+            image.wait_for(state="visible")
+            expect(image).to_have_js_property("complete", True)
+            # A blob URL and a successful PDF fetch do not establish a readable page.
+            # Sample decoded raster pixels, verifying actual ink and paper.
+            pixels = image.evaluate("""img => {
+              const c=document.createElement('canvas'); c.width=160; c.height=160;
+              const ctx=c.getContext('2d',{willReadFrequently:true});
+              ctx.drawImage(img,0,0,160,160);
+              const p=ctx.getImageData(0,0,160,160).data;
+              let ink=0,paper=0;
+              for(let i=0;i<p.length;i+=4) {
+                const v=(p[i]+p[i+1]+p[i+2])/3;
+                if(v<195) ink++; if(v>235) paper++;
+              }
+              return {width:img.naturalWidth,height:img.naturalHeight,ink,paper};
+            }""")
+            check(report, "original_page_pixels_visible",
+                  pixels["width"] >= 500 and pixels["height"] >= 500
+                  and pixels["ink"] >= 8 and pixels["paper"] >= 2000, json.dumps(pixels))
             return request(port, f"/api/documents/{document['id']}", credentials["operator"])
 
         login("operator")
