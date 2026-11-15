@@ -82,6 +82,9 @@ function harness() {
         fail(message = "network failed") { request.answered = true; reject(new Error(message)); },
       };
       requests.push(request);
+      // In-memory preview bytes are deterministic in this state-only test harness.
+      // Page 2 is left pending so stale navigation can be tested explicitly.
+      if(/^\\/api\\/documents\\/[^/]+\\/preview\\/1$/.test(path)) request.respond("PNG-" + path);
     }),
     setInterval: () => 1, setTimeout: () => 1, console,
   });
@@ -163,7 +166,7 @@ test("late original PDF cannot replace the newly selected document", async () =>
   assert.equal(h.state().documentId, "B");
   assert.match(h.get("field-rows").textContent, /B/);
   assert.equal(h.get("original-frame").src, currentUrl);
-  assert.deepEqual(h.urls.map(item => item.blob), ["PDF-B-0"]);
+  assert.deepEqual(h.urls.filter(item => String(item.blob).startsWith("PDF-")).map(item => item.blob), ["PDF-B-0"]);
 });
 
 test("obsolete document metadata cannot trigger another original fetch", async () => {
@@ -273,7 +276,7 @@ test("a legitimate refreshed revision reloads fields and its original", async ()
   assert.equal(h.state().revision, 1);
   assert.equal(h.state().selected, null);
   assert.equal(h.get("correct-field").disabled, true);
-  assert.equal(h.urls.at(-1).blob, "PDF-new-revision");
+  assert.equal(h.urls.filter(item => String(item.blob).startsWith("PDF-")).at(-1).blob, "PDF-new-revision");
 });
 
 for(const change of ["revision", "status"]) {
@@ -296,7 +299,7 @@ for(const change of ["revision", "status"]) {
       ? { status: "processing", parsed: null, extraction: null } : {}));
     await oldWork;
     assert.equal(h.state().revision, latestRevision);
-    assert.equal(h.urls.at(-1).blob, "PDF-current-state");
+    assert.equal(h.urls.filter(item => String(item.blob).startsWith("PDF-")).at(-1).blob, "PDF-current-state");
     assert.equal(h.requests.filter(request => request.path === "/api/documents/A/original").length, 1);
     const unchanged = h.run("loadCase('C', false)");
     await finishCase(h, latestCase); await unchanged;
@@ -455,5 +458,40 @@ test("a current successful correction reloads its document and completes the dia
   assert.equal(h.state().revision, 1);
   assert.equal(h.state().selected, null);
   assert.equal(h.get("correct-field").disabled, true);
-  assert.equal(h.urls.at(-1).blob, "PDF-after-correction");
+  assert.equal(h.urls.filter(item => String(item.blob).startsWith("PDF-")).at(-1).blob, "PDF-after-correction");
+});
+
+test("preview navigation uses an isolated PNG and rejects an obsolete page result", async () => {
+  const h = harness(); h.seedCase(dossier());
+  const doc = documentValue("A", 0, { parsed: { pages: [
+    { number: 1, text: "Page one", method: "native" },
+    { number: 2, text: "Page two", method: "native" },
+  ] } });
+  await loadReadyDocument(h, doc);
+  assert.equal(h.get("preview-position").textContent, "Page 1 of 2");
+  assert.equal(h.get("preview-prev").disabled, true);
+  assert.equal(h.get("preview-next").disabled, false);
+  h.get("preview-next").click();
+  const secondPage = h.pending("/api/documents/A/preview/2");
+  assert.equal(h.get("preview-position").textContent, "Page 2 of 2");
+  await loadReadyDocument(h, documentValue("B"));
+  const latest = h.get("original-frame").src;
+  secondPage.respond("PNG-obsolete-page-two"); await tick();
+  assert.equal(h.state().documentId, "B");
+  assert.equal(h.get("original-frame").src, latest);
+  assert.equal(h.urls.some(item => item.blob === "PNG-obsolete-page-two"), false);
+});
+
+test("logout revokes current raster preview and original download URLs", async () => {
+  const h = harness(); h.seedCase(dossier());
+  await loadReadyDocument(h);
+  const source = h.get("original-download").href, preview = h.get("original-frame").src;
+  assert.ok(source.startsWith("blob:"));
+  assert.ok(preview.startsWith("blob:"));
+  assert.notEqual(source, preview);
+  h.get("switch-actor").click();
+  assert.equal(h.get("original-frame").src, undefined);
+  assert.equal(h.get("original-download").href, undefined);
+  assert.ok(h.revoked.includes(source));
+  assert.ok(h.revoked.includes(preview));
 });
