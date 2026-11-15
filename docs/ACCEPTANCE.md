@@ -4,7 +4,35 @@ Updated 15 November 2026. This record distinguishes implementation, actual execu
 
 Application version `0.1.0rc1` remains a reference candidate; no stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
 
-## Latest complete hosted execution
+## Latest hosted original-page qualification — GitHub Actions
+
+**Qualified runtime source:** `948d82ba90af3f3049b48e7846eea56ad3a45dcf`, [run #43770874796](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43770874796). This is the latest standalone preview-fix source, not the immutable `v0.1.0rc1` release commit. All three jobs completed successfully: `smoke-and-integration`, `container-integration`, and `terraform-schema`.
+
+| Gate | Executed result | Qualification boundary |
+|---|---|---|
+| Python | **126 tests passed** in 30.042 seconds, including real multipage PNG rendering, authenticated preview, active/encrypted-PDF rejection and blob tampering | Synthetic Linux inputs, not arbitrary supplier layouts |
+| JavaScript | **25 tests passed**, without skips, including stale preview request fencing and logout URL revocation | State-only tests with a mocked DOM; browser checked separately |
+| Real browser | **35/35 checks passed** in Chrome 157.0.8103.50, with a decoded **953 × 1348** raster page, page identity, authentic original download, business approvals, publication and export | Real desktop/mobile captures; independent human review not implied |
+| Mobile UI | Actual 390 px screenshot; document/body width both 390 px, no horizontal overflow | No general accessibility certification |
+| Container | Reference image built and completed parsing, review/export and restoration under the configured constraints | Not an intended-host rollout |
+| Terraform | Formatting, initialization and provider-schema validation succeeded | No resource apply or target-host approval |
+| Security/integrity | Strict CSP retained; no unexpected page errors or external document requests; private cloned state removed | A point-in-time source and dependency check |
+
+This was a **real rasterized original**, not a merely created `blob:` URL. The PNG is rendered from a SHA-256-verified source using a separately sandboxed PDFium child with wall-clock, address-space, page, image-size and concurrency bounds. Rendering is a visual aid; the original PDF bytes and source citations remain authoritative. [Issue #11](https://github.com/mehdisafer/document-control-intelligence/issues/11) documents the earlier broken native iframe and the acceptance proof.
+
+Original [check/browser artifact #14184372240](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43770874796/artifacts/14184372240) was downloaded and inspected. The retained bytes have these SHA-256 digests:
+
+| Original artifact member | SHA-256 |
+|---|---|
+| `tests.txt` | `05135324c3bbf45f06b9dcdbee8770f041c163f09fce577f3019a631a7954257` |
+| `ui-state-tests.txt` | `ea00fabe93d48b50d65bfd3fc226d5594edf8195e176896529c248b9823d6c58` |
+| `browser/report.json` | `934cd6b94a6a75fb943fe27cda99553930b7af4ff8957902d9ce38195d6f47f9` |
+| `browser/desktop-review.png` | `643e609a95fcf57769de91c8a1e71db695453c125119ab20088776cb436677c9` |
+| `browser/mobile-review.png` | `2aff82d54eeb6c26ec840ab175e219dc4e5b8c0746869b50018886e22d4e486a` |
+
+The previous native PDF iframe produced an unreadable document icon in the Chrome evidence despite returning correct PDF bytes. That limitation is **resolved on the preview-fix branch**, not retroactively on the older release/tag. A new CircleCI run and integration on `main` must still be distinguished from this successful GitHub Actions run.
+
+## Earlier hosted CircleCI execution — before isolated raster previews
 
 Qualified runtime: `c451deba5f790a0b0207b6f3dd1931f597e04cc7`.
 CircleCI pipeline: `42d7852d-0e54-4243-a467-fc1d1c58dfe8`.
@@ -69,6 +97,6 @@ The original `overall_requested_local_qualification_met: false` is preserved in 
 
 1. Resolve the automatic local-linear target and generative-model quality criteria, or explicitly approve a narrower reference scope while retaining all negative results.
 2. Select and authorize the actual deployment target, inspect the plan, exercise its service/restore/monitoring and obtain operator acceptance. Hosted CI containers are not a production rollout.
-3. Apply and read back public visibility, repository metadata and appropriate protections through [PUBLISHING.md](PUBLISHING.md). Source publication was previously authorized; it does not authorize a paid feature or public business service. No visibility change is inferred from a passing build.
+3. GitHub public visibility, repository description/topics, Apache-2.0 and the original source prerelease have been read back as published. Activate and verify the appropriate `main` ruleset through [PUBLISHING.md](PUBLISHING.md); the GitHub connector cannot write repository administration settings. No paid feature or public business service is authorized by this source-publication task.
 
 The maintainer-selected project licence is [Apache-2.0](../LICENSE), with [NOTICE](../NOTICE); third-party software retains its own terms. Licence selection is no longer pending. Public source publication, local reference qualification, model-quality acceptance and production operation are four separate decisions.
