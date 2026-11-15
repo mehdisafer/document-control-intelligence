@@ -4,7 +4,57 @@ Updated 15 November 2026. This record distinguishes implementation, actual execu
 
 Application version `0.1.0rc1` remains a reference candidate; no stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
 
-## Latest complete hosted execution
+## Original-page visibility correction — latest P0 evidence
+
+The earlier Chrome browser workflow correctly downloaded the PDF bytes and set a
+`blob:` iframe URL, but its original-document area displayed an unreadable
+plugin icon. A successful HTTP request and iframe attribute did **not** prove a
+visible page. The initial isolated PNG replacement also exposed a transient
+blank image when an operator selected another field on the same page. Both
+defects were reproduced before the final client-side request coalescing change.
+
+A source-bound, authenticated PNG raster adapter now checks the original
+content hash and PDF structural restrictions in a separate seccomp-constrained
+child, renders one page under page/pixel/time/memory/output budgets, and keeps
+the exact original PDF available through its existing authenticated download.
+The UI validates the current document/revision/session, deduplicates same-page
+requests and rejects a late response from a previously selected document.
+
+On [GitHub Actions run 43774003311](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774003311)
+for `32fb196bcc496b31071d87d02453dd6936b98ccf`:
+
+- All three real hosted jobs succeeded: `smoke-and-integration`,
+  `container-integration` and `terraform-schema`.
+- Original `tests.txt`: **128 Python tests passed**, zero failures/errors.
+- Original `ui-state-tests.txt`: **24 JavaScript tests passed**, zero failures/skips.
+- Original `browser/report.json`: **36 checks passed**, including image decode,
+  nonblank pixels, authentication and visible image immediately before each
+  desktop/mobile screenshot.
+- The original Chrome 157 screenshots were independently downloaded and visually
+  inspected. Both display the synthetic invoice's printed fields inside the
+  review workspace, beside the extracted evidence. The operator can see the
+  document rather than a blank PDF viewer.
+- The recorded console includes one **expected** failed-authentication HTTP 401
+  during a negative test. There are no unexpected outbound requests, no page
+  exceptions and no failed required browser checks.
+
+CircleCI's separate fast `build-and-test` job also reported success on this
+revision. The new API and raster worker have a bounded no-network subprocess
+policy; these tests do not establish security of arbitrary hostile PDFs,
+accessibility conformance, production capacity or all browser/operating-system
+combinations. Prior failed screenshots and reports remain available and are not
+relabeled as passes.
+
+The immutable tag `v0.1.0rc1` remains attached to its original source. PR #10
+was merged at `24cad9d17b400fca01ae901d97082ebbd45bc59c` and [the subsequent main workflow](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+completed all three jobs successfully. Source code and tests were unchanged by
+the merge; the original visual screenshot bytes were inspected on the tested PR. Full P04
+acceptance still excludes the local-generative model's failed accuracy gates,
+automatic linear-model acceptance without human correction and deployment to
+an externally authorised operating environment. See
+[original-page preview design and evidence](ORIGINAL_PAGE_PREVIEW.md).
+
+## Earlier complete hosted execution — before the original-page visual fix
 
 Qualified runtime: `c451deba5f790a0b0207b6f3dd1931f597e04cc7`.
 CircleCI pipeline: `42d7852d-0e54-4243-a467-fc1d1c58dfe8`.
