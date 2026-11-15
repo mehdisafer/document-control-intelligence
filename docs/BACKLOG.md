@@ -2,25 +2,32 @@
 
 ## P0 — Close candidate evidence and release decisions
 
-- Keep generative classification unqualified unless its independent
-  quality/coverage gate is met on a new untouched holdout. The completed bounded
-  replay and both earlier failed executions are preserved in evidence.
-- Execute and inspect real browser, container and Terraform CI results, including
-  actual screenshots. Resolve concrete failures before marking those checks passed.
-- Resolve the GitHub Actions rejection before runner allocation. The actual cause
-  is not available through the connector; do not infer a billing or code failure.
-- Agree the intended deployment host and inspect a concrete deployment plan before
-  rollout. Public source publication does not deploy a public business service.
-- The maintainer applies [prepared GitHub settings](PUBLISHING.md), executes the
-  already-authorized public visibility change and verifies anonymous access.
-  The 2026-11-15 observation still reports private. Apache-2.0 and the source
-  publication decision are resolved; no agent browser authentication is required.
-- Qualify the five open Dependabot upgrades separately before merging. In
+- Keep generative classification unqualified unless an independently evaluated
+  quality/coverage gate is met on an untouched holdout. Original Qwen failures
+  and all 36-request completion records remain available.
+- Resolve the frozen local-linear run's original six-versus-seven automatic
+  export criterion, or explicitly accept a narrower reference profile without
+  rewriting its recorded failure. Its human-repaired run is a different result.
+- Integrate the [isolated original-page preview fix](https://github.com/mehdisafer/document-control-intelligence/issues/11)
+  through reviewed PRs and re-run the full CI on the integrated `main` source.
+  [GitHub Actions run 43770874796](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43770874796)
+  qualified 126 Python, 25 JavaScript and 35 real browser checks on preview-fix
+  source `948d82ba`, with visibly decoded pages. Earlier blank PDF viewer
+  screenshots remain genuine historical evidence.
+- Reconcile the [CircleCI reference pipeline](https://app.circleci.com/pipelines/circleci/Um5XQQtD4BE9Jcfy4XTzBb/7UEpXuXKNt1osYC3PaUwEV)
+  after integration, preserving failed older heads and verifying the actual new
+  source ref. A green GitHub Actions run is not a CircleCI run.
+- Activate and read back the `main` branch ruleset via authenticated GitHub
+  repository administration. GitHub public visibility, description/topics,
+  Apache-2.0 licence and the original `v0.1.0rc1` prerelease are already
+  verified. The source-publication task does not deploy a public business service.
+- Agree an intended deployment host, inspect its concrete plan, exercise service,
+  restoration and monitoring with explicit authorization, and obtain operator
+  acceptance. CI workers are not a production deployment.
+- Qualify five open Dependabot upgrades separately. In
   [PR #5](https://github.com/mehdisafer/document-control-intelligence/pull/5),
-  regenerate `requirements.lock` to match the changed `uv.lock` parser versions;
-  the audit input otherwise remains stale. The
-  [scoped review](../evidence/publication/handoff-2026-11-15/dependabot-review.json)
-  does not transfer current-main test results to these proposed upgrades.
+  regenerate `requirements.lock` from the changed `uv.lock` before trusting the
+  dependency-audit input. Current-main test results do not transfer to these PRs.
 
 ## P1 — Extend useful purchasing coverage
 
@@ -56,15 +63,23 @@ These items are visible scope limits. They are not hidden behind a generic
 
 ## Completed candidate evidence
 
-The [evidence index](../evidence/) links exact source hashes, original demo
-failures and successes, restoration, 72 identical semantic regression outputs,
-one/two-worker load and real HTTP/separate-worker execution. Historical results
-remain attributed to their original source. Fixed source `8839be77` separately
-passes 112 Python and 23 JavaScript state/unit tests, both without skips.
+The [evidence index](../evidence/) links historical source hashes, real
+PDF/OCR demos, original model failures, seven baseline exports, the separate
+human-repaired run, tested restoration, 72 identical semantic regression
+outputs, worker load, and real HTTP/separate-worker execution. Historical
+results are never rewritten when later fixes pass.
 
-The public-source review fixed stale document/PDF/audit responses, actor changes,
-pending metadata made obsolete by a newer revision/status, and dialog mutation
-targets. It also includes UTF-8 dossier and manifest JSON in the ZIP's combined
-50 MiB uncompressed-member budget. These focused fixes do not close the real
-browser, container, Terraform or target-deployment gates above.
+Public candidate source `8839be77` ran 112 Python and 23 JavaScript
+state tests. Subsequent hosted `c451deba` ran 122 Python, 23 JavaScript and
+33 real-browser checks, and exposed a blank original-PDF native iframe despite
+correct blob bytes. The latest preview-fix source `948d82ba` ran **126 Python,
+25 JavaScript and 35 real-browser checks** without failures or skips, along
+with a successful container integration and Terraform schema validation.
+Desktop/mobile captures show a genuine rasterized source page. Exact
+run/artifact links, hashes and limits are in [ACCEPTANCE.md](ACCEPTANCE.md).
 
+The corrections also fence late document/PDF/audit responses, require
+revision-safe dialogs, bound complete ZIP exports, preserve strict CSP, and
+render original pages only through a resource-bounded, network-denied child.
+Security and model-quality limits above remain in force; a successful isolated
+reference is not proof of production readiness.
