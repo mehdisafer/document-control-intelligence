@@ -11,10 +11,16 @@
   is not available through the connector; do not infer a billing or code failure.
 - Agree the intended deployment host and inspect a concrete deployment plan before
   rollout. Public source publication does not deploy a public business service.
-- Apply prepared repository metadata and available protections with administration
-  access, execute the already-authorized public visibility change and verify
-  anonymous access. The maintainer selected Apache-2.0 and then authorized public
-  source publication on 2026-11-14; both decisions are resolved.
+- The maintainer applies [prepared GitHub settings](PUBLISHING.md), executes the
+  already-authorized public visibility change and verifies anonymous access.
+  The 2026-11-15 observation still reports private. Apache-2.0 and the source
+  publication decision are resolved; no agent browser authentication is required.
+- Qualify the five open Dependabot upgrades separately before merging. In
+  [PR #5](https://github.com/mehdisafer/document-control-intelligence/pull/5),
+  regenerate `requirements.lock` to match the changed `uv.lock` parser versions;
+  the audit input otherwise remains stale. The
+  [scoped review](../evidence/publication/handoff-2026-11-15/dependabot-review.json)
+  does not transfer current-main test results to these proposed upgrades.
 
 ## P1 — Extend useful purchasing coverage
 
@@ -61,3 +67,4 @@ pending metadata made obsolete by a newer revision/status, and dialog mutation
 targets. It also includes UTF-8 dossier and manifest JSON in the ZIP's combined
 50 MiB uncompressed-member budget. These focused fixes do not close the real
 browser, container, Terraform or target-deployment gates above.
+

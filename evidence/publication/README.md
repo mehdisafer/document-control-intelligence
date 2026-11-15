@@ -76,6 +76,30 @@ validation and an intended-host rollout remain unqualified. See the
 [acceptance matrix](../../docs/ACCEPTANCE.md) and [release status](../../docs/RELEASE.md).
 Changing repository visibility creates no public business-service endpoint.
 
+## Maintainer handoff on 2026-11-15
+
+PR #2 integrated the candidate at `84b06caf6452c746ef27a615575c2a0f4c7fd0c9`,
+with the same tree as reviewed candidate `3bf98d82`. The fresh administrative
+observation reports private visibility, recognized Apache-2.0, empty
+metadata/topics, unprotected `main` and no release object. The maintainer owns
+the remaining UI steps in [PUBLISHING.md](../../docs/PUBLISHING.md); agent browser
+access is outside the task. Prepared instructions are not settings readback.
+
+- [CI observation](handoff-2026-11-15/ci-current.json): original attempt and the
+  single connector rerun of main run `43602643545` are separate. Attempt 2 again
+  has three failed jobs with no runner or steps, missing logs and zero artifacts.
+  The cause is unavailable; successful dynamic Dependabot runs are distinguished.
+- [Dependabot review](handoff-2026-11-15/dependabot-review.json): five exact open
+  PR heads, eight patches and their public-facing bodies/comments were inspected.
+  No disclosure blocker was identified in that scope. PR #5 has an unregenerated
+  runtime lock export; its upgrade must be corrected and qualified separately.
+- [Handoff manifest](handoff-2026-11-15/manifest.json): report hashes, observation
+  scope and outstanding UI actions. This adds no new application/model execution.
+
+All historical execution logs, model artifacts and disclosure inventories remain
+unchanged. Current-main qualification does not extend to unmerged dependency
+updates. Public-source status and full operational acceptance remain separate.
+
 ## Reproduction and preservation
 
 Use the README's frozen install and test commands for the current checkout.
@@ -88,3 +112,4 @@ The original `3ff93109` HTTP/model/demo evidence and its failed local-linear
 seven-export assertion are unchanged. No model training, final-holdout tuning or
 LLM replay was performed for these UI/export corrections. The dependency lock,
 model coefficients, prompts and thresholds are unchanged.
+

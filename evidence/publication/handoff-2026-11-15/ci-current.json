@@ -1,0 +1,465 @@
+{
+  "schema_version": "current-ci-handoff-1.0",
+  "recorded_at_utc": "2026-11-15T19:49:38.977Z",
+  "repository": "mehdisafer/document-control-intelligence",
+  "scope": "Read-only GitHub connector inspection of the current main application run and separately identified Dependabot dynamic runs. No Browser, Tinyfish, personal-PC access, application/model tests, repository edits or mutations by this reviewing agent.",
+  "main": {
+    "observed_at_utc": "2026-11-15T19:47:09.000Z",
+    "sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9"
+  },
+  "current_run_id": 43602643545,
+  "current_attempt": 2,
+  "application_attempts": [
+    {
+      "observed_at_utc": "2026-11-15T19:47:09.132Z",
+      "run": {
+        "id": 43602643545,
+        "name": "Document control checks",
+        "head_branch": "main",
+        "head_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+        "path": ".github/workflows/ci.yml",
+        "event": "push",
+        "status": "completed",
+        "conclusion": "failure",
+        "run_attempt": 1,
+        "created_at": "2026-11-14T14:01:05Z",
+        "updated_at": "2026-11-14T14:01:09Z",
+        "run_started_at": "2026-11-14T14:01:05Z",
+        "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545"
+      },
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132470500993,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "steps": [],
+          "started_at": "2026-11-14T14:01:05Z",
+          "completed_at": "2026-11-14T14:01:08Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132470500993",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132470500993",
+          "log_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          },
+          "check_detail_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "INVALID_ARGUMENT",
+            "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)"
+          },
+          "annotation_access": {
+            "attempted": false,
+            "available_via_this_route": false,
+            "reason": "The parent check_run_url is rejected by the connector URL allowlist; no alternate route attempted."
+          }
+        },
+        {
+          "id": 132470501237,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "steps": [],
+          "started_at": "2026-11-14T14:01:05Z",
+          "completed_at": "2026-11-14T14:01:08Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132470501237",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132470501237",
+          "log_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          },
+          "check_detail_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "INVALID_ARGUMENT",
+            "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)"
+          },
+          "annotation_access": {
+            "attempted": false,
+            "available_via_this_route": false,
+            "reason": "The parent check_run_url is rejected by the connector URL allowlist; no alternate route attempted."
+          }
+        },
+        {
+          "id": 132470501460,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "steps": [],
+          "started_at": "2026-11-14T14:01:05Z",
+          "completed_at": "2026-11-14T14:01:08Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132470501460",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132470501460",
+          "log_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          },
+          "check_detail_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "INVALID_ARGUMENT",
+            "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)"
+          },
+          "annotation_access": {
+            "attempted": false,
+            "available_via_this_route": false,
+            "reason": "The parent check_run_url is rejected by the connector URL allowlist; no alternate route attempted."
+          }
+        }
+      ],
+      "run_artifacts": {
+        "total_count": 0,
+        "artifacts": []
+      }
+    },
+    {
+      "observed_at_utc": "2026-11-15T19:48:36.624Z",
+      "run": {
+        "id": 43602643545,
+        "name": "Document control checks",
+        "head_branch": "main",
+        "head_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+        "path": ".github/workflows/ci.yml",
+        "event": "push",
+        "status": "completed",
+        "conclusion": "failure",
+        "run_attempt": 2,
+        "created_at": "2026-11-14T14:01:05Z",
+        "updated_at": "2026-11-15T19:47:54Z",
+        "run_started_at": "2026-11-15T19:47:49Z",
+        "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545"
+      },
+      "jobs_endpoint": "https://api.github.com/repos/mehdisafer/document-control-intelligence/actions/runs/43602643545/attempts/2/jobs?per_page=100&page=1",
+      "jobs_total_count": 3,
+      "jobs": [
+        {
+          "id": 132935245657,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "steps": [],
+          "started_at": "2026-11-15T19:47:51Z",
+          "completed_at": "2026-11-15T19:47:53Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245657",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132935245657",
+          "log_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          },
+          "check_detail_access": {
+            "attempted": false,
+            "reason": "Same check-runs endpoint family already rejected during attempt1 inspection; no repeated denial or alternate route attempted."
+          },
+          "annotation_access": {
+            "attempted": false,
+            "available_via_this_route": false,
+            "reason": "Check details are unavailable through this connector route; use GitHub UI."
+          }
+        },
+        {
+          "id": 132935245900,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "steps": [],
+          "started_at": "2026-11-15T19:47:51Z",
+          "completed_at": "2026-11-15T19:47:54Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245900",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132935245900",
+          "log_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          },
+          "check_detail_access": {
+            "attempted": false,
+            "reason": "Same check-runs endpoint family already rejected during attempt1 inspection; no repeated denial or alternate route attempted."
+          },
+          "annotation_access": {
+            "attempted": false,
+            "available_via_this_route": false,
+            "reason": "Check details are unavailable through this connector route; use GitHub UI."
+          }
+        },
+        {
+          "id": 132935245932,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure",
+          "runner_id": 0,
+          "runner_name": "",
+          "steps": [],
+          "started_at": "2026-11-15T19:47:51Z",
+          "completed_at": "2026-11-15T19:47:54Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245932",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132935245932",
+          "log_access": {
+            "attempted": true,
+            "available": false,
+            "connector_error_code": "NOT_FOUND",
+            "http_status": 404,
+            "storage_error_code": "BlobNotFound"
+          },
+          "check_detail_access": {
+            "attempted": false,
+            "reason": "Same check-runs endpoint family already rejected during attempt1 inspection; no repeated denial or alternate route attempted."
+          },
+          "annotation_access": {
+            "attempted": false,
+            "available_via_this_route": false,
+            "reason": "Check details are unavailable through this connector route; use GitHub UI."
+          }
+        }
+      ],
+      "run_artifacts": {
+        "total_count": 0,
+        "artifacts": []
+      }
+    }
+  ],
+  "root_initiated_rerun": {
+    "invocation_reported_by_parent": {
+      "tool": "mcp__codex_apps__github_rerun_failed_workflow_run_jobs",
+      "arguments": {
+        "repo_full_name": "mehdisafer/document-control-intelligence",
+        "run_id": 43602643545
+      },
+      "response": {
+        "success": true
+      }
+    },
+    "invocation_source": "Parent/root collaboration message; this reviewing agent did not invoke a mutation.",
+    "attempt_increment_independently_observed": true,
+    "reruns_performed_by_this_agent": 0,
+    "further_rerun_requested_or_performed": false
+  },
+  "separate_dependabot_dynamic_runs": [
+    {
+      "id": 43602651656,
+      "name": "docker in /. - Update #1704434069",
+      "head_branch": "main",
+      "head_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "path": "dynamic/dependabot/dependabot-updates",
+      "event": "dynamic",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "created_at": "2026-11-14T14:01:10Z",
+      "updated_at": "2026-11-14T14:01:53Z",
+      "run_started_at": "2026-11-14T14:01:10Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602651656",
+      "jobs_total_count": 1,
+      "jobs": [
+        {
+          "id": 132470528446,
+          "name": "Dependabot",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_id": 1000000977,
+          "runner_name": "GitHub Actions 1000000977",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start background runner disk cleanup",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Create job directory",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Dependabot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run Dependabot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ],
+          "started_at": "2026-11-14T14:01:14Z",
+          "completed_at": "2026-11-14T14:01:52Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602651656/job/132470528446",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132470528446"
+        }
+      ]
+    },
+    {
+      "id": 43602651517,
+      "name": "github_actions in /. - Update #1704434065",
+      "head_branch": "main",
+      "head_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "path": "dynamic/dependabot/dependabot-updates",
+      "event": "dynamic",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "created_at": "2026-11-14T14:01:09Z",
+      "updated_at": "2026-11-14T14:02:10Z",
+      "run_started_at": "2026-11-14T14:01:09Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602651517",
+      "jobs_total_count": 1,
+      "jobs": [
+        {
+          "id": 132470527527,
+          "name": "Dependabot",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_id": 1000000976,
+          "runner_name": "GitHub Actions 1000000976",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start background runner disk cleanup",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Create job directory",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Dependabot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run Dependabot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ],
+          "started_at": "2026-11-14T14:01:13Z",
+          "completed_at": "2026-11-14T14:02:09Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602651517/job/132470527527",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132470527527"
+        }
+      ]
+    },
+    {
+      "id": 43602651496,
+      "name": "uv in /. - Update #1704434059",
+      "head_branch": "main",
+      "head_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "path": "dynamic/dependabot/dependabot-updates",
+      "event": "dynamic",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "created_at": "2026-11-14T14:01:09Z",
+      "updated_at": "2026-11-14T14:03:29Z",
+      "run_started_at": "2026-11-14T14:01:09Z",
+      "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602651496",
+      "jobs_total_count": 1,
+      "jobs": [
+        {
+          "id": 132470527368,
+          "name": "Dependabot",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_id": 1000000975,
+          "runner_name": "GitHub Actions 1000000975",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start background runner disk cleanup",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Create job directory",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Dependabot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run Dependabot",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ],
+          "started_at": "2026-11-14T14:01:14Z",
+          "completed_at": "2026-11-14T14:03:28Z",
+          "html_url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602651496/job/132470527368",
+          "check_run_url": "https://api.github.com/repos/mehdisafer/document-control-intelligence/check-runs/132470527368"
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "application_checks": "Attempt1 and the single authorized attempt2 each contain three failed jobs with runner_id=0, empty runner_name and no steps. No application-check execution is demonstrated.",
+    "exact_access_blocker": "Each returned attempt1 check_run_url is rejected by github_fetch with INVALID_ARGUMENT / HTTP400: URL is not an allowed public GitHub repository or search endpoint. The current check summaries and annotations cannot be read through that connector route. No bypass was attempted.",
+    "log_blocker": "All six inspected application-job log downloads return HTTP404 / BlobNotFound; both run-artifact observations report total_count=0.",
+    "underlying_runner_failure_cause": "unknown",
+    "attribution_boundary": "No billing, quota, policy, application-code or account-state explanation is inferred.",
+    "dependabot_boundary": "The three successful dynamic/dependabot/dependabot-updates runs each obtained a runner and executed six dependency-update steps. They do not execute .github/workflows/ci.yml or qualify its application/browser/container/Terraform checks.",
+    "rerun_capability": "The failed-jobs rerun operation is exposed by the connector; root reported success:true and attempt2 was independently observed. No further retry is proposed without new diagnostic information.",
+    "required_ui_evidence": "Open the latest failed application run/job in GitHub and read its summary/annotations. Capture the exact blocker text; the available connector metadata does not expose it."
+  },
+  "latest_job_urls": {
+    "container-integration": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245657",
+    "terraform-schema": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245900",
+    "smoke-and-integration": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245932"
+  }
+}
+

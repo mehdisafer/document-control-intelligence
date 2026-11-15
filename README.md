@@ -232,8 +232,10 @@ authenticity remain human-review limitations.
 Model quality, browser execution, container execution, Terraform validation and a
 real target deployment have separate acceptance statuses. See the
 [limitations and backlog](docs/BACKLOG.md). Public source publication was
-authorized on 2026-11-14; its administrative status and the remaining service
-qualification gates are recorded separately in the [release notes](docs/RELEASE.md).
+authorized on 2026-11-14. The [maintainer publishing guide](docs/PUBLISHING.md)
+provides the remaining GitHub settings and prepared prerelease notes. Current
+administrative status and service qualification gates are recorded separately in
+the [release record](docs/RELEASE.md).
 
 ## Licence
 
@@ -242,3 +244,4 @@ assets are licensed under the [Apache License, Version 2.0](LICENSE).
 See [NOTICE](NOTICE) for project attribution. Third-party dependencies, OCR/runtime
 components and model weights retain their own licences and notices, documented
 in the [upstream inventory](docs/SOURCES.md).
+

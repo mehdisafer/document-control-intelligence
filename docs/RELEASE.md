@@ -16,11 +16,13 @@ candidate with its disclosed limitations. Browser, container, Terraform and
 target-deployment gates remain open under
 [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1).
 
-Source and evidence changes are reviewed together in
-[PR #2](https://github.com/mehdisafer/document-control-intelligence/pull/2).
-Author-side assisted review is identified as such; it is not an independent
-approval. Integration of the source candidate does not turn a failed or
-runnerless CI workflow into a passed check or establish production readiness.
+Source and evidence changes were integrated through
+[PR #2](https://github.com/mehdisafer/document-control-intelligence/pull/2)
+at merge commit `84b06caf6452c746ef27a615575c2a0f4c7fd0c9`. Its tree matches
+the reviewed candidate `3bf98d82`. Author-side assisted review is identified as
+such; it is not an independent approval. Integration of the source candidate
+does not turn a failed or runnerless CI workflow into a passed check or establish
+production readiness.
 
 The initial implementation source is commit
 [`3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439`](https://github.com/mehdisafer/document-control-intelligence/commit/3ff93109f3ea0d9c5f4bdfd598dd35bbd4513439).
@@ -49,22 +51,27 @@ Description:
 Topics: `document-ai`, `data-engineering`, `mlops`, `local-first`, `fastapi`, `ocr`,
 `document-processing`, `human-in-the-loop`, `data-quality`, `python`.
 
-The available GitHub connector exposes source/issue/PR operations but no repository
-metadata, visibility or protection writer. These values are prepared, not asserted
-to have been applied. At the prepublication observation the repository is still
-private, and the isolated cloud browser is at GitHub's sign-in page. Authentication
-to that administration surface is the remaining access prerequisite; the public
-visibility decision itself is already authorized. No personal workstation or
-other repository is used as a workaround.
+The 2026-11-15 connector observation still reports a private repository, empty
+description/topics, unprotected `main` and no GitHub releases. Apache-2.0 is
+recognized. The available connector can edit source and track issues/PRs, but
+has no writer for visibility, metadata, rulesets or releases.
+
+The maintainer explicitly owns the remaining GitHub UI actions. Agent browser
+access is neither needed nor part of this handoff. Follow the
+[maintainer publishing guide](PUBLISHING.md) for exact settings, then use the
+[prepared prerelease body](RELEASE_NOTES_0.1.0rc1.md). These are prepared values;
+the current observation does not assert that they have been applied.
 
 ## Prepared protection policy
 
-For `main`, require a PR and the actual applicable integration, container and
-Terraform checks; prevent force pushes/deletion; require conversation resolution.
-Require an independent reviewer only when a real eligible reviewer is available.
-Never manufacture an approval or buy a plan to enable a setting without permission.
-After applying settings through an authorized administration surface, read them
-back and record what the account's available plan actually supports.
+For `main`, require a PR and the actual `smoke-and-integration`,
+`container-integration` and `terraform-schema` checks; prevent force
+pushes/deletion; require conversation resolution and an up-to-date branch.
+Use zero required approvals while no other eligible reviewer is available.
+The PR record is not an independent approval. The prepared active ruleset has
+no bypass actors; failed or missing required checks will block subsequent merges.
+The [publishing guide](PUBLISHING.md) gives the maintainer's exact UI steps and
+readback criteria. These protections are not yet observed as applied.
 
 The pull-request workflow has no path filter, so documentation-only PRs can
 report the required checks. GitHub documents that skipping a required workflow
@@ -96,19 +103,43 @@ unqualified by a licensing change.
 2. Review the final source/history, issue/PR content, logs, synthetic dossiers and
    archives before exposing them. The [publication record](../evidence/publication/)
    identifies the checked source and the scope of the disclosure review.
-3. Integrate the locally qualified candidate without bypassing a required branch
-   rule. Preserve all CI failures and keep unresolved integration gates explicit.
-4. Apply the authorized visibility change, description/topics and available
-   repository protections, then read back their actual state and verify anonymous
-   access to the repository, licence and source.
-5. Re-run GitHub checks after publication and inspect the resulting job steps,
-   browser screenshots, container execution and Terraform output when runners
-   become available. Do not assume that visibility alone resolves the rejection.
-6. Identify any GitHub release as a prerelease and retain the remaining scope
-   limits. A stable operational release requires its additional qualification.
+3. The locally qualified candidate is integrated on `main` through PR #2.
+   Its history, CI failures and unresolved integration gates are retained.
+4. The maintainer applies the authorized visibility change, description/topics
+   and prepared repository protections using [PUBLISHING.md](PUBLISHING.md),
+   then verifies the saved settings and anonymous repository/licence/source access.
+5. After public visibility, run the existing workflow on the final `main`.
+   Inspect actual steps, browser screenshots, container execution and Terraform
+   output. One connector rerun on 2026-11-15 still received no runners; visibility
+   alone is not evidence that the rejection will resolve.
+6. Publish `v0.1.0rc1` as a prerelease using the
+   [prepared body](RELEASE_NOTES_0.1.0rc1.md), targeting the final delivered
+   `main` commit. A stable operational release requires its additional qualification.
 
 No public business endpoint is created by changing repository visibility. A target
 deployment remains a separately inspected operational action.
+
+## Latest CI and dependency observations
+
+The single rerun of [main run 43602643545](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545),
+at attempt 2 on 2026-11-15, again ended with three failed jobs, `runner_id: 0`
+and `steps: []`. All three log requests return `404 BlobNotFound`; no artifacts
+are reported. The underlying cause remains unknown because check annotations
+are unavailable through this connector. The
+[CI observation](../evidence/publication/handoff-2026-11-15/ci-current.json)
+keeps both attempts separate. The maintainer can inspect the latest
+[smoke/integration annotation](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245932)
+in the UI. Successful Dependabot update workflows do not qualify the application.
+
+Five Dependabot PRs (#3–#7) are open and unmerged. Their reviewed patches and
+bodies introduce no identified disclosure blocker in the stated scope.
+[PR #5](https://github.com/mehdisafer/document-control-intelligence/pull/5)
+changes parser versions in `uv.lock` without regenerating `requirements.lock`;
+merging it unchanged would audit older versions than those installed. Regenerate
+that export and qualify the parser upgrade separately before merging. The
+[dependency review](../evidence/publication/handoff-2026-11-15/dependabot-review.json)
+records exact heads and limits; existing application results do not qualify
+these proposed upgrades.
 
 ## Candidate reproduction
 
@@ -117,3 +148,4 @@ generated `result.json`, control dossiers, exact source/model/parser hashes and
 execution logs. The evidence index distinguishes original executions from later
 publication mapping and CI results. Do not replace an adverse report with a
 successful replay or backdate a commit into original metadata.
+

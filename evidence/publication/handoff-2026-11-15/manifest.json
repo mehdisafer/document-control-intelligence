@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-11-15",
+  "repository": "mehdisafer/document-control-intelligence",
+  "observed_main_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+  "observed_main_tree": "b8c76b86bf0e10263afda0b0b4855234afdebdbd",
+  "observed_repository": {
+    "private": true,
+    "visibility": "private",
+    "license_spdx_id": "Apache-2.0",
+    "description": null,
+    "topics": [],
+    "main_protected": false,
+    "releases_count": 0
+  },
+  "authorization": {
+    "apache_2_0_selected": "2026-11-14",
+    "public_source_authorized": "2026-11-14",
+    "maintainer_owns_ui_steps": "2026-11-15",
+    "allowed_remote_interface": "GitHub connector",
+    "agent_browser_or_personal_computer_access": false
+  },
+  "connector_boundary": {
+    "available_operations": [
+      "source and branch changes",
+      "pull requests",
+      "issue updates",
+      "workflow observations",
+      "failed-job rerun"
+    ],
+    "unavailable_writers": [
+      "repository visibility",
+      "repository description/topics",
+      "branch rulesets/protection",
+      "GitHub releases"
+    ],
+    "annotation_read_unavailable": true
+  },
+  "reports": [
+    {
+      "path": "ci-current.json",
+      "sha256": "f3a42fa13427159cb1352d17356f8f3dac0b76ee0bb4c371ff8b4cf707d7ff36",
+      "bytes": 19371
+    },
+    {
+      "path": "dependabot-review.json",
+      "sha256": "52bc943fdcd9f1a61a4e8c9971b6f7dc7b6e86dae0ed7dbd020db5f3461c6e1c",
+      "bytes": 22533
+    }
+  ],
+  "handoff_scope": "Documentation and retained connector observations only. No application, tests, dependency, model, licence, workflow or infrastructure changes.",
+  "application_source_qualification": {
+    "executed_source": "8839be77ad24492702bcb2f53c4e74fffd7a78dd",
+    "python_tests": 112,
+    "javascript_state_unit_tests": 23,
+    "skips": 0,
+    "new_execution_in_this_handoff": false,
+    "javascript_boundary": "Mocked DOM/fetch, not browser rendering."
+  },
+  "outstanding_maintainer_ui_actions": [
+    "Set repository visibility to public and verify anonymous access.",
+    "Apply prepared About description and topics.",
+    "Run Document control checks on final public main; inspect actual failure annotation if runners remain unavailable.",
+    "Apply and verify the prepared active main ruleset; failing required checks block later merges.",
+    "Create v0.1.0rc1 as a prerelease on final delivered main using the prepared body and verify the tag target."
+  ],
+  "release_boundary": "Prepared public source prerelease; not a hosted business service or accepted target deployment. Issue #1 remains open.",
+  "dependency_boundary": "PRs #3-#7 remain open and unmerged. PR #5's requirements.lock export must be regenerated and its parser changes qualified before merging.",
+  "preservation": "New observation records supplement the original qualification, failures and disclosure inventories; no original raw result is rewritten."
+}

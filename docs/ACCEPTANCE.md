@@ -24,7 +24,7 @@ reviewable candidate; it is not a production-readiness claim.
 | Terraform | Docker network, retained volume and bounded containers | Local formatting and provider initialization succeed | Provider schema loading fails at its process handshake; the retained diagnostic does not identify the cause. CI receives no runner; validation and target apply remain unverified |
 | Dependencies/licences | Locked graph, known-vulnerability audit, component inventory | Local audit finds zero known vulnerabilities among 32 runtime packages; inventory has no unreviewed family | Point-in-time tool result; native packages and own-project licence are separate |
 | Project licence | Apache-2.0 text, attribution and package metadata | Explicitly selected by the maintainer on 2026-11-14 | Third-party components retain their separate notices |
-| Public source publication | Apache-2.0 candidate, release notes, source/history and artifact review | Explicit maintainer authorization on 2026-11-14; candidate remains private at the prepublication observation | Apply/read back visibility and metadata with authenticated administration access, then verify anonymous access; overall P04 acceptance remains open |
+| Public source publication | Apache-2.0 candidate integrated via PR #2; source/history and artifact review; prepared maintainer guide and prerelease body | Authorized on 2026-11-14; 2026-11-15 connector observation still reports private; maintainer owns UI steps | Apply/read back visibility, metadata and protections using [PUBLISHING.md](PUBLISHING.md), then verify anonymous access; overall P04 acceptance remains open |
 
 The evidence index supplies final execution identifiers, commands, timestamps,
 source hashes, original logs and CI links. A workflow definition, running service,
@@ -39,11 +39,13 @@ mock, skipped test or missing error message never counts as a passed integration
    results, adverse runs and the separate human-repair evidence are retained.
 3. Review the actual deployment plan and exercise the service on the intended
    authorized host. Local tests and CI containers do not constitute a target rollout.
-4. Configure repository description, topics and available protections through
-   an authorized admin surface. The project-licence choice is resolved: Apache-2.0.
-5. Complete the already-authorized public source publication: review source,
-   history, issue/PR text, logs and artifacts, apply visibility through an
-   authenticated administration surface and verify anonymous repository access.
+4. The maintainer configures repository description, topics and protections in
+   GitHub's UI using the [prepared settings](PUBLISHING.md). Apache-2.0 is already
+   recognized; no agent browser authentication is required.
+5. Complete the already-authorized public source publication: the scoped source,
+   history, issue/PR, log and artifact reviews are retained. The maintainer applies
+   public visibility and verifies anonymous repository access. The 2026-11-15
+   handoff adds a review of new Dependabot PRs without merging their upgrades.
 
 Apache-2.0 was explicitly approved by the maintainer on 2026-11-14; see
 [LICENSE](../LICENSE) and [NOTICE](../NOTICE). The subsequent public-source
@@ -62,12 +64,12 @@ They ended in failure before running the application. Dependabot's configuration
 validation succeeded; it does not replace any integration gate.
 
 The connector cannot retrieve the job-annotation endpoint, and log retrieval
-returns `BlobNotFound`. The isolated cloud browser is not signed into the private
-repository. The underlying account/runner rejection reason is therefore **unknown**;
-no billing-limit explanation is asserted. An authorized runner/account configuration
-that can allocate a runner, and access to the displayed failure annotation, are
-the missing prerequisites. No billing or security setting was changed to get past it.
-The original observation is in [github-actions-blocked.json](../evidence/platform/github-actions-blocked.json).
+returns `BlobNotFound`. The underlying account/runner rejection reason is
+**unknown**; no billing-limit explanation is asserted. The maintainer owns
+inspection of the displayed GitHub failure annotation and any required account
+configuration. Agent browser access is outside this handoff. No billing or
+security setting was changed. The original observation is retained in
+[github-actions-blocked.json](../evidence/platform/github-actions-blocked.json).
 
 The same condition is observed on fixed source `8839be77`, including
 [PR run 43601886497](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43601886497):
@@ -75,7 +77,19 @@ all three jobs again have no runner or steps. The fresh
 [public-source record](../evidence/publication/) separates the successful local
 checks from this unresolved GitHub execution boundary.
 
+On 2026-11-15, one connector rerun of
+[main run 43602643545](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545)
+completed as attempt 2 with the same three failures before runner allocation.
+All three new jobs again have `runner_id: 0` and `steps: []`, logs return
+`404 BlobNotFound`, and the run reports zero artifacts. The
+[current CI record](../evidence/publication/handoff-2026-11-15/ci-current.json)
+separates both attempts and the unrelated successful Dependabot update workflows.
+The latest [smoke/integration job](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545/job/132935245932)
+is the maintainer's diagnostic entry point. No application test was executed by
+this rerun, and the cause remains unconfirmed.
+
 The [local qualification](../evidence/qualification/) retains its original
 `overall_requested_local_qualification_met: false`: the raw local-linear demo
 did not meet its seven-export expectation. The later successful human repair and
 real HTTP run have their own reports and do not overwrite that result.
+
