@@ -49,13 +49,17 @@ class Store:
         self.db = self.home / "control.db"
         self.migrate()
 
-    def connect(self):
-        conn = sqlite3.connect(self.db, timeout=10, isolation_level=None)
-        conn.row_factory = sqlite3.Row
-        conn.execute("PRAGMA foreign_keys=ON")
-        conn.execute("PRAGMA busy_timeout=10000")
-        conn.execute("PRAGMA synchronous=FULL")
-        return conn
+    def connect(self, *, timeout=10.0):
+        conn = sqlite3.connect(self.db, timeout=timeout, isolation_level=None)
+        try:
+            conn.row_factory = sqlite3.Row
+            conn.execute("PRAGMA foreign_keys=ON")
+            conn.execute(f"PRAGMA busy_timeout={max(1, int(timeout * 1000))}")
+            conn.execute("PRAGMA synchronous=FULL")
+            return conn
+        except BaseException:
+            conn.close()
+            raise
 
     @contextmanager
     def transaction(self):
@@ -70,17 +74,28 @@ class Store:
         finally:
             conn.close()
 
-    def migrate(self):
-        conn = self.connect()
-        try:
-            conn.execute("PRAGMA journal_mode=WAL")
-            version = conn.execute("PRAGMA user_version").fetchone()[0]
-            if version > 1:
-                raise StoreError("SCHEMA_TOO_NEW", "Database needs a newer application", 503)
-            if version == 0:
-                # Initialization is normally run once before starting workers.
+    def migrate(self, *, timeout_seconds=10.0):
+        """Initialize atomically, retrying only bounded SQLite lock contention.
+
+        Changing journal mode can return SQLITE_BUSY without honoring the full
+        busy timeout. A failed attempt is rolled back and its connection closed
+        before retrying. Schema errors and unsupported WAL never get retried.
+        """
+        if not 0 < timeout_seconds <= 10:
+            raise ValueError("Migration lock budget must be greater than zero and at most 10 seconds")
+        deadline = time.monotonic() + timeout_seconds
+        while True:
+            conn = None
+            try:
+                remaining = max(0.001, deadline - time.monotonic())
+                conn = self.connect(timeout=min(0.1, remaining))
+                mode = conn.execute("PRAGMA journal_mode=WAL").fetchone()[0]
+                if str(mode).lower() != "wal":
+                    raise StoreError("WAL_UNAVAILABLE", "Database storage must support SQLite WAL", 503)
                 conn.execute("BEGIN IMMEDIATE")
                 version = conn.execute("PRAGMA user_version").fetchone()[0]
+                if version > 1:
+                    raise StoreError("SCHEMA_TOO_NEW", "Database needs a newer application", 503)
                 if version == 0:
                     script = (Path(__file__).parent / "migrations/001_initial.sql").read_text()
                     statement = ""
@@ -91,11 +106,21 @@ class Store:
                             statement = ""
                     conn.execute("INSERT INTO schema_migrations VALUES(1,?)", (time.time(),))
                     conn.execute("PRAGMA user_version=1")
-                    conn.commit()
-                else:
-                    conn.commit()
-        finally:
-            conn.close()
+                conn.commit()
+                return
+            except sqlite3.OperationalError as exc:
+                code = getattr(exc, "sqlite_errorcode", None)
+                busy = code is not None and (code & 0xFF) in (sqlite3.SQLITE_BUSY, sqlite3.SQLITE_LOCKED)
+                if not busy or time.monotonic() >= deadline:
+                    raise
+            finally:
+                if conn is not None:
+                    try:
+                        if conn.in_transaction:
+                            conn.rollback()
+                    finally:
+                        conn.close()
+            time.sleep(min(0.02, max(0.0, deadline - time.monotonic())))
 
     @staticmethod
     def _audit(conn, actor, action, case_id, document_id=None, revision=None, **details):

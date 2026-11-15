@@ -1,5 +1,5 @@
 name: python-core-smoke
-discover: git ls-files tests/test_rules.py tests/test_retry_budget.py tests/test_export_budget.py
+discover: git ls-files tests/test_rules.py tests/test_retry_budget.py tests/test_export_budget.py tests/test_sqlite_startup.py
 run: uv run --frozen --group audit --with pytest==9.0.3 python -m pytest -q -o junit_family=xunit1 --junitxml="<< outputs.junit >>" << test.atoms >>
 outputs:
   junit: test-results/python-core-smoke.xml
