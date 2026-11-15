@@ -1,0 +1,542 @@
+{
+  "schema_version": "dependabot-disclosure-delta-1.0",
+  "repository": "mehdisafer/document-control-intelligence",
+  "repository_url": "https://github.com/mehdisafer/document-control-intelligence",
+  "review_started_at": "2026-11-15T19:47:03.478Z",
+  "review_finished_at": "2026-11-15T19:49:32.742591+00:00",
+  "scope": "Read-only disclosure delta review of PRs #3 through #7 at the exact requested heads; GitHub connector only for repository reads.",
+  "main": {
+    "sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+    "url": "https://github.com/mehdisafer/document-control-intelligence/commit/84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+    "unchanged_from_requested": true,
+    "observed_repository_visibility": "private",
+    "repository_auto_merge_enabled": false
+  },
+  "method": {
+    "read_surfaces": [
+      "PR metadata and complete stored bodies",
+      "all paginated changed filenames and file patches",
+      "connector combined issue-comment, inline-review-comment and review-submission timeline",
+      "exact main commit",
+      "main and PR5 requirements.lock",
+      "main CI workflow",
+      "PR workflow runs and their returned job summaries"
+    ],
+    "comparison": "All eight patch filenames and added/deleted line totals match PR metadata. All five supplied heads match; final metadata readback confirms unchanged base/head/body and open/unmerged states.",
+    "bounded_secret_pattern_screen": [
+      "GitHub token prefixes",
+      "AWS access-key identifiers",
+      "PEM private-key headers",
+      "Slack token prefixes",
+      "credential-bearing HTTP(S) URLs"
+    ],
+    "manual_review": "All changed lines and all five complete stored PR bodies were read for client data, credentials, unexpected URLs, binaries and release implications.",
+    "outside_scope": [
+      "upstream dependency source audits",
+      "downloaded wheel or sdist inspection",
+      "new application/model tests",
+      "browser/Tinyfish/personal-PC use",
+      "remote writes, comments, merges, rebases or settings changes"
+    ]
+  },
+  "summary": {
+    "pull_requests": 5,
+    "changed_file_patches": 8,
+    "unique_changed_paths": [
+      ".github/workflows/ci.yml",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "added_lines": 20,
+    "removed_lines": 20,
+    "pr_body_characters": 36043,
+    "comment_or_review_items_returned": 0,
+    "disclosure_findings": 0,
+    "bounded_secret_pattern_matches": 0,
+    "unrecognized_url_hosts": [],
+    "runtime_or_model_binary_additions": 0,
+    "ci_runs_observed": 5,
+    "ci_jobs_observed": 15,
+    "all_observed_ci_jobs_conclusion": "failure",
+    "source_disclosure_blocker_found": false,
+    "dependency_upgrades_qualified": false,
+    "overall_conclusion": "No disclosure blocker was found in these five Dependabot deltas. They remain unmerged and unqualified; they do not change the main-source handoff or inherit main's existing 112-Python/23-Node execution evidence."
+  },
+  "url_host_assessment": {
+    "repository_and_upstream_links": [
+      "github.com",
+      "redirect.github.com"
+    ],
+    "dependabot_documentation_and_badges": [
+      "docs.github.com",
+      "dependabot-badges.githubapp.com"
+    ],
+    "package_registry_and_hashed_artifact_references": [
+      "pypi.org",
+      "files.pythonhosted.org"
+    ],
+    "packaging_standards_reference": [
+      "peps.python.org"
+    ],
+    "note": "These URLs occur as repository documentation/PR metadata or hash-pinned lock references. No new application endpoint, credential-bearing URL, binary payload or client-data destination was added. Linked upstream resources were not opened."
+  },
+  "release_readiness_findings": [
+    {
+      "id": "DB-05-LOCK-DRIFT",
+      "severity": "medium",
+      "scope": "PR #5 before a future merge; not a blocker to disclosure of unchanged main",
+      "title": "Exported runtime lock is stale",
+      "observed": "PR #5 changes pyproject.toml and uv.lock to pdfplumber 0.11.10 and pdfminer-six 20260107 but does not change requirements.lock, which still pins pdfplumber 0.11.9 and pdfminer-six 20251230.",
+      "impact": "The workflow installs the newer uv.lock graph but its pip-audit command reads the older requirements.lock graph, so that audit would not cover the exact newly installed parser dependency versions.",
+      "recommended_next_step": "Keep the PR unmerged during this source-publication handoff. In a separate upgrade task, regenerate the export from the updated uv.lock and qualify the dependency change before merging.",
+      "sources": [
+        "https://github.com/mehdisafer/document-control-intelligence/pull/5/files",
+        "https://github.com/mehdisafer/document-control-intelligence/blob/ce442b31730dbc7ecee72e7cf534cec19f42afc2/requirements.lock",
+        "https://github.com/mehdisafer/document-control-intelligence/blob/84b06caf6452c746ef27a615575c2a0f4c7fd0c9/.github/workflows/ci.yml"
+      ],
+      "main_requirements_git_blob": "6a9a5e9759ecf34f2e2e7883b794ad8105d00f3d",
+      "pr5_requirements_git_blob": "6a9a5e9759ecf34f2e2e7883b794ad8105d00f3d",
+      "requirements_pins": [
+        "pdfminer-six==20251230 \\",
+        "pdfplumber==0.11.9 \\"
+      ],
+      "ci_git_blob": "d737242fa99917cd0750f2f637bb36e58c264c3e"
+    }
+  ],
+  "pull_requests": [
+    {
+      "number": 3,
+      "url": "https://github.com/mehdisafer/document-control-intelligence/pull/3",
+      "title": "chore(deps): bump astral-sh/setup-uv from 6.8.0 to 10.3.3",
+      "author": "dependabot[bot]",
+      "state": "open",
+      "merged": false,
+      "base_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "head_branch": "dependabot/github_actions/astral-sh/setup-uv-10.3.3",
+      "head_sha": "e1a31e9e56b245b4ab877c71e594bcb109c76fed",
+      "head_matches_requested": true,
+      "last_reported_update": "2026-11-14T14:02:01Z",
+      "diff_url": "https://github.com/mehdisafer/document-control-intelligence/pull/3/files",
+      "changed_files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "patch_sha256": "1c83262ea937e2e8da0e75fc9816e655aad6dfbaf4cb4e9908ff993da6308653",
+          "added_lines": 1,
+          "removed_lines": 1,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/e1a31e9e56b245b4ab877c71e594bcb109c76fed/.github/workflows/ci.yml"
+        }
+      ],
+      "complete_patch_file_and_line_counts_match_metadata": true,
+      "body_sha256": "c6b3865926da6e716ff1971638fea8be74d4b79eb5a32e62b817a738afd7b6b4",
+      "body_characters": 8065,
+      "comments_and_reviews_count": 0,
+      "comments_and_reviews_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "url_hosts": [
+        "dependabot-badges.githubapp.com",
+        "docs.github.com",
+        "github.com",
+        "redirect.github.com"
+      ],
+      "unrecognized_url_hosts": [],
+      "disclosure_findings": [],
+      "runtime_or_model_binaries_added": false,
+      "review": {
+        "change": "astral-sh/setup-uv action pin 6.8.0 to 10.3.3; uv 0.13.6 and Python 3.12.14 inputs unchanged.",
+        "release_concern": "Major action upgrade is unqualified. The PR body describes changes to manifest source selection; upstream action implementation was not independently audited in this repository-only review."
+      },
+      "observed_ci_runs": [
+        {
+          "id": 43602727801,
+          "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602727801",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "observed_ci_jobs": [
+        {
+          "id": 132470756624,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470756870,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470756966,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "upgrade_validated": false
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/mehdisafer/document-control-intelligence/pull/4",
+      "title": "chore(deps): bump hashicorp/setup-terraform from 3.1.2 to 4.0.1",
+      "author": "dependabot[bot]",
+      "state": "open",
+      "merged": false,
+      "base_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "head_branch": "dependabot/github_actions/hashicorp/setup-terraform-4.0.1",
+      "head_sha": "3a191d788c451adf96e9f42239e6f68be59f8a66",
+      "head_matches_requested": true,
+      "last_reported_update": "2026-11-14T14:02:04Z",
+      "diff_url": "https://github.com/mehdisafer/document-control-intelligence/pull/4/files",
+      "changed_files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "patch_sha256": "6c182bde20278297fc5da8ab74bde970ec8cdffb91a2a06c747bc9ece8f33576",
+          "added_lines": 1,
+          "removed_lines": 1,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/3a191d788c451adf96e9f42239e6f68be59f8a66/.github/workflows/ci.yml"
+        }
+      ],
+      "complete_patch_file_and_line_counts_match_metadata": true,
+      "body_sha256": "bde056921752a3fbda00f993be8b47a0b218c5159adb12f1885b197caae79c55",
+      "body_characters": 7752,
+      "comments_and_reviews_count": 0,
+      "comments_and_reviews_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "url_hosts": [
+        "dependabot-badges.githubapp.com",
+        "docs.github.com",
+        "github.com",
+        "redirect.github.com"
+      ],
+      "unrecognized_url_hosts": [],
+      "disclosure_findings": [],
+      "runtime_or_model_binaries_added": false,
+      "review": {
+        "change": "hashicorp/setup-terraform action pin 3.1.2 to 4.0.1; Terraform 1.17.2 and wrapper=false inputs unchanged.",
+        "release_concern": "Major action upgrade is unqualified. The PR body states that v4 requires the Node 24 action runtime; runner compatibility and actual Terraform execution need separate validation before a future merge."
+      },
+      "observed_ci_runs": [
+        {
+          "id": 43602733870,
+          "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602733870",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "observed_ci_jobs": [
+        {
+          "id": 132470774813,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470775064,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470775121,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "upgrade_validated": false
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/mehdisafer/document-control-intelligence/pull/5",
+      "title": "chore(deps): bump pdfplumber from 0.11.9 to 0.11.10",
+      "author": "dependabot[bot]",
+      "state": "open",
+      "merged": false,
+      "base_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "head_branch": "dependabot/uv/pdfplumber-0.11.10",
+      "head_sha": "ce442b31730dbc7ecee72e7cf534cec19f42afc2",
+      "head_matches_requested": true,
+      "last_reported_update": "2026-11-14T14:02:15Z",
+      "diff_url": "https://github.com/mehdisafer/document-control-intelligence/pull/5/files",
+      "changed_files": [
+        {
+          "path": "pyproject.toml",
+          "patch_sha256": "bb97f0129d2e0f115f4419e2610af245af7c16975cc4783cca44f15759fc2306",
+          "added_lines": 1,
+          "removed_lines": 1,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/ce442b31730dbc7ecee72e7cf534cec19f42afc2/pyproject.toml"
+        },
+        {
+          "path": "uv.lock",
+          "patch_sha256": "d99dda8105304f0c2f7affe6297772158d83f730f4616ba97b1b88771779bad3",
+          "added_lines": 7,
+          "removed_lines": 7,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/ce442b31730dbc7ecee72e7cf534cec19f42afc2/uv.lock"
+        }
+      ],
+      "complete_patch_file_and_line_counts_match_metadata": true,
+      "body_sha256": "ec0b752cdda1172003e96caac37b14bb15c7e85b5a34e68b9504d92003afeec3",
+      "body_characters": 4725,
+      "comments_and_reviews_count": 0,
+      "comments_and_reviews_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "url_hosts": [
+        "dependabot-badges.githubapp.com",
+        "docs.github.com",
+        "files.pythonhosted.org",
+        "github.com",
+        "pypi.org",
+        "redirect.github.com"
+      ],
+      "unrecognized_url_hosts": [],
+      "disclosure_findings": [],
+      "runtime_or_model_binaries_added": false,
+      "review": {
+        "change": "pdfplumber 0.11.9 to 0.11.10 and transitive pdfminer-six 20251230 to 20260107 in pyproject.toml/uv.lock.",
+        "release_concern": "requirements.lock remains at the old parser versions even though CI installs uv.lock and audits requirements.lock. Regenerate the exported runtime lock before any future merge and qualify parser/evidence behavior with the new dependency identity."
+      },
+      "observed_ci_runs": [
+        {
+          "id": 43602749542,
+          "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602749542",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "observed_ci_jobs": [
+        {
+          "id": 132470822980,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470823185,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470823243,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "upgrade_validated": false
+    },
+    {
+      "number": 6,
+      "url": "https://github.com/mehdisafer/document-control-intelligence/pull/6",
+      "title": "chore(deps-dev): bump pip-licenses from 5.5.0 to 5.5.5",
+      "author": "dependabot[bot]",
+      "state": "open",
+      "merged": false,
+      "base_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "head_branch": "dependabot/uv/pip-licenses-5.5.5",
+      "head_sha": "1a6d4d261b896574f3705740f09d989209fcf5af",
+      "head_matches_requested": true,
+      "last_reported_update": "2026-11-14T14:02:21Z",
+      "diff_url": "https://github.com/mehdisafer/document-control-intelligence/pull/6/files",
+      "changed_files": [
+        {
+          "path": "pyproject.toml",
+          "patch_sha256": "e36edd005b19a2bf094083d2baa8aad0d67c9f8eeedc01f39c6fa5a1be843ed7",
+          "added_lines": 1,
+          "removed_lines": 1,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/1a6d4d261b896574f3705740f09d989209fcf5af/pyproject.toml"
+        },
+        {
+          "path": "uv.lock",
+          "patch_sha256": "b03f192455c5c1b35c7e7349a4c263ba1f1d62a9102f579e74bca554a1774656",
+          "added_lines": 4,
+          "removed_lines": 4,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/1a6d4d261b896574f3705740f09d989209fcf5af/uv.lock"
+        }
+      ],
+      "complete_patch_file_and_line_counts_match_metadata": true,
+      "body_sha256": "c648215035a7e080c4b5d71858631065b748e079c8acdd4b583563af54a916fe",
+      "body_characters": 10526,
+      "comments_and_reviews_count": 0,
+      "comments_and_reviews_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "url_hosts": [
+        "dependabot-badges.githubapp.com",
+        "docs.github.com",
+        "files.pythonhosted.org",
+        "github.com",
+        "peps.python.org",
+        "pypi.org",
+        "redirect.github.com"
+      ],
+      "unrecognized_url_hosts": [],
+      "disclosure_findings": [],
+      "runtime_or_model_binaries_added": false,
+      "review": {
+        "change": "Audit-group pip-licenses 5.5.0 to 5.5.5; production dependency declarations unchanged.",
+        "release_concern": "Audit-tool update is unqualified. Check licence inventory output and policy compatibility separately before a future merge; the PR body also reports upstream maintainer/metadata changes."
+      },
+      "observed_ci_runs": [
+        {
+          "id": 43602759582,
+          "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602759582",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "observed_ci_jobs": [
+        {
+          "id": 132470853197,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470853462,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470853509,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "upgrade_validated": false
+    },
+    {
+      "number": 7,
+      "url": "https://github.com/mehdisafer/document-control-intelligence/pull/7",
+      "title": "chore(deps-dev): bump pip-audit from 2.10.0 to 2.10.1",
+      "author": "dependabot[bot]",
+      "state": "open",
+      "merged": false,
+      "base_sha": "84b06caf6452c746ef27a615575c2a0f4c7fd0c9",
+      "head_branch": "dependabot/uv/pip-audit-2.10.1",
+      "head_sha": "bf93aab1a28e21d6bd0eabf1184de3c7e40a8998",
+      "head_matches_requested": true,
+      "last_reported_update": "2026-11-14T14:02:26Z",
+      "diff_url": "https://github.com/mehdisafer/document-control-intelligence/pull/7/files",
+      "changed_files": [
+        {
+          "path": "pyproject.toml",
+          "patch_sha256": "4ff82ce9b27166bd9f245e3898bdd1bec104aac9b4497d788747cbc8f6c55a12",
+          "added_lines": 1,
+          "removed_lines": 1,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/bf93aab1a28e21d6bd0eabf1184de3c7e40a8998/pyproject.toml"
+        },
+        {
+          "path": "uv.lock",
+          "patch_sha256": "f350f36cb4ba9501cd6df68692e8d5508233092f6b771ba03205dbf5461cd5dc",
+          "added_lines": 4,
+          "removed_lines": 4,
+          "head_url": "https://github.com/mehdisafer/document-control-intelligence/blob/bf93aab1a28e21d6bd0eabf1184de3c7e40a8998/uv.lock"
+        }
+      ],
+      "complete_patch_file_and_line_counts_match_metadata": true,
+      "body_sha256": "92daa9033b0980343838f11f1b469657d9ba0d0ffba7986f27eb754f75732685",
+      "body_characters": 4975,
+      "comments_and_reviews_count": 0,
+      "comments_and_reviews_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "url_hosts": [
+        "dependabot-badges.githubapp.com",
+        "docs.github.com",
+        "files.pythonhosted.org",
+        "github.com",
+        "pypi.org",
+        "redirect.github.com"
+      ],
+      "unrecognized_url_hosts": [],
+      "disclosure_findings": [],
+      "runtime_or_model_binaries_added": false,
+      "review": {
+        "change": "Audit-group pip-audit 2.10.0 to 2.10.1; production dependency declarations unchanged.",
+        "release_concern": "Audit-tool update is unqualified. The PR body describes an OSV record handling fix; fresh audit-tool execution would belong to a separate upgrade review."
+      },
+      "observed_ci_runs": [
+        {
+          "id": 43602766403,
+          "url": "https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602766403",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "observed_ci_jobs": [
+        {
+          "id": 132470873415,
+          "name": "smoke-and-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470873617,
+          "name": "container-integration",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "id": 132470873623,
+          "name": "terraform-schema",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ],
+      "upgrade_validated": false
+    }
+  ],
+  "final_pr_readback": [
+    {
+      "pr": 3,
+      "head_unchanged": true,
+      "body_unchanged": true,
+      "base_unchanged": true,
+      "state": "open",
+      "merged": false
+    },
+    {
+      "pr": 4,
+      "head_unchanged": true,
+      "body_unchanged": true,
+      "base_unchanged": true,
+      "state": "open",
+      "merged": false
+    },
+    {
+      "pr": 5,
+      "head_unchanged": true,
+      "body_unchanged": true,
+      "base_unchanged": true,
+      "state": "open",
+      "merged": false
+    },
+    {
+      "pr": 6,
+      "head_unchanged": true,
+      "body_unchanged": true,
+      "base_unchanged": true,
+      "state": "open",
+      "merged": false
+    },
+    {
+      "pr": 7,
+      "head_unchanged": true,
+      "body_unchanged": true,
+      "base_unchanged": true,
+      "state": "open",
+      "merged": false
+    }
+  ],
+  "limitations": [
+    "No findings in the reviewed deltas is not a security certification or a full-history re-audit.",
+    "Stored PR bodies contain upstream release-note excerpts that Dependabot itself truncates; the entire stored body was reviewed, not the entire upstream projects.",
+    "The run/job summaries returned failure but omit runner allocation, steps and failure cause; this audit does not attribute those failures to code, billing or infrastructure.",
+    "Workflow-run/job connector tools return their first page. Each PR returned one run with the three expected job names; no broader CI-history completeness claim is made.",
+    "The existing main qualification was not rerun, changed or relabeled as validation of these proposed upgrades.",
+    "Public repository visibility execution and anonymous access verification belong to the parent handoff task; this read observed private visibility."
+  ],
+  "actions": {
+    "remote_mutations": false,
+    "dependencies_installed_or_upgraded": false,
+    "tests_executed": false,
+    "local_output_only": "/workspace/scratch/6956bc82bcf5/publication-handoff/dependabot-review.json"
+  }
+}
