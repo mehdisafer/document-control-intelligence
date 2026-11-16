@@ -29,14 +29,22 @@ See the [acceptance matrix](ACCEPTANCE.md) and
 - [ ] **Publish an updated source prerelease** after reviewing the final
   integrated SHA. [`v0.1.0rc2` notes](RELEASE_NOTES_0.1.0rc2.md) are
   prepared; no new tag or release has been created by this documentation work.
-- [ ] **Resolve the model-quality decisions.** The frozen local-linear demo
-  produced **6** automatic exports against the original target of **7**;
-  an attributed human correction produced the seventh in a **separate** run.
-  The bounded Qwen profile classified **3/36** documents correctly and made
-  **0/36** eligible. Do not mark those failed gates passed or silently narrow
-  the original scope. Improve and re-evaluate on a new untouched holdout,
-  or obtain an explicit maintainer decision to ship only the qualified
-  deterministic/reference profiles.
+- [x] **Resolve the extra local-linear abstention on the bounded synthetic
+  demonstration at the new source.** [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19)
+  prevented unsupported URL-footer proposals from masking a genuine subtotal
+  without weakening repeated recognized-label conflict checks. The frozen
+  model passed **7/7** eligible and explicitly test-role-published/restored
+  dossiers; 36/36 existing synthetic final PDFs were replayed with **30/36**
+  eligible, **30/30** eligible critical quality and **zero false eligible**.
+  The original 6/7 failure and separately audited human repair remain intact.
+  These are branch-source proofs until merged and re-executed on `main`.
+- [ ] **Resolve generative model quality and generalization.** Qwen had
+  **3/36** correct classifications and **0/36** eligible in its bounded
+  execution. A new independent supplier/layout holdout is still absent;
+  the local-linear replay uses the original generator and seed. Do not
+  reclassify Qwen or arbitrary supplier performance as qualified, or
+  silently narrow the P04 scope. A new evaluation or explicit maintainer
+  decision is needed.
 - [ ] **Define an authorized target host** before deployment. Inspect the
   concrete rollout plan, backups, restoration, monitoring, network exposure
   and operating acceptance. Passing CI containers is not a deployed service.
@@ -58,9 +66,10 @@ See the [acceptance matrix](ACCEPTANCE.md) and
 
 ## P1 — Extend supported purchasing cases
 
-- Improve the local-linear model's injection-footer confusion with a
-  new train/tuning split and independent holdout. Preserve the original
-  abstention and failed seven-export assertion as historical proof.
+- Evaluate unseen *independent* supplier labels and injection/footer layouts
+  beyond the versioned synthetic source contract. The completed source-label
+  guard is a conservative regression correction, not a retrained model or a
+  claim about new supplier document families.
 - Add independently generated layouts, labels, scan conditions and table
   geometry; publish coverage and critical-field quality together.
 - Evaluate geometric table extraction rather than presuming pipe-delimited

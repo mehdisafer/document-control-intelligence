@@ -20,7 +20,7 @@ This Linux reference processes synthetic purchase orders, delivery notes and inv
 
 [Latest merged-source qualification](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842) · [Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Earlier CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
 
-The current source is **candidate `0.1.0rc2`**, with its package, API and local container versions aligned. The only currently **published** prerelease remains the immutable historical `v0.1.0rc1` tag; `v0.1.0rc2` must be published separately after integration and full CI. The local-linear automatic seven-case target remains unmet without an attributed human repair, and Qwen has not met its accuracy gate. A successful controlled workflow does not establish production-target acceptance.
+The current source is **candidate `0.1.0rc2`**, with its package, API and local container versions aligned. The only currently **published** prerelease remains the immutable historical `v0.1.0rc1` tag; `v0.1.0rc2` must be published separately after integration and full CI. The historical 6/7 local-linear demo failure is retained. A subsequent source-label guard in [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19) has **actually produced seven eligible, explicitly published and restored dossiers**, with the unchanged model. Its separate 36-PDF synthetic regression replay retains 30/36 eligible, 30/30 critical quality and zero false eligibility. The new source still requires integration into `main`; Qwen has not met its quality gate. A successful controlled workflow does not establish production-target acceptance.
 
 ## Reproduce the deterministic reference
 
@@ -59,7 +59,20 @@ Workers use leases, fencing tokens, bounded retries and cancellation. A late wor
 
 The deterministic parser/rules reference and local model profiles are separate qualifications. The local-linear profile uses a versioned 72/36/36 synthetic train/development/holdout corpus. Its recorded holdout classification is 34/36, compared with 20/36 for the deterministic classification baseline; the eligible-field evidence and abstention results have their own denominators.
 
-The automatic local-linear demonstration exported **six**, not the required seven, dossiers. An attributed human correction enabled seven in a separate repaired run. That repaired result is not automatic-model acceptance. The recorded Qwen profile processed 36 requests but classified only three correctly and produced no eligible dossier. It is not a quality-approved fallback.
+The **original** frozen local-linear demonstration exported **six**, not seven,
+dossiers. The seventh was previously obtained through a separately audited
+human correction; neither result was rewritten. A
+[later source-contract correction](https://github.com/mehdisafer/document-control-intelligence/pull/19)
+rejects high-confidence proposals from independently unsupported labels (including
+the malicious URL footer) **before** critical field aggregation. On
+[run 43977956360](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977956360),
+the identical frozen model produced **seven eligible dossiers**, all explicitly
+accepted/published by separate test actors and restored identically. Genuine
+conflicting recognized labels remain blocked. The frozen 36-PDF synthetic
+replay still shows 34/36 classification, 30/36 eligible, 30/30 eligible
+critical quality and zero false eligibility. No new supplier-independent
+holdout was established. The local Qwen profile still fails its quality gate
+(3/36 classifications, 0 eligible) and is not an approved fallback.
 
 The retained evidence and [acceptance record](docs/ACCEPTANCE.md) preserve these limits and their exact source versions. Synthetic benchmark results are not a claim about arbitrary supplier PDFs, arbitrary languages or real purchasing decisions.
 
@@ -88,4 +101,4 @@ Do not move the existing tag; the new tag must resolve to the final reviewed
 
 Original project code is under [Apache-2.0](LICENSE); [NOTICE](NOTICE) preserves relevant attribution and limitations. Third-party components retain their own terms. No client documents or client infrastructure were used.
 
-The reference's application, OCR, browser, container and Terraform-schema gates are now executed. Remaining acceptance concerns are model-profile quality, the automatic local-linear target, a named production deployment and its operator acceptance, and maintainer-controlled visibility/protections. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.
+The reference's application, OCR, browser, container and Terraform-schema gates are now executed. Remaining acceptance concerns are the unqualified generative profile, independent-supplier generalization, a named production deployment and its operator acceptance, and maintainer-controlled release/branch protection. The original 6/7 local-linear failure remains historical; the source-gated 7/7 regression is separately qualified on PR #19. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.

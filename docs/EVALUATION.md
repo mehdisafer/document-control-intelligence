@@ -133,6 +133,59 @@ and all three upload-request/audit/job joins. Wall time was 2.110694 s, includin
 1.218856 s for the separate worker. This sequential case establishes the network
 and process boundary; it is not a concurrent HTTP benchmark or a browser test.
 
+## Source-label contract guard — subsequent fixed-model regression
+
+The original local-linear six-export failure above remains **unchanged**.
+Its unnecessary abstention was caused by a high-confidence learned proposal
+from an unrelated printed URL label being added to the critical subtotal
+candidate set. The independent `validate_evidence` verifier already rejected
+unknown labels, so this unsupported proposal could only mask an otherwise
+valid source value; it could not provide an accepted citation.
+
+[PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19)
+introduces a conservative proposal gate: for the statistical profile, a
+candidate is selected only if the model's key agrees with the **versioned
+independent `LABEL_TO_KEY` semantic contract**. Out-of-contract model
+proposals remain visible in warnings. Two recognized but conflicting
+subtotals still require review, and neither the source-verifier, the
+model's weights, its thresholds nor the original evidence has changed.
+
+On [GitHub Actions push run 43977956360](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977956360)
+at source `ac8745920ade9f023ebe9b9a692a9cd8811d48ba`, the **unchanged**
+strict nine-scenario demonstration passed and produced **7/7 eligible
+dossiers and 7/7 published/restored exports**. The acceptance and publication
+requests were explicit, role-separated **scripted test actions**; this is not
+an independent human approval or autonomous payment authorization.
+The contradictory overbilling and incomplete-invoice scenarios remained
+ineligible. Four additional adversarial/source-contract tests passed.
+The original six-export report and its failed assertion were not altered.
+
+An independent *execution* then replayed the existing **same-generator,
+seed-42, 36-document synthetic final split** with the fixed
+`local-linear-model.json` artifact (SHA-256
+`234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1`).
+The new source-qualified metrics were:
+
+| Frozen 36-PDF replay metric | Observed result |
+|---|---:|
+| Correct classification | 34/36 (94.44%) |
+| Eligible for explicit acceptance | 30/36 (83.33%) |
+| Critical quality among eligible | 30/30 (100%) |
+| False eligible | 0 |
+| Source citation validity | 100% |
+| Independent semantic evidence validity | 100% |
+| Predeclared synthetic policy gate | Met |
+| Execution failures | 0 |
+
+The exact original [GitHub Actions evidence artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977956360/artifacts/14282505849)
+contains `linear-final-replay/summary.json`, the policy-before-run,
+the separate local-linear demo, unit/JS/browser logs and real screenshots.
+The output's source commit, model digest and manifest SHA-256 are checked
+independently from the historical records. The previous final results
+were **not overwritten**. This replay is a source regression on the
+**existing** generator and split, not a new independent supplier distribution,
+post-training calibration or a new large-language-model evaluation.
+
 ## Generative profile and adverse executions
 
 The first final run obtained 12 real model responses, followed by 24
