@@ -315,8 +315,18 @@ def extract(parsed: ParsedDocument, *, profile="baseline", model_path=None, llm_
             version = model.version
             for candidate in scalar_candidates:
                 key, probability = model.classify_label(candidate.label)
+                # Proposals from labels outside the versioned field contract
+                # can never pass the independent source verifier. Exclude them
+                # before de-duplicating critical values: an unrelated URL or
+                # instruction footer must not mask a valid source field.
+                # Recognized but conflicting duplicate labels are still
+                # checked by validate_evidence and must trigger abstention.
+                supported_key = LABEL_TO_KEY.get(label_text(candidate.label))
                 if key in selected and probability >= model.label_threshold:
-                    selected[key].append(candidate)
+                    if key == supported_key:
+                        selected[key].append(candidate)
+                    else:
+                        warnings.append(f"unsupported_model_label:{candidate.id}")
                 else:
                     warnings.append(f"label_abstention:{candidate.id}")
         except ModelError:

@@ -47,6 +47,10 @@ jobs:
         run: uv run --frozen dci demo --output outputs/ci/demo
       - name: Verify demonstration semantics
         run: uv run --frozen python scripts/verify_demo.py outputs/ci/demo/result.json
+      - name: Frozen local-linear demonstration and strict seven-export verification
+        run: |
+          uv run --frozen dci demo --profile local-linear --model-path evidence/evaluation/local-linear-model.json --output outputs/ci/demo-local-linear
+          uv run --frozen python scripts/verify_demo.py outputs/ci/demo-local-linear/result.json
       - name: Real browser review workflow and screenshots
         run: uv run --frozen --group browser python scripts/browser_smoke.py --config outputs/ci/demo/runtime/config.json --credentials outputs/ci/demo/runtime/credentials.json --output outputs/ci/browser --browser-executable /usr/bin/google-chrome
       - name: Retain original execution results without credentials or runtime databases
@@ -62,6 +66,8 @@ jobs:
             outputs/ci/component-inventory.json
             outputs/ci/demo/result.json
             outputs/ci/demo/*-dossier.json
+            outputs/ci/demo-local-linear/result.json
+            outputs/ci/demo-local-linear/*-dossier.json
             outputs/ci/browser/*.json
             outputs/ci/browser/*.png
           retention-days: 14
