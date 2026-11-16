@@ -2,8 +2,9 @@ name: Document control checks
 on:
   push:
     branches: [main, "feat/**", "fix/**"]
-    paths-ignore: ["docs/**", "README.md", "evidence/**"]
-  # Required PR checks must also report on documentation-only changes.
+    # Check every main commit, including documentation-only release changes, so
+    # the immutable source tag can point to a commit with its own hosted proof.
+  # Required PR checks also report on documentation-only changes.
   pull_request: {}
   workflow_dispatch:
 permissions:

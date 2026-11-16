@@ -3,9 +3,35 @@
 Updated 16 November 2026 from the GitHub source and run readback; the actual
 execution dates and immutable reports below remain 15 November 2026. This record distinguishes implementation, actual execution and acceptance. **The synthetic local reference is qualified through its full hosted parser/OCR, browser, image and Terraform-schema profiles. The entire P04 scope is not unconditionally accepted.** The local-linear automatic seven-export target, larger-model quality and intended production deployment remain separate gates.
 
-Application code is being prepared as `0.1.0rc2` with explicit package/API/container coherence tests; the only published historical source prerelease remains `v0.1.0rc1`. No stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
+Application version `0.1.0rc2` is integrated into `main` with executed package/API/container coherence tests; the only published historical source prerelease remains `v0.1.0rc1`. No stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
 
-## Original-page visibility correction — latest P0 evidence
+## Current merged `0.1.0rc2` source qualification — 16 November 2026
+
+The current main runtime source was integrated through
+[PR #17](https://github.com/mehdisafer/document-control-intelligence/pull/17)
+at commit `e9e7f0f2f92a183539a36198b4ce34bde20c3307`.
+The [exact-main GitHub Actions run #43961711842](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842)
+executed all three jobs with **success**. Its original output records
+**135 Python tests**, **24 JavaScript state tests**, **36 real Chrome checks**,
+nine synthetic demonstration scenarios and seven baseline exports/restoration,
+plus actual Docker execution and Terraform schema validation. No job was
+skipped to claim this result.
+
+The same source includes the [PR #16 dependency rollup](https://github.com/mehdisafer/document-control-intelligence/pull/16),
+with `pdfplumber 0.11.10`, `pdfminer-six 20260107`, auditing tools and pinned
+Actions updates. Three real tests validate the dependency lock/export, and
+four tests verify the newly aligned `0.1.0rc2` installed package,
+`uv.lock`, API health response, Compose tags and licence. The five original
+Dependabot PRs are now closed. Earlier failed and frozen model reports are
+unchanged.
+
+The only **published GitHub source release** is still `v0.1.0rc1`; the
+`v0.1.0rc2` source is merged and tested but awaits its new maintainer-created
+pre-release tag. `main` branch protection and the P04 model/host acceptance
+criteria remain open. Do not confuse source qualification with production
+deployment or arbitrary supplier-document accuracy.
+
+## Original-page visibility correction — earlier P0 evidence
 
 The earlier Chrome browser workflow correctly downloaded the PDF bytes and set a
 `blob:` iframe URL, but its original-document area displayed an unreadable

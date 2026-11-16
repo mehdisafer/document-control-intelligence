@@ -38,7 +38,28 @@ No production host migration has been performed as part of this release.
   schema checks; source-linked reports and authentic screenshots remain
   available for inspection.
 
-## Executed qualification
+## Current integrated source qualification
+
+The [`v0.1.0rc2`-versioned code](https://github.com/mehdisafer/document-control-intelligence/commit/e9e7f0f2f92a183539a36198b4ce34bde20c3307)
+has completed its [GitHub Actions main run #43961711842](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842).
+All three actual jobs passed: `smoke-and-integration`,
+`container-integration`, and `terraform-schema`. The smoke log records
+**135 Python tests passing**, **24 JavaScript tests passing**, and **36 real
+Chrome browser checks passing**, including visible original-PDF raster
+and the audit/export workflow.
+
+The earlier [PR #16](https://github.com/mehdisafer/document-control-intelligence/pull/16)
+has also integrated five reviewed Dependabot updates: `pdfplumber 0.11.10`,
+`pdfminer-six 20260107`, `pip-audit 2.10.1`, `pip-licenses 5.5.5`,
+and pinned UV/Terraform GitHub Actions. Its regenerated `requirements.lock`
+is now aligned with `uv.lock`, with three dependency-lock tests.
+The later [PR #17](https://github.com/mehdisafer/document-control-intelligence/pull/17)
+adds four release identity tests, all passed on the integrated source.
+
+These are time- and source-bound results on synthetic documents, not a new
+ML evaluation, independent human approval or a production deployment.
+
+## Earlier original-page qualification
 
 On [source `32fb196b`](https://github.com/mehdisafer/document-control-intelligence/commit/32fb196bcc496b31071d87d02453dd6936b98ccf),
 [GitHub Actions run 43774003311](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774003311)

@@ -4,21 +4,21 @@
 
 This Linux reference processes synthetic purchase orders, delivery notes and invoices. It preserves original PDF bytes, extracts bounded evidence, checks arithmetic and cross-document consistency, and binds correction, acceptance and publication to current document versions. A model proposal cannot directly authorize publication.
 
-## Delivery status — 15 November 2026
+## Delivery status — 16 November 2026
 
 **The isolated reference and visible original-page preview are qualified on the merged source.** Executable preview revision `32fb196bcc496b31071d87d02453dd6936b98ccf` is included in `main` merge `24cad9d17b400fca01ae901d97082ebbd45bc59c`, whose full GitHub Actions workflow also passed. This is not a production-host deployment.
 
 | Gate | Executed observation |
 |---|---|
-| Full Python suite | 128 passed on the latest preview revision, including real parsing/OCR, PDF raster limits and SQLite concurrency |
-| JavaScript state suite | 24 passed, including stale-page suppression and same-page preview deduplication |
+| Full Python suite | **135 passed** on merged `0.1.0rc2` source, including parsing/OCR, PDF raster limits, version/lock checks and SQLite concurrency |
+| JavaScript state suite | **24 passed** on merged `0.1.0rc2` source, including stale-page suppression and same-page preview deduplication |
 | Actual browser workflow | Synthetic PDFs uploaded through the UI; distinct roles, acceptance, publication and downloaded export verified |
-| Rendered desktop/mobile | Real Chrome captures show a readable rasterized original PDF beside evidence; 36 browser checks including decoded pixels and screenshot-time visibility |
+| Rendered desktop/mobile | **36 real-browser checks passed** on merged `0.1.0rc2` source; real Chrome captures show a readable rasterized original beside its evidence |
 | Reference image | Built and ran document processing, review/export and restoration inside the actual image |
 | Compose / Terraform | Both Compose profiles validated; Terraform formatting/provider-schema validation executed without cloud apply |
 | Security/dependencies | Lint, schema drift, known-secret/history checks, dependency and component-licence controls executed |
 
-[Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Full CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
+[Latest merged-source qualification](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842) · [Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Earlier CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
 
 The current source is **candidate `0.1.0rc2`**, with its package, API and local container versions aligned. The only currently **published** prerelease remains the immutable historical `v0.1.0rc1` tag; `v0.1.0rc2` must be published separately after integration and full CI. The local-linear automatic seven-case target remains unmet without an attributed human repair, and Qwen has not met its accuracy gate. A successful controlled workflow does not establish production-target acceptance.
 
