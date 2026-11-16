@@ -24,6 +24,7 @@ agreement, not an independent audit or certification.
 
 | Record | What it establishes |
 |---|---|
+| [Published rc2 source and actual Actions run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) / [original ZIP artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670/artifacts/14281402594) | **Tag `v0.1.0rc2` at `db42dd7c`**: all three hosted jobs PASS, 139 Python + 24 JavaScript + 36/36 real Chrome; same-generator frozen local-linear 7/7 explicitly published and restored, 36-PDF full synthetic replay 34/36 classification, 30/36 eligible, 30/30 eligible critical quality, zero false eligible. Downloaded ZIP integrity tested; no independent supplier/production acceptance claimed |
 | [Publication map](publication-map.json) | At evidence commit `8dbe831`, the recorded runtime/configuration/test bytes match executed source `3ff93109`; earlier snapshots retain their actual identities |
 | [Public-source qualification](publication/) | On fixed source `8839be77`: 112 Python tests, 23 JavaScript state/unit tests, complete ZIP-budget and asynchronous UI regressions, dependency and disclosure review; not browser-rendering evidence |
 | [Historical source qualification](qualification/) | On source `3ff93109`: 107 tests, original baseline/linear demos, restoration, supplemental human repair, 72-output regression and one/two-worker load |
@@ -34,11 +35,7 @@ agreement, not an independent audit or certification.
 | [GitHub Actions observation](platform/github-actions-blocked.json) | Three jobs failed with no runner and no steps; underlying reason remains unknown |
 | [Browser blocker](platform/browser-runtime-blocked.json) and [Terraform blocker](platform/terraform-validate-blocked.json) | Browser reports an AF_UNIX denial; Terraform fails provider schema loading with cause unconfirmed in its retained diagnostic; neither path is qualified |
 
-The original local aggregate is **false** because the frozen local-linear demo
-publishes six dossiers where its unchanged verifier expects seven. Baseline
-publishes seven. A separate attributed correction exercise yields seven linear
-publications and restores all seven unchanged. That recovery does not rewrite the
-original failure or improve the recorded model score.
+The **historical** local aggregate is **false** because the original frozen local-linear demo published six dossiers against a target of seven. Baseline published seven. A separate attributed human correction obtained seven but did not alter that model result. The later, **tagged `v0.1.0rc2` source-label guard** produced 7/7 explicit test-role publications and restored exports without retraining, and a full 36-document same-generator synthetic replay met its declared quality/coverage gate. Neither successful run overwrites the historical failure or qualifies Qwen and independent supplier documents.
 
 ## Preservation and reproduction
 
