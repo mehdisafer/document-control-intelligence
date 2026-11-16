@@ -20,7 +20,7 @@ This Linux reference processes synthetic purchase orders, delivery notes and inv
 
 [Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Full CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
 
-The project remains a **reference candidate (`0.1.0rc1`)**. The local-linear automatic seven-case delivery criterion is not met without an attributed human repair, and the larger Qwen profile has not met its accuracy gate. A successful controlled workflow does not erase those negative model results or establish production-target acceptance.
+The code on this release-preparation branch is **candidate `0.1.0rc2`**, with its package, API and local container versions aligned. The only currently **published** prerelease remains the immutable historical `v0.1.0rc1` tag; `v0.1.0rc2` must be published separately after integration and full CI. The local-linear automatic seven-case target remains unmet without an attributed human repair, and Qwen has not met its accuracy gate. A successful controlled workflow does not establish production-target acceptance.
 
 ## Reproduce the deterministic reference
 
@@ -77,7 +77,9 @@ The public `v0.1.0rc1` tag is an immutable snapshot from before the
 original-page raster and SQLite/CI fixes. These changes are already merged
 to `main`, with [original-page proof](docs/ORIGINAL_PAGE_PREVIEW.md) and
 [post-merge CI results](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074).
-A new `v0.1.0rc2` source prerelease is **prepared but not yet published**:
+The `0.1.0rc2` runtime/package version is prepared with a locked editable
+package, health endpoint, API and Compose alignment test; its GitHub
+**source prerelease is not yet published**:
 [release notes](docs/RELEASE_NOTES_0.1.0rc2.md).
 Do not move the existing tag; the new tag must resolve to the final reviewed
 `main` commit. This is a source release, not a hosted business service.

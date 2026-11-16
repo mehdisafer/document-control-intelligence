@@ -184,24 +184,26 @@ so it is not part of this policy. Once the ruleset is active, missing or failed
 required checks block future merges. Keep the failure visible and resolve its
 cause; creating the ruleset does not qualify an unexecuted workflow.
 
-## 5. Create the source prerelease
+## 5. Publish the updated source prerelease (after final CI)
 
 Open [the new release form](https://github.com/mehdisafer/document-control-intelligence/releases/new).
 Use:
 
 | Field | Value |
 |---|---|
-| Tag | `v0.1.0rc1` |
-| Target | The final delivered `main` commit |
-| Release title | `Document Control Intelligence 0.1.0rc1` |
-| Release description | The body in [RELEASE_NOTES_0.1.0rc1.md](RELEASE_NOTES_0.1.0rc1.md) |
+| Tag | `v0.1.0rc2` (new tag; never move `v0.1.0rc1`) |
+| Target | Exact final reviewed `main` SHA **after** CI |
+| Release title | `Document Control Intelligence 0.1.0rc2` |
+| Release description | The body in [RELEASE_NOTES_0.1.0rc2.md](RELEASE_NOTES_0.1.0rc2.md) |
 | This is a pre-release | Selected |
 
-Create the new tag if it does not exist. If the tag already exists, verify its
-commit before using it. Review the notes, publish the prerelease, and verify
-that the tag resolves to the final delivered head and that GitHub displays the
-prerelease label. This document does not invent a final tag SHA or assert that
-a release has been published.
+Create the **new** `v0.1.0rc2` tag only after the final CI and integrated
+package/health/Compose version checks have succeeded. If that tag already
+exists, inspect it and stop rather than re-pointing it. Publish the prerelease
+only after confirming its commit matches the final reviewed `main` SHA;
+verify the release page and source archive without an authenticated session.
+The historical `v0.1.0rc1` remains immutable. These instructions do not
+claim that the new release has been published.
 
 If fresh hosted checks execute before publication, add their specific outcomes
 and evidence links to the release notes while retaining the earlier reports
