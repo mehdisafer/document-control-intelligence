@@ -16,6 +16,7 @@ from fastapi.responses import FileResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, Field
 
+from . import __version__
 from .auth import Auth
 from .config import Settings
 from .store import Store, StoreError
@@ -62,7 +63,7 @@ class RetryRequest(Body):
 def create_app(settings: Settings | None = None):
     settings = settings or Settings.from_env()
     store, auth = Store(settings), Auth(settings.auth_file)
-    app = FastAPI(title="Document Control Intelligence", version="0.1.0rc1", docs_url=None, redoc_url=None,
+    app = FastAPI(title="Document Control Intelligence", version=__version__, docs_url=None, redoc_url=None,
                   openapi_url=None)
     app.state.store = store
     # Bound aggregate native renderer pressure per API process, not only per child.
@@ -120,7 +121,7 @@ def create_app(settings: Settings | None = None):
 
     @app.get("/healthz")
     def health():
-        return {"status": "alive", "version": "0.1.0rc1"}
+        return {"status": "alive", "version": __version__}
 
     @app.get("/api/ready")
     def ready(_identity=Depends(actor)):

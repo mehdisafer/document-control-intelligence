@@ -12,7 +12,7 @@ provider "docker" {}
 
 variable "image_id" {
   type        = string
-  description = "Locally built, reviewed image ID (docker inspect --format={{.Id}} dci:0.1.0rc1). No registry push."
+  description = "Locally built, reviewed image ID (docker inspect --format={{.Id}} dci:0.1.0rc2). No registry push."
   validation {
     condition     = can(regex("^sha256:[a-f0-9]{64}$", var.image_id))
     error_message = "Supply the immutable local Docker image ID."

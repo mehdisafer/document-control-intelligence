@@ -9,7 +9,7 @@ services:
       llm:
         condition: service_healthy
   llm:
-    image: dci:0.1.0rc1
+    image: dci:0.1.0rc2
     entrypoint: ["/llama/llama-server"]
     command: ["--model", "/models/Qwen3-0.6B-Q4_K_M.gguf", "--alias", "dci-qwen3-0.6b-q4-k-m", "--host", "127.0.0.1", "--port", "8081", "--threads", "4", "--ctx-size", "8192", "--parallel", "1", "--reasoning", "off", "--no-webui", "--cache-ram", "0", "--no-cache-prompt", "--ctx-checkpoints", "0", "--batch-size", "512", "--ubatch-size", "128"]
     environment: {LD_LIBRARY_PATH: /llama, HF_HUB_OFFLINE: "1"}

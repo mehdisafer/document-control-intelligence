@@ -1,7 +1,7 @@
 name: dci-reference
 services:
   api:
-    image: dci:0.1.0rc1
+    image: dci:0.1.0rc2
     build: .
     command: ["serve", "--host", "0.0.0.0", "--port", "8000", "--config", "/etc/dci/config.json"]
     ports: ["127.0.0.1:8000:8000"]
@@ -29,7 +29,7 @@ services:
       driver: json-file
       options: {max-size: "10m", max-file: "3"}
   worker:
-    image: dci:0.1.0rc1
+    image: dci:0.1.0rc2
     command: ["worker", "--config", "/etc/dci/config.json"]
     network_mode: none
     volumes:

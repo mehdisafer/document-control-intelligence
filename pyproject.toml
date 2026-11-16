@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "document-control-intelligence"
-version = "0.1.0rc1"
+version = "0.1.0rc2"
 description = "Evidence-linked purchasing document control with local inference and explicit human review"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
