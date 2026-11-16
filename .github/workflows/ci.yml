@@ -51,6 +51,48 @@ jobs:
         run: |
           uv run --frozen dci demo --profile local-linear --model-path evidence/evaluation/local-linear-model.json --output outputs/ci/demo-local-linear
           uv run --frozen python scripts/verify_demo.py outputs/ci/demo-local-linear/result.json
+      - name: Frozen local-linear 36-document final holdout replay (no retraining)
+        run: |
+          uv run --frozen python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import json
+          from dci.corpus import generate_corpus
+          from dci.evaluation import evaluate_manifest
+          model_path = Path("evidence/evaluation/local-linear-model.json")
+          expected_model_sha = "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1"
+          observed_model_sha = hashlib.sha256(model_path.read_bytes()).hexdigest()
+          assert observed_model_sha == expected_model_sha, "Frozen evaluated model artifact changed"
+          corpus = Path("outputs/ci/linear-holdout-corpus")
+          generate_corpus(corpus, seed=42, per_split=12)
+          output = Path("outputs/ci/linear-final-replay")
+          summary = evaluate_manifest(
+              corpus / "manifest.json", output, profiles=("local-linear",),
+              model_path=model_path,
+          )
+          selected = summary["profiles"]["local-linear"]
+          dataset = summary["dataset"]
+          report = {
+              "model_sha256": observed_model_sha,
+              "source": summary["source"],
+              "dataset": dataset,
+              "documents": selected["documents"],
+              "classification_accuracy": selected["classification_accuracy"],
+              "eligible_documents": selected["eligible_documents"],
+              "eligible_coverage": selected["eligible_coverage"],
+              "eligible_critical_quality": selected["eligible_critical_quality"],
+              "false_eligible_documents": selected["false_eligible_documents"],
+              "citation_validity": selected["citation_validity"],
+              "semantic_evidence_validity": selected["semantic_evidence_validity"],
+              "policy_gate_met": selected["policy_gate_met"],
+          }
+          print(json.dumps(report, sort_keys=True, indent=2))
+          assert dataset["available_test_documents"] == 36
+          assert dataset["evaluated_test_documents"] == 36
+          assert dataset["seed"] == 42 and dataset["selected_split"] == "test"
+          assert selected["documents"] == 36 and selected["false_eligible_documents"] == 0
+          assert selected["policy_gate_met"], "New source does not meet the predeclared synthetic evaluation gate"
+          PY
       - name: Real browser review workflow and screenshots
         run: uv run --frozen --group browser python scripts/browser_smoke.py --config outputs/ci/demo/runtime/config.json --credentials outputs/ci/demo/runtime/credentials.json --output outputs/ci/browser --browser-executable /usr/bin/google-chrome
       - name: Retain original execution results without credentials or runtime databases
@@ -68,6 +110,8 @@ jobs:
             outputs/ci/demo/*-dossier.json
             outputs/ci/demo-local-linear/result.json
             outputs/ci/demo-local-linear/*-dossier.json
+            outputs/ci/linear-final-replay/summary.json
+            outputs/ci/linear-final-replay/policy-before-run.json
             outputs/ci/browser/*.json
             outputs/ci/browser/*.png
           retention-days: 14
