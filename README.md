@@ -20,7 +20,7 @@ This Linux reference processes synthetic purchase orders, delivery notes and inv
 
 [Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Full CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
 
-The code on this release-preparation branch is **candidate `0.1.0rc2`**, with its package, API and local container versions aligned. The only currently **published** prerelease remains the immutable historical `v0.1.0rc1` tag; `v0.1.0rc2` must be published separately after integration and full CI. The local-linear automatic seven-case target remains unmet without an attributed human repair, and Qwen has not met its accuracy gate. A successful controlled workflow does not establish production-target acceptance.
+The current source is **candidate `0.1.0rc2`**, with its package, API and local container versions aligned. The only currently **published** prerelease remains the immutable historical `v0.1.0rc1` tag; `v0.1.0rc2` must be published separately after integration and full CI. The local-linear automatic seven-case target remains unmet without an attributed human repair, and Qwen has not met its accuracy gate. A successful controlled workflow does not establish production-target acceptance.
 
 ## Reproduce the deterministic reference
 
