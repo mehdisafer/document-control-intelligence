@@ -1,6 +1,6 @@
 # Release candidate 0.1.0rc1
 
-## Current post-release state — 16 November 2026
+## Current post-release state — 17 November 2026
 
 This document originated as the **historical publication and qualification
 record for `v0.1.0rc1`**. Text below describing a private repository,
@@ -20,13 +20,7 @@ and the [current acceptance ledger](ACCEPTANCE.md) supersede the historical
 runnerless/browser-unqualified observations below **only for the newer
 source revision**.
 
-A new [`v0.1.0rc2` source release body](RELEASE_NOTES_0.1.0rc2.md) is
-prepared for a new tag on the final reviewed `main` SHA; it is **not
-published** here. As last read, `main` remains **unprotected**, and
-[issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1)
-stays open for failed model-quality/automatic-coverage gates, a concrete
-authorized target deployment and other accepted limitations. A new release
-does not imply production certification.
+The subsequent [`v0.1.0rc2` prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is **published** and tagged at source `db42dd7c7668d70deb8cf5ea6512abcd94a36510`, not at the earlier documentation-only `599bff76`. Its [exact-source main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) passed 139 Python, 24 JavaScript, 36 real Chrome checks and the three hosted integration jobs. A new local-linear semantic-label guard met the bounded 7/7 scripted demonstration, leaving the original 6/7 failure unchanged and Qwen unqualified. The editable release description still needs its source-link correction. As last read, `main` remains **unprotected**, and [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) stays open for independent supplier/LLM quality and authorized production-target decisions. Neither release implies production certification.
 
 ## Purpose — original `0.1.0rc1` preparation record
 
