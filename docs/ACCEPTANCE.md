@@ -1,69 +1,34 @@
 # Acceptance matrix
 
-Updated 16 November 2026 from the GitHub source and run readback; the actual
-execution dates and immutable reports below remain 15 November 2026. This record distinguishes implementation, actual execution and acceptance. **The synthetic local reference is qualified through its full hosted parser/OCR, browser, image and Terraform-schema profiles. The entire P04 scope is not unconditionally accepted.** The original local-linear six-export failure remains an immutable historical result; a separate source-gated 7/7 demonstration and 36-PDF regression now pass at PR #19's tested source. Generative quality, independent-supplier generalization and production deployment remain separate gates.
+Updated 17 November 2026 from the immutable source tag, GitHub Actions execution and downloaded original test artifacts. This document distinguishes **implemented**, **executed**, **tested**, and **accepted within a named scope**. The bounded synthetic document-control reference is qualified; independent supplier accuracy, generative-model quality and a deployed business service are **not** accepted.
 
-Application version `0.1.0rc2` is integrated into `main` with executed package/API/container coherence tests; the only published historical source prerelease remains `v0.1.0rc1`. No stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
+## Published source prerelease and exact-source CI
 
-## Current merged `0.1.0rc2` source qualification — 16 November 2026
+The [published GitHub prerelease `v0.1.0rc2`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is marked **Pre-release** and its tag object points directly to commit [`db42dd7c7668d70deb8cf5ea6512abcd94a36510`](https://github.com/mehdisafer/document-control-intelligence/commit/db42dd7c7668d70deb8cf5ea6512abcd94a36510). The older `v0.1.0rc1` tag remains at `5c1f3e43f50c6d4056baabcafd5c39c40609f39b`. Neither tag represents a deployed production service.
 
-The current main runtime source was integrated through
-[PR #17](https://github.com/mehdisafer/document-control-intelligence/pull/17)
-at commit `e9e7f0f2f92a183539a36198b4ce34bde20c3307`.
-The [exact-main GitHub Actions run #43961711842](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842)
-executed all three jobs with **success**. Its original output records
-**135 Python tests**, **24 JavaScript state tests**, **36 real Chrome checks**,
-nine synthetic demonstration scenarios and seven baseline exports/restoration,
-plus actual Docker execution and Terraform schema validation. No job was
-skipped to claim this result.
+The source correction was integrated through [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19), after the dependency and release-version reconciliation of PRs #16–#18. [GitHub Actions push run #43979529670](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) completed all **three** actual jobs successfully on the **exact tag SHA**: `smoke-and-integration`, `container-integration`, `terraform-schema`. The matching `ci/circleci: build-and-test` status is also successful.
 
-The same source includes the [PR #16 dependency rollup](https://github.com/mehdisafer/document-control-intelligence/pull/16),
-with `pdfplumber 0.11.10`, `pdfminer-six 20260107`, auditing tools and pinned
-Actions updates. Three real tests validate the dependency lock/export, and
-four tests verify the newly aligned `0.1.0rc2` installed package,
-`uv.lock`, API health response, Compose tags and licence. The five original
-Dependabot PRs are now closed. Earlier failed and frozen model reports are
-unchanged.
+The [original tagged-source GitHub Actions artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670/artifacts/14281402594) was downloaded and its ZIP integrity checked. The original contents show:
+- **139 Python unit/integration tests passed**, including all four source-label contract tests; no Python failures.
+- **24 Node JavaScript state tests passed**, zero failures and skips.
+- **36/36 real Chrome checks passed**, including nonblank, decoded source-PDF raster visibility next to the extracted evidence.
+- The original **baseline and local-linear nine-scenario demonstrations** passed the unchanged verifier: the corrected, frozen-model local-linear reference produced **7 eligible, 7 explicitly published by scripted separate test roles, and 7 restored-identical dossiers**. The contradictory cases remain blocked.
+- The full **36-document synthetic final-split replay**, using the frozen statistical model with original seed 42 and generator, reports **34/36 correct classification, 30/36 eligible, 30/30 critical quality among eligible, zero false eligible, 100% citation and semantic evidence validity**; the predeclared synthetic reference gate passed.
+- Real container execution and Terraform provider/schema validation succeeded. The installed dependency advisory check reported no known findings within the tested dependency set; it does not certify ongoing security.
 
-The only **published GitHub source release** is still `v0.1.0rc1`; the
-`v0.1.0rc2` source is merged and tested but awaits its new maintainer-created
-pre-release tag. `main` branch protection and the P04 model/host acceptance
-criteria remain open. Do not confuse source qualification with production
-deployment or arbitrary supplier-document accuracy.
+This qualification is **source-specific**. Scripted test-role approvals are not independent human review. The 36-PDF population shares its generator and conventions with training; it is not an independent supplier distribution, forgery benchmark or production load test. No cloud or customer environment was exercised.
 
-## Source-label guard regression — exact branch qualification
+## Historical source and model qualifications remain retained
 
-[PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19)
-qualifies a *follow-on source change* that prevents learned critical-field
-proposals from unsupported printed labels entering the candidate aggregation.
-The independent source citation and known-label verifier is unchanged;
-true contradictory known labels continue to abstain. The model is not
-retrained and the original source/weights/evaluation evidence are retained.
+The earlier [`e9e7f0f2` merged-source run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842) passed 135 Python, 24 JavaScript and 36 browser checks, including the four release-version tests and three lock/export consistency tests. Its distinct test count and source SHA are retained rather than silently relabelled as the tagged source.
 
-[GitHub Actions run 43977956360](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977956360)
-executed on source `ac8745920ade9f023ebe9b9a692a9cd8811d48ba`:
-**139 Python tests**, **24 JavaScript tests**, **36 real Chrome checks**,
-plus successful Docker and Terraform jobs. The nine-scenario baseline and
-the **frozen local-linear** demos both passed the unchanged strict
-seven-export verifier. The local-linear report contains **7 eligible,
-7 explicitly published and 7 restored-identical dossiers**. The two
-expected blocked business scenarios stayed blocked.
+The original frozen local-linear demonstration published **6/7**, failed its unchanged strict assertion, and remains historical negative evidence. A distinct auditable human-repair exercise yielded seven, but that repair is not an automatic-model pass. The later PR #19 source-label guard prevented unsupported printed URL-label proposals from masking a verified subtotal **without retraining the model or weakening the independent known-label/citation verifier**. The new 7/7 source-level result does not overwrite any older failed file, measurement or denominator. The Qwen/llama.cpp profile remains unqualified: **3/36 correct classifications and 0/36 eligible**.
 
-The separate full final-split **replay** processed 36 synthetic PDFs
-using the same frozen model SHA-256 and original generator seed 42:
-**34/36 correct classification, 30/36 eligible, 30/30 critical quality,
-0 false eligible, 100% citation and semantic evidence validity**.
-The predeclared reference policy gate was true with zero execution
-failures. Source identity, manifest and original outputs are retained in
-[run artifact #14282505849](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977956360/artifacts/14282505849).
-A second [PR CI run #43977964213](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977964213)
-also passed all three jobs. These are **PR-branch** checks until
-the change is merged and tested on `main`; the source-qualified result
-does not retroactively turn the original six-export run into a pass.
+## GitHub release-description discrepancy and outstanding source administration
 
-This is a same-generator synthetic regression, not a new independent
-supplier holdout or a general safety guarantee. Qwen remains unqualified.
-Scripted test-role decisions are explicit but not human approval.
+The tag is correct and published. As read on 17 November, its **editable GitHub release description** still identifies `599bff76773f02d72ee1ded32a55c08631f52f7a` as the final source and cites the earlier **135-test** run, even though the tag is `db42dd7c`. It also contains redundant Markdown link wrappers. The maintainer should update only the description to match this source; **do not delete, move or recreate either tag**. The committed [reconciled release notes](RELEASE_NOTES_0.1.0rc2.md) give the exact current facts.
+
+GitHub still reports `main.protected=false` and zero active rulesets. Configuring and verifying the [owner-side branch ruleset](PUBLISHING.md) remains open. The broader [acceptance issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) stays open for independent suppliers, failing Qwen quality, deployment, backup/restore and operator acceptance. Public visibility, licensing, prerelease publication and application acceptance are different gates.
 
 ## Original-page visibility correction — earlier P0 evidence
 
@@ -171,7 +136,7 @@ Parser authenticity for arbitrary pure-native hidden text, unsupported purchasin
 | Deterministic reference | Seven demo dossiers and corresponding restoration | Qualified within the documented reference scope |
 | Local statistical model | Frozen synthetic corpus, 34/36 classification, 30/36 eligible and 30/30 eligible critical quality; zero false eligible in that set | Small generator-derived population; not general supplier accuracy |
 | Raw local-linear demonstration | Six automatic exports against an original target of seven | Original strict seven-export gate **not met** |
-| Source-gated local-linear demonstration (PR #19) | Seven eligible dossiers, seven explicit test-role publications, seven restored-identical exports; unchanged strict verifier | New branch-source qualification **met**, original six-export report still failed historically |
+| Source-gated local-linear demonstration (PR #19) | Seven eligible dossiers, seven explicit test-role publications, seven restored-identical exports; unchanged strict verifier | Merged, tagged `v0.1.0rc2` source qualification **met** on the synthetic demo; original six-export report still failed historically |
 | Source-gated frozen final-set replay (36 generated PDFs) | 34/36 correct class, 30/36 eligible, 30/30 eligible critical quality, 0 false eligible, 100% supported citations | Existing synthetic policy gate met; no independent-supplier generalization claim |
 | Attributed human repair | Seventh dossier published after documented subtotal correction and separate approval; restored state consistent | Human-assisted workflow evidence, not automatic-model acceptance |
 | Larger Qwen/llama.cpp profile | 36 real requests, 3/36 correct classifications, 0/36 eligible; original resource/response records retained | Quality gate **not met** |
@@ -180,8 +145,8 @@ The original `overall_requested_local_qualification_met: false` remains preserve
 
 ## Remaining gates and publication
 
-1. The original six-versus-seven local-linear result remains historically failed; a follow-on, frozen-model 7/7 demonstration and 36-PDF synthetic regression now pass at PR #19's source. Verify integration on `main` and separately qualify independent supplier layouts and the still-failed Qwen generative-model quality gate, or explicitly approve the narrower reference scope while retaining all negative results.
+1. The original six-versus-seven local-linear run remains historically failed; the frozen-model 7/7 demonstration and 36-PDF same-generator synthetic regression now pass on the **published tagged main SHA**. Independently qualify new supplier layouts and the still-failed Qwen generative-model quality gate, or explicitly approve the narrower reference scope while retaining all negative results.
 2. Select and authorize the actual deployment target, inspect the plan, exercise its service/restore/monitoring and obtain operator acceptance. Hosted CI containers are not a production rollout.
-3. Public repository visibility, Apache-2.0, About metadata and the original `v0.1.0rc1` source prerelease are verified. Apply and read back the **still-missing `main` ruleset** through [PUBLISHING.md](PUBLISHING.md); the current API read found `main.protected=false` and no rulesets. A new source prerelease is separately prepared, not published. No paid feature or public business service is authorized by this source-publication task.
+3. Public repository visibility, Apache-2.0, About metadata and **both published source prereleases** are verified. Apply and read back the **still-missing `main` ruleset** through [PUBLISHING.md](PUBLISHING.md); the current API read found `main.protected=false` and no rulesets. Correct the public `v0.1.0rc2` release description without moving the tag. No paid feature or public business service is authorized by this source-publication task.
 
 The maintainer-selected project licence is [Apache-2.0](../LICENSE), with [NOTICE](../NOTICE); third-party software retains its own terms. Licence selection is no longer pending. Public source publication, local reference qualification, model-quality acceptance and production operation are four separate decisions.

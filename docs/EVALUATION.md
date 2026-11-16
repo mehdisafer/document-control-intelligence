@@ -186,6 +186,14 @@ were **not overwritten**. This replay is a source regression on the
 **existing** generator and split, not a new independent supplier distribution,
 post-training calibration or a new large-language-model evaluation.
 
+## Published `v0.1.0rc2` source-level readback — 17 November 2026
+
+The conservative source-label guard was merged into `main` by [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19), with final merge commit **`db42dd7c7668d70deb8cf5ea6512abcd94a36510`**. GitHub's public [`v0.1.0rc2` prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) resolves directly to that same commit. [GitHub Actions push run #43979529670](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) completed all three real hosted jobs successfully on the exact tag source; CircleCI `build-and-test` separately reports success.
+
+The downloaded [original Actions artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670/artifacts/14281402594) passed ZIP integrity inspection. Its `demo-local-linear/result.json` records the actual **7/7 eligible, 7 test-role-published, 7 restored-identical** synthetic dossiers under the unchanged verifier. Its `linear-final-replay/summary.json` records the full **36/36** original-generator test split, model SHA-256 `234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1`, **34/36 classification**, **30/36 eligible**, **30/30 eligible critical quality**, **0 false eligible**, and 100% citation/semantic support. The complete run also logged **139 Python** and **24 JavaScript** passing tests and **36/36 real Chrome checks**.
+
+This is a **new execution on the released source**, not a new supplier distribution, new weights or a retroactive pass of the original six-export result. Role-separated scripted test actors are not independent human approval, and these generator-derived metrics do not validate arbitrary external invoices, security against every malicious PDF or a production service.
+
 ## Generative profile and adverse executions
 
 The first final run obtained 12 real model responses, followed by 24
