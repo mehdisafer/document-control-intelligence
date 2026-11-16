@@ -40,11 +40,21 @@ See the [acceptance matrix](ACCEPTANCE.md) and
 - [ ] **Define an authorized target host** before deployment. Inspect the
   concrete rollout plan, backups, restoration, monitoring, network exposure
   and operating acceptance. Passing CI containers is not a deployed service.
-- [ ] Qualify the five open Dependabot PRs individually. In
-  [PR #5](https://github.com/mehdisafer/document-control-intelligence/pull/5),
-  `uv.lock` updates `pdfplumber` / `pdfminer-six` but
-  `requirements.lock` stays stale; regenerate its audited export before
-  any merge. Earlier passing CI does not validate those proposed changes.
+- [x] The five Dependabot upgrade requests were reconciled and superseded
+  by [PR #16](https://github.com/mehdisafer/document-control-intelligence/pull/16),
+  merged at `1c6b39f`: `pdfplumber==0.11.10`, `pdfminer-six==20260107`,
+  `pip-audit==2.10.1`, `pip-licenses==5.5.5`, and pinned GitHub Actions
+  updates. `requirements.lock` was regenerated to match the installed
+  `uv.lock` dependency graph, with three new consistency tests.
+  All three [main jobs](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43960638742)
+  passed. The five original bot PRs are now closed, not independently merged.
+  Future dependency upgrades still require their own lock and CI review.
+- [x] `0.1.0rc2` source version is merged through
+  [PR #17](https://github.com/mehdisafer/document-control-intelligence/pull/17)
+  at `e9e7f0f2`. The [merged-main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842)
+  passed **135 Python, 24 JavaScript and 36 real-browser checks**, plus Docker
+  and Terraform, with four additional release identity tests.
+  This does not change any frozen ML evaluation or authorize a host rollout.
 
 ## P1 — Extend supported purchasing cases
 
