@@ -1,48 +1,26 @@
-# Publish the source candidate
+# Source publication, release provenance and owner-side controls
 
-This is a maintainer handoff for the GitHub interface. Public-source publication
-of `mehdisafer/document-control-intelligence` is already authorized. The
-maintainer performs the interface actions below; repository preparation and
-readback use the GitHub connector. The assistant does not operate a browser or
-access an account session for this handoff.
+This handoff describes the current public GitHub source state and preserves the original UI procedure below as historical audit material. The maintainer operates repository Settings and Releases; the connected GitHub workflow performs readbacks, source/documentation PRs and CI verification only.
 
-Publishing the repository and a source prerelease is separate from qualifying a
-business service deployment. Browser, container, Terraform and intended-host
-gates remain tracked in [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1).
+## Current source-release state — observed 17 November 2026
 
-## Current release-scope note — 15 November 2026
+The repository is **Public**, with its original source under **Apache-2.0**, matching About description and ten topics. Both GitHub prereleases are published and marked **Pre-release**:
 
-The earlier private/unlicensed/no-runner snapshot below is retained as
-**historical**. The GitHub API now reports this repository **public**, with
-Apache-2.0 and a published source prerelease `v0.1.0rc1`. The original-preview correction has been merged into `main` through PR #10
-at `24cad9d17b400fca01ae901d97082ebbd45bc59c` and its post-merge three-job workflow succeeded. Branch
-protection and a new version tag are separate owner-side release controls.
-The tested visual raster fix at `32fb196bcc496b31071d87d02453dd6936b98ccf` has its
-[source-bound record](ORIGINAL_PAGE_PREVIEW.md); the old tag is immutable.
+| Tag | Immutable source commit | Publication |
+|---|---|---|
+| [`v0.1.0rc1`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc1) | `5c1f3e43f50c6d4056baabcafd5c39c40609f39b` | 15 November 2026 |
+| [`v0.1.0rc2`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) | `db42dd7c7668d70deb8cf5ea6512abcd94a36510` | 16 November 2026, 23:44:38 UTC |
 
-## Remaining owner-side tasks — 16 November 2026
+[GitHub Actions run #43979529670](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) completed all three real jobs successfully at the **exact rc2 tag commit**. CircleCI `build-and-test` also succeeded. The original run included **139 Python, 24 JavaScript and 36/36 real Chrome checks**, plus an independent same-generator 36-PDF replay and the corrected 7/7 frozen-model local-linear demo. Older failed six-export and Qwen results remain historical evidence and unresolved wider acceptance boundaries; see [ACCEPTANCE.md](ACCEPTANCE.md).
 
-GitHub metadata and the public `v0.1.0rc1` source release are already applied.
-**Do not repeat** the visibility change or recreate/repoint the old tag.
-The [full post-merge run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
-succeeded, with additional [visual preview proof](ORIGINAL_PAGE_PREVIEW.md).
-Only these release-administration steps remain:
+## Remaining owner-side tasks — do not repeat publication
 
-1. Create and inspect the **Active** `main-protection` branch ruleset from
-   [section 4](#4-protect-main-with-a-branch-ruleset), including the three
-   actual check names, and reopen it to verify the saved settings. On the
-   16 November API read, `main.protected=false` and the ruleset list was empty.
-2. For the updated source, create a **new**, explicitly marked prerelease
-   `v0.1.0rc2` using [prepared notes](RELEASE_NOTES_0.1.0rc2.md) and the
-   final reviewed `main` commit. Verify the tag object and release status.
-   The GitHub connector cannot perform repository administration/release
-   creation; these remain maintainer UI actions.
-3. Keep the broader P04 [acceptance issue](https://github.com/mehdisafer/document-control-intelligence/issues/1)
-   open until the model-quality and operating-host criteria are resolved.
-   Public source code is **not** a publicly deployed purchasing API.
+1. **Protect `main`** using [section 4](#4-protect-main-with-a-branch-ruleset) and re-read the actual saved **Active** ruleset. As of this read, GitHub returns `main.protected=false` and no active rulesets. Before requiring checks, confirm their exact emitted PR names and preserve an actionable single-maintainer review path.
+2. **Correct the description of the existing `v0.1.0rc2` release**, not its tag. The GitHub Release body currently names the earlier `599bff76773f02d72ee1ded32a55c08631f52f7a` as final source, quotes the earlier **135** passing Python tests, and has duplicated Markdown link wrappers. Replace only the editable release description with verified facts from [RELEASE_NOTES_0.1.0rc2.md](RELEASE_NOTES_0.1.0rc2.md): tagged `db42dd7c`, **139/24/36** actual tests, corrected **7/7** and 36-PDF synthetic replay with separate limitations. Do not delete, move or republish either tag.
+3. Independently verify signed-out rendering of both release URLs, README and evidence links when accessible. Authenticated GitHub API visibility is already confirmed; a separate signed-out current-release check is not inferred here.
+4. Keep [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) open for Qwen model quality, independent supplier generalization and authorized target deployment/restore/operator acceptance. GitHub releases do not deploy a public purchasing API.
 
-All steps below describing the initial private/no-release state are retained
-as **historical publication instructions** for audit, not as actions to redo.
+All instructions below describing the initial private/no-release state are dated historical preparation records, not outstanding tasks to replay.
 
 ## Observed starting state — 2026-11-15 (historical)
 
@@ -184,40 +162,19 @@ so it is not part of this policy. Once the ruleset is active, missing or failed
 required checks block future merges. Keep the failure visible and resolve its
 cause; creating the ruleset does not qualify an unexecuted workflow.
 
-## 5. Publish the updated source prerelease (after final CI)
+## 5. Completed: publish updated source prerelease (historical procedure)
 
-Open [the new release form](https://github.com/mehdisafer/document-control-intelligence/releases/new).
-Use:
+This operation was **completed on 16 November 2026**. The existing [`v0.1.0rc2` GitHub prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) targets **`db42dd7c7668d70deb8cf5ea6512abcd94a36510`**. The old `v0.1.0rc1` tag remains fixed at `5c1f3e43f50c6d4056baabcafd5c39c40609f39b`. **Do not run the New Release procedure again** or move either tag to correct release-description text.
 
-| Field | Value |
-|---|---|
-| Tag | `v0.1.0rc2` (new tag; never move `v0.1.0rc1`) |
-| Target | Exact final reviewed `main` SHA **after** CI |
-| Release title | `Document Control Intelligence 0.1.0rc2` |
-| Release description | The body in [RELEASE_NOTES_0.1.0rc2.md](RELEASE_NOTES_0.1.0rc2.md) |
-| This is a pre-release | Selected |
-
-Create the **new** `v0.1.0rc2` tag only after the final CI and integrated
-package/health/Compose version checks have succeeded. If that tag already
-exists, inspect it and stop rather than re-pointing it. Publish the prerelease
-only after confirming its commit matches the final reviewed `main` SHA;
-verify the release page and source archive without an authenticated session.
-The historical `v0.1.0rc1` remains immutable. These instructions do not
-claim that the new release has been published.
-
-If fresh hosted checks execute before publication, add their specific outcomes
-and evidence links to the release notes while retaining the earlier reports
-and their source attribution.
-
-GitHub's [release instructions](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
-cover tag selection, target selection and the prerelease option.
+The only outstanding release-editor action is to open [the existing release](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2), select **Edit**, correct its description using the exact tagged-source qualification in [RELEASE_NOTES_0.1.0rc2.md](RELEASE_NOTES_0.1.0rc2.md), and save. The published body previously displayed redundant bracketed Markdown link syntax; use one Markdown link per destination. Verify the final rendered body and tag SHA without changing the immutable tag.
 
 ## Record the resulting state
 
-Retain the public repository URL, saved About metadata, active ruleset URL,
-latest workflow URL/results, release URL and tag commit. The connector can read
-back repository metadata, rulesets where accessible, workflow results and
-releases after the maintainer's actions.
+Retain the public repository URL, applied About metadata, verified tag commits,
+exact-source hosted workflow links and both public release URLs. Record the
+active ruleset URL **only after** it is created and checked; the current repo
+has no active ruleset. The GitHub connector can re-read releases, tag objects,
+workflow results and permitted ruleset metadata after the maintainer's actions.
 
 Keep [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1)
 open for its unresolved criteria. Public availability and a prerelease label do not close model-quality or
