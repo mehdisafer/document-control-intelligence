@@ -8,6 +8,19 @@ improvements and a visibly rendered, evidence-linked original-page preview.
 It is a **synthetic Linux reference**, not a certified procurement service
 or a production-host deployment.
 
+## Packaging and upgrade identity
+
+The `0.1.0rc2` source aligns `pyproject.toml`, the editable package in
+`uv.lock`, the application version, API and `/healthz` metadata, Docker
+Compose image tags and the local Terraform image-ID example. A dedicated
+version-coherence test protects against future mismatches.
+
+The persisted processing-policy identity includes the application version.
+When upgrading a retained reference installation, back up first, review
+queued jobs and handle any old-policy work explicitly; do not silently
+replay queued documents or transfer accepted decisions between revisions.
+No production host migration has been performed as part of this release.
+
 ## What changed since `v0.1.0rc1`
 
 - **Readable source-page preview:** a verified original PDF is rasterized

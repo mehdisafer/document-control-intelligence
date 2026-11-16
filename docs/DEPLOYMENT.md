@@ -45,6 +45,20 @@ actual desktop/mobile screenshots and the
 of this bounded reference. It does not authorize or prove a target-host
 rollout, supplier-general accuracy or enterprise identity federation.
 
+## Versioning of retained work
+
+The source candidate `v0.1.0rc2` aligns the installed package, runtime
+identity, API health response and local Compose image tags. It is a **new**
+candidate; the historical `v0.1.0rc1` Git tag is not moved.
+
+The processing-policy digest includes the application version. An upgrade may
+therefore invalidate old queued work; do not silently replay or reinterpret
+previously accepted revisions. Inspect outstanding jobs, preserve a consistent
+backup, bring the existing worker to a clean stop, and decide explicitly which
+pending documents require a controlled retry under the new policy. Retained
+origins, corrections and audit history must not be truncated. This runbook
+does not authorize a deployment to any actual host.
+
 ## Trained local model
 
 ```bash
@@ -140,7 +154,7 @@ terraform -chdir=infra/terraform init
 terraform -chdir=infra/terraform fmt -check
 terraform -chdir=infra/terraform validate
 terraform -chdir=infra/terraform plan \
-  -var="image_id=$(docker image inspect dci:0.1.0rc1 --format '{{.Id}}')" \
+  -var="image_id=$(docker image inspect dci:0.1.0rc2 --format '{{.Id}}')" \
   -var="config_directory=$DCI_CONFIG_DIR" \
   -var="models_directory=$DCI_MODELS_DIR"
 ```
