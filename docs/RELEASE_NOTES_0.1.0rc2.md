@@ -46,26 +46,24 @@ No production host migration has been performed as part of this release.
   schema checks; source-linked reports and authentic screenshots remain
   available for inspection.
 
-## Current integrated source qualification
+## Published tag and current exact-source qualification — 16–17 November 2026
 
-The [`v0.1.0rc2`-versioned code](https://github.com/mehdisafer/document-control-intelligence/commit/e9e7f0f2f92a183539a36198b4ce34bde20c3307)
-has completed its [GitHub Actions main run #43961711842](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842).
-All three actual jobs passed: `smoke-and-integration`,
-`container-integration`, and `terraform-schema`. The smoke log records
-**135 Python tests passing**, **24 JavaScript tests passing**, and **36 real
-Chrome browser checks passing**, including visible original-PDF raster
-and the audit/export workflow.
+The [published `v0.1.0rc2` GitHub prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is marked **Pre-release**. The immutable Git tag points directly to [`db42dd7c7668d70deb8cf5ea6512abcd94a36510`](https://github.com/mehdisafer/document-control-intelligence/commit/db42dd7c7668d70deb8cf5ea6512abcd94a36510), where [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19) was merged. The historical `v0.1.0rc1` points to `5c1f3e43f50c6d4056baabcafd5c39c40609f39b` and has not moved.
 
-The earlier [PR #16](https://github.com/mehdisafer/document-control-intelligence/pull/16)
-has also integrated five reviewed Dependabot updates: `pdfplumber 0.11.10`,
-`pdfminer-six 20260107`, `pip-audit 2.10.1`, `pip-licenses 5.5.5`,
-and pinned UV/Terraform GitHub Actions. Its regenerated `requirements.lock`
-is now aligned with `uv.lock`, with three dependency-lock tests.
-The later [PR #17](https://github.com/mehdisafer/document-control-intelligence/pull/17)
-adds four release identity tests, all passed on the integrated source.
+[GitHub Actions push run #43979529670](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) completed **success** on the **exact tagged source** across all three jobs: `smoke-and-integration`, `container-integration`, and `terraform-schema`. CircleCI's `ci/circleci: build-and-test` status is separately successful on the same SHA.
 
-These are time- and source-bound results on synthetic documents, not a new
-ML evaluation, independent human approval or a production deployment.
+The original [GitHub Actions artifact #14281402594](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670/artifacts/14281402594) was downloaded and its ZIP integrity checked. It contains:
+
+- **139 passing Python unit/integration tests**, including four new source-label contract regressions; no failed tests.
+- **24 passing Node JavaScript state tests**.
+- **36/36 passing real Chrome checks**, including nonblank original-page raster, role separation, correction and export.
+- An executed **nine-scenario local-linear demonstration** with **7/7 eligible, explicitly test-role published and restored-identical dossiers**; the verifier's requirements were not relaxed.
+- An original-generator **36-PDF frozen-model replay**: **34/36 correct document classifications**, **30/36 eligible**, **30/30 critical quality among eligible**, **0 false eligible**, 100% source-citation/semantic validity on this synthetic split. It is **not** a new independent supplier holdout, changed model or Qwen evaluation.
+- Actual isolated Docker integration and Terraform schema checks. The dependency advisory result is bounded to its recorded package inventory and time.
+
+The earlier [PR #17 main-source run #43961711842](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842) passed **135 Python, 24 JavaScript and 36 browser** checks before PR #19. The updated 139-test total is bound to the later tagged source; the earlier test count remains historically correct. PRs [#16](https://github.com/mehdisafer/document-control-intelligence/pull/16) and [#17](https://github.com/mehdisafer/document-control-intelligence/pull/17) previously reconciled dependency locks and package/API/container release identity, respectively.
+
+**Public release description follow-up:** the editable GitHub release body was authored against the earlier `599bff76` commit and still references **135 tests** and duplicated Markdown link wrappers as observed on 17 November. The **tag itself is correct**. The maintainer should update **only the description** using this verified source information; do **not** recreate or retarget either tag. These committed notes may advance with documentation commits, but the immutable release source remains `db42dd7c`.
 
 ## Earlier original-page qualification
 
@@ -101,10 +99,9 @@ production-load qualification. See the
   accessibility or organizational security.
 - No authorized production target, production backup/restore exercise or
   public business API is delivered by this source release.
-- Branch protection and an updated GitHub release tag are maintainer-owned
-  repository administration operations. The
+- The new prerelease tag is **already published and source-verified**; branch protection remains an unfulfilled owner-side repository setting. The
   [acceptance issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1)
-  remains open for those and the model/operating decisions.
+  stays open for that setting, independent supplier generalization, failed Qwen quality and operating-target decisions.
 
 ## Reproduce
 
@@ -128,12 +125,7 @@ keep all credentials and runtime databases private. See
 
 ## Release metadata and provenance
 
-Use **new tag** `v0.1.0rc2`, mark **Pre-release**, and target the
-**final reviewed `main` SHA** after the current documentation PR is
-merged and checked. Verify the actual tag commit before publishing.
-The original `v0.1.0rc1` tag stays fixed at
-[`5c1f3e4`](https://github.com/mehdisafer/document-control-intelligence/commit/5c1f3e43f50c6d4056baabcafd5c39c40609f39b).
-Do not claim this new release is already published.
+The public [`v0.1.0rc2` prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) was published on 16 November 2026 at 23:44:38 UTC. Its tag resolves to **`db42dd7c7668d70deb8cf5ea6512abcd94a36510`**, with actual completed hosted qualification. The earlier [`v0.1.0rc1` tag](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc1) remains fixed at **`5c1f3e43f50c6d4056baabcafd5c39c40609f39b`**. Later documentation changes on `main` do not mutate either released snapshot. Correct the existing release body if its copy predates the final source, but never move a released tag to repair a description.
 
 Project source is [Apache-2.0](../LICENSE), with [NOTICE](../NOTICE).
 Third-party libraries, runtimes and model artifacts retain their own
