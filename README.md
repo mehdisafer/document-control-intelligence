@@ -4,23 +4,23 @@
 
 This Linux reference processes synthetic purchase orders, delivery notes and invoices. It preserves original PDF bytes, extracts bounded evidence, checks arithmetic and cross-document consistency, and binds correction, acceptance and publication to current document versions. A model proposal cannot directly authorize publication.
 
-## Delivery status — 16 November 2026
+## Published source and acceptance — 17 November 2026
 
-**The isolated reference and visible original-page preview are qualified on the merged source.** Executable preview revision `32fb196bcc496b31071d87d02453dd6936b98ccf` is included in `main` merge `24cad9d17b400fca01ae901d97082ebbd45bc59c`, whose full GitHub Actions workflow also passed. This is not a production-host deployment.
+The public [`v0.1.0rc2` source prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is **published** and its immutable tag points to [`db42dd7c7668d70deb8cf5ea6512abcd94a36510`](https://github.com/mehdisafer/document-control-intelligence/commit/db42dd7c7668d70deb8cf5ea6512abcd94a36510). The previous `v0.1.0rc1` tag remains at `5c1f3e43`. Publishing source is not deploying a business service.
 
-| Gate | Executed observation |
+| Gate | Executed observation at the tagged source |
 |---|---|
-| Full Python suite | **135 passed** on merged `0.1.0rc2` source, including parsing/OCR, PDF raster limits, version/lock checks and SQLite concurrency |
-| JavaScript state suite | **24 passed** on merged `0.1.0rc2` source, including stale-page suppression and same-page preview deduplication |
-| Actual browser workflow | Synthetic PDFs uploaded through the UI; distinct roles, acceptance, publication and downloaded export verified |
-| Rendered desktop/mobile | **36 real-browser checks passed** on merged `0.1.0rc2` source; real Chrome captures show a readable rasterized original beside its evidence |
-| Reference image | Built and ran document processing, review/export and restoration inside the actual image |
-| Compose / Terraform | Both Compose profiles validated; Terraform formatting/provider-schema validation executed without cloud apply |
-| Security/dependencies | Lint, schema drift, known-secret/history checks, dependency and component-licence controls executed |
+| Full Python test suite | **139 passed**, including PDF/OCR, 4 source-label regressions, release identity, dependency locks and SQLite recovery |
+| JavaScript state tests | **24 passed** |
+| Actual rendered Chrome reference | **36/36 checks passed**, including original-page raster visibility, role isolation, acceptance, publication and exports |
+| Local-linear scripted nine-scenario demo | **7/7 eligible, explicitly test-role published and restored exports**, using the **unchanged frozen model** |
+| Frozen-model synthetic 36-PDF replay | **34/36 correct classes**, **30/36 eligible**, **30/30 eligible critical quality**, **0 false eligible**; same generator and seed, not independent supplier data |
+| Docker, Compose and Terraform | Real reference container and Terraform schema jobs **passed**; no target-host deployment |
+| Security and dependency checks | Source/history scan and current installed dependency advisory checks executed; point-in-time scope only |
 
-[Latest merged-source qualification](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43961711842) · [Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Earlier CircleCI qualification](https://app.circleci.com/workflow/872295c2-9e38-4d00-90d5-1c7b9e4e1807) · [Versioned evidence](evidence/)
+[Exact tagged-source GitHub Actions run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) · [Original job artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670/artifacts/14281402594) · [Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Evaluation limits](docs/EVALUATION.md)
 
-The current source is **candidate `0.1.0rc2`**, with its package, API and local container versions aligned. The only currently **published** prerelease remains the immutable historical `v0.1.0rc1` tag; `v0.1.0rc2` must be published separately after integration and full CI. The historical 6/7 local-linear demo failure is retained. A subsequent source-label guard in [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19) has **actually produced seven eligible, explicitly published and restored dossiers**, with the unchanged model. Its separate 36-PDF synthetic regression replay retains 30/36 eligible, 30/30 critical quality and zero false eligibility. The new source still requires integration into `main`; Qwen has not met its quality gate. A successful controlled workflow does not establish production-target acceptance.
+**Historical and external limits remain visible.** The earlier frozen local-linear run achieved only 6/7 automatic exports and is not retroactively relabelled a pass. The new source-label guard was tested and integrated through [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19); it does not retrain the classifier. The separate Qwen profile still fails its 3/36 correct, 0/36 eligible quality result. The successful synthetic profile neither proves arbitrary supplier-document accuracy nor establishes production readiness.
 
 ## Reproduce the deterministic reference
 
@@ -84,21 +84,14 @@ The complete run exposed and corrected bounded SQLite initialization contention.
 
 Historical failed attempts remain in CI and evidence. The new acceptance record identifies the corrected source and does not retrospectively mark older failures as successful.
 
-## Next source prerelease
+## Published source prereleases
 
-The public `v0.1.0rc1` tag is an immutable snapshot from before the
-original-page raster and SQLite/CI fixes. These changes are already merged
-to `main`, with [original-page proof](docs/ORIGINAL_PAGE_PREVIEW.md) and
-[post-merge CI results](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074).
-The `0.1.0rc2` runtime/package version is prepared with a locked editable
-package, health endpoint, API and Compose alignment test; its GitHub
-**source prerelease is not yet published**:
-[release notes](docs/RELEASE_NOTES_0.1.0rc2.md).
-Do not move the existing tag; the new tag must resolve to the final reviewed
-`main` commit. This is a source release, not a hosted business service.
+The historical [`v0.1.0rc1`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc1) prerelease remains fixed at commit `5c1f3e43f50c6d4056baabcafd5c39c40609f39b`. The new [`v0.1.0rc2`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) prerelease is published from the verified `db42dd7c` source, with all three full GitHub Actions jobs and CircleCI green. Source releases are not a live purchasing service.
+
+**Publication text correction pending:** the GitHub release description, authored before PR #19 was merged, still calls `599bff76` the final source and does not include the subsequent 139-test and 7/7 results. The tag itself is correct and must **not** be moved. The maintainer may edit only the release description in the [existing release](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2), using the [reconciled source-bound notes](docs/RELEASE_NOTES_0.1.0rc2.md). Avoid creating another tag for this text correction.
 
 ## Licence, publication and remaining acceptance
 
 Original project code is under [Apache-2.0](LICENSE); [NOTICE](NOTICE) preserves relevant attribution and limitations. Third-party components retain their own terms. No client documents or client infrastructure were used.
 
-The reference's application, OCR, browser, container and Terraform-schema gates are now executed. Remaining acceptance concerns are the unqualified generative profile, independent-supplier generalization, a named production deployment and its operator acceptance, and maintainer-controlled release/branch protection. The original 6/7 local-linear failure remains historical; the source-gated 7/7 regression is separately qualified on PR #19. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.
+The reference's application, OCR, browser, container and Terraform-schema gates are now executed. Remaining acceptance concerns are the unqualified generative profile, independent-supplier generalization, a named production deployment and its operator acceptance, the still-unprotected main branch, and the release-description correction. The original 6/7 local-linear failure remains historical; the source-gated 7/7 regression is separately qualified on PR #19. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.
