@@ -1,6 +1,34 @@
 # Release candidate 0.1.0rc1
 
-## Purpose
+## Current post-release state — 16 November 2026
+
+This document originated as the **historical publication and qualification
+record for `v0.1.0rc1`**. Text below describing a private repository,
+unallocated GitHub runners, or pending browser/container checks reflects its
+original 13–15 November preparation window, not today's status.
+
+The repository is now **Public**, with Apache-2.0, the prepared About
+description and ten topics. The `v0.1.0rc1` prerelease is published and its
+tag is deliberately unchanged at
+[`5c1f3e4`](https://github.com/mehdisafer/document-control-intelligence/commit/5c1f3e43f50c6d4056baabcafd5c39c40609f39b).
+
+The later SQLite/CI improvements, real browser review and securely
+rasterized original-page preview have been **merged to `main`**. Their
+[original-page visual proof](ORIGINAL_PAGE_PREVIEW.md), the
+[post-merge 3-job PASS](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+and the [current acceptance ledger](ACCEPTANCE.md) supersede the historical
+runnerless/browser-unqualified observations below **only for the newer
+source revision**.
+
+A new [`v0.1.0rc2` source release body](RELEASE_NOTES_0.1.0rc2.md) is
+prepared for a new tag on the final reviewed `main` SHA; it is **not
+published** here. As last read, `main` remains **unprotected**, and
+[issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1)
+stays open for failed model-quality/automatic-coverage gates, a concrete
+authorized target deployment and other accepted limitations. A new release
+does not imply production certification.
+
+## Purpose — original `0.1.0rc1` preparation record
 
 This candidate delivers an executable synthetic purchasing workflow: PDF receipt,
 native/OCR extraction, local models, verifiable source evidence, deterministic
@@ -42,7 +70,7 @@ dependency and known-secret/history checks. The JavaScript harness uses a mocked
 DOM/fetch; it is not browser-rendering evidence. Model weights, prompts,
 thresholds and original execution artifacts are unchanged.
 
-## Prepared repository metadata
+## Prepared repository metadata — historical snapshot
 
 Description:
 
@@ -51,8 +79,10 @@ Description:
 Topics: `document-ai`, `data-engineering`, `mlops`, `local-first`, `fastapi`, `ocr`,
 `document-processing`, `human-in-the-loop`, `data-quality`, `python`.
 
-The 2026-11-15 connector observation still reports a private repository, empty
-description/topics, unprotected `main` and no GitHub releases. Apache-2.0 is
+The initial 2026-11-15 connector observation reported a private repository, empty
+description/topics, unprotected `main` and no GitHub releases.
+Those historical values have since changed as recorded above; only the lack of
+an active branch-protection ruleset remains current. Apache-2.0 is
 recognized. The available connector can edit source and track issues/PRs, but
 has no writer for visibility, metadata, rulesets or releases.
 
@@ -60,7 +90,7 @@ The maintainer explicitly owns the remaining GitHub UI actions. Agent browser
 access is neither needed nor part of this handoff. Follow the
 [maintainer publishing guide](PUBLISHING.md) for exact settings, then use the
 [prepared prerelease body](RELEASE_NOTES_0.1.0rc1.md). These are prepared values;
-the current observation does not assert that they have been applied.
+the historical observation did not assert that they had been applied at that point.
 
 ## Prepared protection policy
 

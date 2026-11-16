@@ -1,6 +1,7 @@
 # Acceptance matrix
 
-Updated 15 November 2026. This record distinguishes implementation, actual execution and acceptance. **The synthetic local reference is qualified through its full hosted parser/OCR, browser, image and Terraform-schema profiles. The entire P04 scope is not unconditionally accepted.** The local-linear automatic seven-export target, larger-model quality and intended production deployment remain separate gates.
+Updated 16 November 2026 from the GitHub source and run readback; the actual
+execution dates and immutable reports below remain 15 November 2026. This record distinguishes implementation, actual execution and acceptance. **The synthetic local reference is qualified through its full hosted parser/OCR, browser, image and Terraform-schema profiles. The entire P04 scope is not unconditionally accepted.** The local-linear automatic seven-export target, larger-model quality and intended production deployment remain separate gates.
 
 Application version `0.1.0rc1` remains a reference candidate; no stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
 
@@ -119,6 +120,6 @@ The original `overall_requested_local_qualification_met: false` is preserved in 
 
 1. Resolve the automatic local-linear target and generative-model quality criteria, or explicitly approve a narrower reference scope while retaining all negative results.
 2. Select and authorize the actual deployment target, inspect the plan, exercise its service/restore/monitoring and obtain operator acceptance. Hosted CI containers are not a production rollout.
-3. Apply and read back public visibility, repository metadata and appropriate protections through [PUBLISHING.md](PUBLISHING.md). Source publication was previously authorized; it does not authorize a paid feature or public business service. No visibility change is inferred from a passing build.
+3. Public repository visibility, Apache-2.0, About metadata and the original `v0.1.0rc1` source prerelease are verified. Apply and read back the **still-missing `main` ruleset** through [PUBLISHING.md](PUBLISHING.md); the current API read found `main.protected=false` and no rulesets. A new source prerelease is separately prepared, not published. No paid feature or public business service is authorized by this source-publication task.
 
 The maintainer-selected project licence is [Apache-2.0](../LICENSE), with [NOTICE](../NOTICE); third-party software retains its own terms. Licence selection is no longer pending. Public source publication, local reference qualification, model-quality acceptance and production operation are four separate decisions.

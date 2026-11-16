@@ -20,7 +20,9 @@ flowchart TD
   Pages --> Extract["Baseline / local linear / local Qwen"]
   Extract --> Verify["Independent citation and decimal checks"]
   Verify --> DB
-  DB --> Review["Original + fields + findings"]
+  DB --> Review["Rendered source page + fields + findings"]
+  CAS --> Preview["Bounded isolated PDFium raster child"]
+  Preview --> Review
   Review --> Approval["Explicit acceptance of current revisions"]
   Approval --> Publish["Idempotent publication and dossier export"]
 ```
@@ -74,6 +76,37 @@ PDF parsers are not document-authenticity verifiers. Pure-native invisible/white
 text, sophisticated visual deception, layout semantics outside the contract and
 forged supplier documents still require human review. A digest verifies content
 agreement; it does not establish authenticity or certification.
+
+## Original-page display boundary
+
+The authenticated review UI keeps the **original PDF download** and immutable
+SHA-256 identity separate from an **image used only for display**. The
+[`/api/documents/{id}/preview?page=N`](../src/dci/api.py) endpoint renders
+a page only after the document has been inspected; it resolves source bytes
+from the stored document ID, never a caller-supplied path or URL.
+
+A separate Linux `dci._preview_child` process enforces the existing
+parser's seccomp policy (including network-denied syscalls), CPU/memory/
+file-size and wall-clock budgets. It rechecks source SHA-256 and the PDF
+active-content/encryption rules before PDFium rendering. The parent enforces
+a **3,000,000-pixel** ceiling, **5 MiB** PNG byte limit, page identity,
+output digest and bounded subprocess concurrency. The API stays in-process
+only for source authorization, admission and result verification; PDFium
+does not run within the request-serving process.
+
+The browser fetches that PNG with the authenticated session, fences old
+actor/case/document/revision responses, revokes stale blob URLs and retains
+an already decoded same-page image while updating evidence. Page navigation
+remains explicitly tied to the original source page number. Downloading
+the original still returns the unchanged PDF bytes; a rendered PNG does
+not replace the evidence quote, extracted coordinates or document history.
+
+The real Chrome workflow checks decoded nonblank pixels and the
+image's visibility **at screenshot time** on desktop and mobile, not
+merely a Blob URL. [Execution and screenshots](ORIGINAL_PAGE_PREVIEW.md)
+are proof of the bounded synthetic visual path, not arbitrary supplier
+document authenticity, browser-universal support or a production-service
+security certification.
 
 ## Extraction and model routing
 
@@ -150,7 +183,7 @@ returns `413 EXPORT_BUDGET`, and a changed original returns
 application has already loaded the dossier and the archive has framing overhead.
 
 The UI binds asynchronous results to the actor session and current selection.
-Late metadata, original-PDF and audit responses cannot replace a newer view.
+Late metadata, original-PDF, original-page raster and audit responses cannot replace a newer view.
 Case refreshes also invalidate a pending document fetch when its revision or
 processing status advances. The field-correction control requires a selected current field;
 decision dialogs retain the IDs and revisions reviewed when opened. Cancelling

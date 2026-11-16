@@ -20,6 +20,30 @@ protection and a new version tag are separate owner-side release controls.
 The tested visual raster fix at `32fb196bcc496b31071d87d02453dd6936b98ccf` has its
 [source-bound record](ORIGINAL_PAGE_PREVIEW.md); the old tag is immutable.
 
+## Remaining owner-side tasks — 16 November 2026
+
+GitHub metadata and the public `v0.1.0rc1` source release are already applied.
+**Do not repeat** the visibility change or recreate/repoint the old tag.
+The [full post-merge run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+succeeded, with additional [visual preview proof](ORIGINAL_PAGE_PREVIEW.md).
+Only these release-administration steps remain:
+
+1. Create and inspect the **Active** `main-protection` branch ruleset from
+   [section 4](#4-protect-main-with-a-branch-ruleset), including the three
+   actual check names, and reopen it to verify the saved settings. On the
+   16 November API read, `main.protected=false` and the ruleset list was empty.
+2. For the updated source, create a **new**, explicitly marked prerelease
+   `v0.1.0rc2` using [prepared notes](RELEASE_NOTES_0.1.0rc2.md) and the
+   final reviewed `main` commit. Verify the tag object and release status.
+   The GitHub connector cannot perform repository administration/release
+   creation; these remain maintainer UI actions.
+3. Keep the broader P04 [acceptance issue](https://github.com/mehdisafer/document-control-intelligence/issues/1)
+   open until the model-quality and operating-host criteria are resolved.
+   Public source code is **not** a publicly deployed purchasing API.
+
+All steps below describing the initial private/no-release state are retained
+as **historical publication instructions** for audit, not as actions to redo.
+
 ## Observed starting state — 2026-11-15 (historical)
 
 | Item | Observed state |
@@ -194,6 +218,7 @@ back repository metadata, rulesets where accessible, workflow results and
 releases after the maintainer's actions.
 
 Keep [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1)
-open for its unresolved criteria. Public availability and a prerelease label
-do not close browser, container, Terraform, model-quality or intended-host
-deployment gates. No business service endpoint is deployed by these steps.
+open for its unresolved criteria. Public availability and a prerelease label do not close model-quality or
+intended-host deployment gates. The bounded synthetic browser, container
+and Terraform-schema checks have since passed on the later source, as
+recorded in [ACCEPTANCE.md](ACCEPTANCE.md). No business service endpoint is deployed by these steps.

@@ -1,70 +1,93 @@
 # Prioritized backlog and current limits
 
-## P0 — Close candidate evidence and release decisions
+Last reconciled: **16 November 2026**. This is the current backlog; the
+original failures, model reports and earlier release notes remain preserved.
+See the [acceptance matrix](ACCEPTANCE.md) and
+[original-page evidence](ORIGINAL_PAGE_PREVIEW.md).
 
-- Keep generative classification unqualified unless its independent
-  quality/coverage gate is met on a new untouched holdout. The completed bounded
-  replay and both earlier failed executions are preserved in evidence.
-- Execute and inspect real browser, container and Terraform CI results, including
-  actual screenshots. Resolve concrete failures before marking those checks passed.
-- Resolve the GitHub Actions rejection before runner allocation. The actual cause
-  is not available through the connector; do not infer a billing or code failure.
-- Agree the intended deployment host and inspect a concrete deployment plan before
-  rollout. Public source publication does not deploy a public business service.
-- The maintainer applies [prepared GitHub settings](PUBLISHING.md), executes the
-  already-authorized public visibility change and verifies anonymous access.
-  The 2026-11-15 observation still reports private. Apache-2.0 and the source
-  publication decision are resolved; no agent browser authentication is required.
-- Qualify the five open Dependabot upgrades separately before merging. In
+## P0 — Current release and acceptance gates
+
+- [x] Publish the repository under **Apache-2.0** with About metadata and
+  [source prerelease `v0.1.0rc1`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc1).
+  The old tag is immutable and predates later runtime fixes.
+- [x] Exercise the deterministic reference in CI. The
+  [merged-source GitHub Actions run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+  completed all three real jobs, including parser/OCR, API, browser, image,
+  Compose and Terraform-schema checks. No target deployment is implied.
+- [x] Replace the unreadable native PDF frame with an authenticated,
+  source-hash-verified, isolated page raster. The
+  [visual qualification](ORIGINAL_PAGE_PREVIEW.md) includes real Chrome
+  desktop/mobile screenshots and checks at screenshot time; issue
+  [#11](https://github.com/mehdisafer/document-control-intelligence/issues/11)
+  is closed for the bounded synthetic reference, not supplier-general use.
+- [ ] **Protect `main`** using the prepared branch ruleset: require PR,
+  conversation resolution, prevent force-push/deletion, and require the
+  actual `smoke-and-integration`, `container-integration` and
+  `terraform-schema` checks. The GitHub API read on 16 November found no
+  ruleset and `main.protected=false`. The connector has no repository
+  administration writer; this remains an owner-side UI action.
+- [ ] **Publish an updated source prerelease** after reviewing the final
+  integrated SHA. [`v0.1.0rc2` notes](RELEASE_NOTES_0.1.0rc2.md) are
+  prepared; no new tag or release has been created by this documentation work.
+- [ ] **Resolve the model-quality decisions.** The frozen local-linear demo
+  produced **6** automatic exports against the original target of **7**;
+  an attributed human correction produced the seventh in a **separate** run.
+  The bounded Qwen profile classified **3/36** documents correctly and made
+  **0/36** eligible. Do not mark those failed gates passed or silently narrow
+  the original scope. Improve and re-evaluate on a new untouched holdout,
+  or obtain an explicit maintainer decision to ship only the qualified
+  deterministic/reference profiles.
+- [ ] **Define an authorized target host** before deployment. Inspect the
+  concrete rollout plan, backups, restoration, monitoring, network exposure
+  and operating acceptance. Passing CI containers is not a deployed service.
+- [ ] Qualify the five open Dependabot PRs individually. In
   [PR #5](https://github.com/mehdisafer/document-control-intelligence/pull/5),
-  regenerate `requirements.lock` to match the changed `uv.lock` parser versions;
-  the audit input otherwise remains stale. The
-  [scoped review](../evidence/publication/handoff-2026-11-15/dependabot-review.json)
-  does not transfer current-main test results to these proposed upgrades.
+  `uv.lock` updates `pdfplumber` / `pdfminer-six` but
+  `requirements.lock` stays stale; regenerate its audited export before
+  any merge. Earlier passing CI does not validate those proposed changes.
 
-## P1 — Extend useful purchasing coverage
+## P1 — Extend supported purchasing cases
 
-- Resolve the frozen local-linear label model's injection-footer confusion using
-  a separately designed training/tuning set and a new holdout. It currently treats
-  an unrelated URL-footer line as a second subtotal candidate and safely abstains.
-  The original six-export demo, its failed seven-export assertion and a separate
-  attributed human repair yielding seven restored exports are retained.
-- Add a new independent holdout with unseen field labels, table geometry and scan
-  acquisition before improving classification or extraction further.
-- Replace the first contract's pipe-delimited table assumption with independently
-  evaluated geometric table extraction. Publish abstention/coverage together.
-- Define credit-note/return signs, discounts/freight, FX sources, multiple orders
-  and explicit line identities for repeated SKUs before accepting those cases.
-- Assess visual/text-layer discrepancies on pure-native PDFs and keep document
-  authenticity separate from extraction evidence.
-- Add enterprise identity federation, scoped access to dossiers and tested session
-  lifecycle before a broader organization deployment.
+- Improve the local-linear model's injection-footer confusion with a
+  new train/tuning split and independent holdout. Preserve the original
+  abstention and failed seven-export assertion as historical proof.
+- Add independently generated layouts, labels, scan conditions and table
+  geometry; publish coverage and critical-field quality together.
+- Evaluate geometric table extraction rather than presuming pipe-delimited
+  synthetic table geometry.
+- Define explicit contracts for returns/credit notes, freight, discounts,
+  FX rates, multiple orders and repeated-SKU line identities before accepting
+  these cases.
+- Assess native PDF visual/text-layer discrepancies and forged supplier
+  content. A source hash is evidence of byte identity, not authenticity.
+- Add federated identity, dossier-level access control and session lifecycle
+  testing before any organization-wide deployment.
 
-## P2 — Grow operations from measured demand
+## P2 — Operations when the target is agreed
 
-- Exercise a longer workload on the intended host with agreed document size and
-  OCR proportions. Measure host quotas, disk pressure and recovery under load.
-- Introduce multi-host state/queue infrastructure only when measured capacity or
-  availability needs justify it. Re-prove publication/version invariants.
-- Agree retention, archival and legal-hold rules before implementing deletion.
-  The current retention setting is a policy signal, not an automatic purge.
-- Produce a native-image SBOM and preserve build provenance/digests for a deployed
-  image. Python inventory and known-vulnerability checks cover a narrower scope.
+- Exercise realistic workload sizes and OCR mixes on the authorized host;
+  measure rate, P95 latencies, process/memory/disk budgets, restart and
+  backpressure with the actual resource limits.
+- Introduce multi-host queue/storage only when measured capacity demands it;
+  re-prove versioning and idempotent publication invariants first.
+- Define retention, archival and legal-hold behavior. The current
+  `retention_days` policy setting is not an implemented automatic purge.
+- Retain image SBOM/digest/build provenance for any deployed image. The
+  current Python dependency and licence inventory has a narrower scope.
 
-These items are visible scope limits. They are not hidden behind a generic
-"production-ready" label or represented by unexecuted integrations.
+## Recorded evidence and boundaries
 
-## Completed candidate evidence
+The [evidence index](../evidence/) retains the original 107/112-test
+qualification results, failed raw local-linear demonstration, repaired
+human-reviewed result, final synthetic evaluations, 72-output semantic
+regression, real HTTP path, worker-load results and restored exports.
+Later hosted runs qualify their own source revisions; they do not alter
+those original reports.
 
-The [evidence index](../evidence/) links exact source hashes, original demo
-failures and successes, restoration, 72 identical semantic regression outputs,
-one/two-worker load and real HTTP/separate-worker execution. Historical results
-remain attributed to their original source. Fixed source `8839be77` separately
-passes 112 Python and 23 JavaScript state/unit tests, both without skips.
-
-The public-source review fixed stale document/PDF/audit responses, actor changes,
-pending metadata made obsolete by a newer revision/status, and dialog mutation
-targets. It also includes UTF-8 dossier and manifest JSON in the ZIP's combined
-50 MiB uncompressed-member budget. These focused fixes do not close the real
-browser, container, Terraform or target-deployment gates above.
-
+The merged runtime has since passed **128 Python tests, 24 JavaScript
+state tests and 36 real-browser checks**, including a visibly decoded
+raster original, on [source `32fb196b`](https://github.com/mehdisafer/document-control-intelligence/commit/32fb196bcc496b31071d87d02453dd6936b98ccf).
+The [post-merge workflow](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+passed its three jobs. These facts establish a **bounded synthetic reference**,
+not production readiness, third-party document authenticity, arbitrary supplier
+accuracy or acceptance of the failed model profiles.
