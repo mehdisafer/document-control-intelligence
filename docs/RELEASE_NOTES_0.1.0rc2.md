@@ -33,6 +33,14 @@ No production host migration has been performed as part of this release.
   body inspection; session and document selection fence stale results.
 - **SQLite startup:** bounded retry of real lock contention during WAL
   initialization, with atomic migration, rollback and negative-path tests.
+- **Local-linear evidence selection:** high-confidence predictions from
+  unsupported printed labels no longer contaminate a verified critical field.
+  The independent known-label/citation verifier, abstention for genuine
+  repeated conflicts, and original frozen model are unchanged. A new strict
+  nine-scenario [PR #19 demo](https://github.com/mehdisafer/document-control-intelligence/pull/19)
+  passed with seven explicit test-role publications/restored exports; a complete
+  36-PDF same-generator regression preserved the predeclared quality gate
+  and zero false eligibility. Historical six-export evidence remains intact.
 - **CI and reproducibility:** a focused CircleCI test suite plus three full
   GitHub Actions jobs for real parser/OCR, API, browser, Docker and Terraform
   schema checks; source-linked reports and authentic screenshots remain
@@ -77,10 +85,14 @@ production-load qualification. See the
 
 ## Known limitations and negative results
 
-- The frozen `local-linear` demonstration produced **six** automatic
-  dossier exports against an original target of **seven**; a separately
-  audited human correction allowed seven. That correction is not an
-  automatic-model pass.
+- The **original** frozen `local-linear` demonstration produced **six**
+  dossiers against a target of **seven**, and the subsequent manual-repair
+  exercise obtained seven with a distinct actor. Both historical reports
+  remain unchanged. New source-label gating, with the **same frozen model**,
+  subsequently produced **seven eligible dossiers and seven explicit
+  test-role publications/restored exports** on a new CI run. The matched
+  source regression still must be distinguished from general supplier
+  validation or independent human approval.
 - The experimental local Qwen profile completed 36 requests but classified
   **3/36** documents correctly and made **0/36** eligible. It is not an
   approved fallback or production model.

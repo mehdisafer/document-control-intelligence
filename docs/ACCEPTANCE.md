@@ -1,7 +1,7 @@
 # Acceptance matrix
 
 Updated 16 November 2026 from the GitHub source and run readback; the actual
-execution dates and immutable reports below remain 15 November 2026. This record distinguishes implementation, actual execution and acceptance. **The synthetic local reference is qualified through its full hosted parser/OCR, browser, image and Terraform-schema profiles. The entire P04 scope is not unconditionally accepted.** The local-linear automatic seven-export target, larger-model quality and intended production deployment remain separate gates.
+execution dates and immutable reports below remain 15 November 2026. This record distinguishes implementation, actual execution and acceptance. **The synthetic local reference is qualified through its full hosted parser/OCR, browser, image and Terraform-schema profiles. The entire P04 scope is not unconditionally accepted.** The original local-linear six-export failure remains an immutable historical result; a separate source-gated 7/7 demonstration and 36-PDF regression now pass at PR #19's tested source. Generative quality, independent-supplier generalization and production deployment remain separate gates.
 
 Application version `0.1.0rc2` is integrated into `main` with executed package/API/container coherence tests; the only published historical source prerelease remains `v0.1.0rc1`. No stable production `v1.0.0` is asserted. [Issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) must remain open until its remaining criteria are resolved without rewriting failed results.
 
@@ -30,6 +30,40 @@ The only **published GitHub source release** is still `v0.1.0rc1`; the
 pre-release tag. `main` branch protection and the P04 model/host acceptance
 criteria remain open. Do not confuse source qualification with production
 deployment or arbitrary supplier-document accuracy.
+
+## Source-label guard regression — exact branch qualification
+
+[PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19)
+qualifies a *follow-on source change* that prevents learned critical-field
+proposals from unsupported printed labels entering the candidate aggregation.
+The independent source citation and known-label verifier is unchanged;
+true contradictory known labels continue to abstain. The model is not
+retrained and the original source/weights/evaluation evidence are retained.
+
+[GitHub Actions run 43977956360](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977956360)
+executed on source `ac8745920ade9f023ebe9b9a692a9cd8811d48ba`:
+**139 Python tests**, **24 JavaScript tests**, **36 real Chrome checks**,
+plus successful Docker and Terraform jobs. The nine-scenario baseline and
+the **frozen local-linear** demos both passed the unchanged strict
+seven-export verifier. The local-linear report contains **7 eligible,
+7 explicitly published and 7 restored-identical dossiers**. The two
+expected blocked business scenarios stayed blocked.
+
+The separate full final-split **replay** processed 36 synthetic PDFs
+using the same frozen model SHA-256 and original generator seed 42:
+**34/36 correct classification, 30/36 eligible, 30/30 critical quality,
+0 false eligible, 100% citation and semantic evidence validity**.
+The predeclared reference policy gate was true with zero execution
+failures. Source identity, manifest and original outputs are retained in
+[run artifact #14282505849](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977956360/artifacts/14282505849).
+A second [PR CI run #43977964213](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43977964213)
+also passed all three jobs. These are **PR-branch** checks until
+the change is merged and tested on `main`; the source-qualified result
+does not retroactively turn the original six-export run into a pass.
+
+This is a same-generator synthetic regression, not a new independent
+supplier holdout or a general safety guarantee. Qwen remains unqualified.
+Scripted test-role decisions are explicit but not human approval.
 
 ## Original-page visibility correction — earlier P0 evidence
 
@@ -137,14 +171,16 @@ Parser authenticity for arbitrary pure-native hidden text, unsupported purchasin
 | Deterministic reference | Seven demo dossiers and corresponding restoration | Qualified within the documented reference scope |
 | Local statistical model | Frozen synthetic corpus, 34/36 classification, 30/36 eligible and 30/30 eligible critical quality; zero false eligible in that set | Small generator-derived population; not general supplier accuracy |
 | Raw local-linear demonstration | Six automatic exports against an original target of seven | Original strict seven-export gate **not met** |
+| Source-gated local-linear demonstration (PR #19) | Seven eligible dossiers, seven explicit test-role publications, seven restored-identical exports; unchanged strict verifier | New branch-source qualification **met**, original six-export report still failed historically |
+| Source-gated frozen final-set replay (36 generated PDFs) | 34/36 correct class, 30/36 eligible, 30/30 eligible critical quality, 0 false eligible, 100% supported citations | Existing synthetic policy gate met; no independent-supplier generalization claim |
 | Attributed human repair | Seventh dossier published after documented subtotal correction and separate approval; restored state consistent | Human-assisted workflow evidence, not automatic-model acceptance |
 | Larger Qwen/llama.cpp profile | 36 real requests, 3/36 correct classifications, 0/36 eligible; original resource/response records retained | Quality gate **not met** |
 
-The original `overall_requested_local_qualification_met: false` is preserved in [qualification evidence](../evidence/qualification/). Neither a human-repaired run nor the new complete deterministic/browser run changes that recorded outcome. Improvement requires an explicit new evaluation, preserving the original frozen results; acceptance of a narrower model scope is a maintainer decision, not an implicit change made by CI.
+The original `overall_requested_local_qualification_met: false` remains preserved in [qualification evidence](../evidence/qualification/). Neither the scripted human repair nor the newer, now successful seven-export source-gated run rewrites that historical failure. A separately recorded, complete 36-PDF regression has been executed on the source-gated revision; it repeats the existing synthetic test split rather than supplying a new independent supplier holdout. Acceptance of Qwen or deployment scope still requires further evidence or explicit maintainer decisions.
 
 ## Remaining gates and publication
 
-1. Resolve the automatic local-linear target and generative-model quality criteria, or explicitly approve a narrower reference scope while retaining all negative results.
+1. The original six-versus-seven local-linear result remains historically failed; a follow-on, frozen-model 7/7 demonstration and 36-PDF synthetic regression now pass at PR #19's source. Verify integration on `main` and separately qualify independent supplier layouts and the still-failed Qwen generative-model quality gate, or explicitly approve the narrower reference scope while retaining all negative results.
 2. Select and authorize the actual deployment target, inspect the plan, exercise its service/restore/monitoring and obtain operator acceptance. Hosted CI containers are not a production rollout.
 3. Public repository visibility, Apache-2.0, About metadata and the original `v0.1.0rc1` source prerelease are verified. Apply and read back the **still-missing `main` ruleset** through [PUBLISHING.md](PUBLISHING.md); the current API read found `main.protected=false` and no rulesets. A new source prerelease is separately prepared, not published. No paid feature or public business service is authorized by this source-publication task.
 
