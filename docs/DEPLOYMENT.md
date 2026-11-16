@@ -20,6 +20,31 @@ Open `http://127.0.0.1:8000`. Tokens are in the private credential file written 
 `init`, not the console. For the seeded UI, use the runtime configuration produced
 by `dci demo` instead. Do not expose a development listener beyond loopback.
 
+## Original-page preview in the review workspace
+
+After native/OCR inspection, the original PDF can be downloaded with the
+existing authenticated document endpoint. For an inline, readable source
+page, the UI uses an authenticated `image/png` response from
+`GET /api/documents/{document_id}/preview?page=1` instead of executing
+the native PDF browser plugin. The PNG is generated in a separate, bounded,
+network-denied PDFium process and verified against the immutable source.
+The original file, citations and field decisions remain unchanged.
+
+The Linux host/container **must** provide libseccomp and the pinned PDFium
+Python dependency. If either is unavailable, preview generation fails closed
+and the UI displays an explicit failure with the original download link;
+do not weaken CSP or permit arbitrary PDF actions to make the preview work.
+The API bounds simultaneous render jobs, image dimensions, output bytes and
+time; other callers may receive `429 PREVIEW_BUSY` during contention.
+Avoid exposing the local listener beyond loopback or routing user documents
+to a third-party renderer.
+
+The [original-page qualification](ORIGINAL_PAGE_PREVIEW.md) records
+actual desktop/mobile screenshots and the
+[post-merge CI execution](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074)
+of this bounded reference. It does not authorize or prove a target-host
+rollout, supplier-general accuracy or enterprise identity federation.
+
 ## Trained local model
 
 ```bash

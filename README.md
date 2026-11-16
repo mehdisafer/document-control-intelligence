@@ -71,6 +71,17 @@ The complete run exposed and corrected bounded SQLite initialization contention.
 
 Historical failed attempts remain in CI and evidence. The new acceptance record identifies the corrected source and does not retrospectively mark older failures as successful.
 
+## Next source prerelease
+
+The public `v0.1.0rc1` tag is an immutable snapshot from before the
+original-page raster and SQLite/CI fixes. These changes are already merged
+to `main`, with [original-page proof](docs/ORIGINAL_PAGE_PREVIEW.md) and
+[post-merge CI results](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43774277074).
+A new `v0.1.0rc2` source prerelease is **prepared but not yet published**:
+[release notes](docs/RELEASE_NOTES_0.1.0rc2.md).
+Do not move the existing tag; the new tag must resolve to the final reviewed
+`main` commit. This is a source release, not a hosted business service.
+
 ## Licence, publication and remaining acceptance
 
 Original project code is under [Apache-2.0](LICENSE); [NOTICE](NOTICE) preserves relevant attribution and limitations. Third-party components retain their own terms. No client documents or client infrastructure were used.
