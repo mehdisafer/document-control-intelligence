@@ -1,6 +1,6 @@
 # Prioritized backlog and current limits
 
-Last reconciled: **16 November 2026**. This is the current backlog; the
+Last reconciled: **17 November 2026**. This is the current backlog;
 original failures, model reports and earlier release notes remain preserved.
 See the [acceptance matrix](ACCEPTANCE.md) and
 [original-page evidence](ORIGINAL_PAGE_PREVIEW.md).
@@ -26,9 +26,7 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   `terraform-schema` checks. The GitHub API read on 16 November found no
   ruleset and `main.protected=false`. The connector has no repository
   administration writer; this remains an owner-side UI action.
-- [ ] **Publish an updated source prerelease** after reviewing the final
-  integrated SHA. [`v0.1.0rc2` notes](RELEASE_NOTES_0.1.0rc2.md) are
-  prepared; no new tag or release has been created by this documentation work.
+- [x] **Publish the updated source prerelease:** [`v0.1.0rc2`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is live as a **Pre-release**, with immutable tag SHA `db42dd7c7668d70deb8cf5ea6512abcd94a36510`. [The exact tagged-source run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) passed all three full GitHub Actions jobs and CircleCI also succeeded. Do **not** move the older `v0.1.0rc1` tag. The separate **release-description text correction** remains for the maintainer: it still cites `599bff76` as the final source and duplicates some Markdown links; use the [updated source notes](RELEASE_NOTES_0.1.0rc2.md).
 - [x] **Resolve the extra local-linear abstention on the bounded synthetic
   demonstration at the new source.** [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19)
   prevented unsupported URL-footer proposals from masking a genuine subtotal
@@ -37,7 +35,10 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   dossiers; 36/36 existing synthetic final PDFs were replayed with **30/36**
   eligible, **30/30** eligible critical quality and **zero false eligible**.
   The original 6/7 failure and separately audited human repair remain intact.
-  These are branch-source proofs until merged and re-executed on `main`.
+  **PR #19 is now merged to `main` and the exact tagged-source CI has passed**:
+  **139 Python, 24 JavaScript and 36/36 Chrome checks**, including
+  new source-label tests and a complete synthetic 36-PDF replay. This is a
+  bounded generator-derived qualification, not independent supplier validation.
 - [ ] **Resolve generative model quality and generalization.** Qwen had
   **3/36** correct classifications and **0/36** eligible in its bounded
   execution. A new independent supplier/layout holdout is still absent;
