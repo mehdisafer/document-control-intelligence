@@ -7,7 +7,7 @@ from dci.llm import MODEL_SHA256, PROMPT_VERSION
 
 class QwenDevelopmentProbeTests(unittest.TestCase):
     def test_model_and_protocol_pinned(self):
-        self.assertEqual(PROMPT_VERSION, "structured-extraction-1.3")
+        self.assertEqual(PROMPT_VERSION, "structured-extraction-1.4")
         self.assertEqual(MODEL_SHA256, "b0638f08417a2d3c8652760462eb5407c6e30173cf9608ad0820757a281eea0e")
         self.assertEqual(GENERATOR, "independent-node-pdf-writer-1.0")
 

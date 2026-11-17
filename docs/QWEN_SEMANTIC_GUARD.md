@@ -65,3 +65,19 @@ eligibility coverage, new/fresh holdout performance or CPU inference cost.
 The original Qwen 3/36 correct, 0/36 eligible remains the latest *real*
 generative model measurement and **fails the quality gate**. See the
 [current consolidated post-release acceptance status](POST_RC2_QUALIFICATION.md).
+
+## Subsequent real model experiment — 17 November 2026
+
+The later [PR #26](https://github.com/mehdisafer/document-control-intelligence/pull/26)
+ran the pinned Qwen GGUF with prompt 1.3 on the twelve **previously seen**
+Node-generated synthetic development PDFs. Actual results were **7/12 class
+correct, 4/12 eligible, 0 false eligible, 100% citation/semantic validity**,
+with zero inference failures. The declared 50% development coverage threshold
+was **not met** (4/12 = 33.33%). Both in-contract purchase orders were
+classified unknown despite explicit titles, so the protocol 1.4 *experimental*
+prompt now instructs the model to select the one unambiguous recognized
+document title class, or unknown if none/conflicting. New real inference
+qualification is required; no historical result changes.
+
+The earlier paragraph describing Qwen 1.3 as unmeasured refers only to the
+original source-hardening PR #24, **before** PR #26 ran inference.

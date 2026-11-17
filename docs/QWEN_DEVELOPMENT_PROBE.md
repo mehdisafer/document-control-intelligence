@@ -1,4 +1,4 @@
-# Real Qwen 1.3 — bounded synthetic development diagnosis
+# Qwen 1.3 / 1.4 — bounded synthetic development diagnosis
 
 This workflow conducts **real inference**, unlike the prior read-only
 36-response forensic audit. It executes a strictly pinned GGUF model and CPU
@@ -16,8 +16,9 @@ It installs pinned Python/uv and native parser prerequisites, creates exactly
 six versioned-known-label and six unsupported-contract PDFs, downloads two
 reviewed public source artifacts through the existing
 scripts/provision_llm.py allowlist, and verifies both cryptographic hashes.
-The local runtime runs the current Qwen3-0.6B / prompt
-structured-extraction-1.3 policy with 4 CPU threads, 8,192 context,
+The local runtime uses the current source prompt protocol
+(1.3 for the first completed run; 1.4 for the subsequent title-decision
+experiment) with 4 CPU threads, 8,192 context,
 90-second request timeout, 900-second server wall limit, 4 GiB address-space
 limit and loopback-only networking. The job's total timeout is 25 minutes.
 No cloud inference provider is allowed.
@@ -59,3 +60,28 @@ reviewed business decisions or target-host deployment is proven by this run.
 A later **fresh unused**, independently sourced and annotated supplier
 holdout with a precommitted gate and no tuning on final data is necessary
 before closing the P04 generative-model quality criterion.
+
+## Executed protocol 1.3 baseline — 17 November 2026
+
+[PR #26 real model run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44168516337)
+and [exact merged-main repeat](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563)
+produced **12/12 real Qwen inference traces**, zero errors, **7/12 correct
+document classifications**, **4/12 explicitly human-review-eligible documents**,
+**4/4 eligible critical quality**, **0/6 unsupported-layout eligible**, zero
+false eligibility and 100% source citation/semantic validity on these
+previously seen synthetic development inputs. The **50% eligible-coverage
+policy failed** because 4/12 (33.33%) is below 6/12. The report
+[for the merged source](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563)
+is retained in its original artifact; model/runtime identities were pinned.
+This historical development outcome must never be converted into a PASS.
+
+All **two in-contract purchase orders** were classified `unknown` despite
+printed exact title support. Their fields were otherwise source-supported;
+class abstention blocked review eligibility. Protocol 1.4 narrows the
+instruction for the model's **kind** decision only. It does not force an
+unrecognized layout into eligibility, override the independent title verifier,
+change model weights or relax published business/source restrictions.
+
+**Protocol 1.4 outcome is UNMEASURED until its own real CI finishes.** Both
+samples are development data, so even a policy success cannot close the
+independent real-supplier/fresh-holdout quality gate.

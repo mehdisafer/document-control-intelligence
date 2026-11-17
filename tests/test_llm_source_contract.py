@@ -63,6 +63,15 @@ class QwenStrictFieldContractTests(unittest.TestCase):
         with self.assertRaises(ModelUnavailable):
             _validate_proposal(proposal(line_rows=["R9"]), self.allowed, {"R0"})
 
+    def test_prompt_requires_unambiguous_title_signal_for_document_class(self):
+        from dci.llm import PROMPT, PROMPT_VERSION
+        self.assertEqual(PROMPT_VERSION, "structured-extraction-1.4")
+        self.assertIn("exact_title_signals", PROMPT)
+        self.assertIn("ALL signals have the same kind", PROMPT)
+        self.assertIn("A unique PURCHASE ORDER title", PROMPT)
+        self.assertIn("conflicting kinds", PROMPT)
+        self.assertIn("output.kind is unknown", PROMPT)
+
     def test_exact_title_signals_are_bounded_and_not_guessed_from_reference(self):
         doc = SimpleNamespace(pages=[
             SimpleNamespace(number=1, text="INVOICE\nPurchase order: PO-9\nOrdinary text"),

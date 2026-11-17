@@ -42,7 +42,16 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   bounded generator-derived qualification, not independent supplier validation.
 - [x] **Forensically reconcile the original Qwen failure (diagnostic gate only):** [PR #23](https://github.com/mehdisafer/document-control-intelligence/pull/23) hosted [run #44161099199](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199) audited 36 original responses/PDFs and all 406 original indexed files with SHA-256, and retained the [original aggregate JSON](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199/artifacts/14363287699). Model proposed `unknown` in 30/36, including 14 cases with an exact recognized title; **35/272** field-candidate selections assigned a different recognized label. **No new inference, Qwen quality acceptance or supplier-general claim**; see [full analysis](QWEN_TRACE_FORENSICS.md).
 - [x] **Constrain Qwen candidate provenance before model result acceptance:** [PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) merged at `b78104439c66`, [exact-main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) 3/3 GitHub Actions + CircleCI success, 162 Python tests including eight new semantic guard cases, 24 JS, 36 Chrome. Field IDs must match independently recognized printed labels; duplicate/conflicting recognized values still invoke existing abstention. **No new Qwen inference: its 3/36 correct, 0/36 eligible quality gate remains OPEN**. Detailed [provenance and coverage](QWEN_SEMANTIC_GUARD.md), [cross-gate status](POST_RC2_QUALIFICATION.md).
-- [ ] **Run real Qwen 1.3 development inference separately from the historical audit.**
+- [x] **Run actual pinned Qwen 1.3 synthetic development inference (not general model acceptance):**
+  [PR #26](https://github.com/mehdisafer/document-control-intelligence/pull/26)
+  and [merged-source Qwen CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563)
+  executed 12/12 real model requests, 7/12 correct classes, **4/12 eligible**
+  (33.33%, below 50% target), 4/4 critical quality among eligible,
+  zero false eligible and 0/6 unsupported cases eligible. **Development
+  quality gate failed**; original 3/36 Qwen failure remains separate.
+- [ ] **Evaluate the experimental prompt 1.4 title-decision rule** through
+  the same real 12-PDF development workflow. This is tuning on known
+  synthetic examples, not a new untouched or independent supplier holdout.
   The bounded, model-hash-checked synthetic development workflow is
   [documented here](QWEN_DEVELOPMENT_PROBE.md). It must retain original
   model traces and separate runtime-success from actual class/critical-field
