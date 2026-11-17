@@ -44,3 +44,24 @@ untrusted observations. Nothing here authorizes an unrecognised supplier layout.
 
 This is a **candidate semantic/structural hardening**, not supplier-general
 extraction accuracy, operational deployment or Qwen model acceptance.
+
+## Executed source qualification — 17 November 2026
+
+The experimental hardening is now **merged** through [PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24)
+at development `main` SHA `b78104439c6614fbb8d3f2ab97e0899e4db047f6`.
+[GitHub Actions #44165434992](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) completed all three actual hosted
+jobs successfully; CircleCI `build-and-test` succeeded at the same SHA.
+The [original 43-file main artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992/artifacts/14364034272) was downloaded and checked:
+ZIP CRC passed, SHA-256
+`f3f0814c65781c7d8193bc46ba09b0e492b232bd4510cf7953d2977f57f92520`.
+The actual logs showed **162/162 Python**, **24/24 JavaScript**, **36/36 Chrome**
+checks; the previous code-head test failure (legacy global candidate-ID test)
+remains historical evidence and was corrected before the final PR-head rerun.
+
+**Accepted only:** implementation and source-integrity tests of the
+field-specific Qwen response schema and independent semantic validation.
+**Not measured:** new Qwen 1.3 live responses, model accuracy, document
+eligibility coverage, new/fresh holdout performance or CPU inference cost.
+The original Qwen 3/36 correct, 0/36 eligible remains the latest *real*
+generative model measurement and **fails the quality gate**. See the
+[current consolidated post-release acceptance status](POST_RC2_QUALIFICATION.md).
