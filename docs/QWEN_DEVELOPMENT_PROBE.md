@@ -111,15 +111,15 @@ For the two archived, distinct executions of the **same previously seen**
 12-PDF development corpus, download GitHub's original ZIP files first:
 
 - [Qwen 1.3 main original, artifact #14366358107](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563/artifacts/14366358107):
-  ZIP SHA-256 \`dfda3b1c40b9a89ae612ddb880da0499ecfc0094e8c44b3186f810310664dca3\`
+  ZIP SHA-256 `dfda3b1c40b9a89ae612ddb880da0499ecfc0094e8c44b3186f810310664dca3`
 - [Rejected Qwen 1.4 original, artifact #14366438718](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44170413325/artifacts/14366438718):
-  ZIP SHA-256 \`f1f5877785a773da5b034b4e9d1e9130c68703b5568f9af20931775a20038cd0\`
+  ZIP SHA-256 `f1f5877785a773da5b034b4e9d1e9130c68703b5568f9af20931775a20038cd0`
 
 The source-only command below **does not download artifacts or invoke a model**.
 Use fresh local paths; never commit unredacted raw model requests or private
 credentials:
 
-\`\`\`bash
+```bash
 python scripts/compare_qwen_archives.py \
   --baseline /private/archives/qwen-1.3-original.zip \
   --candidate /private/archives/qwen-1.4-original.zip \
@@ -127,7 +127,7 @@ python scripts/compare_qwen_archives.py \
   --candidate-sha256 f1f5877785a773da5b034b4e9d1e9130c68703b5568f9af20931775a20038cd0 \
   --output evidence-local/qwen-1.3-vs-1.4-paired.json \
   --require-nonregression
-\`\`\`
+```
 
 The expected **exit code is 1** because nonregression is **FAILED**:
 the original per-document evidence recomputes **90/156 -> 74/156**
@@ -137,7 +137,7 @@ Both purchase orders in the known-contract subset lost eight raw scalar-ID
 proposals apiece; the system's independent verifier still prevented false
 eligibility. A failed nonregression **still writes** a private, write-once
 JSON comparison receipt with both original ZIP SHA-256s and per-case deltas.
-Without \`--require-nonregression\`, the tool returns success for a
+Without `--require-nonregression`, the tool returns success for a
 **valid provenance/measurement comparison**, NOT a passing model score.
 
 The local code and tests must independently pass the exact PR-head and
