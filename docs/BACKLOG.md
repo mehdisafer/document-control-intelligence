@@ -74,6 +74,7 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   claim about new supplier document families.
 - Add independently generated layouts, labels, scan conditions and table
   geometry; publish coverage and critical-field quality together.
+- [ ] Execute and review the [independent-renderer synthetic holdout](INDEPENDENT_LAYOUT_QUALIFICATION.md) on both source profiles. This supplies independent **generation code** and negative unsupported-layout abstention cases, **not independently sourced supplier documents** or a Qwen fix. Close only the narrow safety gate after real CI proof; retain supplier and model gates open.
 - Evaluate geometric table extraction rather than presuming pipe-delimited
   synthetic table geometry.
 - Define explicit contracts for returns/credit notes, freight, discounts,
