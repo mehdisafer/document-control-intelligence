@@ -1,0 +1,114 @@
+name: Original Qwen pair exact-source replay
+on:
+  workflow_dispatch: {}
+  pull_request:
+    paths:
+      - .github/workflows/qwen-original-artifact-replay.yml
+      - scripts/compare_qwen_dev_archives.py
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/qwen-original-artifact-replay.yml
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: qwen-original-pair-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-original-qwen-artifacts:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout exact source without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Read original archived Qwen 1.3 and 1.4 workflow ZIPs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/ci/qwen-original-replay
+          gh api -H 'Accept: application/vnd.github+json' \
+            "/repos/${GITHUB_REPOSITORY}/actions/artifacts/14366358107/zip" \
+            > outputs/ci/qwen-original-replay/original-13.zip
+          gh api -H 'Accept: application/vnd.github+json' \
+            "/repos/${GITHUB_REPOSITORY}/actions/artifacts/14366438718/zip" \
+            > outputs/ci/qwen-original-replay/original-14.zip
+          printf '%s\n' \
+            'dfda3b1c40b9a89ae612ddb880da0499ecfc0094e8c44b3186f810310664dca3  outputs/ci/qwen-original-replay/original-13.zip' \
+            'f1f5877785a773da5b034b4e9d1e9130c68703b5568f9af20931775a20038cd0  outputs/ci/qwen-original-replay/original-14.zip' \
+            > outputs/ci/qwen-original-replay/input-zip-sha256.txt
+          sha256sum --check outputs/ci/qwen-original-replay/input-zip-sha256.txt
+          git rev-parse HEAD > outputs/ci/qwen-original-replay/source-commit.txt
+
+      - name: Execute actual checked-out comparator on the original ZIPs
+        run: |
+          python3 scripts/compare_qwen_dev_archives.py \
+            --baseline outputs/ci/qwen-original-replay/original-13.zip \
+            --candidate outputs/ci/qwen-original-replay/original-14.zip \
+            --output outputs/ci/qwen-original-replay/comparison.json
+
+      - name: Verify negative results and require nonregression failure code 3
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('outputs/ci/qwen-original-replay/comparison.json').read_text())
+          assert report['schema_version'] == '1.0'
+          assert report['paired_case_count'] == 12
+          assert report['paired_manifest_sha256'] == 'ab3e9904e6b0c8a8c2fe2ed5e022038c7eafe2a28c93502c0c7f4a71cd44b365'
+          assert (report['baseline']['prompt'], report['candidate']['prompt']) == (
+              'structured-extraction-1.3', 'structured-extraction-1.4')
+          old, new = report['baseline']['metrics'], report['candidate']['metrics']
+          assert (old['correct_classes'], new['correct_classes']) == (7, 7)
+          assert (old['eligible'], new['eligible']) == (4, 4)
+          assert (old['false_eligible'], new['false_eligible']) == (0, 0)
+          assert (old['fields_correct'], new['fields_correct']) == (90, 74)
+          assert (old['critical_abstained'], new['critical_abstained']) == (60, 74)
+          assert report['nonregression_met'] is False
+          assert report['candidate_development_quality_met'] is False
+          assert report['qwen_general_quality_accepted'] is False
+          assert report['supplier_real_generalization'] is False
+          assert report['untouched_holdout'] is False
+          assert report['candidate_runtime_report_contradicts_source'] is False
+          assert set(report['regressions']) == {
+              'fields_correct decreased', 'critical abstention increased'
+          }, report['regressions']
+          print('Original archive source integrity verified; model quality remains FAILED')
+          PY
+          set +e
+          python3 scripts/compare_qwen_dev_archives.py \
+            --baseline outputs/ci/qwen-original-replay/original-13.zip \
+            --candidate outputs/ci/qwen-original-replay/original-14.zip \
+            --output outputs/ci/qwen-original-replay/expected-failure.json \
+            --require-nonregression
+          code=$?
+          set -e
+          test "$code" -eq 3 || { echo "Expected exit 3; observed $code" >&2; exit 1; }
+          cmp outputs/ci/qwen-original-replay/comparison.json \
+              outputs/ci/qwen-original-replay/expected-failure.json
+          echo "Expected nonregression refusal exit code 3 confirmed" \
+            > outputs/ci/qwen-original-replay/verdict.txt
+
+      - name: Retain aggregate receipts only, no original raw response ZIPs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: qwen-original-pair-${{ github.sha }}
+          path: |
+            outputs/ci/qwen-original-replay/input-zip-sha256.txt
+            outputs/ci/qwen-original-replay/source-commit.txt
+            outputs/ci/qwen-original-replay/comparison.json
+            outputs/ci/qwen-original-replay/expected-failure.json
+            outputs/ci/qwen-original-replay/verdict.txt
+          retention-days: 14
+          if-no-files-found: warn
