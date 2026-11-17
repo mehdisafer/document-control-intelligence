@@ -40,6 +40,7 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   **139 Python, 24 JavaScript and 36/36 Chrome checks**, including
   new source-label tests and a complete synthetic 36-PDF replay. This is a
   bounded generator-derived qualification, not independent supplier validation.
+- [x] **Forensically reconcile the original Qwen failure (diagnostic gate only):** [PR #23](https://github.com/mehdisafer/document-control-intelligence/pull/23) hosted [run #44161099199](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199) audited 36 original responses/PDFs and all 406 original indexed files with SHA-256, and retained the [original aggregate JSON](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199/artifacts/14363287699). Model proposed `unknown` in 30/36, including 14 cases with an exact recognized title; **35/272** field-candidate selections assigned a different recognized label. **No new inference, Qwen quality acceptance or supplier-general claim**; see [full analysis](QWEN_TRACE_FORENSICS.md).
 - [ ] **Resolve generative model quality and generalization.** Qwen had
   **3/36** correct classifications and **0/36** eligible in its bounded
   execution. A new independent supplier/layout holdout is still absent;
