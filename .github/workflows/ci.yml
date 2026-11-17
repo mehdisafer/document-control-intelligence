@@ -99,6 +99,8 @@ jobs:
           uv run --frozen python scripts/qualify_independent_layouts.py \
             --manifest outputs/ci/independent-layout-corpus/manifest.json \
             --output outputs/ci/independent-layout-evaluation
+      - name: Reconcile immutable Qwen historical traces without new inference
+        run: uv run --frozen python scripts/audit_qwen_archive.py --output outputs/ci/qwen-archive-audit/report.json
       - name: Real browser review workflow and screenshots
         run: uv run --frozen --group browser python scripts/browser_smoke.py --config outputs/ci/demo/runtime/config.json --credentials outputs/ci/demo/runtime/credentials.json --output outputs/ci/browser --browser-executable /usr/bin/google-chrome
       - name: Retain original execution results without credentials or runtime databases
@@ -123,6 +125,7 @@ jobs:
             outputs/ci/independent-layout-evaluation/report.json
             outputs/ci/independent-layout-evaluation/evaluation/summary.json
             outputs/ci/independent-layout-evaluation/evaluation/policy-before-run.json
+            outputs/ci/qwen-archive-audit/report.json
             outputs/ci/browser/*.json
             outputs/ci/browser/*.png
           retention-days: 14
