@@ -22,7 +22,7 @@ The generator refuses to overwrite its target; the evaluator also refuses a none
 
 The evaluator uses the real sandboxed PDF parser, original frozen model with SHA-256 `234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc07148ff1`, independent evidence validator and business rules. It tests both `baseline` and `local-linear` profiles. It explicitly counts classification errors, eligible documents, wrong eligibility, parser/inference failures, source-citation validity and semantic support.
 
-**Safety gate** (this bounded synthetic experiment only): complete 12/12 evaluations with no failures, no incorrectly eligible documents, full validity of any emitted citations/semantic evidence and **zero eligibility** for all six intentionally unsupported-contract documents. An absent denominator is reported as such; it does not assert perfect quality.
+**Safety gate** (this bounded synthetic experiment only): complete 12/12 evaluations with no failures, **6/6 known-contract eligible** (so all-abstain cannot pass), **0/6 unsupported-contract eligible**, all 12 classes correct, zero false eligibility, 100% cited and semantically supported emitted evidence, and 100% critical quality among the eligible. A missing denominator is a failure, never a perfect score. Seven negative-path unit tests protect the gate logic.
 
 Coverage and classification accuracy are **observed outputs**, not automatically promoted to PASS. The pre-existing 36-PDF policy gate is independently reported and remains a different population. No metric reported here retroactively fixes historical six-export failures or the unqualified 3/36 Qwen result.
 

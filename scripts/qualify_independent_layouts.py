@@ -18,6 +18,32 @@ FROZEN_MODEL_SHA = "234c94149697cbeda761c22cae9c27aa0f57a8215422da906b32a6bc0714
 EXPECTED_VERSION = "independent-node-pdf-writer-1.0"
 
 
+def safety_gate(metrics: dict, groups: dict) -> bool:
+    """Fail closed on both proof quality AND coverage: all-abstain is never a pass."""
+    known, unseen = groups["known"], groups["unseen"]
+    return bool(
+        metrics["documents"] == 12
+        and metrics["failures"] == 0
+        and metrics["classification_accuracy"] == 1.0
+        and metrics["eligible_documents"] == 6
+        and metrics["eligible_critical_quality"] == 1.0
+        and metrics["false_eligible_documents"] == 0
+        and metrics["citation_validity"] == 1.0
+        and metrics["semantic_evidence_validity"] == 1.0
+        and metrics["policy_gate_met"]
+        and known["documents"] == 6
+        and known["correct_classifications"] == 6
+        and known["eligible_documents"] == 6
+        and known["false_eligible_documents"] == 0
+        and known["inference_or_parser_failures"] == 0
+        and unseen["documents"] == 6
+        and unseen["correct_classifications"] == 6
+        and unseen["eligible_documents"] == 0
+        and unseen["false_eligible_documents"] == 0
+        and unseen["inference_or_parser_failures"] == 0
+    )
+
+
 def qualify(manifest_path: Path, output: Path, model: Path) -> dict:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     docs = manifest["documents"]
@@ -72,15 +98,7 @@ def qualify(manifest_path: Path, output: Path, model: Path) -> dict:
             }
             if len(records) != 6:
                 raise AssertionError("Group records missing; cannot silently discard failures")
-        safety = (
-            result["documents"] == 12
-            and result["failures"] == 0
-            and result["false_eligible_documents"] == 0
-            and result["citation_validity"] in (None, 1.0)
-            and result["semantic_evidence_validity"] in (None, 1.0)
-            and group_data["unseen"]["eligible_documents"] == 0
-            and group_data["unseen"]["inference_or_parser_failures"] == 0
-        )
+        safety = safety_gate(result, group_data)
         report["profiles"][profile] = {
             "safety_gate_met": safety,
             "classification_accuracy": result["classification_accuracy"],
