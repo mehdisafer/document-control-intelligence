@@ -11,7 +11,7 @@ from collections import Counter
 import hashlib
 import json
 import os
-from pathlib import Path, PurePosixPath
+from pathlib import Path
 import re
 from zipfile import BadZipFile, ZipFile
 
@@ -209,6 +209,8 @@ def original(path: Path, expected_zip_sha256: str | None = None) -> dict:
             require(isinstance(source, dict) and isinstance(dataset, dict)
                     and dataset.get("available_test_documents") == 12
                     and dataset.get("evaluated_test_documents") == 12
+                    and isinstance(source.get("git_commit"), str)
+                    and re.fullmatch(r"[a-f0-9]{40}", source["git_commit"]) is not None
                     and source.get("git_commit") == report.get("source_commit"),
                     "Scored source/denominator does not match original")
             require(harness.get("model_sha256") == report.get("pinned_model_sha256")
