@@ -273,15 +273,17 @@ def inspect(archive_path: Path) -> dict:
 
         traces = [n for n in names if n.startswith("qwen-dev-run/model-traces/")]
         observed: set[str] = set()
+        prompt_hashes: set[str] = set()
         for path in traces:
             match = TRACE_RE.fullmatch(path)
             if not match or match.group(1) not in cases or match.group(1) in observed:
                 raise ValueError("Invalid, absent or duplicated model trace identity")
             raw = _json(archive, names, path)
-            tele, request, proposal = (
-                raw.get("telemetry"), raw.get("request"), raw.get("proposal")
+            tele, request, proposal, response = (
+                raw.get("telemetry"), raw.get("request"), raw.get("proposal"),
+                raw.get("response"),
             )
-            if not all(isinstance(x, dict) for x in (tele, request, proposal)):
+            if not all(isinstance(x, dict) for x in (tele, request, proposal, response)):
                 raise ValueError("Incomplete original model trace")
             if (
                 tele.get("document_sha256") != match.group(1)
@@ -297,7 +299,19 @@ def inspect(archive_path: Path) -> dict:
                 raise ValueError("Missing original raw request") from exc
             if payload.get("document_sha256") != match.group(1):
                 raise ValueError("Raw request source identity mismatch")
+            try:
+                raw_message = json.loads(response["choices"][0]["message"]["content"])
+            except (KeyError, IndexError, TypeError, ValueError) as exc:
+                raise ValueError("Malformed original model response") from exc
+            if raw_message != proposal:
+                raise ValueError("Parsed proposal differs from original model response")
+            prompt_hash = tele.get("prompt_sha256")
+            if not isinstance(prompt_hash, str) or not re.fullmatch(r"[a-f0-9]{64}", prompt_hash):
+                raise ValueError("Original prompt SHA-256 missing")
+            prompt_hashes.add(prompt_hash)
             observed.add(match.group(1))
+        if len(prompt_hashes) != 1:
+            raise ValueError("Inconsistent original prompt SHA-256 values")
         if len(observed) != 12 or observed != set(cases):
             raise ValueError("Twelve distinct original model responses required")
 
