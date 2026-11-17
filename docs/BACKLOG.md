@@ -56,6 +56,7 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   previously used synthetic PDFs **are not a fresh supplier holdout**.
 - [x] **Record and reject the Qwen 1.4 regression:** [PR #27](https://github.com/mehdisafer/document-control-intelligence/pull/27) **closed without merge** after exact-source real inference on the same 12 development PDFs. No class or eligibility uplift (**7/12 correct; 4/12 eligible vs 50% required**) and **16 scalar candidate selections lost** across two in-contract purchase orders (8 null apiece). Runtime safe, but quality gate **FAILED**. [Paired negative evidence](QWEN_PROMPT_14_EXPERIMENT.md). Prompt 1.3 remains active; the independent supplier holdout and genuine Qwen quality gate remain OPEN.
 
+- [ ] **Qualify queued Qwen request-policy identity:** [source-policy guard](QWEN_QUEUE_POLICY_IDENTITY.md) binds the prompt text/version and actual LLM/extraction source hashes for the local-llm profile so queued work fails closed on a prompt/schema change. Verify its seven tests, actual SQLite policy-fencing outcome, and exact merged-main CI before checking the narrow guard; **no Qwen accuracy or production deployment improvement is assumed**.
 - [ ] **Resolve generative model quality and generalization.** The original
   Qwen benchmark remains **3/36** correct classes and **0/36** eligible.
   The separate real Qwen 1.3 *development* corpus returned **7/12** correct
