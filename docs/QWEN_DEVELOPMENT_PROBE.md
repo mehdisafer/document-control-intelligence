@@ -41,6 +41,55 @@ citation or semantic evidence. A missing proof denominator is **null**, never
 represented as 100 percent valid evidence. A 12/12 healthy runtime with zero
 eligible documents is **not** a model-quality pass.
 
+## Observed 17 November qualification — two actual executions
+
+[PR #26](https://github.com/mehdisafer/document-control-intelligence/pull/26)
+preview [GitHub Actions #44168516337](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44168516337)
+ran actual pinned Qwen inference from merge-preview commit `b2e7bcf`.
+The preview, PR head `c87c097` and merged main `4b9f8b3` have the
+identical tracked Git tree `b16507ba5016dd5e9553d0fd8bd4272b7f4b269d`.
+Independently, [main workflow #44169464563](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563)
+completed actual inference on that final merged source.
+
+| Original observation | PR preview | Merged main |
+|---|---:|---:|
+| Real scored model responses/traces | 12/12 | 12/12 |
+| Correct document classes | 7/12 | 7/12 |
+| Eligible for later explicit human review | 4/12 | 4/12 |
+| Eligible critical quality | 4/4 | 4/4 |
+| Unsupported layouts falsely eligible | 0/6 | 0/6 |
+| Parser/inference failures | 0 | 0 |
+| Local runtime/safety gate | **PASS** | **PASS** |
+| Independent synthetic development quality gate | **FAIL** | **FAIL** |
+| Server full process wall time | 66.24 s | 69.17 s |
+| Maximum observed server RSS | approx. 1,748 MiB | approx. 1,748 MiB |
+
+Downloaded and independently ZIP-CRC-checked original artifacts:
+[PR #14367385832](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44168516337/artifacts/14367385832)
+has **43 members**, SHA-256
+`94ab771e7277cef5a6575f3355bbbd4eb81486635b398157dcb9b2131338f380`;
+[main #14366358107](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563/artifacts/14366358107)
+has **43 members**, SHA-256
+`dfda3b1c40b9a89ae612ddb880da0499ecfc0094e8c44b3186f810310664dca3`.
+Each archive retains twelve synthetic PDFs, twelve model raw-response traces,
+twelve scored document outputs and source/runtime/resource receipts.
+
+The original `qwen-dev-report.json` confirms **4/6** known-contract PDFs
+eligible, **0/6** unsupported PDFs eligible and zero false eligibility.
+All four purchase orders were assigned `unknown` (including two known
+contracts). Both citation and semantic evidence-validity indicators
+are 100% on their applicable measured denominators; they do not rescue
+wrong document classes or missing eligible coverage.
+
+The predeclared **50% synthetic eligible-coverage criterion is unmet**
+at **4/12 = 33.3%**. There is no untouched supplier benchmark or
+operator acceptance. The historical Qwen 3/36 result uses a different
+cohort and must not be advertised as controlled before/after improvement.
+[Exact merged-main full CI #44169464538](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464538)
+passed 171 Python, 24 JavaScript and 36 real Chrome checks, plus the
+other two required jobs. CircleCI build-and-test succeeded on the same SHA.
+No release tag, production service or model-quality gate was changed.
+
 ## Execute and interpret
 
 The GitHub workflow can run when its source changes, through an authorized
