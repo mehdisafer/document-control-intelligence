@@ -61,6 +61,21 @@ class Settings(BaseModel):
         for key in ("model_path", "llm_config_file"):
             path = getattr(self, key)
             data[key] = hashlib.sha256(path.read_bytes()).hexdigest() if path and path.is_file() else None
+        if self.profile == "local-llm":
+            # A queued document must not silently cross a Qwen prompt or
+            # executable field-contract edit without a package version bump.
+            # Store only source hashes and public identities, not raw secrets.
+            from . import extraction, llm
+
+            data["local_llm_request_identity"] = {
+                "prompt_version": llm.PROMPT_VERSION,
+                "prompt_sha256": hashlib.sha256(llm.PROMPT.encode("utf-8")).hexdigest(),
+                "model_sha256": llm.MODEL_SHA256,
+                "runtime_binary_sha256": llm.RUNTIME_BINARY_SHA256,
+                "llm_source_sha256": hashlib.sha256(Path(llm.__file__).read_bytes()).hexdigest(),
+                "extraction_source_sha256": hashlib.sha256(
+                    Path(extraction.__file__).read_bytes()).hexdigest(),
+            }
         return data
 
     def policy_digest(self):
