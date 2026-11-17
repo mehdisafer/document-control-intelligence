@@ -23,6 +23,9 @@ CASE_RE = re.compile(r"qwen-dev-run/evaluation/documents/local-llm/(\d{4})-repea
 TRACE_RE = re.compile(r"qwen-dev-run/model-traces/([a-f0-9]{64})-\d+\.json\Z")
 MANIFEST = "qwen-dev-corpus/manifest.json"
 REPORT = "qwen-dev-report.json"
+SCALAR_KEYS = ("document_id", "purchase_order_id", "supplier_id", "currency",
+               "document_date", "subtotal", "tax", "total")
+LINE_KEYS = ("sku", "quantity", "unit_price", "net_amount", "tax_rate")
 
 
 def _sha(data: bytes) -> str:
@@ -78,6 +81,80 @@ def _count(row: dict, key: str) -> int:
     return value
 
 
+
+def _reconcile_original_field_truth(spec: dict, row: dict) -> None:
+    """Recalculate score fields from original manifest truth and extraction."""
+    extraction = row.get("extraction")
+    if (not isinstance(extraction, dict)
+            or extraction.get("document_sha256") != spec.get("sha256")
+            or row.get("input_path") != spec.get("path")
+            or row.get("predicted_kind") != extraction.get("kind")):
+        raise ValueError("Scored original extraction/PDF binding mismatch")
+    expected = spec.get("expected_fields")
+    expected_lines = spec.get("expected_lines")
+    ambiguous = spec.get("ambiguous_fields", [])
+    if (not isinstance(expected, dict) or set(expected) != set(SCALAR_KEYS)
+            or not isinstance(expected_lines, list)
+            or not all(isinstance(item, dict) and set(item) == set(LINE_KEYS)
+                       for item in expected_lines)
+            or not isinstance(ambiguous, list)
+            or not set(ambiguous).issubset(SCALAR_KEYS)):
+        raise ValueError("Original field-truth contract incomplete")
+    scalars = dict(expected)
+    for key in ambiguous:
+        scalars[key] = None
+    critical_scalars = {"document_id", "purchase_order_id", "supplier_id", "currency"}
+    critical_lines = {"sku", "quantity"}
+    if spec.get("expected_kind") != "delivery_note":
+        critical_scalars.update(("subtotal", "tax", "total"))
+        critical_lines.update(("unit_price", "net_amount", "tax_rate"))
+    fields, lines = extraction.get("fields"), extraction.get("line_items")
+    if not isinstance(fields, dict) or not isinstance(lines, list):
+        raise ValueError("Original extraction fields/line items missing")
+
+    def supported(field):
+        if not isinstance(field, dict) or field.get("status") != "supported":
+            return None
+        return field.get("normalized")
+
+    by_sku: dict[str, list] = {}
+    for index, line in enumerate(lines):
+        if not isinstance(line, dict) or not isinstance(line.get("fields"), dict):
+            raise ValueError("Malformed original extraction line")
+        sku = supported(line["fields"].get("sku"))
+        by_sku.setdefault(sku if sku is not None else f"__unsupported_sku_{index}", []).append(line)
+    expected_scores = {
+        key: (scalars[key], supported(fields.get(key)), key in critical_scalars)
+        for key in SCALAR_KEYS
+    }
+    for index, item in enumerate(expected_lines):
+        matches = by_sku.get(item["sku"], [])
+        line = matches[0] if len(matches) == 1 else None
+        for key in LINE_KEYS:
+            value = supported(line["fields"].get(key)) if line else None
+            expected_scores[f"lines[{index}].{key}"] = (item[key], value, key in critical_lines)
+    comparisons = row.get("comparisons")
+    if not isinstance(comparisons, list) or len(comparisons) != len(expected_scores):
+        raise ValueError("Original scored field inventory differs from manifest")
+    seen = set()
+    for item in comparisons:
+        if not isinstance(item, dict) or item.get("field") not in expected_scores:
+            raise ValueError("Unknown original scored field")
+        key = item["field"]
+        if key in seen:
+            raise ValueError("Duplicated original scored field")
+        seen.add(key)
+        truth, actual, critical = expected_scores[key]
+        if (item.get("expected") != truth or item.get("actual") != actual
+                or item.get("correct") is not (truth == actual)
+                or item.get("present_in_truth") is not (truth is not None)
+                or item.get("abstained") is not (actual is None)
+                or item.get("critical") is not critical):
+            raise ValueError("Original field score diverges from truth/extraction")
+    if seen != set(expected_scores):
+        raise ValueError("Original scored field inventory incomplete")
+
+
 def inspect(archive_path: Path) -> dict:
     """Re-derive original metrics from all twelve scored PDFs and raw traces."""
     if archive_path.stat().st_size > MAX_ARCHIVE_BYTES:
@@ -101,6 +178,7 @@ def inspect(archive_path: Path) -> dict:
             raise ValueError("Expected twelve manifest documents")
         blobs: dict[str, str] = {}
         truth: dict[str, str] = {}
+        truth_records: dict[str, dict] = {}
         groups: Counter = Counter()
         for doc in docs:
             if not isinstance(doc, dict):
@@ -119,6 +197,7 @@ def inspect(archive_path: Path) -> dict:
                 raise ValueError("Duplicate PDF source identity")
             blobs[sha] = path
             truth[sha] = doc.get("expected_kind")
+            truth_records[sha] = doc
             groups[doc.get("contract_group")] += 1
         if groups != {"known": 6, "unseen": 6}:
             raise ValueError("Unexpected development group split")
@@ -152,6 +231,7 @@ def inspect(archive_path: Path) -> dict:
                 or row["classification_correct"] != (row.get("predicted_kind") == truth[sha])
             ):
                 raise ValueError("Classification disagrees with original source truth")
+            _reconcile_original_field_truth(truth_records[sha], row)
             comparisons = row.get("comparisons")
             if not isinstance(comparisons, list) or len(comparisons) != row["fields_total"]:
                 raise ValueError("Missing original field comparisons")
