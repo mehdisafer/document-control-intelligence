@@ -20,7 +20,7 @@ The public [`v0.1.0rc2` source prerelease](https://github.com/mehdisafer/documen
 
 [Exact tagged-source GitHub Actions run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) · [Original job artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670/artifacts/14281402594) · [Original-page visual evidence](docs/ORIGINAL_PAGE_PREVIEW.md) · [Current acceptance](docs/ACCEPTANCE.md) · [Evaluation limits](docs/EVALUATION.md)
 
-**Historical and external limits remain visible.** The earlier frozen local-linear run achieved only 6/7 automatic exports and is not retroactively relabelled a pass. The new source-label guard was tested and integrated through [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19); it does not retrain the classifier. The separate Qwen profile still fails its 3/36 correct, 0/36 eligible quality result. The successful synthetic profile neither proves arbitrary supplier-document accuracy nor establishes production readiness.
+**Historical and external limits remain visible.** The earlier frozen local-linear run achieved only 6/7 automatic exports and is not retroactively relabelled a pass. The new source-label guard was tested and integrated through [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19); it does not retrain the classifier. The historical 36-PDF Qwen profile fails its original 3/36 correct, 0/36 eligible quality gate. A later 12-PDF real-inference development experiment has a different denominator and also fails its own quality gate. The successful synthetic profile neither proves arbitrary supplier-document accuracy nor establishes production readiness.
 
 ## Reproduce the deterministic reference
 
@@ -71,8 +71,9 @@ accepted/published by separate test actors and restored identically. Genuine
 conflicting recognized labels remain blocked. The frozen 36-PDF synthetic
 replay still shows 34/36 classification, 30/36 eligible, 30/30 eligible
 critical quality and zero false eligibility. No new supplier-independent
-holdout was established. The local Qwen profile still fails its quality gate
-(3/36 classifications, 0 eligible) and is not an approved fallback.
+holdout was established. The original 36-PDF Qwen profile still fails its own quality gate
+(3/36 classifications, 0 eligible). A later 12-PDF development experiment
+has a separate denominator; neither result supports a production fallback.
 
 The retained evidence and [acceptance record](docs/ACCEPTANCE.md) preserve these limits and their exact source versions. Synthetic benchmark results are not a claim about arbitrary supplier PDFs, arbitrary languages or real purchasing decisions.
 
@@ -82,7 +83,34 @@ An [offline 36-response forensic audit](docs/QWEN_TRACE_FORENSICS.md) now checks
 
 ## Post-rc2 Qwen semantic contract — implemented and source-tested
 
-Merged [PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) at [`main` `b78104439c66`](https://github.com/mehdisafer/document-control-intelligence/commit/b78104439c6614fbb8d3f2ab97e0899e4db047f6) constrains Qwen's proposed scalar-field candidate IDs to independently recognized **printed source labels**, with a second validation on returned responses. Bounded exact title evidence is also supplied to the model as untrusted data; genuine repeated conflicting labels remain subject to abstention. The prompt identity is now 1.3. [Exact-main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) passed **162 Python, 24 JavaScript and 36 Chrome checks**, with real container/Compose and Terraform-schema runs. The [original current-source artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992/artifacts/14364034272) passed ZIP CRC/integrity inspection. **No new Qwen inference was executed, and its historical 3/36 correct, 0/36 eligible quality remains unqualified.** See the [full post-release acceptance matrix](docs/POST_RC2_QUALIFICATION.md) and [source guard documentation](docs/QWEN_SEMANTIC_GUARD.md).
+Merged [PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) at [`main` `b78104439c66`](https://github.com/mehdisafer/document-control-intelligence/commit/b78104439c6614fbb8d3f2ab97e0899e4db047f6) constrains Qwen's proposed scalar-field candidate IDs to independently recognized **printed source labels**, with a second validation on returned responses. Bounded exact title evidence is also supplied to the model as untrusted data; genuine repeated conflicting labels remain subject to abstention. The prompt identity is now 1.3. [Exact-main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) passed **162 Python, 24 JavaScript and 36 Chrome checks**, with real container/Compose and Terraform-schema runs. The [original current-source artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992/artifacts/14364034272) passed ZIP CRC/integrity inspection. **That PR #24 qualification did not run new Qwen inference; its original 3/36 correct and 0/36 eligible result remains failed.** See the [full post-release acceptance matrix](docs/POST_RC2_QUALIFICATION.md) and [source guard documentation](docs/QWEN_SEMANTIC_GUARD.md).
+
+## Real Qwen 1.3 inference on reused synthetic development PDFs
+
+After [PR #26](https://github.com/mehdisafer/document-control-intelligence/pull/26),
+the [merged-main source `4b9f8b3`](https://github.com/mehdisafer/document-control-intelligence/commit/4b9f8b3456615ea7d1df68978981d4072a100c18)
+completed [three GitHub Actions jobs](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464538)
+(**171 Python, 24 JavaScript and 36 real Chrome checks**) and
+[a separate actual local Qwen 1.3 execution](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563);
+CircleCI build-and-test succeeded on the same source.
+
+The [original merged-main Qwen archive](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563/artifacts/14366358107)
+has **43 CRC-verified entries**, twelve model responses/traces and twelve
+independently Node-rendered fictional PDFs. Their layouts were already used
+for source-safety tests, so this is a **reused development corpus**, not an
+untouched supplier holdout. The **runtime/safety gate passed**, with 12/12
+real responses, zero inference/parser errors and zero false eligibility.
+Independent scoring recorded **7/12 correct classes**, **4/12 eligible for
+later human review**, **4/4 eligible critical quality** and **0/6 unsupported
+layouts eligible**. All four purchase orders were classified `unknown`.
+The **separate 50% synthetic development coverage gate failed**:
+4/12 = 33.3%. This does not qualify Qwen for arbitrary supplier data or
+production. The historical **3/36 and 0/36** belong to a different corpus
+and cannot be compared as a controlled improvement. The published
+`v0.1.0rc2` source tag is unchanged.
+
+[Original run identities, metrics and limitations](docs/QWEN_DEVELOPMENT_PROBE.md)
+are retained separately from the earlier Qwen forensic audit.
 
 ## Additional independent-renderer safety probe (post-rc2)
 
@@ -106,4 +134,4 @@ The historical [`v0.1.0rc1`](https://github.com/mehdisafer/document-control-inte
 
 Original project code is under [Apache-2.0](LICENSE); [NOTICE](NOTICE) preserves relevant attribution and limitations. Third-party components retain their own terms. No client documents or client infrastructure were used.
 
-The reference's application, OCR, browser, container and Terraform-schema gates are now executed. The source-level per-field Qwen candidate guard has passed CI, but **Qwen quality has not been re-evaluated**. Remaining acceptance concerns are real-supplier generalization, a separately authorized named production host and operator acceptance, the still-unprotected main branch, and formatting of the four remaining nested Markdown links in the existing release description. The original 6/7 local-linear failure remains historical; the source-gated 7/7 regression is separately qualified on PR #19. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.
+The reference's application, OCR, browser, container and Terraform-schema gates are now executed. The source-level per-field Qwen candidate guard has passed CI, and real Qwen 1.3 development inference was executed on twelve reused synthetic PDFs. **Its 7/12 correct classes and 4/12 eligible documents fail the separate synthetic quality gate; no untouched supplier holdout was evaluated.** Remaining acceptance concerns are real-supplier generalization, a separately authorized named production host and operator acceptance, the still-unprotected main branch, and formatting of the four remaining nested Markdown links in the existing release description. The original 6/7 local-linear failure remains historical; the source-gated 7/7 regression is separately qualified on PR #19. No stable production `v1.0.0` tag or unqualified full-project acceptance is asserted.
