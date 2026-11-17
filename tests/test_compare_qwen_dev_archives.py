@@ -40,26 +40,60 @@ def make_archive(
         contents["qwen-dev-corpus/" + name] = (
             pdf + b"TAMPER" if tamper_pdf and i == 0 else pdf
         )
+        truth_fields = {
+            "document_id": f"INV-{i}", "purchase_order_id": "PO-EX",
+            "supplier_id": "SUP", "currency": "EUR", "document_date": "2026-11-01",
+            "subtotal": "4.00", "tax": "1.00", "total": "5.00",
+        }
+        truth_lines = [{
+            "sku": "SKU-1", "quantity": "1", "unit_price": "4.00",
+            "net_amount": "4.00", "tax_rate": "25",
+        }]
         documents.append({
             "path": name,
             "sha256": sha,
             "contract_group": "known" if i < 6 else "unseen",
             "expected_kind": "invoice",
+            "document_key": f"case-{i:02d}",
+            "expected_fields": truth_fields,
+            "expected_lines": truth_lines,
         })
-        correct = 10 - (1 if lose_fields and i == 0 else 0)
-        comparisons = [
-            {
-                "correct": j < correct,
-                "critical": j < 10,
-                "abstained": bool(lose_fields and i == 0 and j == 9),
-                "present_in_truth": True,
-            }
-            for j in range(13)
+        expected_values = list(truth_fields.items()) + [
+            (f"lines[0].{key}", value) for key, value in truth_lines[0].items()
         ]
+        comparisons = []
+        scalar_values = {}
+        line_values = {}
+        for j, (field, target) in enumerate(expected_values):
+            is_lost = lose_fields and i == 0 and j == 9
+            actual = None if is_lost else target
+            comparisons.append({
+                "field": field, "expected": target, "actual": actual,
+                "correct": actual == target,
+                "critical": field not in {"document_date"},
+                "abstained": actual is None,
+                "present_in_truth": True,
+            })
+            extracted = {
+                "status": "abstained" if actual is None else "supported",
+                "normalized": actual,
+            }
+            if field.startswith("lines["):
+                line_values[field.split(".")[-1]] = extracted
+            else:
+                scalar_values[field] = extracted
+        correct = sum(c["correct"] for c in comparisons)
+        critical_abstained = sum(c["critical"] and c["abstained"] for c in comparisons)
+        extraction = {
+            "document_sha256": sha, "kind": "invoice",
+            "fields": scalar_values, "line_items": [{"fields": line_values}],
+        }
         row = {
             "input_sha256": sha,
+            "input_path": name,
             "expected_kind": "invoice",
             "predicted_kind": "invoice",
+            "extraction": extraction,
             "comparisons": comparisons,
             "classification_correct": True,
             "eligible": i < 6 or (unsupported_eligible and i == 6),
@@ -70,8 +104,8 @@ def make_archive(
             "fields_total": 13,
             "present_fields_correct": correct,
             "present_fields_total": 13,
-            "critical_fields_abstained": 1 if lose_fields and i == 0 else 0,
-            "critical_fields_total": 10,
+            "critical_fields_abstained": critical_abstained,
+            "critical_fields_total": 12,
             "citation_valid": 1 if invalid_citation and i == 0 else 2,
             "citation_total": 2,
         }
@@ -89,6 +123,7 @@ def make_archive(
                         "fake-provider" if forged_trace and i == 0
                         else "local-llama.cpp"
                     ),
+                    "prompt_sha256": "c" * 64,
                 },
                 "request": {
                     "messages": [
@@ -101,6 +136,9 @@ def make_archive(
                         else "invoice"
                     ),
                 },
+                "response": {"choices": [{"message": {
+                    "content": json.dumps({"kind": "invoice"}),
+                }}]},
             })
     manifest = encoded({
         "generator_version": "independent-node-pdf-writer-1.0",
