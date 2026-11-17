@@ -28,6 +28,35 @@ The **12 raw proposed document classes** and **12 final verified classes** were 
 
 The 1.4 source edit only emphasized using one unambiguous title signal in model instructions. It did not modify model weights, provider, independent verifier, candidate schema, payments, publication authority or release tags. Its failure on these development inputs does not prove that every possible prompt or larger model will fail.
 
+## Reproducible paired archive check (without Qwen inference)
+
+The read-only [paired original-artifact comparator](../scripts/compare_qwen_dev_archives.py)
+re-derives per-PDF classification, field correctness, critical abstention and
+safety counts from the **original** workflow artifact ZIPs. It rejects
+unmatched PDF hashes, forged/missing raw Qwen responses, duplicate or unsafe ZIP
+members and inconsistent summary counters. Its synthetic
+[negative-test suite](../tests/test_compare_qwen_dev_archives.py) runs in both
+GitHub Actions full unittest discovery and CircleCI's focused suite.
+
+Download the two artifact ZIPs from the dated links above to a **local isolated
+analysis directory** (do not commit original PDFs, Qwen traces or model weights):
+
+```bash
+python scripts/compare_qwen_dev_archives.py \
+  --baseline /path/to/qwen-1.3-main.zip \
+  --candidate /path/to/qwen-1.4-pr27.zip \
+  --output /fresh/path/qwen-paired-result.json \
+  --require-nonregression
+```
+
+The bounded CLI retains its JSON result using exclusive file creation and returns
+**exit status 3** for the observed Qwen 1.4 regression, rather than a misleading
+green model-quality signal. Success without `--require-nonregression` means
+only that the archived evidence was structurally comparable. Even passing
+nonregression cannot establish fresh supplier performance, a production-ready
+model or causality from one paired execution. The original run artifacts remain
+source-bound and are not uploaded into this repository.
+
 ## Acceptance and next work
 
 - Keep **PR #27 closed, not merged**; do not backport 1.4 to `main`.
