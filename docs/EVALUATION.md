@@ -186,6 +186,14 @@ were **not overwritten**. This replay is a source regression on the
 **existing** generator and split, not a new independent supplier distribution,
 post-training calibration or a new large-language-model evaluation.
 
+## Post-rc2 independent-renderer synthetic probe — 17 November 2026
+
+[PR #22](https://github.com/mehdisafer/document-control-intelligence/pull/22) adds a separate Node.js PDF writer, which is **independent of the existing ReportLab generator but not independent of the project author**. [Executed push CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317) and [original artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317/artifacts/14287562182) record a twelve-PDF, four-family synthetic fixture, with six in-contract labels and six deliberately unsupported label/geometric-table layouts. **Both baseline and frozen local-linear** classified 12/12 document titles correctly, made **6/6 known-contract** cases eligible, **0/6 unsupported** cases eligible, and produced **zero false eligibility**, 100% citation validity, 100% semantic support and zero failures. The narrow safety gate is met, and these are script-generated eligible *candidates*, not autonomous publication or independent human approval.
+
+The artifact was downloaded and its ZIP CRC, all twelve original PDF hashes, source SHA `b92fcc9d972d4fcb58dab770de74a97b86f4d1cf`, and manifest SHA-256 `ab3e9904e6b0c8a8c2fe2ed5e022038c7eafe2a28c93502c0c7f4a71cd44b365` checked. Two representative PDFs (known contract / unsupported geometric) were visually rendered and inspected. The 50% overall eligibility is determined by the fixture composition, so it **must not** be used to infer general supplier coverage or statistical reliability. These new source and test commits are **after** the immutable `v0.1.0rc2` release.
+
+The historical Qwen **3/36 correct, 0/36 eligible** and original model 6/7 failure remain unchanged. No real supplier holdout, independently annotated corpus, new OCR acquisition, production host, or Qwen inference was executed. See [independent-renderer scope and reproducibility](INDEPENDENT_LAYOUT_QUALIFICATION.md).
+
 ## Published `v0.1.0rc2` source-level readback — 17 November 2026
 
 The conservative source-label guard was merged into `main` by [PR #19](https://github.com/mehdisafer/document-control-intelligence/pull/19), with final merge commit **`db42dd7c7668d70deb8cf5ea6512abcd94a36510`**. GitHub's public [`v0.1.0rc2` prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) resolves directly to that same commit. [GitHub Actions push run #43979529670](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) completed all three real hosted jobs successfully on the exact tag source; CircleCI `build-and-test` separately reports success.
