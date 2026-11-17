@@ -65,8 +65,8 @@ class QwenStrictFieldContractTests(unittest.TestCase):
 
     def test_exact_title_signals_are_bounded_and_not_guessed_from_reference(self):
         doc = SimpleNamespace(pages=[
-            SimpleNamespace(number=1, text="INVOICE\\nPurchase order: PO-9\\nOrdinary text"),
-            SimpleNamespace(number=2, text="FOOTER\\nBON DE LIVRAISON"),
+            SimpleNamespace(number=1, text="INVOICE\nPurchase order: PO-9\nOrdinary text"),
+            SimpleNamespace(number=2, text="FOOTER\nBON DE LIVRAISON"),
         ])
         signals = _exact_title_signals(doc)
         self.assertEqual([x["kind"] for x in signals], ["invoice", "delivery_note"])
