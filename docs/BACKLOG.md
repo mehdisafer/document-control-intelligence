@@ -74,6 +74,7 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   claim about new supplier document families.
 - Add independently generated layouts, labels, scan conditions and table
   geometry; publish coverage and critical-field quality together.
+- [x] **Execute and qualify the narrow independently-rendered synthetic abstention gate:** [run #43990896317](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317) and [original artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317/artifacts/14287562182) show 12/12 parsed inputs, **both profiles** with **6/6 known-contract eligible, 0/6 unsupported-contract eligible, 0 false eligible, 100% citations/semantic support**. Zip and all twelve PDF hashes verified; see [scope and limits](INDEPENDENT_LAYOUT_QUALIFICATION.md). **Independent REAL supplier generalization and Qwen remain OPEN**, not replaced by this 12-document internal sample.
 - Evaluate geometric table extraction rather than presuming pipe-delimited
   synthetic table geometry.
 - Define explicit contracts for returns/credit notes, freight, discounts,

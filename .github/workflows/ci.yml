@@ -93,6 +93,12 @@ jobs:
           assert selected["documents"] == 36 and selected["false_eligible_documents"] == 0
           assert selected["policy_gate_met"], "New source does not meet the predeclared synthetic evaluation gate"
           PY
+      - name: Independent Node-authored synthetic layout and abstention safety evaluation
+        run: |
+          node scripts/generate_independent_layouts.mjs outputs/ci/independent-layout-corpus
+          uv run --frozen python scripts/qualify_independent_layouts.py \
+            --manifest outputs/ci/independent-layout-corpus/manifest.json \
+            --output outputs/ci/independent-layout-evaluation
       - name: Real browser review workflow and screenshots
         run: uv run --frozen --group browser python scripts/browser_smoke.py --config outputs/ci/demo/runtime/config.json --credentials outputs/ci/demo/runtime/credentials.json --output outputs/ci/browser --browser-executable /usr/bin/google-chrome
       - name: Retain original execution results without credentials or runtime databases
@@ -112,6 +118,11 @@ jobs:
             outputs/ci/demo-local-linear/*-dossier.json
             outputs/ci/linear-final-replay/summary.json
             outputs/ci/linear-final-replay/policy-before-run.json
+            outputs/ci/independent-layout-corpus/manifest.json
+            outputs/ci/independent-layout-corpus/documents/*.pdf
+            outputs/ci/independent-layout-evaluation/report.json
+            outputs/ci/independent-layout-evaluation/evaluation/summary.json
+            outputs/ci/independent-layout-evaluation/evaluation/policy-before-run.json
             outputs/ci/browser/*.json
             outputs/ci/browser/*.png
           retention-days: 14

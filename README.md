@@ -76,6 +76,10 @@ holdout was established. The local Qwen profile still fails its quality gate
 
 The retained evidence and [acceptance record](docs/ACCEPTANCE.md) preserve these limits and their exact source versions. Synthetic benchmark results are not a claim about arbitrary supplier PDFs, arbitrary languages or real purchasing decisions.
 
+## Additional independent-renderer safety probe (post-rc2)
+
+An [independently implemented Node.js PDF generator](docs/INDEPENDENT_LAYOUT_QUALIFICATION.md) creates twelve fictional purchasing PDFs outside the original ReportLab generator: six known-label controls and six unsupported alias/geometric-table cases. The parser/model/verifier regression measures coverage, citations and abstentions without silently accepting unsupported layouts. **This is not an independently sourced supplier benchmark, a Qwen quality improvement, or a deployment.** The published `v0.1.0rc2` source tag is unchanged; subsequent CI observations belong to the later commit. [New independent-renderer CI run #43990896317](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317) passed the **separate synthetic safety gate** on **12/12 files** for both baseline and frozen local-linear: six known-contract eligible, six unsupported layouts blocked, zero false eligibility and 100% citation/semantic evidence validity. The [original artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317/artifacts/14287562182) was downloaded and integrity checked. This is a post-rc2 development commit, not a modification of the published source tag.
+
 ## CI and corrections
 
 `.circleci/config.yml` remains the fast Smarter Testing profile; the complete `.github/workflows/ci.yml` runs as a separate full qualification. A fast green badge does not cover every parser, browser or deployment gate.
