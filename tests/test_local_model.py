@@ -72,14 +72,17 @@ class LlmBoundaryTests(unittest.TestCase):
 
     def test_schema_rejects_invented_ids_and_duplicate_rows(self):
         proposal = {"kind": "invoice", "fields": {key: None for key in SCALAR_KEYS}, "line_rows": ["r1"]}
-        _validate_proposal(proposal, {"c1"}, {"r1"})
+        # The source contract now authorizes IDs *per printed field*.
+        allowed = {key: [] for key in SCALAR_KEYS}
+        allowed["total"] = ["c1"]
+        _validate_proposal(proposal, allowed, {"r1"})
         proposal["fields"]["total"] = "invented"
         with self.assertRaises(ModelUnavailable):
-            _validate_proposal(proposal, {"c1"}, {"r1"})
+            _validate_proposal(proposal, allowed, {"r1"})
         proposal["fields"]["total"] = "c1"
         proposal["line_rows"] = ["r1", "r1"]
         with self.assertRaises(ModelUnavailable):
-            _validate_proposal(proposal, {"c1"}, {"r1"})
+            _validate_proposal(proposal, allowed, {"r1"})
 
 
 if __name__ == "__main__":
