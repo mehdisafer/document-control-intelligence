@@ -25,7 +25,8 @@ def make_archive(
     forged_aggregate: bool = False, traversal: bool = False,
     duplicate: bool = False, changed_inputs: bool = False,
     forged_field_counter: bool = False, forged_trace: bool = False,
-    forged_trace_kind: bool = False,
+    forged_trace_kind: bool = False, invalid_citation: bool = False,
+    unsupported_eligible: bool = False,
 ) -> None:
     contents: dict[str, bytes] = {}
     documents: list[dict] = []
@@ -61,7 +62,7 @@ def make_archive(
             "predicted_kind": "invoice",
             "comparisons": comparisons,
             "classification_correct": True,
-            "eligible": i < 6,
+            "eligible": i < 6 or (unsupported_eligible and i == 6),
             "false_eligible": False,
             "fields_correct": correct + (
                 1 if forged_field_counter and i == 0 else 0
@@ -71,7 +72,7 @@ def make_archive(
             "present_fields_total": 13,
             "critical_fields_abstained": 1 if lose_fields and i == 0 else 0,
             "critical_fields_total": 10,
-            "citation_valid": 2,
+            "citation_valid": 1 if invalid_citation and i == 0 else 2,
             "citation_total": 2,
         }
         contents[
@@ -121,7 +122,7 @@ def make_archive(
         "dataset_is_independently_sourced_supplier_benchmark": False,
         "qwen_general_quality_accepted": False,
         "correct_classifications": 12 if not forged_aggregate else 11,
-        "eligible_for_explicit_human_review": 6,
+        "eligible_for_explicit_human_review": 7 if unsupported_eligible else 6,
         "false_eligible": 0,
         "evaluated_documents": 12,
         "real_original_traces": 12,
@@ -213,6 +214,26 @@ class CompareQwenArchivesTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(ValueError, "trace identity/output"):
             inspect(self.candidate)
+
+    def test_invalid_citations_cannot_report_false_green_runtime(self):
+        make_archive(
+            self.candidate, version="structured-extraction-1.4",
+            invalid_citation=True,
+        )
+        result = compare(self.baseline, self.candidate)
+        self.assertFalse(result["nonregression_met"])
+        self.assertTrue(result["candidate_runtime_report_contradicts_source"])
+        self.assertIn("candidate runtime/safety gate failed", result["regressions"])
+
+    def test_unsupported_layout_cannot_report_false_green_runtime(self):
+        make_archive(
+            self.candidate, version="structured-extraction-1.4",
+            unsupported_eligible=True,
+        )
+        result = compare(self.baseline, self.candidate)
+        self.assertFalse(result["nonregression_met"])
+        self.assertTrue(result["candidate_runtime_report_contradicts_source"])
+        self.assertIn("candidate runtime/safety gate failed", result["regressions"])
 
     def test_reject_forged_report_counter(self):
         make_archive(

@@ -177,6 +177,8 @@ def inspect(archive_path: Path) -> dict:
             }
             if any(row[key] != count for key, count in recalculated.items()):
                 raise ValueError("Scored field totals disagree with original comparisons")
+            if row["citation_valid"] > row["citation_total"]:
+                raise ValueError("Reported valid citations exceed original citation count")
             cases[sha] = {
                 key: row[key] for key in (
                     "predicted_kind", "expected_kind", "classification_correct",
@@ -243,6 +245,14 @@ def inspect(archive_path: Path) -> dict:
         )
         if any(tallies[k] != denominators.get(k) for k in tallies):
             raise ValueError("Field/citation denominators mismatch original summary")
+        unsupported_eligible = sum(
+            cases[doc["sha256"]]["eligible"]
+            for doc in docs if doc["contract_group"] == "unseen"
+        )
+        independently_safe = (
+            false == 0 and unsupported_eligible == 0
+            and tallies["citation_valid"] == tallies["citation_total"]
+        )
         return {
             "archive_sha256": digest,
             "manifest_sha256": _sha(raw_manifest),
@@ -258,12 +268,21 @@ def inspect(archive_path: Path) -> dict:
             "development_quality_met": report.get(
                 "synthetic_development_quality_policy_met"
             ) is True,
-            "runtime_gate_met": report.get("bounded_runtime_execution_gate_met") is True,
+            "runtime_gate_met": (
+                report.get("bounded_runtime_execution_gate_met") is True
+                and independently_safe
+            ),
+            "runtime_report_contradicts_scored_source": (
+                report.get("bounded_runtime_execution_gate_met") is True
+                and not independently_safe
+            ),
         }
 
 
 def compare(baseline: Path, candidate: Path) -> dict:
     old, new = inspect(baseline), inspect(candidate)
+    if not old["runtime_gate_met"]:
+        raise ValueError("Baseline runtime/safety evidence is not qualified")
     if (
         old["document_sha256_by_path"] != new["document_sha256_by_path"]
         or old["manifest_sha256"] != new["manifest_sha256"]
@@ -342,6 +361,9 @@ def compare(baseline: Path, candidate: Path) -> dict:
         "regressions": regressions,
         "nonregression_met": not regressions,
         "candidate_development_quality_met": new["development_quality_met"],
+        "candidate_runtime_report_contradicts_source": new[
+            "runtime_report_contradicts_scored_source"
+        ],
         "qwen_general_quality_accepted": False,
         "cases": changes,
         "note": (

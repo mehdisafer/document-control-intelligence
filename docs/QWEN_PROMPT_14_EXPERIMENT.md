@@ -34,7 +34,9 @@ The read-only [paired original-artifact comparator](../scripts/compare_qwen_dev_
 re-derives per-PDF classification, field correctness, critical abstention and
 safety counts from the **original** workflow artifact ZIPs. It rejects
 unmatched PDF hashes, forged/missing raw Qwen responses, duplicate or unsafe ZIP
-members and inconsistent summary counters. Its synthetic
+members and inconsistent summary counters. The comparator also **recomputes**
+source-citation validity and unsupported-layout eligibility; a green runtime
+flag in the report cannot override contradictory scored source evidence. Its synthetic
 [negative-test suite](../tests/test_compare_qwen_dev_archives.py) runs in both
 GitHub Actions full unittest discovery and CircleCI's focused suite.
 
