@@ -43,4 +43,11 @@ original immutable inputs in an independently verified, authorized location.
 The published rc1/rc2 tags, historical 3/36 Qwen failure, separate supplier
 generalization, production-host approval and operator requirements are unchanged.
 
-**Status: planned only until a real hosted workflow and its artifact are verified.**
+## Executed hosted replay — 17 November 2026
+
+[PR #36 original-pair workflow #44187251064](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44187251064) completed **successfully**, including original ZIP download, both SHA-256 checks, execution of the **actual checked-out comparator**, every evidence assertion, and verification of the expected nonregression **exit code 3**. The checkout source recorded in the run artifact is GitHub's PR merge-test commit `6834e38eda92f69166a951a231f6bbc7ac328e3b`, derived from candidate branch commit `125c808bfc18718860b9495d1f70d18854c66a0c` and the referenced main base. The comparator executable code is unchanged from the already qualified `main`.
+
+[Original generated aggregate artifact #14373569905](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44187251064/artifacts/14373569905), downloaded and independently inspected: **five ZIP members**, all CRC-valid, ZIP SHA-256 `03b55cacf7cf14bbc19973057a7280d66eeb7d3725c38ad1ae2e388aa876e105`. The two comparator-output JSON files are identical byte-for-byte, and `verdict.txt` explicitly records **exit code 3 expected and observed**. Original archive digests, manifest SHA, all 12 source document hashes, Qwen prompt identities and exact negative field/abstention metrics are source-bound in the JSON.
+
+The narrow **hosted original-byte replay gate is met on this PR source**. Application CI and eventual merged-main verification must be checked separately before treating the new workflow as fully integrated. This remains a forensic/CI reproducibility result, **not** a model quality or production acceptance.
+
