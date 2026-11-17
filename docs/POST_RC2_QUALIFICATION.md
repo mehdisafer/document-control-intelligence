@@ -58,6 +58,13 @@ These twelve PDFs were **already used in source-safety testing**. This is
 development evidence, not unused third-party supplier data, an approved
 model fallback, full P04 acceptance or a change to the published rc2 tag.
 
+## Rejected Qwen 1.4 title-prompt development experiment
+
+The real [PR #27 Qwen 1.4 inference](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44170413325) and [full application CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44170413411) completed successfully on experimental source; CircleCI was also successful. **This does not establish a quality PASS.** Compared with Qwen 1.3 on **exactly the same twelve PDF hashes**, prompt 1.4 yielded the same 12 raw class decisions, **7/12 correct document classes and 4/12 eligible**, still **below the 50% policy coverage threshold**. The two in-contract purchase orders remained `unknown` and **all sixteen scalar source-ID proposals previously present in 1.3 were changed to null** in 1.4. Artifacts were downloaded, all ZIP CRCs passed, PDF SHA-256s and manifest matched. [Detailed paired failure](QWEN_PROMPT_14_EXPERIMENT.md).
+
+**Decision:** the experimental PR was **closed without merge**, and the source on `main` remains Qwen prompt **1.3**. Supplier-independent documents and true model quality are still **OPEN**; existing rc2 release tags were not moved.
+
+
 ## Scope-specific quality and acceptance matrix
 
 | Gate / observation | Verified result | Acceptance boundary |
@@ -66,6 +73,7 @@ model fallback, full P04 acceptance or a change to the published rc2 tag.
 | Independently *rendered* synthetic layouts | 12 Node-authored PDF inputs; both baseline and frozen local-linear **6/6 known-label candidates eligible, 0/6 deliberately unsupported-label documents eligible**, 0 false eligibility, 100% source-citation and semantic validity | Narrow synthetic semantic abstention gate accepted; **not supplier population generalization** |
 | Immutable original Qwen forensic audit | **406/406** original archived members hashed; **36/36** original raw/proposal/scored/parsed identities correlated; Qwen **3/36 correct, 0/36 eligible**, 30 unknown model proposals, 35/272 semantically wrong known-label candidate selections | Diagnostic provenance **accepted**, Qwen model quality **FAILED historically** |
 | Per-field Qwen candidate schema restriction | PR #24 requires independently recognized printed source labels for a candidate ID to be selectable for each field; refuses unsupported URL labels; preserves genuine conflicting labels and explicit abstention; **eight new negative/positive tests passed** plus fixed legacy test | **Implementation and CI tests accepted**, but no *new Qwen inference*, no measured Qwen classification/coverage uplift; proposed Qwen prompt version is now 1.3 |
+| Rejected Qwen 1.4 development prompt | Same 7/12 classes and 4/12 eligibility as 1.3; 16 source-ID proposals on two known purchase orders became null | Quality **FAILED**, PR #27 **closed unmerged**, 1.3 remains current | 
 | Real Qwen 1.3 development inference (post-PR #26) | **12/12 raw traces**, **7/12 correct**, **4/12 eligible**, **4/4 eligible critical quality**, **0 false eligible**, no inference/parser failure | Runtime/safety **PASS**, independent 50% synthetic model coverage **FAIL**; reused development PDFs are not an untouched supplier benchmark |
 | Real suppliers, nonstandard invoices, third-party annotations, independent OCR acquisition | No independent acquired/annotated supplier benchmark, no claims on credit notes, returns, FX, repeated-SKU semantics or adversarial native-text authenticity | **OPEN** |
 | Real target host, secrets, network, image/SBOM, load, backup/restore, monitoring and operator sign-off | Hosted CI container/restore and Terraform schema exercised only; **no explicitly authorized target host** | **OPEN** |

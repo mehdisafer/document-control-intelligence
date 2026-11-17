@@ -62,6 +62,11 @@ remains historical evidence and was corrected before the final PR-head rerun.
 field-specific Qwen response schema and independent semantic validation.
 **Not measured:** new Qwen 1.3 live responses, model accuracy, document
 eligibility coverage, new/fresh holdout performance or CPU inference cost.
-The original Qwen 3/36 correct, 0/36 eligible remains the latest *real*
+At the time of the PR #24 source-only qualification, the original Qwen 3/36 correct, 0/36 eligible remained the latest *real*
 generative model measurement and **fails the quality gate**. See the
 [current consolidated post-release acceptance status](POST_RC2_QUALIFICATION.md).
+
+## Subsequent live development observations — Qwen 1.3 and rejected 1.4
+
+A later [real Qwen 1.3 development execution](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563) produced **7/12 correct classifications and 4/12 eligible** on twelve reused fictional PDFs, with zero false eligible; its 50% quality coverage target **failed**. A [prompt-only title candidate 1.4](https://github.com/mehdisafer/document-control-intelligence/pull/27) ran **real** inference against the **same exact PDF hashes** and made **identical class proposals**, while turning all 16 source-ID proposals for two known-contract purchase orders into `null`. It did not improve model quality, so PR #27 was **closed without merge**. Qwen 1.3 remains current; no real supplier validation was performed. See [paired negative evidence](QWEN_PROMPT_14_EXPERIMENT.md).
+

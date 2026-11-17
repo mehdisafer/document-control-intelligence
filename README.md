@@ -112,6 +112,11 @@ and cannot be compared as a controlled improvement. The published
 [Original run identities, metrics and limitations](docs/QWEN_DEVELOPMENT_PROBE.md)
 are retained separately from the earlier Qwen forensic audit.
 
+## Rejected Qwen 1.4 title-prompt experiment
+
+[PR #27](https://github.com/mehdisafer/document-control-intelligence/pull/27) tested a title-focused prompt 1.4 against the **same twelve synthetic development PDFs** as 1.3. Its real Qwen runner and full app CI succeeded, but classification and eligible coverage stayed **7/12 and 4/12** (the predeclared 50% coverage gate still **FAILED**). Both in-contract purchase orders remained `unknown` and **each regressed from eight scalar source-ID proposals under 1.3 to all eight null under 1.4**. The original artifacts and identical PDF hashes were checked; [paired forensic result](docs/QWEN_PROMPT_14_EXPERIMENT.md). **PR #27 was closed without merge**: prompt **1.3 stays on `main`**, and Qwen model quality and real supplier generalization stay **OPEN**.
+
+
 ## Additional independent-renderer safety probe (post-rc2)
 
 An [independently implemented Node.js PDF generator](docs/INDEPENDENT_LAYOUT_QUALIFICATION.md) creates twelve fictional purchasing PDFs outside the original ReportLab generator: six known-label controls and six unsupported alias/geometric-table cases. The parser/model/verifier regression measures coverage, citations and abstentions without silently accepting unsupported layouts. **This is not an independently sourced supplier benchmark, a Qwen quality improvement, or a deployment.** The published `v0.1.0rc2` source tag is unchanged; subsequent CI observations belong to the later commit. [New independent-renderer CI run #43990896317](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317) passed the **separate synthetic safety gate** on **12/12 files** for both baseline and frozen local-linear: six known-contract eligible, six unsupported layouts blocked, zero false eligibility and 100% citation/semantic evidence validity. The [original artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43990896317/artifacts/14287562182) was downloaded and integrity checked. This is a post-rc2 development commit, not a modification of the published source tag.

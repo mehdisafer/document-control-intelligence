@@ -90,6 +90,11 @@ passed 171 Python, 24 JavaScript and 36 real Chrome checks, plus the
 other two required jobs. CircleCI build-and-test succeeded on the same SHA.
 No release tag, production service or model-quality gate was changed.
 
+## Rejected real Qwen prompt 1.4 experiment
+
+[PR #27](https://github.com/mehdisafer/document-control-intelligence/pull/27) changed only the model instruction for selecting the class from unique title signals. Its [actual 1.4 Qwen workflow](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44170413325) completed with **12/12 real model traces**, zero inference errors, 0 false eligible and valid emitted citations. Yet on the **same PDF hashes as 1.3**, the model made **the exact same twelve class proposals**, scored **7/12 classifications, 4/12 eligible** (33.33% coverage: **FAIL** vs 50%), and both in-contract purchase orders remained `unknown`. Raw field selections for those two documents regressed from **eight candidate IDs per document in 1.3** to **eight nulls per document in 1.4**. Both original ZIP artifacts were hash- and CRC-checked. The experiment was **closed without merge**, leaving 1.3 as the current development protocol. This is development evidence only; see the [complete paired negative report](QWEN_PROMPT_14_EXPERIMENT.md).
+
+
 ## Execute and interpret
 
 The GitHub workflow can run when its source changes, through an authorized
