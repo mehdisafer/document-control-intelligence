@@ -42,19 +42,26 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   bounded generator-derived qualification, not independent supplier validation.
 - [x] **Forensically reconcile the original Qwen failure (diagnostic gate only):** [PR #23](https://github.com/mehdisafer/document-control-intelligence/pull/23) hosted [run #44161099199](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199) audited 36 original responses/PDFs and all 406 original indexed files with SHA-256, and retained the [original aggregate JSON](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199/artifacts/14363287699). Model proposed `unknown` in 30/36, including 14 cases with an exact recognized title; **35/272** field-candidate selections assigned a different recognized label. **No new inference, Qwen quality acceptance or supplier-general claim**; see [full analysis](QWEN_TRACE_FORENSICS.md).
 - [x] **Constrain Qwen candidate provenance before model result acceptance:** [PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) merged at `b78104439c66`, [exact-main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) 3/3 GitHub Actions + CircleCI success, 162 Python tests including eight new semantic guard cases, 24 JS, 36 Chrome. Field IDs must match independently recognized printed labels; duplicate/conflicting recognized values still invoke existing abstention. **No new Qwen inference: its 3/36 correct, 0/36 eligible quality gate remains OPEN**. Detailed [provenance and coverage](QWEN_SEMANTIC_GUARD.md), [cross-gate status](POST_RC2_QUALIFICATION.md).
-- [ ] **Run real Qwen 1.3 development inference separately from the historical audit.**
-  The bounded, model-hash-checked synthetic development workflow is
-  [documented here](QWEN_DEVELOPMENT_PROBE.md). It must retain original
-  model traces and separate runtime-success from actual class/critical-field
-  quality. These previously seen synthetic PDFs are **not a fresh independent
-  supplier holdout** and cannot close full P04 model generalization.
-- [ ] **Resolve generative model quality and generalization.** Qwen had
-  **3/36** correct classifications and **0/36** eligible in its bounded
-  execution. A new independent supplier/layout holdout is still absent;
-  the local-linear replay uses the original generator and seed. Do not
-  reclassify Qwen or arbitrary supplier performance as qualified, or
-  silently narrow the P04 scope. A new evaluation or explicit maintainer
-  decision is needed.
+- [x] **Execute real bounded Qwen 1.3 development inference (runtime/safety only).**
+  [PR #26](https://github.com/mehdisafer/document-control-intelligence/pull/26)
+  is merged at `4b9f8b3`. [Exact-main real Qwen run #44169464563](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464563)
+  passed runtime and provenance checks with 12/12 original raw model traces,
+  no parser/inference errors and zero false eligibility. The separate model
+  **quality gate FAILED**: 7/12 correct classes, 4/12 eligible (33.3%
+  versus required 50%), though eligible critical quality was 4/4.
+  [Exact-main mainline CI #44169464538](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44169464538)
+  passed 171 Python, 24 JavaScript and 36 Chrome checks, plus container and
+  Terraform jobs; CircleCI succeeded. Original ZIP archives have passed CRC
+  inspection; [source-bound detail](QWEN_DEVELOPMENT_PROBE.md). These twelve
+  previously used synthetic PDFs **are not a fresh supplier holdout**.
+- [ ] **Resolve generative model quality and generalization.** The original
+  Qwen benchmark remains **3/36** correct classes and **0/36** eligible.
+  The separate real Qwen 1.3 *development* corpus returned **7/12** correct
+  and **4/12** eligible, also below its quality coverage threshold. These
+  are different source/dataset populations and **not** a controlled
+  before/after uplift. An untouched independently acquired/annotated
+  supplier holdout and reviewed new purchasing contracts remain absent.
+  Do not qualify unsupported suppliers or silently relax the P04 scope.
 - [ ] **Define an authorized target host** before deployment. Inspect the
   concrete rollout plan, backups, restoration, monitoring, network exposure
   and operating acceptance. Passing CI containers is not a deployed service.
