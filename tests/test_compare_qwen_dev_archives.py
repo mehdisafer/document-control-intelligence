@@ -332,6 +332,67 @@ class CompareQwenArchivesTests(unittest.TestCase):
             ["fields_correct decreased", "critical abstention increased"],
         )
 
+    def _rewrite_candidate(self, edit):
+        with zipfile.ZipFile(self.candidate) as archive:
+            content = {name: archive.read(name) for name in archive.namelist()}
+        edit(content)
+        with zipfile.ZipFile(self.candidate, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+            for name, body in content.items():
+                archive.writestr(name, body)
+
+    def test_original_truth_cannot_be_forged_with_consistent_counter(self):
+        def alter(content):
+            key = next(k for k in content if k.startswith(
+                "qwen-dev-run/evaluation/documents/local-llm/"))
+            row = json.loads(content[key])
+            row["comparisons"][0]["expected"] = "FORGED"
+            content[key] = encoded(row)
+        self._rewrite_candidate(alter)
+        with self.assertRaisesRegex(ValueError, "field score diverges from truth"):
+            inspect(self.candidate)
+
+    def test_original_scored_actual_must_match_extraction(self):
+        def alter(content):
+            key = next(k for k in content if k.startswith(
+                "qwen-dev-run/evaluation/documents/local-llm/"))
+            row = json.loads(content[key])
+            row["comparisons"][0]["actual"] = "FORGED"
+            content[key] = encoded(row)
+        self._rewrite_candidate(alter)
+        with self.assertRaisesRegex(ValueError, "field score diverges from truth"):
+            inspect(self.candidate)
+
+    def test_parsed_raw_proposal_must_match_original_model_response(self):
+        def alter(content):
+            key = next(k for k in content if k.startswith("qwen-dev-run/model-traces/"))
+            trace = json.loads(content[key])
+            trace["proposal"]["injected_field"] = "not returned by model"
+            content[key] = encoded(trace)
+        self._rewrite_candidate(alter)
+        with self.assertRaisesRegex(ValueError, "Parsed proposal differs"):
+            inspect(self.candidate)
+
+    def test_all_raw_traces_require_prompt_sha256(self):
+        def alter(content):
+            key = next(k for k in content if k.startswith("qwen-dev-run/model-traces/"))
+            trace = json.loads(content[key])
+            trace["telemetry"].pop("prompt_sha256")
+            content[key] = encoded(trace)
+        self._rewrite_candidate(alter)
+        with self.assertRaisesRegex(ValueError, "prompt SHA-256 missing"):
+            inspect(self.candidate)
+
+    def test_critical_flag_must_match_source_contract(self):
+        def alter(content):
+            key = next(k for k in content if k.startswith(
+                "qwen-dev-run/evaluation/documents/local-llm/"))
+            row = json.loads(content[key])
+            row["comparisons"][0]["critical"] = False
+            content[key] = encoded(row)
+        self._rewrite_candidate(alter)
+        with self.assertRaisesRegex(ValueError, "field score diverges from truth"):
+            inspect(self.candidate)
+
     def test_reject_self_comparison(self):
         with self.assertRaisesRegex(ValueError, "itself"):
             compare(self.baseline, self.baseline)
