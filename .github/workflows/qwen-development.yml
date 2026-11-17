@@ -1,0 +1,86 @@
+name: Bounded Qwen 1.3 synthetic development inference
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    paths:
+      - .github/workflows/qwen-development.yml
+      - src/dci/llm.py
+      - scripts/run_llm_evaluation.py
+      - scripts/verify_qwen_dev_probe.py
+      - scripts/generate_independent_layouts.mjs
+      - tests/test_qwen_dev_probe.py
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/qwen-development.yml
+      - src/dci/llm.py
+      - scripts/run_llm_evaluation.py
+      - scripts/verify_qwen_dev_probe.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: qwen-development-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qwen-development:
+    # Avoid expensive automatic inference on untrusted fork PRs.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout without persistent credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install exact Python and uv
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: "0.13.6"
+          python-version: "3.12.14"
+      - name: Install native PDF/OCR prerequisites
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng libseccomp2
+      - name: Install locked dependencies
+        run: uv sync --frozen
+      - name: Create 12 independently authored synthetic development PDFs
+        run: node scripts/generate_independent_layouts.mjs outputs/ci/qwen-dev-corpus
+      - name: Provision strictly pinned public Qwen GGUF and llama.cpp CPU runtime
+        run: uv run --frozen python scripts/provision_llm.py --output .runtime
+      - name: Execute real local-only Qwen 1.3 synthetic development evaluation
+        timeout-minutes: 17
+        run: |
+          uv run --frozen python scripts/run_llm_evaluation.py \
+            --server .runtime/llama/bin/llama-b12359/llama-server \
+            --model .runtime/models/Qwen3-0.6B-Q4_K_M.gguf \
+            --manifest outputs/ci/qwen-dev-corpus/manifest.json \
+            --output outputs/ci/qwen-dev-run \
+            --profiles local-llm --threads 4 \
+            --timeout-seconds 90 --wall-budget-seconds 900
+      - name: Verify response provenance and distinguish runtime from quality
+        run: |
+          uv run --frozen python scripts/verify_qwen_dev_probe.py \
+            --manifest outputs/ci/qwen-dev-corpus/manifest.json \
+            --evaluation outputs/ci/qwen-dev-run/evaluation \
+            --harness outputs/ci/qwen-dev-run/harness.json \
+            --output outputs/ci/qwen-dev-report.json
+      - name: Retain original synthetic inputs, real responses and measurements
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: qwen-synthetic-development-${{ github.sha }}
+          path: |
+            outputs/ci/qwen-dev-corpus/manifest.json
+            outputs/ci/qwen-dev-corpus/documents/*.pdf
+            outputs/ci/qwen-dev-run/harness.json
+            outputs/ci/qwen-dev-run/evaluation/summary.json
+            outputs/ci/qwen-dev-run/evaluation/policy-before-run.json
+            outputs/ci/qwen-dev-run/evaluation/documents/local-llm/*.json
+            outputs/ci/qwen-dev-run/model-traces/*.json
+            outputs/ci/qwen-dev-run/server-resource-timeline.jsonl
+            outputs/ci/qwen-dev-run/server.log
+            outputs/ci/qwen-dev-report.json
+          retention-days: 14
