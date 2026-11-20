@@ -17,7 +17,7 @@ dependencies = [
   "pdfplumber==0.11.10",
   "pypdfium2==5.13.0",
   "Pillow==13.0.0",
-  "reportlab==4.4.9",
+  "reportlab==5.1.0",
   "scikit-learn==1.8.0",
   "httpx==0.28.1",
 ]
