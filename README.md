@@ -4,7 +4,26 @@
 
 This Linux reference processes synthetic purchase orders, delivery notes and invoices. It preserves original PDF bytes, extracts bounded evidence, checks arithmetic and cross-document consistency, and binds correction, acceptance and publication to current document versions. A model proposal cannot directly authorize publication.
 
-## Published source and acceptance — 17 November 2026
+## Latest inspected development qualification — 23 November 2026
+
+The latest inspected executable source is
+[`2e8b3a6ec22c21dfdb121fd65488851ed4fdbc21`](https://github.com/mehdisafer/document-control-intelligence/commit/2e8b3a6ec22c21dfdb121fd65488851ed4fdbc21).
+Its [exact-main GitHub Actions run](https://github.com/mehdisafer/document-control-intelligence/actions/runs/45080409953)
+executed all three jobs successfully: **198 Python tests, 24 JavaScript tests,
+36/36 real Chrome checks**, reference container/restore and Terraform schema.
+CircleCI build-and-test succeeded on the same SHA. The original checks and
+container ZIPs were downloaded and CRC/SHA-256 verified; [source identities and
+receipts](docs/POST_RC2_QUALIFICATION.md) retain their exact scope.
+
+Merged changes include queued Qwen source-policy fencing, original-archive
+truth/proposal validation and replay, and synchronized ReportLab **5.1.0**,
+Playwright **1.65.2** and Ruff **0.17.6** locks. All ten direct runtime pins
+plus `pdfminer-six` are checked against the exported versions and artifact
+hashes. The replay correctly detects the rejected Qwen 1.4 regression;
+**model quality and independent supplier acceptance remain failed/open**.
+This later development source is separate from the unchanged rc2 tag below.
+
+## Published source and acceptance — immutable rc2 source
 
 The public [`v0.1.0rc2` source prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is **published** and its immutable tag points to [`db42dd7c7668d70deb8cf5ea6512abcd94a36510`](https://github.com/mehdisafer/document-control-intelligence/commit/db42dd7c7668d70deb8cf5ea6512abcd94a36510). The previous `v0.1.0rc1` tag remains at `5c1f3e43`. Publishing source is not deploying a business service.
 
@@ -83,7 +102,7 @@ An [offline 36-response forensic audit](docs/QWEN_TRACE_FORENSICS.md) now checks
 
 ## Post-rc2 Qwen semantic contract — implemented and source-tested
 
-Merged [PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) at [`main` `b78104439c66`](https://github.com/mehdisafer/document-control-intelligence/commit/b78104439c6614fbb8d3f2ab97e0899e4db047f6) constrains Qwen's proposed scalar-field candidate IDs to independently recognized **printed source labels**, with a second validation on returned responses. Bounded exact title evidence is also supplied to the model as untrusted data; genuine repeated conflicting labels remain subject to abstention. The prompt identity is now 1.3. [Exact-main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) passed **162 Python, 24 JavaScript and 36 Chrome checks**, with real container/Compose and Terraform-schema runs. The [original current-source artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992/artifacts/14364034272) passed ZIP CRC/integrity inspection. **That PR #24 qualification did not run new Qwen inference; its original 3/36 correct and 0/36 eligible result remains failed.** See the [full post-release acceptance matrix](docs/POST_RC2_QUALIFICATION.md) and [source guard documentation](docs/QWEN_SEMANTIC_GUARD.md).
+Merged [PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) at historical source [`b78104439c66`](https://github.com/mehdisafer/document-control-intelligence/commit/b78104439c6614fbb8d3f2ab97e0899e4db047f6) constrains Qwen's proposed scalar-field candidate IDs to independently recognized **printed source labels**, with a second validation on returned responses. Bounded exact title evidence is also supplied to the model as untrusted data; genuine repeated conflicting labels remain subject to abstention. The prompt identity is now 1.3. [Exact-main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) passed **162 Python, 24 JavaScript and 36 Chrome checks**, with real container/Compose and Terraform-schema runs. The [original PR #24 source artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992/artifacts/14364034272) passed ZIP CRC/integrity inspection. **That PR #24 qualification did not run new Qwen inference; its original 3/36 correct and 0/36 eligible result remains failed.** See the [full post-release acceptance matrix](docs/POST_RC2_QUALIFICATION.md) and [source guard documentation](docs/QWEN_SEMANTIC_GUARD.md).
 
 ## Real Qwen 1.3 inference on reused synthetic development PDFs
 

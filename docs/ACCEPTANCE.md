@@ -1,6 +1,19 @@
 # Acceptance matrix
 
-Updated 17 November 2026 from the immutable source tag, GitHub Actions execution and downloaded original test artifacts. This document distinguishes **implemented**, **executed**, **tested**, and **accepted within a named scope**. The bounded synthetic document-control reference is qualified; independent supplier accuracy, generative-model quality and a deployed business service are **not** accepted.
+Reconciled 23 November 2026 from the immutable source tag, GitHub Actions execution and downloaded original test artifacts. This document distinguishes **implemented**, **executed**, **tested**, and **accepted within a named scope**. The bounded synthetic document-control reference is qualified; independent supplier accuracy, generative-model quality and a deployed business service are **not** accepted.
+
+## Latest inspected development source
+
+Executable source [`2e8b3a6ec22c21dfdb121fd65488851ed4fdbc21`](https://github.com/mehdisafer/document-control-intelligence/commit/2e8b3a6ec22c21dfdb121fd65488851ed4fdbc21)
+passed [all three exact-main Actions jobs](https://github.com/mehdisafer/document-control-intelligence/actions/runs/45080409953)
+and CircleCI: **198 Python, 24 JavaScript and 36/36 Chrome checks**, with
+real reference container/restore and Terraform schema execution. Original
+checks/container ZIP integrity and digests were verified. The [consolidated
+source record](POST_RC2_QUALIFICATION.md) identifies those archives, merged
+queue-policy and original-Qwen-evidence guards, and the synchronized dependency
+versions/hashes. These completed source gates are separate from the 139-test
+immutable rc2 release below. The original-pair replay correctly rejects the
+Qwen 1.4 field regression; independent supplier/model acceptance remains open.
 
 ## Published source prerelease and exact-source CI
 
@@ -34,9 +47,9 @@ This qualified negative-control gate is **not** the independent real-supplier ge
 
 [PR #23](https://github.com/mehdisafer/document-control-intelligence/pull/23) added a strictly offline audit of the retained Qwen traces. In the [hosted run #44161099199](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199), the audit checked **406/406 original archive hashes** and correlated **36/36 original model responses, parsed PDFs and scored outcomes**, with no new Qwen request. The [original ZIP artifact](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44161099199/artifacts/14363287699) passed CRC inspection. The model emitted 30 `unknown` class proposals, including 14 despite a recognized exact title; 35/272 selected scalar candidates were assigned to a different recognized semantic field. Independent validation preserved the historical **3/36 correct, 0 eligible** outcome. This is an **accepted provenance/diagnostic gate**, not Qwen quality acceptance. [Details](QWEN_TRACE_FORENSICS.md).
 
-## Post-rc2 Qwen semantic restriction — implemented and qualified, quality UNTESTED
+## Historical PR #24 semantic restriction — source qualified, no inference in that run
 
-[PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) merged at current development `main` [`b78104439c6614fbb8d3f2ab97e0899e4db047f6`](https://github.com/mehdisafer/document-control-intelligence/commit/b78104439c6614fbb8d3f2ab97e0899e4db047f6), **after** immutable release `v0.1.0rc2`. It narrows the Qwen JSON schema and secondary response validation to field IDs grounded in that field's independently recognized printed label, plus null abstention. The `PROMPT_VERSION` increments to `structured-extraction-1.3` and includes bounded **untrusted** exact-title evidence. Neither the Qwen GGUF weights nor the deterministic source verification, business rules, historical raw reports, runtime hashes, or release tags were changed.
+[PR #24](https://github.com/mehdisafer/document-control-intelligence/pull/24) merged at historical development source [`b78104439c6614fbb8d3f2ab97e0899e4db047f6`](https://github.com/mehdisafer/document-control-intelligence/commit/b78104439c6614fbb8d3f2ab97e0899e4db047f6), **after** immutable release `v0.1.0rc2`. It narrows the Qwen JSON schema and secondary response validation to field IDs grounded in that field's independently recognized printed label, plus null abstention. The `PROMPT_VERSION` increments to `structured-extraction-1.3` and includes bounded **untrusted** exact-title evidence. Neither the Qwen GGUF weights nor the deterministic source verification, business rules, historical raw reports, runtime hashes, or release tags were changed.
 
 [Exact-main GitHub Actions #44165434992](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992) passed **3/3 jobs**; matching CircleCI passed. Downloaded [original main artifact #14364034272](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44165434992/artifacts/14364034272) verified **43 ZIP members, CRC and SHA-256 `f3f0814c65781c7d8193bc46ba09b0e492b232bd4510cf7953d2977f57f92520`**, with 162 Python tests (including eight new semantic-label tests and legacy-call compatibility), 24 JavaScript tests and 36/36 Chrome checks. This qualifies the **source guard and CI regression only**. **Qwen 3/36 historical classification correct and 0/36 eligible remain a failed quality gate**: there was **no new Qwen runtime inference** or fresh untouched holdout, and original 35/272 raw candidate misassignments were not retroactively changed. See [consolidated post-rc2 source matrix](POST_RC2_QUALIFICATION.md) and [guard specification](QWEN_SEMANTIC_GUARD.md).
 

@@ -1,6 +1,6 @@
 # Release candidate 0.1.0rc1
 
-## Current post-release state — 17 November 2026
+## Current post-release state — reconciled 23 November 2026
 
 This document originated as the **historical publication and qualification
 record for `v0.1.0rc1`**. Text below describing a private repository,
@@ -21,6 +21,15 @@ runnerless/browser-unqualified observations below **only for the newer
 source revision**.
 
 The subsequent [`v0.1.0rc2` prerelease](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is **published** and tagged at source `db42dd7c7668d70deb8cf5ea6512abcd94a36510`, not at the earlier documentation-only `599bff76`. Its [exact-source CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) passed 139 Python, 24 JavaScript, 36 real Chrome checks and all three hosted integration jobs. A new local-linear semantic-label guard met the bounded 7/7 scripted demonstration, leaving the original 6/7 failure unchanged and Qwen unqualified. The **editable release body already reflects these correct source facts**, but four nested Markdown link wrappers still need formatting-only correction. As last read, `main` remains **unprotected**, and [issue #1](https://github.com/mehdisafer/document-control-intelligence/issues/1) stays open for independent supplier/LLM quality and authorized production-target decisions. Neither release implies production certification.
+
+The latest inspected development qualification is **not a new release**:
+[`2e8b3a6`](https://github.com/mehdisafer/document-control-intelligence/commit/2e8b3a6ec22c21dfdb121fd65488851ed4fdbc21)
+passed [three exact-main Actions jobs](https://github.com/mehdisafer/document-control-intelligence/actions/runs/45080409953),
+CircleCI, **198 Python / 24 JavaScript / 36 Chrome** checks and reference
+container/restore. The [post-rc2 record](POST_RC2_QUALIFICATION.md) reconciles
+queued-policy fencing, original paired-Qwen negative replay and dependency
+lock/hash parity. Both published tags and their original evidence remain
+unchanged; supplier, model and intended-host acceptance remain open.
 
 ## Purpose — original `0.1.0rc1` preparation record
 
@@ -143,7 +152,7 @@ unqualified by a licensing change.
 No public business endpoint is created by changing repository visibility. A target
 deployment remains a separately inspected operational action.
 
-## Latest CI and dependency observations
+## Historical CI and dependency observations — 15 November 2026
 
 The single rerun of [main run 43602643545](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43602643545),
 at attempt 2 on 2026-11-15, again ended with three failed jobs, `runner_id: 0`

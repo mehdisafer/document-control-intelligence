@@ -1,6 +1,6 @@
 # Prioritized backlog and current limits
 
-Last reconciled: **17 November 2026**. This is the current backlog;
+Last reconciled: **23 November 2026**. This is the current backlog;
 original failures, model reports and earlier release notes remain preserved.
 See the [acceptance matrix](ACCEPTANCE.md) and
 [original-page evidence](ORIGINAL_PAGE_PREVIEW.md).
@@ -23,7 +23,7 @@ See the [acceptance matrix](ACCEPTANCE.md) and
 - [ ] **Protect `main`** using the prepared branch ruleset: require PR,
   conversation resolution, prevent force-push/deletion, and require the
   actual `smoke-and-integration`, `container-integration` and
-  `terraform-schema` checks. The GitHub API read on 16 November found no
+  `terraform-schema` checks. The GitHub API read on 23 November found no
   ruleset and `main.protected=false`. The connector has no repository
   administration writer; this remains an owner-side UI action.
 - [x] **Publish the updated source prerelease:** [`v0.1.0rc2`](https://github.com/mehdisafer/document-control-intelligence/releases/tag/v0.1.0rc2) is live as **Pre-release**, with immutable tag SHA `db42dd7c7668d70deb8cf5ea6512abcd94a36510`. [Exact tagged-source CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/43979529670) passed all three GitHub Actions jobs; CircleCI also succeeded. The public body has since been updated to the correct source and 139-test run (readback 17 November 2026, 00:24:23 UTC). Preserve the older `v0.1.0rc1` tag.
@@ -56,7 +56,9 @@ See the [acceptance matrix](ACCEPTANCE.md) and
   previously used synthetic PDFs **are not a fresh supplier holdout**.
 - [x] **Record and reject the Qwen 1.4 regression:** [PR #27](https://github.com/mehdisafer/document-control-intelligence/pull/27) **closed without merge** after exact-source real inference on the same 12 development PDFs. No class or eligibility uplift (**7/12 correct; 4/12 eligible vs 50% required**) and **16 scalar candidate selections lost** across two in-contract purchase orders (8 null apiece). Runtime safe, but quality gate **FAILED**. [Paired negative evidence](QWEN_PROMPT_14_EXPERIMENT.md). Prompt 1.3 remains active; the independent supplier holdout and genuine Qwen quality gate remain OPEN.
 
-- [ ] **Qualify queued Qwen request-policy identity:** [source-policy guard](QWEN_QUEUE_POLICY_IDENTITY.md) binds the prompt text/version and actual LLM/extraction source hashes for the local-llm profile so queued work fails closed on a prompt/schema change. Verify its seven tests, actual SQLite policy-fencing outcome, and exact merged-main CI before checking the narrow guard; **no Qwen accuracy or production deployment improvement is assumed**.
+- [x] **Qualify queued Qwen request-policy identity:** merged [PR #32](https://github.com/mehdisafer/document-control-intelligence/pull/32), [exact-main run #44184232130](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44184232130), and the real SQLite queued-PDF test verify the [source-policy guard](QWEN_QUEUE_POLICY_IDENTITY.md). A changed prompt/source policy is rejected before parsing or inference. All three jobs and 193 Python tests passed on that source; the guard remains in the later 198-test qualification. This closes only the queue-policy subgate, not Qwen accuracy or production acceptance.
+- [x] **Qualify original Qwen pair provenance and expected negative replay:** merged PRs #31/#34/#35/#36 verify truth, citations, raw responses/proposals, source identity and original ZIP/PDF hashes. [Merged-source replay #44188133457](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44188133457) correctly detects **nonregression false**, 90 to 74 correct fields and 60 to 74 critical abstentions; [original receipts](QWEN_ORIGINAL_ARCHIVE_REPLAY.md). No new inference or model-quality pass is claimed.
+- [x] **Consolidate later dependency updates and all direct-runtime export hashes:** [PR #40](https://github.com/mehdisafer/document-control-intelligence/pull/40) and separate retargeted [PR #39](https://github.com/mehdisafer/document-control-intelligence/pull/39) deliver ReportLab 5.1.0, Playwright 1.65.2 and Ruff 0.17.6. Exact `2e8b3a6` [main CI](https://github.com/mehdisafer/document-control-intelligence/actions/runs/45080409953) passed three jobs, 198 Python, 24 JavaScript and 36 Chrome checks; both original archives were verified. [Source-bound details](POST_RC2_QUALIFICATION.md).
 - [ ] **Resolve generative model quality and generalization.** The original
   Qwen benchmark remains **3/36** correct classes and **0/36** eligible.
   The separate real Qwen 1.3 *development* corpus returned **7/12** correct
