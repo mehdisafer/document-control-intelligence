@@ -33,7 +33,7 @@ dci = ["static/*", "migrations/*.sql"]
 
 [dependency-groups]
 browser = ["playwright==1.65.2"]
-audit = ["pip-audit==2.10.1", "pip-licenses==5.5.5", "ruff==0.17.5"]
+audit = ["pip-audit==2.10.1", "pip-licenses==5.5.5", "ruff==0.17.6"]
 
 [tool.ruff]
 target-version = "py312"
