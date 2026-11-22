@@ -1,4 +1,4 @@
-"""Check consistency between direct pins, the uv lock and exported PDF package hashes."""
+"""Check complete runtime dependency and hash consistency across both locks."""
 import tomllib
 import unittest
 from pathlib import Path
@@ -28,8 +28,10 @@ class DependencyLockConsistency(unittest.TestCase):
                 self.assertIn(normalized, self.packages)
                 self.assertEqual(self.packages[normalized]["version"], version)
 
-    def test_pdf_export_artifact_hashes_match_lock(self):
-        for name in ("pdfminer-six", "pdfplumber"):
+    def test_all_runtime_and_pdf_export_artifact_hashes_match_lock(self):
+        direct = [pin.split("==", 1)[0].lower().replace("_", "-")
+                  for pin in self.project["project"]["dependencies"]]
+        for name in (*direct, "pdfminer-six"):
             with self.subTest(package=name):
                 matching = [
                     i for i, line in enumerate(self.requirement_lines)

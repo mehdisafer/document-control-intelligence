@@ -17,7 +17,7 @@ dependencies = [
   "pdfplumber==0.11.10",
   "pypdfium2==5.13.0",
   "Pillow==13.0.0",
-  "reportlab==4.4.9",
+  "reportlab==5.1.0",
   "scikit-learn==1.8.0",
   "httpx==0.28.1",
 ]
@@ -32,8 +32,8 @@ where = ["src"]
 dci = ["static/*", "migrations/*.sql"]
 
 [dependency-groups]
-browser = ["playwright==1.62.0"]
-audit = ["pip-audit==2.10.1", "pip-licenses==5.5.5", "ruff==0.15.1"]
+browser = ["playwright==1.65.2"]
+audit = ["pip-audit==2.10.1", "pip-licenses==5.5.5", "ruff==0.17.5"]
 
 [tool.ruff]
 target-version = "py312"
