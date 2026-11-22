@@ -1,4 +1,60 @@
-# Post-v0.1.0rc2 source qualification — 17 November 2026
+# Post-v0.1.0rc2 source qualification — reconciled 23 November 2026
+
+## Latest inspected executable source and completed source gates
+
+The latest inspected executable commit is
+[`2e8b3a6ec22c21dfdb121fd65488851ed4fdbc21`](https://github.com/mehdisafer/document-control-intelligence/commit/2e8b3a6ec22c21dfdb121fd65488851ed4fdbc21).
+[Exact-main Actions #45080409953](https://github.com/mehdisafer/document-control-intelligence/actions/runs/45080409953)
+completed **all three jobs successfully** on 22 November 2026:
+`smoke-and-integration`, `container-integration`, and `terraform-schema`.
+CircleCI build-and-test also succeeded on that SHA. The original outputs record
+**198 Python tests**, **24 JavaScript tests**, and **36/36 Chrome checks**
+with zero browser issues or page errors. The expected negative-login HTTP 401
+is not described as zero console errors. Reference container execution,
+synthetic export/restore, and Terraform schema checks were executed; none is
+an intended-host deployment.
+
+Both original archives were downloaded and their complete ZIP CRCs and
+SHA-256 digests verified during the 22 November qualification:
+
+| Original artifact | Members | SHA-256 |
+|---|---:|---|
+| [Checks #14776079725](https://github.com/mehdisafer/document-control-intelligence/actions/runs/45080409953/artifacts/14776079725) | 43 | `6cbdb0c0dba3968eea37ed8d32487aa6e2377bbbe9852ccc03da5afdac392a97` |
+| [Container #14776997791](https://github.com/mehdisafer/document-control-intelligence/actions/runs/45080409953/artifacts/14776997791) | 3 | `b345c12a2e237fdedd36a9fe3e0588e0d2c3ecbc70915406b5e772dee964ca27` |
+
+The source integrates the following separately qualified work:
+
+- [PR #32](https://github.com/mehdisafer/document-control-intelligence/pull/32)
+  binds queued local-llm work to actual prompt, model/runtime and executable
+  source identity. Its real SQLite queued-PDF test rejects a changed policy
+  **before parsing or inference**. [Exact merged-source run #44184232130](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44184232130)
+  passed three jobs and 193 Python tests. This narrow queue-policy gate is
+  complete; [scope](QWEN_QUEUE_POLICY_IDENTITY.md) excludes model acceptance.
+- PRs [#31](https://github.com/mehdisafer/document-control-intelligence/pull/31),
+  [#34](https://github.com/mehdisafer/document-control-intelligence/pull/34),
+  [#35](https://github.com/mehdisafer/document-control-intelligence/pull/35), and
+  [#36](https://github.com/mehdisafer/document-control-intelligence/pull/36)
+  establish original-archive provenance, truth/citation/raw-proposal checks,
+  falsification regressions and [hosted original-byte replay](QWEN_ORIGINAL_ARCHIVE_REPLAY.md).
+  The merged-source replay correctly reports **nonregression false**: on the
+  same 12 PDFs, correct fields fall **90/156 to 74/156**, and critical
+  abstentions rise **60/120 to 74/120**. Both prompts retain 7/12 correct
+  classes and 4/12 eligible. A successful negative-evidence check does not
+  make Qwen 1.4 acceptable; it remains rejected and unmerged.
+- [PR #40](https://github.com/mehdisafer/document-control-intelligence/pull/40)
+  consolidates ReportLab **5.1.0**, Playwright **1.65.2**, and Ruff **0.17.5**,
+  fixes the exported ReportLab version and both distribution hashes, and
+  checks all ten direct runtime pins plus `pdfminer-six` across source,
+  `uv.lock`, and `requirements.lock`. Superseded bot PRs #37/#38 were closed
+  **without merge**. Retargeted [PR #39](https://github.com/mehdisafer/document-control-intelligence/pull/39)
+  separately upgrades Ruff **0.17.5 to 0.17.6** after its own qualification.
+
+This documentation reconciliation changes none of the executed sources,
+model thresholds, original evidence, or release tags. Later documentation
+commits must retain the above execution SHA rather than claim these runs as
+new tests of a different commit. Qwen quality, independent supplier holdout,
+intended-host/operator acceptance, main protection, and the four existing rc2
+release-body link corrections remain open.
 
 ## Source identity and evidence
 

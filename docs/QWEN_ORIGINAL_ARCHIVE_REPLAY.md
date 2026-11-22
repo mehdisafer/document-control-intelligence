@@ -49,5 +49,27 @@ generalization, production-host approval and operator requirements are unchanged
 
 [Original generated aggregate artifact #14373569905](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44187251064/artifacts/14373569905), downloaded and independently inspected: **five ZIP members**, all CRC-valid, ZIP SHA-256 `03b55cacf7cf14bbc19973057a7280d66eeb7d3725c38ad1ae2e388aa876e105`. The two comparator-output JSON files are identical byte-for-byte, and `verdict.txt` explicitly records **exit code 3 expected and observed**. Original archive digests, manifest SHA, all 12 source document hashes, Qwen prompt identities and exact negative field/abstention metrics are source-bound in the JSON.
 
-The narrow **hosted original-byte replay gate is met on this PR source**. Application CI and eventual merged-main verification must be checked separately before treating the new workflow as fully integrated. This remains a forensic/CI reproducibility result, **not** a model quality or production acceptance.
+The narrow **hosted original-byte replay gate is met on this PR source**.
+Its separate merged-main qualification is recorded below. This remains a
+forensic/CI reproducibility result, **not** model quality or production acceptance.
+
+## Separate merged-main qualification
+
+PR #36 was merged as executable source
+[`1d586f81a5dd33390c051cfbe64988a4634f3e0a`](https://github.com/mehdisafer/document-control-intelligence/commit/1d586f81a5dd33390c051cfbe64988a4634f3e0a).
+[Exact merged-main replay #44188133457](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44188133457)
+completed successfully. Its [original aggregate ZIP #14375502037](https://github.com/mehdisafer/document-control-intelligence/actions/runs/44188133457/artifacts/14375502037)
+was independently downloaded and checked: **five members, valid CRCs**, SHA-256
+`208c333596e6224aa6080fc2455194fa58a792715df335f08678826599a33699`.
+The comparison records **`nonregression_met=false`** and two regressions:
+correct fields decrease **90/156 to 74/156** and critical abstentions increase
+**60/120 to 74/120** on **12 identical paired PDF hashes**. Classes and
+eligibility remain 7/12 and 4/12 for both prompt variants.
+
+The completed replay gate proves that the merged comparator detects the
+original negative result from the original bytes. No new Qwen requests were
+made. Later dependency qualification at `2e8b3a6` is documented in the
+[post-rc2 source record](POST_RC2_QUALIFICATION.md); it is not a new execution
+of this dedicated original-pair workflow. The original ZIP retention limit
+and prospective supplier/quality requirements still apply.
 
